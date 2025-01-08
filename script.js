@@ -1,37 +1,20 @@
-document.addEventListener('DOMContentLoaded', function () {
-    const quoteText = document.getElementById('quote');
-    const quoteAuthor = document.getElementById('author');
-    const newQuoteBtn = document.getElementById('new-quote');
-
-    let quotes = [];
-
-    // Fetch quotes from the JSON file
-    fetch('quotes.json')
-        .then(response => {
-            if (!response.ok) {
-                throw new Error('Network response was not ok');
-            }
-            return response.json();
-        })
-        .then(data => {
-            quotes = data;
-            displayNewQuote();
-        })
-        .catch(error => console.error('Error fetching quotes:', error));
-
-    // Display a new quote
-    function displayNewQuote() {
-        if (quotes.length === 0) {
-            quoteText.textContent = 'No quotes available';
-            quoteAuthor.textContent = '';
-            return;
-        }
+document.addEventListener("DOMContentLoaded", function () {
+    function getRandomQuote(quotes) {
         const randomIndex = Math.floor(Math.random() * quotes.length);
-        const quote = quotes[randomIndex];
-        quoteText.textContent = quote.q || 'Quote not available';
-        quoteAuthor.textContent = quote.a ? `— ${quote.a}` : 'Author not available';
+        return quotes[randomIndex];
     }
 
-    // Add event listener to the button
-    newQuoteBtn.addEventListener('click', displayNewQuote);
+    function displayQuote(quotes) {
+        const quote = getRandomQuote(quotes);
+        document.getElementById("quote").textContent = quote.q;
+        document.getElementById("author").textContent = `— ${quote.a}`;
+    }
+
+    fetch('quotes.json')
+        .then(response => response.json())
+        .then(data => {
+            displayQuote(data);
+            document.getElementById("new-quote").addEventListener("click", () => displayQuote(data));
+        })
+        .catch(error => console.error('Error fetching quotes:', error));
 });
