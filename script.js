@@ -13,8 +13,14 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
+    function getRandomIndex(max) {
+        const array = new Uint32Array(1);
+        window.crypto.getRandomValues(array);
+        return array[0] % max;
+    }
+
     function displayQuote(quotes) {
-        const randomIndex = Math.floor(Math.random() * quotes.length);
+        const randomIndex = getRandomIndex(quotes.length);
         const quote = quotes[randomIndex];
         quoteText.innerHTML = quote.text;
         quoteAuthor.textContent = `— ${quote.author}`;
