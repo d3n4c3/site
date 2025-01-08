@@ -9,8 +9,8 @@ document.addEventListener("DOMContentLoaded", function () {
     function displayQuote(quotes) {
         const quote = getRandomQuote(quotes);
         console.log("Selected Quote:", quote); // Debugging line
-        document.getElementById("quote").textContent = quote.q;
-        document.getElementById("author").textContent = `— ${quote.a}`;
+        document.getElementById("quote").textContent = quote.quote;
+        document.getElementById("author").textContent = `— ${quote.author}`;
     }
 
     fetch('quotes.json')
