@@ -2,10 +2,7 @@
 async function fetchQuotes() {
     try {
         const response = await fetch("quotes.json");
-        const arrayBuffer = await response.arrayBuffer();
-        const decoder = new TextDecoder("utf-8");
-        const jsonText = decoder.decode(arrayBuffer);
-        const quotes = JSON.parse(jsonText);
+        const quotes = await response.json();
         console.log("Fetched quotes:", quotes); // Log the fetched quotes
         return quotes;
     } catch (error) {
@@ -22,8 +19,6 @@ async function displayRandomQuote() {
         const randomIndex = Math.floor(Math.random() * quotes.length);
         const randomQuote = quotes[randomIndex];
         console.log("Random quote:", randomQuote); // Log the random quote
-        console.log("Quote text:", randomQuote.q); // Log the quote text
-        console.log("Quote author:", randomQuote.a); // Log the quote author
         document.getElementById("quote").textContent = `"${randomQuote.q}"`;
         document.getElementById("author").textContent = `- ${randomQuote.a}`;
     } else {
