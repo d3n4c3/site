@@ -7,7 +7,12 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Fetch quotes from the JSON file
     fetch('quotes.json')
-        .then(response => response.json())
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.json();
+        })
         .then(data => {
             quotes = data;
             displayNewQuote();
@@ -16,6 +21,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Display a new quote
     function displayNewQuote() {
+        if (quotes.length === 0) {
+            quoteText.textContent = 'No quotes available';
+            quoteAuthor.textContent = '';
+            return;
+        }
         const randomIndex = Math.floor(Math.random() * quotes.length);
         const quote = quotes[randomIndex];
         quoteText.textContent = quote.q;
