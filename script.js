@@ -1,18 +1,7 @@
 // Load a random quote from the quotes.json file
 async function fetchQuotes() {
-    try {
-        const response = await fetch("quotes.json", {
-            headers: {
-                'Content-Type': 'application/json; charset=UTF-8'
-            }
-        });
-        const quotes = await response.json();
-        return quotes;
-    } catch (error) {
-        console.error("Error fetching quotes:", error);
-        return [];
-    }
-}
+    try { const response = await fetch("quotes.json"); const arrayBuffer = await response.arrayBuffer(); const decoder = new TextDecoder("utf-8"); const jsonText = decoder.decode(arrayBuffer); const quotes = JSON.parse(jsonText); return quotes; } catch (error) {
+        console.error("Error fetching quotes:", error); return [];
 
 
 // Display a random quote
