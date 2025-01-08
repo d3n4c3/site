@@ -1,30 +1,32 @@
 document.addEventListener("DOMContentLoaded", function () {
-    console.log("Script loaded"); // Debugging line
+    const quoteText = document.getElementById("quote");
+    const quoteAuthor = document.getElementById("author");
+    const newQuoteBtn = document.getElementById("new-quote");
 
-    function getRandomQuote(quotes) {
-        const randomIndex = Math.floor(Math.random() * quotes.length);
-        return quotes[randomIndex];
+    async function fetchQuotes() {
+        try {
+            const response = await fetch("quotes.JSON");
+            const quotes = await response.json();
+            return quotes;
+        } catch (error) {
+            console.error("Error fetching quotes:", error);
+        }
     }
 
     function displayQuote(quotes) {
-        const quote = getRandomQuote(quotes);
-        console.log("Selected Quote:", quote); // Debugging line
-        document.getElementById("quote").textContent = quote.quote;
-        document.getElementById("author").textContent = `— ${quote.author}`;
+        const randomIndex = Math.floor(Math.random() * quotes.length);
+        const quote = quotes[randomIndex];
+        quoteText.innerHTML = quote.h;
+        quoteAuthor.textContent = `— ${quote.author}`;
     }
 
-    fetch('quotes.json')
-        .then(response => {
-            console.log("Fetch response:", response); // Debugging line
-            if (!response.ok) {
-                throw new Error('Network response was not ok');
-            }
-            return response.json();
-        })
-        .then(data => {
-            console.log("Fetched Data:", data); // Debugging line
-            displayQuote(data);
-            document.getElementById("new-quote").addEventListener("click", () => displayQuote(data));
-        })
-        .catch(error => console.error('Error fetching quotes:', error));
+    async function getNewQuote() {
+        const quotes = await fetchQuotes();
+        displayQuote(quotes);
+    }
+
+    newQuoteBtn.addEventListener("click", getNewQuote);
+
+    // Load a quote when the page loads
+    getNewQuote();
 });
