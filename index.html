@@ -3,42 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Random Quote Generator</title>
+    <title>Random Zen Quote</title>
     <style>
         body {
+            background-color: #121212;
+            color: #ffffff;
             font-family: Arial, sans-serif;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
-            background-color: #f0f0f0;
+            margin: 0;
         }
 
-        .quote-box {
-            background: white;
+        .quote-container {
+            text-align: center;
             padding: 20px;
+            border: 1px solid #ffffff;
             border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+        }
+
+        .quote {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+
+        .author {
+            font-size: 1.2em;
+            color: #bbbbbb;
         }
     </style>
 </head>
 <body>
-    <div class="quote-box">
-        <p id="quote">Loading...</p>
+    <div class="quote-container">
+        <div class="quote" id="quote">Loading...</div>
+        <div class="author" id="author"></div>
     </div>
 
     <script>
-        async function getRandomQuote() {
+        async function fetchQuote() {
             try {
                 const response = await fetch('https://zenquotes.io/api/random');
                 const data = await response.json();
-                document.getElementById('quote').innerText = `${data[0].q} - ${data[0].a}`;
+                document.getElementById('quote').innerText = data[0].q;
+                document.getElementById('author').innerText = `- ${data[0].a}`;
             } catch (error) {
-                document.getElementById('quote').innerText = 'Failed to fetch quote.';
+                document.getElementById('quote').innerText = 'Failed to load quote.';
+                document.getElementById('author').innerText = '';
             }
         }
 
-        getRandomQuote();
+        fetchQuote();
     </script>
 </body>
 </html>
