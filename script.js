@@ -13,6 +13,7 @@ async function fetchQuotes() {
 // Display a random quote
 async function displayRandomQuote() {
     const quotes = await fetchQuotes();
+    console.log(quotes); // Log the fetched quotes to the console
     if (quotes.length > 0) {
         const randomIndex = Math.floor(Math.random() * quotes.length);
         const randomQuote = quotes[randomIndex];
@@ -23,6 +24,7 @@ async function displayRandomQuote() {
         document.getElementById("author").textContent = "";
     }
 }
+
 
 // Event listener for the "New Quote" button
 document.getElementById("new-quote").addEventListener("click", displayRandomQuote);
