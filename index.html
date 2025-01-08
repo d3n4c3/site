@@ -3,58 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Random Zen Quote</title>
-    <style>
-        body {
-            background-color: #121212;
-            color: #ffffff;
-            font-family: Arial, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-        }
-
-        .quote-container {
-            text-align: center;
-            padding: 20px;
-            border: 1px solid #ffffff;
-            border-radius: 10px;
-            max-width: 600px;
-        }
-
-        .quote {
-            font-size: 1.5em;
-            margin-bottom: 10px;
-        }
-
-        .author {
-            font-size: 1.2em;
-            color: #bbbbbb;
-        }
-    </style>
+    <meta name="description" content="Random Quote Generator">
+    <title>Random Quote Generator</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="quote-container">
-        <div class="quote" id="quote">Loading...</div>
-        <div class="author" id="author"></div>
+    <div class="container">
+        <div class="quote-box">
+            <h1 class="quote-text" id="quote">Loading...</h1>
+            <p class="quote-author" id="author"></p>
+            <button class="new-quote-btn" id="new-quote">New Quote</button>
+        </div>
     </div>
-
-    <script>
-        async function fetchQuote() {
-            try {
-                const response = await fetch('https://zenquotes.io/api/random');
-                const data = await response.json();
-                document.getElementById('quote').innerText = data[0].q;
-                document.getElementById('author').innerText = `- ${data[0].a}`;
-            } catch (error) {
-                document.getElementById('quote').innerText = 'Failed to load quote.';
-                document.getElementById('author').innerText = '';
-            }
-        }
-
-        fetchQuote();
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
