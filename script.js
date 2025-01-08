@@ -5,19 +5,20 @@ async function fetchQuotes() {
 
 
 // Display a random quote
-async function displayRandomQuote() {
-    const quotes = await fetchQuotes();
-    console.log(quotes); // Log the fetched quotes to the console
-    if (quotes.length > 0) {
-        const randomIndex = Math.floor(Math.random() * quotes.length);
-        const randomQuote = quotes[randomIndex];
-        document.getElementById("q").textContent = `"${randomQuote.text}"`;
-        document.getElementById("a").textContent = `- ${randomQuote.author}`;
-    } else {
-        document.getElementById("q").textContent = "No quotes available.";
-        document.getElementById("a").textContent = "";
+    async function displayRandomQuote() {
+        const quotes = await fetchQuotes();
+        console.log(quotes); // Log the fetched quotes to the console
+        if (quotes.length > 0) {
+            const randomIndex = Math.floor(Math.random() * quotes.length);
+            const randomQuote = quotes[randomIndex];
+            document.getElementById("quote").textContent = `"${randomQuote.q}"`;
+            document.getElementById("author").textContent = `- ${randomQuote.a}`;
+        } else {
+            document.getElementById("quote").textContent = "No quotes available.";
+            document.getElementById("author").textContent = "";
+        }
     }
-}
+
 
 
 // Event listener for the "New Quote" button
