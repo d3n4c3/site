@@ -1,4 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
+    console.log("Script loaded"); // Debugging line
+
     function getRandomQuote(quotes) {
         const randomIndex = Math.floor(Math.random() * quotes.length);
         return quotes[randomIndex];
@@ -13,6 +15,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     fetch('quotes.json')
         .then(response => {
+            console.log("Fetch response:", response); // Debugging line
             if (!response.ok) {
                 throw new Error('Network response was not ok');
             }
