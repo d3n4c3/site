@@ -1,36 +1,27 @@
-// Load a random quote from the quotes.json file
-async function fetchQuotes() {
-    try {
-        const response = await fetch("quotes.json");
-        const quotes = await response.json();
-        console.log("Fetched quotes:", quotes); // Log the fetched quotes
-        return quotes;
-    } catch (error) {
-        console.error("Error fetching quotes:", error);
-        return [];
-    }
-}
+document.addEventListener('DOMContentLoaded', function () {
+    const quoteText = document.getElementById('quote');
+    const quoteAuthor = document.getElementById('author');
+    const newQuoteBtn = document.getElementById('new-quote');
 
-// Display a random quote
-async function displayRandomQuote() {
-    const quotes = await fetchQuotes();
-    console.log("Quotes array:", quotes); // Log the quotes array
-    if (quotes.length > 0) {
+    let quotes = [];
+
+    // Fetch quotes from the JSON file
+    fetch('quotes.json')
+        .then(response => response.json())
+        .then(data => {
+            quotes = data;
+            displayNewQuote();
+        })
+        .catch(error => console.error('Error fetching quotes:', error));
+
+    // Display a new quote
+    function displayNewQuote() {
         const randomIndex = Math.floor(Math.random() * quotes.length);
-        const randomQuote = quotes[randomIndex];
-        console.log("Random quote:", randomQuote); // Log the random quote
-        console.log("Quote text:", randomQuote.q); // Log the quote text
-        console.log("Quote author:", randomQuote.a); // Log the quote author
-        document.getElementById("quote").textContent = `"${randomQuote.q}"`;
-        document.getElementById("author").textContent = `- ${randomQuote.a}`;
-    } else {
-        document.getElementById("quote").textContent = "No quotes available.";
-        document.getElementById("author").textContent = "";
+        const quote = quotes[randomIndex];
+        quoteText.textContent = quote.q;
+        quoteAuthor.textContent = `— ${quote.a}`;
     }
-}
 
-// Event listener for the "New Quote" button
-document.getElementById("new-quote").addEventListener("click", displayRandomQuote);
-
-// Initial quote display on page load
-window.onload = displayRandomQuote;
+    // Add event listener to the button
+    newQuoteBtn.addEventListener('click', displayNewQuote);
+});
