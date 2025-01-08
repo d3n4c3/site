@@ -28,8 +28,8 @@ document.addEventListener('DOMContentLoaded', function () {
         }
         const randomIndex = Math.floor(Math.random() * quotes.length);
         const quote = quotes[randomIndex];
-        quoteText.textContent = quote.q;
-        quoteAuthor.textContent = `— ${quote.a}`;
+        quoteText.textContent = quote.q || 'Quote not available';
+        quoteAuthor.textContent = quote.a ? `— ${quote.a}` : 'Author not available';
     }
 
     // Add event listener to the button
