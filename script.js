@@ -11,11 +11,11 @@ async function displayRandomQuote() {
     if (quotes.length > 0) {
         const randomIndex = Math.floor(Math.random() * quotes.length);
         const randomQuote = quotes[randomIndex];
-        document.getElementById("quote").textContent = `"${randomQuote.text}"`;
-        document.getElementById("author").textContent = `- ${randomQuote.author}`;
+        document.getElementById("q").textContent = `"${randomQuote.text}"`;
+        document.getElementById("a").textContent = `- ${randomQuote.author}`;
     } else {
-        document.getElementById("quote").textContent = "No quotes available.";
-        document.getElementById("author").textContent = "";
+        document.getElementById("q").textContent = "No quotes available.";
+        document.getElementById("a").textContent = "";
     }
 }
 
