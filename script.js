@@ -1,7 +1,11 @@
 // Load a random quote from the quotes.json file
 async function fetchQuotes() {
     try {
-        const response = await fetch("quotes.json");
+        const response = await fetch("quotes.json", {
+            headers: {
+                'Content-Type': 'application/json; charset=UTF-8'
+            }
+        });
         const quotes = await response.json();
         return quotes;
     } catch (error) {
@@ -9,6 +13,7 @@ async function fetchQuotes() {
         return [];
     }
 }
+
 
 // Display a random quote
 async function displayRandomQuote() {
