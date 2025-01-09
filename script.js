@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const randomIndex = getRandomIndex(quotes.length);
         const quote = quotes[randomIndex];
         quoteText.innerHTML = quote.text;
-        quoteAuthor.textContent = `— ${quote.author}`;
+        quoteAuthor.textContent = `- ${quote.author}`;
     }
 
     async function getNewQuote() {
