@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     async function fetchQuotes() {
         try {
-            const response = await fetch("quotes.JSON");
+            const response = await fetch("quotes.json");
             const quotes = await response.json();
             return quotes;
         } catch (error) {
