@@ -5,13 +5,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
     async function fetchQuotes() {
         try {
-            const response = await fetch("quotes.json");
+            const response = await fetch("quotes.json?cache-bust=" + new Date().getTime());
             const quotes = await response.json();
             return quotes;
         } catch (error) {
             console.error("Error fetching quotes:", error);
         }
     }
+
 
     function getRandomIndex(max) {
         const array = new Uint32Array(1);
