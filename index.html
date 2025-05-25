@@ -6,6 +6,10 @@
     <title>d3n4c3</title>
     <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Rubik:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism-coy.min.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
     <style>
         :root {
             --bg-color: #0a0a0a;
@@ -40,25 +44,25 @@
             transition: color 0.3s ease, transform 0.2s ease;
         }
 
-        a:not(#logo-link):hover {
-            color: var(--highlight-color);
-            transform: translateY(-2px);
-        }
+            a:not(#logo-link):hover {
+                color: var(--highlight-color);
+                transform: translateY(-2px);
+            }
 
-        a:not(#logo-link)::after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 3px;
-            bottom: -3px;
-            left: 0;
-            background: var(--highlight-color);
-            transition: width 0.3s ease;
-        }
+            a:not(#logo-link)::after {
+                content: '';
+                position: absolute;
+                width: 0;
+                height: 3px;
+                bottom: -3px;
+                left: 0;
+                background: var(--highlight-color);
+                transition: width 0.3s ease;
+            }
 
-        a:not(#logo-link):hover::after {
-            width: 100%;
-        }
+            a:not(#logo-link):hover::after {
+                width: 100%;
+            }
 
         header {
             background: linear-gradient(90deg, var(--header-bg), #4b0082);
@@ -78,34 +82,34 @@
             justify-content: space-between;
         }
 
-        nav h1 {
-            font-family: 'Bangers', cursive;
-            font-size: 2.5em;
-            margin: 0;
-            color: var(--comic-yellow);
-            text-shadow: 3px 3px 0 #000, -2px -2px 0 var(--accent-color);
-            transform: rotate(-2deg);
-            transition: transform 0.3s ease;
-        }
+            nav h1 {
+                font-family: 'Bangers', cursive;
+                font-size: 2.5em;
+                margin: 0;
+                color: var(--comic-yellow);
+                text-shadow: 3px 3px 0 #000, -2px -2px 0 var(--accent-color);
+                transform: rotate(-2deg);
+                transition: transform 0.3s ease;
+            }
 
-        nav h1:hover {
-            transform: rotate(0deg) scale(1.05);
-        }
+                nav h1:hover {
+                    transform: rotate(0deg) scale(1.05);
+                }
 
-        nav ul {
-            list-style: none;
-            padding: 0;
-            display: flex;
-            gap: 15px;
-            align-items: center;
-        }
+            nav ul {
+                list-style: none;
+                padding: 0;
+                display: flex;
+                gap: 15px;
+                align-items: center;
+            }
 
-        nav li a {
-            font-family: 'Bangers', cursive;
-            font-size: 1.2em;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-        }
+            nav li a {
+                font-family: 'Bangers', cursive;
+                font-size: 1.2em;
+                letter-spacing: 1px;
+                text-transform: uppercase;
+            }
 
         #content {
             max-width: 1200px;
@@ -132,59 +136,59 @@
             cursor: pointer;
         }
 
-        .post-item::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: radial-gradient(circle, transparent 60%, rgba(0, 0, 0, 0.2));
-            opacity: 0.3;
-            z-index: 0;
-        }
+            .post-item::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: radial-gradient(circle, transparent 60%, rgba(0, 0, 0, 0.2));
+                opacity: 0.3;
+                z-index: 0;
+            }
 
-        .post-item:hover {
-            transform: rotate(0deg) scale(1.03);
-            box-shadow: 8px 8px 0 #000, 0 0 30px var(--card-shadow);
-        }
+            .post-item:hover {
+                transform: rotate(0deg) scale(1.03);
+                box-shadow: 8px 8px 0 #000, 0 0 30px var(--card-shadow);
+            }
 
-        .post-item h3 {
-            font-family: 'Bangers', cursive;
-            font-size: 2em;
-            color: var(--comic-yellow);
-            text-shadow: 2px 2px 0 #000;
-            margin: 0 0 10px;
-            position: relative;
-            z-index: 1;
-        }
+            .post-item h3 {
+                font-family: 'Bangers', cursive;
+                font-size: 2em;
+                color: var(--comic-yellow);
+                text-shadow: 2px 2px 0 #000;
+                margin: 0 0 10px;
+                position: relative;
+                z-index: 1;
+            }
 
-        .post-item p {
-            font-size: 1em;
-            color: #ddd;
-            margin: 0 0 15px;
-            display: -webkit-box;
-            -webkit-line-clamp: 3;
-            -webkit-box-orient: vertical;
-            overflow: hidden;
-            position: relative;
-            z-index: 1;
-        }
+            .post-item p {
+                font-size: 1em;
+                color: #ddd;
+                margin: 0 0 15px;
+                display: -webkit-box;
+                -webkit-line-clamp: 3;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+                position: relative;
+                z-index: 1;
+            }
 
-        .post-item img {
-            width: 200px;
-            height: 300px;
-            object-fit: cover;
-            object-position: center;
-            border: 3px solid #000;
-            border-radius: 8px;
-            margin-top: 10px;
-            position: relative;
-            z-index: 1;
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-        }
+            .post-item img {
+                width: 200px;
+                height: 300px;
+                object-fit: cover;
+                object-position: center;
+                border: 3px solid #000;
+                border-radius: 8px;
+                margin-top: 10px;
+                position: relative;
+                z-index: 1;
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+            }
 
         .back-link {
             font-family: 'Bangers', cursive;
@@ -195,9 +199,9 @@
             text-shadow: 1px 1px 0 #000;
         }
 
-        .back-link:hover {
-            color: var(--highlight-color);
-        }
+            .back-link:hover {
+                color: var(--highlight-color);
+            }
 
         h1, h2, h3 {
             font-family: 'Bangers', cursive;
@@ -226,15 +230,19 @@
             .post-list {
                 grid-template-columns: 1fr;
             }
+
             .post-item {
                 transform: rotate(0deg);
             }
+
             nav h1 {
                 font-size: 1.8em;
             }
+
             nav li a {
                 font-size: 1em;
             }
+
             .post-item img {
                 width: 100%;
                 height: 250px;
