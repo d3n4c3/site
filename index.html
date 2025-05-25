@@ -3,18 +3,408 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="d3n4c3.com">
-    <title>d3n4c3.com</title>
-    <link rel="stylesheet" href="style.css">
+    <title>d3n4c3</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Rubik:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism-coy.min.css">
+    <style>
+        :root {
+            --bg-color: #0a0a0a;
+            --text-color: #ffffff;
+            --accent-color: #ff2a6d;
+            --highlight-color: #00ffea;
+            --card-bg: #1c2526;
+            --card-border: #ff2a6d;
+            --card-shadow: rgba(255, 42, 109, 0.5);
+            --header-bg: #1b0033;
+            --comic-yellow: #ffeb3b;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            background: radial-gradient(circle, #2c003e, var(--bg-color));
+            color: var(--text-color);
+            font-family: 'Rubik', sans-serif;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        a {
+            color: var(--comic-yellow);
+            text-decoration: none;
+            position: relative;
+            transition: color 0.3s ease, transform 0.2s ease;
+        }
+
+        a:not(#logo-link):hover {
+            color: var(--highlight-color);
+            transform: translateY(-2px);
+        }
+
+        a:not(#logo-link)::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 3px;
+            bottom: -3px;
+            left: 0;
+            background: var(--highlight-color);
+            transition: width 0.3s ease;
+        }
+
+        a:not(#logo-link):hover::after {
+            width: 100%;
+        }
+
+        header {
+            background: linear-gradient(90deg, var(--header-bg), #4b0082);
+            padding: 15px 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            backdrop-filter: blur(8px);
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        nav h1 {
+            font-family: 'Bangers', cursive;
+            font-size: 2.5em;
+            margin: 0;
+            color: var(--comic-yellow);
+            text-shadow: 3px 3px 0 #000, -2px -2px 0 var(--accent-color);
+            transform: rotate(-2deg);
+            transition: transform 0.3s ease;
+        }
+
+        nav h1:hover {
+            transform: rotate(0deg) scale(1.05);
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+
+        nav li a {
+            font-family: 'Bangers', cursive;
+            font-size: 1.2em;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        #content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .post-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+            gap: 30px;
+        }
+
+        .post-item {
+            background: var(--card-bg);
+            border: 4px solid #000;
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 6px 6px 0 #000, 0 0 20px var(--card-shadow);
+            transform: rotate(2deg);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        .post-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle, transparent 60%, rgba(0, 0, 0, 0.2));
+            opacity: 0.3;
+            z-index: 0;
+        }
+
+        .post-item:hover {
+            transform: rotate(0deg) scale(1.03);
+            box-shadow: 8px 8px 0 #000, 0 0 30px var(--card-shadow);
+        }
+
+        .post-item h3 {
+            font-family: 'Bangers', cursive;
+            font-size: 2em;
+            color: var(--comic-yellow);
+            text-shadow: 2px 2px 0 #000;
+            margin: 0 0 10px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .post-item p {
+            font-size: 1em;
+            color: #ddd;
+            margin: 0 0 15px;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            position: relative;
+            z-index: 1;
+        }
+
+        .post-item img {
+            width: 200px;
+            height: 300px;
+            object-fit: cover;
+            object-position: center;
+            border: 3px solid #000;
+            border-radius: 8px;
+            margin-top: 10px;
+            position: relative;
+            z-index: 1;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .back-link {
+            font-family: 'Bangers', cursive;
+            font-size: 1.2em;
+            color: var(--comic-yellow);
+            display: inline-block;
+            margin-bottom: 20px;
+            text-shadow: 1px 1px 0 #000;
+        }
+
+        .back-link:hover {
+            color: var(--highlight-color);
+        }
+
+        h1, h2, h3 {
+            font-family: 'Bangers', cursive;
+            color: var(--comic-yellow);
+            text-shadow: 2px 2px 0 #000;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin: 15px 0;
+            border: 3px solid #000;
+        }
+
+        pre {
+            background: #111;
+            padding: 20px;
+            border-radius: 8px;
+            border: 3px solid #000;
+            box-shadow: 4px 4px 0 #000;
+            overflow: auto;
+        }
+
+        @media (max-width: 600px) {
+            .post-list {
+                grid-template-columns: 1fr;
+            }
+            .post-item {
+                transform: rotate(0deg);
+            }
+            nav h1 {
+                font-size: 1.8em;
+            }
+            nav li a {
+                font-size: 1em;
+            }
+            .post-item img {
+                width: 100%;
+                height: 250px;
+            }
+        }
+
+        .halftone {
+            background-image: radial-gradient(circle, #000 10%, transparent 10%);
+            background-size: 8px 8px;
+            opacity: 0.1;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+        }
+    </style>
 </head>
 <body>
-    <div class="container">
-        <div class="quote-box">
-            <h1 class="quote-text" id="quote">Loading...</h1>
-            <p class="quote-author" id="author"></p>
-            <button class="new-quote-btn" id="new-quote">Another?</button>
+    <div class="halftone"></div>
+    <header>
+        <nav>
+            <h1><a id="logo-link" href="#">d3n4c3</a></h1>
+            <ul>
+                <li><a href="#" id="blog-link">Home</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div id="content">
+            <!-- Blog posts or content will load here -->
         </div>
-    </div>
-    <script src="script.js"></script>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/marked@4.3.0/marked.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-javascript.min.js"></script>
+    <script>
+        async function fetchPosts() {
+            try {
+                const response = await fetch('/blogs/index.json');
+                if (!response.ok) throw new Error('Failed to fetch posts');
+                return await response.json();
+            } catch (err) {
+                console.error('Error fetching posts:', err);
+                throw err;
+            }
+        }
+
+        async function fetchMarkdown(file) {
+            try {
+                const response = await fetch(`/blogs/${file}`);
+                if (!response.ok) throw new Error(`Failed to fetch ${file}`);
+                return await response.text();
+            } catch (err) {
+                console.error(`Error fetching markdown for ${file}:`, err);
+                throw err;
+            }
+        }
+
+        async function showPostList() {
+            const content = document.getElementById('content');
+            content.innerHTML = '<div class="post-list"></div>';
+            const postList = content.querySelector('.post-list');
+
+            try {
+                const posts = await fetchPosts();
+
+                for (const post of posts) {
+                    let description = post.description || '';
+                    let thumbnail = '';
+
+                    if (!description) {
+                        const markdownText = await fetchMarkdown(post.file);
+                        const lines = markdownText.split('\n').filter(line => line.trim() && !line.startsWith('#'));
+                        description = lines[0]?.trim().substring(0, 100) + (lines[0]?.length > 100 ? '...' : '') || 'No description available.';
+                        const imgMatch = markdownText.match(/!\[.*?\]\((.*?)\)/);
+                        if (imgMatch) {
+                            thumbnail = imgMatch[1].startsWith('http') || imgMatch[1].startsWith('/') ? imgMatch[1] : `/blogs/${imgMatch[1]}`;
+                        }
+                    }
+
+                    const postItem = document.createElement('div');
+                    postItem.className = 'post-item';
+                    postItem.innerHTML = `
+                        <h3>${post.title}</h3>
+                        <p>${description}</p>
+                        ${thumbnail ? `<img src="${thumbnail}" alt="Thumbnail">` : ''}
+                    `;
+                    postItem.addEventListener('click', () => {
+                        loadPost(post.file);
+                        history.pushState({ post: post.file }, '', `?post=${post.file}`);
+                    });
+                    postList.appendChild(postItem);
+                }
+            } catch (err) {
+                content.innerHTML = '<p>Error loading posts. Please check your server and /blogs/index.json.</p>';
+            }
+        }
+
+        async function loadPost(file) {
+            const content = document.getElementById('content');
+            try {
+                const markdownText = await fetchMarkdown(file);
+                let htmlContent = marked.parse(markdownText);
+                const tempDiv = document.createElement('div');
+                tempDiv.innerHTML = htmlContent;
+
+                tempDiv.querySelectorAll('img').forEach(img => {
+                    const src = img.getAttribute('src');
+                    if (!src.startsWith('http') && !src.startsWith('/')) {
+                        img.setAttribute('src', `/blogs/${src}`);
+                    }
+                });
+                tempDiv.querySelectorAll('a').forEach(link => {
+                    const href = link.getAttribute('href');
+                    if (!href.startsWith('http') && !href.startsWith('/')) {
+                        link.setAttribute('href', `/blogs/${href}`);
+                    }
+                });
+
+                content.innerHTML = `
+                    <a href="#" class="back-link" id="back-link">< Back to Home</a>
+                    ${tempDiv.innerHTML}
+                `;
+                Prism.highlightAll();
+
+                document.getElementById('back-link').addEventListener('click', (e) => {
+                    e.preventDefault();
+                    showPostList();
+                    history.pushState({}, '', window.location.pathname);
+                });
+            } catch (err) {
+                content.innerHTML = '<p>Error loading post.</p>';
+            }
+        }
+
+        function initialize() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const postFile = urlParams.get('post');
+            if (postFile) {
+                loadPost(postFile);
+            } else {
+                showPostList();
+            }
+
+            document.getElementById('blog-link').addEventListener('click', (e) => {
+                e.preventDefault();
+                showPostList();
+                history.pushState({}, '', window.location.pathname);
+            });
+
+            document.getElementById('logo-link').addEventListener('click', (e) => {
+                e.preventDefault();
+                showPostList();
+                history.pushState({}, '', window.location.pathname);
+            });
+
+            window.addEventListener('popstate', (e) => {
+                const postFile = e.state?.post;
+                if (postFile) {
+                    loadPost(postFile);
+                } else {
+                    showPostList();
+                }
+            });
+        }
+
+        initialize();
+    </script>
 </body>
 </html>
