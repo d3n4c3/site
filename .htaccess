@@ -1,0 +1,27 @@
+# Disable directory browsing
+Options -Indexes
+
+# Protect the .htaccess file
+<Files .htaccess>
+    Order allow,deny
+    Deny from all
+</Files>
+
+# --- Force HTTPS ---
+# Redirect all non-secure requests to HTTPS.
+# (Ensure your server supports HTTPS and you have a valid certificate.)
+RewriteEngine On
+RewriteCond %{HTTPS} !=on
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# ---  Custom Error Pages ---
+# Redirect users to user-friendly pages for certain HTTP errors.
+ErrorDocument 403 /errors/403.html
+ErrorDocument 404 /errors/404.html
+
+# --- Blocking Access to Sensitive Files ---
+# Deny direct access to configuration files or file types that shouldn't be served.
+<FilesMatch "\.(ini|log|sh|inc|bak)$">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
