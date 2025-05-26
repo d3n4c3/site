@@ -27,6 +27,12 @@
             box-sizing: border-box;
         }
 
+        html, body {
+            width: 100vw;
+            min-width: 100vw;
+            max-width: 100vw;
+            overflow-x: hidden;
+        }
         body {
             background: radial-gradient(circle, #2c003e, var(--bg-color));
             color: var(--text-color);
@@ -157,17 +163,19 @@
                 font-family: 'Bangers', cursive;
                 font-size: 2em;
                 color: var(--comic-yellow);
-                text-shadow: 2px 2px 0 #000;
-                margin: 0 0 10px;
-                position: relative;
-                z-index: 1;
-            }
-
             .post-item p {
                 font-size: 1em;
                 color: #ddd;
                 margin: 0 0 15px;
                 display: -webkit-box;
+                -webkit-line-clamp: 3;
+                line-clamp: 3;
+                line-clamp: 3;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+                position: relative;
+                z-index: 1;
+            }
                 -webkit-line-clamp: 3;
                 -webkit-box-orient: vertical;
                 overflow: hidden;
