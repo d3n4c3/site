@@ -1161,7 +1161,7 @@ Tearing into a pack of Marvel Flair 1994 Annual cards is like cracking open a ti
 </table>
 
 ## Powerblast
-<table border="1" cellspacing="0" cellpadding="5">
+<table cellspacing="0" cellpadding="5">
     <tr>
         <td>
         <div class="card-container">
@@ -1370,18 +1370,19 @@ Tearing into a pack of Marvel Flair 1994 Annual cards is like cracking open a ti
 </table>
 
 ## Promos
-Flarprints
+
+### Flarprints
 1. Deadpool (Heroes World Distribution Company)
 2. Omega Red vs. Wolverine
 3. Omega Red vs. Wolverine(Diamond Comic Distributors, Inc.)
 
-4-card uncut sheets:
+### 4-card uncut sheets:
 1. Front has Marvel Universe '94 Flair logo, Bone Claws, Phoenix, Maximum Carnage; back has Body Slide, Spider-Man 2099, Thunderstrike, The New Ghost Rider. (black on gold sticker)
 2. Front has Marvel Universe '94 Flair logo, Bone Claws, Phoenix, Maximum Carnage; back has Body Slide, Spider-Man 2099, Thunderstrike, The New Ghost Rider. (white etched in gold foil)
 3. Front has Marvel Universe '94 Flair logo, Bone Claws, Phoenix, Maximum Carnage; back has Body Slide, Spider-Man 2099, Thunderstrike, The New Ghost Rider. (The Ultimate Collectable)
 4. Unreleased, Gambit & Rogue, Infinity Crusade, Maximum Carnage, Bone Claws
 
-9-card uncut sheets:
+### 9-card uncut sheets:
 <br>
 <!-- Sheet 1 -->
 <table border="1" cellspacing="0" cellpadding="5">
