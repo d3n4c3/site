@@ -23,221 +23,285 @@
         --comic-yellow: #ffeb3b;
     }
 
-        * {
-            box-sizing: border-box;
-        }
+    * {
+        box-sizing: border-box;
+    }
 
-        html, body {
-            width: 100%;
-            min-width: 100%;
-            max-width: 100%;
-            overflow-x: hidden;
-            background-color: var(--bg-color);
-        }
+    html, body {
+        width: 100%;
+        min-width: 100%;
+        max-width: 100%;
+        overflow-x: hidden;
+        background-color: var(--bg-color);
+    }
 
-        body {
-            background: radial-gradient(circle, #2c003e, var(--bg-color));
-            background-color: var(--bg-color);
-            color: var(--text-color);
-            font-family: 'Rubik', sans-serif;
-            margin: 0;
-            padding: 0;
-            min-height: 100vh;
-            overflow-x: hidden;
-        }
+    body {
+        background: radial-gradient(circle, #2c003e, var(--bg-color));
+        background-color: var(--bg-color);
+        color: var(--text-color);
+        font-family: 'Rubik', sans-serif;
+        margin: 0;
+        padding: 0;
+        min-height: 100vh;
+        overflow-x: hidden;
+    }
 
-        a {
-            color: var(--comic-yellow);
-            text-decoration: none;
-            position: relative;
-            transition: color 0.3s ease, transform 0.2s ease;
-        }
+    a {
+        color: var(--comic-yellow);
+        text-decoration: none;
+        position: relative;
+        transition: color 0.3s ease, transform 0.2s ease;
+    }
 
-        a:not(#logo-link):hover {
-            color: var(--highlight-color);
-            transform: translateY(-2px);
-        }
+    a:not(#logo-link):hover {
+        color: var(--highlight-color);
+        transform: translateY(-2px);
+    }
 
-        a:not(#logo-link):not(.card-container a)::after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 3px;
-            bottom: -3px;
-            left: 0;
-            background: var(--highlight-color);
-            transition: width 0.3s ease;
-        }
+    a:not(#logo-link):not(.card-container a)::after {
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 3px;
+        bottom: -3px;
+        left: 0;
+        background: var(--highlight-color);
+        transition: width 0.3s ease;
+    }
 
-        a:not(#logo-link):not(.card-container a):hover::after {
-            width: 100%;
-        }
+    a:not(#logo-link):not(.card-container a):hover::after {
+        width: 100%;
+    }
 
-        header {
-            background: linear-gradient(90deg, var(--header-bg), #4b0082);
-            padding: 15px 20px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            backdrop-filter: blur(8px);
-        }
+    header {
+        background: linear-gradient(90deg, var(--header-bg), #4b0082);
+        padding: 15px 20px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        backdrop-filter: blur(8px);
+    }
 
-        nav {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
+    nav {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
 
-        nav h1 {
-            font-family: 'Bangers', cursive;
-            font-size: 2.5em;
-            margin: 0;
-            color: var(--comic-yellow);
-            text-shadow: 3px 3px 0 #000, -2px -2px 0 var(--accent-color);
-            transform: rotate(-2deg);
-            transition: transform 0.3s ease;
-        }
+    nav h1 {
+        font-family: 'Bangers', cursive;
+        font-size: 2.5em;
+        margin: 0;
+        color: var(--comic-yellow);
+        text-shadow: 3px 3px 0 #000, -2px -2px 0 var(--accent-color);
+        transform: rotate(-2deg);
+        transition: transform 0.3s ease;
+    }
 
-        nav h1:hover {
-            transform: rotate(0deg) scale(1.05);
-        }
+    nav h1:hover {
+        transform: rotate(0deg) scale(1.05);
+    }
 
-        nav ul {
-            list-style: none;
-            padding: 0;
-            display: flex;
-            gap: 15px;
-            align-items: center;
-        }
+    nav ul {
+        list-style: none;
+        padding: 0;
+        display: flex;
+        gap: 15px;
+        align-items: center;
+    }
 
-        nav li a {
-            font-family: 'Bangers', cursive;
-            font-size: 1.2em;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-        }
+    nav li a {
+        font-family: 'Bangers', cursive;
+        font-size: 1.2em;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+    }
 
-        #content {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 40px 20px;
-        }
+    #content {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 40px 20px;
+    }
 
+    .post-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+        gap: 30px;
+    }
+
+    .post-item {
+        background: var(--card-bg);
+        border: 4px solid #000;
+        border-radius: 12px;
+        padding: 20px;
+        box-shadow: 6px 6px 0 #000, 0 0 20px var(--card-shadow);
+        transform: rotate(2deg);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        position: relative;
+        overflow: hidden;
+        cursor: pointer;
+    }
+
+    .post-item::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: radial-gradient(circle, transparent 60%, rgba(0, 0, 0, 0.2));
+        opacity: 0.3;
+        z-index: 0;
+    }
+
+    .post-item:hover {
+        transform: rotate(0deg) scale(1.03);
+        box-shadow: 8px 8px 0 #000, 0 0 30px var(--card-shadow);
+    }
+
+    .post-item h3 {
+        font-family: 'Bangers', cursive;
+        font-size: 2em;
+        color: var(--comic-yellow);
+        text-shadow: 2px 2px 0 #000;
+        margin: 0 0 10px;
+        position: relative;
+        z-index: 1;
+    }
+
+    .post-item p {
+        font-size: 1em;
+        color: #ddd;
+        margin: 0 0 15px;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        position: relative;
+        z-index: 1;
+    }
+
+    .post-item img {
+        width: 200px;
+        height: 300px;
+        object-fit: cover;
+        object-position: center;
+        border: 3px solid #000;
+        border-radius: 8px;
+        margin-top: 10px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .back-link {
+        font-family: 'Bangers', cursive;
+        font-size: 1.2em;
+        color: var(--comic-yellow);
+        display: inline-block;
+        margin-bottom: 20px;
+        text-shadow: 1px 1px 0 #000;
+    }
+
+    .back-link:hover {
+        color: var(--highlight-color);
+    }
+
+    h1, h2, h3 {
+        font-family: 'Bangers', cursive;
+        color: var(--comic-yellow);
+        text-shadow: 2px 2px 0 #000;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
+        margin: 15px 0;
+        border: 3px solid #000;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    img:hover {
+        transform: scale(1.05);
+        box-shadow: 0 0 15px var(--card-shadow);
+    }
+
+    pre {
+        background: #111;
+        padding: 20px;
+        border-radius: 8px;
+        border: 3px solid #000;
+        box-shadow: 4px 4px 0 #000;
+        overflow: auto;
+    }
+
+    /* Card table styles */
+    .card-table {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+        margin: 20px 0;
+    }
+
+    .card-container {
+        background: transparent;
+        padding: 0;
+        position: relative;
+        flex: 1;
+        min-width: 200px;
+        max-width: 300px;
+    }
+
+    .card-images {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .card-container img.front {
+        width: 100px;
+        max-width: 100%;
+        height: auto;
+        margin: 5px;
+    }
+
+    .card-container img.back {
+        width: 150px;
+        max-width: 100%;
+        height: auto;
+        margin: 5px;
+    }
+
+    .card-container a {
+        display: inline-block;
+    }
+
+    .card-title {
+        font-family: 'Bangers', cursive;
+        font-size: 1.2em;
+        color: var(--comic-yellow);
+        text-shadow: 1px 1px 0 #000;
+        margin-top: 10px;
+        position: relative;
+        z-index: 1;
+        text-align: center;
+    }
+
+    @media (max-width: 768px) {
         .post-list {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
-            gap: 30px;
+            grid-template-columns: 1fr;
         }
 
         .post-item {
-            background: var(--card-bg);
-            border: 4px solid #000;
-            border-radius: 12px;
-            padding: 20px;
-            box-shadow: 6px 6px 0 #000, 0 0 20px var(--card-shadow);
-            transform: rotate(2deg);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            position: relative;
-            overflow: hidden;
-            cursor: pointer;
-        }
-
-        .post-item::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: radial-gradient(circle, transparent 60%, rgba(0, 0, 0, 0.2));
-            opacity: 0.3;
-            z-index: 0;
-        }
-
-        .post-item:hover {
-            transform: rotate(0deg) scale(1.03);
-            box-shadow: 8px 8px 0 #000, 0 0 30px var(--card-shadow);
-        }
-
-        .post-item h3 {
-            font-family: 'Bangers', cursive;
-            font-size: 2em;
-            color: var(--comic-yellow);
-            text-shadow: 2px 2px 0 #000;
-            margin: 0 0 10px;
-            position: relative;
-            z-index: 1;
-        }
-
-        .post-item p {
-            font-size: 1em;
-            color: #ddd;
-            margin: 0 0 15px;
-            display: -webkit-box;
-            -webkit-line-clamp: 3;
-            line-clamp: 3;
-            -webkit-box-orient: vertical;
-            overflow: hidden;
-            position: relative;
-            z-index: 1;
-        }
-
-        .post-item img {
-            width: 200px;
-            height: 300px;
-            object-fit: cover;
-            object-position: center;
-            border: 3px solid #000;
-            border-radius: 8px;
-            margin-top: 10px;
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .back-link {
-            font-family: 'Bangers', cursive;
-            font-size: 1.2em;
-            color: var(--comic-yellow);
-            display: inline-block;
-            margin-bottom: 20px;
-            text-shadow: 1px 1px 0 #000;
-        }
-
-        .back-link:hover {
-            color: var(--highlight-color);
-        }
-
-        h1, h2, h3 {
-            font-family: 'Bangers', cursive;
-            color: var(--comic-yellow);
-            text-shadow: 2px 2px 0 #000;
-        }
-
-        img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 8px;
-            margin: 15px 0;
-            border: 3px solid #000;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        img:hover {
-            transform: scale(1.05);
-            box-shadow: 0 0 15px var(--card-shadow);
-        }
-
-        pre {
-            background: #111;
-            padding: 20px;
-            border-radius: 8px;
-            border: 3px solid #000;
-            box-shadow: 4px 4px 0 #000;
-            overflow: auto;
+            transform: rotate(0deg);
         }
 
         .card-table {
@@ -248,7 +312,6 @@
         .card-container {
             min-width: 80%;
             max-width: 90%;
-            transform: rotate(0deg);
         }
 
         .card-container img.front {
@@ -258,7 +321,8 @@
         .card-container img.back {
             width: 120px;
         }
-        
+    }
+
     @media (max-width: 600px) {
         .post-list {
             grid-template-columns: 1fr;
@@ -322,6 +386,18 @@
     <main>
         <div id="content">
             <!-- Blog posts or content will load here -->
+            <!-- Example structure for card-container -->
+            <!--
+            <div class="card-table">
+                <div class="card-container">
+                    <div class="card-images">
+                        <img src="front.jpg" class="front" alt="Front of card">
+                        <img src="back.jpg" class="back" alt="Back of card">
+                    </div>
+                    <div class="card-title"><a href="#">Card Title</a></div>
+                </div>
+            </div>
+            -->
         </div>
     </main>
     <script src="https://cdn.jsdelivr.net/npm/marked@4.3.0/marked.min.js"></script>
@@ -421,6 +497,19 @@
                     e.preventDefault();
                     showPostList();
                     history.pushState({}, '', window.location.pathname);
+                });
+
+                // Ensure images within .card-container are wrapped in .card-images
+                document.querySelectorAll('.card-container').forEach(container => {
+                    const frontImg = container.querySelector('img.front');
+                    const backImg = container.querySelector('img.back');
+                    if (frontImg && backImg) {
+                        const imagesWrapper = document.createElement('div');
+                        imagesWrapper.className = 'card-images';
+                        imagesWrapper.appendChild(frontImg);
+                        imagesWrapper.appendChild(backImg);
+                        container.insertBefore(imagesWrapper, container.querySelector('.card-title'));
+                    }
                 });
             } catch (err) {
                 content.innerHTML = '<p>Error loading post.</p>';
