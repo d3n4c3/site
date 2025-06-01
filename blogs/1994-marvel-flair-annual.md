@@ -6,7 +6,7 @@ The Ultimate Collectable
 
 Tearing into a pack of Marvel Flair 1994 Annual cards is like cracking open a time capsule from the comic-obsessed '90s. The glossy art, the chase for that rare hologram—it’s a rush that takes me right back to trading cards on the playground, dreaming of epic battles and mutant mayhem. Join me as I rip through these packs, and attempt to collect every last piece of nostalgia I can find. 
 ## Base Set
-<table border="1" cellspacing="0" cellpadding="5">
+<table cellspacing="0" cellpadding="5">
     <tr>
         <td>
             <div class="card-container">
@@ -843,7 +843,6 @@ Tearing into a pack of Marvel Flair 1994 Annual cards is like cracking open a ti
                 <br>109 Thunderstrike
             </div>
         </td>
-        <tr>
         <td>
             <div class="card-container">
                 <a href="94flair/cards/110a.jpg" target="_blank"><img src="94flair/cards/110a.jpg" alt="110 Infinity Crusade (Wolverine, Spider-Man, Moondragon, Captain America) (front)" width="100"></a>
@@ -858,6 +857,8 @@ Tearing into a pack of Marvel Flair 1994 Annual cards is like cracking open a ti
                 <br>111 Hulk 2099
             </div>
         </td>
+    </tr>
+    <tr>
         <td>
             <div class="card-container">
                 <a href="94flair/cards/112a.jpg" target="_blank"><img src="94flair/cards/112a.jpg" alt="112 Cable Returns (front)" width="100"></a>
@@ -865,8 +866,6 @@ Tearing into a pack of Marvel Flair 1994 Annual cards is like cracking open a ti
                 <br>112 Cable Returns
             </div>
         </td>
-    </tr>
-    <tr>
         <td>
             <div class="card-container">
                 <a href="94flair/cards/113a.jpg" target="_blank"><img src="94flair/cards/113a.jpg" alt="113 The Death of Illyana (Jubilee, Jean Grey) (front)" width="100"></a>
@@ -882,14 +881,15 @@ Tearing into a pack of Marvel Flair 1994 Annual cards is like cracking open a ti
             </div>
         </td>
         <td>
+    </tr>
+    <tr>
+        <td>
             <div class="card-container">
                 <a href="94flair/cards/115a.jpg" target="_blank"><img src="94flair/cards/115a.jpg" alt="115 Vengeance (front)" width="100"></a>
                 <a href="94flair/cards/115b.jpg" target="_blank"><img src="94flair/cards/115b.jpg" alt="115 Vengeance (back)" width="150"></a>
                 <br>115 Vengeance
             </div>
         </td>
-    </tr>
-    <tr>
         <td>
             <div class="card-container">
                 <a href="94flair/cards/116a.jpg" target="_blank"><img src="94flair/cards/116a.jpg" alt="116 Daredevil (front)" width="100"></a>
@@ -904,6 +904,8 @@ Tearing into a pack of Marvel Flair 1994 Annual cards is like cracking open a ti
                 <br>117 The New Ravage
             </div>
         </td>
+    </tr>
+    <tr>
         <td>
             <div class="card-container">
                 <a href="94flair/cards/118a.jpg" target="_blank"><img src="94flair/cards/118a.jpg" alt="118 Wolverine Defeated (front)" width="100"></a>
@@ -911,8 +913,6 @@ Tearing into a pack of Marvel Flair 1994 Annual cards is like cracking open a ti
                 <br>118 Wolverine Defeated
             </div>
         </td>
-    </tr>
-    <tr>
         <td>
             <div class="card-container">
                 <a href="94flair/cards/119a.jpg" target="_blank"><img src="94flair/cards/119a.jpg" alt="119 Bone Claws (Wolverine) (front)" width="100"></a>
@@ -927,6 +927,8 @@ Tearing into a pack of Marvel Flair 1994 Annual cards is like cracking open a ti
                 <br>120 Magneto Returns
             </div>
         </td>
+    </tr>
+    <tr>
         <td>
             <div class="card-container">
                 <a href="94flair/cards/121a.jpg" target="_blank"><img src="94flair/cards/121a.jpg" alt="121 Xavier vs. Magneto (front)" width="100"></a>
@@ -934,8 +936,6 @@ Tearing into a pack of Marvel Flair 1994 Annual cards is like cracking open a ti
                 <br>121 Xavier vs. Magneto
             </div>
         </td>
-    </tr>
-    <tr>
         <td>
             <div class="card-container">
                 <a href="94flair/cards/122a.jpg" target="_blank"><img src="94flair/cards/122a.jpg" alt="122 Colossus Defects (Colossus, Magneto) (front)" width="100"></a>
@@ -950,6 +950,8 @@ Tearing into a pack of Marvel Flair 1994 Annual cards is like cracking open a ti
                 <br>123 Exodus
             </div>
         </td>
+    </tr>
+    <tr>
         <td>
             <div class="card-container">
                 <a href="94flair/cards/124a.jpg" target="_blank"><img src="94flair/cards/124a.jpg" alt="124 Bloodhawk (front)" width="100"></a>
@@ -957,8 +959,6 @@ Tearing into a pack of Marvel Flair 1994 Annual cards is like cracking open a ti
                 <br>124 Bloodhawk
             </div>
         </td>
-    </tr>
-    <tr>
         <td>
             <div class="card-container">
                 <a href="94flair/cards/125a.jpg" target="_blank"><img src="94flair/cards/125a.jpg" alt="125 Zarathos (front)" width="100"></a>
@@ -973,6 +973,8 @@ Tearing into a pack of Marvel Flair 1994 Annual cards is like cracking open a ti
                 <br>126 Final Conflict (Mr. Fantastic)
             </div>
         </td>
+    </tr>
+    <tr>
         <td>
             <div class="card-container">
                 <a href="94flair/cards/127a.jpg" target="_blank"><img src="94flair/cards/127a.jpg" alt="127 Centurious (front)" width="100"></a>
@@ -980,8 +982,6 @@ Tearing into a pack of Marvel Flair 1994 Annual cards is like cracking open a ti
                 <br>127 Centurious
             </div>
         </td>
-    </tr>
-    <tr>
         <td>
             <div class="card-container">
                 <a href="94flair/cards/128a.jpg" target="_blank"><img src="94flair/cards/128a.jpg" alt="128 The Thor Corps (front)" width="100"></a>
@@ -996,6 +996,8 @@ Tearing into a pack of Marvel Flair 1994 Annual cards is like cracking open a ti
                 <br>129 Sabretooth Surrenders (Jean Grey, Sabretooth)
             </div>
         </td>
+    </tr>
+    <tr>
         <td>
             <div class="card-container">
                 <a href="94flair/cards/130a.jpg" target="_blank"><img src="94flair/cards/130a.jpg" alt="130 Venom: The Madness (front)" width="100"></a>
@@ -1003,8 +1005,6 @@ Tearing into a pack of Marvel Flair 1994 Annual cards is like cracking open a ti
                 <br>130 Venom: The Madness
             </div>
         </td>
-    </tr>
-    <tr>
         <td>
             <div class="card-container">
                 <a href="94flair/cards/131a.jpg" target="_blank"><img src="94flair/cards/131a.jpg" alt="131 Strange (front)" width="100"></a>
@@ -1019,6 +1019,8 @@ Tearing into a pack of Marvel Flair 1994 Annual cards is like cracking open a ti
                 <br>132 Suicide Run (Punisher)
             </div>
         </td>
+    </tr>
+    <tr>
         <td>
             <div class="card-container">
                 <a href="94flair/cards/133a.jpg" target="_blank"><img src="94flair/cards/133a.jpg" alt="133 Legacy (Legacy, Silver Surfer) (front)" width="100"></a>
@@ -1026,8 +1028,6 @@ Tearing into a pack of Marvel Flair 1994 Annual cards is like cracking open a ti
                 <br>133 Legacy (Legacy, Silver Surfer)
             </div>
         </td>
-    </tr>
-    <tr>
         <td>
             <div class="card-container">
                 <a href="94flair/cards/134a.jpg" target="_blank"><img src="94flair/cards/134a.jpg" alt="134 Justice (front)" width="100"></a>
@@ -1042,6 +1042,8 @@ Tearing into a pack of Marvel Flair 1994 Annual cards is like cracking open a ti
                 <br>135 Carnage
             </div>
         </td>
+    </tr>
+    <tr>
         <td>
             <div class="card-container">
                 <a href="94flair/cards/136a.jpg" target="_blank"><img src="94flair/cards/136a.jpg" alt="136 Venom (front)" width="100"></a>
@@ -1049,8 +1051,6 @@ Tearing into a pack of Marvel Flair 1994 Annual cards is like cracking open a ti
                 <br>136 Venom
             </div>
         </td>
-    </tr>
-    <tr>
         <td>
             <div class="card-container">
                 <a href="94flair/cards/137a.jpg" target="_blank"><img src="94flair/cards/137a.jpg" alt="137 Spider-Demon (front)" width="100"></a>
@@ -1065,6 +1065,8 @@ Tearing into a pack of Marvel Flair 1994 Annual cards is like cracking open a ti
                 <br>138 Shriek
             </div>
         </td>
+    </tr>
+    <tr>
         <td>
             <div class="card-container">
                 <a href="94flair/cards/139a.jpg" target="_blank"><img src="94flair/cards/139a.jpg" alt="139 Spider-Man (front)" width="100"></a>
@@ -1072,8 +1074,6 @@ Tearing into a pack of Marvel Flair 1994 Annual cards is like cracking open a ti
                 <br>139 Spider-Man
             </div>
         </td>
-    </tr>
-    <tr>
         <td>
             <div class="card-container">
                 <a href="94flair/cards/140a.jpg" target="_blank"><img src="94flair/cards/140a.jpg" alt="140 Venom Lives (front)" width="100"></a>
@@ -1088,6 +1088,8 @@ Tearing into a pack of Marvel Flair 1994 Annual cards is like cracking open a ti
                 <br>141 Cyclops
             </div>
         </td>
+    </tr>
+    <tr>
         <td>
             <div class="card-container">
                 <a href="94flair/cards/142a.jpg" target="_blank"><img src="94flair/cards/142a.jpg" alt="142 Jean Grey (front)" width="100"></a>
@@ -1095,8 +1097,6 @@ Tearing into a pack of Marvel Flair 1994 Annual cards is like cracking open a ti
                 <br>142 Jean Grey
             </div>
         </td>
-    </tr>
-    <tr>
         <td>
             <div class="card-container">
                 <a href="94flair/cards/143a.jpg" target="_blank"><img src="94flair/cards/143a.jpg" alt="143 Bishop (front)" width="100"></a>
@@ -1111,6 +1111,8 @@ Tearing into a pack of Marvel Flair 1994 Annual cards is like cracking open a ti
                 <br>144 Warpath
             </div>
         </td>
+    </tr>
+    <tr>
         <td>
             <div class="card-container">
                 <a href="94flair/cards/145a.jpg" target="_blank"><img src="94flair/cards/145a.jpg" alt="145 Rogue (front)" width="100"></a>
@@ -1118,8 +1120,6 @@ Tearing into a pack of Marvel Flair 1994 Annual cards is like cracking open a ti
                 <br>145 Rogue
             </div>
         </td>
-    </tr>
-    <tr>
         <td>
             <div class="card-container">
                 <a href="94flair/cards/146a.jpg" target="_blank"><img src="94flair/cards/146a.jpg" alt="146 Domino (front)" width="100"></a>
@@ -1134,6 +1134,8 @@ Tearing into a pack of Marvel Flair 1994 Annual cards is like cracking open a ti
                 <br>147 Boom Boom
             </div>
         </td>
+    </tr>
+    <tr>
         <td>
             <div class="card-container">
                 <a href="94flair/cards/148a.jpg" target="_blank"><img src="94flair/cards/148a.jpg" alt="148 Wolverine (front)" width="100"></a>
@@ -1141,8 +1143,6 @@ Tearing into a pack of Marvel Flair 1994 Annual cards is like cracking open a ti
                 <br>148 Wolverine
             </div>
         </td>
-    </tr>
-    <tr>
         <td>
             <div class="card-container">
                 <a href="94flair/cards/149a.jpg" target="_blank"><img src="94flair/cards/149a.jpg" alt="149 Havok (front)" width="100"></a>
@@ -1164,139 +1164,205 @@ Tearing into a pack of Marvel Flair 1994 Annual cards is like cracking open a ti
 <table border="1" cellspacing="0" cellpadding="5">
     <tr>
         <td>
+        <div class="card-container">
             <img src="" alt="1 Cable (front)" width="100"><img src="" alt="1 Cable (back)" width="100"><br>1 Cable
+        </div>
         </td>
         <td>
+        <div class="card-container">
             <img src="" alt="2 Cyclops (front)" width="100"><img src="" alt="2 Cyclops (back)" width="100"><br>2 Cyclops
+        </div>
         </td>
         <td>
+        <div class="card-container">
             <img src="" alt="3 Iron Man (front)" width="100"><img src="" alt="3 Iron Man (back)" width="100"><br>3 Iron Man
+        </div>
         </td>
     </tr>
     <tr>
         <td>
+        <div class="card-container">
             <img src="" alt="4 Magneto (front)" width="100"><img src="" alt="4 Magneto (back)" width="100"><br>4 Magneto
+        </div>
         </td>
         <td>
+        <div class="card-container">
             <img src="" alt="5 Phoenix (front)" width="100"><img src="" alt="5 Phoenix (back)" width="100"><br>5 Phoenix
+        </div>
         </td>
         <td>
+        <div class="card-container">
             <img src="" alt="6 Storm (front)" width="100"><img src="" alt="6 Storm (back)" width="100"><br>6 Storm
+        </div>
         </td>
     </tr>
     <tr>
         <td>
+        <div class="card-container">
             <img src="" alt="7 Venom (front)" width="100"><img src="" alt="7 Venom (back)" width="100"><br>7 Venom
+        </div>
         </td>
         <td>
+        <div class="card-container">
             <img src="" alt="8 Wolverine (front)" width="100"><img src="" alt="8 Wolverine (back)" width="100"><br>8 Wolverine
+        </div>
         </td>
         <td>
+        <div class="card-container">
             <img src="" alt="9 Ghost Rider (front)" width="100"><img src="" alt="9 Ghost Rider (back)" width="100"><br>9 Ghost Rider
+        </div>
         </td>
     </tr>
     <tr>
         <td>
+        <div class="card-container">
             <img src="" alt="10 Punisher (front)" width="100"><img src="" alt="10 Punisher (back)" width="100"><br>10 Punisher
+        </div>
         </td>
         <td>
+        <div class="card-container">
             <img src="" alt="11 Captain America (front)" width="100"><img src="" alt="11 Captain America (back)" width="100"><br>11 Captain America
+        </div>
         </td>
         <td>
+        <div class="card-container">
             <img src="" alt="12 Gambit (front)" width="100"><img src="" alt="12 Gambit (back)" width="100"><br>12 Gambit
+        </div>
         </td>
     </tr>
     <tr>
         <td>
+        <div class="card-container">
             <img src="" alt="13 Thor (front)" width="100"><img src="" alt="13 Thor (back)" width="100"><br>13 Thor
+        </div>
         </td>
         <td>
+        <div class="card-container">
             <img src="" alt="14 Silver Surfer (front)" width="100"><img src="" alt="14 Silver Surfer (back)" width="100"><br>14 Silver Surfer
+        </div>
         </td>
         <td>
+        <div class="card-container">
             <img src="" alt="15 Spider-Man (front)" width="100"><img src="" alt="15 Spider-Man (back)" width="100"><br>15 Spider-Man
+        </div>
         </td>
     </tr>
     <tr>
         <td>
+        <div class="card-container">
             <img src="" alt="16 Deadpool (front)" width="100"><img src="" alt="16 Deadpool (back)" width="100"><br>16 Deadpool
+        </div>
         </td>
         <td>
+        <div class="card-container">
             <img src="" alt="17 Invisible Woman (front)" width="100"><img src="" alt="17 Invisible Woman (back)" width="100"><br>17 Invisible Woman
+        </div>
         </td>
         <td>
+        <div class="card-container">
             <img src="" alt="18 Dr. Doom (front)" width="100"><img src="" alt="18 Dr. Doom (back)" width="100"><br>18 Dr. Doom
+        </div>
         </td>
     </tr>
 </table>
 
 ## Case Inserts (Flairprints)
 
-<table border="1" cellspacing="0" cellpadding="5">
+<table cellspacing="0" cellpadding="5">
     <tr>
         <td>
+        <div class="card-container">
             <img src="" alt="Cable (front)" width="100"><br>Cable
+        </div>
         </td>
         <td>
+        <div class="card-container">
             <img src="" alt="Cyclops (front)" width="100"><br>Cyclops
+        </div>
         </td>
     </tr>
     <tr>
         <td>
+        <div class="card-container">
             <img src="" alt="Iron Man (front)" width="100"><br>Iron Man
+        </div>
         </td>
         <td>
+        <div class="card-container">
             <img src="" alt="Magneto (front)" width="100"><br>Magneto
+        </div>
         </td>
     </tr>
     <tr>
         <td>
+        <div class="card-container">
             <img src="" alt="Phoenix (front)" width="100"><br>Phoenix
+        </div>
         </td>
         <td>
+        <div class="card-container">
             <img src="" alt="Storm (front)" width="100"><br>Storm
+        </div>
         </td>
     </tr>
     <tr>
         <td>
+        <div class="card-container">
             <img src="" alt="Venom (front)" width="100"><br>Venom
+        </div>
         </td>
         <td>
+        <div class="card-container">
             <img src="" alt="Wolverine (front)" width="100"><br>Wolverine
+        </div>
         </td>
     </tr>
     <tr>
         <td>
+        <div class="card-container">
             <img src="" alt="Ghost Rider (front)" width="100"><br>Ghost Rider
+        </div>
         </td>
         <td>
+        <div class="card-container">
             <img src="" alt="Punisher (front)" width="100"><br>Punisher
+        </div>
         </td>
     </tr>
 </table>
 
 ## Binder Inserts
 
-<table border="1" cellspacing="0" cellpadding="5">
+<table cellspacing="0" cellpadding="5">
     <tr>
         <td>
+        <div class="card-container">
             <img src="" alt="Captain America (front)" width="100"><br>Captain America
+        </div>
         </td>
         <td>
+        <div class="card-container">
             <img src="" alt="Gambit (front)" width="100"><br>Gambit
+        </div>
         </td>
     </tr>
     <tr>
         <td>
+        <div class="card-container">
             <img src="" alt="Thor (front)" width="100"><br>Thor
+        </div>
         </td>
         <td>
+        <div class="card-container">
             <img src="" alt="Silver Surfer (front)" width="100"><br>Silver Surfer
+        </div>
         </td>
     </tr>
     <tr>
         <td>
+        <div class="card-container">
             <img src="" alt="Spider-Man (front)" width="100"><br>Spider-Man 
+        </div>
         </td>
         <td>
         </td>
