@@ -4,7 +4,7 @@ The Ultimate Collectable
 
 ![1994 Marvel Annual Flair - #34 - Wolverine vs Hulk](images/flair-94-wolverine-vs-hulk.jpg)
 
-Tearing into a pack of Marvel Flair 1994 Annual cards is like cracking open a time capsule from the comic-obsessed '90s. The glossy art, the chase for that rare hologram—it’s a rush that takes me right back to trading cards on the playground, dreaming of epic battles and mutant mayhem. Join me as I rip through these packs, and attempt to collect every last piece of nostalgia I can find. 
+Tearing into a pack of Marvel Flair 1994 Annual cards is like cracking open a time capsule from the comic-obsessed '90s. The glossy art, the chase for that rare powerblast—it’s a rush that takes me right back to trading cards on the playground, dreaming of epic battles and mutant mayhem. Join me as I rip through these packs, and attempt to collect every last piece of nostalgia I can find. 
 ## Base Set
 <table cellspacing="0" cellpadding="5">
     <tr>
