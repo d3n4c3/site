@@ -462,13 +462,6 @@
   .spec::before { content: ""; position: absolute; left: 0; right: 0; top: 0; height: 3px; background: var(--foil); }
   .spec.bi::before { background: linear-gradient(90deg, var(--red-deep), var(--red), #ff7a5c); }
   .spec header { display: flex; align-items: center; gap: 16px; margin-bottom: 16px; }
-  .yr {
-    flex: none;
-    font-family: "Anton", sans-serif; font-size: 30px; line-height: 1;
-    padding: 8px 12px 6px; border-radius: 10px;
-    background: var(--foil); color: #1a1205;
-  }
-  .spec.bi .yr { background: var(--red); color: #fff; }
   .spec h3 { margin: 0; font-family: "Anton", sans-serif; font-weight: 400; font-size: 30px; line-height: 1; text-transform: uppercase; letter-spacing: .02em; }
   .spec header small { display: block; margin-top: 4px; font-family: "Oswald", sans-serif; font-size: 12px; letter-spacing: .2em; text-transform: uppercase; color: var(--muted); }
   .spec-list { display: grid; grid-template-columns: 112px 1fr; margin: 0 0 18px; border-top: 1px solid rgba(255, 255, 255, 0.06); }
@@ -752,6 +745,33 @@
   .note-card ul { padding-left: 18px; margin: 8px 0 0; }
   .note-inline { margin: 14px 0 0; padding-top: 12px; border-top: 1px solid rgba(255, 255, 255, 0.08); font-size: 13.5px; color: #cfc7b8; }
   .note-inline b { color: var(--gold-2); font-family: "Oswald", sans-serif; font-weight: 500; letter-spacing: .08em; text-transform: uppercase; font-size: 12.5px; }
+  .packaging {
+    display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 18px;
+    margin-top: 16px;
+  }
+  .packaging figure { margin: 0; }
+  .packaging a {
+    display: block; overflow: hidden; border-radius: 12px;
+    border: 1px solid rgba(242, 199, 92, 0.28);
+    background: #0c0a12;
+    transition: border-color .2s ease, transform .2s ease;
+  }
+  .packaging a:hover { border-color: var(--gold-2); transform: translateY(-2px); }
+  .packaging img {
+    display: block; width: 100%; height: auto;
+    aspect-ratio: 4 / 5; object-fit: cover; object-position: center top;
+  }
+  .packaging figcaption {
+    margin-top: 8px;
+    font-family: "Oswald", sans-serif; font-size: 12px; letter-spacing: .12em;
+    text-transform: uppercase; color: var(--muted);
+  }
+  @media (max-width: 1000px) {
+    .packaging { grid-template-columns: 1fr 1fr; }
+  }
+  @media (max-width: 640px) {
+    .packaging { grid-template-columns: 1fr; }
+  }
 
   footer { padding: 36px max(6vw, 24px) 48px; border-top: 1px solid var(--line); color: var(--muted); font-size: 13px; display: flex; justify-content: space-between; gap: 20px; flex-wrap: wrap; }
   footer a { color: var(--gold-2); }
@@ -968,11 +988,11 @@
     }
     .spec::before { height: 3px; background: linear-gradient(90deg, #e3262f, #f2c75c); }
     .spec header { gap: 8px; margin: 4px 0 4px; }
-    .yr {
-      font-size: 11px; padding: 2px 7px; border-radius: 999px;
-      background: #e3262f; color: #fff; border: 0;
-    }
     .spec h3 { font-size: 13px; color: #8a5a12; }
+    .packaging { grid-template-columns: 1fr 1fr !important; gap: 8px; margin-top: 6px; }
+    .packaging a { border-radius: 4px; border-color: #e0c97a; }
+    .packaging img { aspect-ratio: 4 / 5; }
+    .packaging figcaption { font-size: 7px; color: #666; margin-top: 3px; }
     .spec header small { font-size: 7px; color: #666; margin-top: 1px; }
     .spec-list { grid-template-columns: 62px 1fr; margin-bottom: 6px; border-color: #eadfbf; }
     .spec-list dt, .spec-list dd { padding: 2px 0; border-color: #eadfbf; }
@@ -1066,7 +1086,7 @@
       <span class="chip"><b>150</b>Base Cards</span>
       <span class="chip"><b>18</b>Powerblast Chase</span>
       <span class="chip"><b>10</b>Flairprints</span>
-      <span class="chip"><b>5</b>Binder Inserts ('95)</span>
+      <span class="chip"><b>5</b>Binder Inserts</span>
       <span class="chip"><b>15</b>Promos &amp; Sheets</span>
       <span class="chip"><b>3</b>Print Ads</span>
     </div>
@@ -1171,20 +1191,18 @@
     <div class="banner">
       <div class="bg" style="background-image:url('images/cosmic-banner.jpg'); background-position: center 35%;"></div>
       <div>
-        <div class="kicker">Oversized Cards &middot; 1994 &amp; 1995</div>
+        <div class="kicker">Oversized Cards</div>
         <h2><span class="foil-text">Flairprints &amp; Binder</span></h2>
-        <p>Two different oversized releases that often get lumped together. Flairprints were the 1994 case bonus. The binder inserts came a year later, in 1995. Both reuse Powerblast art, so each card carries the same source and artist credits as its Powerblast.</p>
+        <p>Two different oversized releases that often get lumped together. Flairprints were the case bonus packed with the original Flair set. Binder inserts showed up in collector binders (exact release window is less certain). Both reuse Powerblast art, so each card carries the same source and artist credits as its Powerblast.</p>
       </div>
       <div class="count"><div class="big" data-count="large">0<span>/15</span></div><div class="meter"><i data-meter="large"></i></div></div>
     </div>
     <div class="compare">
       <article class="spec fp">
         <header>
-          <span class="yr">1994</span>
           <div><h3>Flairprints</h3><small>Case Bonus &middot; 10 cards</small></div>
         </header>
         <dl class="spec-list">
-          <dt>Released</dt><dd>1994, alongside the original '94 Flair set</dd>
           <dt>Found in</dt><dd>Cases as a bonus (not in packs)</dd>
           <dt>Size</dt><dd>6&frac12;&Prime; &times; 10&Prime;</dd>
           <dt>Front</dt><dd>Powerblast #1&ndash;10 art, enlarged, with the Flair '94 logo and character name</dd>
@@ -1195,12 +1213,10 @@
       </article>
       <article class="spec bi">
         <header>
-          <span class="yr">1995</span>
           <div><h3>Binder Inserts</h3><small>2 per binder &middot; 5 known</small></div>
         </header>
         <dl class="spec-list">
-          <dt>Released</dt><dd>1995, a year after the base set</dd>
-          <dt>Found in</dt><dd>1995 collector binders (two per binder). Verified in sealed <b>1995 Fleer Ultra X-Men</b> binders with a Flair Spider-Man insert still inside</dd>
+          <dt>Found in</dt><dd>Collector binders (two per binder). Verified in sealed <b>Fleer Ultra X-Men</b> binders with a Flair Spider-Man insert still inside</dd>
           <dt>Size</dt><dd>Oversized, similar to Flairprints</dd>
           <dt>Front</dt><dd>Powerblast #11&ndash;15 art <em>without</em> the metallic enhancement. No Flair '94 logo or character title.</dd>
           <dt>Back</dt><dd>Completely blank</dd>
@@ -1321,7 +1337,25 @@
       <div class="note-card">
         <h4>Promos &amp; Binder Cards</h4>
         <p>Diamond's Omega Red vs. Wolverine Flairprint: Annual Retailer Seminar, Baltimore, June 11&ndash;14, 1994. Deadpool Flairprint: Heroes World Con 1994 (nslists; no published day range).</p>
-        <p>Binder inserts are a 1995 release — oversized like Flairprints, Powerblast art without metallic finish, no Flair '94 logo/title, blank backs. Spider-Man binder verified in sealed <b>1995 Fleer Ultra X-Men</b> binders.</p>
+        <p>Binder inserts are oversized like Flairprints: Powerblast art without metallic finish, no Flair '94 logo/title, blank backs. Spider-Man binder verified in sealed <b>Fleer Ultra X-Men</b> binders; some may also have been issued promotionally. Exact release timing isn't locked down.</p>
+      </div>
+      <div class="note-card wide">
+        <h4>Hobby Box &amp; Packs</h4>
+        <p>Each hobby box held <b>24 packs of 10 cards</b>. Packs shipped as thick cardboard mini-boxes with character foil art on the front (Venom, Wolverine, Magneto, and others), shrink-wrapped — not a conventional wax wrapper. Powerblast chase landed about 1:2 packs; Flairprints were a case bonus, not in the packs.</p>
+        <div class="packaging">
+          <figure>
+            <a href="images/print-fx/hd/hobby-box.jpg" target="_blank" rel="noopener">
+              <img src="images/thumbs/print/hobby-box.jpg" alt="Factory-sealed 1994 Flair Marvel hobby box with Magneto and Venom on the lid" loading="lazy">
+            </a>
+            <figcaption>Factory-sealed hobby box &middot; 24 packs &middot; Magneto / Venom lid</figcaption>
+          </figure>
+          <figure>
+            <a href="images/print-fx/hd/pack-venom.jpg" target="_blank" rel="noopener">
+              <img src="images/thumbs/print/pack-venom.jpg" alt="Sealed 1994 Flair Marvel pack with Venom foil cover art" loading="lazy">
+            </a>
+            <figcaption>Sealed pack mini-box &middot; Venom cover &middot; 10 cards</figcaption>
+          </figure>
+        </div>
       </div>
       <div class="note-card wide">
         <h4>About the Art Credits</h4>
@@ -1716,7 +1750,7 @@ function credit(key) {
   if (kind === "bi") {
     const [name, pb] = BINDER[n - 1];
     const [source, artist] = PB_CREDITS[pb - 1];
-    return { label: "1995 Binder Insert", name, chars: `Same art as Powerblast #${pb}, without the metallic finish`, source, artist,
+    return { label: "Binder Insert", name, chars: `Same art as Powerblast #${pb}, without the metallic finish`, source, artist,
       img: insertSrc("binder", n), imgClass: "flairprint",
       imgNote: "Photographed binder insert \u00b7 no Flair logo, character title, or metallic finish",
       backNote: "Completely blank back" };
@@ -1724,7 +1758,7 @@ function credit(key) {
   if (kind === "f") {
     const [name, pb] = FLAIRPRINTS[n - 1];
     const [source, artist] = PB_CREDITS[pb - 1];
-    return { label: "1994 Flairprint \u00b7 Case Bonus", name, chars: `Same art as Powerblast #${pb}, enlarged`, source, artist,
+    return { label: "Flairprint \u00b7 Case Bonus", name, chars: `Same art as Powerblast #${pb}, enlarged`, source, artist,
       img: insertSrc("flairprint", n), imgClass: "flairprint", backNote: "Blank back with UPC 0 41199 00258 1" };
   }
   if (kind === "pr") {
@@ -1827,11 +1861,11 @@ function render() {
 
   document.getElementById("grid-binder").innerHTML = BINDER.map(([name, pb], i) =>
     tile({
-      id: `bi${i + 1}`, group: "large", no: "'95", name,
+      id: `bi${i + 1}`, group: "large", no: "BI", name,
       chars: name === "Spider-Man"
-        ? `Photographed insert \u00b7 verified in sealed 1995 Fleer Ultra X-Men binders`
+        ? `Photographed insert \u00b7 verified in sealed Fleer Ultra X-Men binders`
         : `Photographed insert \u00b7 Powerblast #${pb} art, no logo/title/foil`,
-      card: `bi${i + 1}`, label: `1995 Binder Insert ${name}`
+      card: `bi${i + 1}`, label: `Binder Insert ${name}`
     })).join("");
 
   document.getElementById("grid-promo").innerHTML = PROMOS.map(([name, chars], i) =>
