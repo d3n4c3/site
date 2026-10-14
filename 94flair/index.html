@@ -1,0 +1,2048 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>1994 Flair Marvel Universe &mdash; Collector Checklist</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Cinzel:wght@600;800&family=Inter:wght@400;500;600;700&family=Oswald:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #07060b;
+    --panel: #110f18;
+    --panel-2: #181522;
+    --line: rgba(255, 215, 140, 0.14);
+    --text: #f3eee4;
+    --muted: #a49c8c;
+    --gold-1: #fff4c8;
+    --gold-2: #f2c75c;
+    --gold-3: #b8862b;
+    --gold-4: #6e4a12;
+    --red: #e3262f;
+    --red-deep: #8f0f16;
+    --foil: linear-gradient(115deg, var(--gold-4) 0%, var(--gold-3) 18%, var(--gold-1) 34%, var(--gold-2) 48%, var(--gold-3) 62%, var(--gold-1) 78%, var(--gold-3) 100%);
+    --holo: linear-gradient(115deg, #ff3fd8, #44e7ff 25%, #ffe45c 50%, #7a5cff 75%, #ff3fd8);
+    --radius: 14px;
+  }
+
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    background:
+      radial-gradient(1200px 600px at 85% -10%, rgba(143, 15, 22, 0.35), transparent 60%),
+      radial-gradient(900px 500px at -10% 40%, rgba(110, 74, 18, 0.25), transparent 60%),
+      var(--ink);
+    color: var(--text);
+    font-family: "Inter", system-ui, sans-serif;
+    line-height: 1.45;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .foil-text {
+    background: var(--foil);
+    background-size: 200% 100%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: foil-shift 6s ease-in-out infinite;
+  }
+  @keyframes foil-shift { 0%, 100% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } }
+
+  /* ---------- HERO ---------- */
+  .hero {
+    position: relative;
+    min-height: 620px;
+    display: grid;
+    grid-template-columns: 1.25fr 0.75fr;
+    align-items: center;
+    gap: 40px;
+    padding: 72px max(6vw, 24px) 96px;
+    overflow: hidden;
+    isolation: isolate;
+  }
+  .hero::before {
+    content: "";
+    position: absolute; inset: 0;
+    background: url("images/hero-banner.jpg") center right / cover no-repeat;
+    z-index: -2;
+  }
+  .hero::after {
+    content: "";
+    position: absolute; inset: 0;
+    background:
+      linear-gradient(90deg, rgba(7, 6, 11, 0.96) 0%, rgba(7, 6, 11, 0.75) 45%, rgba(7, 6, 11, 0.15) 100%),
+      linear-gradient(0deg, var(--ink) 0%, transparent 35%);
+    z-index: -1;
+  }
+  .eyebrow {
+    display: inline-flex; align-items: center; gap: 10px;
+    font-family: "Oswald", sans-serif;
+    letter-spacing: 0.32em; text-transform: uppercase;
+    font-size: 13px; color: var(--gold-2);
+  }
+  .eyebrow::before { content: ""; width: 38px; height: 2px; background: var(--foil); }
+  .marvel-tag {
+    display: inline-block;
+    margin: 22px 0 6px;
+    padding: 6px 14px 4px;
+    background: var(--red);
+    font-family: "Anton", sans-serif;
+    font-size: clamp(22px, 3vw, 34px);
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: #fff;
+    box-shadow: 0 10px 30px rgba(227, 38, 47, 0.35);
+  }
+  .hero h1 {
+    margin: 0;
+    font-family: "Cinzel", serif;
+    font-weight: 800;
+    font-size: clamp(64px, 11vw, 150px);
+    line-height: 0.92;
+    letter-spacing: 0.02em;
+    filter: drop-shadow(0 6px 24px rgba(242, 199, 92, 0.25));
+  }
+  .hero h1 small {
+    display: block;
+    font-size: 0.32em;
+    letter-spacing: 0.18em;
+    margin-top: 10px;
+  }
+  .hero p.lede {
+    max-width: 540px;
+    color: #d6cfc2;
+    font-size: 17px;
+    margin: 22px 0 28px;
+  }
+  .chips { display: flex; flex-wrap: wrap; gap: 10px; }
+  .chip {
+    padding: 8px 14px;
+    border: 1px solid var(--line);
+    background: rgba(17, 15, 24, 0.65);
+    backdrop-filter: blur(6px);
+    border-radius: 999px;
+    font-family: "Oswald", sans-serif;
+    font-size: 14px; letter-spacing: 0.06em; text-transform: uppercase;
+  }
+  .chip b { color: var(--gold-2); font-weight: 600; margin-right: 6px; }
+
+  .feature { justify-self: center; perspective: 1200px; text-align: center; }
+  .feature-card {
+    position: relative;
+    width: min(300px, 70vw);
+    aspect-ratio: 383 / 531;
+    border-radius: 12px;
+    overflow: hidden;
+    cursor: pointer;
+    background: #000;
+    transform: rotateY(-14deg) rotateX(6deg) rotateZ(2deg);
+    box-shadow:
+      0 0 0 2px rgba(242, 199, 92, 0.55),
+      0 40px 80px rgba(0, 0, 0, 0.7),
+      0 0 120px rgba(227, 38, 47, 0.35);
+    transition: transform 0.6s cubic-bezier(.2,.8,.2,1);
+  }
+  .feature-card:hover { transform: rotateY(0) rotateX(0) rotateZ(0) scale(1.03); }
+  .feature-card img {
+    position: absolute; inset: 0;
+    width: 100%; height: 100%; object-fit: cover; display: block;
+    opacity: 0; transition: opacity 0.9s ease;
+  }
+  .feature-card img.on { opacity: 1; }
+  .feature figcaption { min-height: 3.2em; }
+  .feature figcaption .by { display: block; margin-top: 6px; letter-spacing: 0.12em; font-size: 11px; opacity: 0.8; }
+  @media (prefers-reduced-motion: reduce) { .feature-card img { transition: none; } }
+  .feature-card::after {
+    content: "";
+    position: absolute; inset: -50%;
+    background: linear-gradient(115deg, transparent 40%, rgba(255, 244, 200, 0.55) 50%, transparent 60%);
+    animation: sheen 4.5s ease-in-out infinite;
+    mix-blend-mode: overlay;
+  }
+  @keyframes sheen { 0% { transform: translateX(-60%); } 55%, 100% { transform: translateX(60%); } }
+  .feature figcaption {
+    margin-top: 22px;
+    font-family: "Oswald", sans-serif;
+    letter-spacing: 0.2em; text-transform: uppercase; font-size: 12px; color: var(--muted);
+  }
+  .feature figcaption strong { color: var(--gold-2); font-weight: 500; }
+
+  /* ---------- DASHBOARD ---------- */
+  .dash {
+    margin: -64px max(6vw, 24px) 0;
+    position: relative; z-index: 2;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 28px;
+    padding: 26px 30px;
+    background: linear-gradient(180deg, rgba(24, 21, 34, 0.92), rgba(17, 15, 24, 0.92));
+    border: 1px solid var(--line);
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
+  }
+  .ring { position: relative; width: 132px; height: 132px; }
+  .ring svg { transform: rotate(-90deg); }
+  .ring .track { stroke: rgba(255, 255, 255, 0.08); }
+  .ring .bar { stroke: url(#foilGrad); stroke-linecap: round; transition: stroke-dashoffset 0.8s cubic-bezier(.2,.8,.2,1); }
+  .ring-label {
+    position: absolute; inset: 0;
+    display: grid; place-content: center; text-align: center;
+  }
+  .ring-label .pct { font-family: "Anton", sans-serif; font-size: 34px; line-height: 1; }
+  .ring-label .sub { font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted); margin-top: 4px; }
+  .stat-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 14px; align-content: center; }
+  .stat {
+    padding: 14px 16px;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    text-decoration: none; color: inherit;
+    transition: border-color .2s, transform .2s;
+  }
+  .stat:hover { border-color: var(--gold-3); transform: translateY(-2px); }
+  .stat .label { font-family: "Oswald", sans-serif; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--muted); }
+  .stat .num { font-family: "Anton", sans-serif; font-size: 28px; margin: 2px 0 8px; }
+  .stat .num span { font-size: 16px; color: var(--muted); font-family: "Oswald", sans-serif; }
+  .meter { height: 5px; border-radius: 99px; background: rgba(255, 255, 255, 0.07); overflow: hidden; }
+  .meter i { display: block; height: 100%; width: 0; background: var(--foil); background-size: 200% 100%; transition: width .8s cubic-bezier(.2,.8,.2,1); }
+  .stat.holo .meter i { background: var(--holo); }
+
+  /* ---------- TOOLBAR ---------- */
+  .toolbar {
+    position: sticky; top: 0; z-index: 20;
+    display: flex; flex-wrap: wrap; gap: 12px; align-items: center;
+    margin: 28px 0 0;
+    padding: 14px max(6vw, 24px);
+    background: rgba(7, 6, 11, 0.86);
+    backdrop-filter: blur(14px);
+    border-bottom: 1px solid var(--line);
+  }
+  .search {
+    flex: 1 1 260px;
+    display: flex; align-items: center; gap: 10px;
+    padding: 0 14px;
+    height: 42px;
+    border-radius: 10px;
+    background: var(--panel-2);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+  }
+  .search:focus-within { border-color: var(--gold-3); }
+  .search input { flex: 1; background: none; border: 0; outline: 0; color: var(--text); font: inherit; font-size: 15px; }
+  .search svg { opacity: .55; flex: none; }
+  .seg { display: inline-flex; padding: 4px; border-radius: 10px; background: var(--panel-2); border: 1px solid rgba(255, 255, 255, 0.08); }
+  .seg button {
+    border: 0; background: none; color: var(--muted);
+    padding: 7px 14px; border-radius: 7px;
+    font-family: "Oswald", sans-serif; font-size: 13px; letter-spacing: .12em; text-transform: uppercase; cursor: pointer;
+  }
+  .seg button.on { background: var(--foil); color: #1a1205; font-weight: 600; }
+  .btn {
+    height: 42px; padding: 0 16px;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: var(--panel-2); color: var(--text);
+    font-family: "Oswald", sans-serif; font-size: 13px; letter-spacing: .12em; text-transform: uppercase;
+    cursor: pointer; transition: border-color .2s, background .2s;
+  }
+  .btn:hover { border-color: var(--gold-3); }
+  .btn.primary { background: var(--red); border-color: var(--red); }
+  .btn.primary:hover { background: #ff3a43; }
+  .nav { display: flex; gap: 6px; flex-wrap: wrap; width: 100%; }
+  .nav a {
+    color: var(--muted); text-decoration: none;
+    font-family: "Oswald", sans-serif; font-size: 12px; letter-spacing: .18em; text-transform: uppercase;
+    padding: 4px 10px; border-radius: 6px;
+  }
+  .nav a:hover { color: var(--gold-2); background: rgba(242, 199, 92, 0.08); }
+
+  /* ---------- SECTIONS ---------- */
+  main { padding: 0 max(6vw, 24px) 80px; }
+  section { margin-top: 64px; scroll-margin-top: 120px; }
+  .banner {
+    position: relative;
+    min-height: 190px;
+    border-radius: 20px;
+    overflow: hidden;
+    display: flex; align-items: flex-end; justify-content: space-between; gap: 24px;
+    padding: 28px 32px;
+    margin-bottom: 26px;
+    border: 1px solid var(--line);
+    isolation: isolate;
+  }
+  .banner .bg { position: absolute; inset: 0; background-size: cover; background-position: center; z-index: -2; transform: scale(1.02); }
+  .banner::after {
+    content: ""; position: absolute; inset: 0; z-index: -1;
+    background: linear-gradient(90deg, rgba(7, 6, 11, 0.94) 0%, rgba(7, 6, 11, 0.55) 55%, rgba(7, 6, 11, 0.2) 100%);
+  }
+  .banner.plain { min-height: 150px; background: linear-gradient(120deg, #1c0a0d, #120f19 50%, #1a1408); }
+  .banner.plain::after { background: radial-gradient(600px 200px at 90% 120%, rgba(227, 38, 47, 0.35), transparent 70%); }
+  .banner .kicker { font-family: "Oswald", sans-serif; letter-spacing: .3em; text-transform: uppercase; color: var(--gold-2); font-size: 12px; }
+  .banner h2 {
+    margin: 6px 0 4px;
+    font-family: "Anton", sans-serif;
+    font-weight: 400;
+    font-size: clamp(36px, 5vw, 60px);
+    line-height: 1;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+  }
+  .banner p { margin: 0; color: #cfc7b8; max-width: 560px; font-size: 15px; }
+  .banner .count { text-align: right; flex: none; }
+  .banner .count .big { font-family: "Anton", sans-serif; font-size: 48px; line-height: 1; }
+  .banner .count .big span { font-size: 22px; color: var(--muted); }
+  .banner .count .meter { width: 180px; margin-top: 10px; }
+  .holo-text {
+    background: var(--holo); background-size: 300% 100%;
+    -webkit-background-clip: text; background-clip: text; color: transparent;
+    animation: foil-shift 5s linear infinite;
+  }
+
+  /* ---------- CARD TILES ---------- */
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 12px; }
+  .tile {
+    position: relative;
+    display: grid;
+    grid-template-columns: 58px 1fr 30px;
+    align-items: center;
+    gap: 12px;
+    min-height: 70px;
+    padding: 12px 14px 12px 0;
+    border-radius: var(--radius);
+    background: linear-gradient(180deg, var(--panel-2), var(--panel));
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    cursor: pointer;
+    user-select: none;
+    overflow: hidden;
+    transition: transform .18s ease, border-color .18s ease, box-shadow .18s ease;
+  }
+  .tile:hover { transform: translateY(-2px); border-color: rgba(242, 199, 92, 0.4); box-shadow: 0 12px 28px rgba(0, 0, 0, 0.45); }
+  .tile:focus-visible { outline: 2px solid var(--gold-2); outline-offset: 2px; }
+  .tile .no {
+    align-self: stretch;
+    display: grid; place-items: center;
+    font-family: "Anton", sans-serif; font-size: 24px;
+    color: var(--gold-2);
+    border-right: 1px solid rgba(255, 255, 255, 0.06);
+    background: rgba(255, 255, 255, 0.02);
+  }
+  .tile .name { font-weight: 600; font-size: 14.5px; line-height: 1.25; }
+  .tile .chars { display: block; font-size: 12px; color: var(--muted); margin-top: 3px; font-weight: 400; }
+  .tile .art { display: block; margin-top: 4px; font-size: 11px; color: var(--gold-3); font-weight: 500; letter-spacing: .01em; }
+  .tile .art::before { content: "Art \00b7\00a0"; color: var(--muted); font-weight: 400; }
+  .tile .note { display: inline-block; margin-top: 5px; font-size: 10.5px; letter-spacing: .08em; text-transform: uppercase; color: #ffb3b6; background: rgba(227, 38, 47, 0.15); border: 1px solid rgba(227, 38, 47, 0.35); padding: 1px 7px; border-radius: 99px; }
+  .box {
+    width: 26px; height: 26px; border-radius: 8px;
+    border: 2px solid rgba(255, 255, 255, 0.22);
+    display: grid; place-items: center;
+    transition: all .2s ease;
+  }
+  .box svg { width: 15px; height: 15px; opacity: 0; transform: scale(.4); transition: all .2s cubic-bezier(.2,1.6,.4,1); }
+
+  .tile.have {
+    border-color: transparent;
+    background:
+      linear-gradient(180deg, #221c12, #15110b) padding-box,
+      var(--foil) border-box;
+    border: 1px solid transparent;
+  }
+  .tile.have .no { background: var(--foil); color: #1a1205; border-right-color: transparent; }
+  .tile.have .box { background: var(--foil); border-color: transparent; }
+  .tile.have .box svg { opacity: 1; transform: scale(1); }
+  .tile.have::after {
+    content: ""; position: absolute; inset: 0; pointer-events: none;
+    background: linear-gradient(115deg, transparent 35%, rgba(255, 244, 200, 0.12) 50%, transparent 65%);
+  }
+
+  .tile.holo .no { color: transparent; background: rgba(255, 255, 255, 0.02); }
+  .tile.holo .no span { background: var(--holo); background-size: 300% 100%; -webkit-background-clip: text; background-clip: text; color: transparent; animation: foil-shift 5s linear infinite; }
+  .tile.holo.have {
+    background:
+      linear-gradient(180deg, #17132a, #0f0c1c) padding-box,
+      var(--holo) border-box;
+  }
+  .tile.holo.have .no { background: var(--holo); background-size: 300% 100%; animation: foil-shift 5s linear infinite; }
+  .tile.holo.have .no span { color: #120c22; background: none; -webkit-background-clip: initial; background-clip: initial; }
+  .tile.holo.have .box { background: var(--holo); }
+
+  .tile.hidden, .row.hidden { display: none; }
+
+  /* credits table (Details view + print) */
+  .details { display: none; }
+  body.view-details #grid-base, body.view-details #grid-powerblast { display: none; }
+  body.view-details .details { display: block; }
+  .credits { width: 100%; border-collapse: separate; border-spacing: 0 6px; font-size: 13.5px; }
+  .credits th {
+    text-align: left; padding: 6px 12px;
+    font-family: "Oswald", sans-serif; font-weight: 500; font-size: 11.5px; letter-spacing: .18em; text-transform: uppercase; color: var(--gold-2);
+  }
+  .credits td { padding: 10px 12px; background: linear-gradient(180deg, var(--panel-2), var(--panel)); border-top: 1px solid rgba(255, 255, 255, 0.05); border-bottom: 1px solid rgba(255, 255, 255, 0.05); vertical-align: middle; }
+  .credits td:first-child { border-left: 1px solid rgba(255, 255, 255, 0.05); border-radius: 10px 0 0 10px; width: 46px; }
+  .credits td:last-child { border-right: 1px solid rgba(255, 255, 255, 0.05); border-radius: 0 10px 10px 0; }
+  .credits .c-no { font-family: "Anton", sans-serif; font-size: 20px; color: var(--gold-2); width: 52px; }
+  .credits .c-name { font-weight: 600; min-width: 170px; }
+  .credits .c-name .chars { display: block; font-size: 12px; color: var(--muted); font-weight: 400; }
+  .credits .c-name .note { display: inline-block; margin-top: 4px; font-size: 10.5px; letter-spacing: .08em; text-transform: uppercase; color: #ffb3b6; border: 1px solid rgba(227, 38, 47, 0.35); padding: 0 7px; border-radius: 99px; }
+  .credits .c-front { font-style: italic; color: #e6dcc6; }
+  .credits .c-src { color: #b9b1a2; font-size: 12.5px; }
+  .credits .c-art { color: var(--gold-2); font-weight: 500; white-space: nowrap; }
+  .credits .unk { color: #6f685c; font-style: italic; }
+  .row { cursor: pointer; }
+  .row:hover td { border-color: rgba(242, 199, 92, 0.35); }
+  .row.have td { background: linear-gradient(180deg, #221c12, #15110b); border-color: rgba(242, 199, 92, 0.45); }
+  .row.have .box { background: var(--foil); border-color: transparent; }
+  .row.have .box svg { opacity: 1; transform: scale(1); }
+  .row.holo .c-no span { background: var(--holo); background-size: 300% 100%; -webkit-background-clip: text; background-clip: text; color: transparent; animation: foil-shift 5s linear infinite; }
+  .row.holo.have td { background: linear-gradient(180deg, #17132a, #0f0c1c); border-color: rgba(122, 92, 255, 0.5); }
+  .row.holo.have .box { background: var(--holo); }
+
+  select.artist {
+    height: 42px; padding: 0 36px 0 14px; max-width: 230px;
+    border-radius: 10px; border: 1px solid rgba(255, 255, 255, 0.08);
+    background: var(--panel-2) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23f2c75c' stroke-width='3'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E") no-repeat right 12px center;
+    color: var(--text); font: inherit; font-size: 14px; appearance: none; cursor: pointer;
+  }
+  select.artist:focus { outline: 0; border-color: var(--gold-3); }
+  select.artist.on { border-color: var(--gold-2); color: var(--gold-1); }
+
+  .facts { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-top: 10px; }
+  .fact { padding: 10px 12px; border-radius: 10px; background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.06); }
+  .fact b { display: block; font-family: "Anton", sans-serif; font-weight: 400; font-size: 22px; color: var(--gold-2); line-height: 1.1; }
+  .fact span { font-size: 12px; color: var(--muted); }
+  .empty { display: none; padding: 30px; text-align: center; color: var(--muted); border: 1px dashed var(--line); border-radius: var(--radius); }
+
+  .split { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; }
+
+  /* Flairprint vs. binder insert comparison */
+  .compare { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  .spec {
+    position: relative; overflow: hidden;
+    padding: 24px 24px 22px;
+    border-radius: 18px;
+    background: linear-gradient(180deg, rgba(24, 21, 34, 0.92), rgba(17, 15, 24, 0.92));
+    border: 1px solid var(--line);
+  }
+  .spec::before { content: ""; position: absolute; left: 0; right: 0; top: 0; height: 3px; background: var(--foil); }
+  .spec.bi::before { background: linear-gradient(90deg, var(--red-deep), var(--red), #ff7a5c); }
+  .spec header { display: flex; align-items: center; gap: 16px; margin-bottom: 16px; }
+  .yr {
+    flex: none;
+    font-family: "Anton", sans-serif; font-size: 30px; line-height: 1;
+    padding: 8px 12px 6px; border-radius: 10px;
+    background: var(--foil); color: #1a1205;
+  }
+  .spec.bi .yr { background: var(--red); color: #fff; }
+  .spec h3 { margin: 0; font-family: "Anton", sans-serif; font-weight: 400; font-size: 30px; line-height: 1; text-transform: uppercase; letter-spacing: .02em; }
+  .spec header small { display: block; margin-top: 4px; font-family: "Oswald", sans-serif; font-size: 12px; letter-spacing: .2em; text-transform: uppercase; color: var(--muted); }
+  .spec-list { display: grid; grid-template-columns: 112px 1fr; margin: 0 0 18px; border-top: 1px solid rgba(255, 255, 255, 0.06); }
+  .spec-list dt, .spec-list dd { padding: 8px 0; border-bottom: 1px solid rgba(255, 255, 255, 0.06); }
+  .spec-list dt { font-family: "Oswald", sans-serif; font-size: 11.5px; letter-spacing: .16em; text-transform: uppercase; color: var(--gold-2); padding-top: 10px; }
+  .spec.bi .spec-list dt { color: #ff8a8f; }
+  .spec-list dd { margin: 0; font-size: 14px; color: #ddd5c6; }
+  .spec .grid { grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); }
+  .tell {
+    display: grid; grid-template-columns: auto 1fr; gap: 18px; align-items: center;
+    margin-top: 20px; padding: 18px 22px;
+    border-radius: 14px; border: 1px dashed rgba(242, 199, 92, 0.35);
+    background: rgba(242, 199, 92, 0.04);
+  }
+  .tell b { font-family: "Oswald", sans-serif; font-weight: 500; letter-spacing: .2em; text-transform: uppercase; font-size: 13px; color: var(--gold-2); }
+  .tell p { margin: 0; color: #d6cfc2; font-size: 14.5px; }
+
+  /* 1994 promo timeline — compact horizontal, shrinks to fit the page */
+  .timeline {
+    position: relative; display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(118px, 1fr));
+    gap: 10px; margin: 6px 0 28px; padding-top: 28px;
+  }
+  .timeline::before {
+    content: ""; position: absolute; left: 8px; right: 8px; top: 9px; height: 2px;
+    background: linear-gradient(90deg, var(--gold-3), var(--red), var(--gold-2)); opacity: .7;
+  }
+  .tl {
+    position: relative; padding: 12px 12px 10px; border-radius: 12px;
+    background: linear-gradient(180deg, var(--panel-2), var(--panel));
+    border: 1px solid rgba(255, 255, 255, 0.06); min-width: 0;
+  }
+  .tl::before {
+    content: ""; position: absolute; top: -25px; left: 14px; width: 12px; height: 12px; border-radius: 50%;
+    background: var(--foil); box-shadow: 0 0 0 3px var(--ink), 0 0 14px rgba(242, 199, 92, 0.5);
+  }
+  .tl.red::before { background: var(--red); box-shadow: 0 0 0 3px var(--ink), 0 0 14px rgba(227, 38, 47, 0.6); }
+  .tl .when { font-family: "Anton", sans-serif; font-size: clamp(13px, 1.35vw, 17px); color: var(--gold-2); line-height: 1; }
+  .tl .kind {
+    display: inline-block; margin: 5px 0 5px; font-family: "Oswald", sans-serif;
+    font-size: clamp(8.5px, 0.85vw, 10.5px); letter-spacing: .12em; text-transform: uppercase;
+    padding: 1px 6px; border-radius: 99px; border: 1px solid rgba(255, 255, 255, 0.15); color: var(--muted);
+  }
+  .tl.red .kind { color: #ffb3b6; border-color: rgba(227, 38, 47, 0.45); }
+  .tl p { margin: 0; font-size: clamp(11px, 1.05vw, 13px); color: #d6cfc2; line-height: 1.35; }
+  .tl p b { color: var(--text); }
+
+  .promo-facts { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-bottom: 26px; }
+  .promo-facts .fact b { font-size: 26px; }
+  .mags { margin: 10px 0 0; padding: 0; list-style: none; display: flex; flex-wrap: wrap; gap: 6px; }
+  .mags li { font-size: 12px; padding: 4px 10px; border-radius: 99px; border: 1px solid rgba(255, 255, 255, 0.1); color: #cfc7b8; }
+  .sub-h { font-family: "Oswald", sans-serif; text-transform: uppercase; letter-spacing: .2em; font-size: 14px; color: var(--gold-2); margin: 0 0 14px; display: flex; align-items: center; gap: 12px; }
+  .sub-h::after { content: ""; flex: 1; height: 1px; background: linear-gradient(90deg, var(--line), transparent); }
+  .sub-h .tag { color: var(--muted); letter-spacing: .1em; font-size: 12px; }
+  .sub-note { margin: -4px 0 14px; color: var(--muted); font-size: 13px; }
+
+  /* uncut sheet mini-grids */
+  .sheets { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 14px; }
+  .sheet { grid-template-columns: 1fr 30px; padding: 16px; align-items: start; }
+  .sheet .head { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 10px; }
+  .sheet .head b { font-family: "Anton", sans-serif; font-weight: 400; font-size: 20px; letter-spacing: .04em; }
+  .sheet .head small { font-size: 11px; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); }
+  .mini { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; }
+  .mini > span {
+    position: relative; aspect-ratio: 5 / 7; overflow: hidden;
+    border-radius: 4px; background: #0b0910;
+    box-shadow: 0 0 0 1px rgba(242, 199, 92, 0.3), 0 4px 10px rgba(0, 0, 0, 0.45);
+  }
+  .mini img { display: block; width: 100%; height: 100%; object-fit: cover; font-size: 0; color: transparent; }
+  .mini .badge { min-width: 0; padding: 1px 5px 0; font-size: 12px; border-radius: 0 0 5px 0; }
+  .mini span.unnum::after {
+    content: "*"; position: absolute; top: 1px; right: 2px; padding: 0 4px; border-radius: 4px;
+    font: 700 13px/1.2 sans-serif; color: #fff; background: var(--red);
+  }
+  .mini span[data-ref] { cursor: zoom-in; transition: transform .15s ease, box-shadow .15s ease; }
+  .mini span[data-ref]:hover { transform: scale(1.1); box-shadow: 0 0 0 2px var(--gold-2), 0 8px 18px rgba(0, 0, 0, 0.6); z-index: 2; }
+
+  .tip {
+    position: fixed; z-index: 60; pointer-events: none;
+    width: max-content; max-width: 260px;
+    padding: 12px 14px;
+    border-radius: 12px;
+    background: linear-gradient(180deg, #221c12, #120f19) padding-box, var(--foil) border-box;
+    border: 1px solid transparent;
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.6);
+    opacity: 0; transform: translateY(6px); transition: opacity .15s ease, transform .15s ease;
+  }
+  .tip.show { opacity: 1; transform: translateY(0); }
+  .tip .t-no { font-family: "Oswald", sans-serif; font-size: 11px; letter-spacing: .2em; text-transform: uppercase; color: var(--gold-2); }
+  .tip .t-name { font-family: "Anton", sans-serif; font-size: 20px; line-height: 1.1; margin: 2px 0; text-transform: uppercase; letter-spacing: .02em; }
+  .tip .t-chars { font-size: 12.5px; color: #cfc7b8; }
+  .tip.wide { max-width: 320px; }
+  .tip.has-img { max-width: min(470px, calc(100vw - 16px)); }
+  .tip .t-wrap { display: grid; grid-template-columns: 130px 1fr; gap: 14px; align-items: start; }
+  .tip .t-img {
+    width: 130px; aspect-ratio: 383 / 531; object-fit: cover; display: block;
+    border-radius: 7px; background: #0b0910;
+    box-shadow: 0 0 0 1px rgba(242, 199, 92, 0.45), 0 10px 24px rgba(0, 0, 0, 0.55);
+  }
+  .tip .t-img.flairprint { aspect-ratio: 13 / 20; }
+  .tip .t-img.free { aspect-ratio: auto; height: auto; max-height: 220px; object-fit: contain; }
+  .tip .t-note { margin-top: 8px; font-size: 11px; line-height: 1.4; color: var(--muted); font-style: italic; }
+  .tip .t-art { position: relative; display: block; border-radius: 7px; overflow: hidden; }
+  @media (max-width: 640px) {
+    .tip .t-wrap { grid-template-columns: 92px 1fr; gap: 12px; }
+    .tip .t-img { width: 92px; }
+  }
+
+  /* Card art gloss: glare + sheen over the HD scans */
+  body.fx-gloss .tip .t-img, body.fx-gloss .feature-card img { filter: contrast(1.06) saturate(1.12) brightness(1.03); }
+  body.fx-gloss .tip .t-art::after {
+    content: ""; position: absolute; inset: 0; pointer-events: none;
+    background:
+      linear-gradient(125deg, rgba(255, 255, 255, 0.28) 0%, rgba(255, 255, 255, 0.06) 22%, transparent 40%),
+      linear-gradient(115deg, transparent 45%, rgba(255, 244, 200, 0.35) 52%, transparent 60%);
+    background-size: 100% 100%, 260% 100%;
+    animation: tip-sheen 3.2s ease-in-out infinite;
+    mix-blend-mode: screen;
+  }
+  @keyframes tip-sheen { 0% { background-position: 0 0, 120% 0; } 60%, 100% { background-position: 0 0, -40% 0; } }
+  body.fx-gloss .feature-card { box-shadow: 0 0 0 2px rgba(242, 199, 92, 0.75), 0 40px 80px rgba(0, 0, 0, 0.7), 0 0 140px rgba(227, 38, 47, 0.45); }
+
+  /* Tile thumbnails */
+  .tile.has-thumb { grid-template-columns: 66px 1fr 30px; padding: 10px 14px 10px 10px; }
+  .tile.has-thumb > .no { display: none; }
+  .tile.ref { grid-template-columns: 66px 1fr; cursor: default; background: rgba(255, 255, 255, 0.02); border-style: dashed; }
+  .tile.ref:hover { transform: none; box-shadow: none; }
+  .split .tile.ref { grid-template-columns: 56px 1fr; }
+  .ref-block { margin-top: 34px; }
+  .tile .thumb {
+    position: relative; width: 66px; aspect-ratio: 5 / 7; padding: 0; border: 0; border-radius: 6px;
+    overflow: hidden; background: #0b0910; cursor: zoom-in;
+    box-shadow: 0 0 0 1px rgba(242, 199, 92, 0.35), 0 6px 14px rgba(0, 0, 0, 0.5);
+    transition: box-shadow .18s ease;
+  }
+  .tile .thumb img { display: block; width: 100%; height: 100%; object-fit: cover; }
+  .split .tile.has-thumb, .spec .tile.has-thumb { grid-template-columns: 56px 1fr 26px; gap: 10px; padding-right: 10px; }
+  .split .tile .no, .spec .tile .no { font-size: 20px; }
+  .split .tile .thumb, .spec .tile .thumb { width: 56px; }
+  .badge {
+    position: absolute; left: 0; top: 0; z-index: 1;
+    min-width: 22px; padding: 2px 6px 1px; border-radius: 0 0 7px 0;
+    font: 400 14px/1.15 "Anton", sans-serif; letter-spacing: .02em; text-align: center;
+    color: var(--gold-1); background: rgba(10, 8, 14, 0.82);
+    box-shadow: 1px 1px 0 rgba(242, 199, 92, 0.45);
+  }
+  .badge.txt { font: 500 10px/1.5 "Oswald", sans-serif; letter-spacing: .1em; }
+  .tile.holo .badge { color: #e9dcff; box-shadow: 1px 1px 0 rgba(160, 130, 255, 0.6); }
+  .tile.have .badge { background: var(--foil); color: #1a1205; box-shadow: none; }
+  .tile.holo.have .badge { background: var(--holo); background-size: 300% 100%; color: #120c22; animation: foil-shift 5s linear infinite; }
+  .tile.have .thumb { box-shadow: 0 0 0 2px var(--gold-2), 0 6px 14px rgba(0, 0, 0, 0.5); }
+  .tile.holo.have .thumb { box-shadow: 0 0 0 2px #a98cff, 0 6px 14px rgba(0, 0, 0, 0.5); }
+  .tile .thumb .zoom {
+    position: absolute; right: 3px; bottom: 3px; width: 20px; height: 20px; border-radius: 50%;
+    display: grid; place-items: center; background: rgba(10, 8, 14, 0.8); color: var(--gold-2);
+    opacity: 0; transition: opacity .15s ease, transform .15s ease;
+  }
+  .tile .thumb .zoom svg { width: 11px; height: 11px; }
+  .tile:hover .thumb .zoom { opacity: .85; }
+  .tile .thumb:hover .zoom, .tile .thumb:focus-visible .zoom { opacity: 1; transform: scale(1.12); }
+  @media (hover: none) { .tile .thumb .zoom { opacity: .85; } }
+  .tile .thumb:focus-visible { outline: 2px solid var(--gold-2); outline-offset: 2px; }
+  .tile .thumb.cover-plate { box-shadow: 0 0 0 1px rgba(242, 199, 92, 0.55), 0 6px 14px rgba(0, 0, 0, 0.5); }
+  .tile .thumb.cover-plate img { object-fit: cover; }
+  body.fx-gloss .tile .thumb img, body.fx-gloss .mini img { filter: contrast(1.06) saturate(1.12) brightness(1.03); }
+  .sheet .head .zoom-btn {
+    margin-left: 8px; padding: 2px 8px; border-radius: 99px; cursor: zoom-in;
+    background: rgba(242, 199, 92, 0.12); border: 1px solid rgba(242, 199, 92, 0.4); color: var(--gold-2);
+    font: 500 10.5px "Oswald", sans-serif; letter-spacing: .12em; text-transform: uppercase;
+  }
+
+  /* Card viewer with flip */
+  .viewer { position: fixed; inset: 0; z-index: 90; display: none; place-items: center; background: rgba(4, 3, 8, 0.9); backdrop-filter: blur(8px); }
+  .viewer.show { display: grid; }
+  .viewer .v-stage { margin: 0; display: grid; justify-items: center; gap: 16px; perspective: 1800px; }
+  .viewer .v-card {
+    --ar: 0.714;
+    position: relative; aspect-ratio: var(--ar);
+    width: min(84vw, calc(76vh * var(--ar)), calc(900px * var(--ar)));
+    height: auto; max-height: 76vh;
+    transform-style: preserve-3d;
+    transition: transform .7s cubic-bezier(.3, .9, .3, 1), width .45s cubic-bezier(.3, .9, .3, 1), max-height .45s ease;
+    cursor: pointer;
+  }
+  .viewer .v-card.flipped { transform: rotateY(180deg); }
+  /* Landscape backs: gold frame becomes landscape with the rotated art (not portrait-only). */
+  .viewer .v-card.landscape-back.flipped {
+    --ar: 1.3875; /* ~1024/738 — landscape frame for rotated portrait scans */
+    width: min(92vw, calc(70vh * var(--ar)), 1100px);
+    max-height: 70vh;
+  }
+  .viewer .v-card.no-back { cursor: default; }
+  .viewer .v-face {
+    position: absolute; inset: 0; border-radius: 14px; overflow: hidden; backface-visibility: hidden; -webkit-backface-visibility: hidden;
+    background: #0b0910; box-shadow: 0 0 0 2px rgba(242, 199, 92, 0.7), 0 40px 80px rgba(0, 0, 0, 0.7), 0 0 120px rgba(227, 38, 47, 0.35);
+  }
+  .viewer .v-face img { display: block; width: 100%; height: 100%; object-fit: contain; }
+  .viewer .v-back { transform: rotateY(180deg); }
+  /* Portrait scans of landscape backs: rotate into the landscape frame. */
+  .viewer .v-card.landscape-back.flipped .v-back img.landscape {
+    transform: rotate(90deg) scale(1.3875);
+    transform-origin: center center;
+  }
+  .viewer .v-blank {
+    height: 100%; display: grid; place-items: center; padding: 12%; text-align: center;
+    background: linear-gradient(160deg, #f4efe4, #ddd5c3); color: #5b5242; font-size: 15px; line-height: 1.5;
+  }
+  .viewer .v-blank b { display: block; font-family: "Oswald", sans-serif; letter-spacing: .16em; text-transform: uppercase; color: #8f0f16; margin-bottom: 6px; }
+  body.fx-gloss .viewer .v-face img { filter: contrast(1.06) saturate(1.12) brightness(1.03); }
+  body.fx-gloss .viewer .v-face::after {
+    content: ""; position: absolute; inset: 0; pointer-events: none;
+    background:
+      linear-gradient(125deg, rgba(255, 255, 255, 0.22) 0%, rgba(255, 255, 255, 0.05) 22%, transparent 40%),
+      linear-gradient(115deg, transparent 45%, rgba(255, 244, 200, 0.28) 52%, transparent 60%);
+    background-size: 100% 100%, 260% 100%;
+    animation: tip-sheen 4.2s ease-in-out infinite;
+    mix-blend-mode: screen;
+  }
+  .viewer figcaption { text-align: center; max-width: min(640px, 90vw); }
+  .viewer .v-label { font-family: "Oswald", sans-serif; letter-spacing: .18em; text-transform: uppercase; font-size: 12px; color: var(--gold-2); }
+  .viewer .v-name { font-family: "Anton", sans-serif; font-size: 26px; letter-spacing: .02em; text-transform: uppercase; line-height: 1.1; }
+  .viewer .v-hint { margin-top: 4px; font-size: 12px; color: var(--muted); }
+  .viewer button { cursor: pointer; font: inherit; color: var(--text); }
+  .viewer .v-close, .viewer .v-nav {
+    position: absolute; display: grid; place-items: center; border-radius: 50%;
+    background: rgba(255, 255, 255, 0.06); border: 1px solid rgba(242, 199, 92, 0.35); transition: background .15s ease;
+  }
+  .viewer .v-close:hover, .viewer .v-nav:hover { background: rgba(242, 199, 92, 0.2); }
+  .viewer .v-close { top: 18px; right: 18px; width: 44px; height: 44px; font-size: 22px; }
+  .viewer .v-nav { top: 50%; width: 52px; height: 52px; margin-top: -26px; font-size: 26px; }
+  .viewer .v-nav.prev { left: 18px; }
+  .viewer .v-nav.next { right: 18px; }
+  .viewer .v-flip {
+    padding: 8px 18px; border-radius: 99px; background: var(--foil); border: 0; color: #1a1205;
+    font-family: "Oswald", sans-serif; font-weight: 500; letter-spacing: .16em; text-transform: uppercase; font-size: 12px;
+  }
+  .viewer .v-flip[disabled] { opacity: .35; cursor: default; }
+  @media (max-width: 640px) {
+    .viewer .v-card { width: min(88vw, calc(64vh * var(--ar, 0.714))); max-height: 64vh; }
+    .viewer .v-card.landscape-back.flipped { width: min(94vw, calc(52vh * var(--ar))); max-height: 52vh; }
+    .viewer .v-nav { top: auto; bottom: 18px; margin: 0; }
+    .viewer .v-name { font-size: 20px; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .viewer .v-card { transition: none; }
+  }
+  @media print {
+    .viewer, .tile .thumb, .sheet .zoom-btn, .mini img, .ref-block { display: none !important; }
+    .tile.has-thumb, .split .tile.has-thumb, .spec .tile.has-thumb { grid-template-columns: 14px 26px 1fr; gap: 6px; padding: 2px 0; }
+    .tile.has-thumb > .no { display: grid; }
+    .split .tile .no, .spec .tile .no { font-size: 11px; }
+    .mini .badge, .mini .own .badge { position: static; display: block; background: none; box-shadow: none; color: #111; font-size: 9px; padding: 0; }
+  }
+  .tip dl { margin: 8px 0 0; display: grid; grid-template-columns: auto 1fr; gap: 4px 10px; font-size: 12.5px; }
+  .tip dt { font-family: "Oswald", sans-serif; font-size: 10.5px; letter-spacing: .16em; text-transform: uppercase; color: var(--muted); padding-top: 2px; }
+  .tip dd { margin: 0; color: #e6dcc6; }
+  .tip dd.front { font-style: italic; }
+  .tip dd.artist { color: var(--gold-2); font-weight: 600; }
+  .tip .t-meta { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
+  .tip .t-pill { font-size: 10.5px; letter-spacing: .08em; text-transform: uppercase; padding: 2px 8px; border-radius: 99px; border: 1px solid rgba(255, 255, 255, 0.15); color: var(--muted); }
+  .tip .t-pill.own { background: var(--foil); color: #1a1205; border-color: transparent; font-weight: 600; }
+  .tip .t-pill.warn { color: #ffb3b6; border-color: rgba(227, 38, 47, 0.45); background: rgba(227, 38, 47, 0.15); }
+  .mini span.own .badge { background: var(--foil); color: #1a1205; box-shadow: none; }
+  .sheet.have .mini > span { box-shadow: 0 0 0 1.5px var(--gold-2), 0 4px 10px rgba(0, 0, 0, 0.45); }
+  .sheet-names { display: none; }
+
+  /* notes */
+  .notes { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+  .note-card.wide { grid-column: 1 / -1; }
+  .note-card { padding: 22px 24px; border-radius: var(--radius); background: var(--panel); border: 1px solid var(--line); }
+  .note-card h4 { margin: 0 0 8px; font-family: "Oswald", sans-serif; letter-spacing: .14em; text-transform: uppercase; color: var(--gold-2); font-weight: 500; font-size: 15px; }
+  .note-card p, .note-card li { color: #cfc7b8; font-size: 14px; line-height: 1.45; }
+  .note-card p + p { margin-top: 8px; }
+  .note-card ul { padding-left: 18px; margin: 8px 0 0; }
+  .note-inline { margin: 14px 0 0; padding-top: 12px; border-top: 1px solid rgba(255, 255, 255, 0.08); font-size: 13.5px; color: #cfc7b8; }
+  .note-inline b { color: var(--gold-2); font-family: "Oswald", sans-serif; font-weight: 500; letter-spacing: .08em; text-transform: uppercase; font-size: 12.5px; }
+
+  footer { padding: 36px max(6vw, 24px) 48px; border-top: 1px solid var(--line); color: var(--muted); font-size: 13px; display: flex; justify-content: space-between; gap: 20px; flex-wrap: wrap; }
+  footer a { color: var(--gold-2); }
+
+  .toast {
+    position: fixed; left: 50%; bottom: 28px; transform: translate(-50%, 30px);
+    background: var(--panel-2); border: 1px solid var(--gold-3); color: var(--text);
+    padding: 12px 20px; border-radius: 10px; font-size: 14px;
+    opacity: 0; pointer-events: none; transition: all .3s ease; z-index: 50;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+  }
+  .toast.show { opacity: 1; transform: translate(-50%, 0); }
+
+  @media (max-width: 1000px) {
+    .hero { grid-template-columns: 1fr; padding-bottom: 110px; }
+    .feature { margin: 8px 0 0; }
+    .feature-card { width: min(260px, 64vw); transform: rotateY(-8deg) rotateX(4deg) rotateZ(1deg); }
+    .stat-grid { grid-template-columns: repeat(3, 1fr); }
+    .split, .notes { grid-template-columns: 1fr; }
+    .facts { grid-template-columns: repeat(2, 1fr); }
+    .credits .c-src { display: none; }
+    .compare, .promo-facts { grid-template-columns: 1fr; }
+    .timeline { grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); padding-top: 0; }
+    .timeline::before, .tl::before { display: none; }
+  }
+  @media (max-width: 640px) {
+    .dash { grid-template-columns: 1fr; justify-items: center; }
+    .stat-grid { grid-template-columns: repeat(2, 1fr); width: 100%; }
+    .banner { flex-direction: column; align-items: flex-start; }
+    .banner .count { text-align: left; }
+    .hero { padding: 44px 20px 100px; gap: 28px; }
+    .eyebrow { letter-spacing: 0.22em; font-size: 11px; }
+    .eyebrow::before { width: 24px; }
+    .hero p.lede { font-size: 16px; margin: 18px 0 22px; }
+    .chip { font-size: 12.5px; padding: 7px 12px; }
+    .feature-card { width: min(230px, 62vw); }
+    .toolbar { position: static; padding: 12px 16px; gap: 10px; }
+    .nav { flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; -webkit-overflow-scrolling: touch; }
+    .nav::-webkit-scrollbar { display: none; }
+    .nav a { flex: none; }
+    main { padding: 0 16px 60px; }
+    .banner { padding: 22px 20px; }
+    .timeline { grid-template-columns: repeat(2, 1fr); gap: 8px; padding-top: 0; }
+    .timeline::before, .tl::before { display: none; }
+    .tl { padding: 10px; }
+  }
+
+  /* ---------- PRINT: clean, ink-friendly checklist sheet ---------- */
+  @media print {
+    @page { size: letter; margin: 0.45in; }
+    body { background: #fff; color: #111; font-size: 10px; }
+    .hero, .toolbar, .dash, .toast, .feature, .banner .bg, footer .actions { display: none !important; }
+    .print-head { display: flex !important; }
+    main { padding: 0; }
+    section { margin-top: 14px; break-inside: auto; }
+    .banner, .banner.plain { min-height: 0; padding: 6px 0 4px; margin-bottom: 8px; border: 0; border-bottom: 2px solid #b8862b; border-radius: 0; background: none !important; }
+    .banner::after { display: none; }
+    .banner .kicker { color: #8f0f16; font-size: 8px; }
+    .banner h2 { font-size: 20px; color: #111; }
+    .banner h2 .holo-text, .banner h2 .foil-text { color: #111; background: none; -webkit-text-fill-color: #111; }
+    .banner p { display: none; }
+    .banner .count .big { font-size: 16px; color: #111; }
+    .banner .count .meter { display: none; }
+    .grid { grid-template-columns: repeat(3, 1fr); gap: 0 14px; }
+    .sheets { grid-template-columns: repeat(3, 1fr); gap: 6px 14px; }
+    .tile, .tile.have, .tile.holo.have {
+      min-height: 0; padding: 2px 0; gap: 6px;
+      grid-template-columns: 14px 26px 1fr;
+      background: none !important; border: 0; border-bottom: 1px solid #e3ddd0; border-radius: 0;
+      box-shadow: none; transform: none; break-inside: avoid;
+    }
+    .tile::after { display: none; }
+    .tile .box, .tile.have .box { order: -1; width: 12px; height: 12px; border-radius: 2px; border: 1.2px solid #333; background: #fff !important; }
+    .split .grid { grid-template-columns: 1fr 1fr; }
+    .sub-note { font-size: 8.5px; color: #555; margin: -2px 0 4px; }
+    .tile .box svg { width: 9px; height: 9px; }
+    .tile .box svg path { stroke: #111; }
+    .tile .no, .tile.have .no, .tile.holo .no, .tile.holo.have .no { background: none !important; border: 0; font-size: 11px; color: #8f0f16; place-items: center start; animation: none; }
+    .tile.holo .no span { background: none; color: #8f0f16; -webkit-text-fill-color: #8f0f16; animation: none; }
+    .tile .name { font-size: 10px; font-weight: 600; }
+    .tile .chars { font-size: 8.5px; color: #666; margin-top: 0; }
+    .tile .note { font-size: 7px; padding: 0 4px; margin-top: 1px; color: #8f0f16; background: none; }
+    .tile.hidden { display: grid; }
+    .sheet, .sheet.have { grid-template-columns: 14px 1fr; }
+    .sheet-names { display: block; font-size: 7.5px; color: #444; line-height: 1.35; margin-top: 3px; }
+    .sheet-names b { color: #8f0f16; }
+    .tip { display: none; }
+    .tile .art { font-size: 8px; margin-top: 0; color: #6e4a12; }
+    #grid-base, #grid-powerblast { display: none !important; }
+    .details { display: block !important; }
+    .credits { border-spacing: 0; font-size: 8.5px; }
+    .credits thead { display: table-header-group; }
+    .credits th { padding: 2px 5px; font-size: 7.5px; color: #8f0f16; border-bottom: 1.5px solid #b8862b; }
+    .credits td, .row.have td, .row.holo.have td { padding: 2.5px 5px; background: none !important; border: 0 !important; border-bottom: 1px solid #e3ddd0 !important; border-radius: 0 !important; color: #222; }
+    .credits tr { break-inside: avoid; }
+    .credits td:first-child { width: 18px; }
+    .credits .c-no { font-size: 11px; color: #8f0f16; width: 26px; }
+    .credits .c-no span { background: none !important; color: #8f0f16 !important; -webkit-text-fill-color: #8f0f16; animation: none !important; }
+    .credits .c-name { min-width: 0; width: 20%; }
+    .credits .c-name .chars { font-size: 7.5px; color: #666; }
+    .credits .c-name .note { font-size: 6.5px; padding: 0 3px; margin-top: 1px; color: #8f0f16; }
+    .credits .c-front { color: #333; width: 21%; }
+    .credits .c-src { display: table-cell !important; color: #444; font-size: 8px; }
+    .credits .c-art { color: #6e4a12; font-size: 8px; white-space: normal; width: 14%; }
+    .credits .unk { color: #999; }
+    .row .box, .row.have .box { width: 11px; height: 11px; border-radius: 2px; border: 1.2px solid #333; background: #fff !important; }
+    .row .box svg { width: 8px; height: 8px; }
+    .row .box svg path { stroke: #111; }
+    .row.hidden { display: table-row; }
+    .facts { grid-template-columns: repeat(4, 1fr); gap: 6px; }
+    .fact { padding: 4px 6px; border-color: #ddd; background: none; }
+    .fact b { font-size: 12px; color: #8f0f16; }
+    .fact span { font-size: 7.5px; color: #444; }
+    .compare { grid-template-columns: 1fr 1fr !important; gap: 14px; }
+    .spec { padding: 6px 0 0; background: none; border: 0; border-radius: 0; }
+    .spec::before { height: 2px; }
+    .spec header { gap: 8px; margin: 4px 0 4px; }
+    .yr { font-size: 12px; padding: 2px 6px; }
+    .spec h3 { font-size: 13px; color: #111; }
+    .spec header small { font-size: 7px; color: #666; margin-top: 1px; }
+    .spec-list { grid-template-columns: 62px 1fr; margin-bottom: 6px; border-color: #e3ddd0; }
+    .spec-list dt, .spec-list dd { padding: 2px 0; border-color: #e3ddd0; }
+    .spec-list dt, .spec.bi .spec-list dt { font-size: 6.5px; color: #8f0f16; padding-top: 3px; }
+    .spec-list dd { font-size: 8px; color: #333; }
+    .spec .grid { grid-template-columns: 1fr 1fr; }
+    .tell { margin-top: 8px; padding: 5px 8px; gap: 8px; border-color: #ccc; background: none; }
+    .tell b { font-size: 8px; color: #8f0f16; }
+    .tell p { font-size: 8px; color: #333; }
+    .promo-facts { grid-template-columns: repeat(3, 1fr) !important; gap: 6px; margin-bottom: 8px; }
+    .timeline { grid-template-columns: repeat(3, 1fr) !important; gap: 4px 10px; padding-top: 0; margin: 2px 0 8px; }
+    .timeline::before, .tl::before { display: none !important; }
+    .tl { padding: 3px 0 3px 6px; background: none; border: 0; border-left: 2px solid #b8862b; border-radius: 0; break-inside: avoid; }
+    .tl.red { border-left-color: #e3262f; }
+    .tl .when { font-size: 10px; color: #8f0f16; }
+    .tl .kind { font-size: 6.5px; margin: 1px 0; padding: 0 4px; color: #555; border-color: #ccc; }
+    .tl p { font-size: 7.5px; color: #333; }
+    .tl p b { color: #111; }
+    .promo-facts .fact b { font-size: 12px; }
+    .mags li { font-size: 7.5px; padding: 0 5px; border-color: #ccc; color: #333; }
+    .print-facts { display: block !important; font-size: 8px; color: #444; margin: 4px 0 0; }
+    .sheet .head { margin-bottom: 2px; }
+    .sheet .head b { font-size: 11px; }
+    .mini { gap: 2px; }
+    .mini > span, .sheet.have .mini > span { aspect-ratio: auto; padding: 1px; text-align: center; background: none !important; border: 1px solid #ccc; box-shadow: none; }
+    .mini span.unnum::after { display: none; }
+    .split { grid-template-columns: 1fr 1fr; gap: 14px; }
+    .sub-h { font-size: 10px; color: #8f0f16; margin-bottom: 4px; }
+    .notes { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+    .note-card { padding: 8px; border-color: #ddd; background: none; }
+    .note-card h4 { color: #8f0f16; font-size: 10px; }
+    .note-card p, .note-card li { color: #333; font-size: 8.5px; margin: 2px 0; }
+    .banner, .sub-h, .spec header { break-after: avoid; }
+    .note-card, .tl, .sheet, .fact, .tell { break-inside: avoid; }
+    footer { border-color: #ddd; padding: 10px 0 0; font-size: 8px; color: #666; }
+    footer a { color: #666; }
+  }
+  .print-head {
+    display: none;
+    align-items: flex-end; justify-content: space-between;
+    border-bottom: 3px solid #e3262f; padding-bottom: 6px; margin-bottom: 4px;
+  }
+  .print-head h1 { margin: 0; font-family: "Cinzel", serif; font-size: 26px; line-height: 1; color: #111; }
+  .print-head h1 span { display: inline-block; background: #e3262f; color: #fff; font-family: "Anton", sans-serif; font-size: 14px; padding: 2px 8px; margin-right: 8px; vertical-align: middle; letter-spacing: .04em; }
+  .print-facts { display: none; }
+  .print-head .meta { font-family: "Oswald", sans-serif; font-size: 10px; letter-spacing: .12em; text-transform: uppercase; color: #555; text-align: right; }
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <linearGradient id="foilGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#b8862b"/>
+      <stop offset="40%" stop-color="#fff4c8"/>
+      <stop offset="70%" stop-color="#f2c75c"/>
+      <stop offset="100%" stop-color="#b8862b"/>
+    </linearGradient>
+  </defs>
+</svg>
+
+<header class="hero">
+  <div>
+    <span class="eyebrow">Fleer &middot; 1994 &middot; Inaugural Edition</span><br>
+    <span class="marvel-tag">Marvel Universe</span>
+    <h1 class="foil-text">'94 Flair<small>Collector Checklist</small></h1>
+    <p class="lede">The premium painted set that raised the bar: thick glossy card stock, full-bleed art, and gold-foil stamping. Click any card to mark it as yours. Your progress saves automatically in this browser.</p>
+    <div class="chips">
+      <span class="chip"><b>150</b>Base Cards</span>
+      <span class="chip"><b>18</b>Powerblast Chase</span>
+      <span class="chip"><b>10</b>Flairprints</span>
+      <span class="chip"><b>5</b>Binder Inserts ('95)</span>
+      <span class="chip"><b>15</b>Promos &amp; Sheets</span>
+      <span class="chip"><b>3</b>Print Ads</span>
+    </div>
+    <div class="chips" style="margin-top:10px">
+      <span class="chip"><b>Box</b>24 packs &times; 10 cards</span>
+      <span class="chip"><b>1:2</b>Powerblast odds</span>
+      <span class="chip"><b>~1.52</b>Base sets per box</span>
+    </div>
+  </div>
+  <figure class="feature">
+    <div class="feature-card" id="featureCard" role="button" tabindex="0" title="Show this card in the checklist">
+      <img class="on" src="images/cards-fx/hd/091.jpg" alt="1994 Flair Marvel card #91, Death of Mariko">
+      <img alt="">
+    </div>
+    <figcaption id="featureCap">Featured &middot; <strong>#91 Death of Mariko</strong><span class="by">Art &middot; Mark Texeira</span></figcaption>
+  </figure>
+</header>
+
+<div class="dash">
+  <div class="ring">
+    <svg width="132" height="132" viewBox="0 0 132 132">
+      <circle class="track" cx="66" cy="66" r="56" fill="none" stroke-width="10"/>
+      <circle class="bar" id="ringBar" cx="66" cy="66" r="56" fill="none" stroke-width="10" stroke-dasharray="351.86" stroke-dashoffset="351.86"/>
+    </svg>
+    <div class="ring-label"><div><div class="pct" id="ringPct">0%</div><div class="sub" id="ringSub">0 / 0</div></div></div>
+  </div>
+  <div class="stat-grid" id="stats"></div>
+</div>
+
+<div class="toolbar">
+  <label class="search">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input id="q" type="search" placeholder="Search card #, title, character, comic, or artist&hellip;" autocomplete="off">
+  </label>
+  <select class="artist" id="artist" aria-label="Filter by artist"><option value="">All artists</option></select>
+  <div class="seg" id="filter">
+    <button data-f="all" class="on">All</button>
+    <button data-f="have">Have</button>
+    <button data-f="need">Need</button>
+  </div>
+  <div class="seg" id="view" title="Switch between card tiles and the full source &amp; artist table">
+    <button data-v="cards" class="on">Cards</button>
+    <button data-v="details">Details</button>
+  </div>
+  <button class="btn" id="copyNeed" title="Copy a list of the cards you still need">Copy Want List</button>
+  <button class="btn" id="reset">Reset</button>
+  <button class="btn primary" onclick="window.print()">Print Sheet</button>
+  <nav class="nav">
+    <a href="#base">Base Set</a><a href="#powerblast">Powerblast</a><a href="#large">Flairprints &amp; Binder</a><a href="#promos">Promos</a><a href="#print">Ads &amp; Magazines</a><a href="#notes">Collector Notes</a>
+  </nav>
+</div>
+
+<main>
+  <div class="print-head">
+    <h1><span>MARVEL</span>'94 Flair Universe Checklist</h1>
+    <div class="meta">Fleer 1994 &middot; Inaugural Edition<br><span id="printProgress"></span></div>
+  </div>
+  <p class="print-facts">Box: 24 packs of 10 cards &middot; Powerblast 1:2 packs &middot; Flairprints 1 per case &middot; approx. 1.52 base sets per box with perfect collation &middot; Source &amp; artist credits: @exotechktx (Instagram)</p>
+
+  <section id="base">
+    <div class="banner plain">
+      <div>
+        <div class="kicker">Cards 1 &ndash; 150</div>
+        <h2>Base <span class="foil-text">Set</span></h2>
+        <p>Full-bleed painted art on 24-pt stock with gold-foil Flair logo. Heads up: there's no card #6 in print. Iron Man was misnumbered as a second #8.</p>
+      </div>
+      <div class="count"><div class="big" data-count="base">0<span>/150</span></div><div class="meter"><i data-meter="base"></i></div></div>
+    </div>
+    <div class="grid" id="grid-base"></div>
+    <div class="details" id="det-base"></div>
+    <div class="empty" data-empty="base">No base cards match your filter.</div>
+  </section>
+
+  <section id="powerblast">
+    <div class="banner">
+      <div class="bg" style="background-image:url('images/powerblast-banner.jpg')"></div>
+      <div>
+        <div class="kicker">Chase Inserts &middot; 1 &ndash; 18</div>
+        <h2><span class="holo-text">Powerblast</span></h2>
+        <p>The prismatic, metallic-enhanced chase set, inserted 1 in every 2 packs (about 12 per box).</p>
+      </div>
+      <div class="count"><div class="big" data-count="powerblast">0<span>/18</span></div><div class="meter"><i data-meter="powerblast"></i></div></div>
+    </div>
+    <div class="grid" id="grid-powerblast"></div>
+    <div class="details" id="det-powerblast"></div>
+    <div class="empty" data-empty="powerblast">No Powerblast cards match your filter.</div>
+  </section>
+
+  <section id="large">
+    <div class="banner">
+      <div class="bg" style="background-image:url('images/cosmic-banner.jpg'); background-position: center 35%;"></div>
+      <div>
+        <div class="kicker">Oversized Cards &middot; 1994 &amp; 1995</div>
+        <h2>Flairprints <span class="foil-text">&amp; Binder</span></h2>
+        <p>Two different oversized releases that often get lumped together. Flairprints were the 1994 case bonus. The binder inserts came a year later, in 1995. Both reuse Powerblast art, so each card carries the same source and artist credits as its Powerblast.</p>
+      </div>
+      <div class="count"><div class="big" data-count="large">0<span>/15</span></div><div class="meter"><i data-meter="large"></i></div></div>
+    </div>
+    <div class="compare">
+      <article class="spec fp">
+        <header>
+          <span class="yr">1994</span>
+          <div><h3>Flairprints</h3><small>Case Bonus &middot; 10 cards</small></div>
+        </header>
+        <dl class="spec-list">
+          <dt>Released</dt><dd>1994, alongside the original '94 Flair set</dd>
+          <dt>Found in</dt><dd>Cases as a bonus (not in packs)</dd>
+          <dt>Size</dt><dd>6&frac12;&Prime; &times; 10&Prime;</dd>
+          <dt>Front</dt><dd>Powerblast #1&ndash;10 art, enlarged, with the Flair '94 logo and character name</dd>
+          <dt>Back</dt><dd>Blank, with UPC 0 41199 00258 1</dd>
+          <dt>Lineup</dt><dd>Cable, Cyclops, Ghost Rider, Iron Man, Magneto, Phoenix, Punisher, Storm, Venom, Wolverine</dd>
+        </dl>
+        <div class="grid" id="grid-flairprint"></div>
+      </article>
+      <article class="spec bi">
+        <header>
+          <span class="yr">1995</span>
+          <div><h3>Binder Inserts</h3><small>2 per binder &middot; 5 known</small></div>
+        </header>
+        <dl class="spec-list">
+          <dt>Released</dt><dd>1995, a year after the base set</dd>
+          <dt>Found in</dt><dd>1995 collector binders (two per binder). Verified in sealed <b>1995 Fleer Ultra X-Men</b> binders with a Flair Spider-Man insert still inside</dd>
+          <dt>Size</dt><dd>Oversized, similar to Flairprints</dd>
+          <dt>Front</dt><dd>Powerblast #11&ndash;15 art <em>without</em> the metallic enhancement. No Flair '94 logo or character title.</dd>
+          <dt>Back</dt><dd>Completely blank</dd>
+          <dt>Lineup</dt><dd>Captain America, Gambit, Thor, Silver Surfer, Spider-Man (only cards known to exist)</dd>
+        </dl>
+        <div class="grid" id="grid-binder"></div>
+      </article>
+    </div>
+    <div class="tell">
+      <b>How to tell them apart</b>
+      <p>Flip it over: a Flairprint back carries the UPC, while a binder insert back is completely blank. On the front, both reuse Powerblast art, but a Flairprint keeps the Flair '94 logo and character name while a binder insert has neither and drops the metallic finish.</p>
+    </div>
+    <div class="empty" data-empty="large">No oversized cards match your filter.</div>
+  </section>
+
+  <section id="promos">
+    <div class="banner plain">
+      <div>
+        <div class="kicker">Promotional Material</div>
+        <h2>Promos <span class="foil-text">&amp; Uncut Sheets</span></h2>
+        <p>Pre-release and distributor material that never came in packs: promo Flairprints, the 4-card sheets bundled with comic magazines, and the nine 9-card uncut sheets from Fleer's press kits.</p>
+      </div>
+      <div class="count"><div class="big" data-count="promos">0<span>/16</span></div><div class="meter"><i data-meter="promos"></i></div></div>
+    </div>
+    <div class="facts promo-facts">
+      <div class="fact"><b>3</b><span>Promo Flairprints from comic distributors</span></div>
+      <div class="fact"><b>2 + 1</b><span>4-card sheet variants, plus one unreleased sheet</span></div>
+      <div class="fact"><b>9</b><span>9-card uncut sheets from the 1994 press kits, with rows of 3 that repeat across sheets</span></div>
+    </div>
+    <div class="split">
+      <div>
+        <h3 class="sub-h">Promo Flairprints <span class="tag">1994</span></h3>
+        <p class="sub-note">Oversized Flairprint-style promos sent out through comic distributors ahead of the release.</p>
+        <div class="grid" id="grid-promo"></div>
+      </div>
+      <div>
+        <h3 class="sub-h">4-Card Uncut Sheets <span class="tag">Jun&ndash;Jul 1994</span></h3>
+        <p class="sub-note">Double-sided 5&Prime; &times; 7&Prime; panels. Released versions: front has the Flair logo, Bone Claws, Phoenix, Maximum Carnage. Back has Bodyslide, Spider-Man 2099, Thunderstrike, New Ghost Rider. They came bundled with comic magazines (see <a href="#print" style="color:var(--gold-2)">Ads &amp; Magazines</a>). The gold-foil etched version is reported as the Wizard #35 insert. The other magazine and variant pairings are unknown.</p>
+        <div class="grid" id="grid-four"></div>
+      </div>
+    </div>
+    <h3 class="sub-h" style="margin-top:28px">9-Card Uncut Sheets <span class="tag">7&#8541;&Prime; &times; 10&#8541;&Prime; &middot; Card #s left&rarr;right, top&rarr;bottom</span></h3>
+    <p class="sub-note">These came in Fleer's 1994 media press kit: a Wolverine folder holding the uncut sheets, a couple of single cards (Blade and Terrax), and press documents on Marvel letterhead with a history of Marvel and a character timeline. They were preview material, never sold in packs. Which sheets came in which kit isn't documented.</p>
+    <div class="sheets" id="grid-nine"></div>
+    <div class="empty" data-empty="promos">No promos match your filter.</div>
+  </section>
+
+  <section id="print">
+    <div class="banner plain">
+      <div>
+        <div class="kicker">Seen in Print &middot; Spring&ndash;Summer 1994</div>
+        <h2>Ads <span class="foil-text">&amp; Magazines</span></h2>
+        <p>How '94 Flair was introduced to fans: full-page ads in comics and magazines, and 4-card promo sheets bundled with the comic and card-collecting magazines of the day. The ad pages are on the checklist; the comics and magazines below are listed for reference.</p>
+      </div>
+      <div class="count"><div class="big" data-count="print">0<span>/3</span></div><div class="meter"><i data-meter="print"></i></div></div>
+    </div>
+
+    <h3 class="sub-h">1994 Launch Timeline</h3>
+    <div class="timeline" role="list">
+      <div class="tl" role="listitem"><div class="when">May 1994</div><span class="kind">Comic &amp; Magazine Ads</span><p>Comic ad appears in <b>Fantastic Four #388</b>. Glossy magazine ad also shows up in <b>Tuff Stuff's Collect!</b> (May).</p></div>
+      <div class="tl" role="listitem"><div class="when">June 1994</div><span class="kind">Comic Ad</span><p>Comic ad in <b>Fantastic Four Unlimited #6</b>, <b>Amazing Spider-Man #390</b>, and <b>The Punisher #91</b>.</p></div>
+      <div class="tl red" role="listitem"><div class="when">June 1994</div><span class="kind">Magazine Insert</span><p>A 4-card sheet comes with <b>Tuff Stuff's Collect!</b>. Two sheet versions are marked "Ships June 1994".</p></div>
+      <div class="tl red" role="listitem"><div class="when">Jun 11&ndash;14, 1994</div><span class="kind">Retailer Promo</span><p>Diamond's <b>Omega Red vs. Wolverine</b> Flairprint is handed out at the Annual Retailer Seminar in Baltimore.</p></div>
+      <div class="tl red" role="listitem"><div class="when">1994 &middot; Heroes World Con</div><span class="kind">Retailer Promo</span><p>Heroes World's <b>Deadpool</b> Flairprint is handed out at Heroes World Con (nslists). 6&frac12;&Prime; &times; 10&Prime;, blank back except for a barcode.</p></div>
+      <div class="tl" role="listitem"><div class="when">July 1994</div><span class="kind">Magazine Ads</span><p>Glossy Inaugural Edition ad and the FlairPrints ad run in <b>Tuff Stuff's Collect!</b>; FlairPrints also in <b>Hero Illustrated #13</b>. Magazine ad also in <b>Cards Illustrated #7</b>.</p></div>
+      <div class="tl red" role="listitem"><div class="when">July 1994</div><span class="kind">Magazine Inserts</span><p>4-card sheets bundled with <b>Wizard #35</b>, <b>Advance Comics #67</b>, and <b>Marvel Age #138</b>.</p></div>
+      <div class="tl" role="listitem"><div class="when">July&ndash;Sept 1994</div><span class="kind">Comic Ad</span><p>Comic ad continues in titles like <b>Spectacular Spider-Man #214</b>, <b>X-Men #33</b>, <b>X-Factor #103</b>, <b>Blackwulf #2</b>, <b>Northstar #3</b>, and <b>Excalibur #78</b>.</p></div>
+      <div class="tl" role="listitem"><div class="when">August 1994</div><span class="kind">Magazine Ad</span><p>Glossy Inaugural Edition ad in <b>Collector's Sportslook</b> and <b>Tuff Stuff's Collect! Star Trek</b>.</p></div>
+    </div>
+
+    <h3 class="sub-h">Print Ads <span class="tag">Full-page ads</span></h3>
+    <p class="sub-note">The ad pages themselves, for collectors who keep the page or the whole issue. Fleer ran a newsprint version in Marvel comics, a glossy magazine version with Powerblast art, and a separate ad for the Flairprints.</p>
+    <div class="grid" id="grid-adpages"></div>
+    <div class="empty" data-empty="print">No ads match your filter.</div>
+
+    <div class="ref-block">
+      <h3 class="sub-h">Magazines with Promo Sheets <span class="tag">For reference</span></h3>
+      <p class="sub-note">Each came with a 4-card uncut promo sheet, which is on the checklist under <a href="#promos" style="color:var(--gold-2)">Promos</a>. Look for copies still sealed with the sheet inside.</p>
+      <div class="grid" id="grid-mags"></div>
+    </div>
+
+    <div class="ref-block">
+      <h3 class="sub-h">Comics That Carried the Ad <span class="tag">For reference</span></h3>
+      <p class="sub-note">Issues confirmed from the Grand Comics Database and from period copies with the newsprint "Inaugural Edition" comic ad. Fleer ran it in Marvel's ad pages next to its other 1994 card lines, so more titles from the same months likely carried it too.</p>
+      <div class="grid" id="grid-ads"></div>
+    </div>
+
+    <div class="ref-block">
+      <h3 class="sub-h">Magazines That Carried the Ads <span class="tag">For reference</span></h3>
+      <p class="sub-note">Hobby and comics magazines confirmed to run the glossy "Inaugural Edition" magazine ad and/or the "Introducing FlairPrints" ad. These did not necessarily include a 4-card sheet.</p>
+      <div class="grid" id="grid-ad-mags"></div>
+    </div>
+  </section>
+
+  <section id="notes">
+    <div class="banner plain">
+      <div>
+        <div class="kicker">Know Before You Buy</div>
+        <h2>Collector <span class="foil-text">Notes</span></h2>
+      </div>
+    </div>
+    <div class="notes">
+      <div class="note-card wide">
+        <h4>Box Breakdown</h4>
+        <div class="facts">
+          <div class="fact"><b>24 &times; 10</b><span>Packs per box &times; cards per pack (240 cards)</span></div>
+          <div class="fact"><b>1 : 2</b><span>Powerblast odds (about 12 per box)</span></div>
+          <div class="fact"><b>~1.52</b><span>Base sets per box, if collation were perfect</span></div>
+          <div class="fact"><b>Case</b><span>Flairprints are a case bonus, 6&frac12;&Prime; &times; 10&Prime;</span></div>
+        </div>
+        <p class="note-inline"><b>Missing #6:</b> numbering error — no card #6 exists. Two #8s instead: Iron Man (the real #6) and Vulture vs. Spider-Man.</p>
+      </div>
+      <div class="note-card">
+        <h4>4-Card Sheet Variants</h4>
+        <p>Two known variants: "Ships June 1994" in white letters etched in gold foil, and the same text in black on a gold paste-on sticker. Bundled with Wizard #35, Advance Comics #67, Marvel Age #138 (all Jul 1994), and Tuff Stuff's Collect! (Jun 1994).</p>
+        <p>An unreleased sheet (Gambit &amp; Rogue, Infinity Crusade, Maximum Carnage, Bone Claws) turned up on eBay — no front text; back fourth bullet says "presents" instead of "present," headed "The Ultimate Collectable."</p>
+      </div>
+      <div class="note-card">
+        <h4>Promos &amp; Binder Cards</h4>
+        <p>Diamond's Omega Red vs. Wolverine Flairprint: Annual Retailer Seminar, Baltimore, June 11&ndash;14, 1994. Deadpool Flairprint: Heroes World Con 1994 (nslists; no published day range).</p>
+        <p>Binder inserts are a 1995 release — oversized like Flairprints, Powerblast art without metallic finish, no Flair '94 logo/title, blank backs. Spider-Man binder verified in sealed <b>1995 Fleer Ultra X-Men</b> binders.</p>
+      </div>
+      <div class="note-card wide">
+        <h4>About the Art Credits</h4>
+        <p>Most Flair cards reuse existing comic art, repainted for the set. Each card lists its front title, source, and artist. Blank credits aren't identified yet. Research by <a href="https://www.instagram.com/exotechktx/" target="_blank" rel="noopener" style="color:var(--gold-2)">@exotechktx</a>.</p>
+        <p>Likely unused in print: #10 Xavier, #42 Elektra, #44 Hobgoblin, #85 Bishop, Powerblast #5 Phoenix. #124 Bloodhawk source unconfirmed.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <span>Checklist data from <a href="https://abs-cards.net/checklists/94flair.html" target="_blank" rel="noopener">abs-cards.net</a>. Source and artist credits researched by <a href="https://www.instagram.com/exotechktx/" target="_blank" rel="noopener">@exotechktx</a>. Promo sizes from <a href="https://nslists.com/mrvfla94.htm" target="_blank" rel="noopener">nslists.com</a>. Comic and magazine ad appearances from the <a href="https://www.comics.org" target="_blank" rel="noopener">Grand Comics Database</a> and period copies. Marvel characters &copy; Marvel. This is a fan-made collector tool.</span>
+  <span id="savedAt"></span>
+</footer>
+
+<div class="toast" id="toast"></div>
+<div class="tip" id="tip" role="tooltip"></div>
+<div class="viewer" id="viewer" role="dialog" aria-modal="true" aria-label="Card viewer">
+  <button class="v-close" aria-label="Close">&times;</button>
+  <button class="v-nav prev" aria-label="Previous">&lsaquo;</button>
+  <figure class="v-stage">
+    <div class="v-card" id="vCard" title="Click to flip">
+      <div class="v-face v-front"><img alt=""></div>
+      <div class="v-face v-back"></div>
+    </div>
+    <figcaption>
+      <div class="v-label" id="vLabel"></div>
+      <div class="v-name" id="vName"></div>
+      <div class="v-hint" id="vHint"></div>
+    </figcaption>
+    <button class="v-flip" id="vFlip">Flip card</button>
+  </figure>
+  <button class="v-nav next" aria-label="Next">&rsaquo;</button>
+</div>
+
+<script>
+const BASE = [
+  ["The Thing"], ["The Incredible Hulk"], ["With Great Power...", "Spider-Man"], ["God of Thunder", "Thor"], ["Spider-Man"],
+  ["Iron Man", null, "Printed as #8"], ["Hulk vs. Thing"], ["Vulture vs. Spider-Man"], ["Dr. Octopus"], ["Xavier"],
+  ["Avengers"], ["Dr. Strange"], ["Quicksilver"], ["Man Without Fear", "Daredevil"], ["Scorpion vs. Spider-Man"],
+  ["Captain America"], ["Daredevil vs. Submariner"], ["Invisible Woman"], ["Sentinel"], ["The Coming of Galactus"],
+  ["The Power Cosmic", "Silver Surfer"], ["Spider-Man vs. Green Goblin"], ["Rhino vs. Spider-Man"], ["Mary Jane"], ["Dr. Doom"],
+  ["Warlock"], ["Behold the Vision"], ["Mephisto"], ["Morbius"], ["The Original Ghost Rider"],
+  ["Thanos"], ["Death of Gwen Stacy"], ["The Punisher"], ["Wolverine vs. Hulk"], ["The Scarlet Witch"],
+  ["Invaders"], ["The Black Cat"], ["White Queen"], ["She-Hulk"], ["Moon Knight"],
+  ["Days of Future Past", "Sentinel"], ["Elektra"], ["Death of Elektra"], ["Hobgoblin"], ["Northstar"],
+  ["Beta Ray Bill"], ["The Trial of Mr. Fantastic"], ["The Black Costume", "Spider-Man"], ["Puma vs. Spidey"], ["Silver Sable Inc."],
+  ["Iceman"], ["Apocalypse Now", "Wolverine, Sabretooth"], ["Deadly Enemies", "Wolverine, Sabretooth"], ["Nightcrawler"], ["Creation of Archangel"],
+  ["Mr. Sinister"], ["The Wedding", "Spider-Man, Mary Jane"], ["Jubilee"], ["Armor Wars", "Iron Man"], ["Tombstone"],
+  ["Venom"], ["Typhoid Mary"], ["Mr. Fix-It"], ["Speedball"], ["Cap vs. Cap"],
+  ["Quasar"], ["Cosmic Spider-Man"], ["Nomad"], ["Thanos"], ["Bodyslide", "Cable"],
+  ["New Ghost Rider"], ["Creation of Deathlok"], ["The New Nova"], ["Cable vs. Wolverine"], ["Gambit"],
+  ["X-tinction Agenda", "Wolverine, Archangel, Cyclops"], ["The New Hulk"], ["Deadpool"], ["Shatterstar"], ["X-Force", "Domino, Warpath, Shatterstar, Feral"],
+  ["Johnny Blaze"], ["Child of the Future", "Cyclops, Jean Grey, Nathan"], ["X-Factor", "Strong Guy, Havok, Polaris, Multiple Man, Rahne"], ["Blue & Gold", "Bishop, Storm, Cyclops, Wolverine"], ["Bishop"],
+  ["Omega Red vs. Wolverine"], ["Punisher vs. The Mob"], ["Carnage"], ["Cage"], ["War Machine"],
+  ["Death of Mariko", "Wolverine"], ["Spider Slayers", "Spider-Man"], ["Nightstalkers"], ["Spider-Man 2099"], ["Hulk Leads the Pantheon"],
+  ["Stryfe"], ["Mirror Images", "Stryfe, Cable"], ["Wonder Man"], ["Doom 2099"], ["Lethal Protector", "Venom"],
+  ["Punisher 2099"], ["Green Goblin"], ["Alternate Visions", "Vision"], ["Maximum Carnage", "Spider-Man, Venom, Carnage"], ["Namor"],
+  ["Random"], ["Psylocke"], ["Psi-Lord"], ["Thunderstrike"], ["Infinity Crusade", "Wolverine, Spider-Man, Moondragon, Captain America"],
+  ["Hulk 2099"], ["Cable Returns"], ["The Death of Illyana", "Jubilee, Jean Grey"], ["Gambit & Rogue"], ["Vengeance"],
+  ["Daredevil"], ["The New Ravage"], ["Wolverine Defeated"], ["Bone Claws", "Wolverine"], ["Magneto Returns"],
+  ["Xavier vs. Magneto"], ["Colossus Defects", "Colossus, Magneto"], ["Exodus"], ["Bloodhawk"], ["Zarathos"],
+  ["Final Conflict", "Mr. Fantastic"], ["Centurious"], ["The Thor Corps"], ["Sabretooth Surrenders", "Jean Grey, Sabretooth"], ["Venom: The Madness"],
+  ["Strange"], ["Suicide Run", "Punisher"], ["Legacy", "Legacy, Silver Surfer"], ["Justice"], ["Carnage"],
+  ["Venom"], ["Spider-Demon"], ["Shriek"], ["Spider-Man"], ["Venom Lives"],
+  ["Cyclops"], ["Jean Grey"], ["Bishop"], ["Warpath"], ["Rogue"],
+  ["Domino"], ["Boom Boom"], ["Wolverine"], ["Havok"], ["Checklist"]
+];
+
+// [front title, art source, artist] for cards 1-150; "" = not yet identified
+const CREDITS = [
+  ["Origin of the Fantastic Four!", "Fantastic Four Unlimited (1993) #1, Cover", "Herb Trimpe"],
+  ["Origin of the Incredible Hulk", "The Incredible Hulk (1968) #393, Cover", "Dale Keown"],
+  ["Origin of Spider-Man", "1992 Impel Amazing Spider-Man 30th Anniversary Card Set", "Ron Frenz; Al Milgrom"],
+  ["Origin of Thor", "Journey Into Mystery (1952) #89, Cover", "Jack Kirby"],
+  ["Amazing Spider-Man #1", "Web of Spider-Man (1985) #105, Page 2", "Rurik Tyler"],
+  ["The Origin of Iron Man", "Tales of Suspense (1959) #39, Page 1", "Don Heck"],
+  ["Hulk -vs- Thing", "Fantastic Four Unlimited (1993) #4, Cover", "Herb Trimpe"],
+  ["Origin of Vulture", "The Spectacular Spider-Man (1976) #188, Cover", "Sal Buscema"],
+  ["Origin of Doc Ock", "Lethal Foes of Spider-Man (1994) #3, Page 2", "Keith Pollard; David Boller"],
+  ["Origin of The X-Men", "In-house art; suspected unused in print. Used as X-Men playing cards (1994), store counter standee (1995), and X-Men magnets (1996)", "Ron Lim"],
+  ["Avengers Assemble", "The Avengers (1963) Annual #20, Page 56", "Mike Mignola"],
+  ["Origin of Dr. Strange", "Marvel Treasury Edition (1974) #6, Page 57", "Frank Brunner"],
+  ["Brotherhood of Evil Mutants", "The Avengers (1963) #75, Cover", "John Buscema"],
+  ["Origin of Daredevil", "Daredevil: The Man Without Fear (1964) #1, Cover", "Bill Everett"],
+  ["Scorpion -vs- Spider-Man", "The Amazing Spider-Man (1963) #20, Cover", "Steve Ditko"],
+  ["The Origin of Captain America", "Captain America #111, Cover", ""],
+  ["Daredevil -vs- Submariner", "Daredevil: The Man Without Fear (1964) #7, Cover", "Wally Wood"],
+  ["Wedding of Reed & Sue", "Fantastic Four (1963) #375, Cover", "Tom DeFalco"],
+  ["Origin of the Sentinels", "Uncanny X-Men (1963) #140, Cover", "John Byrne"],
+  ["Galactus Appears", "Fantastic Four (1961) #48, Page 21", "Jack Kirby"],
+  ["Origin of Silver Surfer", "The Incredible Hulk (1968) #414, Page 20", "Gary Frank"],
+  ["Spider-Man -vs- Green Goblin", "The Amazing Spider-Man (1963) #39, Cover", "John Romita Sr."],
+  ["Origin of Rhino", "The Amazing Spider-Man (1963) #43, Cover", "John Romita Sr."],
+  ["Peter Meets Mary Jane", "Marvel Swimsuit Issue (1992) #2, Page 17", "Kirk Jarvinen"],
+  ["Doom Steals the Power Cosmic", "The Fantastic Four (1961) #128, Page 21", ""],
+  ["Origin of Warlock", "The Warlock Chronicles (1993) #1, Cover", "Tom Raney"],
+  ["Origin of The Vision", "The Avengers (1963) #57, Cover", "John Buscema"],
+  ["Mephisto Appears", "West Coast Avengers (1985) Annual #8, Page 51", "Larry Alexander"],
+  ["Origin of Morbius", "Morbius (1992) #1, Mini-Poster", "Ron Wagner; Mike Witherby"],
+  ["Origin of Ghost Rider", "The Original Ghost Rider (1992) #8, Cover", "Mike Ploog"],
+  ["Thanos Attacks", "The Infinity War (1992) #6, Page 14", "Ron Lim"],
+  ["Death of Gwen Stacy", "The Spectacular Spider-Man (1976) #200, Page 42", "Sal Buscema"],
+  ["Punisher vs. Spider-Man", "The Punisher (1987) Ad/Poster", "Klaus Janson"],
+  ["Wolverine vs. Hulk", "The Incredible Hulk (1968) #340, Cover", "Todd McFarlane"],
+  ["The Wedding", "X-Men (1991) #26, Cover", "Andy Kubert"],
+  ["Origin of the Invaders", "The Invaders (1993) #1, Cover", "Dave Hoover"],
+  ["Spider-Man meets the Black Cat", "", ""],
+  ["The Hellfire Club Revealed", "The Uncanny X-Men (1963) #281, Page 6", "Whilce Portacio"],
+  ["Origin of She-Hulk", "The Sensational She-Hulk #1, Cover", "John Byrne"],
+  ["Origin of Moon Knight", "Marc Spector: Moon Knight (1989) #56, Cover", "Stephen Platt"],
+  ["Days of Future Past", "X-Men Adventures (1992) #1, Page 12", "Andrew Wildman"],
+  ["Elektra Appears", "Suspected unused in print. Not yet found in other media. Part of 4-figure sketches by Frank Miller.", "Frank Miller"],
+  ["Death of Elektra", "Daredevil: The Man Without Fear (1964) #182, Cover", "Frank Miller"],
+  ["Hobgoblin Appears", "Suspected unused in print, possibly shelved for a Web of Spider-Man Annual #3 pin-up. Used as a large 5' store stand-up display (1987)", ""],
+  ["Origin of Alpha Flight", "Alpha Flight (1983) #128, Page 13", "Dario Carrasco Jr."],
+  ["Ballad of Beta Ray Bill", "Thor (1966) #339, Page 20", "Walter Simonson"],
+  ["The Trial of Reed Richards", "The Fantastic Four (1963) #262, Page 8", "John Byrne"],
+  ["The Black Costume Saga", "Marvel Tales (1964) #266, Cover", "Ron Lim"],
+  ["Origin of Puma", "Marvel Tales (1964) #271, Cover", "Ron Lim"],
+  ["Silver Sable Inc.", "Silver Sable and the Wild Pack (1992) #17, Cover", "Steven Butler"],
+  ["Formation of X-Factor", "X-Men Unlimited (1993) #1, Page 62", "Joe Quesada"],
+  ["Apocalypse Attacks", "X-Factor (1988) #65, Page 20", "Whilce Portacio"],
+  ["Sabretooth vs. Wolverine", "The Uncanny X-Men (1963) #213, Cover", "Alan Davis"],
+  ["Formation of Excalibur", "The Uncanny X-Men (1963) #300, Page 1", "John Romita Jr."],
+  ["The Creation of Archangel", "X-Factor (1988) #24, Page 16", ""],
+  ["Mr. Sinister Appears", "The Uncanny X-Men (1963) #239, Page 4", "Marc Silvestri"],
+  ["The Wedding of Spider-Man & Mary Jane", "Web of Spider-Man (1985) Annual #4, Page 43", "John Romita Sr.; John Romita Jr."],
+  ["The Origin of Jubilee", "Uncanny X-Men (1963) #258, Page 8", "Jim Lee"],
+  ["Armor Wars", "Iron Man (1968) Annual #10, Page 50", "Bob Layton"],
+  ["Tombstone vs. Spider-Man", "The Spectacular Spider-Man (1976) #206, Cover", "Sal Buscema"],
+  ["Origin of Venom", "Venom: Lethal Protector (1993) Gold Retailer Incentive, Back Cover", "Mark Bagley; Al Milgrom"],
+  ["Origin of Typhoid Mary", "Daredevil: The Man Without Fear (1964) #254, Page 2", "John Romita Jr."],
+  ["Mr. Fix-It", "The Fantastic Four (1963) #348, Cover", "Arthur Adams"],
+  ["The Origin of Speedball", "The New Warriors (1990) #31, Page 14", "Darick Robertson"],
+  ["Captain America vs. The Captain", "Captain America (1968) #422, Page 8", ""],
+  ["Universal Guardian", "1992 Comic Images Silver Surfer Card Set #66; Unused Corner Box Art", "Andy Smith"],
+  ["The Cosmic Spider-Man", "The Spectacular Spider-Man (1976) #201, Page 21", "Sal Buscema"],
+  ["The Origin of Nomad", "Nomad (1990) #1, Cover", "S. Clarke Hawbaker"],
+  ["Thanos Quest", "The Thanos Quest (1990) #1, Page 48", "Ron Lim"],
+  ["Cable Returns from the Future", "1992 Impel X-Men Series I by Jim Lee", "Jim Lee"],
+  ["Ghost Rider #1", "Ghost Rider (1990) #1, Cover", "Javier Saltares"],
+  ["The Creation of Deathlok", "Deathlok (1990) #1, Page 28", "Jackson Guice"],
+  ["Origin of the New Warriors", "Nova (1993) #1, Page 1", "Chris Marrinan"],
+  ["Cable vs. Wolverine", "The New Mutants (1983) #93, Cover", "Rob Liefeld"],
+  ["Gambit Appears", "X-Men (1991) #25, Gambit Hologram", "Andy Kubert"],
+  ["X-Tinction Agenda", "X-Tinction Agenda House Ad/Promotional Material; X-Men (1991) #1 Composite (Cyclops)", "Jim Lee"],
+  ["Hulk Reborn", "The Incredible Hulk (1968) #391, Page 19", "Dale Keown"],
+  ["Deadpool Strikes", "Deadpool: The Circle Chase (1993) #2, Page 5", "Joe Madureira"],
+  ["Origin of Shatterstar", "X-Force (1991) Annual #1, Cover", "Greg Capullo"],
+  ["New Mutants No More", "The New Mutants (1983) #100, Cover", "Rob Liefeld"],
+  ["The Return of Blaze", "Ghost Rider & Blaze: Spirits of Vengeance (1992) #1, Mini-Poster", "Adam Kubert"],
+  ["Child of the Future", "X-Factor (1986) #66, Cover", "Whilce Portacio"],
+  ["The New X-Factor", "X-Factor (1986) #71, Cover", "Larry Stroman"],
+  ["Two Teams of X-Men", "The Uncanny X-Men (1963) #300, Cover", "John Romita Jr."],
+  ["The Origin of Bishop", "Suspected unused in print. Used on a licensed Comic Images T-shirt in 1993.", ""],
+  ["Omega Red vs. Wolverine", "X-Men (1991) #5, Cover", "Jim Lee"],
+  ["The Punisher Infiltrates the Mob", "The Punisher: War Zone (1993) #8, Cover", "John Romita Jr."],
+  ["Origin of Carnage", "The Amazing Spider-Man (1963) #384, Page 16", "Mark Bagley"],
+  ["The New Cage", "Cage (1992) #1, Cover", "Dwayne Turner"],
+  ["Outbreak of War Machine", "Iron Man (1968) #282, Cover", "Kevin Hopgood"],
+  ["Death of Mariko", "Wolverine (1988) #65, Page 18", "Mark Texeira"],
+  ["Invasion of the Spider-Slayers", "The Amazing Spider-Man (1963) #368, Cover", "Mark Bagley"],
+  ["The Origin of Nightstalkers", "Nightstalkers (1992) #1, Mini-Poster", "Andy Kubert; Adam Kubert"],
+  ["The Origin of Spider-Man 2099", "Spider-Man 2099 (1993) #6, Page 5", "Rick Leonardi"],
+  ["Hulk Leads the Pantheon", "The Incredible Hulk (1968) #410, Page 15", ""],
+  ["X-Cutioner's Song", "X-Factor (1986) #88, Page 1; Page 18 (Composite)", "Jae Lee"],
+  ["Cable vs. Stryfe", "The New Mutants (1983) #94, Page 20", "Rob Liefeld"],
+  ["Wonder Man Resurrected", "Wonder Man (1991) #25, Cover", "Jeff Johnson"],
+  ["Doom of the Future", "Doom 2099 (1992) #2, Cover", "Pat Broderick"],
+  ["Venom: Lethal Protector", "Venom: Lethal Protector #1, Cover", "Mark Bagley"],
+  ["Origin of Punisher 2099", "Punisher 2099 (1993) #1, Cover", "Tom Morgan"],
+  ["The Death of Green Goblin", "The Spectacular Spider-Man (1976) #200, Page 30", "Sal Buscema"],
+  ["Vision vs. Avengers", "The Avengers (1963) #360, Cover", "Steve Epting"],
+  ["Maximum Carnage", "Spider-Man Unlimited #2, Cover", "Ron Lim"],
+  ["The Resurrection of Namor", "Namor the Submariner (1990) #37, Page 20", "Jae Lee"],
+  ["Random Encounter", "X-Factor (1986) #88, Page 5", "Joe Quesada"],
+  ["Psylocke vs. Revanche", "1992 Impel Marvel Universe Series III, Psylocke, #51", "Paul Ryan"],
+  ["The Coming of Psi-Lord", "Fantastic Four (1963) #383, Page 22", "Paul Ryan"],
+  ["Origin of Thunderstrike", "Thunderstrike! (1993) #1, Cover", "Ron Frenz"],
+  ["The Infinity Crusade", "The Infinity Crusade (1993) #5, Cover; The Infinity Crusade (1995) #2, Page 36", "Ron Lim"],
+  ["The Origin of Hulk 2099", "2099 Unlimited (1993) #1, Page 33", "Dwayne Turner"],
+  ["The Return of Cable", "X-Force (1991) #25, Page 22", "Greg Capullo"],
+  ["The Death of Illyana", "The Uncanny X-Men (1963) #303, Page 22", "Richard Bennett"],
+  ["Gambit & Rogue", "X-Men (1991) #24, Cover", "Andy Kubert"],
+  ["Vengeance Appears", "Ghost Rider (1990) #46, Page 11", "Ron Garney"],
+  ["Fall from Grace", "Daredevil: The Man Without Fear (1964) #325, Page 39", "Scott McDaniel"],
+  ["The New Ravage", "Ravage 2099 (1993) #12, Page 2", "Grant Miehm"],
+  ["Magneto vs. Wolverine", "Wolverine (1988) #75, Page 4", "Adam Kubert"],
+  ["Wolverine Leaves the X-Men", "Wolverine (1988) #75, Page 34", "Adam Kubert"],
+  ["Magneto Returns", "The Uncanny X-Men (1963) #304, Page 16", "John Romita Jr."],
+  ["Xavier vs. Magneto", "The Uncanny X-Men (1963) #304, Page 41", "John Romita Jr."],
+  ["X-Man No More", "The Uncanny X-Men (1963) #304, Page 40", "John Romita Jr."],
+  ["Exodus Appears", "X-Factor (1986) #92, Page 14", "Joe Quesada"],
+  ["Origin of X-Men 2099", "X-Men 2099 (1993) #3, Page 2 (unconfirmed)", ""],
+  ["Return of Zarathos", "Ghost Rider & Blaze: Spirits of Vengeance #16, Page 1", "Henry Martinez"],
+  ["Mr. Fantastic vs. Dr. Doom", "Fantastic Four (1963) #381, Page 22", "Paul Ryan"],
+  ["The Return of Centurious", "Ghost Rider (1990) #43, Cover", "Ron Garney"],
+  ["The Thor Corps", "Marvel Treasury Edition (1974) #3, Back Cover; Marvel Press Poster #109", "John Romita Sr."],
+  ["Jean Grey Defeats Sabretooth", "X-Men (1991) #28, Cover", "Andy Kubert"],
+  ["Venom: The Madness", "Venom: The Madness (1993) #2, Page 4", "Kelley Jones"],
+  ["The Coming of Strange", "Doctor Strange (1988) #61, Cover", ""],
+  ["Suicide Run Begins", "Punisher: War Journal (1988) #61, Cover", ""],
+  ["The Origin of Legacy", "The Silver Surfer (1987) Annual #6, Cover", "Joe Phillips"],
+  ["Marvel Boy becomes Justice", "New Warriors Ashcan Edition, Back Cover", "Craig Brasfield"],
+  ["Maximum Carnage Part I", "1992 Impel Marvel Universe #120 Carnage", "Ron Lim"],
+  ["Maximum Carnage Part II", "Ghost Rider & Blaze: Spirits of Vengeance #6, Cover", "Adam Kubert"],
+  ["Maximum Carnage Part III", "The Amazing Spider-Man (1963) #384, Page 16", "Mark Bagley"],
+  ["Maximum Carnage Part IV", "The Amazing Spider-Man (1963) #379, Page 8", "Mark Bagley"],
+  ["Maximum Carnage Part V", "Amazing Spider-Man (1961) #336, Page 13", "Erik Larsen"],
+  ["Maximum Carnage Part VI", "Spider-Man vs. Venom TPB (1990), Back Cover", "Todd McFarlane"],
+  ["X-Men Blue - Mutant Genesis", "X-Men (1991) #26, Cover", "Andy Kubert"],
+  ["X-Men Gold - Mutant Genesis", "1993 Impel X-Men Series II, Jean Grey, #13", "Brandon Peterson"],
+  ["X-Men Gold - Mutant Genesis", "Uncanny X-Men (1963) Annual #17, Page 62", "Michael Bair"],
+  ["X-Force - Mutant Genesis", "X-Force (1991) #15, Page 14", "Greg Capullo"],
+  ["X-Men Blue - Mutant Genesis", "X-Men (1991) Annual #1, Cover", "Jim Lee"],
+  ["X-Force - Mutant Genesis", "X-Force (1991) #23, Cover", "Greg Capullo"],
+  ["X-Force - Mutant Genesis", "X-Force (1991) #19, Page 1", "Greg Capullo"],
+  ["X-Men Blue - Mutant Genesis", "Marvel Age #116, Page 10", "Andy Kubert"],
+  ["X-Factor - Mutant Genesis", "X-Factor (1986) #90, Page 8", "Joe Quesada"],
+  ["Flair Presents the Marvel Universe (Checklist)", "N/A", ""]
+];
+
+// [art source, artist] for Powerblast 1-18
+const PB_CREDITS = [
+  ["X-Men (1991) #25, Cable Hologram", "Greg Capullo"],
+  ["X-Men Team Pin-Up", "Joe Quesada"],
+  ["Iron Man (1968) #301, Cover", "Kevin Hopgood"],
+  ["The Uncanny X-Men (1963) #269, Page 22", "Jim Lee"],
+  ["Suspected unused in print. Not yet found in other media.", ""],
+  ["1992 Impel Marvel Universe, Storm, #30", "Lee Weeks"],
+  ["Venom: Lethal Protector #2", "Mark Bagley"],
+  ["Wolverine (1988) #67, Cover", "Mark Texeira"],
+  ["Sleepwalker (1991) #11, Page 6", "Bret Blevins"],
+  ["Punisher: War Journal (1988) #42, Cover", ""],
+  ["The Uncanny X-Men (1963) #268, Page 1", "Jim Lee"],
+  ["X-Men Annual (Vol. 2, 1992) #1, Page 41", "Andy Kubert"],
+  ["Thor (1966) #400, Page 36", "Ron Frenz"],
+  ["Silver Surfer (1987) #31, Cover (Flipped)", ""],
+  ["The Amazing Spider-Man (1963) #322, Page 8", "Todd McFarlane"],
+  ["Marvel Press Posters #143; Marvel Spotlight Vol. 3 (1993) #6, Cover", "Joe Madureira"],
+  ["The Fantastic Four (1961) #351, Page 12", "Mark Bagley"],
+  ["The Fantastic Four (1961) #330, Cover", "Rick Buckler"]
+];
+
+const POWERBLAST = ["Cable", "Cyclops", "Iron Man", "Magneto", "Phoenix", "Storm", "Venom", "Wolverine", "Ghost Rider",
+  "Punisher", "Captain America", "Gambit", "Thor", "Silver Surfer", "Spider-Man", "Deadpool", "Invisible Woman", "Dr. Doom"];
+
+// [name, Powerblast number whose art it reuses]
+const FLAIRPRINTS = [["Cable", 1], ["Cyclops", 2], ["Ghost Rider", 9], ["Iron Man", 3], ["Magneto", 4], ["Phoenix", 5], ["Punisher", 10], ["Storm", 6], ["Venom", 7], ["Wolverine", 8]];
+
+const BINDER = [["Captain America", 11], ["Gambit", 12], ["Thor", 13], ["Silver Surfer", 14], ["Spider-Man", 15]];
+
+const PROMOS = [
+  ["Deadpool Flairprint", "Heroes World Distribution. 6\u00bd\u2033 \u00d7 10\u2033. Handed out at Heroes World Con, 1994. Logo in the lower right; blank back except for a barcode."],
+  ["Omega Red vs. Wolverine Flairprint", "General promo, no distributor named"],
+  ["Omega Red vs. Wolverine Flairprint", "Diamond Comic Distributors. Blank back. Handed out at Diamond's Annual Retailer Seminar in Baltimore, June 11\u201314, 1994"]
+];
+
+// Ad pages on the checklist: [name, what it shows, where it ran (short), where it ran (full), image in print-fx]
+const AD_PAGES = [
+  ["\"Inaugural Edition\" Comic Ad", "Newsprint ad showing #100 Lethal Protector, Phoenix, and #70 Bodyslide. Tagline \"drool here\".",
+    "Marvel comics, May\u2013Sept 1994",
+    "Printed on newsprint with \"Advertisement\" along the bottom, the comic-book version. Confirmed in Fantastic Four #388 (May 1994), Fantastic Four Unlimited #6 (June 1994), Amazing Spider-Man #390 (June 1994), The Punisher #91 (June 1994), The Spectacular Spider-Man #214 (July 1994), X-Men #33 (1994), X-Factor #103 (1994), X-Men Adventures #5 (1994), Blackwulf #2 (1994), Northstar #3 (1994), Excalibur #78 (Sept 1994), and Fantastic Four Annual #27 (1994). Fleer ran it in Marvel's ad pages next to its other 1994 card lines, so more titles from the same months almost certainly carried it too.", "adpage-comic"],
+  ["\"Inaugural Edition\" Magazine Ad", "Glossy ad showing the Cyclops, Cable, and Venom Powerblast art. Tagline \"drool here\".",
+    "Card & hobby magazines, May\u2013Aug 1994",
+    "Printed on glossy stock. Confirmed in Tuff Stuff's Collect! (May 1994 and July 1994), Cards Illustrated #7 (July 1994), Collector's Sportslook (August 1994), and Tuff Stuff's Collect! Star Trek issue (August 1994). Same \"Inaugural Edition\" headline as the comic ad, but the three cards are Cyclops, Cable, and Venom instead of Lethal Protector / Phoenix / Bodyslide.", "adpage-mag"],
+  ["\"Introducing FlairPrints\" Ad", "Ghost Rider Flairprint, captioned \"Actual card size: 6-1/2\u2033 \u00d7 10\u2033\".",
+    "July 1994 magazines",
+    "Printed on glossy stock. Confirmed in Tuff Stuff's Collect! (July 1994) and Hero Illustrated #13 (July 1994). The July Collect! issue also ran the glossy Inaugural Edition magazine ad in the same issue.", "adpage-flairprints"]
+];
+
+// Comics with a Flair ad, for reference: [title, date, what it has]
+const ADS = [
+  ["Fantastic Four #388", "May 1994", "Earliest indexed appearance; comic ad"],
+  ["Fantastic Four Unlimited #6", "June 1994", "Carried the \"Inaugural Edition\" comic ad"],
+  ["Amazing Spider-Man #390", "June 1994", "Carried the \"Inaugural Edition\" comic ad"],
+  ["The Punisher #91", "June 1994", "Carried the \"Inaugural Edition\" comic ad"],
+  ["Fantastic Four Annual #27", "1994", "Carried the \"Inaugural Edition\" comic ad"],
+  ["The Spectacular Spider-Man #214", "July 1994", "Carried the \"Inaugural Edition\" comic ad"],
+  ["X-Men #33", "1994", "Carried the \"Inaugural Edition\" comic ad"],
+  ["X-Factor #103", "1994", "Carried the \"Inaugural Edition\" comic ad"],
+  ["X-Men Adventures #5", "1994", "Carried the \"Inaugural Edition\" comic ad"],
+  ["Blackwulf #2", "1994", "Carried the \"Inaugural Edition\" comic ad"],
+  ["Northstar #3", "1994", "Carried the \"Inaugural Edition\" comic ad"],
+  ["Excalibur #78", "Sept 1994", "Carried the \"Inaugural Edition\" comic ad"]
+];
+
+const MAGS = [
+  ["Wizard: The Comics Magazine #35", "July 1994", "Polybagged with a 4-card sheet, reported as the gold-foil etched version. A sealed-copy listing also shows an Ultraverse ashcan and a Union chromium card in the bag."],
+  ["Advance Comics #67", "July 1994", "Came with a 4-card promo sheet"],
+  ["Marvel Age #138", "July 1994", "Came with a 4-card promo sheet"],
+  ["Tuff Stuff's Collect!", "June 1994", "Came with a 4-card promo sheet"]
+];
+
+// Magazines that ran Flair print ads (not necessarily with a promo sheet)
+const AD_MAGS = [
+  ["Tuff Stuff's Collect!", "May 1994", "Carried the glossy \"Inaugural Edition\" magazine ad"],
+  ["Tuff Stuff's Collect!", "July 1994", "Carried the glossy Inaugural Edition magazine ad and the \"Introducing FlairPrints\" ad"],
+  ["Cards Illustrated #7", "July 1994", "Carried the glossy \"Inaugural Edition\" magazine ad"],
+  ["Hero Illustrated #13", "July 1994", "Carried the \"Introducing FlairPrints\" ad (Ghost Rider)"],
+  ["Collector's Sportslook", "August 1994", "Carried the glossy \"Inaugural Edition\" magazine ad"],
+  ["Tuff Stuff's Collect! Star Trek", "August 1994", "Carried the glossy \"Inaugural Edition\" magazine ad"]
+];
+
+const FOUR_CARD = [
+  ["\"Ships June 1994\" \u2014 Gold Sticker", "Black text on gold paste-on sticker"],
+  ["\"Ships June 1994\" \u2014 Foil Etched", "White text etched in gold foil"],
+  ["Unreleased 4-Card Sheet", "Gambit & Rogue, Infinity Crusade, Maximum Carnage, Bone Claws. No text on the front; card back reads \"presents\" instead of \"present\" (4th bullet). Surfaced on eBay."]
+];
+const FOUR_CARD_CONTENTS = "Front: Flair logo, Bone Claws, Phoenix, Maximum Carnage. Back: Bodyslide, Spider-Man 2099, Thunderstrike, New Ghost Rider";
+
+const NINE_CARD = [
+  [[48, 84, 98], [131, 11, 145], [130, 36, 143]],
+  [[130, 36, 143], [127, 83, 146], [78, 112, 117]],
+  [[78, 112, 117], [48, 84, 98], [131, 11, "145*"]],
+  [[69, 104, 52], [70, 111, 53], [71, 118, 46]],
+  [[71, 118, 46], [77, 119, 50], [63, 109, 49]],
+  [[63, 109, 49], [69, 104, 52], [70, 111, 53]],
+  [[90, 16, 129], [94, 29, 55], [92, 30, 56]],
+  [[92, 30, 56], [93, 33, 59], [87, 15, 133]],
+  [[87, 15, 133], [90, 16, 129], [94, 29, 55]]
+];
+
+const STORE_KEY = "flair94-checklist-v1";
+let owned = new Set(JSON.parse(localStorage.getItem(STORE_KEY) || "[]"));
+// "The Ultimate Collectable" (old u4-3) was the unreleased sheet (old u4-4), now u4-3.
+if (owned.delete("u4-4")) owned.add("u4-3");
+// Comics and magazines used to be checklist items; they're reference only now.
+[...owned].filter(id => /^(ad|mg|ma)\d+$/.test(id)).forEach(id => owned.delete(id));
+let filter = "all";
+let query = "";
+let artist = "";
+
+const CHECK = '<svg viewBox="0 0 24 24" fill="none"><path d="M5 12.5l4.5 4.5L19 7.5" stroke="#1a1205" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+const ZOOM = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5L21 21"/></svg>';
+const esc = s => String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+
+const UNK = '<span class="unk">Unidentified</span>';
+const splitArtists = a => (a || "").split(";").map(s => s.trim()).filter(Boolean);
+const artistText = a => a.replace(/;\s*/g, " & ");
+
+let artDir = "images/cards-fx/hd";
+const pad3 = n => String(n).padStart(3, "0");
+const cardSrc = n => `${artDir}/${pad3(n)}.jpg`;
+const insertSrc = (set, n) => `${artDir.replace("cards", set)}/${String(n).padStart(2, "0")}.jpg`;
+const promoSrc = name => `${artDir.replace("cards", "promo")}/${name}.jpg`;
+const printSrc = name => `${artDir.replace("cards", "print")}/${name}.jpg`;
+const thumbOf = src => src.replace(/images\/(.+)-fx\/hd\//, "images/thumbs/$1/");
+// Powerblast backs not photographed yet
+const PB_BACK_MISSING = new Set([]);
+// Card backs designed to be read landscape (stored as portrait scans with sideways text).
+const landscapeBaseBack = n => n >= 1 && n <= 134;
+
+// Promo art, keyed by tile id: [file in promo-fx, caption]
+const PROMO_ART = {
+  pr1: ["deadpool-flairprint"],
+  "u4-1": ["sheet4-sticker", "Front shown: the gold \"Ships June 1994\" title card"],
+  "u4-2": ["sheet4-foil", "Front shown: the gold-foil etched title card"],
+  "u4-3": ["sheet4-unreleased"],
+  "u9-2": ["sheet9-2"]
+};
+
+function credit(key) {
+  const kind = key.match(/^[a-z]+(\d-)?/)[0];
+  const n = parseInt(key.slice(kind.length), 10);
+  const promoArt = PROMO_ART[key] ? { img: promoSrc(PROMO_ART[key][0]), imgClass: "free", imgNote: PROMO_ART[key][1] } : {};
+  if (kind === "b") {
+    const [name, chars, note] = BASE[n - 1];
+    const [front, source, artist] = CREDITS[n - 1];
+    return { label: `Card #${n}`, n, name, chars, note, front, source, artist, img: cardSrc(n),
+      back: `${artDir.replace("cards", "backs")}/${pad3(n)}.jpg`,
+      landscapeBack: landscapeBaseBack(n) };
+  }
+  if (kind === "p") {
+    const [source, artist] = PB_CREDITS[n - 1];
+    return { label: `Powerblast ${n} of 18`, name: POWERBLAST[n - 1], source, artist, img: insertSrc("powerblast", n),
+      back: PB_BACK_MISSING.has(n) ? "" : insertSrc("powerblast-backs", n),
+      landscapeBack: !PB_BACK_MISSING.has(n) };
+  }
+  if (kind === "bi") {
+    const [name, pb] = BINDER[n - 1];
+    const [source, artist] = PB_CREDITS[pb - 1];
+    return { label: "1995 Binder Insert", name, chars: `Same art as Powerblast #${pb}, without the metallic finish`, source, artist,
+      img: insertSrc("powerblast", pb), imgNote: `Art shown from Powerblast #${pb}. The binder card has no logo, title, or foil.`,
+      backNote: "Completely blank back" };
+  }
+  if (kind === "f") {
+    const [name, pb] = FLAIRPRINTS[n - 1];
+    const [source, artist] = PB_CREDITS[pb - 1];
+    return { label: "1994 Flairprint \u00b7 Case Bonus", name, chars: `Same art as Powerblast #${pb}, enlarged`, source, artist,
+      img: insertSrc("flairprint", n), imgClass: "flairprint", backNote: "Blank back with UPC 0 41199 00258 1" };
+  }
+  if (kind === "pr") {
+    const [name, chars] = PROMOS[n - 1];
+    const art = name.startsWith("Omega Red") ? { img: cardSrc(86), imgNote: "Art shown from base card #86, which uses the same art" } : promoArt;
+    const backNote = n === 1 ? "Blank back except for a barcode" : n === 3 ? "Blank back" : "";
+    return { label: "Promo Flairprint \u00b7 1994", name, chars, ...art, backNote };
+  }
+  if (kind === "u4-") {
+    const [name, chars] = FOUR_CARD[n - 1];
+    const unreleased = n === FOUR_CARD.length;
+    const backNote = unreleased ? "" : "Not pictured. The back panel has Bodyslide, Spider-Man 2099, Thunderstrike, and New Ghost Rider.";
+    return { label: "4-Card Uncut Sheet \u00b7 5\u2033 \u00d7 7\u2033", name, chars, ...promoArt, backNote,
+      back: unreleased ? promoSrc("sheet4-unreleased-back") : "" };
+  }
+  if (kind === "u9-") {
+    const nums = NINE_CARD[n - 1].flat().map(x => parseInt(x, 10));
+    return { label: "9-Card Uncut Sheet \u00b7 1994 Press Kit", name: `Sheet ${n}`, chars: `Cards ${nums.join(", ")}`, ...promoArt };
+  }
+  if (kind === "ap") {
+    const [name, shows, , ran, file] = AD_PAGES[n - 1];
+    return { label: "Print Ad \u00b7 1994", name, chars: shows, img: printSrc(file), imgClass: "free", imgNote: ran };
+  }
+  if (kind === "ma") {
+    const [name, date, chars] = AD_MAGS[n - 1];
+    return { label: `Magazine \u00b7 ${date}`, name, chars, img: printSrc(key), imgClass: "free" };
+  }
+  const [name, date, chars] = (kind === "ad" ? ADS : MAGS)[n - 1];
+  return { label: kind === "ad" ? `Comic \u00b7 ${date}` : `Magazine \u00b7 ${date}`, name, chars,
+    img: printSrc(key), imgClass: "free" };
+}
+
+// Every checkable item: { id, group, label (for want list), artists, search }
+const items = [];
+
+function tile({ id, group, no, name, chars, note, holo, search, label, card }) {
+  const c = card ? credit(card) : null;
+  items.push({
+    id, group, label,
+    artists: c ? splitArtists(c.artist) : [],
+    search: [search || `${no} ${name} ${chars || ""}`, c && c.front, c && c.source, c && c.artist].filter(Boolean).join(" ").toLowerCase()
+  });
+  const badge = `<span class="badge${/^\d+$/.test(no) ? "" : " txt"}">${esc(no)}</span>`;
+  const thumb = c && c.img ? `<button class="thumb" data-view="${card}" aria-label="View ${esc(name)}">${badge}<img src="${thumbOf(c.img)}" alt="" loading="lazy"><span class="zoom">${ZOOM}</span></button>` : "";
+  return `<div class="tile${holo ? " holo" : ""}${thumb ? " has-thumb" : ""}" data-id="${id}"${card ? ` data-card="${card}"` : ""} tabindex="0" role="checkbox" aria-checked="false">
+    <div class="no"><span>${esc(no)}</span></div>${thumb}
+    <div class="name">${esc(name)}${chars ? `<span class="chars">${esc(chars)}</span>` : ""}${c && c.artist ? `<span class="art">${esc(artistText(c.artist))}</span>` : ""}${note ? `<span class="note">${esc(note)}</span>` : ""}</div>
+    <div class="box">${CHECK}</div>
+  </div>`;
+}
+
+// Reference-only tile: tooltip and viewer, but not a checklist item.
+// Cover workaround: keep a titled plate if the scan is missing instead of dropping the thumb.
+function refTile({ no, name, chars, card }) {
+  const c = credit(card);
+  const plate = `data:image/svg+xml,${encodeURIComponent(`<svg xmlns="http://www.w3.org/2000/svg" width="160" height="246" viewBox="0 0 160 246">
+    <rect width="160" height="246" fill="#120f19"/>
+    <rect x="6" y="6" width="148" height="234" fill="none" stroke="#f2c75c" stroke-width="2"/>
+    <rect x="14" y="18" width="132" height="22" fill="#8f0f16"/>
+    <text x="80" y="33" text-anchor="middle" fill="#fff4c8" font-family="Georgia,serif" font-size="9">${esc(no)}</text>
+    <text x="80" y="120" text-anchor="middle" fill="#f3eee4" font-family="Georgia,serif" font-size="11">${esc(name).slice(0, 28)}</text>
+    <text x="80" y="210" text-anchor="middle" fill="#a49c8c" font-family="Georgia,serif" font-size="8">Cover plate</text>
+  </svg>`)}`;
+  const onErr = `this.onerror=null;this.src='${plate}';this.closest('.thumb').classList.add('cover-plate')`;
+  return `<div class="tile ref has-thumb" data-card="${card}">
+    <button class="thumb" data-view="${card}" aria-label="View ${esc(name)}"><span class="badge txt">${esc(no)}</span><img src="${thumbOf(c.img)}" alt="" loading="lazy" onerror="${onErr}"><span class="zoom">${ZOOM}</span></button>
+    <div class="name">${esc(name)}<span class="chars">${esc(chars)}</span></div>
+  </div>`;
+}
+
+function row(key, no, withFront, holo) {
+  const c = credit(key);
+  return `<tr class="row${holo ? " holo" : ""}" data-id="${key}" tabindex="0" role="checkbox" aria-checked="false">
+    <td><div class="box">${CHECK}</div></td>
+    <td class="c-no"><span>${no}</span></td>
+    <td class="c-name">${esc(c.name)}${c.chars ? `<span class="chars">${esc(c.chars)}</span>` : ""}${c.note ? `<span class="note">${esc(c.note)}</span>` : ""}</td>
+    ${withFront ? `<td class="c-front">${c.front ? esc(c.front) : UNK}</td>` : ""}
+    <td class="c-src">${c.source ? esc(c.source) : UNK}</td>
+    <td class="c-art">${c.artist ? esc(artistText(c.artist)) : UNK}</td>
+  </tr>`;
+}
+
+const creditsTable = (rows, withFront) => `<table class="credits"><thead><tr><th></th><th>#</th><th>Card</th>${withFront ? "<th>Front Title</th>" : ""}<th>Art Source</th><th>Artist</th></tr></thead><tbody>${rows}</tbody></table>`;
+
+function render() {
+  document.getElementById("grid-base").innerHTML = BASE.map(([name, chars, note], i) =>
+    tile({ id: `b${i + 1}`, group: "base", no: i + 1, name, chars, note, card: `b${i + 1}`, label: `#${i + 1} ${name}` })).join("");
+  document.getElementById("det-base").innerHTML = creditsTable(BASE.map((_, i) => row(`b${i + 1}`, i + 1, true)).join(""), true);
+
+  document.getElementById("grid-powerblast").innerHTML = POWERBLAST.map((name, i) =>
+    tile({ id: `p${i + 1}`, group: "powerblast", no: i + 1, name, holo: true, card: `p${i + 1}`, label: `Powerblast #${i + 1} ${name}`, search: `${i + 1} ${name} powerblast` })).join("");
+  document.getElementById("det-powerblast").innerHTML = creditsTable(POWERBLAST.map((_, i) => row(`p${i + 1}`, i + 1, false, true)).join(""), false);
+
+  document.getElementById("grid-flairprint").innerHTML = FLAIRPRINTS.map(([name, pb], i) =>
+    tile({ id: `f${i + 1}`, group: "large", no: "FP", name, chars: `Powerblast #${pb} art \u00b7 ${PB_CREDITS[pb - 1][0]}`, card: `f${i + 1}`, label: `Flairprint ${name}` })).join("");
+
+  document.getElementById("grid-binder").innerHTML = BINDER.map(([name, pb], i) =>
+    tile({
+      id: `bi${i + 1}`, group: "large", no: "'95", name,
+      chars: name === "Spider-Man"
+        ? `Powerblast #${pb} art \u00b7 verified in sealed 1995 Fleer Ultra X-Men binders`
+        : `Powerblast #${pb} art \u00b7 ${PB_CREDITS[pb - 1][0]}`,
+      card: `bi${i + 1}`, label: `1995 Binder Insert ${name}`
+    })).join("");
+
+  document.getElementById("grid-promo").innerHTML = PROMOS.map(([name, chars], i) =>
+    tile({ id: `pr${i + 1}`, group: "promos", no: "P", name, chars, card: `pr${i + 1}`, label: `Promo: ${name} (${chars})` })).join("");
+
+  document.getElementById("grid-adpages").innerHTML = AD_PAGES.map(([name, shows, where, ran], i) =>
+    tile({ id: `ap${i + 1}`, group: "print", no: "AD", name, chars: where, card: `ap${i + 1}`, label: `Print ad: ${name}`, search: `ad advertisement print ${name} ${shows} ${ran}` })).join("");
+
+  document.getElementById("grid-ads").innerHTML = ADS.map(([name, date, what], i) =>
+    refTile({ no: "COMIC", name, chars: `${date} \u00b7 ${what}`, card: `ad${i + 1}` })).join("");
+
+  document.getElementById("grid-mags").innerHTML = MAGS.map(([name, date, what], i) =>
+    refTile({ no: "MAG", name, chars: `${date} \u00b7 ${what}`, card: `mg${i + 1}` })).join("");
+
+  document.getElementById("grid-ad-mags").innerHTML = AD_MAGS.map(([name, date, what], i) =>
+    refTile({ no: "AD", name, chars: `${date} \u00b7 ${what}`, card: `ma${i + 1}` })).join("");
+
+  document.getElementById("grid-four").innerHTML = FOUR_CARD.map(([name, chars], i) =>
+    tile({ id: `u4-${i + 1}`, group: "promos", no: "4\u00d7", name, chars, card: `u4-${i + 1}`, label: `4-Card Sheet: ${name}`, search: `4-card uncut sheet ${name} ${chars} ${FOUR_CARD_CONTENTS}` })).join("");
+
+  document.getElementById("grid-nine").innerHTML = NINE_CARD.map((rows, i) => {
+    const nums = rows.flat();
+    const id = `u9-${i + 1}`;
+    const names = nums.map(n => BASE[parseInt(n, 10) - 1].filter(Boolean).join(" "));
+    items.push({ id, group: "promos", artists: [], label: `9-Card Sheet ${i + 1} (${nums.join(", ").replace("*", "")})`, search: `9-card uncut sheet ${i + 1} ${nums.join(" ")} ${names.join(" ")}`.toLowerCase() });
+    const cells = nums.map(n => {
+      const num = String(n).replace("*", "");
+      const flag = String(n).includes("*") ? ' class="unnum"' : "";
+      return `<span data-ref="b${num}" data-view="b${num}"${flag}><span class="badge">${num}</span><img src="${thumbOf(cardSrc(num))}" alt="#${num} ${esc(BASE[num - 1][0])}" loading="lazy"></span>`;
+    }).join("");
+    return `<div class="tile sheet" data-id="${id}"${PROMO_ART[id] ? ` data-card="${id}"` : ""} tabindex="0" role="checkbox" aria-checked="false">
+      <div><div class="head"><b>Sheet ${i + 1}</b>${PROMO_ART[id] ? `<button class="zoom-btn" data-view="${id}">View</button>` : ""}</div><div class="mini">${cells}</div>
+      <div class="sheet-names">${nums.map(n => `<b>${String(n).replace("*", "")}</b> ${esc(BASE[parseInt(n, 10) - 1][0])}`).join(" &middot; ")}</div></div>
+      <div class="box">${CHECK}</div>
+    </div>`;
+  }).join("");
+}
+
+const GROUPS = [
+  { key: "base", label: "Base Set", href: "#base" },
+  { key: "powerblast", label: "Powerblast", href: "#powerblast", holo: true },
+  { key: "large", label: "Flairprints & Binder", href: "#large" },
+  { key: "promos", label: "Promos & Sheets", href: "#promos" },
+  { key: "print", label: "Print Ads", href: "#print" }
+];
+
+function save() {
+  localStorage.setItem(STORE_KEY, JSON.stringify([...owned]));
+  document.getElementById("savedAt").textContent = "Saved " + new Date().toLocaleString();
+}
+
+const ITEM_SEL = ".tile[data-id], .row[data-id]";
+
+function update() {
+  const tiles = document.querySelectorAll(ITEM_SEL);
+  tiles.forEach(t => {
+    const have = owned.has(t.dataset.id);
+    t.classList.toggle("have", have);
+    t.setAttribute("aria-checked", have);
+  });
+  document.querySelectorAll(".mini span[data-ref]").forEach(s => s.classList.toggle("own", owned.has(s.dataset.ref)));
+
+  const totals = {};
+  GROUPS.forEach(g => {
+    const list = items.filter(it => it.group === g.key);
+    totals[g.key] = { have: list.filter(it => owned.has(it.id)).length, total: list.length };
+  });
+  const allHave = items.filter(it => owned.has(it.id)).length;
+
+  GROUPS.forEach(g => {
+    const { have, total } = totals[g.key];
+    const c = document.querySelector(`[data-count="${g.key}"]`);
+    if (c) c.innerHTML = `${have}<span>/${total}</span>`;
+    const m = document.querySelector(`[data-meter="${g.key}"]`);
+    if (m) m.style.width = (total ? have / total * 100 : 0) + "%";
+  });
+
+  document.getElementById("stats").innerHTML = GROUPS.map(g => {
+    const { have, total } = totals[g.key];
+    return `<a class="stat${g.holo ? " holo" : ""}" href="${g.href}"><div class="label">${esc(g.label)}</div>
+      <div class="num">${have} <span>/ ${total}</span></div><div class="meter"><i style="width:${total ? have / total * 100 : 0}%"></i></div></a>`;
+  }).join("") + `<div class="stat"><div class="label">Still Needed</div><div class="num">${items.length - allHave} <span>items</span></div>
+      <div class="meter"><i style="width:${items.length ? (items.length - allHave) / items.length * 100 : 0}%; background: var(--red)"></i></div></div>`;
+
+  const pct = items.length ? allHave / items.length : 0;
+  const C = 2 * Math.PI * 56;
+  document.getElementById("ringBar").style.strokeDashoffset = C * (1 - pct);
+  document.getElementById("ringPct").textContent = Math.round(pct * 100) + "%";
+  document.getElementById("ringSub").textContent = `${allHave} / ${items.length}`;
+  document.getElementById("printProgress").textContent = `Collected ${allHave} of ${items.length}`;
+
+  applyFilter();
+}
+
+function applyFilter() {
+  const visibleByGroup = {};
+  const byId = Object.fromEntries(items.map(it => [it.id, it]));
+  document.querySelectorAll(ITEM_SEL).forEach(t => {
+    const it = byId[t.dataset.id];
+    const have = owned.has(it.id);
+    const okFilter = filter === "all" || (filter === "have" ? have : !have);
+    const okQuery = !query || it.search.includes(query) || (/^\d+$/.test(query) && it.id === `b${query}`);
+    const okArtist = !artist || it.artists.includes(artist);
+    const show = okFilter && okQuery && okArtist;
+    t.classList.toggle("hidden", !show);
+    if (show) visibleByGroup[it.group] = (visibleByGroup[it.group] || 0) + 1;
+  });
+  GROUPS.forEach(g => {
+    const e = document.querySelector(`[data-empty="${g.key}"]`);
+    if (e) e.style.display = visibleByGroup[g.key] ? "none" : "block";
+  });
+  const four = document.getElementById("grid-four").closest(".split");
+  const nine = document.getElementById("grid-nine");
+  [four, nine, nine.previousElementSibling].forEach(el => el.style.display = visibleByGroup.promos ? "" : "none");
+  ["#large .compare", "#large .tell"].forEach(sel => {
+    document.querySelector(sel).style.display = visibleByGroup.large ? "" : "none";
+  });
+  document.querySelector("#promos .promo-facts").style.display = visibleByGroup.promos ? "" : "none";
+  document.querySelector("#print .ref-block").style.display = filter === "all" && !query && !artist ? "" : "none";
+}
+
+function toggle(t) {
+  const id = t.dataset.id;
+  owned.has(id) ? owned.delete(id) : owned.add(id);
+  save();
+  update();
+}
+
+function toast(msg) {
+  const el = document.getElementById("toast");
+  el.textContent = msg;
+  el.classList.add("show");
+  clearTimeout(toast.t);
+  toast.t = setTimeout(() => el.classList.remove("show"), 2200);
+}
+
+render();
+update();
+
+document.body.classList.add("fx-gloss");
+
+(function featureRotator() {
+  const card = document.getElementById("featureCard");
+  const cap = document.getElementById("featureCap");
+  const [imgA, imgB] = card.querySelectorAll("img");
+  const pad = pad3;
+  // #150 is the checklist card, so it's left out of the rotation.
+  const pool = Array.from({ length: 149 }, (_, i) => i + 1);
+  let deck = [];
+  let current = 91;
+  let front = imgA, back = imgB;
+  let paused = false;
+
+  const nextNumber = () => {
+    if (!deck.length) {
+      deck = pool.filter(n => n !== current);
+      for (let i = deck.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [deck[i], deck[j]] = [deck[j], deck[i]];
+      }
+    }
+    return deck.pop();
+  };
+
+  const caption = n => {
+    const name = BASE[n - 1][0];
+    const artists = splitArtists(CREDITS[n - 1][2]);
+    cap.innerHTML = `Featured &middot; <strong>#${n} ${esc(name)}</strong>` +
+      (artists.length ? `<span class="by">Art &middot; ${esc(artists.join(" & "))}</span>` : "");
+  };
+
+  let upcoming = nextNumber();
+  const preload = new Image();
+  preload.src = cardSrc(upcoming);
+  card.dataset.n = current;
+  card.refreshArt = () => { front.src = cardSrc(current); preload.src = cardSrc(upcoming); };
+
+  function advance() {
+    if (paused || document.hidden) return;
+    const n = upcoming;
+    back.onload = () => {
+      back.classList.add("on");
+      front.classList.remove("on");
+      [front, back] = [back, front];
+      current = n;
+      card.dataset.n = n;
+      caption(n);
+      upcoming = nextNumber();
+      preload.src = cardSrc(upcoming);
+    };
+    back.alt = `1994 Flair Marvel card #${n}, ${BASE[n - 1][0]}`;
+    back.src = cardSrc(n);
+  }
+
+  setInterval(advance, 5000);
+  card.addEventListener("pointerenter", e => { if (e.pointerType === "mouse") paused = true; });
+  card.addEventListener("pointerleave", () => { paused = false; });
+
+  function jump() {
+    const sel = document.body.classList.contains("view-details") ? `.row[data-id="b${current}"]` : `.tile[data-id="b${current}"]`;
+    const el = document.querySelector(sel) || document.querySelector(`[data-id="b${current}"]`);
+    if (!el || !el.offsetParent) { toast(`Card #${current} is hidden by the current filters`); return; }
+    el.scrollIntoView({ behavior: "smooth", block: "center" });
+    el.animate([{ boxShadow: "0 0 0 3px #f2c75c, 0 0 40px #f2c75c" }, { boxShadow: "0 0 0 0 transparent" }], { duration: 1800, easing: "ease-out" });
+  }
+  card.addEventListener("click", jump);
+  card.addEventListener("keydown", e => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); jump(); } });
+})();
+
+
+const tip = document.getElementById("tip");
+let lastPointer = "mouse";
+
+let tipTimer;
+
+function showTip(cell) {
+  const key = cell.dataset.ref || cell.dataset.card;
+  const c = credit(key);
+  const sheets = c.n ? NINE_CARD.map((rows, i) => rows.flat().some(x => parseInt(x, 10) === c.n) ? i + 1 : 0).filter(Boolean) : [];
+  const have = owned.has(cell.dataset.ref || cell.dataset.id);
+  tip.dataset.for = key;
+  const img = c.img || "";
+  const credited = "source" in c;
+  tip.innerHTML = (img ? `<div class="t-wrap"><span class="t-art"><img class="t-img${c.imgClass ? " " + c.imgClass : ""}" src="${img}" alt=""></span><div class="t-body">` : "") + `<div class="t-no">${esc(c.label)}</div>
+    <div class="t-name">${esc(c.name)}</div>
+    ${c.chars ? `<div class="t-chars">${esc(c.chars)}</div>` : ""}
+    ${credited ? `<dl>
+      ${c.front ? `<dt>Front</dt><dd class="front">${esc(c.front)}</dd>` : ""}
+      <dt>Source</dt><dd>${c.source ? esc(c.source) : UNK}</dd>
+      <dt>Artist</dt><dd class="artist">${c.artist ? esc(artistText(c.artist)) : UNK}</dd>
+    </dl>` : ""}
+    ${c.imgNote ? `<div class="t-note">${esc(c.imgNote)}</div>` : ""}
+    <div class="t-meta">
+      ${cell.dataset.ref || cell.dataset.id ? `<span class="t-pill${have ? " own" : ""}">${have ? "In collection" : "Need"}</span>` : ""}
+      ${sheets.length ? `<span class="t-pill">On uncut sheet${sheets.length > 1 ? "s" : ""} ${sheets.join(", ")}</span>` : ""}
+      ${cell.classList.contains("unnum") ? '<span class="t-pill warn">Unnumbered here</span>' : ""}
+      ${c.note ? `<span class="t-pill warn">${esc(c.note)}</span>` : ""}
+    </div>` + (img ? `</div></div>` : "");
+  tip.classList.add("wide");
+  tip.classList.toggle("has-img", !!img);
+  const r = cell.getBoundingClientRect();
+  tip.classList.add("show");
+  const w = tip.offsetWidth, h = tip.offsetHeight;
+  let left = Math.min(Math.max(8, r.left + r.width / 2 - w / 2), window.innerWidth - w - 8);
+  let top = r.top - h - 10;
+  if (top < 8) top = r.bottom + 10;
+  tip.style.left = left + "px";
+  tip.style.top = top + "px";
+}
+const hideTip = () => { clearTimeout(tipTimer); tip.classList.remove("show"); tip.dataset.for = ""; };
+
+document.addEventListener("pointerdown", e => { lastPointer = e.pointerType; });
+document.addEventListener("mouseover", e => {
+  const cell = e.target.closest(".mini span[data-ref]");
+  if (cell) { clearTimeout(tipTimer); showTip(cell); return; }
+  const t = e.target.closest(".tile[data-card]");
+  if (!t) return hideTip();
+  if (tip.dataset.for === t.dataset.card) return;
+  hideTip();
+  tipTimer = setTimeout(() => showTip(t), 350);
+});
+window.addEventListener("scroll", hideTip, { passive: true });
+
+const viewer = (function cardViewer() {
+  const el = document.getElementById("viewer");
+  const card = document.getElementById("vCard");
+  const frontImg = card.querySelector(".v-front img");
+  const back = card.querySelector(".v-back");
+  const flipBtn = document.getElementById("vFlip");
+  let list = [], index = 0, opener = null;
+
+  function frameAr(landscapeView) {
+    if (landscapeView) return 1.3875;
+    if (frontImg.naturalWidth && frontImg.naturalHeight) return frontImg.naturalWidth / frontImg.naturalHeight;
+    return 0.714;
+  }
+  function applyFrame() {
+    const landscapeView = card.classList.contains("landscape-back") && card.classList.contains("flipped");
+    card.style.setProperty("--ar", frameAr(landscapeView));
+  }
+  function show(i) {
+    index = (i + list.length) % list.length;
+    const key = list[index].dataset.view;
+    const c = credit(key);
+    card.classList.remove("flipped");
+    card.style.setProperty("--ar", 0.714);
+    frontImg.onload = () => applyFrame();
+    frontImg.src = c.img;
+    frontImg.alt = c.name;
+    const hasBack = !!(c.back || c.backNote);
+    const landscape = !!(c.landscapeBack && c.back);
+    back.innerHTML = c.back ? `<img src="${c.back}" alt="Back of ${esc(c.name)}"${landscape ? ' class="landscape"' : ""}>`
+      : c.backNote ? `<div class="v-blank"><div><b>Card back</b>${esc(c.backNote)}</div></div>` : "";
+    card.classList.toggle("no-back", !hasBack);
+    card.classList.toggle("landscape-back", landscape);
+    applyFrame();
+    flipBtn.disabled = !hasBack;
+    document.getElementById("vLabel").textContent = c.label;
+    document.getElementById("vName").textContent = c.name;
+    const touch = matchMedia("(hover: none)").matches;
+    document.getElementById("vHint").textContent = !hasBack ? c.imgNote || "Back not pictured"
+      : landscape ? (touch ? "Tap to flip \u00b7 Frame rotates with the back" : "Click or press F to flip \u00b7 Frame rotates with the back \u00b7 Arrow keys for next")
+      : touch ? "Tap the card to flip" : "Click the card or press F to flip \u00b7 Arrow keys for next";
+  }
+  const flip = () => {
+    if (flipBtn.disabled) return;
+    card.classList.toggle("flipped");
+    applyFrame();
+  };
+  function open(trigger) {
+    const sheet = trigger.closest(".mini");
+    list = sheet ? [...sheet.querySelectorAll("[data-view]")]
+      : [...document.querySelectorAll("[data-view]")].filter(b => b.offsetParent && !b.closest(".mini"));
+    opener = trigger;
+    hideTip();
+    el.classList.add("show");
+    show(Math.max(0, list.indexOf(trigger)));
+    el.querySelector(".v-close").focus();
+  }
+  function close() {
+    el.classList.remove("show");
+    if (opener) opener.focus();
+  }
+
+  card.addEventListener("click", flip);
+  flipBtn.addEventListener("click", flip);
+  el.querySelector(".v-close").addEventListener("click", close);
+  el.querySelector(".prev").addEventListener("click", () => show(index - 1));
+  el.querySelector(".next").addEventListener("click", () => show(index + 1));
+  el.addEventListener("click", e => { if (e.target === el) close(); });
+  document.addEventListener("keydown", e => {
+    if (!el.classList.contains("show")) return;
+    if (e.key === "Escape") close();
+    else if (e.key === "ArrowLeft") show(index - 1);
+    else if (e.key === "ArrowRight") show(index + 1);
+    else if (e.key === "f" || e.key === "F") flip();
+    else return;
+    e.preventDefault();
+  });
+  return { open, isOpen: () => el.classList.contains("show") };
+})();
+
+document.addEventListener("click", e => {
+  if (viewer.isOpen()) return;
+  const view = e.target.closest("[data-view]");
+  if (view) { viewer.open(view); return; }
+  const cell = e.target.closest(".mini span[data-ref]");
+  if (cell && lastPointer !== "mouse") { showTip(cell); return; }
+  if (!cell) hideTip();
+  const t = e.target.closest(ITEM_SEL);
+  if (t) toggle(t);
+});
+document.addEventListener("keydown", e => {
+  if (viewer.isOpen() || (e.target.closest && e.target.closest("[data-view]"))) return;
+  const t = e.target.closest && e.target.closest(ITEM_SEL);
+  if (t && (e.key === " " || e.key === "Enter")) { e.preventDefault(); toggle(t); }
+});
+document.getElementById("q").addEventListener("input", e => { query = e.target.value.trim().toLowerCase(); applyFilter(); });
+document.getElementById("filter").addEventListener("click", e => {
+  const b = e.target.closest("button");
+  if (!b) return;
+  filter = b.dataset.f;
+  document.querySelectorAll("#filter button").forEach(x => x.classList.toggle("on", x === b));
+  applyFilter();
+});
+const artistSel = document.getElementById("artist");
+const artistCounts = {};
+items.forEach(it => it.artists.forEach(a => { artistCounts[a] = (artistCounts[a] || 0) + 1; }));
+Object.keys(artistCounts).sort((a, b) => a.localeCompare(b)).forEach(a => {
+  artistSel.add(new Option(`${a} (${artistCounts[a]})`, a));
+});
+artistSel.addEventListener("change", () => {
+  artist = artistSel.value;
+  artistSel.classList.toggle("on", !!artist);
+  applyFilter();
+});
+
+const VIEW_KEY = "flair94-view";
+function setView(v) {
+  document.body.classList.toggle("view-details", v === "details");
+  document.querySelectorAll("#view button").forEach(x => x.classList.toggle("on", x.dataset.v === v));
+  localStorage.setItem(VIEW_KEY, v);
+}
+setView(localStorage.getItem(VIEW_KEY) || "cards");
+document.getElementById("view").addEventListener("click", e => {
+  const b = e.target.closest("button");
+  if (b) setView(b.dataset.v);
+});
+
+document.getElementById("reset").addEventListener("click", () => {
+  if (!confirm("Clear every checkmark? This can't be undone.")) return;
+  owned.clear();
+  save();
+  update();
+  toast("Checklist reset");
+});
+document.getElementById("copyNeed").addEventListener("click", async () => {
+  const need = items.filter(it => !owned.has(it.id));
+  const baseNeed = need.filter(it => it.group === "base").map(it => it.id.slice(1));
+  const other = need.filter(it => it.group !== "base").map(it => it.label);
+  const text = "1994 Flair Marvel - Want List\n\nBase set #s: " + (baseNeed.join(", ") || "complete!") +
+    (other.length ? "\n\nInserts, promos & print ads:\n" + other.map(s => "- " + s).join("\n") : "");
+  try { await navigator.clipboard.writeText(text); toast(`Copied ${need.length} needed items to clipboard`); }
+  catch { prompt("Copy your want list:", text); }
+});
+</script>
+</body>
+</html>
