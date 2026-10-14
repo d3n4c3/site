@@ -451,16 +451,34 @@
   .tell b { font-family: "Oswald", sans-serif; font-weight: 500; letter-spacing: .2em; text-transform: uppercase; font-size: 13px; color: var(--gold-2); }
   .tell p { margin: 0; color: #d6cfc2; font-size: 14.5px; }
 
-  /* 1994 promo timeline */
-  .timeline { position: relative; display: grid; grid-template-columns: repeat(6, 1fr); gap: 14px; margin: 6px 0 30px; padding-top: 30px; }
-  .timeline::before { content: ""; position: absolute; left: 8px; right: 8px; top: 9px; height: 2px; background: linear-gradient(90deg, var(--gold-3), var(--red), var(--gold-2)); opacity: .7; }
-  .tl { position: relative; padding: 14px 14px 12px; border-radius: 12px; background: linear-gradient(180deg, var(--panel-2), var(--panel)); border: 1px solid rgba(255, 255, 255, 0.06); }
-  .tl::before { content: ""; position: absolute; top: -27px; left: 16px; width: 14px; height: 14px; border-radius: 50%; background: var(--foil); box-shadow: 0 0 0 4px var(--ink), 0 0 16px rgba(242, 199, 92, 0.5); }
+  /* 1994 promo timeline — vertical rail (reads chronologically, no wrapping grid) */
+  .timeline {
+    position: relative; display: flex; flex-direction: column; gap: 0;
+    margin: 8px 0 32px; padding: 4px 0 4px 0; max-width: 720px;
+  }
+  .timeline::before {
+    content: ""; position: absolute; left: 11px; top: 10px; bottom: 10px; width: 2px;
+    background: linear-gradient(180deg, var(--gold-3), var(--red), var(--gold-2)); opacity: .75;
+  }
+  .tl {
+    position: relative; margin: 0 0 12px 36px; padding: 14px 16px 13px;
+    border-radius: 12px; background: linear-gradient(180deg, var(--panel-2), var(--panel));
+    border: 1px solid rgba(255, 255, 255, 0.06);
+  }
+  .tl:last-child { margin-bottom: 0; }
+  .tl::before {
+    content: ""; position: absolute; top: 18px; left: -32px; width: 14px; height: 14px; border-radius: 50%;
+    background: var(--foil); box-shadow: 0 0 0 4px var(--ink), 0 0 16px rgba(242, 199, 92, 0.5); z-index: 1;
+  }
   .tl.red::before { background: var(--red); box-shadow: 0 0 0 4px var(--ink), 0 0 16px rgba(227, 38, 47, 0.6); }
   .tl .when { font-family: "Anton", sans-serif; font-size: 18px; color: var(--gold-2); line-height: 1; }
-  .tl .kind { display: inline-block; margin: 6px 0 6px; font-family: "Oswald", sans-serif; font-size: 10.5px; letter-spacing: .16em; text-transform: uppercase; padding: 1px 7px; border-radius: 99px; border: 1px solid rgba(255, 255, 255, 0.15); color: var(--muted); }
+  .tl .kind {
+    display: inline-block; margin: 6px 0 6px; font-family: "Oswald", sans-serif; font-size: 10.5px;
+    letter-spacing: .16em; text-transform: uppercase; padding: 1px 7px; border-radius: 99px;
+    border: 1px solid rgba(255, 255, 255, 0.15); color: var(--muted);
+  }
   .tl.red .kind { color: #ffb3b6; border-color: rgba(227, 38, 47, 0.45); }
-  .tl p { margin: 0; font-size: 13px; color: #d6cfc2; line-height: 1.4; }
+  .tl p { margin: 0; font-size: 13.5px; color: #d6cfc2; line-height: 1.45; }
   .tl p b { color: var(--text); }
 
   .promo-facts { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-bottom: 26px; }
@@ -578,6 +596,8 @@
   .tile .thumb:hover .zoom, .tile .thumb:focus-visible .zoom { opacity: 1; transform: scale(1.12); }
   @media (hover: none) { .tile .thumb .zoom { opacity: .85; } }
   .tile .thumb:focus-visible { outline: 2px solid var(--gold-2); outline-offset: 2px; }
+  .tile .thumb.cover-plate { box-shadow: 0 0 0 1px rgba(242, 199, 92, 0.55), 0 6px 14px rgba(0, 0, 0, 0.5); }
+  .tile .thumb.cover-plate img { object-fit: cover; }
   body.fx-gloss .tile .thumb img, body.fx-gloss .mini img { filter: contrast(1.06) saturate(1.12) brightness(1.03); }
   .sheet .head .zoom-btn {
     margin-left: 8px; padding: 2px 8px; border-radius: 99px; cursor: zoom-in;
@@ -590,11 +610,21 @@
   .viewer.show { display: grid; }
   .viewer .v-stage { margin: 0; display: grid; justify-items: center; gap: 16px; perspective: 1800px; }
   .viewer .v-card {
-    position: relative; aspect-ratio: var(--ar, 0.714);
-    height: min(76vh, calc(84vw / var(--ar, 0.714)), 900px);
-    transform-style: preserve-3d; transition: transform .7s cubic-bezier(.3, .9, .3, 1); cursor: pointer;
+    --ar: 0.714;
+    position: relative; aspect-ratio: var(--ar);
+    width: min(84vw, calc(76vh * var(--ar)), calc(900px * var(--ar)));
+    height: auto; max-height: 76vh;
+    transform-style: preserve-3d;
+    transition: transform .7s cubic-bezier(.3, .9, .3, 1), width .45s cubic-bezier(.3, .9, .3, 1), max-height .45s ease;
+    cursor: pointer;
   }
   .viewer .v-card.flipped { transform: rotateY(180deg); }
+  /* Landscape backs: gold frame becomes landscape with the rotated art (not portrait-only). */
+  .viewer .v-card.landscape-back.flipped {
+    --ar: 1.3875; /* ~1024/738 — landscape frame for rotated portrait scans */
+    width: min(92vw, calc(70vh * var(--ar)), 1100px);
+    max-height: 70vh;
+  }
   .viewer .v-card.no-back { cursor: default; }
   .viewer .v-face {
     position: absolute; inset: 0; border-radius: 14px; overflow: hidden; backface-visibility: hidden; -webkit-backface-visibility: hidden;
@@ -602,9 +632,9 @@
   }
   .viewer .v-face img { display: block; width: 100%; height: 100%; object-fit: contain; }
   .viewer .v-back { transform: rotateY(180deg); }
-  /* Base #1–134 and Powerblast backs are landscape layouts stored as portrait scans. */
-  .viewer .v-back img.landscape {
-    transform: rotate(90deg) scale(1.3875); /* 1024/738 — fill frame after rotate */
+  /* Portrait scans of landscape backs: rotate into the landscape frame. */
+  .viewer .v-card.landscape-back.flipped .v-back img.landscape {
+    transform: rotate(90deg) scale(1.3875);
     transform-origin: center center;
   }
   .viewer .v-blank {
@@ -642,11 +672,18 @@
   }
   .viewer .v-flip[disabled] { opacity: .35; cursor: default; }
   @media (max-width: 640px) {
-    .viewer .v-card { height: min(64vh, calc(88vw / var(--ar, 0.714))); }
+    .viewer .v-card { width: min(88vw, calc(64vh * var(--ar, 0.714))); max-height: 64vh; }
+    .viewer .v-card.landscape-back.flipped { width: min(94vw, calc(52vh * var(--ar))); max-height: 52vh; }
     .viewer .v-nav { top: auto; bottom: 18px; margin: 0; }
     .viewer .v-name { font-size: 20px; }
+    .timeline { padding-left: 0; }
+    .tl { margin-left: 30px; padding: 12px 13px 11px; }
+    .tl::before { left: -27px; width: 12px; height: 12px; top: 16px; }
+    .timeline::before { left: 9px; }
   }
-  @media (prefers-reduced-motion: reduce) { .viewer .v-card { transition: none; } }
+  @media (prefers-reduced-motion: reduce) {
+    .viewer .v-card { transition: none; }
+  }
   @media print {
     .viewer, .tile .thumb, .sheet .zoom-btn, .mini img, .ref-block { display: none !important; }
     .tile.has-thumb, .split .tile.has-thumb, .spec .tile.has-thumb { grid-template-columns: 14px 26px 1fr; gap: 6px; padding: 2px 0; }
@@ -696,8 +733,7 @@
     .facts { grid-template-columns: repeat(2, 1fr); }
     .credits .c-src { display: none; }
     .compare, .promo-facts { grid-template-columns: 1fr; }
-    .timeline { grid-template-columns: repeat(2, 1fr); padding-top: 0; }
-    .timeline::before, .tl::before { display: none; }
+    .timeline { max-width: none; }
   }
   @media (max-width: 640px) {
     .dash { grid-template-columns: 1fr; justify-items: center; }
@@ -800,10 +836,12 @@
     .tell b { font-size: 8px; color: #8f0f16; }
     .tell p { font-size: 8px; color: #333; }
     .promo-facts { grid-template-columns: repeat(3, 1fr) !important; gap: 6px; margin-bottom: 8px; }
-    .timeline { grid-template-columns: repeat(3, 1fr) !important; gap: 4px 10px; padding-top: 0; margin: 2px 0 8px; }
-    .timeline::before, .tl::before { display: none !important; }
-    .tl { padding: 3px 0 3px 6px; background: none; border: 0; border-left: 2px solid #b8862b; border-radius: 0; break-inside: avoid; }
+    .timeline { max-width: none; margin: 2px 0 8px; padding: 0; }
+    .timeline::before { left: 3px; top: 4px; bottom: 4px; background: #b8862b; opacity: 1; }
+    .tl { margin: 0 0 4px 14px; padding: 3px 0 3px 8px; background: none; border: 0; border-left: 2px solid #b8862b; border-radius: 0; break-inside: avoid; }
     .tl.red { border-left-color: #e3262f; }
+    .tl::before { left: -18px; top: 6px; width: 8px; height: 8px; box-shadow: none; background: #b8862b; }
+    .tl.red::before { background: #e3262f; box-shadow: none; }
     .tl .when { font-size: 10px; color: #8f0f16; }
     .tl .kind { font-size: 6.5px; margin: 1px 0; padding: 0 4px; color: #555; border-color: #ccc; }
     .tl p { font-size: 7.5px; color: #333; }
@@ -983,7 +1021,7 @@
         </header>
         <dl class="spec-list">
           <dt>Released</dt><dd>1995, a year after the base set</dd>
-          <dt>Found in</dt><dd>Collector binders, two cards per binder</dd>
+          <dt>Found in</dt><dd>1995 collector binders (two per binder). Verified in sealed <b>1995 Fleer Ultra X-Men</b> binders with a Flair Spider-Man insert still inside</dd>
           <dt>Size</dt><dd>Oversized, similar to Flairprints</dd>
           <dt>Front</dt><dd>Powerblast #11&ndash;15 art <em>without</em> the metallic enhancement. No Flair '94 logo or character title.</dd>
           <dt>Back</dt><dd>Completely blank</dd>
@@ -1042,15 +1080,16 @@
     </div>
 
     <h3 class="sub-h">1994 Launch Timeline</h3>
-    <div class="timeline">
-      <div class="tl"><div class="when">May 1994</div><span class="kind">Comic Ad</span><p>Comic ad appears in <b>Fantastic Four #388</b>. Glossy magazine ad also shows up in <b>Tuff Stuff's Collect!</b> (May).</p></div>
-      <div class="tl"><div class="when">June 1994</div><span class="kind">Comic Ad</span><p>Comic ad in <b>Fantastic Four Unlimited #6</b>, <b>Amazing Spider-Man #390</b>, and <b>The Punisher #91</b>.</p></div>
-      <div class="tl red"><div class="when">June 1994</div><span class="kind">Magazine Insert</span><p>A 4-card sheet comes with <b>Tuff Stuff's Collect!</b>. Two sheet versions are marked "Ships June 1994".</p></div>
-      <div class="tl red"><div class="when">Jun 11&ndash;14</div><span class="kind">Retailer Promo</span><p>Diamond's <b>Omega Red vs. Wolverine</b> Flairprint is handed out at the Annual Retailer Seminar.</p></div>
-      <div class="tl"><div class="when">July 1994</div><span class="kind">Magazine Ads</span><p>Glossy Inaugural Edition ad and the FlairPrints ad run in <b>Tuff Stuff's Collect!</b>; FlairPrints also in <b>Hero Illustrated #13</b>. Magazine ad also in <b>Cards Illustrated #7</b>.</p></div>
-      <div class="tl red"><div class="when">July 1994</div><span class="kind">Magazine Inserts</span><p>4-card sheets bundled with <b>Wizard #35</b>, <b>Advance Comics #67</b>, and <b>Marvel Age #138</b>.</p></div>
-      <div class="tl"><div class="when">July&ndash;Sept 1994</div><span class="kind">Comic Ad</span><p>Comic ad continues in titles like <b>Spectacular Spider-Man #214</b>, <b>X-Men #33</b>, <b>X-Factor #103</b>, <b>Blackwulf #2</b>, <b>Northstar #3</b>, and <b>Excalibur #78</b>.</p></div>
-      <div class="tl"><div class="when">August 1994</div><span class="kind">Magazine Ad</span><p>Glossy Inaugural Edition ad in <b>Collector's Sportslook</b> and <b>Tuff Stuff's Collect! Star Trek</b>.</p></div>
+    <div class="timeline" role="list">
+      <div class="tl" role="listitem"><div class="when">May 1994</div><span class="kind">Comic &amp; Magazine Ads</span><p>Comic ad appears in <b>Fantastic Four #388</b>. Glossy magazine ad also shows up in <b>Tuff Stuff's Collect!</b> (May).</p></div>
+      <div class="tl" role="listitem"><div class="when">June 1994</div><span class="kind">Comic Ad</span><p>Comic ad in <b>Fantastic Four Unlimited #6</b>, <b>Amazing Spider-Man #390</b>, and <b>The Punisher #91</b>.</p></div>
+      <div class="tl red" role="listitem"><div class="when">June 1994</div><span class="kind">Magazine Insert</span><p>A 4-card sheet comes with <b>Tuff Stuff's Collect!</b>. Two sheet versions are marked "Ships June 1994".</p></div>
+      <div class="tl red" role="listitem"><div class="when">Jun 11&ndash;14, 1994</div><span class="kind">Retailer Promo</span><p>Diamond's <b>Omega Red vs. Wolverine</b> Flairprint is handed out at the Annual Retailer Seminar in Baltimore.</p></div>
+      <div class="tl red" role="listitem"><div class="when">1994 &middot; Heroes World Con</div><span class="kind">Retailer Promo</span><p>Heroes World's <b>Deadpool</b> Flairprint is handed out at Heroes World Con (nslists). 6&frac12;&Prime; &times; 10&Prime;, blank back except for a barcode.</p></div>
+      <div class="tl" role="listitem"><div class="when">July 1994</div><span class="kind">Magazine Ads</span><p>Glossy Inaugural Edition ad and the FlairPrints ad run in <b>Tuff Stuff's Collect!</b>; FlairPrints also in <b>Hero Illustrated #13</b>. Magazine ad also in <b>Cards Illustrated #7</b>.</p></div>
+      <div class="tl red" role="listitem"><div class="when">July 1994</div><span class="kind">Magazine Inserts</span><p>4-card sheets bundled with <b>Wizard #35</b>, <b>Advance Comics #67</b>, and <b>Marvel Age #138</b>.</p></div>
+      <div class="tl" role="listitem"><div class="when">July&ndash;Sept 1994</div><span class="kind">Comic Ad</span><p>Comic ad continues in titles like <b>Spectacular Spider-Man #214</b>, <b>X-Men #33</b>, <b>X-Factor #103</b>, <b>Blackwulf #2</b>, <b>Northstar #3</b>, and <b>Excalibur #78</b>.</p></div>
+      <div class="tl" role="listitem"><div class="when">August 1994</div><span class="kind">Magazine Ad</span><p>Glossy Inaugural Edition ad in <b>Collector's Sportslook</b> and <b>Tuff Stuff's Collect! Star Trek</b>.</p></div>
     </div>
 
     <h3 class="sub-h">Print Ads <span class="tag">Full-page ads</span></h3>
@@ -1110,8 +1149,8 @@
       </div>
       <div class="note-card">
         <h4>Promos &amp; Binder Cards</h4>
-        <p>The Diamond Omega Red vs. Wolverine Flairprint was given out at the Annual Retailer Seminar, June 11&ndash;14, 1994. The Deadpool Flairprint came through Heroes World Distribution.</p>
-        <p>Binder inserts are a 1995 release, not part of the 1994 case bonus. They're oversized like Flairprints, but use Powerblast art minus the metallic finish, with no Flair '94 logo or title on the front and blank backs. Only the cards known to exist are listed. Sealed 1995 Fleer Ultra X-Men binders have turned up with a Flair Spider-Man insert still inside, which fits the 1995 binder timing.</p>
+        <p>The Diamond Omega Red vs. Wolverine Flairprint was given out at the Annual Retailer Seminar in Baltimore, June 11&ndash;14, 1994. The Deadpool Flairprint was handed out at Heroes World Con in 1994 (Heroes World Distribution; nslists lists it as "Heroes World Con," without a published day range like Diamond's seminar).</p>
+        <p>Binder inserts are a 1995 release, not part of the 1994 case bonus. They're oversized like Flairprints, but use Powerblast art minus the metallic finish, with no Flair '94 logo or title on the front and blank backs. Only the cards known to exist are listed. A verified source for the Spider-Man binder insert is sealed <b>1995 Fleer Ultra X-Men</b> binders found with a Flair Spider-Man insert still inside.</p>
       </div>
       <div class="note-card">
         <h4>About the Art Credits</h4>
@@ -1367,9 +1406,9 @@ const FLAIRPRINTS = [["Cable", 1], ["Cyclops", 2], ["Ghost Rider", 9], ["Iron Ma
 const BINDER = [["Captain America", 11], ["Gambit", 12], ["Thor", 13], ["Silver Surfer", 14], ["Spider-Man", 15]];
 
 const PROMOS = [
-  ["Deadpool Flairprint", "Heroes World Distribution Company. 6\u00bd\u2033 \u00d7 10\u2033 convention giveaway with a logo in the lower right corner. The back is blank except for a barcode."],
+  ["Deadpool Flairprint", "Heroes World Distribution. 6\u00bd\u2033 \u00d7 10\u2033. Handed out at Heroes World Con, 1994. Logo in the lower right; blank back except for a barcode."],
   ["Omega Red vs. Wolverine Flairprint", "General promo, no distributor named"],
-  ["Omega Red vs. Wolverine Flairprint", "Diamond Comic Distributors. Blank back. Given out at Diamond's Annual Retailer Seminar in Baltimore, June 11\u201314, 1994"]
+  ["Omega Red vs. Wolverine Flairprint", "Diamond Comic Distributors. Blank back. Handed out at Diamond's Annual Retailer Seminar in Baltimore, June 11\u201314, 1994"]
 ];
 
 // Ad pages on the checklist: [name, what it shows, where it ran (short), where it ran (full), image in print-fx]
@@ -1556,9 +1595,18 @@ function tile({ id, group, no, name, chars, note, holo, search, label, card }) {
 }
 
 // Reference-only tile: tooltip and viewer, but not a checklist item.
+// Cover workaround: keep a titled plate if the scan is missing instead of dropping the thumb.
 function refTile({ no, name, chars, card }) {
   const c = credit(card);
-  const onErr = "this.closest('.tile').classList.remove('has-thumb');this.closest('.thumb').remove()";
+  const plate = `data:image/svg+xml,${encodeURIComponent(`<svg xmlns="http://www.w3.org/2000/svg" width="160" height="246" viewBox="0 0 160 246">
+    <rect width="160" height="246" fill="#120f19"/>
+    <rect x="6" y="6" width="148" height="234" fill="none" stroke="#f2c75c" stroke-width="2"/>
+    <rect x="14" y="18" width="132" height="22" fill="#8f0f16"/>
+    <text x="80" y="33" text-anchor="middle" fill="#fff4c8" font-family="Georgia,serif" font-size="9">${esc(no)}</text>
+    <text x="80" y="120" text-anchor="middle" fill="#f3eee4" font-family="Georgia,serif" font-size="11">${esc(name).slice(0, 28)}</text>
+    <text x="80" y="210" text-anchor="middle" fill="#a49c8c" font-family="Georgia,serif" font-size="8">Cover plate</text>
+  </svg>`)}`;
+  const onErr = `this.onerror=null;this.src='${plate}';this.closest('.thumb').classList.add('cover-plate')`;
   return `<div class="tile ref has-thumb" data-card="${card}">
     <button class="thumb" data-view="${card}" aria-label="View ${esc(name)}"><span class="badge txt">${esc(no)}</span><img src="${thumbOf(c.img)}" alt="" loading="lazy" onerror="${onErr}"><span class="zoom">${ZOOM}</span></button>
     <div class="name">${esc(name)}<span class="chars">${esc(chars)}</span></div>
@@ -1592,7 +1640,13 @@ function render() {
     tile({ id: `f${i + 1}`, group: "large", no: "FP", name, chars: `Powerblast #${pb} art \u00b7 ${PB_CREDITS[pb - 1][0]}`, card: `f${i + 1}`, label: `Flairprint ${name}` })).join("");
 
   document.getElementById("grid-binder").innerHTML = BINDER.map(([name, pb], i) =>
-    tile({ id: `bi${i + 1}`, group: "large", no: "'95", name, chars: `Powerblast #${pb} art \u00b7 ${PB_CREDITS[pb - 1][0]}`, card: `bi${i + 1}`, label: `1995 Binder Insert ${name}` })).join("");
+    tile({
+      id: `bi${i + 1}`, group: "large", no: "'95", name,
+      chars: name === "Spider-Man"
+        ? `Powerblast #${pb} art \u00b7 verified in sealed 1995 Fleer Ultra X-Men binders`
+        : `Powerblast #${pb} art \u00b7 ${PB_CREDITS[pb - 1][0]}`,
+      card: `bi${i + 1}`, label: `1995 Binder Insert ${name}`
+    })).join("");
 
   document.getElementById("grid-promo").innerHTML = PROMOS.map(([name, chars], i) =>
     tile({ id: `pr${i + 1}`, group: "promos", no: "P", name, chars, card: `pr${i + 1}`, label: `Promo: ${name} (${chars})` })).join("");
@@ -1863,13 +1917,22 @@ const viewer = (function cardViewer() {
   const flipBtn = document.getElementById("vFlip");
   let list = [], index = 0, opener = null;
 
+  function frameAr(landscapeView) {
+    if (landscapeView) return 1.3875;
+    if (frontImg.naturalWidth && frontImg.naturalHeight) return frontImg.naturalWidth / frontImg.naturalHeight;
+    return 0.714;
+  }
+  function applyFrame() {
+    const landscapeView = card.classList.contains("landscape-back") && card.classList.contains("flipped");
+    card.style.setProperty("--ar", frameAr(landscapeView));
+  }
   function show(i) {
     index = (i + list.length) % list.length;
     const key = list[index].dataset.view;
     const c = credit(key);
     card.classList.remove("flipped");
     card.style.setProperty("--ar", 0.714);
-    frontImg.onload = () => card.style.setProperty("--ar", frontImg.naturalWidth / frontImg.naturalHeight);
+    frontImg.onload = () => applyFrame();
     frontImg.src = c.img;
     frontImg.alt = c.name;
     const hasBack = !!(c.back || c.backNote);
@@ -1878,15 +1941,20 @@ const viewer = (function cardViewer() {
       : c.backNote ? `<div class="v-blank"><div><b>Card back</b>${esc(c.backNote)}</div></div>` : "";
     card.classList.toggle("no-back", !hasBack);
     card.classList.toggle("landscape-back", landscape);
+    applyFrame();
     flipBtn.disabled = !hasBack;
     document.getElementById("vLabel").textContent = c.label;
     document.getElementById("vName").textContent = c.name;
     const touch = matchMedia("(hover: none)").matches;
     document.getElementById("vHint").textContent = !hasBack ? c.imgNote || "Back not pictured"
-      : landscape ? (touch ? "Tap to flip \u00b7 Back auto-rotates for reading" : "Click or press F to flip \u00b7 Back auto-rotates for reading \u00b7 Arrow keys for next")
+      : landscape ? (touch ? "Tap to flip \u00b7 Frame rotates with the back" : "Click or press F to flip \u00b7 Frame rotates with the back \u00b7 Arrow keys for next")
       : touch ? "Tap the card to flip" : "Click the card or press F to flip \u00b7 Arrow keys for next";
   }
-  const flip = () => { if (!flipBtn.disabled) card.classList.toggle("flipped"); };
+  const flip = () => {
+    if (flipBtn.disabled) return;
+    card.classList.toggle("flipped");
+    applyFrame();
+  };
   function open(trigger) {
     const sheet = trigger.closest(".mini");
     list = sheet ? [...sheet.querySelectorAll("[data-view]")]
