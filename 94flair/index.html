@@ -1679,6 +1679,7 @@ const landscapeBaseBack = n => n >= 1 && n <= 134;
 // Promo art, keyed by tile id: [file in promo-fx, caption]
 const PROMO_ART = {
   pr1: ["deadpool-flairprint"],
+  pr3: ["omega-red-wolverine", "Diamond Annual Retailer Seminar Flairprint"],
   "u4-1": ["sheet4-sticker", "Front shown: the gold \"Ships June 1994\" title card"],
   "u4-2": ["sheet4-foil", "Front shown: the gold-foil etched title card"],
   "u4-3": ["sheet4-unreleased"],
@@ -1716,8 +1717,8 @@ function credit(key) {
     const [name, pb] = BINDER[n - 1];
     const [source, artist] = PB_CREDITS[pb - 1];
     return { label: "1995 Binder Insert", name, chars: `Same art as Powerblast #${pb}, without the metallic finish`, source, artist,
-      img: insertSrc("powerblast", pb),
-      imgNote: `Placeholder: Powerblast #${pb} art. Real binder inserts omit the Flair logo, character title, and metallic finish — photo still needed.`,
+      img: insertSrc("binder", n), imgClass: "flairprint",
+      imgNote: "Photographed binder insert \u00b7 no Flair logo, character title, or metallic finish",
       backNote: "Completely blank back" };
   }
   if (kind === "f") {
@@ -1728,7 +1729,11 @@ function credit(key) {
   }
   if (kind === "pr") {
     const [name, chars] = PROMOS[n - 1];
-    const art = name.startsWith("Omega Red") ? { img: cardSrc(86), imgNote: "Art shown from base card #86, which uses the same art" } : promoArt;
+    const art = promoArt.img
+      ? promoArt
+      : name.startsWith("Omega Red")
+        ? { img: promoSrc("omega-red-wolverine"), imgClass: "flairprint", imgNote: "Retailer Seminar Flairprint photo (same art as base #86)" }
+        : {};
     const backNote = n === 1 ? "Blank back except for a barcode" : n === 3 ? "Blank back" : "";
     return { label: "Promo Flairprint \u00b7 1994", name, chars, ...art, backNote };
   }
@@ -1824,8 +1829,8 @@ function render() {
     tile({
       id: `bi${i + 1}`, group: "large", no: "'95", name,
       chars: name === "Spider-Man"
-        ? `Binder photo pending \u00b7 verified in sealed 1995 Fleer Ultra X-Men binders`
-        : `Binder photo pending \u00b7 same art as Powerblast #${pb} (no logo/title/foil)`,
+        ? `Photographed insert \u00b7 verified in sealed 1995 Fleer Ultra X-Men binders`
+        : `Photographed insert \u00b7 Powerblast #${pb} art, no logo/title/foil`,
       card: `bi${i + 1}`, label: `1995 Binder Insert ${name}`
     })).join("");
 
