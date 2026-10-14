@@ -602,6 +602,11 @@
   }
   .viewer .v-face img { display: block; width: 100%; height: 100%; object-fit: contain; }
   .viewer .v-back { transform: rotateY(180deg); }
+  /* Base #1–134 and Powerblast backs are landscape layouts stored as portrait scans. */
+  .viewer .v-back img.landscape {
+    transform: rotate(90deg) scale(1.3875); /* 1024/738 — fill frame after rotate */
+    transform-origin: center center;
+  }
   .viewer .v-blank {
     height: 100%; display: grid; place-items: center; padding: 12%; text-align: center;
     background: linear-gradient(160deg, #f4efe4, #ddd5c3); color: #5b5242; font-size: 15px; line-height: 1.5;
@@ -1061,10 +1066,14 @@
       </div>
       <div>
         <h3 class="sub-h">Magazines with Promo Sheets <span class="tag">For reference</span></h3>
-        <p class="sub-note">Each came with a 4-card uncut promo sheet, which is on the checklist under <a href="#promos" style="color:var(--gold-2)">Promos</a>. Look for copies still sealed with the sheet inside. Magazines that ran Flair print ads without a sheet are listed under Print Ads above.</p>
+        <p class="sub-note">Each came with a 4-card uncut promo sheet, which is on the checklist under <a href="#promos" style="color:var(--gold-2)">Promos</a>. Look for copies still sealed with the sheet inside.</p>
         <div class="grid" id="grid-mags"></div>
       </div>
     </div>
+
+    <h3 class="sub-h">Magazines That Carried the Ads <span class="tag">For reference</span></h3>
+    <p class="sub-note">Hobby and comics magazines confirmed to run the glossy "Inaugural Edition" magazine ad and/or the "Introducing FlairPrints" ad. These did not necessarily include a 4-card sheet.</p>
+    <div class="grid" id="grid-ad-mags"></div>
   </section>
 
   <section id="notes">
@@ -1396,7 +1405,17 @@ const MAGS = [
   ["Wizard: The Comics Magazine #35", "July 1994", "Polybagged with a 4-card sheet, reported as the gold-foil etched version. A sealed-copy listing also shows an Ultraverse ashcan and a Union chromium card in the bag."],
   ["Advance Comics #67", "July 1994", "Came with a 4-card promo sheet"],
   ["Marvel Age #138", "July 1994", "Came with a 4-card promo sheet"],
-  ["Tuff Stuff's Collect!", "June 1994", "Came with a 4-card promo sheet. Separate May and July 1994 Collect! issues also ran Flair print ads (see Print Ads)."]
+  ["Tuff Stuff's Collect!", "June 1994", "Came with a 4-card promo sheet"]
+];
+
+// Magazines that ran Flair print ads (not necessarily with a promo sheet)
+const AD_MAGS = [
+  ["Tuff Stuff's Collect!", "May 1994", "Carried the glossy \"Inaugural Edition\" magazine ad"],
+  ["Tuff Stuff's Collect!", "July 1994", "Carried the glossy Inaugural Edition magazine ad and the \"Introducing FlairPrints\" ad"],
+  ["Cards Illustrated #7", "July 1994", "Carried the glossy \"Inaugural Edition\" magazine ad"],
+  ["Hero Illustrated #13", "July 1994", "Carried the \"Introducing FlairPrints\" ad (Ghost Rider)"],
+  ["Collector's Sportslook", "August 1994", "Carried the glossy \"Inaugural Edition\" magazine ad"],
+  ["Tuff Stuff's Collect! Star Trek", "August 1994", "Carried the glossy \"Inaugural Edition\" magazine ad"]
 ];
 
 const FOUR_CARD = [
@@ -1423,7 +1442,7 @@ let owned = new Set(JSON.parse(localStorage.getItem(STORE_KEY) || "[]"));
 // "The Ultimate Collectable" (old u4-3) was the unreleased sheet (old u4-4), now u4-3.
 if (owned.delete("u4-4")) owned.add("u4-3");
 // Comics and magazines used to be checklist items; they're reference only now.
-[...owned].filter(id => /^(ad|mg)\d+$/.test(id)).forEach(id => owned.delete(id));
+[...owned].filter(id => /^(ad|mg|ma)\d+$/.test(id)).forEach(id => owned.delete(id));
 let filter = "all";
 let query = "";
 let artist = "";
@@ -1445,6 +1464,8 @@ const printSrc = name => `${artDir.replace("cards", "print")}/${name}.jpg`;
 const thumbOf = src => src.replace(/images\/(.+)-fx\/hd\//, "images/thumbs/$1/");
 // Powerblast backs not photographed yet
 const PB_BACK_MISSING = new Set([]);
+// Card backs designed to be read landscape (stored as portrait scans with sideways text).
+const landscapeBaseBack = n => n >= 1 && n <= 134;
 
 // Promo art, keyed by tile id: [file in promo-fx, caption]
 const PROMO_ART = {
@@ -1463,12 +1484,14 @@ function credit(key) {
     const [name, chars, note] = BASE[n - 1];
     const [front, source, artist] = CREDITS[n - 1];
     return { label: `Card #${n}`, n, name, chars, note, front, source, artist, img: cardSrc(n),
-      back: `${artDir.replace("cards", "backs")}/${pad3(n)}.jpg` };
+      back: `${artDir.replace("cards", "backs")}/${pad3(n)}.jpg`,
+      landscapeBack: landscapeBaseBack(n) };
   }
   if (kind === "p") {
     const [source, artist] = PB_CREDITS[n - 1];
     return { label: `Powerblast ${n} of 18`, name: POWERBLAST[n - 1], source, artist, img: insertSrc("powerblast", n),
-      back: PB_BACK_MISSING.has(n) ? "" : insertSrc("powerblast-backs", n) };
+      back: PB_BACK_MISSING.has(n) ? "" : insertSrc("powerblast-backs", n),
+      landscapeBack: !PB_BACK_MISSING.has(n) };
   }
   if (kind === "bi") {
     const [name, pb] = BINDER[n - 1];
@@ -1503,6 +1526,10 @@ function credit(key) {
   if (kind === "ap") {
     const [name, shows, , ran, file] = AD_PAGES[n - 1];
     return { label: "Print Ad \u00b7 1994", name, chars: shows, img: printSrc(file), imgClass: "free", imgNote: ran };
+  }
+  if (kind === "ma") {
+    const [name, date, chars] = AD_MAGS[n - 1];
+    return { label: `Magazine \u00b7 ${date}`, name, chars, img: printSrc(key), imgClass: "free" };
   }
   const [name, date, chars] = (kind === "ad" ? ADS : MAGS)[n - 1];
   return { label: kind === "ad" ? `Comic \u00b7 ${date}` : `Magazine \u00b7 ${date}`, name, chars,
@@ -1578,6 +1605,9 @@ function render() {
 
   document.getElementById("grid-mags").innerHTML = MAGS.map(([name, date, what], i) =>
     refTile({ no: "MAG", name, chars: `${date} \u00b7 ${what}`, card: `mg${i + 1}` })).join("");
+
+  document.getElementById("grid-ad-mags").innerHTML = AD_MAGS.map(([name, date, what], i) =>
+    refTile({ no: "AD", name, chars: `${date} \u00b7 ${what}`, card: `ma${i + 1}` })).join("");
 
   document.getElementById("grid-four").innerHTML = FOUR_CARD.map(([name, chars], i) =>
     tile({ id: `u4-${i + 1}`, group: "promos", no: "4\u00d7", name, chars, card: `u4-${i + 1}`, label: `4-Card Sheet: ${name}`, search: `4-card uncut sheet ${name} ${chars} ${FOUR_CARD_CONTENTS}` })).join("");
@@ -1843,14 +1873,17 @@ const viewer = (function cardViewer() {
     frontImg.src = c.img;
     frontImg.alt = c.name;
     const hasBack = !!(c.back || c.backNote);
-    back.innerHTML = c.back ? `<img src="${c.back}" alt="Back of ${esc(c.name)}">`
+    const landscape = !!(c.landscapeBack && c.back);
+    back.innerHTML = c.back ? `<img src="${c.back}" alt="Back of ${esc(c.name)}"${landscape ? ' class="landscape"' : ""}>`
       : c.backNote ? `<div class="v-blank"><div><b>Card back</b>${esc(c.backNote)}</div></div>` : "";
     card.classList.toggle("no-back", !hasBack);
+    card.classList.toggle("landscape-back", landscape);
     flipBtn.disabled = !hasBack;
     document.getElementById("vLabel").textContent = c.label;
     document.getElementById("vName").textContent = c.name;
     const touch = matchMedia("(hover: none)").matches;
     document.getElementById("vHint").textContent = !hasBack ? c.imgNote || "Back not pictured"
+      : landscape ? (touch ? "Tap to flip \u00b7 Back auto-rotates for reading" : "Click or press F to flip \u00b7 Back auto-rotates for reading \u00b7 Arrow keys for next")
       : touch ? "Tap the card to flip" : "Click the card or press F to flip \u00b7 Arrow keys for next";
   }
   const flip = () => { if (!flipBtn.disabled) card.classList.toggle("flipped"); };
