@@ -98,85 +98,28 @@
       linear-gradient(0deg, var(--ink) 0%, transparent 35%);
     z-index: -1;
   }
-  /* Box-font brand stack — open type, no plate */
+  /* Authentic Flair wordmark + open brand stack */
   .brand {
     position: relative;
     margin: 0 0 6px;
     max-width: 640px;
-    filter: drop-shadow(0 6px 24px rgba(242, 199, 92, 0.22));
   }
   .brand-mark {
-    position: relative;
-    display: inline-flex;
-    align-items: flex-end;
-    gap: 0;
-    line-height: 0.85;
-  }
-  .brand-mark .f {
-    font-family: "Great Vibes", "Pinyon Script", cursive;
-    font-size: clamp(88px, 13vw, 156px);
-    font-weight: 400;
-    line-height: 0.7;
-    margin-right: -0.14em;
-    position: relative;
-    z-index: 1;
-    background: var(--foil);
-    background-size: 200% 100%;
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    animation: foil-shift 6s ease-in-out infinite;
-  }
-  .brand-mark .word {
-    position: relative;
-    display: inline-block;
-    padding-top: 0.5em;
-    z-index: 2;
-  }
-  .brand-mark .yr {
-    position: absolute;
-    left: 50%;
-    top: 0.02em;
-    transform: translateX(-42%);
-    font-family: "Cinzel", serif;
-    font-weight: 700;
-    font-size: clamp(16px, 2.1vw, 24px);
-    letter-spacing: 0.08em;
-    color: var(--gold-2);
-    -webkit-text-fill-color: var(--gold-2);
-    line-height: 1;
-    white-space: nowrap;
-  }
-  .brand-mark .lair {
     display: block;
-    font-family: "Cinzel", serif;
-    font-weight: 800;
-    font-size: clamp(52px, 9vw, 118px);
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    line-height: 0.9;
-    background: var(--foil);
-    background-size: 200% 100%;
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    animation: foil-shift 6s ease-in-out infinite;
-  }
-  .brand-mark .tm {
-    font-size: 0.22em;
-    vertical-align: super;
-    letter-spacing: 0;
-    margin-left: 0.08em;
+    width: min(100%, 520px);
+    height: auto;
+    margin: 0;
+    filter: drop-shadow(0 8px 28px rgba(242, 199, 92, 0.28));
   }
 
   .brand-line {
-    margin: 14px 0 0;
+    margin: 16px 0 0;
     font-family: "Cinzel", serif;
     font-weight: 700;
-    font-size: clamp(13px, 1.55vw, 16px);
-    letter-spacing: 0.22em;
+    font-size: clamp(12px, 1.5vw, 15px);
+    letter-spacing: 0.28em;
     text-transform: uppercase;
-    color: var(--gold-1);
+    color: #ece6d9;
     line-height: 1.45;
   }
   .brand-line .sep {
@@ -186,13 +129,13 @@
   }
   .brand-line .years {
     color: var(--gold-2);
-    letter-spacing: 0.28em;
+    letter-spacing: 0.3em;
   }
 
   .brand-edition {
-    margin: 6px 0 0;
+    margin: 4px 0 0;
     font-family: "Pinyon Script", "Great Vibes", cursive;
-    font-size: clamp(36px, 5vw, 52px);
+    font-size: clamp(34px, 4.8vw, 48px);
     line-height: 1.05;
     background: var(--foil);
     background-size: 200% 100%;
@@ -203,25 +146,49 @@
   }
 
   .brand-checklist {
-    margin: 18px 0 0;
+    position: relative;
+    display: inline-block;
+    margin: 20px 0 0;
+    padding: 8px 0 10px;
     font-family: "Anton", sans-serif;
     font-weight: 400;
-    font-size: clamp(28px, 4.2vw, 44px);
-    letter-spacing: 0.08em;
+    font-size: clamp(30px, 4.6vw, 48px);
+    letter-spacing: 0.1em;
     text-transform: uppercase;
-    color: var(--text);
     line-height: 1;
+    background: var(--foil);
+    background-size: 200% 100%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: foil-shift 6s ease-in-out infinite;
+    filter: drop-shadow(0 4px 18px rgba(227, 38, 47, 0.22));
   }
-  .brand-checklist span {
-    color: var(--gold-2);
+  .brand-checklist::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--red), var(--gold-2) 55%, var(--red-deep));
+    border-radius: 2px;
+  }
+  .brand-checklist::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 56px;
+    bottom: 0;
+    height: 3px;
+    background: var(--red);
+    box-shadow: 0 0 16px rgba(227, 38, 47, 0.55);
   }
 
-  html[data-darkreader-mode] .brand-mark .f,
-  html[data-darkreader-scheme] .brand-mark .f,
-  html[data-darkreader-mode] .brand-mark .lair,
-  html[data-darkreader-scheme] .brand-mark .lair,
   html[data-darkreader-mode] .brand-edition,
-  html[data-darkreader-scheme] .brand-edition {
+  html[data-darkreader-scheme] .brand-edition,
+  html[data-darkreader-mode] .brand-checklist,
+  html[data-darkreader-scheme] .brand-checklist {
     background: none !important;
     -webkit-background-clip: border-box !important;
     background-clip: border-box !important;
@@ -1182,16 +1149,10 @@
 <header class="hero">
   <div>
     <div class="brand" role="group" aria-label="'94 Flair Presents the Marvel Universe Inaugural Edition — Collector Checklist">
-      <div class="brand-mark" aria-hidden="true">
-        <span class="f">F</span>
-        <span class="word">
-          <span class="yr">'94</span>
-          <span class="lair">LAIR<span class="tm">™</span></span>
-        </span>
-      </div>
+      <img class="brand-mark" src="images/flair-wordmark.png?v=3" width="520" height="168" alt="'94 Flair">
       <p class="brand-line">Presents the Marvel Universe<span class="sep">&middot;</span><span class="years">1961&ndash;1993</span></p>
       <p class="brand-edition">Inaugural Edition</p>
-      <h1 class="brand-checklist">Collector <span>Checklist</span></h1>
+      <h1 class="brand-checklist">Collector Checklist</h1>
     </div>
     <p class="lede">The premium painted set that raised the bar: thick glossy card stock, full-bleed art, and gold-foil stamping. Click any card to mark it as yours. Your progress saves automatically in this browser.</p>
     <div class="chips">
