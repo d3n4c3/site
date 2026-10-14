@@ -746,12 +746,15 @@
   .note-inline { margin: 14px 0 0; padding-top: 12px; border-top: 1px solid rgba(255, 255, 255, 0.08); font-size: 13.5px; color: #cfc7b8; }
   .note-inline b { color: var(--gold-2); font-family: "Oswald", sans-serif; font-weight: 500; letter-spacing: .08em; text-transform: uppercase; font-size: 12.5px; }
   .packaging {
-    display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 18px;
-    margin-top: 16px;
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 10px;
+    margin-top: 14px;
+    max-width: 720px;
   }
-  .packaging figure { margin: 0; }
+  .packaging figure { margin: 0; min-width: 0; }
   .packaging a {
-    display: block; overflow: hidden; border-radius: 12px;
+    display: block; overflow: hidden; border-radius: 8px;
     border: 1px solid rgba(242, 199, 92, 0.28);
     background: #0c0a12;
     transition: border-color .2s ease, transform .2s ease;
@@ -759,18 +762,19 @@
   .packaging a:hover { border-color: var(--gold-2); transform: translateY(-2px); }
   .packaging img {
     display: block; width: 100%; height: auto;
-    aspect-ratio: 4 / 5; object-fit: cover; object-position: center top;
+    aspect-ratio: 3 / 4; object-fit: cover; object-position: center top;
   }
   .packaging figcaption {
-    margin-top: 8px;
-    font-family: "Oswald", sans-serif; font-size: 12px; letter-spacing: .12em;
+    margin-top: 6px;
+    font-family: "Oswald", sans-serif; font-size: 10px; letter-spacing: .1em;
     text-transform: uppercase; color: var(--muted);
+    line-height: 1.25;
   }
-  @media (max-width: 1000px) {
-    .packaging { grid-template-columns: 1fr 1fr; }
+  @media (max-width: 900px) {
+    .packaging { grid-template-columns: repeat(3, minmax(0, 1fr)); max-width: none; }
   }
-  @media (max-width: 640px) {
-    .packaging { grid-template-columns: 1fr; }
+  @media (max-width: 520px) {
+    .packaging { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
   }
 
   footer { padding: 36px max(6vw, 24px) 48px; border-top: 1px solid var(--line); color: var(--muted); font-size: 13px; display: flex; justify-content: space-between; gap: 20px; flex-wrap: wrap; }
@@ -989,10 +993,10 @@
     .spec::before { height: 3px; background: linear-gradient(90deg, #e3262f, #f2c75c); }
     .spec header { gap: 8px; margin: 4px 0 4px; }
     .spec h3 { font-size: 13px; color: #8a5a12; }
-    .packaging { grid-template-columns: 1fr 1fr !important; gap: 8px; margin-top: 6px; }
-    .packaging a { border-radius: 4px; border-color: #e0c97a; }
-    .packaging img { aspect-ratio: 4 / 5; }
-    .packaging figcaption { font-size: 7px; color: #666; margin-top: 3px; }
+    .packaging { grid-template-columns: repeat(5, minmax(0, 1fr)) !important; gap: 5px; margin-top: 6px; max-width: none; }
+    .packaging a { border-radius: 3px; border-color: #e0c97a; }
+    .packaging img { aspect-ratio: 3 / 4; }
+    .packaging figcaption { font-size: 6px; color: #666; margin-top: 2px; }
     .spec header small { font-size: 7px; color: #666; margin-top: 1px; }
     .spec-list { grid-template-columns: 62px 1fr; margin-bottom: 6px; border-color: #eadfbf; }
     .spec-list dt, .spec-list dd { padding: 2px 0; border-color: #eadfbf; }
@@ -1341,19 +1345,37 @@
       </div>
       <div class="note-card wide">
         <h4>Hobby Box &amp; Packs</h4>
-        <p>Each hobby box held <b>24 packs of 10 cards</b>. Packs shipped as thick cardboard mini-boxes with character foil art on the front (Venom, Wolverine, Magneto, and others), shrink-wrapped — not a conventional wax wrapper. Powerblast chase landed about 1:2 packs; Flairprints were a case bonus, not in the packs.</p>
+        <p>Each hobby box held <b>24 packs of 10 cards</b>. Packs shipped as thick cardboard mini-boxes with character foil art on the front — four cover variants (Venom, Magneto, Cyclops, Wolverine), shrink-wrapped, not a conventional wax wrapper. Powerblast chase landed about 1:2 packs; Flairprints were a case bonus, not in the packs.</p>
         <div class="packaging">
           <figure>
             <a href="images/print-fx/hd/hobby-box.jpg" target="_blank" rel="noopener">
               <img src="images/thumbs/print/hobby-box.jpg" alt="Factory-sealed 1994 Flair Marvel hobby box with Magneto and Venom on the lid" loading="lazy">
             </a>
-            <figcaption>Factory-sealed hobby box &middot; 24 packs &middot; Magneto / Venom lid</figcaption>
+            <figcaption>Hobby box &middot; 24 packs</figcaption>
           </figure>
           <figure>
             <a href="images/print-fx/hd/pack-venom.jpg" target="_blank" rel="noopener">
-              <img src="images/thumbs/print/pack-venom.jpg" alt="Sealed 1994 Flair Marvel pack with Venom foil cover art" loading="lazy">
+              <img src="images/thumbs/print/pack-venom.jpg" alt="Sealed 1994 Flair Marvel pack with Venom foil cover" loading="lazy">
             </a>
-            <figcaption>Sealed pack mini-box &middot; Venom cover &middot; 10 cards</figcaption>
+            <figcaption>Venom pack</figcaption>
+          </figure>
+          <figure>
+            <a href="images/print-fx/hd/pack-magneto.jpg" target="_blank" rel="noopener">
+              <img src="images/thumbs/print/pack-magneto.jpg" alt="Sealed 1994 Flair Marvel pack with pink Magneto foil cover" loading="lazy">
+            </a>
+            <figcaption>Magneto pack</figcaption>
+          </figure>
+          <figure>
+            <a href="images/print-fx/hd/pack-cyclops.jpg" target="_blank" rel="noopener">
+              <img src="images/thumbs/print/pack-cyclops.jpg" alt="Sealed 1994 Flair Marvel pack with blue Cyclops foil cover" loading="lazy">
+            </a>
+            <figcaption>Cyclops pack</figcaption>
+          </figure>
+          <figure>
+            <a href="images/print-fx/hd/pack-wolverine.jpg" target="_blank" rel="noopener">
+              <img src="images/thumbs/print/pack-wolverine.jpg" alt="Sealed 1994 Flair Marvel pack with gold Wolverine foil cover" loading="lazy">
+            </a>
+            <figcaption>Wolverine pack</figcaption>
           </figure>
         </div>
       </div>
