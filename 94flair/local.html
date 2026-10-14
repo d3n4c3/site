@@ -109,16 +109,17 @@
     position: relative;
     display: inline-flex;
     align-items: flex-end;
-    gap: 0.02em;
+    gap: 0;
     line-height: 0.85;
   }
   .brand-mark .f {
     font-family: "Great Vibes", "Pinyon Script", cursive;
-    font-size: clamp(92px, 14vw, 168px);
+    font-size: clamp(88px, 13vw, 156px);
     font-weight: 400;
-    line-height: 0.72;
-    margin-right: -0.08em;
-    padding: 0 0.02em 0 0;
+    line-height: 0.7;
+    margin-right: -0.14em;
+    position: relative;
+    z-index: 1;
     background: var(--foil);
     background-size: 200% 100%;
     -webkit-background-clip: text;
@@ -129,26 +130,29 @@
   .brand-mark .word {
     position: relative;
     display: inline-block;
-    padding-top: 0.42em;
+    padding-top: 0.5em;
+    z-index: 2;
   }
   .brand-mark .yr {
     position: absolute;
-    left: 0.08em;
-    top: 0;
+    left: 50%;
+    top: 0.02em;
+    transform: translateX(-42%);
     font-family: "Cinzel", serif;
     font-weight: 700;
-    font-size: clamp(18px, 2.4vw, 28px);
-    letter-spacing: 0.06em;
+    font-size: clamp(16px, 2.1vw, 24px);
+    letter-spacing: 0.08em;
     color: var(--gold-2);
     -webkit-text-fill-color: var(--gold-2);
     line-height: 1;
+    white-space: nowrap;
   }
   .brand-mark .lair {
     display: block;
     font-family: "Cinzel", serif;
     font-weight: 800;
     font-size: clamp(52px, 9vw, 118px);
-    letter-spacing: 0.06em;
+    letter-spacing: 0.08em;
     text-transform: uppercase;
     line-height: 0.9;
     background: var(--foil);
