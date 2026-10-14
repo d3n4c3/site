@@ -1682,8 +1682,18 @@ const PROMO_ART = {
   "u4-1": ["sheet4-sticker", "Front shown: the gold \"Ships June 1994\" title card"],
   "u4-2": ["sheet4-foil", "Front shown: the gold-foil etched title card"],
   "u4-3": ["sheet4-unreleased"],
-  "u9-2": ["sheet9-2"]
+  "u9-1": ["sheet9-1", "Panel layout from base card scans"],
+  "u9-2": ["sheet9-2", "Photographed promo panel"],
+  "u9-3": ["sheet9-3", "Panel layout from base card scans"],
+  "u9-4": ["sheet9-4", "Panel layout from base card scans"],
+  "u9-5": ["sheet9-5", "Panel layout from base card scans"],
+  "u9-6": ["sheet9-6", "Panel layout from base card scans"],
+  "u9-7": ["sheet9-7", "Panel layout from base card scans"],
+  "u9-8": ["sheet9-8", "Panel layout from base card scans"],
+  "u9-9": ["sheet9-9", "Panel layout from base card scans"]
 };
+// Shared back for the two released 4-card sheets (sticker + foil).
+const SHEET4_RELEASED_BACK = "sheet4-released-back";
 
 function credit(key) {
   const kind = key.match(/^[a-z]+(\d-)?/)[0];
@@ -1706,7 +1716,8 @@ function credit(key) {
     const [name, pb] = BINDER[n - 1];
     const [source, artist] = PB_CREDITS[pb - 1];
     return { label: "1995 Binder Insert", name, chars: `Same art as Powerblast #${pb}, without the metallic finish`, source, artist,
-      img: insertSrc("powerblast", pb), imgNote: `Art shown from Powerblast #${pb}. The binder card has no logo, title, or foil.`,
+      img: insertSrc("powerblast", pb),
+      imgNote: `Placeholder: Powerblast #${pb} art. Real binder inserts omit the Flair logo, character title, and metallic finish — photo still needed.`,
       backNote: "Completely blank back" };
   }
   if (kind === "f") {
@@ -1724,9 +1735,9 @@ function credit(key) {
   if (kind === "u4-") {
     const [name, chars] = FOUR_CARD[n - 1];
     const unreleased = n === FOUR_CARD.length;
-    const backNote = unreleased ? "" : "Not pictured. The back panel has Bodyslide, Spider-Man 2099, Thunderstrike, and New Ghost Rider.";
-    return { label: "4-Card Uncut Sheet \u00b7 5\u2033 \u00d7 7\u2033", name, chars, ...promoArt, backNote,
-      back: unreleased ? promoSrc("sheet4-unreleased-back") : "" };
+    return { label: "4-Card Uncut Sheet \u00b7 5\u2033 \u00d7 7\u2033", name, chars, ...promoArt,
+      back: unreleased ? promoSrc("sheet4-unreleased-back") : promoSrc(SHEET4_RELEASED_BACK),
+      backNote: unreleased ? "" : "Back panel: Bodyslide, Spider-Man 2099, Thunderstrike, New Ghost Rider" };
   }
   if (kind === "u9-") {
     const nums = NINE_CARD[n - 1].flat().map(x => parseInt(x, 10));
@@ -1813,8 +1824,8 @@ function render() {
     tile({
       id: `bi${i + 1}`, group: "large", no: "'95", name,
       chars: name === "Spider-Man"
-        ? `Powerblast #${pb} art \u00b7 verified in sealed 1995 Fleer Ultra X-Men binders`
-        : `Powerblast #${pb} art \u00b7 ${PB_CREDITS[pb - 1][0]}`,
+        ? `Binder photo pending \u00b7 verified in sealed 1995 Fleer Ultra X-Men binders`
+        : `Binder photo pending \u00b7 same art as Powerblast #${pb} (no logo/title/foil)`,
       card: `bi${i + 1}`, label: `1995 Binder Insert ${name}`
     })).join("");
 
