@@ -41,14 +41,35 @@
   }
 
   .foil-text {
+    /* Solid gold first so text stays readable if the clip fill is stripped
+       (Dark Reader and similar extensions often replace backgrounds). */
+    color: var(--gold-2);
     background: var(--foil);
     background-size: 200% 100%;
     -webkit-background-clip: text;
     background-clip: text;
-    color: transparent;
+    -webkit-text-fill-color: transparent;
     animation: foil-shift 6s ease-in-out infinite;
   }
   @keyframes foil-shift { 0%, 100% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } }
+
+  /* Dark Reader inverts/removes gradient backgrounds but leaves transparent
+     text-fill, which makes foil/holo titles disappear. Fall back to solid gold. */
+  html[data-darkreader-mode] .foil-text,
+  html[data-darkreader-scheme] .foil-text,
+  html[data-darkreader-mode] .holo-text,
+  html[data-darkreader-scheme] .holo-text,
+  html[data-darkreader-mode] .tile.holo .no span,
+  html[data-darkreader-scheme] .tile.holo .no span,
+  html[data-darkreader-mode] .row.holo .c-no span,
+  html[data-darkreader-scheme] .row.holo .c-no span {
+    background: none !important;
+    -webkit-background-clip: border-box !important;
+    background-clip: border-box !important;
+    color: var(--gold-1) !important;
+    -webkit-text-fill-color: var(--gold-1) !important;
+    animation: none !important;
+  }
 
   /* ---------- HERO ---------- */
   .hero {
@@ -295,8 +316,10 @@
   .banner .count .big span { font-size: 22px; color: var(--muted); }
   .banner .count .meter { width: 180px; margin-top: 10px; }
   .holo-text {
+    color: var(--gold-2);
     background: var(--holo); background-size: 300% 100%;
-    -webkit-background-clip: text; background-clip: text; color: transparent;
+    -webkit-background-clip: text; background-clip: text;
+    -webkit-text-fill-color: transparent;
     animation: foil-shift 5s linear infinite;
   }
 
@@ -357,7 +380,13 @@
   }
 
   .tile.holo .no { color: transparent; background: rgba(255, 255, 255, 0.02); }
-  .tile.holo .no span { background: var(--holo); background-size: 300% 100%; -webkit-background-clip: text; background-clip: text; color: transparent; animation: foil-shift 5s linear infinite; }
+  .tile.holo .no span {
+    color: var(--gold-2);
+    background: var(--holo); background-size: 300% 100%;
+    -webkit-background-clip: text; background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: foil-shift 5s linear infinite;
+  }
   .tile.holo.have {
     background:
       linear-gradient(180deg, #17132a, #0f0c1c) padding-box,
@@ -394,7 +423,13 @@
   .row.have td { background: linear-gradient(180deg, #221c12, #15110b); border-color: rgba(242, 199, 92, 0.45); }
   .row.have .box { background: var(--foil); border-color: transparent; }
   .row.have .box svg { opacity: 1; transform: scale(1); }
-  .row.holo .c-no span { background: var(--holo); background-size: 300% 100%; -webkit-background-clip: text; background-clip: text; color: transparent; animation: foil-shift 5s linear infinite; }
+  .row.holo .c-no span {
+    color: var(--gold-2);
+    background: var(--holo); background-size: 300% 100%;
+    -webkit-background-clip: text; background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: foil-shift 5s linear infinite;
+  }
   .row.holo.have td { background: linear-gradient(180deg, #17132a, #0f0c1c); border-color: rgba(122, 92, 255, 0.5); }
   .row.holo.have .box { background: var(--holo); }
 
