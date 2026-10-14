@@ -645,7 +645,7 @@
   .viewer.show { display: grid; }
   .viewer .v-stage { margin: 0; display: grid; justify-items: center; gap: 16px; perspective: 1800px; }
   .viewer .v-card {
-    --ar: 0.714;
+    --ar: 0.720703125; /* 738/1024 */
     position: relative; aspect-ratio: var(--ar);
     width: min(84vw, calc(76vh * var(--ar)), calc(900px * var(--ar)));
     height: auto; max-height: 76vh;
@@ -656,7 +656,7 @@
   .viewer .v-card.flipped { transform: rotateY(180deg); }
   /* Landscape backs: gold frame becomes landscape with the rotated art (not portrait-only). */
   .viewer .v-card.landscape-back.flipped {
-    --ar: 1.3875; /* ~1024/738 — landscape frame for rotated portrait scans */
+    --ar: 1.387533875; /* 1024/738 — landscape frame for rotated portrait scans */
     width: min(92vw, calc(70vh * var(--ar)), 1100px);
     max-height: 70vh;
   }
@@ -667,9 +667,16 @@
   }
   .viewer .v-face img { display: block; width: 100%; height: 100%; object-fit: contain; }
   .viewer .v-back { transform: rotateY(180deg); }
-  /* Portrait scans of landscape backs: rotate into the landscape frame. */
+  /* Portrait scans of landscape backs: size the img to the swapped box, then rotate flush to the frame.
+     (rotate + fixed scale with object-fit:contain left letterbox gaps inside the gold border.) */
   .viewer .v-card.landscape-back.flipped .v-back img.landscape {
-    transform: rotate(90deg) scale(1.3875);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: calc(100% / var(--ar));
+    height: calc(100% * var(--ar));
+    object-fit: cover;
+    transform: translate(-50%, -50%) rotate(90deg);
     transform-origin: center center;
   }
   .viewer .v-blank {
@@ -2081,9 +2088,15 @@ const viewer = (function cardViewer() {
   let list = [], index = 0, opener = null;
 
   function frameAr(landscapeView) {
-    if (landscapeView) return 1.3875;
+    if (landscapeView) {
+      const backImg = back.querySelector("img.landscape");
+      if (backImg && backImg.naturalWidth && backImg.naturalHeight) {
+        return backImg.naturalHeight / backImg.naturalWidth;
+      }
+      return 1024 / 738;
+    }
     if (frontImg.naturalWidth && frontImg.naturalHeight) return frontImg.naturalWidth / frontImg.naturalHeight;
-    return 0.714;
+    return 738 / 1024;
   }
   function applyFrame() {
     const landscapeView = card.classList.contains("landscape-back") && card.classList.contains("flipped");
@@ -2094,7 +2107,7 @@ const viewer = (function cardViewer() {
     const key = list[index].dataset.view;
     const c = credit(key);
     card.classList.remove("flipped");
-    card.style.setProperty("--ar", 0.714);
+    card.style.setProperty("--ar", 738 / 1024);
     frontImg.onload = () => applyFrame();
     frontImg.src = c.img;
     frontImg.alt = c.name;
@@ -2102,6 +2115,10 @@ const viewer = (function cardViewer() {
     const landscape = !!(c.landscapeBack && c.back);
     back.innerHTML = c.back ? `<img src="${c.back}" alt="Back of ${esc(c.name)}"${landscape ? ' class="landscape"' : ""}>`
       : c.backNote ? `<div class="v-blank"><div><b>Card back</b>${esc(c.backNote)}</div></div>` : "";
+    if (landscape) {
+      const backImg = back.querySelector("img.landscape");
+      if (backImg) backImg.onload = () => applyFrame();
+    }
     card.classList.toggle("no-back", !hasBack);
     card.classList.toggle("landscape-back", landscape);
     applyFrame();
