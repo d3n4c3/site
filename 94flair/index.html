@@ -451,34 +451,34 @@
   .tell b { font-family: "Oswald", sans-serif; font-weight: 500; letter-spacing: .2em; text-transform: uppercase; font-size: 13px; color: var(--gold-2); }
   .tell p { margin: 0; color: #d6cfc2; font-size: 14.5px; }
 
-  /* 1994 promo timeline — vertical rail (reads chronologically, no wrapping grid) */
+  /* 1994 promo timeline — compact horizontal, shrinks to fit the page */
   .timeline {
-    position: relative; display: flex; flex-direction: column; gap: 0;
-    margin: 8px 0 32px; padding: 4px 0 4px 0; max-width: 720px;
+    position: relative; display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(118px, 1fr));
+    gap: 10px; margin: 6px 0 28px; padding-top: 28px;
   }
   .timeline::before {
-    content: ""; position: absolute; left: 11px; top: 10px; bottom: 10px; width: 2px;
-    background: linear-gradient(180deg, var(--gold-3), var(--red), var(--gold-2)); opacity: .75;
+    content: ""; position: absolute; left: 8px; right: 8px; top: 9px; height: 2px;
+    background: linear-gradient(90deg, var(--gold-3), var(--red), var(--gold-2)); opacity: .7;
   }
   .tl {
-    position: relative; margin: 0 0 12px 36px; padding: 14px 16px 13px;
-    border-radius: 12px; background: linear-gradient(180deg, var(--panel-2), var(--panel));
-    border: 1px solid rgba(255, 255, 255, 0.06);
+    position: relative; padding: 12px 12px 10px; border-radius: 12px;
+    background: linear-gradient(180deg, var(--panel-2), var(--panel));
+    border: 1px solid rgba(255, 255, 255, 0.06); min-width: 0;
   }
-  .tl:last-child { margin-bottom: 0; }
   .tl::before {
-    content: ""; position: absolute; top: 18px; left: -32px; width: 14px; height: 14px; border-radius: 50%;
-    background: var(--foil); box-shadow: 0 0 0 4px var(--ink), 0 0 16px rgba(242, 199, 92, 0.5); z-index: 1;
+    content: ""; position: absolute; top: -25px; left: 14px; width: 12px; height: 12px; border-radius: 50%;
+    background: var(--foil); box-shadow: 0 0 0 3px var(--ink), 0 0 14px rgba(242, 199, 92, 0.5);
   }
-  .tl.red::before { background: var(--red); box-shadow: 0 0 0 4px var(--ink), 0 0 16px rgba(227, 38, 47, 0.6); }
-  .tl .when { font-family: "Anton", sans-serif; font-size: 18px; color: var(--gold-2); line-height: 1; }
+  .tl.red::before { background: var(--red); box-shadow: 0 0 0 3px var(--ink), 0 0 14px rgba(227, 38, 47, 0.6); }
+  .tl .when { font-family: "Anton", sans-serif; font-size: clamp(13px, 1.35vw, 17px); color: var(--gold-2); line-height: 1; }
   .tl .kind {
-    display: inline-block; margin: 6px 0 6px; font-family: "Oswald", sans-serif; font-size: 10.5px;
-    letter-spacing: .16em; text-transform: uppercase; padding: 1px 7px; border-radius: 99px;
-    border: 1px solid rgba(255, 255, 255, 0.15); color: var(--muted);
+    display: inline-block; margin: 5px 0 5px; font-family: "Oswald", sans-serif;
+    font-size: clamp(8.5px, 0.85vw, 10.5px); letter-spacing: .12em; text-transform: uppercase;
+    padding: 1px 6px; border-radius: 99px; border: 1px solid rgba(255, 255, 255, 0.15); color: var(--muted);
   }
   .tl.red .kind { color: #ffb3b6; border-color: rgba(227, 38, 47, 0.45); }
-  .tl p { margin: 0; font-size: 13.5px; color: #d6cfc2; line-height: 1.45; }
+  .tl p { margin: 0; font-size: clamp(11px, 1.05vw, 13px); color: #d6cfc2; line-height: 1.35; }
   .tl p b { color: var(--text); }
 
   .promo-facts { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-bottom: 26px; }
@@ -676,10 +676,6 @@
     .viewer .v-card.landscape-back.flipped { width: min(94vw, calc(52vh * var(--ar))); max-height: 52vh; }
     .viewer .v-nav { top: auto; bottom: 18px; margin: 0; }
     .viewer .v-name { font-size: 20px; }
-    .timeline { padding-left: 0; }
-    .tl { margin-left: 30px; padding: 12px 13px 11px; }
-    .tl::before { left: -27px; width: 12px; height: 12px; top: 16px; }
-    .timeline::before { left: 9px; }
   }
   @media (prefers-reduced-motion: reduce) {
     .viewer .v-card { transition: none; }
@@ -709,8 +705,11 @@
   .note-card.wide { grid-column: 1 / -1; }
   .note-card { padding: 22px 24px; border-radius: var(--radius); background: var(--panel); border: 1px solid var(--line); }
   .note-card h4 { margin: 0 0 8px; font-family: "Oswald", sans-serif; letter-spacing: .14em; text-transform: uppercase; color: var(--gold-2); font-weight: 500; font-size: 15px; }
-  .note-card p, .note-card li { color: #cfc7b8; font-size: 14px; }
+  .note-card p, .note-card li { color: #cfc7b8; font-size: 14px; line-height: 1.45; }
+  .note-card p + p { margin-top: 8px; }
   .note-card ul { padding-left: 18px; margin: 8px 0 0; }
+  .note-inline { margin: 14px 0 0; padding-top: 12px; border-top: 1px solid rgba(255, 255, 255, 0.08); font-size: 13.5px; color: #cfc7b8; }
+  .note-inline b { color: var(--gold-2); font-family: "Oswald", sans-serif; font-weight: 500; letter-spacing: .08em; text-transform: uppercase; font-size: 12.5px; }
 
   footer { padding: 36px max(6vw, 24px) 48px; border-top: 1px solid var(--line); color: var(--muted); font-size: 13px; display: flex; justify-content: space-between; gap: 20px; flex-wrap: wrap; }
   footer a { color: var(--gold-2); }
@@ -733,7 +732,8 @@
     .facts { grid-template-columns: repeat(2, 1fr); }
     .credits .c-src { display: none; }
     .compare, .promo-facts { grid-template-columns: 1fr; }
-    .timeline { max-width: none; }
+    .timeline { grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); padding-top: 0; }
+    .timeline::before, .tl::before { display: none; }
   }
   @media (max-width: 640px) {
     .dash { grid-template-columns: 1fr; justify-items: center; }
@@ -752,6 +752,9 @@
     .nav a { flex: none; }
     main { padding: 0 16px 60px; }
     .banner { padding: 22px 20px; }
+    .timeline { grid-template-columns: repeat(2, 1fr); gap: 8px; padding-top: 0; }
+    .timeline::before, .tl::before { display: none; }
+    .tl { padding: 10px; }
   }
 
   /* ---------- PRINT: clean, ink-friendly checklist sheet ---------- */
@@ -836,12 +839,10 @@
     .tell b { font-size: 8px; color: #8f0f16; }
     .tell p { font-size: 8px; color: #333; }
     .promo-facts { grid-template-columns: repeat(3, 1fr) !important; gap: 6px; margin-bottom: 8px; }
-    .timeline { max-width: none; margin: 2px 0 8px; padding: 0; }
-    .timeline::before { left: 3px; top: 4px; bottom: 4px; background: #b8862b; opacity: 1; }
-    .tl { margin: 0 0 4px 14px; padding: 3px 0 3px 8px; background: none; border: 0; border-left: 2px solid #b8862b; border-radius: 0; break-inside: avoid; }
+    .timeline { grid-template-columns: repeat(3, 1fr) !important; gap: 4px 10px; padding-top: 0; margin: 2px 0 8px; }
+    .timeline::before, .tl::before { display: none !important; }
+    .tl { padding: 3px 0 3px 6px; background: none; border: 0; border-left: 2px solid #b8862b; border-radius: 0; break-inside: avoid; }
     .tl.red { border-left-color: #e3262f; }
-    .tl::before { left: -18px; top: 6px; width: 8px; height: 8px; box-shadow: none; background: #b8862b; }
-    .tl.red::before { background: #e3262f; box-shadow: none; }
     .tl .when { font-size: 10px; color: #8f0f16; }
     .tl .kind { font-size: 6.5px; margin: 1px 0; padding: 0 4px; color: #555; border-color: #ccc; }
     .tl p { font-size: 7.5px; color: #333; }
@@ -1097,22 +1098,23 @@
     <div class="grid" id="grid-adpages"></div>
     <div class="empty" data-empty="print">No ads match your filter.</div>
 
-    <div class="split ref-block">
-      <div>
-        <h3 class="sub-h">Comics That Carried the Ad <span class="tag">For reference</span></h3>
-        <p class="sub-note">Issues confirmed from the Grand Comics Database and from period copies with the newsprint "Inaugural Edition" comic ad. Fleer ran it in Marvel's ad pages next to its other 1994 card lines, so more titles from the same months likely carried it too.</p>
-        <div class="grid" id="grid-ads"></div>
-      </div>
-      <div>
-        <h3 class="sub-h">Magazines with Promo Sheets <span class="tag">For reference</span></h3>
-        <p class="sub-note">Each came with a 4-card uncut promo sheet, which is on the checklist under <a href="#promos" style="color:var(--gold-2)">Promos</a>. Look for copies still sealed with the sheet inside.</p>
-        <div class="grid" id="grid-mags"></div>
-      </div>
+    <div class="ref-block">
+      <h3 class="sub-h">Magazines with Promo Sheets <span class="tag">For reference</span></h3>
+      <p class="sub-note">Each came with a 4-card uncut promo sheet, which is on the checklist under <a href="#promos" style="color:var(--gold-2)">Promos</a>. Look for copies still sealed with the sheet inside.</p>
+      <div class="grid" id="grid-mags"></div>
     </div>
 
-    <h3 class="sub-h">Magazines That Carried the Ads <span class="tag">For reference</span></h3>
-    <p class="sub-note">Hobby and comics magazines confirmed to run the glossy "Inaugural Edition" magazine ad and/or the "Introducing FlairPrints" ad. These did not necessarily include a 4-card sheet.</p>
-    <div class="grid" id="grid-ad-mags"></div>
+    <div class="ref-block">
+      <h3 class="sub-h">Comics That Carried the Ad <span class="tag">For reference</span></h3>
+      <p class="sub-note">Issues confirmed from the Grand Comics Database and from period copies with the newsprint "Inaugural Edition" comic ad. Fleer ran it in Marvel's ad pages next to its other 1994 card lines, so more titles from the same months likely carried it too.</p>
+      <div class="grid" id="grid-ads"></div>
+    </div>
+
+    <div class="ref-block">
+      <h3 class="sub-h">Magazines That Carried the Ads <span class="tag">For reference</span></h3>
+      <p class="sub-note">Hobby and comics magazines confirmed to run the glossy "Inaugural Edition" magazine ad and/or the "Introducing FlairPrints" ad. These did not necessarily include a 4-card sheet.</p>
+      <div class="grid" id="grid-ad-mags"></div>
+    </div>
   </section>
 
   <section id="notes">
@@ -1131,32 +1133,22 @@
           <div class="fact"><b>~1.52</b><span>Base sets per box, if collation were perfect</span></div>
           <div class="fact"><b>Case</b><span>Flairprints are a case bonus, 6&frac12;&Prime; &times; 10&Prime;</span></div>
         </div>
-      </div>
-      <div class="note-card">
-        <h4>The Missing #6</h4>
-        <p>Because of a numbering error, no card #6 exists. There are two #8s: Iron Man (the real #6) and Vulture vs. Spider-Man.</p>
+        <p class="note-inline"><b>Missing #6:</b> numbering error — no card #6 exists. Two #8s instead: Iron Man (the real #6) and Vulture vs. Spider-Man.</p>
       </div>
       <div class="note-card">
         <h4>4-Card Sheet Variants</h4>
-        <p>Two known variants: "Ships June 1994" in white letters etched in gold foil, and the same text in black on a gold paste-on sticker. They came in comic magazines of the day:</p>
-        <ul>
-          <li>Wizard Magazine #35 (Jul 1994)</li>
-          <li>Advance Comics #67 (Jul 1994)</li>
-          <li>Marvel Age #138 (Jul 1994)</li>
-          <li>Tuff Stuff's Collect! (Jun 1994)</li>
-        </ul>
-        <p>A separate unreleased 4-card sheet (Gambit &amp; Rogue, Infinity Crusade, Maximum Carnage, Bone Claws) turned up on eBay. To spot it, look for a front with no text and a back with a grammar error: the fourth bullet reads "presents" instead of "present". Its back is headed "The Ultimate Collectable," which is why it sometimes gets listed as a separate variant.</p>
+        <p>Two known variants: "Ships June 1994" in white letters etched in gold foil, and the same text in black on a gold paste-on sticker. Bundled with Wizard #35, Advance Comics #67, Marvel Age #138 (all Jul 1994), and Tuff Stuff's Collect! (Jun 1994).</p>
+        <p>An unreleased sheet (Gambit &amp; Rogue, Infinity Crusade, Maximum Carnage, Bone Claws) turned up on eBay — no front text; back fourth bullet says "presents" instead of "present," headed "The Ultimate Collectable."</p>
       </div>
       <div class="note-card">
         <h4>Promos &amp; Binder Cards</h4>
-        <p>The Diamond Omega Red vs. Wolverine Flairprint was given out at the Annual Retailer Seminar in Baltimore, June 11&ndash;14, 1994. The Deadpool Flairprint was handed out at Heroes World Con in 1994 (Heroes World Distribution; nslists lists it as "Heroes World Con," without a published day range like Diamond's seminar).</p>
-        <p>Binder inserts are a 1995 release, not part of the 1994 case bonus. They're oversized like Flairprints, but use Powerblast art minus the metallic finish, with no Flair '94 logo or title on the front and blank backs. Only the cards known to exist are listed. A verified source for the Spider-Man binder insert is sealed <b>1995 Fleer Ultra X-Men</b> binders found with a Flair Spider-Man insert still inside.</p>
+        <p>Diamond's Omega Red vs. Wolverine Flairprint: Annual Retailer Seminar, Baltimore, June 11&ndash;14, 1994. Deadpool Flairprint: Heroes World Con 1994 (nslists; no published day range).</p>
+        <p>Binder inserts are a 1995 release — oversized like Flairprints, Powerblast art without metallic finish, no Flair '94 logo/title, blank backs. Spider-Man binder verified in sealed <b>1995 Fleer Ultra X-Men</b> binders.</p>
       </div>
-      <div class="note-card">
+      <div class="note-card wide">
         <h4>About the Art Credits</h4>
-        <p>Most Flair cards reuse existing comic art, repainted for the set. Each card lists its front title, the comic or product the art came from, and the artist. Blank credits haven't been identified yet.</p>
-        <p>Source and artist research by <a href="https://www.instagram.com/exotechktx/" target="_blank" rel="noopener" style="color:var(--gold-2)">@exotechktx</a> on Instagram, who tracked down where the art for each card came from.</p>
-        <p>Several images appear to be unused in print (#10 Xavier, #42 Elektra, #44 Hobgoblin, #85 Bishop, Powerblast #5 Phoenix). The #124 Bloodhawk source is unconfirmed.</p>
+        <p>Most Flair cards reuse existing comic art, repainted for the set. Each card lists its front title, source, and artist. Blank credits aren't identified yet. Research by <a href="https://www.instagram.com/exotechktx/" target="_blank" rel="noopener" style="color:var(--gold-2)">@exotechktx</a>.</p>
+        <p>Likely unused in print: #10 Xavier, #42 Elektra, #44 Hobgoblin, #85 Bishop, Powerblast #5 Phoenix. #124 Bloodhawk source unconfirmed.</p>
       </div>
     </div>
   </section>
