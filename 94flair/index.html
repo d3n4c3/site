@@ -963,13 +963,13 @@
   .print-facts { display: none; }
   .print-head {
     display: none;
-    align-items: flex-start; justify-content: space-between; gap: 16px;
+    align-items: flex-start; justify-content: flex-start; gap: 14px;
     padding: 0 0 8px; margin: 0 0 8px;
     border-bottom: 1px solid #e0c97a;
   }
   .print-brand {
     display: flex; flex-direction: column; align-items: flex-start;
-    gap: 0; min-width: 0; flex: 1 1 auto; max-width: none;
+    gap: 0; min-width: 0; flex: 0 0 auto;
   }
   .print-brand-mark {
     display: inline-flex; align-items: flex-end; gap: 0;
@@ -1021,13 +1021,17 @@
   .print-brand-checklist::after { bottom: 0; }
   .print-facts {
     display: none;
-    margin: 5px 0 0; padding: 4px 6px;
+    margin: 0; padding: 5px 7px;
     background: #faf6ec; border: 1px solid #e8d9a8; border-radius: 4px;
     font-size: 6.5px; color: #5c4a22; line-height: 1.35;
-    max-width: 34em; width: auto; box-sizing: border-box;
+    flex: 1 1 auto; min-width: 0; max-width: 28em; align-self: stretch;
+    box-sizing: border-box;
   }
   .print-facts b { color: #8a5a12; }
-  .print-meta { text-align: right; flex: 0 0 auto; padding-top: 2px; align-self: flex-start; }
+  .print-meta {
+    text-align: right; flex: 0 0 auto; padding-top: 2px;
+    align-self: flex-start; margin-left: auto;
+  }
   .print-progress {
     display: inline-block;
     font-family: "Oswald", sans-serif; font-size: 10px; letter-spacing: .08em; text-transform: uppercase;
@@ -1055,23 +1059,24 @@
     .hero, .toolbar, .dash, .toast, .feature, .banner .bg, footer .actions { display: none !important; }
     .print-head {
       display: flex !important;
-      align-items: flex-start; justify-content: space-between; gap: 18px;
-      padding: 0 0 8px; margin: 0 0 8px;
+      align-items: flex-start; justify-content: flex-start; gap: 12px;
+      padding: 0 0 7px; margin: 0 0 8px;
       border-bottom: 1.5px solid #e0c97a;
       break-after: avoid; page-break-after: avoid;
     }
-    .print-brand { flex: 1 1 auto; min-width: 0; max-width: none; }
+    .print-brand { flex: 0 0 auto; }
     .print-key { display: flex !important; }
     .print-facts {
       display: block !important;
-      margin: 5px 0 0; padding: 5px 8px;
+      margin: 2px 0 0; padding: 5px 7px;
       background: #faf6ec; border: 1px solid #e8d9a8; border-radius: 4px;
-      font-size: 7px; color: #5c4a22; line-height: 1.4;
-      width: 100%; max-width: 100%; box-sizing: border-box;
+      font-size: 6.5px; color: #5c4a22; line-height: 1.35;
+      flex: 1 1 auto; min-width: 12em; max-width: 26em;
+      align-self: center;
     }
     .print-facts b { color: #8a5a12; }
     .print-meta {
-      flex: 0 0 auto; align-self: flex-start; padding-top: 4px;
+      flex: 0 0 auto; align-self: flex-start; padding-top: 2px;
       margin-left: auto;
     }
     main { padding: 0; }
@@ -1423,11 +1428,11 @@
       <p class="print-brand-line">Presents the Marvel Universe<span class="sep">&middot;</span><span class="years">1961&ndash;1993</span></p>
       <p class="print-brand-edition">Inaugural Edition</p>
       <div class="print-brand-checklist">Masterset Checklist</div>
-      <div class="print-facts">
-        <div><b>Set</b> 150 base &middot; 18 Powerblast &middot; 10 Flairprints &middot; 5 binder &middot; 15 promos/sheets &middot; 3 ads</div>
-        <div><b>Box</b> 24&times;10 &middot; PB 1:2 &middot; Flairprints 1/case &middot; ~1.52 sets/box &middot; Covers: Venom, Magneto, Cyclops, Wolverine</div>
-        <div><b>Notes</b> No #6 &middot; Iron Man as second #8 &middot; Binders in sealed &rsquo;95 Ultra X-Men (2&ndash;3 each)</div>
-      </div>
+    </div>
+    <div class="print-facts">
+      <div><b>Set</b> 150 base &middot; 18 Powerblast &middot; 10 Flairprints &middot; 5 binder &middot; 15 promos/sheets &middot; 3 ads</div>
+      <div><b>Box</b> 24&times;10 &middot; PB 1:2 &middot; Flairprints 1/case &middot; ~1.52 sets/box &middot; Covers: Venom, Magneto, Cyclops, Wolverine</div>
+      <div><b>Notes</b> No #6 &middot; Iron Man as second #8 &middot; Binders in sealed &rsquo;95 Ultra X-Men (2&ndash;3 each)</div>
     </div>
     <div class="print-meta">
       <div class="print-progress" id="printProgress"></div>
