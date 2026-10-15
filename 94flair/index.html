@@ -24,6 +24,9 @@
     --foil: linear-gradient(115deg, var(--gold-4) 0%, var(--gold-3) 18%, var(--gold-1) 34%, var(--gold-2) 48%, var(--gold-3) 62%, var(--gold-1) 78%, var(--gold-3) 100%);
     --holo: linear-gradient(115deg, #ff3fd8, #44e7ff 25%, #ffe45c 50%, #7a5cff 75%, #ff3fd8);
     --radius: 14px;
+    /* Great Vibes capital F is truncated at xMax in the font;
+       this mask is the same outline with the top-right swash tip restored. */
+    --flair-f-mask: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%2226%200%201570%20844%22%3E%3Cg%20transform%3D%22translate%280%20743%29%20scale%281%20-1%29%22%3E%3Cpath%20fill%3D%22white%22%20d%3D%22M388%20-101Q278%20-101%20196.5%20-67.0Q115%20-33%2070.5%2026.5Q26%2086%2026%20162Q26%20224%2048.0%20275.0Q70%20326%20106.5%20360.0Q143%20394%20187%20405Q194%20406%20194%20400Q194%20395%20189%20392Q137%20361%20109.5%20303.0Q82%20245%2082%20174Q82%2097%20122.0%2041.5Q162%20-14%20231.5%20-43.5Q301%20-73%20388%20-73Q463%20-73%20530.5%20-46.5Q598%20-20%20655.0%2026.0Q712%2072%20757.5%20130.5Q803%20189%20834%20253Q841%20268%20848.0%20282.0Q855%20296%20862%20310Q838%20311%20818.5%20312.0Q799%20313%20792%20313Q765%20313%20734.5%20309.5Q704%20306%20677.5%20296.0Q651%20286%20634%20265Q627%20258%20625.5%20254.0Q624%20250%20621%20250Q617%20250%20614.0%20256.5Q611%20263%20615%20271Q638%20322%20680.0%20340.5Q722%20359%20774%20359Q785%20359%20815.5%20355.5Q846%20352%20880%20348Q924%20437%20960.5%20509.0Q997%20581%201029%20629Q957%20653%20876.0%20671.5Q795%20690%20702%20690Q633%20690%20577.0%20671.0Q521%20652%20481.5%20620.0Q442%20588%20421.0%20549.0Q400%20510%20400%20471Q400%20427%20417.0%20401.0Q434%20375%20461.5%20363.5Q489%20352%20518%20352Q561%20352%20591.5%20373.0Q622%20394%20640.0%20420.5Q658%20447%20662%20464Q666%20480%20674%20480Q686%20480%20684%20466Q678%20422%20653.0%20390.0Q628%20358%20592.0%20341.5Q556%20325%20516%20325Q475%20325%20437.0%20345.0Q399%20365%20375.0%20403.0Q351%20441%20351%20495Q351%20539%20370.5%20582.5Q390%20626%20429.5%20662.5Q469%20699%20530.0%20721.0Q591%20743%20674%20743Q733%20743%20795.0%20729.5Q857%20716%20920.5%20695.5Q984%20675%201046%20653Q1067%20680%201086.0%20694.5Q1105%20709%201124%20709Q1132%20709%201135.0%20705.5Q1138%20702%201138%20699Q1138%20695%201135.0%20690.0Q1132%20685%201124%20685Q1091%20685%201062%20648Q1134%20624%201200.5%20605.5Q1267%20587%201324%20587Q1368%20587%201382.0%20596.5Q1396%20606%201396%20623Q1412%20640%201450%20655Q1490%20670%201525%20655Q1555%20642%201575%20622Q1585%20612%201588%20605Q1585%20598%201575%20588Q1555%20568%201520%20558Q1480%20548%201435%20552Q1385%20555%201317%20558Q1255%20558%201188.0%20578.5Q1121%20599%201046%20624Q1019%20579%20993.0%20506.5Q967%20434%20932%20343Q975%20339%201023.0%20336.5Q1071%20334%201101%20334Q1111%20334%201111%20328Q1111%20320%201088%20314Q1073%20310%201037.5%20308.0Q1002%20306%20964%20306Q956%20306%20944.0%20306.5Q932%20307%20918%20307Q909%20284%20899.5%20260.5Q890%20237%20879%20212Q837%20113%20776.5%2051.5Q716%20-10%20647.5%20-43.5Q579%20-77%20511.5%20-89.0Q444%20-101%20388%20-101Z%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E");
   }
 
   * { box-sizing: border-box; }
@@ -110,26 +113,28 @@
     align-items: flex-end;
     gap: 0;
     margin: 0;
-    padding: 0.22em 0.15em 0.08em 0.08em;
+    padding: 0.18em 0.12em 0.08em 0.04em;
     overflow: visible;
     line-height: 1;
     filter: drop-shadow(0 6px 22px rgba(242, 199, 92, 0.25));
   }
   .brand-mark .f {
+    /* Foil paint through a patched F mask — Great Vibes chops the tip at xMax. */
     position: relative;
     z-index: 1;
-    font-family: "Great Vibes", "Pinyon Script", cursive;
+    display: inline-block;
+    width: 1.57em;
+    height: 0.84em;
+    margin: 0 -0.48em -0.02em 0;
+    padding: 0;
     font-size: clamp(88px, 13vw, 150px);
-    font-weight: 400;
-    line-height: 1;
-    margin: 0 -0.1em 0 0;
-    padding: 0.12em 0.06em 0.02em 0.04em;
+    line-height: 0;
+    vertical-align: baseline;
     overflow: visible;
     background: var(--foil);
     background-size: 200% 100%;
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
+    -webkit-mask: var(--flair-f-mask) left center / contain no-repeat;
+    mask: var(--flair-f-mask) left center / contain no-repeat;
     animation: foil-shift 6s ease-in-out infinite;
   }
   .brand-mark .word {
@@ -249,7 +254,11 @@
   .brand-checklist::after { bottom: 0; }
 
   html[data-darkreader-mode] .brand-mark .f,
-  html[data-darkreader-scheme] .brand-mark .f,
+  html[data-darkreader-scheme] .brand-mark .f {
+    background: var(--gold-1) !important;
+    -webkit-text-fill-color: transparent !important;
+    animation: none !important;
+  }
   html[data-darkreader-mode] .brand-mark .lair,
   html[data-darkreader-scheme] .brand-mark .lair,
   html[data-darkreader-mode] .brand-edition,
@@ -1012,10 +1021,13 @@
     line-height: 1; color: #8a5a12; flex: 0 0 auto;
   }
   .print-brand-mark .f {
-    font-family: "Great Vibes", "Pinyon Script", cursive;
-    font-size: 34px; font-weight: 400; line-height: 1;
-    margin: 0 -0.08em 0 0; padding: 0.05em 0.04em 0 0.02em;
-    color: #8a5a12;
+    display: inline-block;
+    width: 1.57em; height: 0.84em;
+    font-size: 34px; line-height: 0;
+    margin: 0 -0.48em -0.02em 0; padding: 0;
+    background: #8a5a12;
+    -webkit-mask: var(--flair-f-mask) left center / contain no-repeat;
+    mask: var(--flair-f-mask) left center / contain no-repeat;
   }
   .print-brand-mark .word { position: relative; display: inline-block; padding-top: 0.38em; }
   .print-brand-mark .yr {
@@ -1399,7 +1411,7 @@
   <div>
     <div class="brand" role="group" aria-label="'94 Flair Presents the Marvel Universe Inaugural Edition — Masterset Checklist">
       <div class="brand-mark" aria-hidden="true">
-        <span class="f">F</span>
+        <span class="f"></span>
         <span class="word">
           <span class="yr">'94</span>
           <span class="lair">LAIR<span class="tm">™</span></span>
@@ -1472,7 +1484,7 @@
     <div class="print-head-row">
       <div class="print-brand-row">
         <div class="print-brand-mark" aria-hidden="true">
-          <span class="f">F</span>
+          <span class="f"></span>
           <span class="word">
             <span class="yr">'94</span>
             <span class="lair">LAIR<span class="tm">™</span></span>
