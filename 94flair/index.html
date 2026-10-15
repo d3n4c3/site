@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>1994 Flair Marvel Universe &mdash; Collector Checklist</title>
+<title>'94 Flair Presents the Marvel Universe &mdash; Masterset Checklist</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Anton&family=Cinzel:wght@600;800&family=Inter:wght@400;500;600;700&family=Oswald:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Cinzel:wght@600;700;800&family=Great+Vibes&family=Inter:wght@400;500;600;700&family=Oswald:wght@400;500;600&family=Pinyon+Script&display=swap" rel="stylesheet">
 <style>
   :root {
     --ink: #07060b;
@@ -80,7 +80,7 @@
     align-items: center;
     gap: 40px;
     padding: 72px max(6vw, 24px) 96px;
-    overflow: hidden;
+    overflow: visible;
     isolation: isolate;
   }
   .hero::before {
@@ -97,45 +97,178 @@
       linear-gradient(0deg, var(--ink) 0%, transparent 35%);
     z-index: -1;
   }
-  .eyebrow {
-    display: inline-flex; align-items: center; gap: 10px;
-    font-family: "Oswald", sans-serif;
-    letter-spacing: 0.32em; text-transform: uppercase;
-    font-size: 13px; color: var(--gold-2);
+  /* Open brand stack — CSS type, room for script F flourishes */
+  .brand {
+    position: relative;
+    margin: 0 0 6px;
+    max-width: 640px;
+    overflow: visible;
   }
-  .eyebrow::before { content: ""; width: 38px; height: 2px; background: var(--foil); }
-  .marvel-tag {
-    display: inline-block;
-    margin: 22px 0 6px;
-    padding: 6px 14px 4px;
-    background: var(--red);
-    font-family: "Anton", sans-serif;
-    font-size: clamp(22px, 3vw, 34px);
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
-    color: #fff;
-    box-shadow: 0 10px 30px rgba(227, 38, 47, 0.35);
-  }
-  .hero h1 {
+  .brand-mark {
+    position: relative;
+    display: inline-flex;
+    align-items: flex-end;
+    gap: 0;
     margin: 0;
+    padding: 0.22em 0.15em 0.08em 0.08em;
+    overflow: visible;
+    line-height: 1;
+    filter: drop-shadow(0 6px 22px rgba(242, 199, 92, 0.25));
+  }
+  .brand-mark .f {
+    position: relative;
+    z-index: 1;
+    font-family: "Great Vibes", "Pinyon Script", cursive;
+    font-size: clamp(88px, 13vw, 150px);
+    font-weight: 400;
+    line-height: 1;
+    margin: 0 -0.1em 0 0;
+    padding: 0.12em 0.06em 0.02em 0.04em;
+    overflow: visible;
+    background: var(--foil);
+    background-size: 200% 100%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: foil-shift 6s ease-in-out infinite;
+  }
+  .brand-mark .word {
+    position: relative;
+    z-index: 2;
+    display: inline-block;
+    padding-top: 0.55em;
+  }
+  .brand-mark .yr {
+    /* Sit right above the top of the L */
+    position: absolute;
+    left: 0.40em;
+    top: -0.3em;
+    font-family: "Cinzel", serif;
+    font-weight: 700;
+    font-size: clamp(15px, 2vw, 22px);
+    letter-spacing: 0.04em;
+    color: var(--gold-2);
+    -webkit-text-fill-color: var(--gold-2);
+    line-height: 1;
+    white-space: nowrap;
+    z-index: 3;
+  }
+  .brand-mark .lair {
+    display: block;
     font-family: "Cinzel", serif;
     font-weight: 800;
-    font-size: clamp(64px, 11vw, 150px);
-    line-height: 0.92;
-    letter-spacing: 0.02em;
-    filter: drop-shadow(0 6px 24px rgba(242, 199, 92, 0.25));
+    font-size: clamp(48px, 8.5vw, 108px);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    background: var(--foil);
+    background-size: 200% 100%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: foil-shift 6s ease-in-out infinite;
   }
-  .hero h1 small {
-    display: block;
-    font-size: 0.32em;
-    letter-spacing: 0.18em;
-    margin-top: 10px;
+  .brand-mark .tm {
+    font-size: 0.22em;
+    vertical-align: super;
+    letter-spacing: 0;
+    margin-left: 0.06em;
   }
+
+  .brand-line {
+    margin: 10px 0 0;
+    font-family: "Cinzel", serif;
+    font-weight: 700;
+    font-size: clamp(12px, 1.5vw, 15px);
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: #ece6d9;
+    line-height: 1.45;
+  }
+  .brand-line .sep {
+    margin: 0 0.55em;
+    color: var(--gold-3);
+    letter-spacing: 0;
+  }
+  .brand-line .years {
+    color: var(--gold-2);
+    letter-spacing: 0.3em;
+  }
+
+  .brand-edition {
+    margin: 4px 0 0;
+    font-family: "Pinyon Script", "Great Vibes", cursive;
+    font-size: clamp(34px, 4.8vw, 60px);
+    line-height: 1.15;
+    padding-top: 0.05em;
+    padding-left: 0.5em;
+    background: var(--foil);
+    background-size: 200% 100%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: foil-shift 6s ease-in-out infinite;
+  }
+
+  /* Outer shell owns the matched rules; foil lives on the inner span so
+     background-clip/filter cannot distort the line widths. */
+  .brand-checklist {
+    position: relative;
+    display: inline-block;
+    margin: 20px 0 0;
+    padding: 10px 0;
+    font-family: "Anton", sans-serif;
+    font-weight: 400;
+    font-size: clamp(30px, 4.6vw, 48px);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    line-height: 1;
+    color: var(--gold-2);
+  }
+  .brand-checklist > span {
+    display: inline-block;
+    background: var(--foil);
+    background-size: 200% 100%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: foil-shift 6s ease-in-out infinite;
+    filter: drop-shadow(0 4px 18px rgba(227, 38, 47, 0.22));
+  }
+  .brand-checklist::before,
+  .brand-checklist::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, var(--red), var(--gold-2) 55%, var(--red-deep));
+    border-radius: 2px;
+    pointer-events: none;
+  }
+  .brand-checklist::before { top: 0; }
+  .brand-checklist::after { bottom: 0; }
+
+  html[data-darkreader-mode] .brand-mark .f,
+  html[data-darkreader-scheme] .brand-mark .f,
+  html[data-darkreader-mode] .brand-mark .lair,
+  html[data-darkreader-scheme] .brand-mark .lair,
+  html[data-darkreader-mode] .brand-edition,
+  html[data-darkreader-scheme] .brand-edition,
+  html[data-darkreader-mode] .brand-checklist > span,
+  html[data-darkreader-scheme] .brand-checklist > span {
+    background: none !important;
+    -webkit-background-clip: border-box !important;
+    background-clip: border-box !important;
+    color: var(--gold-1) !important;
+    -webkit-text-fill-color: var(--gold-1) !important;
+    animation: none !important;
+  }
+
   .hero p.lede {
     max-width: 540px;
     color: #d6cfc2;
     font-size: 17px;
-    margin: 22px 0 28px;
+    margin: 18px 0 28px;
   }
   .chips { display: flex; flex-wrap: wrap; gap: 10px; }
   .chip {
@@ -716,7 +849,7 @@
     .viewer .v-card { transition: none; }
   }
   @media print {
-    .viewer, .tile .thumb, .sheet .zoom-btn, .mini img, .ref-block { display: none !important; }
+    .viewer, .tile .thumb, .sheet .zoom-btn, .mini img { display: none !important; }
     .tile.has-thumb, .split .tile.has-thumb, .spec .tile.has-thumb { grid-template-columns: 14px 26px 1fr; gap: 6px; padding: 2px 0; }
     .tile.has-thumb > .no { display: grid; }
     .split .tile .no, .spec .tile .no { font-size: 11px; }
@@ -823,32 +956,64 @@
     .tl { padding: 10px; }
   }
 
-  /* ---------- PRINT: professional colored checklist sheet ---------- */
+  /* ---------- PRINT: masterset checklist sheet ---------- */
   .print-head,
   .print-facts { display: none; }
   .print-head {
-    align-items: center; justify-content: space-between; gap: 16px;
-    padding: 0 0 10px; margin: 0 0 8px;
+    align-items: flex-end; justify-content: space-between; gap: 18px;
+    padding: 0 0 12px; margin: 0 0 10px;
     border-bottom: 3px solid #e3262f;
   }
-  .print-brand { display: flex; align-items: center; gap: 12px; min-width: 0; }
-  .print-mark {
-    flex: none;
-    background: #e3262f; color: #fff;
-    font-family: "Anton", sans-serif; font-size: 13px; letter-spacing: .06em;
-    padding: 7px 10px; border-radius: 4px; line-height: 1;
+  .print-brand { display: flex; flex-direction: column; align-items: flex-start; gap: 0; min-width: 0; }
+  .print-brand-mark {
+    display: inline-flex; align-items: flex-end; gap: 0;
+    line-height: 1; color: #8a5a12;
   }
-  .print-titles h1 {
-    margin: 0;
-    font-family: "Cinzel", serif; font-size: 24px; line-height: 1.05;
-    color: #1a1205; font-weight: 700;
+  .print-brand-mark .f {
+    font-family: "Great Vibes", "Pinyon Script", cursive;
+    font-size: 54px; font-weight: 400; line-height: 1;
+    margin: 0 -0.08em 0 0; padding: 0.08em 0.04em 0 0.02em;
+    color: #8a5a12;
   }
-  .print-sub {
-    margin: 3px 0 0;
-    font-family: "Oswald", sans-serif; font-size: 9.5px;
-    letter-spacing: .14em; text-transform: uppercase; color: #8a6a24;
+  .print-brand-mark .word { position: relative; display: inline-block; padding-top: 0.45em; }
+  .print-brand-mark .yr {
+    position: absolute; left: 0.40em; top: -0.3em;
+    font-family: "Cinzel", serif; font-weight: 700; font-size: 11px;
+    letter-spacing: 0.04em; color: #8a5a12; line-height: 1; white-space: nowrap;
   }
-  .print-meta { text-align: right; flex: none; }
+  .print-brand-mark .lair {
+    display: block;
+    font-family: "Cinzel", serif; font-weight: 800; font-size: 32px;
+    letter-spacing: 0.08em; text-transform: uppercase; color: #8a5a12;
+  }
+  .print-brand-mark .tm { font-size: 0.22em; vertical-align: super; margin-left: 0.06em; }
+  .print-brand-line {
+    margin: 4px 0 0;
+    font-family: "Cinzel", serif; font-weight: 700; font-size: 8px;
+    letter-spacing: 0.22em; text-transform: uppercase; color: #5c4a22;
+  }
+  .print-brand-line .sep { margin: 0 0.4em; color: #b8862b; letter-spacing: 0; }
+  .print-brand-line .years { color: #8a5a12; }
+  .print-brand-edition {
+    margin: 1px 0 0; padding-left: 0.5em;
+    font-family: "Pinyon Script", "Great Vibes", cursive; font-size: 18px;
+    line-height: 1.1; color: #8a5a12;
+  }
+  .print-brand-checklist {
+    position: relative; display: inline-block;
+    margin: 8px 0 0; padding: 6px 0;
+    font-family: "Anton", sans-serif; font-weight: 400; font-size: 16px;
+    letter-spacing: 0.1em; text-transform: uppercase; line-height: 1; color: #8a5a12;
+  }
+  .print-brand-checklist::before,
+  .print-brand-checklist::after {
+    content: ""; position: absolute; left: 0; width: 100%; height: 2.5px;
+    background: linear-gradient(90deg, #e3262f, #f2c75c 55%, #8f0f16);
+    border-radius: 1px;
+  }
+  .print-brand-checklist::before { top: 0; }
+  .print-brand-checklist::after { bottom: 0; }
+  .print-meta { text-align: right; flex: none; align-self: flex-start; padding-top: 8px; }
   .print-progress {
     display: inline-block;
     font-family: "Oswald", sans-serif; font-size: 11px; letter-spacing: .08em; text-transform: uppercase;
@@ -878,14 +1043,15 @@
     .print-key { display: flex !important; }
     .print-facts {
       display: block !important;
-      margin: 0 0 12px; padding: 6px 10px;
+      margin: 0 0 12px; padding: 7px 10px;
       background: #faf6ec; border: 1px solid #e8d9a8; border-radius: 6px;
-      font-size: 8px; color: #5c4a22; line-height: 1.35;
+      font-size: 8px; color: #5c4a22; line-height: 1.45;
     }
+    .print-facts b { color: #8a5a12; }
     main { padding: 0; }
     section { margin-top: 16px; break-inside: auto; }
 
-    /* Section banners */
+    /* Section banners — keep intro copy so the sheet still explains each set */
     .banner, .banner.plain {
       min-height: 0; padding: 8px 10px; margin-bottom: 8px; border-radius: 6px;
       border: 1px solid #e0c97a; border-left: 4px solid #e3262f;
@@ -897,10 +1063,18 @@
     .banner h2 .holo-text, .banner h2 .foil-text {
       color: #8a5a12; background: none; -webkit-text-fill-color: #8a5a12;
     }
-    .banner p { display: none; }
+    .banner p {
+      display: block !important; margin: 3px 0 0; max-width: none;
+      font-size: 8px; color: #5c4a22; line-height: 1.35;
+    }
     .banner .count .big { font-size: 15px; color: #1a1205; }
     .banner .count .big span { color: #8a6a24; font-size: 11px; }
     .banner .count .meter { display: none; }
+    /* Restore comic/magazine reference lists that the early print rule hid */
+    .ref-block { display: block !important; margin-top: 14px; break-inside: avoid; }
+    .ref-block h3 { font-size: 10px; color: #8a5a12; margin: 0 0 4px; }
+    .ref-block p, .ref-block .sub-note { font-size: 7.5px; color: #5c4a22; margin: 0 0 4px; }
+    .sub-note { display: block !important; }
 
     .grid { grid-template-columns: repeat(3, 1fr); gap: 0 12px; }
     .sheets { grid-template-columns: repeat(3, 1fr); gap: 6px 12px; }
@@ -1082,9 +1256,18 @@
 
 <header class="hero">
   <div>
-    <span class="eyebrow">Fleer &middot; 1994 &middot; Inaugural Edition</span><br>
-    <span class="marvel-tag">Marvel Universe</span>
-    <h1 class="foil-text">'94 Flair<small>Collector Checklist</small></h1>
+    <div class="brand" role="group" aria-label="'94 Flair Presents the Marvel Universe Inaugural Edition — Masterset Checklist">
+      <div class="brand-mark" aria-hidden="true">
+        <span class="f">F</span>
+        <span class="word">
+          <span class="yr">'94</span>
+          <span class="lair">LAIR<span class="tm">™</span></span>
+        </span>
+      </div>
+      <p class="brand-line">Presents the Marvel Universe<span class="sep">&middot;</span><span class="years">1961&ndash;1993</span></p>
+      <p class="brand-edition">Inaugural Edition</p>
+      <h1 class="brand-checklist"><span>Masterset Checklist</span></h1>
+    </div>
     <p class="lede">The premium painted set that raised the bar: thick glossy card stock, full-bleed art, and gold-foil stamping. Click any card to mark it as yours. Your progress saves automatically in this browser.</p>
     <div class="chips">
       <span class="chip"><b>150</b>Base Cards</span>
@@ -1146,11 +1329,16 @@
 <main>
   <div class="print-head">
     <div class="print-brand">
-      <div class="print-mark">MARVEL</div>
-      <div class="print-titles">
-        <h1>'94 Flair Universe</h1>
-        <p class="print-sub">Collector Checklist &middot; Fleer Inaugural Edition &middot; 1994</p>
+      <div class="print-brand-mark" aria-hidden="true">
+        <span class="f">F</span>
+        <span class="word">
+          <span class="yr">'94</span>
+          <span class="lair">LAIR<span class="tm">™</span></span>
+        </span>
       </div>
+      <p class="print-brand-line">Presents the Marvel Universe<span class="sep">&middot;</span><span class="years">1961&ndash;1993</span></p>
+      <p class="print-brand-edition">Inaugural Edition</p>
+      <div class="print-brand-checklist">Masterset Checklist</div>
     </div>
     <div class="print-meta">
       <div class="print-progress" id="printProgress"></div>
@@ -1160,7 +1348,11 @@
       </div>
     </div>
   </div>
-  <p class="print-facts">Box: 24 packs of 10 &middot; Powerblast 1:2 packs &middot; Flairprints 1/case &middot; ~1.52 base sets/box</p>
+  <div class="print-facts">
+    <b>Set</b> 150 base &middot; 18 Powerblast &middot; 10 Flairprints &middot; 5 binder inserts &middot; 15 promos &amp; sheets &middot; 3 print ads<br>
+    <b>Box</b> 24 packs &times; 10 cards &middot; Powerblast 1:2 packs &middot; Flairprints 1/case &middot; ~1.52 base sets/box &middot; Pack covers: Venom, Magneto, Cyclops, Wolverine<br>
+    <b>Notes</b> No base #6 &middot; Iron Man misnumbered as a second #8 &middot; Binder inserts verified in sealed &rsquo;95 Fleer Ultra X-Men binders (2&ndash;3 per binder)
+  </div>
 
   <section id="base">
     <div class="banner plain">
