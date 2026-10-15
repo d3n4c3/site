@@ -969,7 +969,7 @@
   }
   .print-brand {
     display: flex; flex-direction: column; align-items: flex-start;
-    gap: 0; min-width: 0; flex: 1 1 auto; max-width: 62%;
+    gap: 0; min-width: 0; flex: 1 1 auto; max-width: none;
   }
   .print-brand-mark {
     display: inline-flex; align-items: flex-end; gap: 0;
@@ -1055,22 +1055,25 @@
     .hero, .toolbar, .dash, .toast, .feature, .banner .bg, footer .actions { display: none !important; }
     .print-head {
       display: flex !important;
-      align-items: flex-start; justify-content: space-between; gap: 14px;
+      align-items: flex-start; justify-content: space-between; gap: 18px;
       padding: 0 0 8px; margin: 0 0 8px;
       border-bottom: 1.5px solid #e0c97a;
       break-after: avoid; page-break-after: avoid;
     }
-    .print-brand { max-width: 68%; flex: 1 1 auto; }
+    .print-brand { flex: 1 1 auto; min-width: 0; max-width: none; }
     .print-key { display: flex !important; }
     .print-facts {
       display: block !important;
-      margin: 5px 0 0; padding: 4px 7px;
+      margin: 5px 0 0; padding: 5px 8px;
       background: #faf6ec; border: 1px solid #e8d9a8; border-radius: 4px;
-      font-size: 6.5px; color: #5c4a22; line-height: 1.35;
-      max-width: 34em; width: auto;
+      font-size: 7px; color: #5c4a22; line-height: 1.4;
+      width: 100%; max-width: 100%; box-sizing: border-box;
     }
     .print-facts b { color: #8a5a12; }
-    .print-meta { flex: 0 0 auto; align-self: flex-start; padding-top: 4px; }
+    .print-meta {
+      flex: 0 0 auto; align-self: flex-start; padding-top: 4px;
+      margin-left: auto;
+    }
     main { padding: 0; }
     section { margin-top: 12px; break-inside: auto; page-break-inside: auto; }
     /*
