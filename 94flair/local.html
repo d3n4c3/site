@@ -81,7 +81,7 @@
     align-items: center;
     gap: 40px;
     padding: 72px max(6vw, 24px) 96px;
-    overflow: hidden;
+    overflow: visible;
     isolation: isolate;
   }
   .hero::before {
@@ -98,22 +98,84 @@
       linear-gradient(0deg, var(--ink) 0%, transparent 35%);
     z-index: -1;
   }
-  /* Authentic Flair wordmark + open brand stack */
+  /* Open brand stack — CSS type, room for script F flourishes */
   .brand {
     position: relative;
     margin: 0 0 6px;
     max-width: 640px;
+    overflow: visible;
   }
   .brand-mark {
-    display: block;
-    width: min(100%, 520px);
-    height: auto;
+    position: relative;
+    display: inline-flex;
+    align-items: flex-end;
+    gap: 0;
     margin: 0;
-    filter: drop-shadow(0 8px 28px rgba(242, 199, 92, 0.28));
+    padding: 0.22em 0.15em 0.08em 0.08em;
+    overflow: visible;
+    line-height: 1;
+    filter: drop-shadow(0 6px 22px rgba(242, 199, 92, 0.25));
+  }
+  .brand-mark .f {
+    position: relative;
+    z-index: 1;
+    font-family: "Great Vibes", "Pinyon Script", cursive;
+    font-size: clamp(88px, 13vw, 150px);
+    font-weight: 400;
+    line-height: 1;
+    margin: 0 -0.1em 0 0;
+    padding: 0.12em 0.06em 0.02em 0.04em;
+    overflow: visible;
+    background: var(--foil);
+    background-size: 200% 100%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: foil-shift 6s ease-in-out infinite;
+  }
+  .brand-mark .word {
+    position: relative;
+    z-index: 2;
+    display: inline-block;
+    padding-top: 0.55em;
+  }
+  .brand-mark .yr {
+    position: absolute;
+    left: 0.12em;
+    top: 0.06em;
+    font-family: "Cinzel", serif;
+    font-weight: 700;
+    font-size: clamp(16px, 2.1vw, 24px);
+    letter-spacing: 0.06em;
+    color: var(--gold-2);
+    -webkit-text-fill-color: var(--gold-2);
+    line-height: 1;
+    white-space: nowrap;
+  }
+  .brand-mark .lair {
+    display: block;
+    font-family: "Cinzel", serif;
+    font-weight: 800;
+    font-size: clamp(48px, 8.5vw, 108px);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    line-height: 0.92;
+    background: var(--foil);
+    background-size: 200% 100%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: foil-shift 6s ease-in-out infinite;
+  }
+  .brand-mark .tm {
+    font-size: 0.22em;
+    vertical-align: super;
+    letter-spacing: 0;
+    margin-left: 0.06em;
   }
 
   .brand-line {
-    margin: 16px 0 0;
+    margin: 10px 0 0;
     font-family: "Cinzel", serif;
     font-weight: 700;
     font-size: clamp(12px, 1.5vw, 15px);
@@ -136,7 +198,8 @@
     margin: 4px 0 0;
     font-family: "Pinyon Script", "Great Vibes", cursive;
     font-size: clamp(34px, 4.8vw, 48px);
-    line-height: 1.05;
+    line-height: 1.15;
+    padding-top: 0.05em;
     background: var(--foil);
     background-size: 200% 100%;
     -webkit-background-clip: text;
@@ -185,6 +248,10 @@
     box-shadow: 0 0 16px rgba(227, 38, 47, 0.55);
   }
 
+  html[data-darkreader-mode] .brand-mark .f,
+  html[data-darkreader-scheme] .brand-mark .f,
+  html[data-darkreader-mode] .brand-mark .lair,
+  html[data-darkreader-scheme] .brand-mark .lair,
   html[data-darkreader-mode] .brand-edition,
   html[data-darkreader-scheme] .brand-edition,
   html[data-darkreader-mode] .brand-checklist,
@@ -1149,7 +1216,13 @@
 <header class="hero">
   <div>
     <div class="brand" role="group" aria-label="'94 Flair Presents the Marvel Universe Inaugural Edition — Collector Checklist">
-      <img class="brand-mark" src="images/flair-wordmark.png?v=5" width="520" height="168" alt="'94 Flair">
+      <div class="brand-mark" aria-hidden="true">
+        <span class="f">F</span>
+        <span class="word">
+          <span class="yr">'94</span>
+          <span class="lair">LAIR<span class="tm">™</span></span>
+        </span>
+      </div>
       <p class="brand-line">Presents the Marvel Universe<span class="sep">&middot;</span><span class="years">1961&ndash;1993</span></p>
       <p class="brand-edition">Inaugural Edition</p>
       <h1 class="brand-checklist">Collector Checklist</h1>
