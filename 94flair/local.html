@@ -140,13 +140,14 @@
     padding-top: 0.55em;
   }
   .brand-mark .yr {
+    /* Match box/pack mark: '94 nests in the F's upper loop, centered over the A in LAIR */
     position: absolute;
-    left: 0.12em;
-    top: 0.06em;
+    left: 0.16em;
+    top: 0.08em;
     font-family: "Cinzel", serif;
     font-weight: 700;
     font-size: clamp(16px, 2.1vw, 24px);
-    letter-spacing: 0.06em;
+    letter-spacing: 0.05em;
     color: var(--gold-2);
     -webkit-text-fill-color: var(--gold-2);
     line-height: 1;
@@ -227,26 +228,18 @@
     animation: foil-shift 6s ease-in-out infinite;
     filter: drop-shadow(0 4px 18px rgba(227, 38, 47, 0.22));
   }
-  .brand-checklist::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    height: 4px;
-    background: linear-gradient(90deg, var(--red), var(--gold-2) 55%, var(--red-deep));
-    border-radius: 2px;
-  }
+  .brand-checklist::before,
   .brand-checklist::after {
     content: "";
     position: absolute;
     left: 0;
-    width: 56px;
-    bottom: 0;
-    height: 3px;
-    background: var(--red);
-    box-shadow: 0 0 16px rgba(227, 38, 47, 0.55);
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--red), var(--gold-2) 55%, var(--red-deep));
+    border-radius: 2px;
   }
+  .brand-checklist::before { top: 0; }
+  .brand-checklist::after { bottom: 0; }
 
   html[data-darkreader-mode] .brand-mark .f,
   html[data-darkreader-scheme] .brand-mark .f,
