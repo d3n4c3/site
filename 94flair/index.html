@@ -850,8 +850,10 @@
   }
   @media print {
     .viewer, .tile .thumb, .sheet .zoom-btn, .mini img { display: none !important; }
-    .tile.has-thumb, .split .tile.has-thumb, .spec .tile.has-thumb { grid-template-columns: 14px 26px 1fr; gap: 6px; padding: 2px 0; }
-    .tile.has-thumb > .no { display: grid; }
+    .tile.has-thumb:not(.ref), .split .tile.has-thumb:not(.ref), .spec .tile.has-thumb:not(.ref) {
+      grid-template-columns: 14px 26px 1fr; gap: 6px; padding: 2px 0;
+    }
+    .tile.has-thumb:not(.ref) > .no { display: grid; }
     .split .tile .no, .spec .tile .no { font-size: 11px; }
     .mini .badge, .mini .own .badge { position: static; display: block; background: none; box-shadow: none; color: #111; font-size: 9px; padding: 0; }
   }
@@ -960,75 +962,87 @@
   .print-head,
   .print-facts { display: none; }
   .print-head {
-    align-items: flex-end; justify-content: space-between; gap: 18px;
-    padding: 0 0 10px; margin: 0 0 8px;
+    display: none;
+    align-items: flex-start; justify-content: space-between; gap: 16px;
+    padding: 0 0 8px; margin: 0 0 8px;
     border-bottom: 1px solid #e0c97a;
   }
-  .print-brand { display: flex; flex-direction: column; align-items: flex-start; gap: 0; min-width: 0; }
+  .print-brand {
+    display: flex; flex-direction: column; align-items: flex-start;
+    gap: 0; min-width: 0; flex: 1 1 auto; max-width: 62%;
+  }
   .print-brand-mark {
     display: inline-flex; align-items: flex-end; gap: 0;
     line-height: 1; color: #8a5a12;
   }
   .print-brand-mark .f {
     font-family: "Great Vibes", "Pinyon Script", cursive;
-    font-size: 54px; font-weight: 400; line-height: 1;
-    margin: 0 -0.08em 0 0; padding: 0.08em 0.04em 0 0.02em;
+    font-size: 42px; font-weight: 400; line-height: 1;
+    margin: 0 -0.08em 0 0; padding: 0.06em 0.04em 0 0.02em;
     color: #8a5a12;
   }
-  .print-brand-mark .word { position: relative; display: inline-block; padding-top: 0.45em; }
+  .print-brand-mark .word { position: relative; display: inline-block; padding-top: 0.4em; }
   .print-brand-mark .yr {
     position: absolute; left: 0.40em; top: -0.3em;
-    font-family: "Cinzel", serif; font-weight: 700; font-size: 11px;
+    font-family: "Cinzel", serif; font-weight: 700; font-size: 9px;
     letter-spacing: 0.04em; color: #8a5a12; line-height: 1; white-space: nowrap;
   }
   .print-brand-mark .lair {
     display: block;
-    font-family: "Cinzel", serif; font-weight: 800; font-size: 32px;
+    font-family: "Cinzel", serif; font-weight: 800; font-size: 24px;
     letter-spacing: 0.08em; text-transform: uppercase; color: #8a5a12;
   }
   .print-brand-mark .tm { font-size: 0.22em; vertical-align: baseline; margin-left: 0.06em; }
   .print-brand-line {
-    margin: 4px 0 0;
-    font-family: "Cinzel", serif; font-weight: 700; font-size: 8px;
-    letter-spacing: 0.22em; text-transform: uppercase; color: #5c4a22;
+    margin: 2px 0 0;
+    font-family: "Cinzel", serif; font-weight: 700; font-size: 7px;
+    letter-spacing: 0.2em; text-transform: uppercase; color: #5c4a22;
   }
-  .print-brand-line .sep { margin: 0 0.4em; color: #b8862b; letter-spacing: 0; }
+  .print-brand-line .sep { margin: 0 0.35em; color: #b8862b; letter-spacing: 0; }
   .print-brand-line .years { color: #8a5a12; }
   .print-brand-edition {
-    margin: 1px 0 0; padding-left: 0.5em;
-    font-family: "Pinyon Script", "Great Vibes", cursive; font-size: 18px;
-    line-height: 1.1; color: #8a5a12;
+    margin: 0; padding-left: 0.45em;
+    font-family: "Pinyon Script", "Great Vibes", cursive; font-size: 14px;
+    line-height: 1.05; color: #8a5a12;
   }
   .print-brand-checklist {
     position: relative; display: inline-block;
-    margin: 8px 0 0; padding: 6px 0;
-    font-family: "Anton", sans-serif; font-weight: 400; font-size: 16px;
+    margin: 5px 0 0; padding: 4px 0;
+    font-family: "Anton", sans-serif; font-weight: 400; font-size: 13px;
     letter-spacing: 0.1em; text-transform: uppercase; line-height: 1; color: #8a5a12;
   }
   .print-brand-checklist::before,
   .print-brand-checklist::after {
-    content: ""; position: absolute; left: 0; width: 100%; height: 2.5px;
+    content: ""; position: absolute; left: 0; width: 100%; height: 2px;
     background: linear-gradient(90deg, #e3262f, #f2c75c 55%, #8f0f16);
     border-radius: 1px;
   }
   .print-brand-checklist::before { top: 0; }
   .print-brand-checklist::after { bottom: 0; }
-  .print-meta { text-align: right; flex: none; align-self: flex-start; padding-top: 8px; }
+  .print-facts {
+    display: none;
+    margin: 5px 0 0; padding: 4px 6px;
+    background: #faf6ec; border: 1px solid #e8d9a8; border-radius: 4px;
+    font-size: 6.5px; color: #5c4a22; line-height: 1.35;
+    max-width: 34em; width: auto; box-sizing: border-box;
+  }
+  .print-facts b { color: #8a5a12; }
+  .print-meta { text-align: right; flex: 0 0 auto; padding-top: 2px; align-self: flex-start; }
   .print-progress {
     display: inline-block;
-    font-family: "Oswald", sans-serif; font-size: 11px; letter-spacing: .08em; text-transform: uppercase;
+    font-family: "Oswald", sans-serif; font-size: 10px; letter-spacing: .08em; text-transform: uppercase;
     color: #1a1205; background: linear-gradient(180deg, #fff4c8, #f2c75c);
-    border: 1px solid #b8862b; border-radius: 999px; padding: 5px 12px; font-weight: 600;
+    border: 1px solid #b8862b; border-radius: 999px; padding: 4px 10px; font-weight: 600;
   }
   .print-key {
     display: none;
-    margin-top: 6px; justify-content: flex-end; gap: 10px;
-    font-family: "Oswald", sans-serif; font-size: 8.5px;
+    margin-top: 5px; justify-content: flex-end; gap: 8px;
+    font-family: "Oswald", sans-serif; font-size: 7.5px;
     letter-spacing: .08em; text-transform: uppercase; color: #666;
   }
-  .print-key-item { display: inline-flex; align-items: center; gap: 4px; }
+  .print-key-item { display: inline-flex; align-items: center; gap: 3px; }
   .print-key-box {
-    display: inline-block; width: 9px; height: 9px; border-radius: 2px; flex: none;
+    display: inline-block; width: 8px; height: 8px; border-radius: 2px; flex: none;
     box-sizing: border-box; padding: 0; margin: 0;
     border: 1.2px solid #b8862b; background: linear-gradient(180deg, #fff4c8, #f2c75c);
   }
@@ -1039,41 +1053,97 @@
     * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; color-adjust: exact !important; }
     body { background: #fff; color: #1a1205; font-size: 10px; }
     .hero, .toolbar, .dash, .toast, .feature, .banner .bg, footer .actions { display: none !important; }
-    .print-head { display: flex !important; }
+    .print-head {
+      display: flex !important;
+      align-items: flex-start; justify-content: space-between; gap: 14px;
+      padding: 0 0 8px; margin: 0 0 8px;
+      border-bottom: 1.5px solid #e0c97a;
+      break-after: avoid; page-break-after: avoid;
+    }
+    .print-brand { max-width: 68%; flex: 1 1 auto; }
     .print-key { display: flex !important; }
     .print-facts {
       display: block !important;
-      margin: 0 0 12px; padding: 7px 10px;
-      background: #faf6ec; border: 1px solid #e8d9a8; border-radius: 6px;
-      font-size: 8px; color: #5c4a22; line-height: 1.45;
+      margin: 5px 0 0; padding: 4px 7px;
+      background: #faf6ec; border: 1px solid #e8d9a8; border-radius: 4px;
+      font-size: 6.5px; color: #5c4a22; line-height: 1.35;
+      max-width: 34em; width: auto;
     }
     .print-facts b { color: #8a5a12; }
+    .print-meta { flex: 0 0 auto; align-self: flex-start; padding-top: 4px; }
     main { padding: 0; }
-    section { margin-top: 16px; break-inside: auto; }
+    section { margin-top: 12px; break-inside: auto; page-break-inside: auto; }
+    /* Keep major checklist areas on their own page starts — no section bleed */
+    #powerblast, #large, #promos, #print, #notes {
+      break-before: page; page-break-before: always;
+      margin-top: 0;
+    }
+    #base { break-before: auto; page-break-before: auto; margin-top: 0; }
 
     /* Section banners — keep intro copy so the sheet still explains each set */
     .banner, .banner.plain {
-      min-height: 0; padding: 8px 10px; margin-bottom: 8px; border-radius: 6px;
+      min-height: 0; padding: 6px 9px; margin-bottom: 6px; border-radius: 5px;
       border: 1px solid #e0c97a; border-left: 4px solid #e3262f;
       background: linear-gradient(90deg, #fff8e6, #fff) !important;
+      break-inside: avoid; page-break-inside: avoid;
+      break-after: avoid; page-break-after: avoid;
     }
     .banner::after { display: none; }
     .banner .kicker { color: #c1121f; font-size: 8px; letter-spacing: .22em; }
-    .banner h2 { font-size: 18px; color: #8a5a12; margin: 2px 0 0; }
+    .banner h2 { font-size: 16px; color: #8a5a12; margin: 2px 0 0; }
     .banner h2 .holo-text, .banner h2 .foil-text {
       color: #8a5a12; background: none; -webkit-text-fill-color: #8a5a12;
     }
     .banner p {
-      display: block !important; margin: 3px 0 0; max-width: none;
-      font-size: 8px; color: #5c4a22; line-height: 1.35;
+      display: block !important; margin: 2px 0 0; max-width: none;
+      font-size: 7.5px; color: #5c4a22; line-height: 1.3;
     }
-    .banner .count .big { font-size: 15px; color: #1a1205; }
-    .banner .count .big span { color: #8a6a24; font-size: 11px; }
+    .banner .count .big { font-size: 14px; color: #1a1205; }
+    .banner .count .big span { color: #8a6a24; font-size: 10px; }
     .banner .count .meter { display: none; }
-    /* Restore comic/magazine reference lists that the early print rule hid */
-    .ref-block { display: block !important; margin-top: 14px; break-inside: avoid; }
-    .ref-block h3 { font-size: 10px; color: #8a5a12; margin: 0 0 4px; }
-    .ref-block p, .ref-block .sub-note { font-size: 7.5px; color: #5c4a22; margin: 0 0 4px; }
+
+    /* Reference lists: text-only, full-width columns — no collapsed thumb gutters */
+    .ref-block {
+      display: block !important; margin-top: 10px;
+      break-inside: auto; page-break-inside: auto;
+    }
+    #print .ref-block:first-of-type {
+      break-before: page; page-break-before: always; margin-top: 0;
+    }
+    .ref-block h3, .ref-block .sub-h { font-size: 10px; color: #8a5a12; margin: 0 0 3px; }
+    .ref-block p, .ref-block .sub-note { font-size: 7px; color: #5c4a22; margin: 0 0 4px; }
+    .ref-block .grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+      gap: 0 12px;
+    }
+    .tile.ref,
+    .tile.ref.has-thumb,
+    .split .tile.ref,
+    .split .tile.ref.has-thumb {
+      display: block !important;
+      grid-template-columns: none !important;
+      grid-template-rows: none !important;
+      gap: 0 !important;
+      min-height: 0 !important;
+      padding: 3px 4px !important;
+      background: none !important;
+      border: 0 !important;
+      border-bottom: 1px dashed #e4d7a8 !important;
+      border-radius: 0 !important;
+      box-shadow: none !important;
+      transform: none !important;
+      break-inside: avoid; page-break-inside: avoid;
+    }
+    .tile.ref .thumb,
+    .tile.ref .box,
+    .tile.ref .no { display: none !important; }
+    .tile.ref .name {
+      font-size: 8.5px; font-weight: 700; color: #1a1205; line-height: 1.25;
+    }
+    .tile.ref .chars {
+      display: block; margin-top: 1px;
+      font-size: 7px; font-weight: 400; color: #666; line-height: 1.3;
+    }
     .sub-note { display: block !important; }
 
     .grid { grid-template-columns: repeat(3, 1fr); gap: 0 12px; }
@@ -1167,10 +1237,8 @@
     .spec::before { height: 3px; background: linear-gradient(90deg, #e3262f, #f2c75c); }
     .spec header { gap: 8px; margin: 4px 0 4px; }
     .spec h3 { font-size: 13px; color: #8a5a12; }
-    .packaging { grid-template-columns: repeat(5, minmax(0, 1fr)) !important; gap: 5px; margin-top: 6px; max-width: none; }
-    .packaging a { border-radius: 3px; border-color: #e0c97a; }
-    .packaging img { aspect-ratio: 3 / 4; }
-    .packaging figcaption { font-size: 6px; color: #666; margin-top: 2px; }
+    /* Information only — no pack / hobby box images on the print sheet */
+    .packaging { display: none !important; }
     .spec header small { font-size: 7px; color: #666; margin-top: 1px; }
     .spec-list { grid-template-columns: 62px 1fr; margin-bottom: 6px; border-color: #eadfbf; }
     .spec-list dt, .spec-list dd { padding: 2px 0; border-color: #eadfbf; }
@@ -1231,11 +1299,17 @@
     .note-card p, .note-card li { color: #333; font-size: 8.5px; margin: 2px 0; }
     .note-inline { border-top-color: #eadfbf; }
     .note-inline b { color: #c1121f; }
-    .banner, .sub-h, .spec header { break-after: avoid; }
-    .note-card, .tl, .sheet, .fact, .tell { break-inside: avoid; }
+    .banner, .sub-h, .spec header { break-after: avoid; page-break-after: avoid; }
+    .note-card, .tl, .sheet, .fact, .tell, .compare, .promo-facts, .timeline {
+      break-inside: avoid; page-break-inside: avoid;
+    }
+    /* Keep each major promo/ads chunk from splitting mid-block */
+    #promos .split, #promos .sheets { break-inside: avoid; page-break-inside: avoid; }
+    #print .timeline { break-after: avoid; page-break-after: avoid; }
     footer {
       border-top: 2px solid #e3262f; padding: 10px 0 0; margin-top: 14px;
       font-size: 8px; color: #666;
+      break-before: avoid; page-break-before: avoid;
     }
     footer a { color: #8a5a12; }
   }
@@ -1339,6 +1413,11 @@
       <p class="print-brand-line">Presents the Marvel Universe<span class="sep">&middot;</span><span class="years">1961&ndash;1993</span></p>
       <p class="print-brand-edition">Inaugural Edition</p>
       <div class="print-brand-checklist">Masterset Checklist</div>
+      <div class="print-facts">
+        <div><b>Set</b> 150 base &middot; 18 Powerblast &middot; 10 Flairprints &middot; 5 binder &middot; 15 promos/sheets &middot; 3 ads</div>
+        <div><b>Box</b> 24&times;10 &middot; PB 1:2 &middot; Flairprints 1/case &middot; ~1.52 sets/box &middot; Covers: Venom, Magneto, Cyclops, Wolverine</div>
+        <div><b>Notes</b> No #6 &middot; Iron Man as second #8 &middot; Binders in sealed &rsquo;95 Ultra X-Men (2&ndash;3 each)</div>
+      </div>
     </div>
     <div class="print-meta">
       <div class="print-progress" id="printProgress"></div>
@@ -1347,11 +1426,6 @@
         <span class="print-key-item"><span class="print-key-box is-need" aria-hidden="true"></span>Need</span>
       </div>
     </div>
-  </div>
-  <div class="print-facts">
-    <b>Set</b> 150 base &middot; 18 Powerblast &middot; 10 Flairprints &middot; 5 binder inserts &middot; 15 promos &amp; sheets &middot; 3 print ads<br>
-    <b>Box</b> 24 packs &times; 10 cards &middot; Powerblast 1:2 packs &middot; Flairprints 1/case &middot; ~1.52 base sets/box &middot; Pack covers: Venom, Magneto, Cyclops, Wolverine<br>
-    <b>Notes</b> No base #6 &middot; Iron Man misnumbered as a second #8 &middot; Binder inserts verified in sealed &rsquo;95 Fleer Ultra X-Men binders (2&ndash;3 per binder)
   </div>
 
   <section id="base">
