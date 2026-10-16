@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta name="x-flair-deploy" content="2026-10-16T22:57:32Z">
+<meta name="x-flair-deploy" content="2026-10-16T23:03:42Z">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>'94 Flair Presents the Marvel Universe &mdash; Masterset Checklist</title>
@@ -814,6 +814,15 @@
     object-fit: cover;
     transform: translate(-50%, -50%) rotate(90deg);
     transform-origin: center center;
+  }
+  /* Native landscape back files (Drive pack): already readable; fill the landscape frame, no rotate. */
+  .viewer .v-card.landscape-back.flipped .v-back img.landscape-native {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: none;
   }
   .viewer .v-blank {
     height: 100%; display: grid; place-items: center; padding: 12%; text-align: center;
@@ -2107,7 +2116,8 @@ const printSrc = name => `${artDir.replace("cards", "print")}/${name}.jpg`;
 const thumbOf = src => src.replace(/images\/(.+)-fx\/hd\//, "images/thumbs/$1/");
 // Powerblast backs not photographed yet
 const PB_BACK_MISSING = new Set([]);
-// Card backs designed to be read landscape (stored as portrait scans with sideways text).
+// Card backs designed to be read landscape (#1–134). New Drive scans are native landscape
+// files; older portrait-sideways scans still get a CSS rotate via img.landscape.
 const landscapeBaseBack = n => n >= 1 && n <= 134;
 
 // Promo art, keyed by tile id: [file in promo-fx, caption]
@@ -2540,8 +2550,12 @@ const viewer = (function cardViewer() {
 
   function frameAr(landscapeView) {
     if (landscapeView) {
-      const backImg = back.querySelector("img.landscape");
+      const backImg = back.querySelector("img.landscape, img.landscape-native");
       if (backImg && backImg.naturalWidth && backImg.naturalHeight) {
+        // Native landscape file: use width/height. Portrait-sideways scan: swap after CSS rotate.
+        if (backImg.classList.contains("landscape-native") || backImg.naturalWidth >= backImg.naturalHeight) {
+          return backImg.naturalWidth / backImg.naturalHeight;
+        }
         return backImg.naturalHeight / backImg.naturalWidth;
       }
       return 1024 / 738;
@@ -2552,6 +2566,12 @@ const viewer = (function cardViewer() {
   function applyFrame() {
     const landscapeView = card.classList.contains("landscape-back") && card.classList.contains("flipped");
     card.style.setProperty("--ar", frameAr(landscapeView));
+  }
+  function classifyLandscapeBack(img) {
+    if (!img || !img.naturalWidth || !img.naturalHeight) return;
+    const native = img.naturalWidth >= img.naturalHeight;
+    img.classList.toggle("landscape-native", native);
+    img.classList.toggle("landscape", !native);
   }
   function show(i) {
     index = (i + list.length) % list.length;
@@ -2567,8 +2587,12 @@ const viewer = (function cardViewer() {
     back.innerHTML = c.back ? `<img src="${c.back}" alt="Back of ${esc(c.name)}"${landscape ? ' class="landscape"' : ""}>`
       : c.backNote ? `<div class="v-blank"><div><b>Card back</b>${esc(c.backNote)}</div></div>` : "";
     if (landscape) {
-      const backImg = back.querySelector("img.landscape");
-      if (backImg) backImg.onload = () => applyFrame();
+      const backImg = back.querySelector("img.landscape, img.landscape-native");
+      if (backImg) {
+        const finish = () => { classifyLandscapeBack(backImg); applyFrame(); };
+        if (backImg.complete && backImg.naturalWidth) finish();
+        else backImg.onload = finish;
+      }
     }
     card.classList.toggle("no-back", !hasBack);
     card.classList.toggle("landscape-back", landscape);
