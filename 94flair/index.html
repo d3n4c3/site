@@ -797,12 +797,24 @@
     max-height: 70vh;
   }
   .viewer .v-card.no-back { cursor: default; }
+  /* No overflow:hidden on faces — it breaks backface-visibility in Firefox (mirrored front on flip). */
   .viewer .v-face {
-    position: absolute; inset: 0; border-radius: 14px; overflow: hidden; backface-visibility: hidden; -webkit-backface-visibility: hidden;
+    position: absolute; inset: 0; border-radius: 14px;
+    backface-visibility: hidden; -webkit-backface-visibility: hidden;
+    transform-style: preserve-3d;
     background: #0b0910; box-shadow: 0 0 0 2px rgba(242, 199, 92, 0.7), 0 40px 80px rgba(0, 0, 0, 0.7), 0 0 120px rgba(227, 38, 47, 0.35);
   }
-  .viewer .v-face img { display: block; width: 100%; height: 100%; object-fit: contain; }
-  .viewer .v-back { transform: rotateY(180deg); }
+  .viewer .v-face img {
+    display: block; width: 100%; height: 100%; object-fit: contain; border-radius: 14px;
+    backface-visibility: hidden; -webkit-backface-visibility: hidden;
+  }
+  .viewer .v-front { transform: translateZ(1px); }
+  .viewer .v-back { transform: rotateY(180deg) translateZ(1px); }
+  /* Firefox fallback: force the hidden face off once the flip class is set. */
+  @supports (-moz-appearance: none) {
+    .viewer .v-card.flipped .v-front { visibility: hidden; }
+    .viewer .v-card:not(.flipped) .v-back { visibility: hidden; }
+  }
   /* Portrait scans of landscape backs: size the img to the swapped box, then rotate flush to the frame.
      (rotate + fixed scale with object-fit:contain left letterbox gaps inside the gold border.) */
   .viewer .v-card.landscape-back.flipped .v-back img.landscape {
