@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta name="x-flair-deploy" content="2026-10-16T15:26:06Z">
+<meta name="x-flair-deploy" content="2026-10-16T15:47:21Z">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>'94 Flair Presents the Marvel Universe &mdash; Masterset Checklist</title>
@@ -1023,19 +1023,21 @@
   }
   .print-brand-mark .f {
     display: inline-block;
-    width: 1.57em; height: 0.84em;
+    /* Match screen mask proportions so '94 crook math stays predictable */
+    width: 1.57em; height: 0.899em;
     font-size: 34px; line-height: 0;
-    margin: 0 -0.48em -0.02em 0; padding: 0;
+    margin: 0 -0.55em 0.06em 0; padding: 0;
     background: #8a5a12;
     -webkit-mask: var(--flair-f-mask) left center / contain no-repeat;
     mask: var(--flair-f-mask) left center / contain no-repeat;
   }
-  .print-brand-mark .word { position: relative; display: inline-block; padding-top: 0.38em; }
+  .print-brand-mark .word { position: relative; display: inline-block; padding-top: 0.48em; }
   .print-brand-mark .yr {
-    /* Tuck into the F crook — was sitting on top of the swash */
-    position: absolute; left: 0.16em; top: 0.12em;
+    /* Nest in F crook: under swash, left of L, not on the L serif */
+    position: absolute; left: 0.22em; top: -0.42em;
     font-family: "Cinzel", serif; font-weight: 700; font-size: 5.5px;
     letter-spacing: 0.04em; color: #8a5a12; line-height: 1; white-space: nowrap;
+    z-index: 3;
   }
   .print-brand-mark .lair {
     display: block;
