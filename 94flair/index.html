@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta name="x-flair-deploy" content="2026-10-16T23:43:31Z">
+<meta name="x-flair-deploy" content="2026-10-16T23:49:24Z">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>'94 Flair Presents the Marvel Universe &mdash; Masterset Checklist</title>
@@ -1404,12 +1404,10 @@
     .note-inline { border-top-color: #eadfbf; }
     .note-inline b { color: #c1121f; }
     .banner, .sub-h, .spec header { break-after: avoid; page-break-after: avoid; }
-    .note-card, .tl, .sheet, .fact, .tell, .compare, .promo-facts, .timeline {
+    /* Avoid mid-item splits; let dense promo grids and the timeline paginate. */
+    .note-card, .tl, .sheet, .fact, .tell, .compare, .promo-facts {
       break-inside: avoid; page-break-inside: avoid;
     }
-    /* Keep each major promo/ads chunk from splitting mid-block */
-    #promos .split, #promos .sheets { break-inside: avoid; page-break-inside: avoid; }
-    #print .timeline { break-after: avoid; page-break-after: avoid; }
     footer {
       border-top: 2px solid #e3262f; padding: 10px 0 0; margin-top: 14px;
       font-size: 8px; color: #666;
