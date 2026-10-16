@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta name="x-flair-deploy" content="2026-10-16T15:47:21Z">
+<meta name="x-flair-deploy" content="2026-10-16T22:02:28Z">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>'94 Flair Presents the Marvel Universe &mdash; Masterset Checklist</title>
@@ -1431,7 +1431,7 @@
       <span class="chip"><b>18</b>Powerblast Chase</span>
       <span class="chip"><b>10</b>Flairprints</span>
       <span class="chip"><b>5</b>Binder Inserts</span>
-      <span class="chip"><b>15</b>Promos &amp; Sheets</span>
+      <span class="chip"><b>14</b>Promos &amp; Sheets</span>
       <span class="chip"><b>3</b>Print Ads</span>
     </div>
     <div class="chips" style="margin-top:10px">
@@ -1507,7 +1507,7 @@
       </div>
     </div>
     <div class="print-facts">
-      <div><b>Set</b> 150 base &middot; 18 Powerblast &middot; 10 Flairprints &middot; 5 binder &middot; 15 promos/sheets &middot; 3 ads</div>
+      <div><b>Set</b> 150 base &middot; 18 Powerblast &middot; 10 Flairprints &middot; 5 binder &middot; 14 promos/sheets &middot; 3 ads</div>
       <div><b>Box</b> 24&times;10 &middot; PB 1:2 &middot; Flairprints 1/case &middot; ~1.52 sets/box &middot; Covers: Venom, Magneto, Cyclops, Wolverine</div>
       <div><b>Notes</b> No #6 &middot; Iron Man as second #8 &middot; Binders in sealed &rsquo;95 Ultra X-Men (2&ndash;3 each)</div>
     </div>
@@ -1594,10 +1594,10 @@
         <h2><span class="foil-text">Promos &amp; Uncut Sheets</span></h2>
         <p>Pre-release and distributor material that never came in packs: promo Flairprints, the 4-card sheets bundled with comic magazines, and the nine 9-card uncut sheets from Fleer's press kits.</p>
       </div>
-      <div class="count"><div class="big" data-count="promos">0<span>/16</span></div><div class="meter"><i data-meter="promos"></i></div></div>
+      <div class="count"><div class="big" data-count="promos">0<span>/14</span></div><div class="meter"><i data-meter="promos"></i></div></div>
     </div>
     <div class="facts promo-facts">
-      <div class="fact"><b>3</b><span>Promo Flairprints from comic distributors</span></div>
+      <div class="fact"><b>2</b><span>Promo Flairprints from comic distributors</span></div>
       <div class="fact"><b>2 + 1</b><span>4-card sheet variants, plus one unreleased sheet</span></div>
       <div class="fact"><b>9</b><span>9-card uncut sheets from the 1994 press kits, with rows of 3 that repeat across sheets</span></div>
     </div>
@@ -1984,7 +1984,6 @@ const BINDER = [["Captain America", 11], ["Gambit", 12], ["Thor", 13], ["Silver 
 
 const PROMOS = [
   ["Deadpool Flairprint", "Heroes World Distribution. 6\u00bd\u2033 \u00d7 10\u2033. Handed out at Heroes World Con, 1994. Logo in the lower right; blank back except for a barcode."],
-  ["Omega Red vs. Wolverine Flairprint", "General promo, no distributor named"],
   ["Omega Red vs. Wolverine Flairprint", "Diamond Comic Distributors. Blank back. Handed out at Diamond's Annual Retailer Seminar in Baltimore, June 11\u201314, 1994"]
 ];
 
@@ -2057,6 +2056,13 @@ const STORE_KEY = "flair94-checklist-v1";
 let owned = new Set(JSON.parse(localStorage.getItem(STORE_KEY) || "[]"));
 // "The Ultimate Collectable" (old u4-3) was the unreleased sheet (old u4-4), now u4-3.
 if (owned.delete("u4-4")) owned.add("u4-3");
+// Dropped phantom "general promo" Omega Red Flairprint (old pr2). Diamond Seminar was pr3, now pr2.
+{
+  const hadDiamond = owned.has("pr3");
+  owned.delete("pr2");
+  owned.delete("pr3");
+  if (hadDiamond) owned.add("pr2");
+}
 // Comics and magazines used to be checklist items; they're reference only now.
 [...owned].filter(id => /^(ad|mg|ma)\d+$/.test(id)).forEach(id => owned.delete(id));
 let filter = "all";
@@ -2086,7 +2092,7 @@ const landscapeBaseBack = n => n >= 1 && n <= 134;
 // Promo art, keyed by tile id: [file in promo-fx, caption]
 const PROMO_ART = {
   pr1: ["deadpool-flairprint"],
-  pr3: ["omega-red-wolverine", "Diamond Annual Retailer Seminar Flairprint"],
+  pr2: ["omega-red-wolverine", "Diamond Annual Retailer Seminar Flairprint"],
   "u4-1": ["sheet4-sticker", "Front shown: the gold \"Ships June 1994\" title card"],
   "u4-2": ["sheet4-foil", "Front shown: the gold-foil etched title card"],
   "u4-3": ["sheet4-unreleased"],
@@ -2141,7 +2147,7 @@ function credit(key) {
       : name.startsWith("Omega Red")
         ? { img: promoSrc("omega-red-wolverine"), imgClass: "flairprint", imgNote: "Retailer Seminar Flairprint photo (same art as base #86)" }
         : {};
-    const backNote = n === 1 ? "Blank back except for a barcode" : n === 3 ? "Blank back" : "";
+    const backNote = n === 1 ? "Blank back except for a barcode" : n === 2 ? "Blank back" : "";
     return { label: "Promo Flairprint \u00b7 1994", name, chars, ...art, backNote };
   }
   if (kind === "u4-") {
