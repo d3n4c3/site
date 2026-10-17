@@ -1,0 +1,85 @@
+{
+  "n": 56,
+  "key": "056",
+  "title": "Mr. Sinister Appears",
+  "source": "The Uncanny X-Men (1963) #239, Page 4",
+  "tokens": [
+    "Mr. Sinister",
+    "Sinister"
+  ],
+  "page": 4,
+  "promo": false,
+  "status": "ok",
+  "candidates": [
+    {
+      "idx": 1,
+      "file": "01.jpg",
+      "wiki": "File:Hope Summers (Earth-616) and Nathaniel Essex (Mister Sinister) (Earth-616) from Uncanny X-Men Vol 2 3 001.png",
+      "score": 32,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/8/88/Hope_Summers_%28Earth-616%29_and_Nathaniel_Essex_%28Mister_Sinister%29_%28Earth-616%29_from_Uncanny_X-Men_Vol_2_3_001.png/revision/latest?cb=20201228211448"
+    },
+    {
+      "idx": 2,
+      "file": "02.jpg",
+      "wiki": "File:Jean Grey (Earth-616) and Nathaniel Essex (Mister Sinister) (Earth-616) from Uncanny X-Men Vol 1 243 001.jpg",
+      "score": 32,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/2/26/Jean_Grey_%28Earth-616%29_and_Nathaniel_Essex_%28Mister_Sinister%29_%28Earth-616%29_from_Uncanny_X-Men_Vol_1_243_001.jpg/revision/latest/scale-to-width-down/1400?cb=20251225172528"
+    },
+    {
+      "idx": 3,
+      "file": "03.jpg",
+      "wiki": "File:Krakoa (Sinister's Castle) (Earth-616) from Uncanny X-Men Vol 2 14 0001.png",
+      "score": 32,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/a/a7/Krakoa_%28Sinister%27s_Castle%29_%28Earth-616%29_from_Uncanny_X-Men_Vol_2_14_0001.png/revision/latest?cb=20130928144921"
+    },
+    {
+      "idx": 4,
+      "file": "04.jpg",
+      "wiki": "File:Krakoa (Sinister's Castle) (Earth-616) from Uncanny X-Men Vol 2 16 0001.png",
+      "score": 32,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/f/f7/Krakoa_%28Sinister%27s_Castle%29_%28Earth-616%29_from_Uncanny_X-Men_Vol_2_16_0001.png/revision/latest?cb=20130928145422"
+    },
+    {
+      "idx": 5,
+      "file": "05.jpg",
+      "wiki": "File:Madelyne Pryor and Nathaniel Essex (Mister Sinister) (Earth-616) from Uncanny X-Men Vol 1 241 0001.jpg",
+      "score": 32,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/d/d7/Madelyne_Pryor_and_Nathaniel_Essex_%28Mister_Sinister%29_%28Earth-616%29_from_Uncanny_X-Men_Vol_1_241_0001.jpg/revision/latest?cb=20200102024502"
+    },
+    {
+      "idx": 6,
+      "file": "06.jpg",
+      "wiki": "File:Nathan Summers (Earth-616) and Nathaniel Essex (Mister Sinister) (Earth-616) from Uncanny X-Men Vol 1 239 001.png",
+      "score": 32,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/e/e7/Nathan_Summers_%28Earth-616%29_and_Nathaniel_Essex_%28Mister_Sinister%29_%28Earth-616%29_from_Uncanny_X-Men_Vol_1_239_001.png/revision/latest?cb=20201228195207"
+    },
+    {
+      "idx": 7,
+      "file": "07.jpg",
+      "wiki": "File:Nathaniel Essex (Mister Sinister) (Earth-616) and Scott Summers (Earth-616) from Uncanny X-Men Vol 2 2 001.png",
+      "score": 32,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/2/2e/Nathaniel_Essex_%28Mister_Sinister%29_%28Earth-616%29_and_Scott_Summers_%28Earth-616%29_from_Uncanny_X-Men_Vol_2_2_001.png/revision/latest?cb=20201228211445"
+    },
+    {
+      "idx": 8,
+      "file": "08.jpg",
+      "wiki": "File:Nathaniel Essex (Mister Sinister) (Earth-616) concept art 001.jpg",
+      "score": 32,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/c/cb/Nathaniel_Essex_%28Mister_Sinister%29_%28Earth-616%29_concept_art_001.jpg/revision/latest/scale-to-width-down/1400?cb=20240125082922"
+    },
+    {
+      "idx": 9,
+      "file": "09.jpg",
+      "wiki": "File:Nathaniel Essex (Mister Sinister) (Earth-616) from Uncanny X-Men Vol 1 221 001.png",
+      "score": 32,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/9/98/Nathaniel_Essex_%28Mister_Sinister%29_%28Earth-616%29_from_Uncanny_X-Men_Vol_1_221_001.png/revision/latest?cb=20201228195205"
+    },
+    {
+      "idx": 10,
+      "file": "10.jpg",
+      "wiki": "File:Nathaniel Essex (Mister Sinister) (Earth-616) from Uncanny X-Men Vol 1 240 001.png",
+      "score": 32,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/2/28/Nathaniel_Essex_%28Mister_Sinister%29_%28Earth-616%29_from_Uncanny_X-Men_Vol_1_240_001.png/revision/latest?cb=20201228195209"
+    }
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "n": 12,
+  "key": "012",
+  "title": "Origin of Dr. Strange",
+  "source": "Marvel Treasury Edition (1974) #6, Page 57",
+  "issue_keys": [
+    "Marvel Treasury Edition Vol 1 6",
+    "Marvel Treasury Edition Vol 2 6",
+    "Marvel Treasury Edition 6",
+    "The Marvel Treasury Edition Vol 1 6"
+  ],
+  "page": 57,
+  "part": "page",
+  "status": "ok",
+  "candidates": [
+    {
+      "idx": 1,
+      "file": "01.jpg",
+      "wiki": "File:Yao (Earth-616), Stephen Strange (Earth-616), and Clea (Earth-616) from Marvel Treasury Edition Vol 1 6 001.jpg",
+      "score": 110,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/5/55/Yao_%28Earth-616%29%2C_Stephen_Strange_%28Earth-616%29%2C_and_Clea_%28Earth-616%29_from_Marvel_Treasury_Edition_Vol_1_6_001.jpg/revision/latest/scale-to-width-down/1400?cb=20211230053854"
+    },
+    {
+      "idx": 2,
+      "file": "02.jpg",
+      "wiki": "File:Marvel Treasury Edition Vol 1 6.jpg",
+      "score": 62,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/2/28/Marvel_Treasury_Edition_Vol_1_6.jpg/revision/latest/scale-to-width-down/1400?cb=20210815074839"
+    },
+    {
+      "idx": 3,
+      "file": "03.jpg",
+      "wiki": "File:Marvel Treasury Edition Vol 1 6 Back.jpg",
+      "score": 50,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/3/39/Marvel_Treasury_Edition_Vol_1_6_Back.jpg/revision/latest/scale-to-width-down/1400?cb=20210815074836"
+    },
+    {
+      "idx": 4,
+      "file": "04.jpg",
+      "wiki": "File:Doctor Strange Vol 6 1 Textless.jpg",
+      "score": 23,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/5/53/Doctor_Strange_Vol_6_1_Textless.jpg/revision/latest/scale-to-width-down/1400?cb=20230220173114"
+    },
+    {
+      "idx": 5,
+      "file": "05.jpg",
+      "wiki": "File:Doctor Strange Vol 6 1 Second Printing Variant.jpg",
+      "score": 15,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/7/77/Doctor_Strange_Vol_6_1_Second_Printing_Variant.jpg/revision/latest?cb=20230515045358"
+    },
+    {
+      "idx": 6,
+      "file": "06.jpg",
+      "wiki": "File:Doctor Strange Vol 6 1.jpg",
+      "score": 15,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/1/11/Doctor_Strange_Vol_6_1.jpg/revision/latest/scale-to-width-down/1400?cb=20230314233032"
+    },
+    {
+      "idx": 7,
+      "file": "07.jpg",
+      "wiki": "File:Doctor Strange and the Sorcerers Supreme Vol 1 1 NYCC 2016 Exclusive Minimates Variant.jpg",
+      "score": 15,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/4/44/Doctor_Strange_and_the_Sorcerers_Supreme_Vol_1_1_NYCC_2016_Exclusive_Minimates_Variant.jpg/revision/latest?cb=20220211005112"
+    }
+  ]
+}

@@ -1,0 +1,85 @@
+{
+  "n": 5,
+  "key": "005",
+  "title": "Amazing Spider-Man #1",
+  "source": "Web of Spider-Man (1985) #105, Page 2",
+  "tokens": [
+    "Spider-Man",
+    "Amazing"
+  ],
+  "page": 2,
+  "promo": false,
+  "status": "ok",
+  "candidates": [
+    {
+      "idx": 1,
+      "file": "01.jpg",
+      "wiki": "File:Davis (Earth-616) from Web of Spider-Man Vol 1 105 001.png",
+      "score": 182,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/7/75/Davis_%28Earth-616%29_from_Web_of_Spider-Man_Vol_1_105_001.png/revision/latest?cb=20130801212122"
+    },
+    {
+      "idx": 2,
+      "file": "02.jpg",
+      "wiki": "File:Web of Spider-Man Vol 1 105.jpg",
+      "score": 104,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/5/52/Web_of_Spider-Man_Vol_1_105.jpg/revision/latest/scale-to-width-down/1400?cb=20251215002713"
+    },
+    {
+      "idx": 3,
+      "file": "03.jpg",
+      "wiki": "File:Order of the Web (Earth-616) from Amazing Spider-Man The Sins of Norman Osborn Vol 1 1 002.jpg",
+      "score": 50,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/0/0d/Order_of_the_Web_%28Earth-616%29_from_Amazing_Spider-Man_The_Sins_of_Norman_Osborn_Vol_1_1_002.jpg/revision/latest/scale-to-width-down/1400?cb=20200920032050"
+    },
+    {
+      "idx": 4,
+      "file": "04.jpg",
+      "wiki": "File:Order of the Web (Earth-616) from Amazing Spider-Man Vol 5 48 001.jpg",
+      "score": 50,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/f/f7/Order_of_the_Web_%28Earth-616%29_from_Amazing_Spider-Man_Vol_5_48_001.jpg/revision/latest/scale-to-width-down/1400?cb=20200920025044"
+    },
+    {
+      "idx": 5,
+      "file": "05.jpg",
+      "wiki": "File:Order of the Web (Earth-616) from Amazing Spider-Man Vol 5 50.LR 001.jpg",
+      "score": 50,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/4/4e/Order_of_the_Web_%28Earth-616%29_from_Amazing_Spider-Man_Vol_5_50.LR_001.jpg/revision/latest/scale-to-width-down/1400?cb=20201024040103"
+    },
+    {
+      "idx": 6,
+      "file": "06.jpg",
+      "wiki": "File:Order of the Web (Earth-616) from Amazing Spider-Man Vol 5 57 001.jpg",
+      "score": 50,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/e/e3/Order_of_the_Web_%28Earth-616%29_from_Amazing_Spider-Man_Vol_5_57_001.jpg/revision/latest/scale-to-width-down/1400?cb=20210315024830"
+    },
+    {
+      "idx": 7,
+      "file": "07.jpg",
+      "wiki": "File:Amazing Spider-Man Vol 5 3 Textless.jpg",
+      "score": 46,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/8/89/Amazing_Spider-Man_Vol_5_3_Textless.jpg/revision/latest?cb=20180523063836"
+    },
+    {
+      "idx": 8,
+      "file": "08.jpg",
+      "wiki": "File:Amazing Spider-Man Vol 1 105.jpg",
+      "score": 42,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/6/60/Amazing_Spider-Man_Vol_1_105.jpg/revision/latest?cb=20171229070635"
+    },
+    {
+      "idx": 9,
+      "file": "09.jpg",
+      "wiki": "File:Amazing Spider-Man Vol 1 268.jpg",
+      "score": 42,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/6/60/Amazing_Spider-Man_Vol_1_268.jpg/revision/latest?cb=20171230033321"
+    },
+    {
+      "idx": 10,
+      "file": "10.jpg",
+      "wiki": "File:Amazing Spider-Man Vol 1 356.jpg",
+      "score": 42,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/8/83/Amazing_Spider-Man_Vol_1_356.jpg/revision/latest?cb=20171230051603"
+    }
+  ]
+}

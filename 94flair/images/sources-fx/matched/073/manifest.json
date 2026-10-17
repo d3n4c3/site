@@ -1,0 +1,51 @@
+{
+  "n": 73,
+  "key": "073",
+  "title": "Origin of the New Warriors",
+  "source": "Nova (1993) #1, Page 1",
+  "artist": "Chris Marrinan",
+  "matches": [
+    {
+      "idx": 1,
+      "file": "01.jpg",
+      "score": 0.0426,
+      "kind": "wiki-candidate",
+      "label": "File:Daakor (Earth-616) from Nova Vol 2 13 0001.jpg"
+    },
+    {
+      "idx": 2,
+      "file": "02.jpg",
+      "score": 0.0401,
+      "kind": "wiki-candidate",
+      "label": "File:Kre'shje (Earth-616) from Nova Vol 2 1 0001.png"
+    },
+    {
+      "idx": 3,
+      "file": "03.jpg",
+      "score": 0.0334,
+      "kind": "wiki-candidate",
+      "label": "File:Mr. Ryan (Earth-616) from Nova Vol 1 1 001.png"
+    },
+    {
+      "idx": 4,
+      "file": "04.jpg",
+      "score": 0.032,
+      "kind": "wiki-candidate",
+      "label": "File:Rhomann Dey (Earth-616) from Nova Vol 1 1 0001.png"
+    },
+    {
+      "idx": 5,
+      "file": "05.jpg",
+      "score": 0.0304,
+      "kind": "wiki-candidate",
+      "label": "File:Richard Rider (Earth-616) from Nova Vol 1 1 0001.jpg"
+    },
+    {
+      "idx": 6,
+      "file": "06.jpg",
+      "score": 0.0232,
+      "kind": "wiki-candidate",
+      "label": "File:Nova Express (Earth-616) from Nova Vol 2 1 0001.jpg"
+    }
+  ]
+}

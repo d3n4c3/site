@@ -1,0 +1,51 @@
+{
+  "n": 77,
+  "key": "077",
+  "title": "Hulk Reborn",
+  "source": "The Incredible Hulk (1968) #391, Page 19",
+  "artist": "Dale Keown",
+  "matches": [
+    {
+      "idx": 1,
+      "file": "01.jpg",
+      "score": 0.0659,
+      "kind": "wiki-candidate",
+      "label": "File:391 (LMD) (Earth-616) from Hulk Vol 2 38 001.png"
+    },
+    {
+      "idx": 2,
+      "file": "02.jpg",
+      "score": 0.0643,
+      "kind": "wiki-candidate",
+      "label": "File:David Guntly (Earth-616) from Incredible Hulk Vol 1 386 001.png"
+    },
+    {
+      "idx": 3,
+      "file": "03.jpg",
+      "score": 0.058,
+      "kind": "wiki-candidate",
+      "label": "File:Harry (Earth-616) from Incredible Hulk Vol 1 390 001.jpg"
+    },
+    {
+      "idx": 4,
+      "file": "04.jpg",
+      "score": 0.0567,
+      "kind": "wiki-candidate",
+      "label": "File:Excalibur Hotel and Casino (Earth-616) from Incredible Hulk Vol 1 395 001.png"
+    },
+    {
+      "idx": 5,
+      "file": "05.jpg",
+      "score": 0.0565,
+      "kind": "wiki-candidate",
+      "label": "File:Jacqueline Shorr (Earth-616) from Incredible Hulk Vol 1 391 001.jpg"
+    },
+    {
+      "idx": 6,
+      "file": "06.jpg",
+      "score": 0.056,
+      "kind": "wiki-candidate",
+      "label": "File:Martin Bram (Earth-616) from The Incredible Hulk (1977 film) 001.jpg"
+    }
+  ]
+}

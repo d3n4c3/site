@@ -1,0 +1,84 @@
+{
+  "n": 52,
+  "key": "052",
+  "title": "Apocalypse Attacks",
+  "source": "X-Factor (1988) #65, Page 20",
+  "tokens": [
+    "Apocalypse"
+  ],
+  "page": 20,
+  "promo": false,
+  "status": "ok",
+  "candidates": [
+    {
+      "idx": 1,
+      "file": "01.jpg",
+      "wiki": "File:Foxbat (Earth-616) from X-Factor Vol 1 65 0001.jpg",
+      "score": 239,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/4/45/Foxbat_%28Earth-616%29_from_X-Factor_Vol_1_65_0001.jpg/revision/latest?cb=20080209013638"
+    },
+    {
+      "idx": 2,
+      "file": "02.jpg",
+      "wiki": "File:Hard-Drive (Earth-616) from X-Factor Vol 1 65 0001.jpg",
+      "score": 239,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/3/39/Hard-Drive_%28Earth-616%29_from_X-Factor_Vol_1_65_0001.jpg/revision/latest?cb=20080211215445"
+    },
+    {
+      "idx": 3,
+      "file": "03.jpg",
+      "wiki": "File:Psynapse (Earth-616) from X-Factor Vol 1 65 0001.jpg",
+      "score": 239,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/9/93/Psynapse_%28Earth-616%29_from_X-Factor_Vol_1_65_0001.jpg/revision/latest?cb=20080506103529"
+    },
+    {
+      "idx": 4,
+      "file": "04.jpg",
+      "wiki": "File:X-Factor (Earth-616) from X-Factor Vol 1 65 001.jpg",
+      "score": 239,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/5/52/X-Factor_%28Earth-616%29_from_X-Factor_Vol_1_65_001.jpg/revision/latest/scale-to-width-down/1400?cb=20251225181918"
+    },
+    {
+      "idx": 5,
+      "file": "05.jpg",
+      "wiki": "File:X-Factor (Earth-616) from X-Factor Vol 1 65 cover.JPG",
+      "score": 233,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/0/09/X-Factor_%28Earth-616%29_from_X-Factor_Vol_1_65_cover.JPG/revision/latest?cb=20120905000048"
+    },
+    {
+      "idx": 6,
+      "file": "06.jpg",
+      "wiki": "File:Flatbush Avenue from X-Factor Vol 1 65 001.png",
+      "score": 231,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/a/a6/Flatbush_Avenue_from_X-Factor_Vol_1_65_001.png/revision/latest?cb=20171202104408"
+    },
+    {
+      "idx": 7,
+      "file": "07.jpg",
+      "wiki": "File:X-Factor Vol 1 65 Bonus Sheet 1.jpg",
+      "score": 120,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/9/9d/X-Factor_Vol_1_65_Bonus_Sheet_1.jpg/revision/latest?cb=20101021014446"
+    },
+    {
+      "idx": 8,
+      "file": "08.jpg",
+      "wiki": "File:X-Factor Vol 1 65 Bonus Sheet 2.jpg",
+      "score": 120,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/1/19/X-Factor_Vol_1_65_Bonus_Sheet_2.jpg/revision/latest?cb=20101021014459"
+    },
+    {
+      "idx": 9,
+      "file": "09.jpg",
+      "wiki": "File:X-Factor Vol 1 65 Bonus Sheet 3.jpg",
+      "score": 120,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/f/fa/X-Factor_Vol_1_65_Bonus_Sheet_3.jpg/revision/latest/scale-to-width-down/1400?cb=20101021014512"
+    },
+    {
+      "idx": 10,
+      "file": "10.jpg",
+      "wiki": "File:X-Factor Vol 1 65.jpg",
+      "score": 120,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/4/45/X-Factor_Vol_1_65.jpg/revision/latest?cb=20180209030434"
+    }
+  ]
+}

@@ -1,0 +1,84 @@
+{
+  "n": 35,
+  "key": "035",
+  "title": "The Wedding",
+  "source": "X-Men (1991) #26, Cover",
+  "tokens": [
+    "Wedding"
+  ],
+  "page": null,
+  "promo": false,
+  "status": "ok",
+  "candidates": [
+    {
+      "idx": 1,
+      "file": "01.jpg",
+      "wiki": "File:Remy LeBeau (Earth-616) from X-Men Vol 2 26 001.jpg",
+      "score": 164,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/6/61/Remy_LeBeau_%28Earth-616%29_from_X-Men_Vol_2_26_001.jpg/revision/latest?cb=20250625055724"
+    },
+    {
+      "idx": 2,
+      "file": "02.jpg",
+      "wiki": "File:Havershaw Heights from X-Men Vol 2 26 001.png",
+      "score": 156,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/3/38/Havershaw_Heights_from_X-Men_Vol_2_26_001.png/revision/latest?cb=20150701061438"
+    },
+    {
+      "idx": 3,
+      "file": "03.jpg",
+      "wiki": "File:Ridgeback Mountains from X-Men Vol 2 26 001.png",
+      "score": 156,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/e/e6/Ridgeback_Mountains_from_X-Men_Vol_2_26_001.png/revision/latest?cb=20150701060957"
+    },
+    {
+      "idx": 4,
+      "file": "04.jpg",
+      "wiki": "File:Avalon (Space Station) from X-Men Vol 2 26.jpg",
+      "score": 150,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/1/1e/Avalon_%28Space_Station%29_from_X-Men_Vol_2_26.jpg/revision/latest?cb=20200528163035"
+    },
+    {
+      "idx": 5,
+      "file": "05.jpg",
+      "wiki": "File:Purifiers (Earth-616) and Sooraya Qadir (Earth-616) from New X-Men Vol 2 26 0001.jpg",
+      "score": 94,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/1/1b/Purifiers_%28Earth-616%29_and_Sooraya_Qadir_%28Earth-616%29_from_New_X-Men_Vol_2_26_0001.jpg/revision/latest?cb=20061210033111"
+    },
+    {
+      "idx": 6,
+      "file": "06.jpg",
+      "wiki": "File:Sooraya Qadir (Earth-616) from New X-Men Vol 2 26 0001.jpg",
+      "score": 94,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/9/9b/Sooraya_Qadir_%28Earth-616%29_from_New_X-Men_Vol_2_26_0001.jpg/revision/latest?cb=20191129225136"
+    },
+    {
+      "idx": 7,
+      "file": "07.jpg",
+      "wiki": "File:William Stryker (Earth-616) from New X-Men Vol 2 26 0001.jpg",
+      "score": 94,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/2/2b/William_Stryker_%28Earth-616%29_from_New_X-Men_Vol_2_26_0001.jpg/revision/latest?cb=20191129225447"
+    },
+    {
+      "idx": 8,
+      "file": "08.jpg",
+      "wiki": "File:New X-Men Vol 2 26 Textless.jpg",
+      "score": 90,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/f/f8/New_X-Men_Vol_2_26_Textless.jpg/revision/latest/scale-to-width-down/1400?cb=20210706110518"
+    },
+    {
+      "idx": 9,
+      "file": "09.jpg",
+      "wiki": "File:Albert (Fisherman) (Earth-616) from X-Men Vol 1 26 0001.png",
+      "score": 89,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/f/fe/Albert_%28Fisherman%29_%28Earth-616%29_from_X-Men_Vol_1_26_0001.png/revision/latest?cb=20200213050037"
+    },
+    {
+      "idx": 10,
+      "file": "10.jpg",
+      "wiki": "File:Barney (Fisherman) (Earth-616) from X-Men Vol 1 26 0001.png",
+      "score": 89,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/7/71/Barney_%28Fisherman%29_%28Earth-616%29_from_X-Men_Vol_1_26_0001.png/revision/latest?cb=20200213050112"
+    }
+  ]
+}

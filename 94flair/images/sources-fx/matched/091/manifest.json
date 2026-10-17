@@ -1,0 +1,51 @@
+{
+  "n": 91,
+  "key": "091",
+  "title": "Death of Mariko",
+  "source": "Wolverine (1988) #65, Page 18",
+  "artist": "Mark Texeira",
+  "matches": [
+    {
+      "idx": 1,
+      "file": "01.jpg",
+      "score": 0.1044,
+      "kind": "wiki-candidate",
+      "label": "File:Death of Wolverine Life After Logan Vol 1 1 Textless.jpg"
+    },
+    {
+      "idx": 2,
+      "file": "02.jpg",
+      "score": 0.093,
+      "kind": "wiki-candidate",
+      "label": "File:Mariko Yashida (Earth-616) from Wolverine Vol 1 1 001.jpg"
+    },
+    {
+      "idx": 3,
+      "file": "03.jpg",
+      "score": 0.0642,
+      "kind": "wiki-candidate",
+      "label": "File:Mariko Yashida (Earth-616) from X-Men Vol 1 118 001.jpg"
+    },
+    {
+      "idx": 4,
+      "file": "04.jpg",
+      "score": 0.0615,
+      "kind": "wiki-candidate",
+      "label": "File:Wolverine Vol 2 65.jpg"
+    },
+    {
+      "idx": 5,
+      "file": "05.jpg",
+      "score": 0.0585,
+      "kind": "wiki-candidate",
+      "label": "File:Raven Darkh\u00f6lme (Earth-616) from Wolverine Vol 3 65 0002.jpg"
+    },
+    {
+      "idx": 6,
+      "file": "06.jpg",
+      "score": 0.0476,
+      "kind": "wiki-candidate",
+      "label": "File:Mariko Yashida (Earth-616) from Official Handbook of the Marvel Universe Wolverine 2004 Vol 1 1 001.jpg"
+    }
+  ]
+}

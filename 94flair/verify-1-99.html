@@ -1,0 +1,2520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>94 Flair — missing sources (matched redo)</title>
+<style>
+  :root {
+    --bg:#120f0c; --text:#f3ece3; --muted:#a89988; --gold:#e6b84d;
+    --line:rgba(230,184,77,.32); --ok:#6fbf8f; --card-ar:857/1200;
+    --ink:#1a1410;
+  }
+  * { box-sizing:border-box; }
+  body {
+    margin:0; font:15px/1.45 "Source Serif 4",Georgia,"Times New Roman",serif; color:var(--text);
+    background:
+      radial-gradient(1000px 520px at 12% -8%, rgba(200,40,35,.22), transparent 58%),
+      radial-gradient(800px 420px at 92% 4%, rgba(230,184,77,.12), transparent 55%),
+      linear-gradient(180deg, #1a1510 0%, var(--bg) 40%, #0c0a08 100%);
+    padding-bottom:110px;
+  }
+  .top { padding:22px 22px 10px; max-width:1180px; margin:0 auto; }
+  .top h1 {
+    margin:0; font-family:"Oswald","Arial Narrow",sans-serif; font-size:24px;
+    letter-spacing:.14em; text-transform:uppercase; color:var(--gold);
+  }
+  .top p { margin:10px 0 0; color:var(--muted); max-width:54rem; }
+  .stats { display:flex; flex-wrap:wrap; gap:10px 18px; margin-top:14px; font-size:13px; color:var(--muted); }
+  .stats b { color:var(--text); }
+  nav.index {
+    display:flex; flex-wrap:wrap; gap:5px; max-width:1180px; margin:14px auto 0; padding:0 22px 10px;
+  }
+  nav.index a {
+    width:36px; height:28px; display:grid; place-items:center; text-decoration:none;
+    font:11px/1 "Oswald",sans-serif; border-radius:3px; border:1px solid var(--line);
+    color:var(--gold); background:rgba(0,0,0,.28);
+  }
+  nav.index a.has { border-color:rgba(111,191,143,.5); color:#7dcea0; }
+  nav.index a.miss { color:var(--muted); }
+  nav.index a.picked { outline:2px solid var(--ok); outline-offset:1px; }
+  main { padding:8px 22px 28px; display:grid; gap:36px; max-width:1180px; margin:0 auto; }
+  .meta { display:flex; flex-wrap:wrap; gap:10px; align-items:baseline; margin-bottom:4px; }
+  .id { font-family:"Oswald","Arial Narrow",sans-serif; font-size:19px; letter-spacing:.06em; color:var(--gold); }
+  .pill {
+    font:11px/1 "Oswald",sans-serif; letter-spacing:.08em; text-transform:uppercase;
+    border:1px solid var(--line); padding:5px 8px; border-radius:3px; color:var(--muted);
+  }
+  .cite { margin:0 0 12px; color:var(--muted); font-size:13px; }
+  .pair {
+    display:grid; grid-template-columns:minmax(140px,220px) minmax(140px,220px); gap:18px; align-items:start;
+  }
+  @media (max-width:700px) {
+    .pair { grid-template-columns:1fr 1fr; gap:10px; }
+  }
+  figcaption {
+    font:11px/1.2 "Oswald",sans-serif; letter-spacing:.1em; text-transform:uppercase;
+    color:var(--muted); margin-bottom:8px;
+  }
+  .face {
+    aspect-ratio:var(--card-ar); border:1px solid var(--line); background:#000;
+    overflow:hidden; box-shadow:0 10px 28px rgba(0,0,0,.45);
+  }
+  .face img { width:100%; height:100%; object-fit:cover; display:block; }
+  .best-label { margin:8px 0 0; font-size:12px; color:var(--muted); }
+  .cands-col { margin-top:16px; }
+  .gallery {
+    display:grid; grid-template-columns:repeat(auto-fill,minmax(132px,1fr)); gap:12px;
+  }
+  .cand {
+    display:flex; flex-direction:column; gap:6px; cursor:pointer; margin:0;
+    border:1px solid transparent; border-radius:4px; padding:6px; background:rgba(0,0,0,.2);
+  }
+  .cand:has(input:checked) { border-color:var(--ok); background:rgba(111,191,143,.1); }
+  .cand input { position:absolute; opacity:0; pointer-events:none; }
+  .cand-frame {
+    aspect-ratio:3/4; overflow:hidden; border:1px solid var(--line); background:#000;
+  }
+  .cand-frame img { width:100%; height:100%; object-fit:cover; display:block; }
+  .cand-meta { font-size:11px; color:var(--muted); line-height:1.35; }
+  .cand-meta small { color:#8a7b6c; }
+  .badge {
+    display:inline-block; font:10px/1 "Oswald",sans-serif; letter-spacing:.08em;
+    text-transform:uppercase; padding:3px 5px; border-radius:2px; margin-right:4px;
+    border:1px solid var(--line); color:var(--gold);
+  }
+  .badge.sketch { border-color:rgba(111,191,143,.55); color:#8fd4a8; }
+  .badge.match { border-color:rgba(230,184,77,.45); }
+  .empty { color:var(--muted); }
+  .submit-bar {
+    position:fixed; left:0; right:0; bottom:0; z-index:20;
+    background:linear-gradient(180deg, transparent, rgba(10,8,6,.92) 28%);
+    padding:18px 16px 14px; pointer-events:none;
+  }
+  .submit-inner {
+    pointer-events:auto; max-width:1180px; margin:0 auto;
+    display:flex; flex-wrap:wrap; gap:12px; align-items:center;
+    background:rgba(22,18,14,.92); border:1px solid var(--line); border-radius:6px; padding:12px 14px;
+  }
+  .count { color:var(--muted); font-size:13px; }
+  .count b { color:var(--text); }
+  #submitPicks {
+    font:13px/1 "Oswald",sans-serif; letter-spacing:.1em; text-transform:uppercase;
+    background:var(--gold); color:var(--ink); border:0; border-radius:3px; padding:11px 16px; cursor:pointer;
+  }
+  #submitPicks:disabled { opacity:.5; cursor:wait; }
+  #statusMsg { margin:0; font-size:12px; color:var(--muted); flex:1 1 200px; }
+  #statusMsg.err { color:#e07a6a; }
+</style>
+</head>
+<body>
+  <header class="top">
+    <h1>94 Flair — missing sources</h1>
+    <p>Completely redone picker for cards still without live source art. Candidates were ranked by image matching (edge NCC + ORB) against each card front — Flair art is computer-enhanced, so pairs won’t be perfect. <b>#010</b> and <b>#042</b> use the in-house Xavier / Elektra sketch sheets. Select matches and submit; hash backup is saved automatically.</p>
+    <div class="stats">
+      <span><b>106</b> sources live on the flipper</span>
+      <span><b>44</b> still missing</span>
+      <span>Pick → submit → agent wires approved sources</span>
+    </div>
+  </header>
+  <nav class="index" id="indexNav"><a href="#c3" class="has">003</a><a href="#c5" class="has">005</a><a href="#c11" class="has">011</a><a href="#c14" class="has">014</a><a href="#c21" class="has">021</a><a href="#c25" class="has">025</a><a href="#c28" class="has">028</a><a href="#c29" class="has">029</a><a href="#c31" class="has">031</a><a href="#c32" class="has">032</a><a href="#c33" class="has">033</a><a href="#c35" class="has">035</a><a href="#c37" class="has">037</a><a href="#c41" class="has">041</a><a href="#c44" class="has">044</a><a href="#c51" class="has">051</a><a href="#c52" class="has">052</a><a href="#c54" class="has">054</a><a href="#c56" class="has">056</a><a href="#c57" class="has">057</a><a href="#c58" class="has">058</a><a href="#c59" class="has">059</a><a href="#c61" class="has">061</a><a href="#c62" class="has">062</a><a href="#c64" class="has">064</a><a href="#c65" class="has">065</a><a href="#c66" class="has">066</a><a href="#c67" class="has">067</a><a href="#c70" class="has">070</a><a href="#c71" class="has">071</a><a href="#c72" class="has">072</a><a href="#c73" class="has">073</a><a href="#c75" class="has">075</a><a href="#c76" class="has">076</a><a href="#c77" class="has">077</a><a href="#c78" class="has">078</a><a href="#c81" class="has">081</a><a href="#c85" class="has">085</a><a href="#c91" class="has">091</a><a href="#c93" class="has">093</a><a href="#c94" class="has">094</a><a href="#c95" class="has">095</a><a href="#c96" class="has">096</a><a href="#c97" class="has">097</a></nav>
+  <main>
+
+<article class="row" id="c3" data-n="3">
+  <div class="meta">
+    <div class="id">#003 · Origin of Spider-Man</div>
+    <span class="pill">6 matched</span>
+  </div>
+  <p class="cite">1992 Impel Amazing Spider-Man 30th Anniversary Card Set · Ron Frenz; Al Milgrom</p>
+  <div class="pair">
+    <figure class="front-col">
+      <figcaption>Card front</figcaption>
+      <div class="face"><img src="images/cards-fx/hd/003.jpg" alt="Card 003" loading="lazy"></div>
+    </figure>
+    
+      <figure class="best-col">
+        <figcaption>Top match <span class="badge match">wiki-candidate</span></figcaption>
+        <div class="face"><img src="images/sources-fx/matched/003/01.jpg" alt="Best match 003" loading="lazy"></div>
+        <p class="best-label">File:Benjamin Parker (Earth-616) from Spider-Man Heroes &amp; Villains Collection (Trading Cards) 001.jpg</p>
+      </figure>
+  </div>
+  <div class="cands-col">
+    <figcaption>Pick the matching source (image-matched; CGI cards won’t be perfect)</figcaption>
+    <div class="gallery">
+          <label class="cand">
+            <input type="radio" name="pick-3" value="1">
+            <span class="cand-frame"><img src="images/sources-fx/matched/003/01.jpg" alt="Candidate 1" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #1 · 0.101<br><small>File:Benjamin Parker (Earth-616) from Spider-Man Heroes &amp; Villains Collection (Trading Car</small></span>
+          </label>
+          <label class="cand">
+            <input type="radio" name="pick-3" value="2">
+            <span class="cand-frame"><img src="images/sources-fx/matched/003/02.jpg" alt="Candidate 2" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #2 · 0.080<br><small>File:Jason Macendale Jr. (Earth-616) from Spider-Man Premium - Eternal Evil (Trading Cards</small></span>
+          </label>
+          <label class="cand">
+            <input type="radio" name="pick-3" value="3">
+            <span class="cand-frame"><img src="images/sources-fx/matched/003/03.jpg" alt="Candidate 3" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #3 · 0.071<br><small>File:Bruce Banner (Earth-616) and Peter Parker (Earth-616) from Spider-Man Team-Up (Tradin</small></span>
+          </label>
+          <label class="cand">
+            <input type="radio" name="pick-3" value="4">
+            <span class="cand-frame"><img src="images/sources-fx/matched/003/04.jpg" alt="Candidate 4" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #4 · 0.067<br><small>File:Herman Schultz (Earth-616) from Ultra Spider-Man (Trading Cards) Holoblast 1997 Serie</small></span>
+          </label>
+          <label class="cand">
+            <input type="radio" name="pick-3" value="5">
+            <span class="cand-frame"><img src="images/sources-fx/matched/003/05.jpg" alt="Candidate 5" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #5 · 0.049<br><small>File:Judas Traveller (Earth-616) from Spider-Man Premium - Eternal Evil (Trading Cards) 00</small></span>
+          </label>
+          <label class="cand">
+            <input type="radio" name="pick-3" value="6">
+            <span class="cand-frame"><img src="images/sources-fx/matched/003/06.jpg" alt="Candidate 6" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #6 · 0.047<br><small>File:Abner Jenkins (Earth-616) Pin-Up from Amazing Spider-Man Annual Vol 1 2 0001.png</small></span>
+          </label></div>
+  </div>
+</article>
+<article class="row" id="c5" data-n="5">
+  <div class="meta">
+    <div class="id">#005 · Amazing Spider-Man #1</div>
+    <span class="pill">6 matched</span>
+  </div>
+  <p class="cite">Web of Spider-Man (1985) #105, Page 2 · Rurik Tyler</p>
+  <div class="pair">
+    <figure class="front-col">
+      <figcaption>Card front</figcaption>
+      <div class="face"><img src="images/cards-fx/hd/005.jpg" alt="Card 005" loading="lazy"></div>
+    </figure>
+    
+      <figure class="best-col">
+        <figcaption>Top match <span class="badge match">wiki-candidate</span></figcaption>
+        <div class="face"><img src="images/sources-fx/matched/005/01.jpg" alt="Best match 005" loading="lazy"></div>
+        <p class="best-label">File:Amazing Spider-Man Vol 1 105.jpg</p>
+      </figure>
+  </div>
+  <div class="cands-col">
+    <figcaption>Pick the matching source (image-matched; CGI cards won’t be perfect)</figcaption>
+    <div class="gallery">
+          <label class="cand">
+            <input type="radio" name="pick-5" value="1">
+            <span class="cand-frame"><img src="images/sources-fx/matched/005/01.jpg" alt="Candidate 1" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #1 · 0.105<br><small>File:Amazing Spider-Man Vol 1 105.jpg</small></span>
+          </label>
+          <label class="cand">
+            <input type="radio" name="pick-5" value="2">
+            <span class="cand-frame"><img src="images/sources-fx/matched/005/02.jpg" alt="Candidate 2" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #2 · 0.073<br><small>File:Amazing Spider-Man Vol 5 3 Textless.jpg</small></span>
+          </label>
+          <label class="cand">
+            <input type="radio" name="pick-5" value="3">
+            <span class="cand-frame"><img src="images/sources-fx/matched/005/03.jpg" alt="Candidate 3" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #3 · 0.062<br><small>File:Amazing Spider-Man Vol 1 356.jpg</small></span>
+          </label>
+          <label class="cand">
+            <input type="radio" name="pick-5" value="4">
+            <span class="cand-frame"><img src="images/sources-fx/matched/005/04.jpg" alt="Candidate 4" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #4 · 0.057<br><small>File:Davis (Earth-616) from Web of Spider-Man Vol 1 105 001.png</small></span>
+          </label>
+          <label class="cand">
+            <input type="radio" name="pick-5" value="5">
+            <span class="cand-frame"><img src="images/sources-fx/matched/005/05.jpg" alt="Candidate 5" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #5 · 0.054<br><small>File:Web of Spider-Man Vol 1 105.jpg</small></span>
+          </label>
+          <label class="cand">
+            <input type="radio" name="pick-5" value="6">
+            <span class="cand-frame"><img src="images/sources-fx/matched/005/06.jpg" alt="Candidate 6" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #6 · 0.054<br><small>File:Order of the Web (Earth-616) from Amazing Spider-Man The Sins of Norman Osborn Vol 1 </small></span>
+          </label></div>
+  </div>
+</article>
+<article class="row" id="c11" data-n="11">
+  <div class="meta">
+    <div class="id">#011 · Avengers Assemble</div>
+    <span class="pill">6 matched</span>
+  </div>
+  <p class="cite">The Avengers (1963) Annual #20, Page 56 · Mike Mignola</p>
+  <div class="pair">
+    <figure class="front-col">
+      <figcaption>Card front</figcaption>
+      <div class="face"><img src="images/cards-fx/hd/011.jpg" alt="Card 011" loading="lazy"></div>
+    </figure>
+    
+      <figure class="best-col">
+        <figcaption>Top match <span class="badge match">wiki-candidate</span></figcaption>
+        <div class="face"><img src="images/sources-fx/matched/011/01.jpg" alt="Best match 011" loading="lazy"></div>
+        <p class="best-label">File:Avengers Assemble Vol 2 3 Variant Textless.jpg</p>
+      </figure>
+  </div>
+  <div class="cands-col">
+    <figcaption>Pick the matching source (image-matched; CGI cards won’t be perfect)</figcaption>
+    <div class="gallery">
+          <label class="cand">
+            <input type="radio" name="pick-11" value="1">
+            <span class="cand-frame"><img src="images/sources-fx/matched/011/01.jpg" alt="Candidate 1" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #1 · 0.061<br><small>File:Avengers Assemble Vol 2 3 Variant Textless.jpg</small></span>
+          </label>
+          <label class="cand">
+            <input type="radio" name="pick-11" value="2">
+            <span class="cand-frame"><img src="images/sources-fx/matched/011/02.jpg" alt="Candidate 2" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #2 · 0.051<br><small>File:Avengers Assemble Vol 1 1 Textless.jpg</small></span>
+          </label>
+          <label class="cand">
+            <input type="radio" name="pick-11" value="3">
+            <span class="cand-frame"><img src="images/sources-fx/matched/011/03.jpg" alt="Candidate 3" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #3 · 0.050<br><small>File:Avengers Assemble (Animated Series) poster 003.jpg</small></span>
+          </label>
+          <label class="cand">
+            <input type="radio" name="pick-11" value="4">
+            <span class="cand-frame"><img src="images/sources-fx/matched/011/04.jpg" alt="Candidate 4" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #4 · 0.042<br><small>File:Avengers Assemble Vol 3 3 Jacket Variant Textless.jpg</small></span>
+          </label>
+          <label class="cand">
+            <input type="radio" name="pick-11" value="5">
+            <span class="cand-frame"><img src="images/sources-fx/matched/011/05.jpg" alt="Candidate 5" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #5 · 0.035<br><small>File:Avengers Assemble! 001.jpg</small></span>
+          </label>
+          <label class="cand">
+            <input type="radio" name="pick-11" value="6">
+            <span class="cand-frame"><img src="images/sources-fx/matched/011/06.jpg" alt="Candidate 6" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #6 · 0.034<br><small>File:Avengers Assemble Vol 3 4 Stormbreakers Variant Textless.jpg</small></span>
+          </label></div>
+  </div>
+</article>
+<article class="row" id="c14" data-n="14">
+  <div class="meta">
+    <div class="id">#014 · Origin of Daredevil</div>
+    <span class="pill">6 matched</span>
+  </div>
+  <p class="cite">Daredevil: The Man Without Fear (1964) #1, Cover · Bill Everett</p>
+  <div class="pair">
+    <figure class="front-col">
+      <figcaption>Card front</figcaption>
+      <div class="face"><img src="images/cards-fx/hd/014.jpg" alt="Card 014" loading="lazy"></div>
+    </figure>
+    
+      <figure class="best-col">
+        <figcaption>Top match <span class="badge match">wiki-candidate</span></figcaption>
+        <div class="face"><img src="images/sources-fx/matched/014/01.jpg" alt="Best match 014" loading="lazy"></div>
+        <p class="best-label">File:Matthew Murdock (Earth-616) being trained by Stick from Daredevil The Man Without Fear Vol 1 1.jpg</p>
+      </figure>
+  </div>
+  <div class="cands-col">
+    <figcaption>Pick the matching source (image-matched; CGI cards won’t be perfect)</figcaption>
+    <div class="gallery">
+          <label class="cand">
+            <input type="radio" name="pick-14" value="1">
+            <span class="cand-frame"><img src="images/sources-fx/matched/014/01.jpg" alt="Candidate 1" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #1 · 0.089<br><small>File:Matthew Murdock (Earth-616) being trained by Stick from Daredevil The Man Without Fea</small></span>
+          </label>
+          <label class="cand">
+            <input type="radio" name="pick-14" value="2">
+            <span class="cand-frame"><img src="images/sources-fx/matched/014/02.jpg" alt="Candidate 2" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #2 · 0.068<br><small>File:Angelo (Earth-616) from Daredevil The Man Without Fear Vol 1 2 0001.png</small></span>
+          </label>
+          <label class="cand">
+            <input type="radio" name="pick-14" value="3">
+            <span class="cand-frame"><img src="images/sources-fx/matched/014/03.jpg" alt="Candidate 3" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #3 · 0.065<br><small>File:Daredevil The Man Without Fear Vol 1 1.jpg</small></span>
+          </label>
+          <label class="cand">
+            <input type="radio" name="pick-14" value="4">
+            <span class="cand-frame"><img src="images/sources-fx/matched/014/04.jpg" alt="Candidate 4" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #4 · 0.061<br><small>File:Carl Lombardi (Earth-616) from Captain Universe Daredevil - The Man Without Fear! Vol</small></span>
+          </label>
+          <label class="cand">
+            <input type="radio" name="pick-14" value="5">
+            <span class="cand-frame"><img src="images/sources-fx/matched/014/05.jpg" alt="Candidate 5" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #5 · 0.059<br><small>File:Baby Karen (Earth-616) from Daredevil Vol 2 1 0001.png</small></span>
+          </label>
+          <label class="cand">
+            <input type="radio" name="pick-14" value="6">
+            <span class="cand-frame"><img src="images/sources-fx/matched/014/06.jpg" alt="Candidate 6" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #6 · 0.047<br><small>File:Matthew Murdock (Earth-616) as a boy from Daredevil the Man Without Fear Vol 1 1.jpg</small></span>
+          </label></div>
+  </div>
+</article>
+<article class="row" id="c21" data-n="21">
+  <div class="meta">
+    <div class="id">#021 · Origin of Silver Surfer</div>
+    <span class="pill">6 matched</span>
+  </div>
+  <p class="cite">The Incredible Hulk (1968) #414, Page 20 · Gary Frank</p>
+  <div class="pair">
+    <figure class="front-col">
+      <figcaption>Card front</figcaption>
+      <div class="face"><img src="images/cards-fx/hd/021.jpg" alt="Card 021" loading="lazy"></div>
+    </figure>
+    
+      <figure class="best-col">
+        <figcaption>Top match <span class="badge match">wiki-candidate</span></figcaption>
+        <div class="face"><img src="images/sources-fx/matched/021/01.jpg" alt="Best match 021" loading="lazy"></div>
+        <p class="best-label">File:Death of the Silver Surfer Vol 1 1 Moore Second Printing Variant.jpg</p>
+      </figure>
+  </div>
+  <div class="cands-col">
+    <figcaption>Pick the matching source (image-matched; CGI cards won’t be perfect)</figcaption>
+    <div class="gallery">
+          <label class="cand">
+            <input type="radio" name="pick-21" value="1">
+            <span class="cand-frame"><img src="images/sources-fx/matched/021/01.jpg" alt="Candidate 1" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #1 · 0.076<br><small>File:Death of the Silver Surfer Vol 1 1 Moore Second Printing Variant.jpg</small></span>
+          </label>
+          <label class="cand">
+            <input type="radio" name="pick-21" value="2">
+            <span class="cand-frame"><img src="images/sources-fx/matched/021/02.jpg" alt="Candidate 2" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #2 · 0.076<br><small>File:Silver Surfer Rebirth Vol 1 4 Spider-Man Variant Textless.jpg</small></span>
+          </label>
+          <label class="cand">
+            <input type="radio" name="pick-21" value="3">
+            <span class="cand-frame"><img src="images/sources-fx/matched/021/03.jpg" alt="Candidate 3" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #3 · 0.067<br><small>File:Death of the Silver Surfer Vol 1 1 Foil Variant.jpg</small></span>
+          </label>
+          <label class="cand">
+            <input type="radio" name="pick-21" value="4">
+            <span class="cand-frame"><img src="images/sources-fx/matched/021/04.jpg" alt="Candidate 4" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #4 · 0.043<br><small>File:Silver Surfer Rebirth Vol 1 1 Second Printing Variant Textless.jpg</small></span>
+          </label>
+          <label class="cand">
+            <input type="radio" name="pick-21" value="5">
+            <span class="cand-frame"><img src="images/sources-fx/matched/021/05.jpg" alt="Candidate 5" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #5 · 0.038<br><small>File:Silver Surfer The Best Defense Vol 1 1 Young Variant Textless.jpg</small></span>
+          </label>
+          <label class="cand">
+            <input type="radio" name="pick-21" value="6">
+            <span class="cand-frame"><img src="images/sources-fx/matched/021/06.jpg" alt="Candidate 6" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #6 · 0.035<br><small>File:Silver Surfer Vol 7 1 Baby Variant Textless.jpg</small></span>
+          </label></div>
+  </div>
+</article>
+<article class="row" id="c25" data-n="25">
+  <div class="meta">
+    <div class="id">#025 · Doom Steals the Power Cosmic</div>
+    <span class="pill">6 matched</span>
+  </div>
+  <p class="cite">The Fantastic Four (1961) #128, Page 21</p>
+  <div class="pair">
+    <figure class="front-col">
+      <figcaption>Card front</figcaption>
+      <div class="face"><img src="images/cards-fx/hd/025.jpg" alt="Card 025" loading="lazy"></div>
+    </figure>
+    
+      <figure class="best-col">
+        <figcaption>Top match <span class="badge match">wiki-candidate</span></figcaption>
+        <div class="face"><img src="images/sources-fx/matched/025/01.jpg" alt="Best match 025" loading="lazy"></div>
+        <p class="best-label">File:Victor von Doom (Earth-616) from Fantastic Four Vol 1 358 001.jpg</p>
+      </figure>
+  </div>
+  <div class="cands-col">
+    <figcaption>Pick the matching source (image-matched; CGI cards won’t be perfect)</figcaption>
+    <div class="gallery">
+          <label class="cand">
+            <input type="radio" name="pick-25" value="1">
+            <span class="cand-frame"><img src="images/sources-fx/matched/025/01.jpg" alt="Candidate 1" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #1 · 0.104<br><small>File:Victor von Doom (Earth-616) from Fantastic Four Vol 1 358 001.jpg</small></span>
+          </label>
+          <label class="cand">
+            <input type="radio" name="pick-25" value="2">
+            <span class="cand-frame"><img src="images/sources-fx/matched/025/02.jpg" alt="Candidate 2" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #2 · 0.084<br><small>File:Victor von Doom (Earth-616) and Reed Richards (Earth-616) from Fantastic Four Vol 1 3</small></span>
+          </label>
+          <label class="cand">
+            <input type="radio" name="pick-25" value="3">
+            <span class="cand-frame"><img src="images/sources-fx/matched/025/03.jpg" alt="Candidate 3" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #3 · 0.065<br><small>File:Victor von Doom (Earth-616) from Fantastic Four Vol 6 43 001.jpg</small></span>
+          </label>
+          <label class="cand">
+            <input type="radio" name="pick-25" value="4">
+            <span class="cand-frame"><img src="images/sources-fx/matched/025/04.jpg" alt="Candidate 4" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #4 · 0.055<br><small>File:Victor von Doom (Earth-616) from Fantastic Four Vol 3 566 001.jpg</small></span>
+          </label>
+          <label class="cand">
+            <input type="radio" name="pick-25" value="5">
+            <span class="cand-frame"><img src="images/sources-fx/matched/025/05.jpg" alt="Candidate 5" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #5 · 0.053<br><small>File:Victor von Doom (Earth-616) and Reed Richards (Earth-616) from Fantastic Four Vol 1 2</small></span>
+          </label>
+          <label class="cand">
+            <input type="radio" name="pick-25" value="6">
+            <span class="cand-frame"><img src="images/sources-fx/matched/025/06.jpg" alt="Candidate 6" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #6 · 0.050<br><small>File:Victor von Doom (Earth-616) from Fantastic Four Vol 6 32 002.jpg</small></span>
+          </label></div>
+  </div>
+</article>
+<article class="row" id="c28" data-n="28">
+  <div class="meta">
+    <div class="id">#028 · Mephisto Appears</div>
+    <span class="pill">6 matched</span>
+  </div>
+  <p class="cite">West Coast Avengers (1985) Annual #8, Page 51 · Larry Alexander</p>
+  <div class="pair">
+    <figure class="front-col">
+      <figcaption>Card front</figcaption>
+      <div class="face"><img src="images/cards-fx/hd/028.jpg" alt="Card 028" loading="lazy"></div>
+    </figure>
+    
+      <figure class="best-col">
+        <figcaption>Top match <span class="badge match">wiki-candidate</span></figcaption>
+        <div class="face"><img src="images/sources-fx/matched/028/01.jpg" alt="Best match 028" loading="lazy"></div>
+        <p class="best-label">File:Mephisto (Earth-616) from Avengers Vol 8 7 001.jpg</p>
+      </figure>
+  </div>
+  <div class="cands-col">
+    <figcaption>Pick the matching source (image-matched; CGI cards won’t be perfect)</figcaption>
+    <div class="gallery">
+          <label class="cand">
+            <input type="radio" name="pick-28" value="1">
+            <span class="cand-frame"><img src="images/sources-fx/matched/028/01.jpg" alt="Candidate 1" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #1 · 0.087<br><small>File:Mephisto (Earth-616) from Avengers Vol 8 7 001.jpg</small></span>
+          </label>
+          <label class="cand">
+            <input type="radio" name="pick-28" value="2">
+            <span class="cand-frame"><img src="images/sources-fx/matched/028/02.jpg" alt="Candidate 2" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #2 · 0.084<br><small>File:Mephisto (Earth-4111) from Avengers Vol 8 50 001.jpg</small></span>
+          </label>
+          <label class="cand">
+            <input type="radio" name="pick-28" value="3">
+            <span class="cand-frame"><img src="images/sources-fx/matched/028/03.jpg" alt="Candidate 3" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #3 · 0.059<br><small>File:Mephisto (Earth-616) from Avengers Vol 8 31 002.jpg</small></span>
+          </label>
+          <label class="cand">
+            <input type="radio" name="pick-28" value="4">
+            <span class="cand-frame"><img src="images/sources-fx/matched/028/04.jpg" alt="Candidate 4" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #4 · 0.050<br><small>File:Mephisto (Earth-616) from Avengers Academy Marvel&#x27;s Voices Infinity Comic Vol 1 24 00</small></span>
+          </label>
+          <label class="cand">
+            <input type="radio" name="pick-28" value="5">
+            <span class="cand-frame"><img src="images/sources-fx/matched/028/05.jpg" alt="Candidate 5" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #5 · 0.048<br><small>File:Mephisto (Earth-616) from Avengers Vol 8 32 001.jpg</small></span>
+          </label>
+          <label class="cand">
+            <input type="radio" name="pick-28" value="6">
+            <span class="cand-frame"><img src="images/sources-fx/matched/028/06.jpg" alt="Candidate 6" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #6 · 0.047<br><small>File:Mephisto (Earth-TRN1265) from Avengers Vol 1 177 0001.jpg</small></span>
+          </label></div>
+  </div>
+</article>
+<article class="row" id="c29" data-n="29">
+  <div class="meta">
+    <div class="id">#029 · Origin of Morbius</div>
+    <span class="pill">6 matched</span>
+  </div>
+  <p class="cite">Morbius (1992) #1, Mini-Poster · Ron Wagner; Mike Witherby</p>
+  <div class="pair">
+    <figure class="front-col">
+      <figcaption>Card front</figcaption>
+      <div class="face"><img src="images/cards-fx/hd/029.jpg" alt="Card 029" loading="lazy"></div>
+    </figure>
+    
+      <figure class="best-col">
+        <figcaption>Top match <span class="badge match">wiki-candidate</span></figcaption>
+        <div class="face"><img src="images/sources-fx/matched/029/01.jpg" alt="Best match 029" loading="lazy"></div>
+        <p class="best-label">File:Legion of Monsters Morbius Vol 1 1.jpg</p>
+      </figure>
+  </div>
+  <div class="cands-col">
+    <figcaption>Pick the matching source (image-matched; CGI cards won’t be perfect)</figcaption>
+    <div class="gallery">
+          <label class="cand">
+            <input type="radio" name="pick-29" value="1">
+            <span class="cand-frame"><img src="images/sources-fx/matched/029/01.jpg" alt="Candidate 1" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #1 · 0.100<br><small>File:Legion of Monsters Morbius Vol 1 1.jpg</small></span>
+          </label>
+          <label class="cand">
+            <input type="radio" name="pick-29" value="2">
+            <span class="cand-frame"><img src="images/sources-fx/matched/029/02.jpg" alt="Candidate 2" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #2 · 0.075<br><small>File:Morbius Vol 1 1 Lee Variant Textless.jpg</small></span>
+          </label>
+          <label class="cand">
+            <input type="radio" name="pick-29" value="3">
+            <span class="cand-frame"><img src="images/sources-fx/matched/029/03.jpg" alt="Candidate 3" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #3 · 0.066<br><small>File:Morbius Vol 1 1 Hotz Variant Textless.jpg</small></span>
+          </label>
+          <label class="cand">
+            <input type="radio" name="pick-29" value="4">
+            <span class="cand-frame"><img src="images/sources-fx/matched/029/04.jpg" alt="Candidate 4" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #4 · 0.063<br><small>File:Elizabeth Nikos (Earth-616) from Morbius Vol 1 1 001.jpg</small></span>
+          </label>
+          <label class="cand">
+            <input type="radio" name="pick-29" value="5">
+            <span class="cand-frame"><img src="images/sources-fx/matched/029/05.jpg" alt="Candidate 5" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #5 · 0.056<br><small>File:Marvel-Verse Morbius Vol 1 1.jpg</small></span>
+          </label>
+          <label class="cand">
+            <input type="radio" name="pick-29" value="6">
+            <span class="cand-frame"><img src="images/sources-fx/matched/029/06.jpg" alt="Candidate 6" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #6 · 0.055<br><small>File:Morbius The Living Vampire – The Man Called Morbius Vol 1 1.jpg</small></span>
+          </label></div>
+  </div>
+</article>
+<article class="row" id="c31" data-n="31">
+  <div class="meta">
+    <div class="id">#031 · Thanos Attacks</div>
+    <span class="pill">6 matched</span>
+  </div>
+  <p class="cite">The Infinity War (1992) #6, Page 14 · Ron Lim</p>
+  <div class="pair">
+    <figure class="front-col">
+      <figcaption>Card front</figcaption>
+      <div class="face"><img src="images/cards-fx/hd/031.jpg" alt="Card 031" loading="lazy"></div>
+    </figure>
+    
+      <figure class="best-col">
+        <figcaption>Top match <span class="badge match">wiki-candidate</span></figcaption>
+        <div class="face"><img src="images/sources-fx/matched/031/01.jpg" alt="Best match 031" loading="lazy"></div>
+        <p class="best-label">File:Peter Quill (Earth-199999), Gamora (Earth-199999), and Thanos (Earth-199999) from Avengers Infinity War 001.jpg</p>
+      </figure>
+  </div>
+  <div class="cands-col">
+    <figcaption>Pick the matching source (image-matched; CGI cards won’t be perfect)</figcaption>
+    <div class="gallery">
+          <label class="cand">
+            <input type="radio" name="pick-31" value="1">
+            <span class="cand-frame"><img src="images/sources-fx/matched/031/01.jpg" alt="Candidate 1" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #1 · 0.097<br><small>File:Peter Quill (Earth-199999), Gamora (Earth-199999), and Thanos (Earth-199999) from Ave</small></span>
+          </label>
+          <label class="cand">
+            <input type="radio" name="pick-31" value="2">
+            <span class="cand-frame"><img src="images/sources-fx/matched/031/02.jpg" alt="Candidate 2" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #2 · 0.087<br><small>File:Thanos Vol 2 1 Hip-Hop Variant Textless.jpg</small></span>
+          </label>
+          <label class="cand">
+            <input type="radio" name="pick-31" value="3">
+            <span class="cand-frame"><img src="images/sources-fx/matched/031/03.jpg" alt="Candidate 3" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #3 · 0.087<br><small>File:Thanos Vol 2 1 Toy Variant Textless.jpg</small></span>
+          </label>
+          <label class="cand">
+            <input type="radio" name="pick-31" value="4">
+            <span class="cand-frame"><img src="images/sources-fx/matched/031/04.jpg" alt="Candidate 4" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #4 · 0.064<br><small>File:Thanos (Earth-616) from Infinity Gauntlet Vol 1 6 0001.jpg</small></span>
+          </label>
+          <label class="cand">
+            <input type="radio" name="pick-31" value="5">
+            <span class="cand-frame"><img src="images/sources-fx/matched/031/05.jpg" alt="Candidate 5" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #5 · 0.059<br><small>File:Thanos (Doppleganger) (Earth-616) from Infinity War Vol 1 1.jpg</small></span>
+          </label>
+          <label class="cand">
+            <input type="radio" name="pick-31" value="6">
+            <span class="cand-frame"><img src="images/sources-fx/matched/031/06.jpg" alt="Candidate 6" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #6 · 0.055<br><small>File:Thanos (Earth-616) from Infinity War Vol 1 1 001.jpg</small></span>
+          </label></div>
+  </div>
+</article>
+<article class="row" id="c32" data-n="32">
+  <div class="meta">
+    <div class="id">#032 · Death of Gwen Stacy</div>
+    <span class="pill">6 matched</span>
+  </div>
+  <p class="cite">The Spectacular Spider-Man (1976) #200, Page 42 · Sal Buscema</p>
+  <div class="pair">
+    <figure class="front-col">
+      <figcaption>Card front</figcaption>
+      <div class="face"><img src="images/cards-fx/hd/032.jpg" alt="Card 032" loading="lazy"></div>
+    </figure>
+    
+      <figure class="best-col">
+        <figcaption>Top match <span class="badge match">wiki-candidate</span></figcaption>
+        <div class="face"><img src="images/sources-fx/matched/032/01.jpg" alt="Best match 032" loading="lazy"></div>
+        <p class="best-label">File:Amazing Spider-Man Vol 6 25 Gwen Stacy Variant Textless.jpg</p>
+      </figure>
+  </div>
+  <div class="cands-col">
+    <figcaption>Pick the matching source (image-matched; CGI cards won’t be perfect)</figcaption>
+    <div class="gallery">
+          <label class="cand">
+            <input type="radio" name="pick-32" value="1">
+            <span class="cand-frame"><img src="images/sources-fx/matched/032/01.jpg" alt="Candidate 1" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #1 · 0.118<br><small>File:Amazing Spider-Man Vol 6 25 Gwen Stacy Variant Textless.jpg</small></span>
+          </label>
+          <label class="cand">
+            <input type="radio" name="pick-32" value="2">
+            <span class="cand-frame"><img src="images/sources-fx/matched/032/02.jpg" alt="Candidate 2" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #2 · 0.102<br><small>File:Peter Parker (Earth-616) and Harold Osborn (Earth-616) from Spectacular Spider-Man Vo</small></span>
+          </label>
+          <label class="cand">
+            <input type="radio" name="pick-32" value="3">
+            <span class="cand-frame"><img src="images/sources-fx/matched/032/03.jpg" alt="Candidate 3" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #3 · 0.088<br><small>File:Spectacular Spider-Man Vol 1 200.jpg</small></span>
+          </label>
+          <label class="cand">
+            <input type="radio" name="pick-32" value="4">
+            <span class="cand-frame"><img src="images/sources-fx/matched/032/04.jpg" alt="Candidate 4" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #4 · 0.077<br><small>File:Gwendolyne Stacy (Earth-51838) from Peter Parker The Spectacular Spider-Man Vol 1 304</small></span>
+          </label>
+          <label class="cand">
+            <input type="radio" name="pick-32" value="5">
+            <span class="cand-frame"><img src="images/sources-fx/matched/032/05.jpg" alt="Candidate 5" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #5 · 0.057<br><small>File:Harold Osborn (Earth-616) from Spectacular Spider-Man Vol 1 200 0001.jpg</small></span>
+          </label>
+          <label class="cand">
+            <input type="radio" name="pick-32" value="6">
+            <span class="cand-frame"><img src="images/sources-fx/matched/032/06.jpg" alt="Candidate 6" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #6 · 0.050<br><small>File:Gwendolyne Stacy (Earth-26496) from Spectacular Spider-Man (animated series) Season 2</small></span>
+          </label></div>
+  </div>
+</article>
+<article class="row" id="c33" data-n="33">
+  <div class="meta">
+    <div class="id">#033 · Punisher vs. Spider-Man</div>
+    <span class="pill">6 matched</span>
+  </div>
+  <p class="cite">The Punisher (1987) Ad/Poster · Klaus Janson</p>
+  <div class="pair">
+    <figure class="front-col">
+      <figcaption>Card front</figcaption>
+      <div class="face"><img src="images/cards-fx/hd/033.jpg" alt="Card 033" loading="lazy"></div>
+    </figure>
+    
+      <figure class="best-col">
+        <figcaption>Top match <span class="badge match">wiki-candidate</span></figcaption>
+        <div class="face"><img src="images/sources-fx/matched/033/01.jpg" alt="Best match 033" loading="lazy"></div>
+        <p class="best-label">File:Benjamin Parker (Earth-616) from Spider-Man Heroes &amp; Villains Collection (Trading Cards) 001.jpg</p>
+      </figure>
+  </div>
+  <div class="cands-col">
+    <figcaption>Pick the matching source (image-matched; CGI cards won’t be perfect)</figcaption>
+    <div class="gallery">
+          <label class="cand">
+            <input type="radio" name="pick-33" value="1">
+            <span class="cand-frame"><img src="images/sources-fx/matched/033/01.jpg" alt="Candidate 1" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #1 · 0.088<br><small>File:Benjamin Parker (Earth-616) from Spider-Man Heroes &amp; Villains Collection (Trading Car</small></span>
+          </label>
+          <label class="cand">
+            <input type="radio" name="pick-33" value="2">
+            <span class="cand-frame"><img src="images/sources-fx/matched/033/02.jpg" alt="Candidate 2" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #2 · 0.086<br><small>File:The Punisher (2004 film) poster textless 002.png</small></span>
+          </label>
+          <label class="cand">
+            <input type="radio" name="pick-33" value="3">
+            <span class="cand-frame"><img src="images/sources-fx/matched/033/03.jpg" alt="Candidate 3" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #3 · 0.082<br><small>File:Abner Jenkins (Earth-616) Pin-Up from Amazing Spider-Man Annual Vol 1 2 0001.png</small></span>
+          </label>
+          <label class="cand">
+            <input type="radio" name="pick-33" value="4">
+            <span class="cand-frame"><img src="images/sources-fx/matched/033/04.jpg" alt="Candidate 4" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #4 · 0.069<br><small>File:Spider-Man Presents Punisher from Marvel Universe Cards Series I 0001.jpg</small></span>
+          </label>
+          <label class="cand">
+            <input type="radio" name="pick-33" value="5">
+            <span class="cand-frame"><img src="images/sources-fx/matched/033/05.jpg" alt="Candidate 5" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #5 · 0.065<br><small>File:Francis Castle (Earth-616) and Peter Parker (Earth-616) from Spider-Man Team-Up (Trad</small></span>
+          </label>
+          <label class="cand">
+            <input type="radio" name="pick-33" value="6">
+            <span class="cand-frame"><img src="images/sources-fx/matched/033/06.jpg" alt="Candidate 6" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #6 · 0.064<br><small>File:The Punisher (2004 film) poster textless 001.png</small></span>
+          </label></div>
+  </div>
+</article>
+<article class="row" id="c35" data-n="35">
+  <div class="meta">
+    <div class="id">#035 · The Wedding</div>
+    <span class="pill">6 matched</span>
+  </div>
+  <p class="cite">X-Men (1991) #26, Cover · Andy Kubert</p>
+  <div class="pair">
+    <figure class="front-col">
+      <figcaption>Card front</figcaption>
+      <div class="face"><img src="images/cards-fx/hd/035.jpg" alt="Card 035" loading="lazy"></div>
+    </figure>
+    
+      <figure class="best-col">
+        <figcaption>Top match <span class="badge match">wiki-candidate</span></figcaption>
+        <div class="face"><img src="images/sources-fx/matched/035/01.jpg" alt="Best match 035" loading="lazy"></div>
+        <p class="best-label">File:New X-Men Vol 2 26 Textless.jpg</p>
+      </figure>
+  </div>
+  <div class="cands-col">
+    <figcaption>Pick the matching source (image-matched; CGI cards won’t be perfect)</figcaption>
+    <div class="gallery">
+          <label class="cand">
+            <input type="radio" name="pick-35" value="1">
+            <span class="cand-frame"><img src="images/sources-fx/matched/035/01.jpg" alt="Candidate 1" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #1 · 0.130<br><small>File:New X-Men Vol 2 26 Textless.jpg</small></span>
+          </label>
+          <label class="cand">
+            <input type="radio" name="pick-35" value="2">
+            <span class="cand-frame"><img src="images/sources-fx/matched/035/02.jpg" alt="Candidate 2" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #2 · 0.083<br><small>File:William Stryker (Earth-616) from New X-Men Vol 2 26 0001.jpg</small></span>
+          </label>
+          <label class="cand">
+            <input type="radio" name="pick-35" value="3">
+            <span class="cand-frame"><img src="images/sources-fx/matched/035/03.jpg" alt="Candidate 3" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #3 · 0.081<br><small>File:Albert (Fisherman) (Earth-616) from X-Men Vol 1 26 0001.png</small></span>
+          </label>
+          <label class="cand">
+            <input type="radio" name="pick-35" value="4">
+            <span class="cand-frame"><img src="images/sources-fx/matched/035/04.jpg" alt="Candidate 4" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #4 · 0.078<br><small>File:Sooraya Qadir (Earth-616) from New X-Men Vol 2 26 0001.jpg</small></span>
+          </label>
+          <label class="cand">
+            <input type="radio" name="pick-35" value="5">
+            <span class="cand-frame"><img src="images/sources-fx/matched/035/05.jpg" alt="Candidate 5" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #5 · 0.071<br><small>File:Purifiers (Earth-616) and Sooraya Qadir (Earth-616) from New X-Men Vol 2 26 0001.jpg</small></span>
+          </label>
+          <label class="cand">
+            <input type="radio" name="pick-35" value="6">
+            <span class="cand-frame"><img src="images/sources-fx/matched/035/06.jpg" alt="Candidate 6" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #6 · 0.066<br><small>File:Remy LeBeau (Earth-616) from X-Men Vol 2 26 001.jpg</small></span>
+          </label></div>
+  </div>
+</article>
+<article class="row" id="c37" data-n="37">
+  <div class="meta">
+    <div class="id">#037 · Spider-Man meets the Black Cat</div>
+    <span class="pill">6 matched</span>
+  </div>
+  <p class="cite">No spreadsheet citation</p>
+  <div class="pair">
+    <figure class="front-col">
+      <figcaption>Card front</figcaption>
+      <div class="face"><img src="images/cards-fx/hd/037.jpg" alt="Card 037" loading="lazy"></div>
+    </figure>
+    
+      <figure class="best-col">
+        <figcaption>Top match <span class="badge match">wiki-candidate</span></figcaption>
+        <div class="face"><img src="images/sources-fx/matched/037/01.jpg" alt="Best match 037" loading="lazy"></div>
+        <p class="best-label">File:Abner Jenkins (Earth-616) Pin-Up from Amazing Spider-Man Annual Vol 1 2 0001.png</p>
+      </figure>
+  </div>
+  <div class="cands-col">
+    <figcaption>Pick the matching source (image-matched; CGI cards won’t be perfect)</figcaption>
+    <div class="gallery">
+          <label class="cand">
+            <input type="radio" name="pick-37" value="1">
+            <span class="cand-frame"><img src="images/sources-fx/matched/037/01.jpg" alt="Candidate 1" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #1 · 0.063<br><small>File:Abner Jenkins (Earth-616) Pin-Up from Amazing Spider-Man Annual Vol 1 2 0001.png</small></span>
+          </label>
+          <label class="cand">
+            <input type="radio" name="pick-37" value="2">
+            <span class="cand-frame"><img src="images/sources-fx/matched/037/02.jpg" alt="Candidate 2" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #2 · 0.041<br><small>File:Amazing Spider-Man Presents Black Cat Vol 1 4 Textless.jpg</small></span>
+          </label>
+          <label class="cand">
+            <input type="radio" name="pick-37" value="3">
+            <span class="cand-frame"><img src="images/sources-fx/matched/037/03.jpg" alt="Candidate 3" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #3 · 0.041<br><small>File:Bruce Banner (Earth-616) and Peter Parker (Earth-616) from Spider-Man Team-Up (Tradin</small></span>
+          </label>
+          <label class="cand">
+            <input type="radio" name="pick-37" value="4">
+            <span class="cand-frame"><img src="images/sources-fx/matched/037/04.jpg" alt="Candidate 4" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #4 · 0.041<br><small>File:Black Cat (Earth-7930) from Spider-Man Fairy Tales Vol 1 3 001.jpg</small></span>
+          </label>
+          <label class="cand">
+            <input type="radio" name="pick-37" value="5">
+            <span class="cand-frame"><img src="images/sources-fx/matched/037/05.jpg" alt="Candidate 5" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #5 · 0.040<br><small>File:Amazing Spider-Man Presents Black Cat Vol 1 3 Textless.jpg</small></span>
+          </label>
+          <label class="cand">
+            <input type="radio" name="pick-37" value="6">
+            <span class="cand-frame"><img src="images/sources-fx/matched/037/06.jpg" alt="Candidate 6" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #6 · 0.039<br><small>File:Black Cat Club from Spider-Man Noir Vol 2 5.jpg</small></span>
+          </label></div>
+  </div>
+</article>
+<article class="row" id="c41" data-n="41">
+  <div class="meta">
+    <div class="id">#041 · Days of Future Past</div>
+    <span class="pill">6 matched</span>
+  </div>
+  <p class="cite">X-Men Adventures (1992) #1, Page 12 · Andrew Wildman</p>
+  <div class="pair">
+    <figure class="front-col">
+      <figcaption>Card front</figcaption>
+      <div class="face"><img src="images/cards-fx/hd/041.jpg" alt="Card 041" loading="lazy"></div>
+    </figure>
+    
+      <figure class="best-col">
+        <figcaption>Top match <span class="badge match">wiki-candidate</span></figcaption>
+        <div class="face"><img src="images/sources-fx/matched/041/01.jpg" alt="Best match 041" loading="lazy"></div>
+        <p class="best-label">File:X-Factor Vol 4 2 Days of Future Past Wraparound Variant.jpg</p>
+      </figure>
+  </div>
+  <div class="cands-col">
+    <figcaption>Pick the matching source (image-matched; CGI cards won’t be perfect)</figcaption>
+    <div class="gallery">
+          <label class="cand">
+            <input type="radio" name="pick-41" value="1">
+            <span class="cand-frame"><img src="images/sources-fx/matched/041/01.jpg" alt="Candidate 1" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #1 · 0.089<br><small>File:X-Factor Vol 4 2 Days of Future Past Wraparound Variant.jpg</small></span>
+          </label>
+          <label class="cand">
+            <input type="radio" name="pick-41" value="2">
+            <span class="cand-frame"><img src="images/sources-fx/matched/041/02.jpg" alt="Candidate 2" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #2 · 0.075<br><small>File:X-Men Days of Future Past - Doomsday Vol 1 1 Hellfire Gala Variant.jpg</small></span>
+          </label>
+          <label class="cand">
+            <input type="radio" name="pick-41" value="3">
+            <span class="cand-frame"><img src="images/sources-fx/matched/041/03.jpg" alt="Candidate 3" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #3 · 0.070<br><small>File:Wolverine Vol 7 4 Days of Future Past Wraparound Variant.jpg</small></span>
+          </label>
+          <label class="cand">
+            <input type="radio" name="pick-41" value="4">
+            <span class="cand-frame"><img src="images/sources-fx/matched/041/04.jpg" alt="Candidate 4" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #4 · 0.063<br><small>File:X-Men Days of Future Past - Doomsday Vol 1 1 Hellfire Gala Variant Textless.jpg</small></span>
+          </label>
+          <label class="cand">
+            <input type="radio" name="pick-41" value="5">
+            <span class="cand-frame"><img src="images/sources-fx/matched/041/05.jpg" alt="Candidate 5" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #5 · 0.061<br><small>File:Marauders Vol 1 11 Days of Future Past Variant.jpg</small></span>
+          </label>
+          <label class="cand">
+            <input type="radio" name="pick-41" value="6">
+            <span class="cand-frame"><img src="images/sources-fx/matched/041/06.jpg" alt="Candidate 6" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #6 · 0.061<br><small>File:Wolverine Vol 7 4 Days of Future Past Variant.jpg</small></span>
+          </label></div>
+  </div>
+</article>
+<article class="row" id="c44" data-n="44">
+  <div class="meta">
+    <div class="id">#044 · Hobgoblin Appears</div>
+    <span class="pill">6 matched</span>
+  </div>
+  <p class="cite">Suspected unused in print, possibly shelved for a Web of Spider-Man Annual #3 pin-up. Used as a large 5&#x27; store stand-up display (1987)</p>
+  <div class="pair">
+    <figure class="front-col">
+      <figcaption>Card front</figcaption>
+      <div class="face"><img src="images/cards-fx/hd/044.jpg" alt="Card 044" loading="lazy"></div>
+    </figure>
+    
+      <figure class="best-col">
+        <figcaption>Top match <span class="badge match">wiki-candidate</span></figcaption>
+        <div class="face"><img src="images/sources-fx/matched/044/01.jpg" alt="Best match 044" loading="lazy"></div>
+        <p class="best-label">File:Roderick Kingsley (Earth-616) from AXIS Hobgoblin Vol 1 1 001.png</p>
+      </figure>
+  </div>
+  <div class="cands-col">
+    <figcaption>Pick the matching source (image-matched; CGI cards won’t be perfect)</figcaption>
+    <div class="gallery">
+          <label class="cand">
+            <input type="radio" name="pick-44" value="1">
+            <span class="cand-frame"><img src="images/sources-fx/matched/044/01.jpg" alt="Candidate 1" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #1 · 0.067<br><small>File:Roderick Kingsley (Earth-616) from AXIS Hobgoblin Vol 1 1 001.png</small></span>
+          </label>
+          <label class="cand">
+            <input type="radio" name="pick-44" value="2">
+            <span class="cand-frame"><img src="images/sources-fx/matched/044/02.jpg" alt="Candidate 2" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #2 · 0.066<br><small>File:AXIS Hobgoblin Vol 1 2 Textless.jpg</small></span>
+          </label>
+          <label class="cand">
+            <input type="radio" name="pick-44" value="3">
+            <span class="cand-frame"><img src="images/sources-fx/matched/044/03.jpg" alt="Candidate 3" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #3 · 0.057<br><small>File:AXIS Hobgoblin Vol 1 3 Textless.jpg</small></span>
+          </label>
+          <label class="cand">
+            <input type="radio" name="pick-44" value="4">
+            <span class="cand-frame"><img src="images/sources-fx/matched/044/04.jpg" alt="Candidate 4" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #4 · 0.052<br><small>File:AXIS Hobgoblin Vol 1 1 Textless.jpg</small></span>
+          </label>
+          <label class="cand">
+            <input type="radio" name="pick-44" value="5">
+            <span class="cand-frame"><img src="images/sources-fx/matched/044/05.jpg" alt="Candidate 5" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #5 · 0.045<br><small>File:Hobgoblin (Tsum Tsum) (Earth-616) from Marvel Tsum Tsum Vol 1 4 0001.jpg</small></span>
+          </label>
+          <label class="cand">
+            <input type="radio" name="pick-44" value="6">
+            <span class="cand-frame"><img src="images/sources-fx/matched/044/06.jpg" alt="Candidate 6" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #6 · 0.043<br><small>File:Hobgoblin (Claude) (Earth-616) from Superior Spider-Man Vol 1 26 001.jpg</small></span>
+          </label></div>
+  </div>
+</article>
+<article class="row" id="c51" data-n="51">
+  <div class="meta">
+    <div class="id">#051 · Formation of X-Factor</div>
+    <span class="pill">6 matched</span>
+  </div>
+  <p class="cite">X-Men Unlimited (1993) #1, Page 62 · Joe Quesada</p>
+  <div class="pair">
+    <figure class="front-col">
+      <figcaption>Card front</figcaption>
+      <div class="face"><img src="images/cards-fx/hd/051.jpg" alt="Card 051" loading="lazy"></div>
+    </figure>
+    
+      <figure class="best-col">
+        <figcaption>Top match <span class="badge match">wiki-candidate</span></figcaption>
+        <div class="face"><img src="images/sources-fx/matched/051/01.jpg" alt="Best match 051" loading="lazy"></div>
+        <p class="best-label">File:Sage (Earth-616) from X-Men Unlimited Vol 2 1 005.jpg</p>
+      </figure>
+  </div>
+  <div class="cands-col">
+    <figcaption>Pick the matching source (image-matched; CGI cards won’t be perfect)</figcaption>
+    <div class="gallery">
+          <label class="cand">
+            <input type="radio" name="pick-51" value="1">
+            <span class="cand-frame"><img src="images/sources-fx/matched/051/01.jpg" alt="Candidate 1" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #1 · 0.093<br><small>File:Sage (Earth-616) from X-Men Unlimited Vol 2 1 005.jpg</small></span>
+          </label>
+          <label class="cand">
+            <input type="radio" name="pick-51" value="2">
+            <span class="cand-frame"><img src="images/sources-fx/matched/051/02.jpg" alt="Candidate 2" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #2 · 0.089<br><small>File:Inciters (Earth-616) from X-Men Unlimited Vol 1 13 001.jpg</small></span>
+          </label>
+          <label class="cand">
+            <input type="radio" name="pick-51" value="3">
+            <span class="cand-frame"><img src="images/sources-fx/matched/051/03.jpg" alt="Candidate 3" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #3 · 0.065<br><small>File:Sage (Earth-616) from X-Men Unlimited Vol 2 1 004.jpg</small></span>
+          </label>
+          <label class="cand">
+            <input type="radio" name="pick-51" value="4">
+            <span class="cand-frame"><img src="images/sources-fx/matched/051/04.jpg" alt="Candidate 4" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #4 · 0.061<br><small>File:Sage (Earth-616) from X-Men Unlimited Vol 2 1 002.jpg</small></span>
+          </label>
+          <label class="cand">
+            <input type="radio" name="pick-51" value="5">
+            <span class="cand-frame"><img src="images/sources-fx/matched/051/05.jpg" alt="Candidate 5" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #5 · 0.058<br><small>File:K&#x27;illace (Earth-616) from X-Men Unlimited Vol 1 13 0001.jpg</small></span>
+          </label>
+          <label class="cand">
+            <input type="radio" name="pick-51" value="6">
+            <span class="cand-frame"><img src="images/sources-fx/matched/051/06.jpg" alt="Candidate 6" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #6 · 0.057<br><small>File:Sage (Earth-616) from X-Men Unlimited Vol 2 1 001.jpg</small></span>
+          </label></div>
+  </div>
+</article>
+<article class="row" id="c52" data-n="52">
+  <div class="meta">
+    <div class="id">#052 · Apocalypse Attacks</div>
+    <span class="pill">6 matched</span>
+  </div>
+  <p class="cite">X-Factor (1988) #65, Page 20 · Whilce Portacio</p>
+  <div class="pair">
+    <figure class="front-col">
+      <figcaption>Card front</figcaption>
+      <div class="face"><img src="images/cards-fx/hd/052.jpg" alt="Card 052" loading="lazy"></div>
+    </figure>
+    
+      <figure class="best-col">
+        <figcaption>Top match <span class="badge match">wiki-candidate</span></figcaption>
+        <div class="face"><img src="images/sources-fx/matched/052/01.jpg" alt="Best match 052" loading="lazy"></div>
+        <p class="best-label">File:X-Factor Vol 1 65 Bonus Sheet 2.jpg</p>
+      </figure>
+  </div>
+  <div class="cands-col">
+    <figcaption>Pick the matching source (image-matched; CGI cards won’t be perfect)</figcaption>
+    <div class="gallery">
+          <label class="cand">
+            <input type="radio" name="pick-52" value="1">
+            <span class="cand-frame"><img src="images/sources-fx/matched/052/01.jpg" alt="Candidate 1" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #1 · 0.074<br><small>File:X-Factor Vol 1 65 Bonus Sheet 2.jpg</small></span>
+          </label>
+          <label class="cand">
+            <input type="radio" name="pick-52" value="2">
+            <span class="cand-frame"><img src="images/sources-fx/matched/052/02.jpg" alt="Candidate 2" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #2 · 0.073<br><small>File:X-Factor Vol 1 65 Bonus Sheet 3.jpg</small></span>
+          </label>
+          <label class="cand">
+            <input type="radio" name="pick-52" value="3">
+            <span class="cand-frame"><img src="images/sources-fx/matched/052/03.jpg" alt="Candidate 3" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #3 · 0.066<br><small>File:X-Factor (Earth-616) from X-Factor Vol 1 65 001.jpg</small></span>
+          </label>
+          <label class="cand">
+            <input type="radio" name="pick-52" value="4">
+            <span class="cand-frame"><img src="images/sources-fx/matched/052/04.jpg" alt="Candidate 4" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #4 · 0.066<br><small>File:Foxbat (Earth-616) from X-Factor Vol 1 65 0001.jpg</small></span>
+          </label>
+          <label class="cand">
+            <input type="radio" name="pick-52" value="5">
+            <span class="cand-frame"><img src="images/sources-fx/matched/052/05.jpg" alt="Candidate 5" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #5 · 0.048<br><small>File:X-Factor Vol 1 65.jpg</small></span>
+          </label>
+          <label class="cand">
+            <input type="radio" name="pick-52" value="6">
+            <span class="cand-frame"><img src="images/sources-fx/matched/052/06.jpg" alt="Candidate 6" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #6 · 0.047<br><small>File:X-Factor (Earth-616) from X-Factor Vol 1 65 cover.JPG</small></span>
+          </label></div>
+  </div>
+</article>
+<article class="row" id="c54" data-n="54">
+  <div class="meta">
+    <div class="id">#054 · Formation of Excalibur</div>
+    <span class="pill">6 matched</span>
+  </div>
+  <p class="cite">The Uncanny X-Men (1963) #300, Page 1 · John Romita Jr.</p>
+  <div class="pair">
+    <figure class="front-col">
+      <figcaption>Card front</figcaption>
+      <div class="face"><img src="images/cards-fx/hd/054.jpg" alt="Card 054" loading="lazy"></div>
+    </figure>
+    
+      <figure class="best-col">
+        <figcaption>Top match <span class="badge match">wiki-candidate</span></figcaption>
+        <div class="face"><img src="images/sources-fx/matched/054/01.jpg" alt="Best match 054" loading="lazy"></div>
+        <p class="best-label">File:Excalibur (Earth-616) from Marvel Comics Presents Vol 1 38 001.jpg</p>
+      </figure>
+  </div>
+  <div class="cands-col">
+    <figcaption>Pick the matching source (image-matched; CGI cards won’t be perfect)</figcaption>
+    <div class="gallery">
+          <label class="cand">
+            <input type="radio" name="pick-54" value="1">
+            <span class="cand-frame"><img src="images/sources-fx/matched/054/01.jpg" alt="Candidate 1" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #1 · 0.088<br><small>File:Excalibur (Earth-616) from Marvel Comics Presents Vol 1 38 001.jpg</small></span>
+          </label>
+          <label class="cand">
+            <input type="radio" name="pick-54" value="2">
+            <span class="cand-frame"><img src="images/sources-fx/matched/054/02.jpg" alt="Candidate 2" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #2 · 0.076<br><small>File:Excalibur (Earth-616) from Excalibur Special Edition Vol 1 1 0001.jpg</small></span>
+          </label>
+          <label class="cand">
+            <input type="radio" name="pick-54" value="3">
+            <span class="cand-frame"><img src="images/sources-fx/matched/054/03.jpg" alt="Candidate 3" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #3 · 0.073<br><small>File:Excalibur (Earth-616) and Technet (Multiverse) from Excalibur Special Edition Vol 1 1</small></span>
+          </label>
+          <label class="cand">
+            <input type="radio" name="pick-54" value="4">
+            <span class="cand-frame"><img src="images/sources-fx/matched/054/04.jpg" alt="Candidate 4" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #4 · 0.068<br><small>File:Excalibur (Earth-616) from Excalibur Trading Cards 0003.jpg</small></span>
+          </label>
+          <label class="cand">
+            <input type="radio" name="pick-54" value="5">
+            <span class="cand-frame"><img src="images/sources-fx/matched/054/05.jpg" alt="Candidate 5" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #5 · 0.067<br><small>File:Excalibur (Earth-616) from Excalibur Vol 4 16 001.jpg</small></span>
+          </label>
+          <label class="cand">
+            <input type="radio" name="pick-54" value="6">
+            <span class="cand-frame"><img src="images/sources-fx/matched/054/06.jpg" alt="Candidate 6" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #6 · 0.057<br><small>File:Excalibur (Earth-616) from Excalibur Special Edition Vol 1 1 001.jpg</small></span>
+          </label></div>
+  </div>
+</article>
+<article class="row" id="c56" data-n="56">
+  <div class="meta">
+    <div class="id">#056 · Mr. Sinister Appears</div>
+    <span class="pill">6 matched</span>
+  </div>
+  <p class="cite">The Uncanny X-Men (1963) #239, Page 4 · Marc Silvestri</p>
+  <div class="pair">
+    <figure class="front-col">
+      <figcaption>Card front</figcaption>
+      <div class="face"><img src="images/cards-fx/hd/056.jpg" alt="Card 056" loading="lazy"></div>
+    </figure>
+    
+      <figure class="best-col">
+        <figcaption>Top match <span class="badge match">wiki-candidate</span></figcaption>
+        <div class="face"><img src="images/sources-fx/matched/056/01.jpg" alt="Best match 056" loading="lazy"></div>
+        <p class="best-label">File:Nathaniel Essex (Mister Sinister) (Earth-616) and Scott Summers (Earth-616) from Uncanny X-Men Vol 2 2 001.png</p>
+      </figure>
+  </div>
+  <div class="cands-col">
+    <figcaption>Pick the matching source (image-matched; CGI cards won’t be perfect)</figcaption>
+    <div class="gallery">
+          <label class="cand">
+            <input type="radio" name="pick-56" value="1">
+            <span class="cand-frame"><img src="images/sources-fx/matched/056/01.jpg" alt="Candidate 1" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #1 · 0.081<br><small>File:Nathaniel Essex (Mister Sinister) (Earth-616) and Scott Summers (Earth-616) from Unca</small></span>
+          </label>
+          <label class="cand">
+            <input type="radio" name="pick-56" value="2">
+            <span class="cand-frame"><img src="images/sources-fx/matched/056/02.jpg" alt="Candidate 2" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #2 · 0.075<br><small>File:Nathaniel Essex (Mister Sinister) (Earth-616) concept art 001.jpg</small></span>
+          </label>
+          <label class="cand">
+            <input type="radio" name="pick-56" value="3">
+            <span class="cand-frame"><img src="images/sources-fx/matched/056/03.jpg" alt="Candidate 3" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #3 · 0.061<br><small>File:Nathaniel Essex (Mister Sinister) (Earth-616) from Uncanny X-Men Vol 1 221 001.png</small></span>
+          </label>
+          <label class="cand">
+            <input type="radio" name="pick-56" value="4">
+            <span class="cand-frame"><img src="images/sources-fx/matched/056/04.jpg" alt="Candidate 4" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #4 · 0.057<br><small>File:Madelyne Pryor and Nathaniel Essex (Mister Sinister) (Earth-616) from Uncanny X-Men V</small></span>
+          </label>
+          <label class="cand">
+            <input type="radio" name="pick-56" value="5">
+            <span class="cand-frame"><img src="images/sources-fx/matched/056/05.jpg" alt="Candidate 5" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #5 · 0.055<br><small>File:Jean Grey (Earth-616) and Nathaniel Essex (Mister Sinister) (Earth-616) from Uncanny </small></span>
+          </label>
+          <label class="cand">
+            <input type="radio" name="pick-56" value="6">
+            <span class="cand-frame"><img src="images/sources-fx/matched/056/06.jpg" alt="Candidate 6" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #6 · 0.045<br><small>File:Nathaniel Essex (Mister Sinister) (Earth-616) from Uncanny X-Men Vol 1 240 001.png</small></span>
+          </label></div>
+  </div>
+</article>
+<article class="row" id="c57" data-n="57">
+  <div class="meta">
+    <div class="id">#057 · The Wedding of Spider-Man &amp; Mary Jane</div>
+    <span class="pill">6 matched</span>
+  </div>
+  <p class="cite">Web of Spider-Man (1985) Annual #4, Page 43 · John Romita Sr.; John Romita Jr.</p>
+  <div class="pair">
+    <figure class="front-col">
+      <figcaption>Card front</figcaption>
+      <div class="face"><img src="images/cards-fx/hd/057.jpg" alt="Card 057" loading="lazy"></div>
+    </figure>
+    
+      <figure class="best-col">
+        <figcaption>Top match <span class="badge match">wiki-candidate</span></figcaption>
+        <div class="face"><img src="images/sources-fx/matched/057/01.jpg" alt="Best match 057" loading="lazy"></div>
+        <p class="best-label">File:Jack (Earth-616) from Web of Spider-Man Vol 1 4 0001.jpg</p>
+      </figure>
+  </div>
+  <div class="cands-col">
+    <figcaption>Pick the matching source (image-matched; CGI cards won’t be perfect)</figcaption>
+    <div class="gallery">
+          <label class="cand">
+            <input type="radio" name="pick-57" value="1">
+            <span class="cand-frame"><img src="images/sources-fx/matched/057/01.jpg" alt="Candidate 1" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #1 · 0.096<br><small>File:Jack (Earth-616) from Web of Spider-Man Vol 1 4 0001.jpg</small></span>
+          </label>
+          <label class="cand">
+            <input type="radio" name="pick-57" value="2">
+            <span class="cand-frame"><img src="images/sources-fx/matched/057/02.jpg" alt="Candidate 2" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #2 · 0.071<br><small>File:Ylandris (Earth-616) from Web of Spider-Man Annual Vol 1 4 001.jpg</small></span>
+          </label>
+          <label class="cand">
+            <input type="radio" name="pick-57" value="3">
+            <span class="cand-frame"><img src="images/sources-fx/matched/057/03.jpg" alt="Candidate 3" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #3 · 0.058<br><small>File:Web of Spider-Man Vol 1 43.jpg</small></span>
+          </label>
+          <label class="cand">
+            <input type="radio" name="pick-57" value="4">
+            <span class="cand-frame"><img src="images/sources-fx/matched/057/04.jpg" alt="Candidate 4" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #4 · 0.050<br><small>File:Web of Spider-Man Vol 1 42.jpg</small></span>
+          </label>
+          <label class="cand">
+            <input type="radio" name="pick-57" value="5">
+            <span class="cand-frame"><img src="images/sources-fx/matched/057/05.jpg" alt="Candidate 5" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #5 · 0.048<br><small>File:Web of Spider-Man Vol 1 4.jpg</small></span>
+          </label>
+          <label class="cand">
+            <input type="radio" name="pick-57" value="6">
+            <span class="cand-frame"><img src="images/sources-fx/matched/057/06.jpg" alt="Candidate 6" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #6 · 0.047<br><small>File:Ulysses Lugman (Earth-616) from Web of Spider-Man Annual Vol 1 4 001.jpg</small></span>
+          </label></div>
+  </div>
+</article>
+<article class="row" id="c58" data-n="58">
+  <div class="meta">
+    <div class="id">#058 · The Origin of Jubilee</div>
+    <span class="pill">6 matched</span>
+  </div>
+  <p class="cite">Uncanny X-Men (1963) #258, Page 8 · Jim Lee</p>
+  <div class="pair">
+    <figure class="front-col">
+      <figcaption>Card front</figcaption>
+      <div class="face"><img src="images/cards-fx/hd/058.jpg" alt="Card 058" loading="lazy"></div>
+    </figure>
+    
+      <figure class="best-col">
+        <figcaption>Top match <span class="badge match">wiki-candidate</span></figcaption>
+        <div class="face"><img src="images/sources-fx/matched/058/01.jpg" alt="Best match 058" loading="lazy"></div>
+        <p class="best-label">File:Uncanny X-Men Vol 1 258.jpg</p>
+      </figure>
+  </div>
+  <div class="cands-col">
+    <figcaption>Pick the matching source (image-matched; CGI cards won’t be perfect)</figcaption>
+    <div class="gallery">
+          <label class="cand">
+            <input type="radio" name="pick-58" value="1">
+            <span class="cand-frame"><img src="images/sources-fx/matched/058/01.jpg" alt="Candidate 1" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #1 · 0.061<br><small>File:Uncanny X-Men Vol 1 258.jpg</small></span>
+          </label>
+          <label class="cand">
+            <input type="radio" name="pick-58" value="2">
+            <span class="cand-frame"><img src="images/sources-fx/matched/058/02.jpg" alt="Candidate 2" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #2 · 0.061<br><small>File:Wolverine and Jubilee Vol 1 1 Textless Nimit Malavia Variant.jpg</small></span>
+          </label>
+          <label class="cand">
+            <input type="radio" name="pick-58" value="3">
+            <span class="cand-frame"><img src="images/sources-fx/matched/058/03.jpg" alt="Candidate 3" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #3 · 0.058<br><small>File:Uncanny X-Men Vol 1 258 Reprint.jpg</small></span>
+          </label>
+          <label class="cand">
+            <input type="radio" name="pick-58" value="4">
+            <span class="cand-frame"><img src="images/sources-fx/matched/058/04.jpg" alt="Candidate 4" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #4 · 0.054<br><small>File:Elizabeth Braddock (Earth-616) and Mandarin (Earth-616) from Uncanny X-Men Vol 1 258 </small></span>
+          </label>
+          <label class="cand">
+            <input type="radio" name="pick-58" value="5">
+            <span class="cand-frame"><img src="images/sources-fx/matched/058/05.jpg" alt="Candidate 5" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #5 · 0.048<br><small>File:Jubilee Vol 1 1 Textless.jpg</small></span>
+          </label>
+          <label class="cand">
+            <input type="radio" name="pick-58" value="6">
+            <span class="cand-frame"><img src="images/sources-fx/matched/058/06.jpg" alt="Candidate 6" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #6 · 0.042<br><small>File:Jubilee Vol 1 2 Textless.jpg</small></span>
+          </label></div>
+  </div>
+</article>
+<article class="row" id="c59" data-n="59">
+  <div class="meta">
+    <div class="id">#059 · Armor Wars</div>
+    <span class="pill">6 matched</span>
+  </div>
+  <p class="cite">Iron Man (1968) Annual #10, Page 50 · Bob Layton</p>
+  <div class="pair">
+    <figure class="front-col">
+      <figcaption>Card front</figcaption>
+      <div class="face"><img src="images/cards-fx/hd/059.jpg" alt="Card 059" loading="lazy"></div>
+    </figure>
+    
+      <figure class="best-col">
+        <figcaption>Top match <span class="badge match">wiki-candidate</span></figcaption>
+        <div class="face"><img src="images/sources-fx/matched/059/01.jpg" alt="Best match 059" loading="lazy"></div>
+        <p class="best-label">File:Iron Man Armor Model 63 from Tony Stark Iron Man Vol 1 10 001.jpg</p>
+      </figure>
+  </div>
+  <div class="cands-col">
+    <figcaption>Pick the matching source (image-matched; CGI cards won’t be perfect)</figcaption>
+    <div class="gallery">
+          <label class="cand">
+            <input type="radio" name="pick-59" value="1">
+            <span class="cand-frame"><img src="images/sources-fx/matched/059/01.jpg" alt="Candidate 1" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #1 · 0.076<br><small>File:Iron Man Armor Model 63 from Tony Stark Iron Man Vol 1 10 001.jpg</small></span>
+          </label>
+          <label class="cand">
+            <input type="radio" name="pick-59" value="2">
+            <span class="cand-frame"><img src="images/sources-fx/matched/059/02.jpg" alt="Candidate 2" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #2 · 0.074<br><small>File:Anthony Stark (Earth-616) from Tony Stark Iron Man Vol 1 10 005.jpg</small></span>
+          </label>
+          <label class="cand">
+            <input type="radio" name="pick-59" value="3">
+            <span class="cand-frame"><img src="images/sources-fx/matched/059/03.jpg" alt="Candidate 3" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #3 · 0.058<br><small>File:Anthony Stark (Earth-616) from Tony Stark Iron Man Vol 1 10 003.jpg</small></span>
+          </label>
+          <label class="cand">
+            <input type="radio" name="pick-59" value="4">
+            <span class="cand-frame"><img src="images/sources-fx/matched/059/04.jpg" alt="Candidate 4" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #4 · 0.055<br><small>File:Arsenal Beta (Earth-616) from Tony Stark Iron Man Vol 1 10 001.jpg</small></span>
+          </label>
+          <label class="cand">
+            <input type="radio" name="pick-59" value="5">
+            <span class="cand-frame"><img src="images/sources-fx/matched/059/05.jpg" alt="Candidate 5" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #5 · 0.050<br><small>File:Anthony Stark (Earth-616) from Tony Stark Iron Man Vol 1 10 006.jpg</small></span>
+          </label>
+          <label class="cand">
+            <input type="radio" name="pick-59" value="6">
+            <span class="cand-frame"><img src="images/sources-fx/matched/059/06.jpg" alt="Candidate 6" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #6 · 0.049<br><small>File:Anthony Stark (Earth-616) from Tony Stark Iron Man Vol 1 10 004.jpg</small></span>
+          </label></div>
+  </div>
+</article>
+<article class="row" id="c61" data-n="61">
+  <div class="meta">
+    <div class="id">#061 · Origin of Venom</div>
+    <span class="pill">6 matched</span>
+  </div>
+  <p class="cite">Venom: Lethal Protector (1993) Gold Retailer Incentive, Back Cover · Mark Bagley; Al Milgrom</p>
+  <div class="pair">
+    <figure class="front-col">
+      <figcaption>Card front</figcaption>
+      <div class="face"><img src="images/cards-fx/hd/061.jpg" alt="Card 061" loading="lazy"></div>
+    </figure>
+    
+      <figure class="best-col">
+        <figcaption>Top match <span class="badge match">wiki-candidate</span></figcaption>
+        <div class="face"><img src="images/sources-fx/matched/061/01.jpg" alt="Best match 061" loading="lazy"></div>
+        <p class="best-label">File:Edward Brock (Earth-616) and Anti-Venom (Symbiote) (Earth-616) from Marvel War of Heroes 002.jpeg</p>
+      </figure>
+  </div>
+  <div class="cands-col">
+    <figcaption>Pick the matching source (image-matched; CGI cards won’t be perfect)</figcaption>
+    <div class="gallery">
+          <label class="cand">
+            <input type="radio" name="pick-61" value="1">
+            <span class="cand-frame"><img src="images/sources-fx/matched/061/01.jpg" alt="Candidate 1" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #1 · 0.073<br><small>File:Edward Brock (Earth-616) and Anti-Venom (Symbiote) (Earth-616) from Marvel War of Her</small></span>
+          </label>
+          <label class="cand">
+            <input type="radio" name="pick-61" value="2">
+            <span class="cand-frame"><img src="images/sources-fx/matched/061/02.jpg" alt="Candidate 2" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #2 · 0.072<br><small>File:Edward Brock (Earth-616) and Venom (Symbiote) (Earth-616) from Marvel Masterpieces (T</small></span>
+          </label>
+          <label class="cand">
+            <input type="radio" name="pick-61" value="3">
+            <span class="cand-frame"><img src="images/sources-fx/matched/061/03.jpg" alt="Candidate 3" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #3 · 0.069<br><small>File:Benjamin Reilly (Earth-616), Edward Brock (Earth-616), and Venom (Symbiote) (Earth-61</small></span>
+          </label>
+          <label class="cand">
+            <input type="radio" name="pick-61" value="4">
+            <span class="cand-frame"><img src="images/sources-fx/matched/061/04.jpg" alt="Candidate 4" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #4 · 0.065<br><small>File:Edward Brock (Earth-616) and Anti-Venom (Symbiote) (Earth-616) from Marvel War of Her</small></span>
+          </label>
+          <label class="cand">
+            <input type="radio" name="pick-61" value="5">
+            <span class="cand-frame"><img src="images/sources-fx/matched/061/05.jpg" alt="Candidate 5" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #5 · 0.064<br><small>File:Edward Brock (Earth-616) and Venom (Symbiote) (Earth-616) from Marvel Masterpieces (T</small></span>
+          </label>
+          <label class="cand">
+            <input type="radio" name="pick-61" value="6">
+            <span class="cand-frame"><img src="images/sources-fx/matched/061/06.jpg" alt="Candidate 6" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #6 · 0.053<br><small>File:Edward Brock (Earth-616) and Anti-Venom (Symbiote) (Earth-616) from Marvel War of Her</small></span>
+          </label></div>
+  </div>
+</article>
+<article class="row" id="c62" data-n="62">
+  <div class="meta">
+    <div class="id">#062 · Origin of Typhoid Mary</div>
+    <span class="pill">6 matched</span>
+  </div>
+  <p class="cite">Daredevil: The Man Without Fear (1964) #254, Page 2 · John Romita Jr.</p>
+  <div class="pair">
+    <figure class="front-col">
+      <figcaption>Card front</figcaption>
+      <div class="face"><img src="images/cards-fx/hd/062.jpg" alt="Card 062" loading="lazy"></div>
+    </figure>
+    
+      <figure class="best-col">
+        <figcaption>Top match <span class="badge match">wiki-candidate</span></figcaption>
+        <div class="face"><img src="images/sources-fx/matched/062/01.jpg" alt="Best match 062" loading="lazy"></div>
+        <p class="best-label">File:Marvel Legends Typhoid Mary.jpg</p>
+      </figure>
+  </div>
+  <div class="cands-col">
+    <figcaption>Pick the matching source (image-matched; CGI cards won’t be perfect)</figcaption>
+    <div class="gallery">
+          <label class="cand">
+            <input type="radio" name="pick-62" value="1">
+            <span class="cand-frame"><img src="images/sources-fx/matched/062/01.jpg" alt="Candidate 1" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #1 · 0.095<br><small>File:Marvel Legends Typhoid Mary.jpg</small></span>
+          </label>
+          <label class="cand">
+            <input type="radio" name="pick-62" value="2">
+            <span class="cand-frame"><img src="images/sources-fx/matched/062/02.jpg" alt="Candidate 2" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #2 · 0.080<br><small>File:Mary (Earth-616) from Daredevil Vol 1 247 0001.jpg</small></span>
+          </label>
+          <label class="cand">
+            <input type="radio" name="pick-62" value="3">
+            <span class="cand-frame"><img src="images/sources-fx/matched/062/03.jpg" alt="Candidate 3" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #3 · 0.070<br><small>File:Jean Grey (Earth-616) from Typhoid Fever X-Men Vol 1 1 001.jpg</small></span>
+          </label>
+          <label class="cand">
+            <input type="radio" name="pick-62" value="4">
+            <span class="cand-frame"><img src="images/sources-fx/matched/062/04.jpg" alt="Candidate 4" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #4 · 0.064<br><small>File:Kurt Wagner (Earth-616) from Typhoid Fever X-Men Vol 1 1 001.jpg</small></span>
+          </label>
+          <label class="cand">
+            <input type="radio" name="pick-62" value="5">
+            <span class="cand-frame"><img src="images/sources-fx/matched/062/05.jpg" alt="Candidate 5" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #5 · 0.062<br><small>File:Mary Walker (Earth-616) from Typhoid Fever Iron Fist Vol 1 1 002.jpg</small></span>
+          </label>
+          <label class="cand">
+            <input type="radio" name="pick-62" value="6">
+            <span class="cand-frame"><img src="images/sources-fx/matched/062/06.jpg" alt="Candidate 6" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #6 · 0.052<br><small>File:Daredevil Vol 5 26 Venomized Typhoid Mary Variant.jpg</small></span>
+          </label></div>
+  </div>
+</article>
+<article class="row" id="c64" data-n="64">
+  <div class="meta">
+    <div class="id">#064 · The Origin of Speedball</div>
+    <span class="pill">6 matched</span>
+  </div>
+  <p class="cite">The New Warriors (1990) #31, Page 14 · Darick Robertson</p>
+  <div class="pair">
+    <figure class="front-col">
+      <figcaption>Card front</figcaption>
+      <div class="face"><img src="images/cards-fx/hd/064.jpg" alt="Card 064" loading="lazy"></div>
+    </figure>
+    
+      <figure class="best-col">
+        <figcaption>Top match <span class="badge match">wiki-candidate</span></figcaption>
+        <div class="face"><img src="images/sources-fx/matched/064/01.jpg" alt="Best match 064" loading="lazy"></div>
+        <p class="best-label">File:Speedball Vol 1 10.jpg</p>
+      </figure>
+  </div>
+  <div class="cands-col">
+    <figcaption>Pick the matching source (image-matched; CGI cards won’t be perfect)</figcaption>
+    <div class="gallery">
+          <label class="cand">
+            <input type="radio" name="pick-64" value="1">
+            <span class="cand-frame"><img src="images/sources-fx/matched/064/01.jpg" alt="Candidate 1" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #1 · 0.090<br><small>File:Speedball Vol 1 10.jpg</small></span>
+          </label>
+          <label class="cand">
+            <input type="radio" name="pick-64" value="2">
+            <span class="cand-frame"><img src="images/sources-fx/matched/064/02.jpg" alt="Candidate 2" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #2 · 0.090<br><small>File:Speedball Vol 1 6.jpg</small></span>
+          </label>
+          <label class="cand">
+            <input type="radio" name="pick-64" value="3">
+            <span class="cand-frame"><img src="images/sources-fx/matched/064/03.jpg" alt="Candidate 3" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #3 · 0.076<br><small>File:Speedball Vol 1 2.jpg</small></span>
+          </label>
+          <label class="cand">
+            <input type="radio" name="pick-64" value="4">
+            <span class="cand-frame"><img src="images/sources-fx/matched/064/04.jpg" alt="Candidate 4" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #4 · 0.076<br><small>File:Speedball Vol 1 5.jpg</small></span>
+          </label>
+          <label class="cand">
+            <input type="radio" name="pick-64" value="5">
+            <span class="cand-frame"><img src="images/sources-fx/matched/064/05.jpg" alt="Candidate 5" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #5 · 0.074<br><small>File:Speedball Vol 1 4.jpg</small></span>
+          </label>
+          <label class="cand">
+            <input type="radio" name="pick-64" value="6">
+            <span class="cand-frame"><img src="images/sources-fx/matched/064/06.jpg" alt="Candidate 6" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #6 · 0.074<br><small>File:Speedball Vol 1 3.jpg</small></span>
+          </label></div>
+  </div>
+</article>
+<article class="row" id="c65" data-n="65">
+  <div class="meta">
+    <div class="id">#065 · Captain America vs. The Captain</div>
+    <span class="pill">6 matched</span>
+  </div>
+  <p class="cite">Captain America (1968) #422, Page 8</p>
+  <div class="pair">
+    <figure class="front-col">
+      <figcaption>Card front</figcaption>
+      <div class="face"><img src="images/cards-fx/hd/065.jpg" alt="Card 065" loading="lazy"></div>
+    </figure>
+    
+      <figure class="best-col">
+        <figcaption>Top match <span class="badge match">wiki-candidate</span></figcaption>
+        <div class="face"><img src="images/sources-fx/matched/065/01.jpg" alt="Best match 065" loading="lazy"></div>
+        <p class="best-label">File:Captain America Vol 1 422.jpg</p>
+      </figure>
+  </div>
+  <div class="cands-col">
+    <figcaption>Pick the matching source (image-matched; CGI cards won’t be perfect)</figcaption>
+    <div class="gallery">
+          <label class="cand">
+            <input type="radio" name="pick-65" value="1">
+            <span class="cand-frame"><img src="images/sources-fx/matched/065/01.jpg" alt="Candidate 1" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #1 · 0.105<br><small>File:Captain America Vol 1 422.jpg</small></span>
+          </label>
+          <label class="cand">
+            <input type="radio" name="pick-65" value="2">
+            <span class="cand-frame"><img src="images/sources-fx/matched/065/02.jpg" alt="Candidate 2" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #2 · 0.078<br><small>File:Death-Throws (Earth-616) from Captain America Vol 1 317 0001.jpg</small></span>
+          </label>
+          <label class="cand">
+            <input type="radio" name="pick-65" value="3">
+            <span class="cand-frame"><img src="images/sources-fx/matched/065/03.jpg" alt="Candidate 3" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #3 · 0.055<br><small>File:Avengers (Earth-616) from Captain America Vol 1 251 001.jpg</small></span>
+          </label>
+          <label class="cand">
+            <input type="radio" name="pick-65" value="4">
+            <span class="cand-frame"><img src="images/sources-fx/matched/065/04.jpg" alt="Candidate 4" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #4 · 0.046<br><small>File:Victor Lillian (Earth-616) from Captain America Vol 1 422 0001.jpg</small></span>
+          </label>
+          <label class="cand">
+            <input type="radio" name="pick-65" value="5">
+            <span class="cand-frame"><img src="images/sources-fx/matched/065/05.jpg" alt="Candidate 5" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #5 · 0.045<br><small>File:Frank (TV Host) (Earth-616) from Captain America Vol 1 174 001.png</small></span>
+          </label>
+          <label class="cand">
+            <input type="radio" name="pick-65" value="6">
+            <span class="cand-frame"><img src="images/sources-fx/matched/065/06.jpg" alt="Candidate 6" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #6 · 0.033<br><small>File:Am (Earth-616) from Captain America Comics Vol 1 52 0001.jpg</small></span>
+          </label></div>
+  </div>
+</article>
+<article class="row" id="c66" data-n="66">
+  <div class="meta">
+    <div class="id">#066 · Universal Guardian</div>
+    <span class="pill">6 matched</span>
+  </div>
+  <p class="cite">1992 Comic Images Silver Surfer Card Set #66; Unused Corner Box Art · Andy Smith</p>
+  <div class="pair">
+    <figure class="front-col">
+      <figcaption>Card front</figcaption>
+      <div class="face"><img src="images/cards-fx/hd/066.jpg" alt="Card 066" loading="lazy"></div>
+    </figure>
+    
+      <figure class="best-col">
+        <figcaption>Top match <span class="badge match">wiki-candidate</span></figcaption>
+        <div class="face"><img src="images/sources-fx/matched/066/01.jpg" alt="Best match 066" loading="lazy"></div>
+        <p class="best-label">File:Guardians of the Galaxy - Cosmic Rewind Poster 002.jpg</p>
+      </figure>
+  </div>
+  <div class="cands-col">
+    <figcaption>Pick the matching source (image-matched; CGI cards won’t be perfect)</figcaption>
+    <div class="gallery">
+          <label class="cand">
+            <input type="radio" name="pick-66" value="1">
+            <span class="cand-frame"><img src="images/sources-fx/matched/066/01.jpg" alt="Candidate 1" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #1 · 0.082<br><small>File:Guardians of the Galaxy - Cosmic Rewind Poster 002.jpg</small></span>
+          </label>
+          <label class="cand">
+            <input type="radio" name="pick-66" value="2">
+            <span class="cand-frame"><img src="images/sources-fx/matched/066/02.jpg" alt="Candidate 2" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #2 · 0.072<br><small>File:Guardians of the Galaxy - Cosmic Rewind Poster 001.jpg</small></span>
+          </label>
+          <label class="cand">
+            <input type="radio" name="pick-66" value="3">
+            <span class="cand-frame"><img src="images/sources-fx/matched/066/03.jpg" alt="Candidate 3" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #3 · 0.052<br><small>File:Infinity Wars Fallen Guardian Vol 1 1 Fantastic Four Villains Variant Textless.jpg</small></span>
+          </label>
+          <label class="cand">
+            <input type="radio" name="pick-66" value="4">
+            <span class="cand-frame"><img src="images/sources-fx/matched/066/04.jpg" alt="Candidate 4" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #4 · 0.050<br><small>File:Widowmakers Red Guardian and Yelena Belova Vol 1 1 Textless.jpg</small></span>
+          </label>
+          <label class="cand">
+            <input type="radio" name="pick-66" value="5">
+            <span class="cand-frame"><img src="images/sources-fx/matched/066/05.jpg" alt="Candidate 5" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #5 · 0.048<br><small>File:Universal War One Revelations Vol 1 2 Textless.jpg</small></span>
+          </label>
+          <label class="cand">
+            <input type="radio" name="pick-66" value="6">
+            <span class="cand-frame"><img src="images/sources-fx/matched/066/06.jpg" alt="Candidate 6" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #6 · 0.048<br><small>File:Infinity Wars Fallen Guardian Vol 1 1 Textless.jpg</small></span>
+          </label></div>
+  </div>
+</article>
+<article class="row" id="c67" data-n="67">
+  <div class="meta">
+    <div class="id">#067 · The Cosmic Spider-Man</div>
+    <span class="pill">6 matched</span>
+  </div>
+  <p class="cite">The Spectacular Spider-Man (1976) #201, Page 21 · Sal Buscema</p>
+  <div class="pair">
+    <figure class="front-col">
+      <figcaption>Card front</figcaption>
+      <div class="face"><img src="images/cards-fx/hd/067.jpg" alt="Card 067" loading="lazy"></div>
+    </figure>
+    
+      <figure class="best-col">
+        <figcaption>Top match <span class="badge match">wiki-candidate</span></figcaption>
+        <div class="face"><img src="images/sources-fx/matched/067/01.jpg" alt="Best match 067" loading="lazy"></div>
+        <p class="best-label">File:Oblivion (Earth-616) from G.O.D.S. Vol 1 3 Cosmic Homage Variant cover 001.jpg</p>
+      </figure>
+  </div>
+  <div class="cands-col">
+    <figcaption>Pick the matching source (image-matched; CGI cards won’t be perfect)</figcaption>
+    <div class="gallery">
+          <label class="cand">
+            <input type="radio" name="pick-67" value="1">
+            <span class="cand-frame"><img src="images/sources-fx/matched/067/01.jpg" alt="Candidate 1" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #1 · 0.096<br><small>File:Oblivion (Earth-616) from G.O.D.S. Vol 1 3 Cosmic Homage Variant cover 001.jpg</small></span>
+          </label>
+          <label class="cand">
+            <input type="radio" name="pick-67" value="2">
+            <span class="cand-frame"><img src="images/sources-fx/matched/067/02.jpg" alt="Candidate 2" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #2 · 0.073<br><small>File:Tyrant (Earth-616) from Cosmic Powers Vol 1 6 cover 001.jpg</small></span>
+          </label>
+          <label class="cand">
+            <input type="radio" name="pick-67" value="3">
+            <span class="cand-frame"><img src="images/sources-fx/matched/067/03.jpg" alt="Candidate 3" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #3 · 0.069<br><small>File:Spectacular Spider-Man Vol 1 201.jpg</small></span>
+          </label>
+          <label class="cand">
+            <input type="radio" name="pick-67" value="4">
+            <span class="cand-frame"><img src="images/sources-fx/matched/067/04.jpg" alt="Candidate 4" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #4 · 0.054<br><small>File:Cosmic Ghost Rider Destroys Marvel History Vol 1 4 Johnson Variant Textless.jpg</small></span>
+          </label>
+          <label class="cand">
+            <input type="radio" name="pick-67" value="5">
+            <span class="cand-frame"><img src="images/sources-fx/matched/067/05.jpg" alt="Candidate 5" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #5 · 0.044<br><small>File:Sammy Skalek (Earth-616) from Spectacular Spider-Man Vol 1 225 0001.png</small></span>
+          </label>
+          <label class="cand">
+            <input type="radio" name="pick-67" value="6">
+            <span class="cand-frame"><img src="images/sources-fx/matched/067/06.jpg" alt="Candidate 6" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #6 · 0.044<br><small>File:Susie Jablonski (Earth-616) from Peter Parker, The Spectacular Spider-Man Vol 1 109 0</small></span>
+          </label></div>
+  </div>
+</article>
+<article class="row" id="c70" data-n="70">
+  <div class="meta">
+    <div class="id">#070 · Cable Returns from the Future</div>
+    <span class="pill">6 matched</span>
+  </div>
+  <p class="cite">1992 Impel X-Men Series I by Jim Lee · Jim Lee</p>
+  <div class="pair">
+    <figure class="front-col">
+      <figcaption>Card front</figcaption>
+      <div class="face"><img src="images/cards-fx/hd/070.jpg" alt="Card 070" loading="lazy"></div>
+    </figure>
+    
+      <figure class="best-col">
+        <figcaption>Top match <span class="badge match">wiki-candidate</span></figcaption>
+        <div class="face"><img src="images/sources-fx/matched/070/01.jpg" alt="Best match 070" loading="lazy"></div>
+        <p class="best-label">File:Cable &amp; Deadpool Vol 1 12 Textless.jpg</p>
+      </figure>
+  </div>
+  <div class="cands-col">
+    <figcaption>Pick the matching source (image-matched; CGI cards won’t be perfect)</figcaption>
+    <div class="gallery">
+          <label class="cand">
+            <input type="radio" name="pick-70" value="1">
+            <span class="cand-frame"><img src="images/sources-fx/matched/070/01.jpg" alt="Candidate 1" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #1 · 0.072<br><small>File:Cable &amp; Deadpool Vol 1 12 Textless.jpg</small></span>
+          </label>
+          <label class="cand">
+            <input type="radio" name="pick-70" value="2">
+            <span class="cand-frame"><img src="images/sources-fx/matched/070/02.jpg" alt="Candidate 2" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #2 · 0.071<br><small>File:Cable &amp; Deadpool Vol 1 20 Textless.jpg</small></span>
+          </label>
+          <label class="cand">
+            <input type="radio" name="pick-70" value="3">
+            <span class="cand-frame"><img src="images/sources-fx/matched/070/03.jpg" alt="Candidate 3" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #3 · 0.064<br><small>File:Nathan Summers (Earth-616) and Remy LeBeau (Earth-616) Trading Card from Cable Vol 1 </small></span>
+          </label>
+          <label class="cand">
+            <input type="radio" name="pick-70" value="4">
+            <span class="cand-frame"><img src="images/sources-fx/matched/070/04.jpg" alt="Candidate 4" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #4 · 0.062<br><small>File:Cable &amp; Deadpool Vol 1 14 Textless.jpg</small></span>
+          </label>
+          <label class="cand">
+            <input type="radio" name="pick-70" value="5">
+            <span class="cand-frame"><img src="images/sources-fx/matched/070/05.jpg" alt="Candidate 5" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #5 · 0.060<br><small>File:Cable &amp; Deadpool Vol 1 10 Textless.jpg</small></span>
+          </label>
+          <label class="cand">
+            <input type="radio" name="pick-70" value="6">
+            <span class="cand-frame"><img src="images/sources-fx/matched/070/06.jpg" alt="Candidate 6" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #6 · 0.059<br><small>File:Cable &amp; Deadpool Vol 1 17 Textless.jpg</small></span>
+          </label></div>
+  </div>
+</article>
+<article class="row" id="c71" data-n="71">
+  <div class="meta">
+    <div class="id">#071 · Ghost Rider #1</div>
+    <span class="pill">6 matched</span>
+  </div>
+  <p class="cite">Ghost Rider (1990) #1, Cover · Javier Saltares</p>
+  <div class="pair">
+    <figure class="front-col">
+      <figcaption>Card front</figcaption>
+      <div class="face"><img src="images/cards-fx/hd/071.jpg" alt="Card 071" loading="lazy"></div>
+    </figure>
+    
+      <figure class="best-col">
+        <figcaption>Top match <span class="badge match">wiki-candidate</span></figcaption>
+        <div class="face"><img src="images/sources-fx/matched/071/01.jpg" alt="Best match 071" loading="lazy"></div>
+        <p class="best-label">File:Daniel Ketch (Earth-616) from Ghost Rider Vol 3 1 004.jpg</p>
+      </figure>
+  </div>
+  <div class="cands-col">
+    <figcaption>Pick the matching source (image-matched; CGI cards won’t be perfect)</figcaption>
+    <div class="gallery">
+          <label class="cand">
+            <input type="radio" name="pick-71" value="1">
+            <span class="cand-frame"><img src="images/sources-fx/matched/071/01.jpg" alt="Candidate 1" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #1 · 0.073<br><small>File:Daniel Ketch (Earth-616) from Ghost Rider Vol 3 1 004.jpg</small></span>
+          </label>
+          <label class="cand">
+            <input type="radio" name="pick-71" value="2">
+            <span class="cand-frame"><img src="images/sources-fx/matched/071/02.jpg" alt="Candidate 2" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #2 · 0.070<br><small>File:Ames (Earth-616) from Ghost Rider Vol 2 1 0001.jpg</small></span>
+          </label>
+          <label class="cand">
+            <input type="radio" name="pick-71" value="3">
+            <span class="cand-frame"><img src="images/sources-fx/matched/071/03.jpg" alt="Candidate 3" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #3 · 0.068<br><small>File:J.D. (Earth-616) from Ghost Rider Vol 3 1 001.jpg</small></span>
+          </label>
+          <label class="cand">
+            <input type="radio" name="pick-71" value="4">
+            <span class="cand-frame"><img src="images/sources-fx/matched/071/04.jpg" alt="Candidate 4" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #4 · 0.067<br><small>File:Daniel Ketch (Earth-616) from Ghost Rider Vol 3 1 002.jpg</small></span>
+          </label>
+          <label class="cand">
+            <input type="radio" name="pick-71" value="5">
+            <span class="cand-frame"><img src="images/sources-fx/matched/071/05.jpg" alt="Candidate 5" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #5 · 0.050<br><small>File:Daniel Ketch (Earth-616) from Ghost Rider Vol 3 1 001.jpg</small></span>
+          </label>
+          <label class="cand">
+            <input type="radio" name="pick-71" value="6">
+            <span class="cand-frame"><img src="images/sources-fx/matched/071/06.jpg" alt="Candidate 6" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #6 · 0.049<br><small>File:Greentown Cemetery (Earth-616) from Ghost Rider Vol 2 1 0001.jpg</small></span>
+          </label></div>
+  </div>
+</article>
+<article class="row" id="c72" data-n="72">
+  <div class="meta">
+    <div class="id">#072 · The Creation of Deathlok</div>
+    <span class="pill">6 matched</span>
+  </div>
+  <p class="cite">Deathlok (1990) #1, Page 28 · Jackson Guice</p>
+  <div class="pair">
+    <figure class="front-col">
+      <figcaption>Card front</figcaption>
+      <div class="face"><img src="images/cards-fx/hd/072.jpg" alt="Card 072" loading="lazy"></div>
+    </figure>
+    
+      <figure class="best-col">
+        <figcaption>Top match <span class="badge match">wiki-candidate</span></figcaption>
+        <div class="face"><img src="images/sources-fx/matched/072/01.jpg" alt="Best match 072" loading="lazy"></div>
+        <p class="best-label">File:Jerome Mason (Earth-616) from Deathlok Vol 2 1 0001.JPG</p>
+      </figure>
+  </div>
+  <div class="cands-col">
+    <figcaption>Pick the matching source (image-matched; CGI cards won’t be perfect)</figcaption>
+    <div class="gallery">
+          <label class="cand">
+            <input type="radio" name="pick-72" value="1">
+            <span class="cand-frame"><img src="images/sources-fx/matched/072/01.jpg" alt="Candidate 1" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #1 · 0.060<br><small>File:Jerome Mason (Earth-616) from Deathlok Vol 2 1 0001.JPG</small></span>
+          </label>
+          <label class="cand">
+            <input type="radio" name="pick-72" value="2">
+            <span class="cand-frame"><img src="images/sources-fx/matched/072/02.jpg" alt="Candidate 2" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #2 · 0.057<br><small>File:Cyberwarriors (Earth-616) from Deathlok Vol 2 17 001.jpg</small></span>
+          </label>
+          <label class="cand">
+            <input type="radio" name="pick-72" value="3">
+            <span class="cand-frame"><img src="images/sources-fx/matched/072/03.jpg" alt="Candidate 3" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #3 · 0.047<br><small>File:Clayton Burr (Earth-616) from Deathlok Vol 1 1 001.png</small></span>
+          </label>
+          <label class="cand">
+            <input type="radio" name="pick-72" value="4">
+            <span class="cand-frame"><img src="images/sources-fx/matched/072/04.jpg" alt="Candidate 4" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #4 · 0.044<br><small>File:Biohazard (Earth-616) from Deathlok Vol 2 15 001.jpg</small></span>
+          </label>
+          <label class="cand">
+            <input type="radio" name="pick-72" value="5">
+            <span class="cand-frame"><img src="images/sources-fx/matched/072/05.jpg" alt="Candidate 5" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #5 · 0.044<br><small>File:John Kelly (Earth-616) from Deathlok Vol 1 1 001.png</small></span>
+          </label>
+          <label class="cand">
+            <input type="radio" name="pick-72" value="6">
+            <span class="cand-frame"><img src="images/sources-fx/matched/072/06.jpg" alt="Candidate 6" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #6 · 0.038<br><small>File:John Rozum (Earth-616) from Deathlok Vol 2 1 0001.jpg</small></span>
+          </label></div>
+  </div>
+</article>
+<article class="row" id="c73" data-n="73">
+  <div class="meta">
+    <div class="id">#073 · Origin of the New Warriors</div>
+    <span class="pill">6 matched</span>
+  </div>
+  <p class="cite">Nova (1993) #1, Page 1 · Chris Marrinan</p>
+  <div class="pair">
+    <figure class="front-col">
+      <figcaption>Card front</figcaption>
+      <div class="face"><img src="images/cards-fx/hd/073.jpg" alt="Card 073" loading="lazy"></div>
+    </figure>
+    
+      <figure class="best-col">
+        <figcaption>Top match <span class="badge match">wiki-candidate</span></figcaption>
+        <div class="face"><img src="images/sources-fx/matched/073/01.jpg" alt="Best match 073" loading="lazy"></div>
+        <p class="best-label">File:Daakor (Earth-616) from Nova Vol 2 13 0001.jpg</p>
+      </figure>
+  </div>
+  <div class="cands-col">
+    <figcaption>Pick the matching source (image-matched; CGI cards won’t be perfect)</figcaption>
+    <div class="gallery">
+          <label class="cand">
+            <input type="radio" name="pick-73" value="1">
+            <span class="cand-frame"><img src="images/sources-fx/matched/073/01.jpg" alt="Candidate 1" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #1 · 0.043<br><small>File:Daakor (Earth-616) from Nova Vol 2 13 0001.jpg</small></span>
+          </label>
+          <label class="cand">
+            <input type="radio" name="pick-73" value="2">
+            <span class="cand-frame"><img src="images/sources-fx/matched/073/02.jpg" alt="Candidate 2" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #2 · 0.040<br><small>File:Kre&#x27;shje (Earth-616) from Nova Vol 2 1 0001.png</small></span>
+          </label>
+          <label class="cand">
+            <input type="radio" name="pick-73" value="3">
+            <span class="cand-frame"><img src="images/sources-fx/matched/073/03.jpg" alt="Candidate 3" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #3 · 0.033<br><small>File:Mr. Ryan (Earth-616) from Nova Vol 1 1 001.png</small></span>
+          </label>
+          <label class="cand">
+            <input type="radio" name="pick-73" value="4">
+            <span class="cand-frame"><img src="images/sources-fx/matched/073/04.jpg" alt="Candidate 4" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #4 · 0.032<br><small>File:Rhomann Dey (Earth-616) from Nova Vol 1 1 0001.png</small></span>
+          </label>
+          <label class="cand">
+            <input type="radio" name="pick-73" value="5">
+            <span class="cand-frame"><img src="images/sources-fx/matched/073/05.jpg" alt="Candidate 5" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #5 · 0.030<br><small>File:Richard Rider (Earth-616) from Nova Vol 1 1 0001.jpg</small></span>
+          </label>
+          <label class="cand">
+            <input type="radio" name="pick-73" value="6">
+            <span class="cand-frame"><img src="images/sources-fx/matched/073/06.jpg" alt="Candidate 6" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #6 · 0.023<br><small>File:Nova Express (Earth-616) from Nova Vol 2 1 0001.jpg</small></span>
+          </label></div>
+  </div>
+</article>
+<article class="row" id="c75" data-n="75">
+  <div class="meta">
+    <div class="id">#075 · Gambit Appears</div>
+    <span class="pill">6 matched</span>
+  </div>
+  <p class="cite">X-Men (1991) #25, Gambit Hologram · Andy Kubert</p>
+  <div class="pair">
+    <figure class="front-col">
+      <figcaption>Card front</figcaption>
+      <div class="face"><img src="images/cards-fx/hd/075.jpg" alt="Card 075" loading="lazy"></div>
+    </figure>
+    
+      <figure class="best-col">
+        <figcaption>Top match <span class="badge match">wiki-candidate</span></figcaption>
+        <div class="face"><img src="images/sources-fx/matched/075/01.jpg" alt="Best match 075" loading="lazy"></div>
+        <p class="best-label">File:James Howlett (Earth-616) and Max Eisenhardt (Earth-616) from X-Men Vol 2 25 0001.jpg</p>
+      </figure>
+  </div>
+  <div class="cands-col">
+    <figcaption>Pick the matching source (image-matched; CGI cards won’t be perfect)</figcaption>
+    <div class="gallery">
+          <label class="cand">
+            <input type="radio" name="pick-75" value="1">
+            <span class="cand-frame"><img src="images/sources-fx/matched/075/01.jpg" alt="Candidate 1" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #1 · 0.091<br><small>File:James Howlett (Earth-616) and Max Eisenhardt (Earth-616) from X-Men Vol 2 25 0001.jpg</small></span>
+          </label>
+          <label class="cand">
+            <input type="radio" name="pick-75" value="2">
+            <span class="cand-frame"><img src="images/sources-fx/matched/075/02.jpg" alt="Candidate 2" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #2 · 0.082<br><small>File:X-Men (Earth-616) from X-Men Vol 2 25 001.jpg</small></span>
+          </label>
+          <label class="cand">
+            <input type="radio" name="pick-75" value="3">
+            <span class="cand-frame"><img src="images/sources-fx/matched/075/03.jpg" alt="Candidate 3" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #3 · 0.066<br><small>File:Acolytes (Earth-616) from X-Men Vol 2 25 001.jpg</small></span>
+          </label>
+          <label class="cand">
+            <input type="radio" name="pick-75" value="4">
+            <span class="cand-frame"><img src="images/sources-fx/matched/075/04.jpg" alt="Candidate 4" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #4 · 0.060<br><small>File:Charles Xavier (Earth-616) and Max Eisenhardt (Earth-616) from X-Men Vol 2 25 001.jpg</small></span>
+          </label>
+          <label class="cand">
+            <input type="radio" name="pick-75" value="5">
+            <span class="cand-frame"><img src="images/sources-fx/matched/075/05.jpg" alt="Candidate 5" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #5 · 0.057<br><small>File:James Howlett &amp; Max Eisenhardt (Earth-616) from X-Men Vol 2 25 0001.jpg</small></span>
+          </label>
+          <label class="cand">
+            <input type="radio" name="pick-75" value="6">
+            <span class="cand-frame"><img src="images/sources-fx/matched/075/06.jpg" alt="Candidate 6" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #6 · 0.053<br><small>File:Remy LeBeau (Earth-616) from X-Men Vol 2 25 001.jpg</small></span>
+          </label></div>
+  </div>
+</article>
+<article class="row" id="c76" data-n="76">
+  <div class="meta">
+    <div class="id">#076 · X-Tinction Agenda</div>
+    <span class="pill">6 matched</span>
+  </div>
+  <p class="cite">X-Tinction Agenda House Ad/Promotional Material; X-Men (1991) #1 Composite (Cyclops) · Jim Lee</p>
+  <div class="pair">
+    <figure class="front-col">
+      <figcaption>Card front</figcaption>
+      <div class="face"><img src="images/cards-fx/hd/076.jpg" alt="Card 076" loading="lazy"></div>
+    </figure>
+    
+      <figure class="best-col">
+        <figcaption>Top match <span class="badge match">wiki-candidate</span></figcaption>
+        <div class="face"><img src="images/sources-fx/matched/076/01.jpg" alt="Best match 076" loading="lazy"></div>
+        <p class="best-label">File:X-Tinction Agenda Vol 1 2 Textless.jpg</p>
+      </figure>
+  </div>
+  <div class="cands-col">
+    <figcaption>Pick the matching source (image-matched; CGI cards won’t be perfect)</figcaption>
+    <div class="gallery">
+          <label class="cand">
+            <input type="radio" name="pick-76" value="1">
+            <span class="cand-frame"><img src="images/sources-fx/matched/076/01.jpg" alt="Candidate 1" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #1 · 0.097<br><small>File:X-Tinction Agenda Vol 1 2 Textless.jpg</small></span>
+          </label>
+          <label class="cand">
+            <input type="radio" name="pick-76" value="2">
+            <span class="cand-frame"><img src="images/sources-fx/matched/076/02.jpg" alt="Candidate 2" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #2 · 0.096<br><small>File:X-Tinction Agenda Vol 1 1 Textless.jpg</small></span>
+          </label>
+          <label class="cand">
+            <input type="radio" name="pick-76" value="3">
+            <span class="cand-frame"><img src="images/sources-fx/matched/076/03.jpg" alt="Candidate 3" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #3 · 0.077<br><small>File:X-Tinction Agenda Vol 1 2 Anka Variant Textless.jpg</small></span>
+          </label>
+          <label class="cand">
+            <input type="radio" name="pick-76" value="4">
+            <span class="cand-frame"><img src="images/sources-fx/matched/076/04.jpg" alt="Candidate 4" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #4 · 0.071<br><small>File:X-Tinction Agenda Vol 1 4 Textless.jpg</small></span>
+          </label>
+          <label class="cand">
+            <input type="radio" name="pick-76" value="5">
+            <span class="cand-frame"><img src="images/sources-fx/matched/076/05.jpg" alt="Candidate 5" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #5 · 0.068<br><small>File:X-Tinction Agenda Vol 1 1 Brooks Variant Textless.jpg</small></span>
+          </label>
+          <label class="cand">
+            <input type="radio" name="pick-76" value="6">
+            <span class="cand-frame"><img src="images/sources-fx/matched/076/06.jpg" alt="Candidate 6" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #6 · 0.054<br><small>File:X-Tinction Agenda Vol 1 3 Textless.jpg</small></span>
+          </label></div>
+  </div>
+</article>
+<article class="row" id="c77" data-n="77">
+  <div class="meta">
+    <div class="id">#077 · Hulk Reborn</div>
+    <span class="pill">6 matched</span>
+  </div>
+  <p class="cite">The Incredible Hulk (1968) #391, Page 19 · Dale Keown</p>
+  <div class="pair">
+    <figure class="front-col">
+      <figcaption>Card front</figcaption>
+      <div class="face"><img src="images/cards-fx/hd/077.jpg" alt="Card 077" loading="lazy"></div>
+    </figure>
+    
+      <figure class="best-col">
+        <figcaption>Top match <span class="badge match">wiki-candidate</span></figcaption>
+        <div class="face"><img src="images/sources-fx/matched/077/01.jpg" alt="Best match 077" loading="lazy"></div>
+        <p class="best-label">File:391 (LMD) (Earth-616) from Hulk Vol 2 38 001.png</p>
+      </figure>
+  </div>
+  <div class="cands-col">
+    <figcaption>Pick the matching source (image-matched; CGI cards won’t be perfect)</figcaption>
+    <div class="gallery">
+          <label class="cand">
+            <input type="radio" name="pick-77" value="1">
+            <span class="cand-frame"><img src="images/sources-fx/matched/077/01.jpg" alt="Candidate 1" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #1 · 0.066<br><small>File:391 (LMD) (Earth-616) from Hulk Vol 2 38 001.png</small></span>
+          </label>
+          <label class="cand">
+            <input type="radio" name="pick-77" value="2">
+            <span class="cand-frame"><img src="images/sources-fx/matched/077/02.jpg" alt="Candidate 2" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #2 · 0.064<br><small>File:David Guntly (Earth-616) from Incredible Hulk Vol 1 386 001.png</small></span>
+          </label>
+          <label class="cand">
+            <input type="radio" name="pick-77" value="3">
+            <span class="cand-frame"><img src="images/sources-fx/matched/077/03.jpg" alt="Candidate 3" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #3 · 0.058<br><small>File:Harry (Earth-616) from Incredible Hulk Vol 1 390 001.jpg</small></span>
+          </label>
+          <label class="cand">
+            <input type="radio" name="pick-77" value="4">
+            <span class="cand-frame"><img src="images/sources-fx/matched/077/04.jpg" alt="Candidate 4" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #4 · 0.057<br><small>File:Excalibur Hotel and Casino (Earth-616) from Incredible Hulk Vol 1 395 001.png</small></span>
+          </label>
+          <label class="cand">
+            <input type="radio" name="pick-77" value="5">
+            <span class="cand-frame"><img src="images/sources-fx/matched/077/05.jpg" alt="Candidate 5" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #5 · 0.057<br><small>File:Jacqueline Shorr (Earth-616) from Incredible Hulk Vol 1 391 001.jpg</small></span>
+          </label>
+          <label class="cand">
+            <input type="radio" name="pick-77" value="6">
+            <span class="cand-frame"><img src="images/sources-fx/matched/077/06.jpg" alt="Candidate 6" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #6 · 0.056<br><small>File:Martin Bram (Earth-616) from The Incredible Hulk (1977 film) 001.jpg</small></span>
+          </label></div>
+  </div>
+</article>
+<article class="row" id="c78" data-n="78">
+  <div class="meta">
+    <div class="id">#078 · Deadpool Strikes</div>
+    <span class="pill">6 matched</span>
+  </div>
+  <p class="cite">Deadpool: The Circle Chase (1993) #2, Page 5 · Joe Madureira</p>
+  <div class="pair">
+    <figure class="front-col">
+      <figcaption>Card front</figcaption>
+      <div class="face"><img src="images/cards-fx/hd/078.jpg" alt="Card 078" loading="lazy"></div>
+    </figure>
+    
+      <figure class="best-col">
+        <figcaption>Top match <span class="badge match">wiki-candidate</span></figcaption>
+        <div class="face"><img src="images/sources-fx/matched/078/01.jpg" alt="Best match 078" loading="lazy"></div>
+        <p class="best-label">File:Vanessa Carlysle (Earth-616) from Deadpool The Circle Chase Vol 1 2 003.jpg</p>
+      </figure>
+  </div>
+  <div class="cands-col">
+    <figcaption>Pick the matching source (image-matched; CGI cards won’t be perfect)</figcaption>
+    <div class="gallery">
+          <label class="cand">
+            <input type="radio" name="pick-78" value="1">
+            <span class="cand-frame"><img src="images/sources-fx/matched/078/01.jpg" alt="Candidate 1" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #1 · 0.084<br><small>File:Vanessa Carlysle (Earth-616) from Deadpool The Circle Chase Vol 1 2 003.jpg</small></span>
+          </label>
+          <label class="cand">
+            <input type="radio" name="pick-78" value="2">
+            <span class="cand-frame"><img src="images/sources-fx/matched/078/02.jpg" alt="Candidate 2" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #2 · 0.052<br><small>File:Damarus Cove Islands from Deadpool The Circle Chase Vol 1 2 001.jpg</small></span>
+          </label>
+          <label class="cand">
+            <input type="radio" name="pick-78" value="3">
+            <span class="cand-frame"><img src="images/sources-fx/matched/078/03.jpg" alt="Candidate 3" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #3 · 0.050<br><small>File:Gezdbadah (Earth-616) from Deadpool The Circle Chase Vol 1 2 0001.png</small></span>
+          </label>
+          <label class="cand">
+            <input type="radio" name="pick-78" value="4">
+            <span class="cand-frame"><img src="images/sources-fx/matched/078/04.jpg" alt="Candidate 4" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #4 · 0.048<br><small>File:Mumbai from Deadpool The Circle Chase Vol 1 2 001.png</small></span>
+          </label>
+          <label class="cand">
+            <input type="radio" name="pick-78" value="5">
+            <span class="cand-frame"><img src="images/sources-fx/matched/078/05.jpg" alt="Candidate 5" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #5 · 0.045<br><small>File:Vanessa Carlysle (Earth-616) from Deadpool The Circle Chase Vol 1 2 0001.jpg</small></span>
+          </label>
+          <label class="cand">
+            <input type="radio" name="pick-78" value="6">
+            <span class="cand-frame"><img src="images/sources-fx/matched/078/06.jpg" alt="Candidate 6" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #6 · 0.044<br><small>File:Vanessa Carlysle (Earth-616) from Deadpool The Circle Chase Vol 1 2 002.jpg</small></span>
+          </label></div>
+  </div>
+</article>
+<article class="row" id="c81" data-n="81">
+  <div class="meta">
+    <div class="id">#081 · The Return of Blaze</div>
+    <span class="pill">6 matched</span>
+  </div>
+  <p class="cite">Ghost Rider &amp; Blaze: Spirits of Vengeance (1992) #1, Mini-Poster · Adam Kubert</p>
+  <div class="pair">
+    <figure class="front-col">
+      <figcaption>Card front</figcaption>
+      <div class="face"><img src="images/cards-fx/hd/081.jpg" alt="Card 081" loading="lazy"></div>
+    </figure>
+    
+      <figure class="best-col">
+        <figcaption>Top match <span class="badge match">wiki-candidate</span></figcaption>
+        <div class="face"><img src="images/sources-fx/matched/081/01.jpg" alt="Best match 081" loading="lazy"></div>
+        <p class="best-label">File:Phillip Henderson (Earth-616) from Ghost Rider Blaze Spirits of Vengeance Vol 1 1 001.png</p>
+      </figure>
+  </div>
+  <div class="cands-col">
+    <figcaption>Pick the matching source (image-matched; CGI cards won’t be perfect)</figcaption>
+    <div class="gallery">
+          <label class="cand">
+            <input type="radio" name="pick-81" value="1">
+            <span class="cand-frame"><img src="images/sources-fx/matched/081/01.jpg" alt="Candidate 1" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #1 · 0.055<br><small>File:Phillip Henderson (Earth-616) from Ghost Rider Blaze Spirits of Vengeance Vol 1 1 001</small></span>
+          </label>
+          <label class="cand">
+            <input type="radio" name="pick-81" value="2">
+            <span class="cand-frame"><img src="images/sources-fx/matched/081/02.jpg" alt="Candidate 2" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #2 · 0.044<br><small>File:Pilgrim (Earth-616) from Ghost Rider Blaze Spirits of Vengeance Vol 1 3 001.jpg</small></span>
+          </label>
+          <label class="cand">
+            <input type="radio" name="pick-81" value="3">
+            <span class="cand-frame"><img src="images/sources-fx/matched/081/03.jpg" alt="Candidate 3" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #3 · 0.034<br><small>File:Creed (Lilin) (Earth-616) from Ghost Rider-Blaze Spirits of Vengeance Vol 1 1 0001.jp</small></span>
+          </label>
+          <label class="cand">
+            <input type="radio" name="pick-81" value="4">
+            <span class="cand-frame"><img src="images/sources-fx/matched/081/04.jpg" alt="Candidate 4" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #4 · 0.029<br><small>File:Clara Menninger (Earth-616) from Ghost Rider Blaze Spirits of Vengeance Vol 1 1 001.j</small></span>
+          </label>
+          <label class="cand">
+            <input type="radio" name="pick-81" value="5">
+            <span class="cand-frame"><img src="images/sources-fx/matched/081/05.jpg" alt="Candidate 5" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #5 · 0.028<br><small>File:Varnae (Earth-616) from Ghost Rider-Blaze- Spirits of Vengeance Vol 1 19 001.jpg</small></span>
+          </label>
+          <label class="cand">
+            <input type="radio" name="pick-81" value="6">
+            <span class="cand-frame"><img src="images/sources-fx/matched/081/06.jpg" alt="Candidate 6" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #6 · 0.025<br><small>File:Carver (Earth-616) from Ghost Rider Blaze Spirits of Vengeance Vol 1 23 001.jpg</small></span>
+          </label></div>
+  </div>
+</article>
+<article class="row" id="c85" data-n="85">
+  <div class="meta">
+    <div class="id">#085 · The Origin of Bishop</div>
+    <span class="pill">6 matched</span>
+  </div>
+  <p class="cite">Suspected unused in print. Used on a licensed Comic Images T-shirt in 1993.</p>
+  <div class="pair">
+    <figure class="front-col">
+      <figcaption>Card front</figcaption>
+      <div class="face"><img src="images/cards-fx/hd/085.jpg" alt="Card 085" loading="lazy"></div>
+    </figure>
+    
+      <figure class="best-col">
+        <figcaption>Top match <span class="badge match">wiki-candidate</span></figcaption>
+        <div class="face"><img src="images/sources-fx/matched/085/01.jpg" alt="Best match 085" loading="lazy"></div>
+        <p class="best-label">File:Bishop Vol 1 1 Textless.jpg</p>
+      </figure>
+  </div>
+  <div class="cands-col">
+    <figcaption>Pick the matching source (image-matched; CGI cards won’t be perfect)</figcaption>
+    <div class="gallery">
+          <label class="cand">
+            <input type="radio" name="pick-85" value="1">
+            <span class="cand-frame"><img src="images/sources-fx/matched/085/01.jpg" alt="Candidate 1" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #1 · 0.083<br><small>File:Bishop Vol 1 1 Textless.jpg</small></span>
+          </label>
+          <label class="cand">
+            <input type="radio" name="pick-85" value="2">
+            <span class="cand-frame"><img src="images/sources-fx/matched/085/02.jpg" alt="Candidate 2" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #2 · 0.082<br><small>File:Bishop War College Vol 1 1 Hidden Gem Variant Textless.jpg</small></span>
+          </label>
+          <label class="cand">
+            <input type="radio" name="pick-85" value="3">
+            <span class="cand-frame"><img src="images/sources-fx/matched/085/03.jpg" alt="Candidate 3" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #3 · 0.069<br><small>File:Bishop War College Vol 1 2 Textless.jpg</small></span>
+          </label>
+          <label class="cand">
+            <input type="radio" name="pick-85" value="4">
+            <span class="cand-frame"><img src="images/sources-fx/matched/085/04.jpg" alt="Candidate 4" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #4 · 0.068<br><small>File:Bishop War College Vol 1 1 Conley Variant Textless.jpg</small></span>
+          </label>
+          <label class="cand">
+            <input type="radio" name="pick-85" value="5">
+            <span class="cand-frame"><img src="images/sources-fx/matched/085/05.jpg" alt="Candidate 5" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #5 · 0.065<br><small>File:Bishop War College Vol 1 1 Liefeld Variant Textless.jpg</small></span>
+          </label>
+          <label class="cand">
+            <input type="radio" name="pick-85" value="6">
+            <span class="cand-frame"><img src="images/sources-fx/matched/085/06.jpg" alt="Candidate 6" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #6 · 0.065<br><small>File:Remy LeBeau (Earth-616) and Lucas Bishop (Earth-1191) from 1994 Ultra X-Men (Trading </small></span>
+          </label></div>
+  </div>
+</article>
+<article class="row" id="c91" data-n="91">
+  <div class="meta">
+    <div class="id">#091 · Death of Mariko</div>
+    <span class="pill">6 matched</span>
+  </div>
+  <p class="cite">Wolverine (1988) #65, Page 18 · Mark Texeira</p>
+  <div class="pair">
+    <figure class="front-col">
+      <figcaption>Card front</figcaption>
+      <div class="face"><img src="images/cards-fx/hd/091.jpg" alt="Card 091" loading="lazy"></div>
+    </figure>
+    
+      <figure class="best-col">
+        <figcaption>Top match <span class="badge match">wiki-candidate</span></figcaption>
+        <div class="face"><img src="images/sources-fx/matched/091/01.jpg" alt="Best match 091" loading="lazy"></div>
+        <p class="best-label">File:Death of Wolverine Life After Logan Vol 1 1 Textless.jpg</p>
+      </figure>
+  </div>
+  <div class="cands-col">
+    <figcaption>Pick the matching source (image-matched; CGI cards won’t be perfect)</figcaption>
+    <div class="gallery">
+          <label class="cand">
+            <input type="radio" name="pick-91" value="1">
+            <span class="cand-frame"><img src="images/sources-fx/matched/091/01.jpg" alt="Candidate 1" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #1 · 0.104<br><small>File:Death of Wolverine Life After Logan Vol 1 1 Textless.jpg</small></span>
+          </label>
+          <label class="cand">
+            <input type="radio" name="pick-91" value="2">
+            <span class="cand-frame"><img src="images/sources-fx/matched/091/02.jpg" alt="Candidate 2" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #2 · 0.093<br><small>File:Mariko Yashida (Earth-616) from Wolverine Vol 1 1 001.jpg</small></span>
+          </label>
+          <label class="cand">
+            <input type="radio" name="pick-91" value="3">
+            <span class="cand-frame"><img src="images/sources-fx/matched/091/03.jpg" alt="Candidate 3" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #3 · 0.064<br><small>File:Mariko Yashida (Earth-616) from X-Men Vol 1 118 001.jpg</small></span>
+          </label>
+          <label class="cand">
+            <input type="radio" name="pick-91" value="4">
+            <span class="cand-frame"><img src="images/sources-fx/matched/091/04.jpg" alt="Candidate 4" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #4 · 0.061<br><small>File:Wolverine Vol 2 65.jpg</small></span>
+          </label>
+          <label class="cand">
+            <input type="radio" name="pick-91" value="5">
+            <span class="cand-frame"><img src="images/sources-fx/matched/091/05.jpg" alt="Candidate 5" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #5 · 0.059<br><small>File:Raven Darkhölme (Earth-616) from Wolverine Vol 3 65 0002.jpg</small></span>
+          </label>
+          <label class="cand">
+            <input type="radio" name="pick-91" value="6">
+            <span class="cand-frame"><img src="images/sources-fx/matched/091/06.jpg" alt="Candidate 6" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #6 · 0.048<br><small>File:Mariko Yashida (Earth-616) from Official Handbook of the Marvel Universe Wolverine 20</small></span>
+          </label></div>
+  </div>
+</article>
+<article class="row" id="c93" data-n="93">
+  <div class="meta">
+    <div class="id">#093 · The Origin of Nightstalkers</div>
+    <span class="pill">6 matched</span>
+  </div>
+  <p class="cite">Nightstalkers (1992) #1, Mini-Poster · Andy Kubert; Adam Kubert</p>
+  <div class="pair">
+    <figure class="front-col">
+      <figcaption>Card front</figcaption>
+      <div class="face"><img src="images/cards-fx/hd/093.jpg" alt="Card 093" loading="lazy"></div>
+    </figure>
+    
+      <figure class="best-col">
+        <figcaption>Top match <span class="badge match">wiki-candidate</span></figcaption>
+        <div class="face"><img src="images/sources-fx/matched/093/01.jpg" alt="Best match 093" loading="lazy"></div>
+        <p class="best-label">File:Justin Hoyt (Earth-616) from Nightstalkers Vol 1 1 001.png</p>
+      </figure>
+  </div>
+  <div class="cands-col">
+    <figcaption>Pick the matching source (image-matched; CGI cards won’t be perfect)</figcaption>
+    <div class="gallery">
+          <label class="cand">
+            <input type="radio" name="pick-93" value="1">
+            <span class="cand-frame"><img src="images/sources-fx/matched/093/01.jpg" alt="Candidate 1" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #1 · 0.047<br><small>File:Justin Hoyt (Earth-616) from Nightstalkers Vol 1 1 001.png</small></span>
+          </label>
+          <label class="cand">
+            <input type="radio" name="pick-93" value="2">
+            <span class="cand-frame"><img src="images/sources-fx/matched/093/02.jpg" alt="Candidate 2" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #2 · 0.038<br><small>File:Erik Brooks (Earth-616) from Nightstalkers Vol 1 10 001.jpg</small></span>
+          </label>
+          <label class="cand">
+            <input type="radio" name="pick-93" value="3">
+            <span class="cand-frame"><img src="images/sources-fx/matched/093/03.jpg" alt="Candidate 3" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #3 · 0.033<br><small>File:Varnae (Earth-616) from Nightstalkers Vol 1 18 001.jpg</small></span>
+          </label>
+          <label class="cand">
+            <input type="radio" name="pick-93" value="4">
+            <span class="cand-frame"><img src="images/sources-fx/matched/093/04.jpg" alt="Candidate 4" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #4 · 0.031<br><small>File:Earth-931113 from Nightstalkers Vol 1 13 001.jpg</small></span>
+          </label>
+          <label class="cand">
+            <input type="radio" name="pick-93" value="5">
+            <span class="cand-frame"><img src="images/sources-fx/matched/093/05.jpg" alt="Candidate 5" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #5 · 0.026<br><small>File:Fallen (Team) (Earth-616) from Nightstalkers Vol 1 15 001.png</small></span>
+          </label>
+          <label class="cand">
+            <input type="radio" name="pick-93" value="6">
+            <span class="cand-frame"><img src="images/sources-fx/matched/093/06.jpg" alt="Candidate 6" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #6 · 0.025<br><small>File:Boston Commons from Nightstalkers Vol 1 1 001.png</small></span>
+          </label></div>
+  </div>
+</article>
+<article class="row" id="c94" data-n="94">
+  <div class="meta">
+    <div class="id">#094 · The Origin of Spider-Man 2099</div>
+    <span class="pill">6 matched</span>
+  </div>
+  <p class="cite">Spider-Man 2099 (1993) #6, Page 5 · Rick Leonardi</p>
+  <div class="pair">
+    <figure class="front-col">
+      <figcaption>Card front</figcaption>
+      <div class="face"><img src="images/cards-fx/hd/094.jpg" alt="Card 094" loading="lazy"></div>
+    </figure>
+    
+      <figure class="best-col">
+        <figcaption>Top match <span class="badge match">wiki-candidate</span></figcaption>
+        <div class="face"><img src="images/sources-fx/matched/094/01.jpg" alt="Best match 094" loading="lazy"></div>
+        <p class="best-label">File:42nd Street from Spider-Man 2099 Vol 3 6 001.jpg</p>
+      </figure>
+  </div>
+  <div class="cands-col">
+    <figcaption>Pick the matching source (image-matched; CGI cards won’t be perfect)</figcaption>
+    <div class="gallery">
+          <label class="cand">
+            <input type="radio" name="pick-94" value="1">
+            <span class="cand-frame"><img src="images/sources-fx/matched/094/01.jpg" alt="Candidate 1" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #1 · 0.059<br><small>File:42nd Street from Spider-Man 2099 Vol 3 6 001.jpg</small></span>
+          </label>
+          <label class="cand">
+            <input type="radio" name="pick-94" value="2">
+            <span class="cand-frame"><img src="images/sources-fx/matched/094/02.jpg" alt="Candidate 2" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #2 · 0.051<br><small>File:Avatarr (Earth-928) from Spider-Man 2099 Vol 1 6 001.jpg</small></span>
+          </label>
+          <label class="cand">
+            <input type="radio" name="pick-94" value="3">
+            <span class="cand-frame"><img src="images/sources-fx/matched/094/03.jpg" alt="Candidate 3" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #3 · 0.045<br><small>File:Danko (Earth-928) from Spider-Man 2099 Vol 1 6 001.png</small></span>
+          </label>
+          <label class="cand">
+            <input type="radio" name="pick-94" value="4">
+            <span class="cand-frame"><img src="images/sources-fx/matched/094/04.jpg" alt="Candidate 4" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #4 · 0.044<br><small>File:Watchdog Inc. (Earth-928) from Spider-Man 2099 Vol 1 6 001.png</small></span>
+          </label>
+          <label class="cand">
+            <input type="radio" name="pick-94" value="5">
+            <span class="cand-frame"><img src="images/sources-fx/matched/094/05.jpg" alt="Candidate 5" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #5 · 0.031<br><small>File:Throwbacks (Earth-928) from Spider-Man 2099 Vol 1 6 001.png</small></span>
+          </label>
+          <label class="cand">
+            <input type="radio" name="pick-94" value="6">
+            <span class="cand-frame"><img src="images/sources-fx/matched/094/06.jpg" alt="Candidate 6" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #6 · 0.028<br><small>File:Freakers (Earth-928) from Spider-Man 2099 Vol 1 6 001.png</small></span>
+          </label></div>
+  </div>
+</article>
+<article class="row" id="c95" data-n="95">
+  <div class="meta">
+    <div class="id">#095 · Hulk Leads the Pantheon</div>
+    <span class="pill">6 matched</span>
+  </div>
+  <p class="cite">The Incredible Hulk (1968) #410, Page 15</p>
+  <div class="pair">
+    <figure class="front-col">
+      <figcaption>Card front</figcaption>
+      <div class="face"><img src="images/cards-fx/hd/095.jpg" alt="Card 095" loading="lazy"></div>
+    </figure>
+    
+      <figure class="best-col">
+        <figcaption>Top match <span class="badge match">wiki-candidate</span></figcaption>
+        <div class="face"><img src="images/sources-fx/matched/095/01.jpg" alt="Best match 095" loading="lazy"></div>
+        <p class="best-label">File:Martin Bram (Earth-616) from The Incredible Hulk (1977 film) 001.jpg</p>
+      </figure>
+  </div>
+  <div class="cands-col">
+    <figcaption>Pick the matching source (image-matched; CGI cards won’t be perfect)</figcaption>
+    <div class="gallery">
+          <label class="cand">
+            <input type="radio" name="pick-95" value="1">
+            <span class="cand-frame"><img src="images/sources-fx/matched/095/01.jpg" alt="Candidate 1" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #1 · 0.072<br><small>File:Martin Bram (Earth-616) from The Incredible Hulk (1977 film) 001.jpg</small></span>
+          </label>
+          <label class="cand">
+            <input type="radio" name="pick-95" value="2">
+            <span class="cand-frame"><img src="images/sources-fx/matched/095/02.jpg" alt="Candidate 2" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #2 · 0.070<br><small>File:Marlo Chandler (Earth-616) from Incredible Hulk Vol 1 410 001.jpg</small></span>
+          </label>
+          <label class="cand">
+            <input type="radio" name="pick-95" value="3">
+            <span class="cand-frame"><img src="images/sources-fx/matched/095/03.jpg" alt="Candidate 3" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #3 · 0.069<br><small>File:Hank (Derrick Worker) (Earth-616) from Incredible Hulk Vol 2 50 001.png</small></span>
+          </label>
+          <label class="cand">
+            <input type="radio" name="pick-95" value="4">
+            <span class="cand-frame"><img src="images/sources-fx/matched/095/04.jpg" alt="Candidate 4" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #4 · 0.051<br><small>File:She-Hulk Vol 5 1 Cover A Textless.jpg</small></span>
+          </label>
+          <label class="cand">
+            <input type="radio" name="pick-95" value="5">
+            <span class="cand-frame"><img src="images/sources-fx/matched/095/05.jpg" alt="Candidate 5" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #5 · 0.047<br><small>File:Hulk! Vol 1 22 Textless.jpg</small></span>
+          </label>
+          <label class="cand">
+            <input type="radio" name="pick-95" value="6">
+            <span class="cand-frame"><img src="images/sources-fx/matched/095/06.jpg" alt="Candidate 6" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #6 · 0.045<br><small>File:Tarkington (Earth-616) from Incredible Hulk Vol 1 410 001.png</small></span>
+          </label></div>
+  </div>
+</article>
+<article class="row" id="c96" data-n="96">
+  <div class="meta">
+    <div class="id">#096 · X-Cutioner&#x27;s Song</div>
+    <span class="pill">6 matched</span>
+  </div>
+  <p class="cite">X-Factor (1986) #88, Page 1; Page 18 (Composite) · Jae Lee</p>
+  <div class="pair">
+    <figure class="front-col">
+      <figcaption>Card front</figcaption>
+      <div class="face"><img src="images/cards-fx/hd/096.jpg" alt="Card 096" loading="lazy"></div>
+    </figure>
+    
+      <figure class="best-col">
+        <figcaption>Top match <span class="badge match">wiki-candidate</span></figcaption>
+        <div class="face"><img src="images/sources-fx/matched/096/01.jpg" alt="Best match 096" loading="lazy"></div>
+        <p class="best-label">File:Pietro Maximoff (Earth-616) and Crystalia Amaquelin (Earth-616) from X-Factor Vol 1 88 0001.jpg</p>
+      </figure>
+  </div>
+  <div class="cands-col">
+    <figcaption>Pick the matching source (image-matched; CGI cards won’t be perfect)</figcaption>
+    <div class="gallery">
+          <label class="cand">
+            <input type="radio" name="pick-96" value="1">
+            <span class="cand-frame"><img src="images/sources-fx/matched/096/01.jpg" alt="Candidate 1" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #1 · 0.077<br><small>File:Pietro Maximoff (Earth-616) and Crystalia Amaquelin (Earth-616) from X-Factor Vol 1 8</small></span>
+          </label>
+          <label class="cand">
+            <input type="radio" name="pick-96" value="2">
+            <span class="cand-frame"><img src="images/sources-fx/matched/096/02.jpg" alt="Candidate 2" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #2 · 0.076<br><small>File:X-Factor Vol 1 88.jpg</small></span>
+          </label>
+          <label class="cand">
+            <input type="radio" name="pick-96" value="3">
+            <span class="cand-frame"><img src="images/sources-fx/matched/096/03.jpg" alt="Candidate 3" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #3 · 0.051<br><small>File:X-Cutioner&#x27;s Song from Marvel Universe Cards Series IV 0001.jpg</small></span>
+          </label>
+          <label class="cand">
+            <input type="radio" name="pick-96" value="4">
+            <span class="cand-frame"><img src="images/sources-fx/matched/096/04.jpg" alt="Candidate 4" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #4 · 0.051<br><small>File:Marshall Stone III (Earth-616) from X-Factor Vol 1 88.jpg</small></span>
+          </label>
+          <label class="cand">
+            <input type="radio" name="pick-96" value="5">
+            <span class="cand-frame"><img src="images/sources-fx/matched/096/05.jpg" alt="Candidate 5" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #5 · 0.050<br><small>File:X-Patriots (Earth-616) from X-Factor Vol 1 88 0001.png</small></span>
+          </label>
+          <label class="cand">
+            <input type="radio" name="pick-96" value="6">
+            <span class="cand-frame"><img src="images/sources-fx/matched/096/06.jpg" alt="Candidate 6" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #6 · 0.045<br><small>File:X-Men Milestones X-Cutioner&#x27;s Song Vol 1 1.jpg</small></span>
+          </label></div>
+  </div>
+</article>
+<article class="row" id="c97" data-n="97">
+  <div class="meta">
+    <div class="id">#097 · Cable vs. Stryfe</div>
+    <span class="pill">6 matched</span>
+  </div>
+  <p class="cite">The New Mutants (1983) #94, Page 20 · Rob Liefeld</p>
+  <div class="pair">
+    <figure class="front-col">
+      <figcaption>Card front</figcaption>
+      <div class="face"><img src="images/cards-fx/hd/097.jpg" alt="Card 097" loading="lazy"></div>
+    </figure>
+    
+      <figure class="best-col">
+        <figcaption>Top match <span class="badge match">wiki-candidate</span></figcaption>
+        <div class="face"><img src="images/sources-fx/matched/097/01.jpg" alt="Best match 097" loading="lazy"></div>
+        <p class="best-label">File:Cable &amp; Deadpool Vol 1 19 Textless.jpg</p>
+      </figure>
+  </div>
+  <div class="cands-col">
+    <figcaption>Pick the matching source (image-matched; CGI cards won’t be perfect)</figcaption>
+    <div class="gallery">
+          <label class="cand">
+            <input type="radio" name="pick-97" value="1">
+            <span class="cand-frame"><img src="images/sources-fx/matched/097/01.jpg" alt="Candidate 1" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #1 · 0.123<br><small>File:Cable &amp; Deadpool Vol 1 19 Textless.jpg</small></span>
+          </label>
+          <label class="cand">
+            <input type="radio" name="pick-97" value="2">
+            <span class="cand-frame"><img src="images/sources-fx/matched/097/02.jpg" alt="Candidate 2" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #2 · 0.105<br><small>File:Jean Grey (Earth-616) and Nathan Summers (Stryfe) (Earth-4935) from Uncanny X-Men Vol</small></span>
+          </label>
+          <label class="cand">
+            <input type="radio" name="pick-97" value="3">
+            <span class="cand-frame"><img src="images/sources-fx/matched/097/03.jpg" alt="Candidate 3" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #3 · 0.089<br><small>File:Nathan Summers (Earth-616), Nathan Summers (Stryfe) (Earth-4935) and X-Men (Earth-616</small></span>
+          </label>
+          <label class="cand">
+            <input type="radio" name="pick-97" value="4">
+            <span class="cand-frame"><img src="images/sources-fx/matched/097/04.jpg" alt="Candidate 4" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #4 · 0.088<br><small>File:Cable &amp; Deadpool Vol 1 14 Textless.jpg</small></span>
+          </label>
+          <label class="cand">
+            <input type="radio" name="pick-97" value="5">
+            <span class="cand-frame"><img src="images/sources-fx/matched/097/05.jpg" alt="Candidate 5" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #5 · 0.085<br><small>File:Cable &amp; Deadpool Vol 1 12 Textless.jpg</small></span>
+          </label>
+          <label class="cand">
+            <input type="radio" name="pick-97" value="6">
+            <span class="cand-frame"><img src="images/sources-fx/matched/097/06.jpg" alt="Candidate 6" loading="lazy"></span>
+            <span class="cand-meta"><span class="badge match">wiki-candidate</span> #6 · 0.078<br><small>File:Carmella Unuscione (Earth-616) from Cable Vol 1 10 cover 001.jpg</small></span>
+          </label></div>
+  </div>
+</article>
+  </main>
+  <div class="submit-bar">
+    <div class="submit-inner">
+      <div class="count"><b id="pickCount">0</b> cards with a pick</div>
+      <button type="button" id="submitPicks">Submit picks</button>
+      <p id="statusMsg"></p>
+    </div>
+  </div>
+<script>
+(function () {
+  const endpoint = (window.location.pathname.replace(/\/verify-1-99\/?$/, '') || '/94flair') + '/api/verify-selections';
+  const countEl = document.getElementById('pickCount');
+  const statusEl = document.getElementById('statusMsg');
+  const submitBtn = document.getElementById('submitPicks');
+  function selections() {
+    const out = [];
+    document.querySelectorAll('article.row').forEach(row => {
+      const n = Number(row.dataset.n);
+      const checked = row.querySelector('input[type=radio]:checked');
+      if (checked) out.push({ n, candidate: Number(checked.value) });
+    });
+    return out;
+  }
+  function sync() {
+    const sel = selections();
+    countEl.textContent = String(sel.length);
+    const set = new Set(sel.map(s => s.n));
+    document.querySelectorAll('#indexNav a').forEach(a => {
+      a.classList.toggle('picked', set.has(Number(a.textContent)));
+    });
+    try { localStorage.setItem('flair-verify-1-99-cand-draft', JSON.stringify(sel)); } catch (_) {}
+  }
+  document.querySelectorAll('input[type=radio]').forEach(r => r.addEventListener('change', sync));
+  try {
+    const draft = JSON.parse(localStorage.getItem('flair-verify-1-99-cand-draft') || '[]');
+    if (Array.isArray(draft)) draft.forEach(s => {
+      const el = document.querySelector('article.row[data-n="'+s.n+'"] input[value="'+s.candidate+'"]');
+      if (el) el.checked = true;
+    });
+  } catch (_) {}
+  sync();
+  submitBtn.addEventListener('click', async () => {
+    const sel = selections();
+    statusEl.classList.remove('err');
+    statusEl.textContent = 'Submitting…';
+    submitBtn.disabled = true;
+    const payload = { selected: sel.map(s => s.n), candidates: sel, notes: 'matched-redo-picks', page: location.href };
+    try {
+      const res = await fetch(endpoint, { method:'POST', headers:{'content-type':'application/json'}, body: JSON.stringify(payload) });
+      const data = await res.json();
+      if (!res.ok || !data.ok) throw new Error(data.error || ('HTTP '+res.status));
+      const detail = sel.map(s => String(s.n).padStart(3,'0') + ':' + s.candidate).join(',');
+      location.hash = 'picks=' + detail;
+      statusEl.textContent = 'Submitted ' + sel.length + ' picks. Hash saved as backup: ' + detail;
+      try { localStorage.setItem('flair-verify-1-99-submitted', JSON.stringify({...data, candidates: sel})); } catch (_) {}
+    } catch (err) {
+      statusEl.classList.add('err');
+      statusEl.textContent = 'Submit failed: ' + (err && err.message ? err.message : err);
+    } finally {
+      submitBtn.disabled = false; sync();
+    }
+  });
+})();
+</script>
+</body>
+</html>

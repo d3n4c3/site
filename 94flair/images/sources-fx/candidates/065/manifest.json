@@ -1,0 +1,86 @@
+{
+  "n": 65,
+  "key": "065",
+  "title": "Captain America vs. The Captain",
+  "source": "Captain America (1968) #422, Page 8",
+  "tokens": [
+    "Captain America",
+    "Captain",
+    "America"
+  ],
+  "page": 8,
+  "promo": false,
+  "status": "ok",
+  "candidates": [
+    {
+      "idx": 1,
+      "file": "01.jpg",
+      "wiki": "File:Victor Lillian (Earth-616) from Captain America Vol 1 422 0001.jpg",
+      "score": 218,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/9/94/Victor_Lillian_%28Earth-616%29_from_Captain_America_Vol_1_422_0001.jpg/revision/latest?cb=20161119000127"
+    },
+    {
+      "idx": 2,
+      "file": "02.jpg",
+      "wiki": "File:Captain America Vol 1 422.jpg",
+      "score": 140,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/1/1f/Captain_America_Vol_1_422.jpg/revision/latest?cb=20171228032608"
+    },
+    {
+      "idx": 3,
+      "file": "03.jpg",
+      "wiki": "File:Agent R-2 (Earth-616) from Captain America Vol 1 120 0001.jpg",
+      "score": 68,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/4/44/Agent_R-2_%28Earth-616%29_from_Captain_America_Vol_1_120_0001.jpg/revision/latest?cb=20220531033502"
+    },
+    {
+      "idx": 4,
+      "file": "04.jpg",
+      "wiki": "File:Am (Earth-616) from Captain America Comics Vol 1 52 0001.jpg",
+      "score": 68,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/f/f8/Am_%28Earth-616%29_from_Captain_America_Comics_Vol_1_52_0001.jpg/revision/latest?cb=20120311170915"
+    },
+    {
+      "idx": 5,
+      "file": "05.jpg",
+      "wiki": "File:Avengers (Earth-616) from Captain America Vol 1 251 001.jpg",
+      "score": 68,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/c/c1/Avengers_%28Earth-616%29_from_Captain_America_Vol_1_251_001.jpg/revision/latest?cb=20251106142809"
+    },
+    {
+      "idx": 6,
+      "file": "06.jpg",
+      "wiki": "File:Corporation (Earth-616) from Captain America Vol 1 225 0001.jpg",
+      "score": 68,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/b/b3/Corporation_%28Earth-616%29_from_Captain_America_Vol_1_225_0001.jpg/revision/latest?cb=20161017164155"
+    },
+    {
+      "idx": 7,
+      "file": "07.jpg",
+      "wiki": "File:Death-Throws (Earth-616) from Captain America Vol 1 317 0001.jpg",
+      "score": 68,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/9/9a/Death-Throws_%28Earth-616%29_from_Captain_America_Vol_1_317_0001.jpg/revision/latest?cb=20191127160809"
+    },
+    {
+      "idx": 8,
+      "file": "08.jpg",
+      "wiki": "File:Frank (TV Host) (Earth-616) from Captain America Vol 1 174 001.png",
+      "score": 68,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/a/a0/Frank_%28TV_Host%29_%28Earth-616%29_from_Captain_America_Vol_1_174_001.png/revision/latest?cb=20201012041220"
+    },
+    {
+      "idx": 9,
+      "file": "09.jpg",
+      "wiki": "File:Grover Williams (Heroes Reborn) (Earth-616) from Captain America Vol 2 8 001.png",
+      "score": 68,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/a/aa/Grover_Williams_%28Heroes_Reborn%29_%28Earth-616%29_from_Captain_America_Vol_2_8_001.png/revision/latest?cb=20131008104559"
+    },
+    {
+      "idx": 10,
+      "file": "10.jpg",
+      "wiki": "File:Hauptman (Earth-616) from Captain America Vol 2 1 001.png",
+      "score": 68,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/9/97/Hauptman_%28Earth-616%29_from_Captain_America_Vol_2_1_001.png/revision/latest?cb=20131001122413"
+    }
+  ]
+}

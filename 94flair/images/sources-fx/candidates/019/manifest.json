@@ -1,0 +1,65 @@
+{
+  "n": 19,
+  "key": "019",
+  "title": "Origin of the Sentinels",
+  "source": "Uncanny X-Men (1963) #140, Cover (CREDITS; searching Sentinel art)",
+  "status": "ok",
+  "candidates": [
+    {
+      "idx": 1,
+      "file": "01.jpg",
+      "wiki": "File:Sentinel (Prototype) (Earth-616) from Uncanny X-Men Vol 1 512 001.jpg",
+      "score": 100,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/7/72/Sentinel_%28Prototype%29_%28Earth-616%29_from_Uncanny_X-Men_Vol_1_512_001.jpg/revision/latest?cb=20210601043806"
+    },
+    {
+      "idx": 2,
+      "file": "02.jpg",
+      "wiki": "File:Uncanny X-Men Vol 1 142.jpg",
+      "score": 100,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/3/33/Uncanny_X-Men_Vol_1_142.jpg/revision/latest?cb=20180228234559"
+    },
+    {
+      "idx": 3,
+      "file": "03.jpg",
+      "wiki": "File:Uncanny X-Men Vol 1 142 Rejected Cover.jpg",
+      "score": 100,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/7/74/Uncanny_X-Men_Vol_1_142_Rejected_Cover.jpg/revision/latest?cb=20251018071220"
+    },
+    {
+      "idx": 4,
+      "file": "04.jpg",
+      "wiki": "File:Sentinels Vol 1 1.jpg",
+      "score": 100,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/1/14/Sentinels_Vol_1_1.jpg/revision/latest/scale-to-width-down/1400?cb=20240928103728"
+    },
+    {
+      "idx": 5,
+      "file": "05.jpg",
+      "wiki": "File:Sentinels Vol 1 1 Logo Variant.jpg",
+      "score": 100,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/2/24/Sentinels_Vol_1_1_Logo_Variant.jpg/revision/latest/scale-to-width-down/1400?cb=20241014044715"
+    },
+    {
+      "idx": 6,
+      "file": "06.jpg",
+      "wiki": "File:Sentinels Necessary Monsters TPB Vol 1 1.jpg",
+      "score": 100,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/d/da/Sentinels_Necessary_Monsters_TPB_Vol_1_1.jpg/revision/latest?cb=20250708091403"
+    },
+    {
+      "idx": 7,
+      "file": "07.jpg",
+      "wiki": "File:Sentinels Vol 1 1 Wilson Variant.jpg",
+      "score": 100,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/1/1a/Sentinels_Vol_1_1_Wilson_Variant.jpg/revision/latest/scale-to-width-down/1400?cb=20241014044721"
+    },
+    {
+      "idx": 8,
+      "file": "08.jpg",
+      "wiki": "File:Sentinels Vol 1 2.jpg",
+      "score": 100,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/4/4b/Sentinels_Vol_1_2.jpg/revision/latest/scale-to-width-down/1400?cb=20241120162643"
+    }
+  ]
+}

@@ -1,0 +1,84 @@
+{
+  "n": 51,
+  "key": "051",
+  "title": "Formation of X-Factor",
+  "source": "X-Men Unlimited (1993) #1, Page 62",
+  "tokens": [
+    "X-Factor"
+  ],
+  "page": 62,
+  "promo": false,
+  "status": "ok",
+  "candidates": [
+    {
+      "idx": 1,
+      "file": "01.jpg",
+      "wiki": "File:Andy Hartnell (Earth-616) from X-Men Unlimited Vol 2 1 0001.png",
+      "score": 89,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/3/3c/Andy_Hartnell_%28Earth-616%29_from_X-Men_Unlimited_Vol_2_1_0001.png/revision/latest?cb=20110827170824"
+    },
+    {
+      "idx": 2,
+      "file": "02.jpg",
+      "wiki": "File:Ginny Mahoney (Earth-616) from X-Men Unlimited Vol 1 16 0002.jpg",
+      "score": 89,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/1/16/Ginny_Mahoney_%28Earth-616%29_from_X-Men_Unlimited_Vol_1_16_0002.jpg/revision/latest?cb=20060629184237"
+    },
+    {
+      "idx": 3,
+      "file": "03.jpg",
+      "wiki": "File:Inciters (Earth-616) from X-Men Unlimited Vol 1 13 001.jpg",
+      "score": 89,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/2/23/Inciters_%28Earth-616%29_from_X-Men_Unlimited_Vol_1_13_001.jpg/revision/latest/scale-to-width-down/1400?cb=20220529102441"
+    },
+    {
+      "idx": 4,
+      "file": "04.jpg",
+      "wiki": "File:K'illace (Earth-616) from X-Men Unlimited Vol 1 13 0001.jpg",
+      "score": 89,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/d/da/K%27illace_%28Earth-616%29_from_X-Men_Unlimited_Vol_1_13_0001.jpg/revision/latest?cb=20180930032558"
+    },
+    {
+      "idx": 5,
+      "file": "05.jpg",
+      "wiki": "File:Nathan Summers (Earth-616) from X-Men Unlimited Vol 1 1 001.jpg",
+      "score": 89,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/5/5b/Nathan_Summers_%28Earth-616%29_from_X-Men_Unlimited_Vol_1_1_001.jpg/revision/latest?cb=20191127032831"
+    },
+    {
+      "idx": 6,
+      "file": "06.jpg",
+      "wiki": "File:Sage (Earth-616) from X-Men Unlimited Vol 2 1 001.jpg",
+      "score": 89,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/8/8d/Sage_%28Earth-616%29_from_X-Men_Unlimited_Vol_2_1_001.jpg/revision/latest?cb=20200113230956"
+    },
+    {
+      "idx": 7,
+      "file": "07.jpg",
+      "wiki": "File:Sage (Earth-616) from X-Men Unlimited Vol 2 1 002.jpg",
+      "score": 89,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/1/1f/Sage_%28Earth-616%29_from_X-Men_Unlimited_Vol_2_1_002.jpg/revision/latest?cb=20200113231012"
+    },
+    {
+      "idx": 8,
+      "file": "08.jpg",
+      "wiki": "File:Sage (Earth-616) from X-Men Unlimited Vol 2 1 003.jpg",
+      "score": 89,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/e/ee/Sage_%28Earth-616%29_from_X-Men_Unlimited_Vol_2_1_003.jpg/revision/latest?cb=20200113231026"
+    },
+    {
+      "idx": 9,
+      "file": "09.jpg",
+      "wiki": "File:Sage (Earth-616) from X-Men Unlimited Vol 2 1 004.jpg",
+      "score": 89,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/8/8e/Sage_%28Earth-616%29_from_X-Men_Unlimited_Vol_2_1_004.jpg/revision/latest?cb=20200113231042"
+    },
+    {
+      "idx": 10,
+      "file": "10.jpg",
+      "wiki": "File:Sage (Earth-616) from X-Men Unlimited Vol 2 1 005.jpg",
+      "score": 89,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/6/6e/Sage_%28Earth-616%29_from_X-Men_Unlimited_Vol_2_1_005.jpg/revision/latest?cb=20200113231056"
+    }
+  ]
+}

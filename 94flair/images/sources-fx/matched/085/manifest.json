@@ -1,0 +1,51 @@
+{
+  "n": 85,
+  "key": "085",
+  "title": "The Origin of Bishop",
+  "source": "Suspected unused in print. Used on a licensed Comic Images T-shirt in 1993.",
+  "artist": "",
+  "matches": [
+    {
+      "idx": 1,
+      "file": "01.jpg",
+      "score": 0.0828,
+      "kind": "wiki-candidate",
+      "label": "File:Bishop Vol 1 1 Textless.jpg"
+    },
+    {
+      "idx": 2,
+      "file": "02.jpg",
+      "score": 0.0823,
+      "kind": "wiki-candidate",
+      "label": "File:Bishop War College Vol 1 1 Hidden Gem Variant Textless.jpg"
+    },
+    {
+      "idx": 3,
+      "file": "03.jpg",
+      "score": 0.069,
+      "kind": "wiki-candidate",
+      "label": "File:Bishop War College Vol 1 2 Textless.jpg"
+    },
+    {
+      "idx": 4,
+      "file": "04.jpg",
+      "score": 0.0677,
+      "kind": "wiki-candidate",
+      "label": "File:Bishop War College Vol 1 1 Conley Variant Textless.jpg"
+    },
+    {
+      "idx": 5,
+      "file": "05.jpg",
+      "score": 0.0646,
+      "kind": "wiki-candidate",
+      "label": "File:Bishop War College Vol 1 1 Liefeld Variant Textless.jpg"
+    },
+    {
+      "idx": 6,
+      "file": "06.jpg",
+      "score": 0.0645,
+      "kind": "wiki-candidate",
+      "label": "File:Remy LeBeau (Earth-616) and Lucas Bishop (Earth-1191) from 1994 Ultra X-Men (Trading Cards) 001.jpg"
+    }
+  ]
+}

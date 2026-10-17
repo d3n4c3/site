@@ -1,0 +1,51 @@
+{
+  "n": 86,
+  "key": "086",
+  "title": "Omega Red vs. Wolverine",
+  "source": "X-Men (1991) #5, Cover",
+  "artist": "Jim Lee",
+  "matches": [
+    {
+      "idx": 1,
+      "file": "01.jpg",
+      "score": 0.0787,
+      "kind": "wiki-candidate",
+      "label": "File:Forge (Earth-616) from X-Men Vol 2 5 001.jpg"
+    },
+    {
+      "idx": 2,
+      "file": "02.jpg",
+      "score": 0.0741,
+      "kind": "wiki-candidate",
+      "label": "File:Kurt Wagner (Earth-616) from Amazing X-Men Vol 2 5 002.jpg"
+    },
+    {
+      "idx": 3,
+      "file": "03.jpg",
+      "score": 0.0677,
+      "kind": "wiki-candidate",
+      "label": "File:Arkady Rossovich (Earth-616) from X-Men Vol 2 5 001.jpg"
+    },
+    {
+      "idx": 4,
+      "file": "04.jpg",
+      "score": 0.0499,
+      "kind": "wiki-candidate",
+      "label": "File:Forge (Earth-616) from X-Men Vol 2 5 002.jpg"
+    },
+    {
+      "idx": 5,
+      "file": "05.jpg",
+      "score": 0.0449,
+      "kind": "wiki-candidate",
+      "label": "File:Benjamin Hammil (Earth-616) from New X-Men Vol 2 5 0001.jpg"
+    },
+    {
+      "idx": 6,
+      "file": "06.jpg",
+      "score": 0.0437,
+      "kind": "wiki-candidate",
+      "label": "File:X-Men Vol 2 5 Remastered.jpg"
+    }
+  ]
+}

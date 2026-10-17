@@ -1,0 +1,51 @@
+{
+  "n": 32,
+  "key": "032",
+  "title": "Death of Gwen Stacy",
+  "source": "The Spectacular Spider-Man (1976) #200, Page 42",
+  "artist": "Sal Buscema",
+  "matches": [
+    {
+      "idx": 1,
+      "file": "01.jpg",
+      "score": 0.1179,
+      "kind": "wiki-candidate",
+      "label": "File:Amazing Spider-Man Vol 6 25 Gwen Stacy Variant Textless.jpg"
+    },
+    {
+      "idx": 2,
+      "file": "02.jpg",
+      "score": 0.102,
+      "kind": "wiki-candidate",
+      "label": "File:Peter Parker (Earth-616) and Harold Osborn (Earth-616) from Spectacular Spider-Man Vol 1 200 001.jpg"
+    },
+    {
+      "idx": 3,
+      "file": "03.jpg",
+      "score": 0.0883,
+      "kind": "wiki-candidate",
+      "label": "File:Spectacular Spider-Man Vol 1 200.jpg"
+    },
+    {
+      "idx": 4,
+      "file": "04.jpg",
+      "score": 0.0773,
+      "kind": "wiki-candidate",
+      "label": "File:Gwendolyne Stacy (Earth-51838) from Peter Parker The Spectacular Spider-Man Vol 1 304 001.jpg"
+    },
+    {
+      "idx": 5,
+      "file": "05.jpg",
+      "score": 0.0572,
+      "kind": "wiki-candidate",
+      "label": "File:Harold Osborn (Earth-616) from Spectacular Spider-Man Vol 1 200 0001.jpg"
+    },
+    {
+      "idx": 6,
+      "file": "06.jpg",
+      "score": 0.05,
+      "kind": "wiki-candidate",
+      "label": "File:Gwendolyne Stacy (Earth-26496) from Spectacular Spider-Man (animated series) Season 2 11 001.png"
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "n": 94,
+  "key": "094",
+  "title": "The Origin of Spider-Man 2099",
+  "source": "Spider-Man 2099 (1993) #6, Page 5",
+  "artist": "Rick Leonardi",
+  "matches": [
+    {
+      "idx": 1,
+      "file": "01.jpg",
+      "score": 0.0591,
+      "kind": "wiki-candidate",
+      "label": "File:42nd Street from Spider-Man 2099 Vol 3 6 001.jpg"
+    },
+    {
+      "idx": 2,
+      "file": "02.jpg",
+      "score": 0.0515,
+      "kind": "wiki-candidate",
+      "label": "File:Avatarr (Earth-928) from Spider-Man 2099 Vol 1 6 001.jpg"
+    },
+    {
+      "idx": 3,
+      "file": "03.jpg",
+      "score": 0.0449,
+      "kind": "wiki-candidate",
+      "label": "File:Danko (Earth-928) from Spider-Man 2099 Vol 1 6 001.png"
+    },
+    {
+      "idx": 4,
+      "file": "04.jpg",
+      "score": 0.0441,
+      "kind": "wiki-candidate",
+      "label": "File:Watchdog Inc. (Earth-928) from Spider-Man 2099 Vol 1 6 001.png"
+    },
+    {
+      "idx": 5,
+      "file": "05.jpg",
+      "score": 0.0311,
+      "kind": "wiki-candidate",
+      "label": "File:Throwbacks (Earth-928) from Spider-Man 2099 Vol 1 6 001.png"
+    },
+    {
+      "idx": 6,
+      "file": "06.jpg",
+      "score": 0.0276,
+      "kind": "wiki-candidate",
+      "label": "File:Freakers (Earth-928) from Spider-Man 2099 Vol 1 6 001.png"
+    }
+  ]
+}

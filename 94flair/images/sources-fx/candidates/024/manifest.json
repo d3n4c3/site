@@ -1,0 +1,45 @@
+{
+  "n": 24,
+  "key": "024",
+  "title": "Peter Meets Mary Jane",
+  "source": "Marvel Swimsuit Issue (1992) #2, Page 17",
+  "issue_keys": [
+    "Marvel Swimsuit Issue Vol 1 2",
+    "Marvel Swimsuit Issue Vol 2 2",
+    "Marvel Swimsuit Issue 2",
+    "The Marvel Swimsuit Issue Vol 1 2"
+  ],
+  "page": 17,
+  "part": "page",
+  "status": "ok",
+  "candidates": [
+    {
+      "idx": 1,
+      "file": "01.jpg",
+      "wiki": "File:Mary Jane Watson (Earth-616) and Maybelle Parker (Earth-616) from Marvel Swimsuit Vol 1 2.jpg",
+      "score": 30,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/7/7b/Mary_Jane_Watson_%28Earth-616%29_and_Maybelle_Parker_%28Earth-616%29_from_Marvel_Swimsuit_Vol_1_2.jpg/revision/latest?cb=20110110045607"
+    },
+    {
+      "idx": 2,
+      "file": "02.jpg",
+      "wiki": "File:Janet Van Dyne (Earth-60618) from Marvel Swimsuit Special Friends, Foes & Rivals Vol 1 1 001.jpg",
+      "score": 20,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/c/cd/Janet_Van_Dyne_%28Earth-60618%29_from_Marvel_Swimsuit_Special_Friends%2C_Foes_%26_Rivals_Vol_1_1_001.jpg/revision/latest?cb=20250718231043"
+    },
+    {
+      "idx": 3,
+      "file": "03.jpg",
+      "wiki": "File:Janet Van Dyne (Earth-616) from Marvel Swimsuit Special Vol 1 3 001.jpg",
+      "score": 20,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/c/c7/Janet_Van_Dyne_%28Earth-616%29_from_Marvel_Swimsuit_Special_Vol_1_3_001.jpg/revision/latest/scale-to-width-down/1400?cb=20100716015032"
+    },
+    {
+      "idx": 4,
+      "file": "04.jpg",
+      "wiki": "File:Mary Walker (Earth-616) from Marvel Swimsuit Special Vol 1 2 001.jpg",
+      "score": 20,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/5/58/Mary_Walker_%28Earth-616%29_from_Marvel_Swimsuit_Special_Vol_1_2_001.jpg/revision/latest?cb=20240209164908"
+    }
+  ]
+}

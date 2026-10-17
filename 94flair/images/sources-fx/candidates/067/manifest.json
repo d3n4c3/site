@@ -1,0 +1,85 @@
+{
+  "n": 67,
+  "key": "067",
+  "title": "The Cosmic Spider-Man",
+  "source": "The Spectacular Spider-Man (1976) #201, Page 21",
+  "tokens": [
+    "Spider-Man",
+    "Cosmic"
+  ],
+  "page": 21,
+  "promo": false,
+  "status": "ok",
+  "candidates": [
+    {
+      "idx": 1,
+      "file": "01.jpg",
+      "wiki": "File:Spectacular Spider-Man Vol 1 201.jpg",
+      "score": 64,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/1/1f/Spectacular_Spider-Man_Vol_1_201.jpg/revision/latest?cb=20251207203427"
+    },
+    {
+      "idx": 2,
+      "file": "02.jpg",
+      "wiki": "File:Cosmic Oneness (Earth-616) and Peter Parker (Earth-616) from Amazing Spider-Man Vol 1 273 001.jpg",
+      "score": 50,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/9/9c/Cosmic_Oneness_%28Earth-616%29_and_Peter_Parker_%28Earth-616%29_from_Amazing_Spider-Man_Vol_1_273_001.jpg/revision/latest?cb=20210414055238"
+    },
+    {
+      "idx": 3,
+      "file": "03.jpg",
+      "wiki": "File:Cosmic Concepts from Amazing Spider-Man Annual Vol 1 27 001.png",
+      "score": 42,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/7/74/Cosmic_Concepts_from_Amazing_Spider-Man_Annual_Vol_1_27_001.png/revision/latest?cb=20130905065226"
+    },
+    {
+      "idx": 4,
+      "file": "04.jpg",
+      "wiki": "File:Costello (Earth-616) from Spectacular Spider-Man Vol 1 134 0001.jpg",
+      "score": 32,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/2/2b/Costello_%28Earth-616%29_from_Spectacular_Spider-Man_Vol_1_134_0001.jpg/revision/latest?cb=20210509134056"
+    },
+    {
+      "idx": 5,
+      "file": "05.jpg",
+      "wiki": "File:Oblivion (Earth-616) from G.O.D.S. Vol 1 3 Cosmic Homage Variant cover 001.jpg",
+      "score": 32,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/7/7e/Oblivion_%28Earth-616%29_from_G.O.D.S._Vol_1_3_Cosmic_Homage_Variant_cover_001.jpg/revision/latest/scale-to-width-down/1400?cb=20231220160822"
+    },
+    {
+      "idx": 6,
+      "file": "06.jpg",
+      "wiki": "File:Phillip Cussler Jr. (Earth-616) from Spectacular Spider-Man Vol 1 215 001.png",
+      "score": 32,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/d/d0/Phillip_Cussler_Jr._%28Earth-616%29_from_Spectacular_Spider-Man_Vol_1_215_001.png/revision/latest?cb=20130803112518"
+    },
+    {
+      "idx": 7,
+      "file": "07.jpg",
+      "wiki": "File:Sammy Skalek (Earth-616) from Spectacular Spider-Man Vol 1 225 0001.png",
+      "score": 32,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/d/d3/Sammy_Skalek_%28Earth-616%29_from_Spectacular_Spider-Man_Vol_1_225_0001.png/revision/latest?cb=20130820074756"
+    },
+    {
+      "idx": 8,
+      "file": "08.jpg",
+      "wiki": "File:Susie Jablonski (Earth-616) from Peter Parker, The Spectacular Spider-Man Vol 1 109 001.png",
+      "score": 32,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/2/2a/Susie_Jablonski_%28Earth-616%29_from_Peter_Parker%2C_The_Spectacular_Spider-Man_Vol_1_109_001.png/revision/latest?cb=20120704121927"
+    },
+    {
+      "idx": 9,
+      "file": "09.jpg",
+      "wiki": "File:Tyrant (Earth-616) from Cosmic Powers Vol 1 6 cover 001.jpg",
+      "score": 32,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/4/43/Tyrant_%28Earth-616%29_from_Cosmic_Powers_Vol_1_6_cover_001.jpg/revision/latest?cb=20240311173025"
+    },
+    {
+      "idx": 10,
+      "file": "10.jpg",
+      "wiki": "File:Cosmic Ghost Rider Destroys Marvel History Vol 1 4 Johnson Variant Textless.jpg",
+      "score": 28,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/f/fd/Cosmic_Ghost_Rider_Destroys_Marvel_History_Vol_1_4_Johnson_Variant_Textless.jpg/revision/latest?cb=20190530183426"
+    }
+  ]
+}

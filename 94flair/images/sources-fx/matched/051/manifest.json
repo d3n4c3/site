@@ -1,0 +1,51 @@
+{
+  "n": 51,
+  "key": "051",
+  "title": "Formation of X-Factor",
+  "source": "X-Men Unlimited (1993) #1, Page 62",
+  "artist": "Joe Quesada",
+  "matches": [
+    {
+      "idx": 1,
+      "file": "01.jpg",
+      "score": 0.0929,
+      "kind": "wiki-candidate",
+      "label": "File:Sage (Earth-616) from X-Men Unlimited Vol 2 1 005.jpg"
+    },
+    {
+      "idx": 2,
+      "file": "02.jpg",
+      "score": 0.089,
+      "kind": "wiki-candidate",
+      "label": "File:Inciters (Earth-616) from X-Men Unlimited Vol 1 13 001.jpg"
+    },
+    {
+      "idx": 3,
+      "file": "03.jpg",
+      "score": 0.0645,
+      "kind": "wiki-candidate",
+      "label": "File:Sage (Earth-616) from X-Men Unlimited Vol 2 1 004.jpg"
+    },
+    {
+      "idx": 4,
+      "file": "04.jpg",
+      "score": 0.061,
+      "kind": "wiki-candidate",
+      "label": "File:Sage (Earth-616) from X-Men Unlimited Vol 2 1 002.jpg"
+    },
+    {
+      "idx": 5,
+      "file": "05.jpg",
+      "score": 0.0577,
+      "kind": "wiki-candidate",
+      "label": "File:K'illace (Earth-616) from X-Men Unlimited Vol 1 13 0001.jpg"
+    },
+    {
+      "idx": 6,
+      "file": "06.jpg",
+      "score": 0.0571,
+      "kind": "wiki-candidate",
+      "label": "File:Sage (Earth-616) from X-Men Unlimited Vol 2 1 001.jpg"
+    }
+  ]
+}

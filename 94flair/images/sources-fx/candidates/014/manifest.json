@@ -1,0 +1,84 @@
+{
+  "n": 14,
+  "key": "014",
+  "title": "Origin of Daredevil",
+  "source": "Daredevil: The Man Without Fear (1964) #1, Cover",
+  "tokens": [
+    "Daredevil"
+  ],
+  "page": null,
+  "promo": false,
+  "status": "ok",
+  "candidates": [
+    {
+      "idx": 1,
+      "file": "01.jpg",
+      "wiki": "File:Liebowitz (Earth-616) from Daredevil The Man Without Fear Vol 1 1 001.png",
+      "score": 107,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/d/d9/Liebowitz_%28Earth-616%29_from_Daredevil_The_Man_Without_Fear_Vol_1_1_001.png/revision/latest?cb=20140405105647"
+    },
+    {
+      "idx": 2,
+      "file": "02.jpg",
+      "wiki": "File:Maggie Farrell's father (Earth-616) from Daredevil The Man Without Fear Vol 1 1 001.jpg",
+      "score": 107,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/f/f5/Maggie_Farrell%27s_father_%28Earth-616%29_from_Daredevil_The_Man_Without_Fear_Vol_1_1_001.jpg/revision/latest?cb=20170311192333"
+    },
+    {
+      "idx": 3,
+      "file": "03.jpg",
+      "wiki": "File:Matthew Murdock (Earth-616) as a boy from Daredevil the Man Without Fear Vol 1 1.jpg",
+      "score": 101,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/1/11/Matthew_Murdock_%28Earth-616%29_as_a_boy_from_Daredevil_the_Man_Without_Fear_Vol_1_1.jpg/revision/latest?cb=20150604011320"
+    },
+    {
+      "idx": 4,
+      "file": "04.jpg",
+      "wiki": "File:Matthew Murdock (Earth-616) being trained by Stick from Daredevil The Man Without Fear Vol 1 1.jpg",
+      "score": 101,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/1/16/Matthew_Murdock_%28Earth-616%29_being_trained_by_Stick_from_Daredevil_The_Man_Without_Fear_Vol_1_1.jpg/revision/latest/scale-to-width-down/1400?cb=20150604013753"
+    },
+    {
+      "idx": 5,
+      "file": "05.jpg",
+      "wiki": "File:Daredevil The Man Without Fear Vol 1 1.jpg",
+      "score": 58,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/b/b4/Daredevil_The_Man_Without_Fear_Vol_1_1.jpg/revision/latest/scale-to-width-down/1400?cb=20260426085906"
+    },
+    {
+      "idx": 6,
+      "file": "06.jpg",
+      "wiki": "File:Angelo (Earth-616) from Daredevil The Man Without Fear Vol 1 2 0001.png",
+      "score": 32,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/1/15/Angelo_%28Earth-616%29_from_Daredevil_The_Man_Without_Fear_Vol_1_2_0001.png/revision/latest?cb=20140405110751"
+    },
+    {
+      "idx": 7,
+      "file": "07.jpg",
+      "wiki": "File:Baby Karen (Earth-616) from Daredevil Vol 2 1 0001.png",
+      "score": 32,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/c/c3/Baby_Karen_%28Earth-616%29_from_Daredevil_Vol_2_1_0001.png/revision/latest?cb=20211227170251"
+    },
+    {
+      "idx": 8,
+      "file": "08.jpg",
+      "wiki": "File:Brock Rumlow (Earth-616) from Daredevil Woman Without Fear Vol 2 1 001.jpg",
+      "score": 32,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/d/d9/Brock_Rumlow_%28Earth-616%29_from_Daredevil_Woman_Without_Fear_Vol_2_1_001.jpg/revision/latest?cb=20240720155730"
+    },
+    {
+      "idx": 9,
+      "file": "09.jpg",
+      "wiki": "File:Carl Lombardi (Earth-616) from Captain Universe Daredevil - The Man Without Fear! Vol 1 1 001.jpg",
+      "score": 32,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/5/52/Carl_Lombardi_%28Earth-616%29_from_Captain_Universe_Daredevil_-_The_Man_Without_Fear%21_Vol_1_1_001.jpg/revision/latest?cb=20140303004925"
+    },
+    {
+      "idx": 10,
+      "file": "10.jpg",
+      "wiki": "File:Cathy (Columbia) (Earth-616) from Daredevil the Man Without Fear Vol 1 2 001.png",
+      "score": 32,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/6/6c/Cathy_%28Columbia%29_%28Earth-616%29_from_Daredevil_the_Man_Without_Fear_Vol_1_2_001.png/revision/latest?cb=20160413152919"
+    }
+  ]
+}

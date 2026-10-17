@@ -1,0 +1,86 @@
+{
+  "n": 73,
+  "key": "073",
+  "title": "Origin of the New Warriors",
+  "source": "Nova (1993) #1, Page 1",
+  "tokens": [
+    "New Warriors",
+    "New",
+    "Warriors"
+  ],
+  "page": 1,
+  "promo": false,
+  "status": "ok",
+  "candidates": [
+    {
+      "idx": 1,
+      "file": "01.jpg",
+      "wiki": "File:Daakor (Earth-616) from Nova Vol 2 13 0001.jpg",
+      "score": 164,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/1/1c/Daakor_%28Earth-616%29_from_Nova_Vol_2_13_0001.jpg/revision/latest?cb=20120803084833"
+    },
+    {
+      "idx": 2,
+      "file": "02.jpg",
+      "wiki": "File:Garthan Saal (Earth-616) from Nova Vol 2 1 001.png",
+      "score": 164,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/5/5a/Garthan_Saal_%28Earth-616%29_from_Nova_Vol_2_1_001.png/revision/latest?cb=20150806133521"
+    },
+    {
+      "idx": 3,
+      "file": "03.jpg",
+      "wiki": "File:Jack (Earth-616) from Nova Vol 1 1 001.png",
+      "score": 164,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/8/88/Jack_%28Earth-616%29_from_Nova_Vol_1_1_001.png/revision/latest?cb=20200109021027"
+    },
+    {
+      "idx": 4,
+      "file": "04.jpg",
+      "wiki": "File:Kre'shje (Earth-616) from Nova Vol 2 1 0001.png",
+      "score": 164,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/5/5f/Kre%27shje_%28Earth-616%29_from_Nova_Vol_2_1_0001.png/revision/latest?cb=20180930223113"
+    },
+    {
+      "idx": 5,
+      "file": "05.jpg",
+      "wiki": "File:Mr. Ryan (Earth-616) from Nova Vol 1 1 001.png",
+      "score": 164,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/7/78/Mr._Ryan_%28Earth-616%29_from_Nova_Vol_1_1_001.png/revision/latest?cb=20200109021511"
+    },
+    {
+      "idx": 6,
+      "file": "06.jpg",
+      "wiki": "File:Nova Corps (Earth-616) from Nova Vol 2 1 0001.jpg",
+      "score": 164,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/5/53/Nova_Corps_%28Earth-616%29_from_Nova_Vol_2_1_0001.jpg/revision/latest?cb=20060203024310"
+    },
+    {
+      "idx": 7,
+      "file": "07.jpg",
+      "wiki": "File:Nova Express (Earth-616) from Nova Vol 2 1 0001.jpg",
+      "score": 164,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/3/3b/Nova_Express_%28Earth-616%29_from_Nova_Vol_2_1_0001.jpg/revision/latest?cb=20180802031902"
+    },
+    {
+      "idx": 8,
+      "file": "08.jpg",
+      "wiki": "File:Rhomann Dey (Earth-616) from Nova Vol 1 1 0001.png",
+      "score": 164,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/5/52/Rhomann_Dey_%28Earth-616%29_from_Nova_Vol_1_1_0001.png/revision/latest?cb=20200109021116"
+    },
+    {
+      "idx": 9,
+      "file": "09.jpg",
+      "wiki": "File:Richard Rider (Earth-616) from Nova Vol 1 1 0001.jpg",
+      "score": 164,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/d/d7/Richard_Rider_%28Earth-616%29_from_Nova_Vol_1_1_0001.jpg/revision/latest/scale-to-width-down/1400?cb=20200109021734"
+    },
+    {
+      "idx": 10,
+      "file": "10.jpg",
+      "wiki": "File:T'Kora (Earth-616) from Nova Vol 1 13 001.jpg",
+      "score": 164,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/2/21/T%27Kora_%28Earth-616%29_from_Nova_Vol_1_13_001.jpg/revision/latest?cb=20200109033615"
+    }
+  ]
+}

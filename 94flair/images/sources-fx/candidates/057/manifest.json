@@ -1,0 +1,87 @@
+{
+  "n": 57,
+  "key": "057",
+  "title": "The Wedding of Spider-Man & Mary Jane",
+  "source": "Web of Spider-Man (1985) Annual #4, Page 43",
+  "tokens": [
+    "Spider-Man",
+    "Mary Jane",
+    "Mary",
+    "Jane"
+  ],
+  "page": 43,
+  "promo": false,
+  "status": "ok",
+  "candidates": [
+    {
+      "idx": 1,
+      "file": "01.jpg",
+      "wiki": "File:George Jefferson (Earth-616) from Web of Spider-Man Vol 1 4 0001.jpg",
+      "score": 182,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/e/ea/George_Jefferson_%28Earth-616%29_from_Web_of_Spider-Man_Vol_1_4_0001.jpg/revision/latest?cb=20240315171323"
+    },
+    {
+      "idx": 2,
+      "file": "02.jpg",
+      "wiki": "File:Jack (Earth-616) from Web of Spider-Man Vol 1 4 0001.jpg",
+      "score": 182,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/2/21/Jack_%28Earth-616%29_from_Web_of_Spider-Man_Vol_1_4_0001.jpg/revision/latest?cb=20240316043614"
+    },
+    {
+      "idx": 3,
+      "file": "03.jpg",
+      "wiki": "File:Peter Parker (Earth-616) from Web of Spider-Man Vol 1 44 001.png",
+      "score": 182,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/b/b1/Peter_Parker_%28Earth-616%29_from_Web_of_Spider-Man_Vol_1_44_001.png/revision/latest?cb=20230213020625"
+    },
+    {
+      "idx": 4,
+      "file": "04.jpg",
+      "wiki": "File:Uncle Cleve's Discount Radio and Electronics from Web of Spider-Man Vol 1 4 0001.jpg",
+      "score": 174,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/2/27/Uncle_Cleve%27s_Discount_Radio_and_Electronics_from_Web_of_Spider-Man_Vol_1_4_0001.jpg/revision/latest?cb=20240316044753"
+    },
+    {
+      "idx": 5,
+      "file": "05.jpg",
+      "wiki": "File:Doyle Denby (Earth-616) from Web of Spider-Man Annual Vol 1 4 001.png",
+      "score": 107,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/7/70/Doyle_Denby_%28Earth-616%29_from_Web_of_Spider-Man_Annual_Vol_1_4_001.png/revision/latest?cb=20171123130305"
+    },
+    {
+      "idx": 6,
+      "file": "06.jpg",
+      "wiki": "File:Ulysses Lugman (Earth-616) from Web of Spider-Man Annual Vol 1 4 001.jpg",
+      "score": 107,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/b/bb/Ulysses_Lugman_%28Earth-616%29_from_Web_of_Spider-Man_Annual_Vol_1_4_001.jpg/revision/latest?cb=20101101160233"
+    },
+    {
+      "idx": 7,
+      "file": "07.jpg",
+      "wiki": "File:Ylandris (Earth-616) from Web of Spider-Man Annual Vol 1 4 001.jpg",
+      "score": 107,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/e/ed/Ylandris_%28Earth-616%29_from_Web_of_Spider-Man_Annual_Vol_1_4_001.jpg/revision/latest?cb=20260131203516"
+    },
+    {
+      "idx": 8,
+      "file": "08.jpg",
+      "wiki": "File:Web of Spider-Man Vol 1 4.jpg",
+      "score": 98,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/a/a9/Web_of_Spider-Man_Vol_1_4.jpg/revision/latest/scale-to-width-down/1400?cb=20250713024017"
+    },
+    {
+      "idx": 9,
+      "file": "09.jpg",
+      "wiki": "File:Web of Spider-Man Vol 1 42.jpg",
+      "score": 98,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/f/f8/Web_of_Spider-Man_Vol_1_42.jpg/revision/latest/scale-to-width-down/1400?cb=20250713062905"
+    },
+    {
+      "idx": 10,
+      "file": "10.jpg",
+      "wiki": "File:Web of Spider-Man Vol 1 43.jpg",
+      "score": 98,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/4/44/Web_of_Spider-Man_Vol_1_43.jpg/revision/latest/scale-to-width-down/1400?cb=20250713063028"
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "n": 93,
+  "key": "093",
+  "title": "The Origin of Nightstalkers",
+  "source": "Nightstalkers (1992) #1, Mini-Poster",
+  "artist": "Andy Kubert; Adam Kubert",
+  "matches": [
+    {
+      "idx": 1,
+      "file": "01.jpg",
+      "score": 0.0468,
+      "kind": "wiki-candidate",
+      "label": "File:Justin Hoyt (Earth-616) from Nightstalkers Vol 1 1 001.png"
+    },
+    {
+      "idx": 2,
+      "file": "02.jpg",
+      "score": 0.0381,
+      "kind": "wiki-candidate",
+      "label": "File:Erik Brooks (Earth-616) from Nightstalkers Vol 1 10 001.jpg"
+    },
+    {
+      "idx": 3,
+      "file": "03.jpg",
+      "score": 0.0329,
+      "kind": "wiki-candidate",
+      "label": "File:Varnae (Earth-616) from Nightstalkers Vol 1 18 001.jpg"
+    },
+    {
+      "idx": 4,
+      "file": "04.jpg",
+      "score": 0.0309,
+      "kind": "wiki-candidate",
+      "label": "File:Earth-931113 from Nightstalkers Vol 1 13 001.jpg"
+    },
+    {
+      "idx": 5,
+      "file": "05.jpg",
+      "score": 0.0256,
+      "kind": "wiki-candidate",
+      "label": "File:Fallen (Team) (Earth-616) from Nightstalkers Vol 1 15 001.png"
+    },
+    {
+      "idx": 6,
+      "file": "06.jpg",
+      "score": 0.0255,
+      "kind": "wiki-candidate",
+      "label": "File:Boston Commons from Nightstalkers Vol 1 1 001.png"
+    }
+  ]
+}

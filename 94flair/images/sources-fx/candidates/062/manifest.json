@@ -1,0 +1,86 @@
+{
+  "n": 62,
+  "key": "062",
+  "title": "Origin of Typhoid Mary",
+  "source": "Daredevil: The Man Without Fear (1964) #254, Page 2",
+  "tokens": [
+    "Typhoid Mary",
+    "Typhoid",
+    "Mary"
+  ],
+  "page": 2,
+  "promo": false,
+  "status": "ok",
+  "candidates": [
+    {
+      "idx": 1,
+      "file": "01.jpg",
+      "wiki": "File:Typhoid Mary (Earth-9047) from What The--?! Vol 1 11 001.jpg",
+      "score": 60,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/e/e6/Typhoid_Mary_%28Earth-9047%29_from_What_The--%3F%21_Vol_1_11_001.jpg/revision/latest?cb=20140617163021"
+    },
+    {
+      "idx": 2,
+      "file": "02.jpg",
+      "wiki": "File:Daredevil Vol 5 26 Venomized Typhoid Mary Variant.jpg",
+      "score": 54,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/b/b1/Daredevil_Vol_5_26_Venomized_Typhoid_Mary_Variant.jpg/revision/latest?cb=20170818005719"
+    },
+    {
+      "idx": 3,
+      "file": "03.jpg",
+      "wiki": "File:Marvel Legends Typhoid Mary.jpg",
+      "score": 54,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/a/a1/Marvel_Legends_Typhoid_Mary.jpg/revision/latest/scale-to-width-down/1400?cb=20230212231705"
+    },
+    {
+      "idx": 4,
+      "file": "04.jpg",
+      "wiki": "File:Mary Walker (Earth-616) from Typhoid Fever Iron Fist Vol 1 1 001.jpg",
+      "score": 50,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/f/f1/Mary_Walker_%28Earth-616%29_from_Typhoid_Fever_Iron_Fist_Vol_1_1_001.jpg/revision/latest?cb=20181216022044"
+    },
+    {
+      "idx": 5,
+      "file": "05.jpg",
+      "wiki": "File:Mary Walker (Earth-616) from Typhoid Fever Iron Fist Vol 1 1 002.jpg",
+      "score": 50,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/3/38/Mary_Walker_%28Earth-616%29_from_Typhoid_Fever_Iron_Fist_Vol_1_1_002.jpg/revision/latest?cb=20181216022057"
+    },
+    {
+      "idx": 6,
+      "file": "06.jpg",
+      "wiki": "File:John (Mary Walker's Boyfriend) from Typhoid Vol 1 1 0001.jpg",
+      "score": 42,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/4/4c/John_%28Mary_Walker%27s_Boyfriend%29_from_Typhoid_Vol_1_1_0001.jpg/revision/latest?cb=20171224162121"
+    },
+    {
+      "idx": 7,
+      "file": "07.jpg",
+      "wiki": "File:Jean Grey (Earth-616) from Typhoid Fever X-Men Vol 1 1 001.jpg",
+      "score": 32,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/0/0c/Jean_Grey_%28Earth-616%29_from_Typhoid_Fever_X-Men_Vol_1_1_001.jpg/revision/latest?cb=20181110215439"
+    },
+    {
+      "idx": 8,
+      "file": "08.jpg",
+      "wiki": "File:Kurt Wagner (Earth-616) from Typhoid Fever X-Men Vol 1 1 001.jpg",
+      "score": 32,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/f/f1/Kurt_Wagner_%28Earth-616%29_from_Typhoid_Fever_X-Men_Vol_1_1_001.jpg/revision/latest?cb=20181110212730"
+    },
+    {
+      "idx": 9,
+      "file": "09.jpg",
+      "wiki": "File:Kurt Wagner (Earth-616) from Typhoid Fever X-Men Vol 1 1 002.jpg",
+      "score": 32,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/e/e7/Kurt_Wagner_%28Earth-616%29_from_Typhoid_Fever_X-Men_Vol_1_1_002.jpg/revision/latest?cb=20181110212743"
+    },
+    {
+      "idx": 10,
+      "file": "10.jpg",
+      "wiki": "File:Mary (Earth-616) from Daredevil Vol 1 247 0001.jpg",
+      "score": 32,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/b/be/Mary_%28Earth-616%29_from_Daredevil_Vol_1_247_0001.jpg/revision/latest?cb=20190224214919"
+    }
+  ]
+}

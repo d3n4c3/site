@@ -1,0 +1,402 @@
+{
+  "generated": "2026-10-17T17:29:40Z",
+  "shipped": [
+    1,
+    2,
+    4,
+    6,
+    7,
+    8,
+    9,
+    12,
+    13,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    22,
+    23,
+    24,
+    26,
+    27,
+    30,
+    34,
+    36,
+    38,
+    39,
+    40,
+    43,
+    46,
+    47,
+    48,
+    49,
+    50,
+    53,
+    55,
+    60,
+    63,
+    68,
+    74,
+    79,
+    80,
+    82,
+    83,
+    84,
+    87,
+    88,
+    89,
+    90,
+    92,
+    98,
+    99
+  ],
+  "cards": 49,
+  "with_candidates": 49,
+  "results": [
+    {
+      "n": 3,
+      "status": "ok",
+      "count": 10,
+      "title": "Origin of Spider-Man",
+      "source": "1992 Impel Amazing Spider-Man 30th Anniversary Card Set"
+    },
+    {
+      "n": 5,
+      "status": "ok",
+      "count": 10,
+      "title": "Amazing Spider-Man #1",
+      "source": "Web of Spider-Man (1985) #105, Page 2"
+    },
+    {
+      "n": 10,
+      "status": "ok",
+      "count": 10,
+      "title": "Origin of The X-Men",
+      "source": "In-house sketches by Ron Lim. Also used as X-Men playing cards (1994), store counter standee (1995), and X-Men magnets (1996)"
+    },
+    {
+      "n": 11,
+      "status": "ok",
+      "count": 10,
+      "title": "Avengers Assemble",
+      "source": "The Avengers (1963) Annual #20, Page 56"
+    },
+    {
+      "n": 14,
+      "status": "ok",
+      "count": 10,
+      "title": "Origin of Daredevil",
+      "source": "Daredevil: The Man Without Fear (1964) #1, Cover"
+    },
+    {
+      "n": 21,
+      "status": "ok",
+      "count": 10,
+      "title": "Origin of Silver Surfer",
+      "source": "The Incredible Hulk (1968) #414, Page 20"
+    },
+    {
+      "n": 25,
+      "status": "ok",
+      "count": 10,
+      "title": "Doom Steals the Power Cosmic",
+      "source": "The Fantastic Four (1961) #128, Page 21"
+    },
+    {
+      "n": 28,
+      "status": "ok",
+      "count": 10,
+      "title": "Mephisto Appears",
+      "source": "West Coast Avengers (1985) Annual #8, Page 51"
+    },
+    {
+      "n": 29,
+      "status": "ok",
+      "count": 10,
+      "title": "Origin of Morbius",
+      "source": "Morbius (1992) #1, Mini-Poster"
+    },
+    {
+      "n": 31,
+      "status": "ok",
+      "count": 10,
+      "title": "Thanos Attacks",
+      "source": "The Infinity War (1992) #6, Page 14"
+    },
+    {
+      "n": 32,
+      "status": "ok",
+      "count": 10,
+      "title": "Death of Gwen Stacy",
+      "source": "The Spectacular Spider-Man (1976) #200, Page 42"
+    },
+    {
+      "n": 33,
+      "status": "ok",
+      "count": 10,
+      "title": "Punisher vs. Spider-Man",
+      "source": "The Punisher (1987) Ad/Poster"
+    },
+    {
+      "n": 35,
+      "status": "ok",
+      "count": 10,
+      "title": "The Wedding",
+      "source": "X-Men (1991) #26, Cover"
+    },
+    {
+      "n": 37,
+      "status": "ok",
+      "count": 10,
+      "title": "Spider-Man meets the Black Cat",
+      "source": ""
+    },
+    {
+      "n": 41,
+      "status": "ok",
+      "count": 10,
+      "title": "Days of Future Past",
+      "source": "X-Men Adventures (1992) #1, Page 12"
+    },
+    {
+      "n": 42,
+      "status": "ok",
+      "count": 10,
+      "title": "Elektra Appears",
+      "source": "In-house sketches by Frank Miller"
+    },
+    {
+      "n": 44,
+      "status": "ok",
+      "count": 10,
+      "title": "Hobgoblin Appears",
+      "source": "Suspected unused in print, possibly shelved for a Web of Spider-Man Annual #3 pin-up. Used as a large 5' store stand-up display (1987)"
+    },
+    {
+      "n": 45,
+      "status": "ok",
+      "count": 10,
+      "title": "Origin of Alpha Flight",
+      "source": "Alpha Flight (1983) #128, Page 13"
+    },
+    {
+      "n": 51,
+      "status": "ok",
+      "count": 10,
+      "title": "Formation of X-Factor",
+      "source": "X-Men Unlimited (1993) #1, Page 62"
+    },
+    {
+      "n": 52,
+      "status": "ok",
+      "count": 10,
+      "title": "Apocalypse Attacks",
+      "source": "X-Factor (1988) #65, Page 20"
+    },
+    {
+      "n": 54,
+      "status": "ok",
+      "count": 10,
+      "title": "Formation of Excalibur",
+      "source": "The Uncanny X-Men (1963) #300, Page 1"
+    },
+    {
+      "n": 56,
+      "status": "ok",
+      "count": 10,
+      "title": "Mr. Sinister Appears",
+      "source": "The Uncanny X-Men (1963) #239, Page 4"
+    },
+    {
+      "n": 57,
+      "status": "ok",
+      "count": 10,
+      "title": "The Wedding of Spider-Man & Mary Jane",
+      "source": "Web of Spider-Man (1985) Annual #4, Page 43"
+    },
+    {
+      "n": 58,
+      "status": "ok",
+      "count": 10,
+      "title": "The Origin of Jubilee",
+      "source": "Uncanny X-Men (1963) #258, Page 8"
+    },
+    {
+      "n": 59,
+      "status": "ok",
+      "count": 10,
+      "title": "Armor Wars",
+      "source": "Iron Man (1968) Annual #10, Page 50"
+    },
+    {
+      "n": 61,
+      "status": "ok",
+      "count": 10,
+      "title": "Origin of Venom",
+      "source": "Venom: Lethal Protector (1993) Gold Retailer Incentive, Back Cover"
+    },
+    {
+      "n": 62,
+      "status": "ok",
+      "count": 10,
+      "title": "Origin of Typhoid Mary",
+      "source": "Daredevil: The Man Without Fear (1964) #254, Page 2"
+    },
+    {
+      "n": 64,
+      "status": "ok",
+      "count": 10,
+      "title": "The Origin of Speedball",
+      "source": "The New Warriors (1990) #31, Page 14"
+    },
+    {
+      "n": 65,
+      "status": "ok",
+      "count": 10,
+      "title": "Captain America vs. The Captain",
+      "source": "Captain America (1968) #422, Page 8"
+    },
+    {
+      "n": 66,
+      "status": "ok",
+      "count": 10,
+      "title": "Universal Guardian",
+      "source": "1992 Comic Images Silver Surfer Card Set #66; Unused Corner Box Art"
+    },
+    {
+      "n": 67,
+      "status": "ok",
+      "count": 10,
+      "title": "The Cosmic Spider-Man",
+      "source": "The Spectacular Spider-Man (1976) #201, Page 21"
+    },
+    {
+      "n": 69,
+      "status": "ok",
+      "count": 10,
+      "title": "Thanos Quest",
+      "source": "The Thanos Quest (1990) #1, Page 48"
+    },
+    {
+      "n": 70,
+      "status": "ok",
+      "count": 10,
+      "title": "Cable Returns from the Future",
+      "source": "1992 Impel X-Men Series I by Jim Lee"
+    },
+    {
+      "n": 71,
+      "status": "ok",
+      "count": 10,
+      "title": "Ghost Rider #1",
+      "source": "Ghost Rider (1990) #1, Cover"
+    },
+    {
+      "n": 72,
+      "status": "ok",
+      "count": 10,
+      "title": "The Creation of Deathlok",
+      "source": "Deathlok (1990) #1, Page 28"
+    },
+    {
+      "n": 73,
+      "status": "ok",
+      "count": 10,
+      "title": "Origin of the New Warriors",
+      "source": "Nova (1993) #1, Page 1"
+    },
+    {
+      "n": 75,
+      "status": "ok",
+      "count": 10,
+      "title": "Gambit Appears",
+      "source": "X-Men (1991) #25, Gambit Hologram"
+    },
+    {
+      "n": 76,
+      "status": "ok",
+      "count": 10,
+      "title": "X-Tinction Agenda",
+      "source": "X-Tinction Agenda House Ad/Promotional Material; X-Men (1991) #1 Composite (Cyclops)"
+    },
+    {
+      "n": 77,
+      "status": "ok",
+      "count": 10,
+      "title": "Hulk Reborn",
+      "source": "The Incredible Hulk (1968) #391, Page 19"
+    },
+    {
+      "n": 78,
+      "status": "ok",
+      "count": 10,
+      "title": "Deadpool Strikes",
+      "source": "Deadpool: The Circle Chase (1993) #2, Page 5"
+    },
+    {
+      "n": 81,
+      "status": "ok",
+      "count": 10,
+      "title": "The Return of Blaze",
+      "source": "Ghost Rider & Blaze: Spirits of Vengeance (1992) #1, Mini-Poster"
+    },
+    {
+      "n": 85,
+      "status": "ok",
+      "count": 10,
+      "title": "The Origin of Bishop",
+      "source": "Suspected unused in print. Used on a licensed Comic Images T-shirt in 1993."
+    },
+    {
+      "n": 86,
+      "status": "ok",
+      "count": 10,
+      "title": "Omega Red vs. Wolverine",
+      "source": "X-Men (1991) #5, Cover"
+    },
+    {
+      "n": 91,
+      "status": "ok",
+      "count": 10,
+      "title": "Death of Mariko",
+      "source": "Wolverine (1988) #65, Page 18"
+    },
+    {
+      "n": 93,
+      "status": "ok",
+      "count": 10,
+      "title": "The Origin of Nightstalkers",
+      "source": "Nightstalkers (1992) #1, Mini-Poster"
+    },
+    {
+      "n": 94,
+      "status": "ok",
+      "count": 10,
+      "title": "The Origin of Spider-Man 2099",
+      "source": "Spider-Man 2099 (1993) #6, Page 5"
+    },
+    {
+      "n": 95,
+      "status": "ok",
+      "count": 10,
+      "title": "Hulk Leads the Pantheon",
+      "source": "The Incredible Hulk (1968) #410, Page 15"
+    },
+    {
+      "n": 96,
+      "status": "ok",
+      "count": 10,
+      "title": "X-Cutioner's Song",
+      "source": "X-Factor (1986) #88, Page 1; Page 18 (Composite)"
+    },
+    {
+      "n": 97,
+      "status": "ok",
+      "count": 10,
+      "title": "Cable vs. Stryfe",
+      "source": "The New Mutants (1983) #94, Page 20"
+    }
+  ]
+}

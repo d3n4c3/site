@@ -1,0 +1,59 @@
+{
+  "n": 47,
+  "key": "047",
+  "title": "The Trial of Reed Richards",
+  "source": "The Fantastic Four (1963) #262, Page 8",
+  "issue_keys": [
+    "The Fantastic Four Vol 1 262",
+    "The Fantastic Four Vol 2 262",
+    "The Fantastic Four 262",
+    "Fantastic Four Vol 1 262"
+  ],
+  "page": 8,
+  "part": "page",
+  "status": "ok",
+  "candidates": [
+    {
+      "idx": 1,
+      "file": "01.jpg",
+      "wiki": "File:Reed Richards (Earth-616) on trail from Fantastic Four Vol 1 262.jpg",
+      "score": 125,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/3/3b/Reed_Richards_%28Earth-616%29_on_trail_from_Fantastic_Four_Vol_1_262.jpg/revision/latest?cb=20250808001544"
+    },
+    {
+      "idx": 2,
+      "file": "02.jpg",
+      "wiki": "File:John Bryne (Earth-616) from Fantastic Four Vol 1 262.jpg",
+      "score": 95,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/6/66/John_Bryne_%28Earth-616%29_from_Fantastic_Four_Vol_1_262.jpg/revision/latest?cb=20151023033417"
+    },
+    {
+      "idx": 3,
+      "file": "03.jpg",
+      "wiki": "File:Karant Kiar (Earth-616) from Fantastic Four Vol 1 262 001.jpg",
+      "score": 95,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/6/69/Karant_Kiar_%28Earth-616%29_from_Fantastic_Four_Vol_1_262_001.jpg/revision/latest?cb=20220314041757"
+    },
+    {
+      "idx": 4,
+      "file": "04.jpg",
+      "wiki": "File:Mike Higgins from Fantastic Four Vol 1 262.jpg",
+      "score": 95,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/a/a9/Mike_Higgins_from_Fantastic_Four_Vol_1_262.jpg/revision/latest?cb=20151024173340"
+    },
+    {
+      "idx": 5,
+      "file": "05.jpg",
+      "wiki": "File:Fantastic Four Vol 1 262.jpg",
+      "score": 67,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/8/82/Fantastic_Four_Vol_1_262.jpg/revision/latest?cb=20190526030606"
+    },
+    {
+      "idx": 6,
+      "file": "06.jpg",
+      "wiki": "File:Richards Rocket Group Development Complex from Fantastic Four Vol 1 271 0001.jpg",
+      "score": 15,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/6/6b/Richards_Rocket_Group_Development_Complex_from_Fantastic_Four_Vol_1_271_0001.jpg/revision/latest?cb=20230513035713"
+    }
+  ]
+}

@@ -1,0 +1,85 @@
+{
+  "n": 37,
+  "key": "037",
+  "title": "Spider-Man meets the Black Cat",
+  "source": "",
+  "tokens": [
+    "Spider-Man",
+    "Black Cat"
+  ],
+  "page": null,
+  "promo": true,
+  "status": "ok",
+  "candidates": [
+    {
+      "idx": 1,
+      "file": "01.jpg",
+      "wiki": "File:Amazing Spider-Man Presents Black Cat Vol 1 1 Textless.jpg",
+      "score": 46,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/c/cb/Amazing_Spider-Man_Presents_Black_Cat_Vol_1_1_Textless.jpg/revision/latest?cb=20130823035643"
+    },
+    {
+      "idx": 2,
+      "file": "02.jpg",
+      "wiki": "File:Amazing Spider-Man Presents Black Cat Vol 1 2 Textless.jpg",
+      "score": 46,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/5/5c/Amazing_Spider-Man_Presents_Black_Cat_Vol_1_2_Textless.jpg/revision/latest?cb=20160804021556"
+    },
+    {
+      "idx": 3,
+      "file": "03.jpg",
+      "wiki": "File:Amazing Spider-Man Presents Black Cat Vol 1 3 Textless.jpg",
+      "score": 46,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/3/34/Amazing_Spider-Man_Presents_Black_Cat_Vol_1_3_Textless.jpg/revision/latest?cb=20100830222618"
+    },
+    {
+      "idx": 4,
+      "file": "04.jpg",
+      "wiki": "File:Amazing Spider-Man Presents Black Cat Vol 1 4 Textless.jpg",
+      "score": 46,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/a/ac/Amazing_Spider-Man_Presents_Black_Cat_Vol_1_4_Textless.jpg/revision/latest?cb=20100627104320"
+    },
+    {
+      "idx": 5,
+      "file": "05.jpg",
+      "wiki": "File:Black Cat (Earth-7930) from Spider-Man Fairy Tales Vol 1 3 001.jpg",
+      "score": 42,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/2/27/Black_Cat_%28Earth-7930%29_from_Spider-Man_Fairy_Tales_Vol_1_3_001.jpg/revision/latest?cb=20230516220645"
+    },
+    {
+      "idx": 6,
+      "file": "06.jpg",
+      "wiki": "File:Black Cat's Gang (Earth-41940) from Spider-Man Unlimited (video game) 001.jpg",
+      "score": 42,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/3/34/Black_Cat%27s_Gang_%28Earth-41940%29_from_Spider-Man_Unlimited_%28video_game%29_001.jpg/revision/latest?cb=20170625053337"
+    },
+    {
+      "idx": 7,
+      "file": "07.jpg",
+      "wiki": "File:Black Cat Club from Spider-Man Noir Vol 2 5.jpg",
+      "score": 36,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/c/cd/Black_Cat_Club_from_Spider-Man_Noir_Vol_2_5.jpg/revision/latest?cb=20201104130736"
+    },
+    {
+      "idx": 8,
+      "file": "08.jpg",
+      "wiki": "File:Abner Jenkins (Earth-616) Pin-Up from Amazing Spider-Man Annual Vol 1 2 0001.png",
+      "score": 32,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/5/51/Abner_Jenkins_%28Earth-616%29_Pin-Up_from_Amazing_Spider-Man_Annual_Vol_1_2_0001.png/revision/latest?cb=20210428224132"
+    },
+    {
+      "idx": 9,
+      "file": "09.jpg",
+      "wiki": "File:Benjamin Parker (Earth-616) from Spider-Man Heroes & Villains Collection (Trading Cards) 001.jpg",
+      "score": 32,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/7/71/Benjamin_Parker_%28Earth-616%29_from_Spider-Man_Heroes_%26_Villains_Collection_%28Trading_Cards%29_001.jpg/revision/latest?cb=20240619152118"
+    },
+    {
+      "idx": 10,
+      "file": "10.jpg",
+      "wiki": "File:Bruce Banner (Earth-616) and Peter Parker (Earth-616) from Spider-Man Team-Up (Trading Cards) 001.jpg",
+      "score": 32,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/8/86/Bruce_Banner_%28Earth-616%29_and_Peter_Parker_%28Earth-616%29_from_Spider-Man_Team-Up_%28Trading_Cards%29_001.jpg/revision/latest?cb=20160119053828"
+    }
+  ]
+}

@@ -1,0 +1,86 @@
+{
+  "n": 21,
+  "key": "021",
+  "title": "Origin of Silver Surfer",
+  "source": "The Incredible Hulk (1968) #414, Page 20",
+  "tokens": [
+    "Silver Surfer",
+    "Silver",
+    "Surfer"
+  ],
+  "page": 20,
+  "promo": false,
+  "status": "ok",
+  "candidates": [
+    {
+      "idx": 1,
+      "file": "01.jpg",
+      "wiki": "File:Borrob (Earth-616) from Silver Surfer Vol 3 116 cover 001.jpg",
+      "score": 68,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/a/af/Borrob_%28Earth-616%29_from_Silver_Surfer_Vol_3_116_cover_001.jpg/revision/latest?cb=20241105214806"
+    },
+    {
+      "idx": 2,
+      "file": "02.jpg",
+      "wiki": "File:Silver Surfer Rebirth Vol 1 1 Second Printing Variant Textless.jpg",
+      "score": 64,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/8/87/Silver_Surfer_Rebirth_Vol_1_1_Second_Printing_Variant_Textless.jpg/revision/latest?cb=20240423213426"
+    },
+    {
+      "idx": 3,
+      "file": "03.jpg",
+      "wiki": "File:Silver Surfer Rebirth Vol 1 4 Spider-Man Variant Textless.jpg",
+      "score": 64,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/1/18/Silver_Surfer_Rebirth_Vol_1_4_Spider-Man_Variant_Textless.jpg/revision/latest?cb=20240423205031"
+    },
+    {
+      "idx": 4,
+      "file": "04.jpg",
+      "wiki": "File:Silver Surfer The Best Defense Vol 1 1 Young Variant Textless.jpg",
+      "score": 64,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/9/91/Silver_Surfer_The_Best_Defense_Vol_1_1_Young_Variant_Textless.jpg/revision/latest?cb=20181124164349"
+    },
+    {
+      "idx": 5,
+      "file": "05.jpg",
+      "wiki": "File:Silver Surfer Vol 7 1 Baby Variant Textless.jpg",
+      "score": 64,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/c/c8/Silver_Surfer_Vol_7_1_Baby_Variant_Textless.jpg/revision/latest?cb=20140110183154"
+    },
+    {
+      "idx": 6,
+      "file": "06.jpg",
+      "wiki": "File:Silver Surfer Vol 8 1 Deadpool Variant Textless.jpg",
+      "score": 64,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/c/c3/Silver_Surfer_Vol_8_1_Deadpool_Variant_Textless.jpg/revision/latest?cb=20151212084232"
+    },
+    {
+      "idx": 7,
+      "file": "07.jpg",
+      "wiki": "File:Silver Surfer Vol 8 1 Hip-Hop Variant Textless.jpg",
+      "score": 64,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/6/66/Silver_Surfer_Vol_8_1_Hip-Hop_Variant_Textless.jpg/revision/latest?cb=20151012181216"
+    },
+    {
+      "idx": 8,
+      "file": "08.jpg",
+      "wiki": "File:Silver Surfer (Earth-18264) from Unlimited Access Vol 1 4 001.jpg",
+      "score": 60,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/a/a8/Silver_Surfer_%28Earth-18264%29_from_Unlimited_Access_Vol_1_4_001.jpg/revision/latest?cb=20200713051728"
+    },
+    {
+      "idx": 9,
+      "file": "09.jpg",
+      "wiki": "File:Death of the Silver Surfer Vol 1 1 Foil Variant.jpg",
+      "score": 54,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/c/cb/Death_of_the_Silver_Surfer_Vol_1_1_Foil_Variant.jpg/revision/latest/scale-to-width-down/1400?cb=20250613184609"
+    },
+    {
+      "idx": 10,
+      "file": "10.jpg",
+      "wiki": "File:Death of the Silver Surfer Vol 1 1 Moore Second Printing Variant.jpg",
+      "score": 54,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/c/cb/Death_of_the_Silver_Surfer_Vol_1_1_Moore_Second_Printing_Variant.jpg/revision/latest?cb=20250728183109"
+    }
+  ]
+}

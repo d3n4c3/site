@@ -1,0 +1,84 @@
+{
+  "n": 77,
+  "key": "077",
+  "title": "Hulk Reborn",
+  "source": "The Incredible Hulk (1968) #391, Page 19",
+  "tokens": [
+    "Hulk"
+  ],
+  "page": 19,
+  "promo": false,
+  "status": "ok",
+  "candidates": [
+    {
+      "idx": 1,
+      "file": "01.jpg",
+      "wiki": "File:391 (LMD) (Earth-616) from Hulk Vol 2 38 001.png",
+      "score": 32,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/3/3a/391_%28LMD%29_%28Earth-616%29_from_Hulk_Vol_2_38_001.png/revision/latest?cb=20260810073347"
+    },
+    {
+      "idx": 2,
+      "file": "02.jpg",
+      "wiki": "File:C. John Johnson (Earth-616) from Incredible Hulk Vol 2 55 001.jpg",
+      "score": 32,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/b/bb/C._John_Johnson_%28Earth-616%29_from_Incredible_Hulk_Vol_2_55_001.jpg/revision/latest?cb=20180224222127"
+    },
+    {
+      "idx": 3,
+      "file": "03.jpg",
+      "wiki": "File:David Guntly (Earth-616) from Incredible Hulk Vol 1 386 001.png",
+      "score": 32,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/a/ad/David_Guntly_%28Earth-616%29_from_Incredible_Hulk_Vol_1_386_001.png/revision/latest?cb=20231002073404"
+    },
+    {
+      "idx": 4,
+      "file": "04.jpg",
+      "wiki": "File:Excalibur Hotel and Casino (Earth-616) from Incredible Hulk Vol 1 395 001.png",
+      "score": 32,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/d/d9/Excalibur_Hotel_and_Casino_%28Earth-616%29_from_Incredible_Hulk_Vol_1_395_001.png/revision/latest?cb=20231001101352"
+    },
+    {
+      "idx": 5,
+      "file": "05.jpg",
+      "wiki": "File:Gammal (Earth-616) from Incredible Hulk Vol 1 391 001.png",
+      "score": 32,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/a/ab/Gammal_%28Earth-616%29_from_Incredible_Hulk_Vol_1_391_001.png/revision/latest?cb=20190210155425"
+    },
+    {
+      "idx": 6,
+      "file": "06.jpg",
+      "wiki": "File:Hank (Derrick Worker) (Earth-616) from Incredible Hulk Vol 2 50 001.png",
+      "score": 32,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/8/8d/Hank_%28Derrick_Worker%29_%28Earth-616%29_from_Incredible_Hulk_Vol_2_50_001.png/revision/latest?cb=20170603124919"
+    },
+    {
+      "idx": 7,
+      "file": "07.jpg",
+      "wiki": "File:Harry (Earth-616) from Incredible Hulk Vol 1 390 001.jpg",
+      "score": 32,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/8/84/Harry_%28Earth-616%29_from_Incredible_Hulk_Vol_1_390_001.jpg/revision/latest?cb=20211212102017"
+    },
+    {
+      "idx": 8,
+      "file": "08.jpg",
+      "wiki": "File:Jacqueline Shorr (Earth-616) from Incredible Hulk Vol 1 391 001.jpg",
+      "score": 32,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/6/6b/Jacqueline_Shorr_%28Earth-616%29_from_Incredible_Hulk_Vol_1_391_001.jpg/revision/latest?cb=20131215153012"
+    },
+    {
+      "idx": 9,
+      "file": "09.jpg",
+      "wiki": "File:Mark DePolna (Earth-616) from Incredible Hulk Vol 2 88 001.png",
+      "score": 32,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/9/97/Mark_DePolna_%28Earth-616%29_from_Incredible_Hulk_Vol_2_88_001.png/revision/latest?cb=20160818220301"
+    },
+    {
+      "idx": 10,
+      "file": "10.jpg",
+      "wiki": "File:Martin Bram (Earth-616) from The Incredible Hulk (1977 film) 001.jpg",
+      "score": 32,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/1/17/Martin_Bram_%28Earth-616%29_from_The_Incredible_Hulk_%281977_film%29_001.jpg/revision/latest?cb=20181015232102"
+    }
+  ]
+}

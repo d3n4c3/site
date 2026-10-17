@@ -1,0 +1,84 @@
+{
+  "n": 3,
+  "key": "003",
+  "title": "Origin of Spider-Man",
+  "source": "1992 Impel Amazing Spider-Man 30th Anniversary Card Set",
+  "tokens": [
+    "Spider-Man"
+  ],
+  "page": null,
+  "promo": true,
+  "status": "ok",
+  "candidates": [
+    {
+      "idx": 1,
+      "file": "01.jpg",
+      "wiki": "File:Abner Jenkins (Earth-616) Pin-Up from Amazing Spider-Man Annual Vol 1 2 0001.png",
+      "score": 32,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/5/51/Abner_Jenkins_%28Earth-616%29_Pin-Up_from_Amazing_Spider-Man_Annual_Vol_1_2_0001.png/revision/latest?cb=20210428224132"
+    },
+    {
+      "idx": 2,
+      "file": "02.jpg",
+      "wiki": "File:Benjamin Parker (Earth-616) from Spider-Man Heroes & Villains Collection (Trading Cards) 001.jpg",
+      "score": 32,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/7/71/Benjamin_Parker_%28Earth-616%29_from_Spider-Man_Heroes_%26_Villains_Collection_%28Trading_Cards%29_001.jpg/revision/latest?cb=20240619152118"
+    },
+    {
+      "idx": 3,
+      "file": "03.jpg",
+      "wiki": "File:Bruce Banner (Earth-616) and Peter Parker (Earth-616) from Spider-Man Team-Up (Trading Cards) 001.jpg",
+      "score": 32,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/8/86/Bruce_Banner_%28Earth-616%29_and_Peter_Parker_%28Earth-616%29_from_Spider-Man_Team-Up_%28Trading_Cards%29_001.jpg/revision/latest?cb=20160119053828"
+    },
+    {
+      "idx": 4,
+      "file": "04.jpg",
+      "wiki": "File:Curtis Connors (Earth-616) from Ultra Spider-Man (Trading Cards) Golden Web 001.jpg",
+      "score": 32,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/9/98/Curtis_Connors_%28Earth-616%29_from_Ultra_Spider-Man_%28Trading_Cards%29_Golden_Web_001.jpg/revision/latest?cb=20090922152711"
+    },
+    {
+      "idx": 5,
+      "file": "05.jpg",
+      "wiki": "File:Gray Garrison (Earth-616) from Ultra Spider-Man (Trading Cards) 1995 Set 001.jpg",
+      "score": 32,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/b/bb/Gray_Garrison_%28Earth-616%29_from_Ultra_Spider-Man_%28Trading_Cards%29_1995_Set_001.jpg/revision/latest?cb=20091212102514"
+    },
+    {
+      "idx": 6,
+      "file": "06.jpg",
+      "wiki": "File:Greer Nelson (Earth-616) from Spider-Man Team-Up (Trading Cards) 001.jpg",
+      "score": 32,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/2/24/Greer_Nelson_%28Earth-616%29_from_Spider-Man_Team-Up_%28Trading_Cards%29_001.jpg/revision/latest?cb=20160120013815"
+    },
+    {
+      "idx": 7,
+      "file": "07.jpg",
+      "wiki": "File:Herman Schultz (Earth-616) from Ultra Spider-Man (Trading Cards) Holoblast 1997 Series 001.jpg",
+      "score": 32,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/9/9c/Herman_Schultz_%28Earth-616%29_from_Ultra_Spider-Man_%28Trading_Cards%29_Holoblast_1997_Series_001.jpg/revision/latest?cb=20080102143554"
+    },
+    {
+      "idx": 8,
+      "file": "08.jpg",
+      "wiki": "File:Jason Macendale Jr. (Earth-616) from Spider-Man Premium - Eternal Evil (Trading Cards) 1996 001.jpg",
+      "score": 32,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/4/4b/Jason_Macendale_Jr._%28Earth-616%29_from_Spider-Man_Premium_-_Eternal_Evil_%28Trading_Cards%29_1996_001.jpg/revision/latest?cb=20080504163934"
+    },
+    {
+      "idx": 9,
+      "file": "09.jpg",
+      "wiki": "File:Judas Traveller (Earth-616) from Spider-Man Premium - Eternal Evil (Trading Cards) 001.jpg",
+      "score": 32,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/e/ed/Judas_Traveller_%28Earth-616%29_from_Spider-Man_Premium_-_Eternal_Evil_%28Trading_Cards%29_001.jpg/revision/latest?cb=20070911150221"
+    },
+    {
+      "idx": 10,
+      "file": "10.jpg",
+      "wiki": "File:Kurt Wagner (Earth-616) and Peter Parker (Earth-616) from Spider-Man Team-Up (Trading Cards) 001.jpg",
+      "score": 32,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/6/6c/Kurt_Wagner_%28Earth-616%29_and_Peter_Parker_%28Earth-616%29_from_Spider-Man_Team-Up_%28Trading_Cards%29_001.jpg/revision/latest?cb=20160119202952"
+    }
+  ]
+}

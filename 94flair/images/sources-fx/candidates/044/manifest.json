@@ -1,0 +1,84 @@
+{
+  "n": 44,
+  "key": "044",
+  "title": "Hobgoblin Appears",
+  "source": "Suspected unused in print, possibly shelved for a Web of Spider-Man Annual #3 pin-up. Used as a large 5' store stand-up display (1987)",
+  "tokens": [
+    "Hobgoblin"
+  ],
+  "page": null,
+  "promo": true,
+  "status": "ok",
+  "candidates": [
+    {
+      "idx": 1,
+      "file": "01.jpg",
+      "wiki": "File:Answer (Hobgoblin) (Earth-616) from Superior Spider-Man Vol 1 27.NOW 0001.jpg",
+      "score": 32,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/0/02/Answer_%28Hobgoblin%29_%28Earth-616%29_from_Superior_Spider-Man_Vol_1_27.NOW_0001.jpg/revision/latest?cb=20201101195017"
+    },
+    {
+      "idx": 2,
+      "file": "02.jpg",
+      "wiki": "File:Hobgoblin (Claude) (Earth-616) from Amazing Spider-Man Vol 2 697 001.png",
+      "score": 32,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/4/43/Hobgoblin_%28Claude%29_%28Earth-616%29_from_Amazing_Spider-Man_Vol_2_697_001.png/revision/latest?cb=20261004173324"
+    },
+    {
+      "idx": 3,
+      "file": "03.jpg",
+      "wiki": "File:Hobgoblin (Claude) (Earth-616) from Superior Spider-Man Vol 1 26 001.jpg",
+      "score": 32,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/e/e4/Hobgoblin_%28Claude%29_%28Earth-616%29_from_Superior_Spider-Man_Vol_1_26_001.jpg/revision/latest/scale-to-width-down/1400?cb=20200130053402"
+    },
+    {
+      "idx": 4,
+      "file": "04.jpg",
+      "wiki": "File:Hobgoblin (Imperial Guard) (Earth-616) from Inhumans Vol 3 3 001.jpg",
+      "score": 32,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/1/14/Hobgoblin_%28Imperial_Guard%29_%28Earth-616%29_from_Inhumans_Vol_3_3_001.jpg/revision/latest?cb=20190129033118"
+    },
+    {
+      "idx": 5,
+      "file": "05.jpg",
+      "wiki": "File:Hobgoblin (Kingpin's Impostor) (Earth-616) from Marvel Knights Spider-Man Vol 2 5 001.jpg",
+      "score": 32,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/c/c7/Hobgoblin_%28Kingpin%27s_Impostor%29_%28Earth-616%29_from_Marvel_Knights_Spider-Man_Vol_2_5_001.jpg/revision/latest?cb=20231026025645"
+    },
+    {
+      "idx": 6,
+      "file": "06.jpg",
+      "wiki": "File:Hobgoblin (Tsum Tsum) (Earth-616) from Marvel Tsum Tsum Vol 1 4 0001.jpg",
+      "score": 32,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/b/b3/Hobgoblin_%28Tsum_Tsum%29_%28Earth-616%29_from_Marvel_Tsum_Tsum_Vol_1_4_0001.jpg/revision/latest?cb=20180412011125"
+    },
+    {
+      "idx": 7,
+      "file": "07.jpg",
+      "wiki": "File:Roderick Kingsley (Earth-616) from AXIS Hobgoblin Vol 1 1 001.png",
+      "score": 32,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/d/d5/Roderick_Kingsley_%28Earth-616%29_from_AXIS_Hobgoblin_Vol_1_1_001.png/revision/latest?cb=20260510061043"
+    },
+    {
+      "idx": 8,
+      "file": "08.jpg",
+      "wiki": "File:AXIS Hobgoblin Vol 1 1 Textless.jpg",
+      "score": 28,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/1/1f/AXIS_Hobgoblin_Vol_1_1_Textless.jpg/revision/latest?cb=20140923195213"
+    },
+    {
+      "idx": 9,
+      "file": "09.jpg",
+      "wiki": "File:AXIS Hobgoblin Vol 1 2 Textless.jpg",
+      "score": 28,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/3/34/AXIS_Hobgoblin_Vol_1_2_Textless.jpg/revision/latest?cb=20140818225612"
+    },
+    {
+      "idx": 10,
+      "file": "10.jpg",
+      "wiki": "File:AXIS Hobgoblin Vol 1 3 Textless.jpg",
+      "score": 28,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/4/4c/AXIS_Hobgoblin_Vol_1_3_Textless.jpg/revision/latest?cb=20140915233606"
+    }
+  ]
+}

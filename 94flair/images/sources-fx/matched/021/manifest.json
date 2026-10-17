@@ -1,0 +1,51 @@
+{
+  "n": 21,
+  "key": "021",
+  "title": "Origin of Silver Surfer",
+  "source": "The Incredible Hulk (1968) #414, Page 20",
+  "artist": "Gary Frank",
+  "matches": [
+    {
+      "idx": 1,
+      "file": "01.jpg",
+      "score": 0.0765,
+      "kind": "wiki-candidate",
+      "label": "File:Death of the Silver Surfer Vol 1 1 Moore Second Printing Variant.jpg"
+    },
+    {
+      "idx": 2,
+      "file": "02.jpg",
+      "score": 0.0758,
+      "kind": "wiki-candidate",
+      "label": "File:Silver Surfer Rebirth Vol 1 4 Spider-Man Variant Textless.jpg"
+    },
+    {
+      "idx": 3,
+      "file": "03.jpg",
+      "score": 0.0666,
+      "kind": "wiki-candidate",
+      "label": "File:Death of the Silver Surfer Vol 1 1 Foil Variant.jpg"
+    },
+    {
+      "idx": 4,
+      "file": "04.jpg",
+      "score": 0.0428,
+      "kind": "wiki-candidate",
+      "label": "File:Silver Surfer Rebirth Vol 1 1 Second Printing Variant Textless.jpg"
+    },
+    {
+      "idx": 5,
+      "file": "05.jpg",
+      "score": 0.0379,
+      "kind": "wiki-candidate",
+      "label": "File:Silver Surfer The Best Defense Vol 1 1 Young Variant Textless.jpg"
+    },
+    {
+      "idx": 6,
+      "file": "06.jpg",
+      "score": 0.0352,
+      "kind": "wiki-candidate",
+      "label": "File:Silver Surfer Vol 7 1 Baby Variant Textless.jpg"
+    }
+  ]
+}

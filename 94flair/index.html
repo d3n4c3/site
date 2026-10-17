@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta name="x-flair-deploy" content="2026-10-16T22:48:46Z">
+<meta name="x-flair-deploy" content="2026-10-17T15:36:09Z">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>'94 Flair Presents the Marvel Universe &mdash; Masterset Checklist</title>
@@ -790,19 +790,54 @@
     cursor: pointer;
   }
   .viewer .v-card.flipped { transform: rotateY(180deg); }
+  .viewer .v-card.show-source { transform: rotateY(0deg); }
   /* Landscape backs: gold frame becomes landscape with the rotated art (not portrait-only). */
-  .viewer .v-card.landscape-back.flipped {
+  .viewer .v-card.landscape-back.flipped:not(.show-source) {
     --ar: 1.387533875; /* 1024/738 — landscape frame for rotated portrait scans */
     width: min(92vw, calc(70vh * var(--ar)), 1100px);
     max-height: 70vh;
   }
-  .viewer .v-card.no-back { cursor: default; }
+  .viewer .v-card.no-back:not(.has-source) { cursor: default; }
+  /* No overflow:hidden on faces — it breaks backface-visibility in Firefox (mirrored front on flip). */
   .viewer .v-face {
-    position: absolute; inset: 0; border-radius: 14px; overflow: hidden; backface-visibility: hidden; -webkit-backface-visibility: hidden;
+    position: absolute; inset: 0; border-radius: 14px;
+    backface-visibility: hidden; -webkit-backface-visibility: hidden;
+    transform-style: preserve-3d;
     background: #0b0910; box-shadow: 0 0 0 2px rgba(242, 199, 92, 0.7), 0 40px 80px rgba(0, 0, 0, 0.7), 0 0 120px rgba(227, 38, 47, 0.35);
   }
-  .viewer .v-face img { display: block; width: 100%; height: 100%; object-fit: contain; }
-  .viewer .v-back { transform: rotateY(180deg); }
+  .viewer .v-face img {
+    display: block; width: 100%; height: 100%; object-fit: contain; border-radius: 14px;
+    backface-visibility: hidden; -webkit-backface-visibility: hidden;
+  }
+  .viewer .v-front { transform: translateZ(1px); }
+  .viewer .v-back { transform: rotateY(180deg) translateZ(1px); }
+  .viewer .v-source {
+    transform: translateZ(2px);
+    visibility: hidden;
+    background: #100e16;
+  }
+  .viewer .v-card.show-source .v-source { visibility: visible; }
+  .viewer .v-card.show-source .v-front,
+  .viewer .v-card.show-source .v-back { visibility: hidden; }
+  .viewer .v-source .v-source-stage {
+    position: absolute; inset: 0; overflow: hidden; border-radius: 14px;
+    display: grid; place-items: center; cursor: pointer;
+  }
+  .viewer .v-source img {
+    width: 100%; height: 100%; object-fit: contain;
+  }
+  .viewer .v-source .v-source-badge {
+    position: absolute; left: 12px; top: 12px; z-index: 2;
+    padding: 5px 10px; border-radius: 99px;
+    background: rgba(8, 6, 14, 0.78); border: 1px solid rgba(242, 199, 92, 0.45);
+    font-family: "Oswald", sans-serif; font-size: 10px; letter-spacing: .14em;
+    text-transform: uppercase; color: var(--gold-1);
+  }
+  /* Firefox fallback: force the hidden face off once the flip class is set. */
+  @supports (-moz-appearance: none) {
+    .viewer .v-card.flipped:not(.show-source) .v-front { visibility: hidden; }
+    .viewer .v-card:not(.flipped):not(.show-source) .v-back { visibility: hidden; }
+  }
   /* Portrait scans of landscape backs: size the img to the swapped box, then rotate flush to the frame.
      (rotate + fixed scale with object-fit:contain left letterbox gaps inside the gold border.) */
   .viewer .v-card.landscape-back.flipped .v-back img.landscape {
@@ -814,6 +849,15 @@
     object-fit: cover;
     transform: translate(-50%, -50%) rotate(90deg);
     transform-origin: center center;
+  }
+  /* Native landscape back files (Drive pack): already readable; fill the landscape frame, no rotate. */
+  .viewer .v-card.landscape-back.flipped .v-back img.landscape-native {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: none;
   }
   .viewer .v-blank {
     height: 100%; display: grid; place-items: center; padding: 12%; text-align: center;
@@ -834,6 +878,11 @@
   .viewer .v-label { font-family: "Oswald", sans-serif; letter-spacing: .18em; text-transform: uppercase; font-size: 12px; color: var(--gold-2); }
   .viewer .v-name { font-family: "Anton", sans-serif; font-size: 26px; letter-spacing: .02em; text-transform: uppercase; line-height: 1.1; }
   .viewer .v-hint { margin-top: 4px; font-size: 12px; color: var(--muted); }
+  .viewer .v-source-credit {
+    margin-top: 6px; font-size: 12px; color: var(--gold-1); line-height: 1.35;
+    max-width: min(640px, 90vw);
+  }
+  .viewer .v-source-credit:empty { display: none; }
   .viewer button { cursor: pointer; font: inherit; color: var(--text); }
   .viewer .v-close, .viewer .v-nav {
     position: absolute; display: grid; place-items: center; border-radius: 50%;
@@ -1383,12 +1432,10 @@
     .note-inline { border-top-color: #eadfbf; }
     .note-inline b { color: #c1121f; }
     .banner, .sub-h, .spec header { break-after: avoid; page-break-after: avoid; }
-    .note-card, .tl, .sheet, .fact, .tell, .compare, .promo-facts, .timeline {
+    /* Avoid mid-item splits; let dense promo grids and the timeline paginate. */
+    .note-card, .tl, .sheet, .fact, .tell, .compare, .promo-facts {
       break-inside: avoid; page-break-inside: avoid;
     }
-    /* Keep each major promo/ads chunk from splitting mid-block */
-    #promos .split, #promos .sheets { break-inside: avoid; page-break-inside: avoid; }
-    #print .timeline { break-after: avoid; page-break-after: avoid; }
     footer {
       border-top: 2px solid #e3262f; padding: 10px 0 0; margin-top: 14px;
       font-size: 8px; color: #666;
@@ -1431,7 +1478,7 @@
       <span class="chip"><b>18</b>Powerblast Chase</span>
       <span class="chip"><b>10</b>Flairprints</span>
       <span class="chip"><b>5</b>Binder Inserts</span>
-      <span class="chip"><b>14</b>Promos &amp; Sheets</span>
+      <span class="chip"><b>17</b>Promos &amp; Sheets</span>
       <span class="chip"><b>3</b>Print Ads</span>
     </div>
     <div class="chips" style="margin-top:10px">
@@ -1507,7 +1554,7 @@
       </div>
     </div>
     <div class="print-facts">
-      <div><b>Set</b> 150 base &middot; 18 Powerblast &middot; 10 Flairprints &middot; 5 binder &middot; 14 promos/sheets &middot; 3 ads</div>
+      <div><b>Set</b> 150 base &middot; 18 Powerblast &middot; 10 Flairprints &middot; 5 binder &middot; 17 promos/sheets &middot; 3 ads</div>
       <div><b>Box</b> 24&times;10 &middot; PB 1:2 &middot; Flairprints 1/case &middot; ~1.52 sets/box &middot; Covers: Venom, Magneto, Cyclops, Wolverine</div>
       <div><b>Notes</b> No #6 &middot; Iron Man as second #8 &middot; Binders in sealed &rsquo;95 Ultra X-Men (2&ndash;3 each)</div>
     </div>
@@ -1594,11 +1641,11 @@
         <h2><span class="foil-text">Promos &amp; Uncut Sheets</span></h2>
         <p>Pre-release and distributor material that never came in packs: promo Flairprints, the 4-card sheets bundled with comic magazines, and the nine 9-card uncut sheets from Fleer's press kits.</p>
       </div>
-      <div class="count"><div class="big" data-count="promos">0<span>/14</span></div><div class="meter"><i data-meter="promos"></i></div></div>
+      <div class="count"><div class="big" data-count="promos">0<span>/17</span></div><div class="meter"><i data-meter="promos"></i></div></div>
     </div>
     <div class="facts promo-facts">
-      <div class="fact"><b>2</b><span>Promo Flairprints from comic distributors</span></div>
-      <div class="fact"><b>2 + 1</b><span>4-card sheet variants, plus one unreleased sheet</span></div>
+      <div class="fact"><b>4</b><span>Promo Flairprints (two Deadpool, two Omega Red vs. Wolverine)</span></div>
+      <div class="fact"><b>3 + 1</b><span>4-card sheet variants, plus one unreleased sheet</span></div>
       <div class="fact"><b>9</b><span>9-card uncut sheets from the 1994 press kits, with rows of 3 that repeat across sheets</span></div>
     </div>
     <div class="split">
@@ -1609,7 +1656,7 @@
       </div>
       <div>
         <h3 class="sub-h">4-Card Uncut Sheets <span class="tag">Jun&ndash;Jul 1994</span></h3>
-        <p class="sub-note">Double-sided 5&Prime; &times; 7&Prime; panels. Released versions: front has the Flair logo, Bone Claws, Phoenix, Maximum Carnage. Back has Bodyslide, Spider-Man 2099, Thunderstrike, New Ghost Rider. They came bundled with comic magazines (see <a href="#print" style="color:var(--gold-2)">Ads &amp; Magazines</a>). The gold-foil etched version is reported as the Wizard #35 insert. The other magazine and variant pairings are unknown.</p>
+        <p class="sub-note">Double-sided 5&Prime; &times; 7&Prime; panels. Released versions: front has the Flair logo, Bone Claws, Phoenix, Maximum Carnage. Back has Bodyslide, Spider-Man 2099, Thunderstrike, New Ghost Rider. Title-card text differs across the three released fronts (&quot;Ships June 1994&quot; sticker, foil-etched, and &quot;The Ultimate Collectable&quot;). They came bundled with comic magazines (see <a href="#print" style="color:var(--gold-2)">Ads &amp; Magazines</a>). The gold-foil etched version is reported as the Wizard #35 insert. The other magazine and variant pairings are unknown.</p>
         <div class="grid" id="grid-four"></div>
       </div>
     </div>
@@ -1633,9 +1680,9 @@
     <div class="timeline" role="list">
       <div class="tl" role="listitem"><div class="when">May 1994</div><span class="kind">Comic &amp; Magazine Ads</span><p>Comic ad appears in <b>Fantastic Four #388</b>. Glossy magazine ad also shows up in <b>Tuff Stuff's Collect!</b> (May).</p></div>
       <div class="tl" role="listitem"><div class="when">June 1994</div><span class="kind">Comic Ad</span><p>Comic ad in <b>Fantastic Four Unlimited #6</b>, <b>Amazing Spider-Man #390</b>, and <b>The Punisher #91</b>.</p></div>
-      <div class="tl red" role="listitem"><div class="when">June 1994</div><span class="kind">Magazine Insert</span><p>A 4-card sheet comes with <b>Tuff Stuff's Collect!</b>. Two sheet versions are marked "Ships June 1994".</p></div>
-      <div class="tl red" role="listitem"><div class="when">Jun 11&ndash;14, 1994</div><span class="kind">Retailer Promo</span><p>Diamond's <b>Omega Red vs. Wolverine</b> Flairprint is handed out at the Annual Retailer Seminar in Baltimore.</p></div>
-      <div class="tl red" role="listitem"><div class="when">1994 &middot; Heroes World Con</div><span class="kind">Retailer Promo</span><p>Heroes World's <b>Deadpool</b> Flairprint is handed out at Heroes World Con (nslists). 6&frac12;&Prime; &times; 10&Prime;, blank back except for a barcode.</p></div>
+      <div class="tl red" role="listitem"><div class="when">June 1994</div><span class="kind">Magazine Insert</span><p>A 4-card sheet comes with <b>Tuff Stuff's Collect!</b>. Released fronts: "Ships June 1994" (sticker or foil) and "The Ultimate Collectable".</p></div>
+      <div class="tl red" role="listitem"><div class="when">Jun 11&ndash;14, 1994</div><span class="kind">Retailer Promo</span><p>Diamond's <b>Omega Red vs. Wolverine</b> Flairprint is handed out at the Annual Retailer Seminar in Baltimore. A second Omega Red Flairprint has no distributor named.</p></div>
+      <div class="tl red" role="listitem"><div class="when">1994 &middot; Heroes World Con</div><span class="kind">Retailer Promo</span><p>Heroes World's <b>Deadpool</b> Flairprint (Special Sales Conference seal) is handed out at Heroes World Con (nslists). A second Deadpool Flairprint has no distributor seal. 6&frac12;&Prime; &times; 10&Prime;, blank back except for a barcode.</p></div>
       <div class="tl" role="listitem"><div class="when">July 1994</div><span class="kind">Magazine Ads</span><p>Glossy Inaugural Edition ad and the FlairPrints ad run in <b>Tuff Stuff's Collect!</b>; FlairPrints also in <b>Hero Illustrated #13</b>. Magazine ad also in <b>Cards Illustrated #7</b>.</p></div>
       <div class="tl red" role="listitem"><div class="when">July 1994</div><span class="kind">Magazine Inserts</span><p>4-card sheets bundled with <b>Wizard #35</b>, <b>Advance Comics #67</b>, and <b>Marvel Age #138</b>.</p></div>
       <div class="tl" role="listitem"><div class="when">July&ndash;Sept 1994</div><span class="kind">Comic Ad</span><p>Comic ad continues in titles like <b>Spectacular Spider-Man #214</b>, <b>X-Men #33</b>, <b>X-Factor #103</b>, <b>Blackwulf #2</b>, <b>Northstar #3</b>, and <b>Excalibur #78</b>.</p></div>
@@ -1686,12 +1733,12 @@
       </div>
       <div class="note-card">
         <h4>4-Card Sheet Variants</h4>
-        <p>Two known variants: "Ships June 1994" in white letters etched in gold foil, and the same text in black on a gold paste-on sticker. Bundled with Wizard #35, Advance Comics #67, Marvel Age #138 (all Jul 1994), and Tuff Stuff's Collect! (Jun 1994).</p>
-        <p>An unreleased sheet (Gambit &amp; Rogue, Infinity Crusade, Maximum Carnage, Bone Claws) turned up on eBay — no front text; back fourth bullet says "presents" instead of "present," headed "The Ultimate Collectable."</p>
+        <p>Three released fronts share the same card lineup: "Ships June 1994" in white letters etched in gold foil, the same text in black on a gold paste-on sticker, and a third title card that reads "The Ultimate Collectable" instead. Bundled with Wizard #35, Advance Comics #67, Marvel Age #138 (all Jul 1994), and Tuff Stuff's Collect! (Jun 1994).</p>
+        <p>A separate unreleased sheet (Gambit &amp; Rogue, Infinity Crusade, Maximum Carnage, Bone Claws) turned up on eBay — no text on the front; back fourth bullet says "presents" instead of "present." Its back is also headed "The Ultimate Collectable," which is why that title sometimes gets confused with the released title-card variant.</p>
       </div>
       <div class="note-card">
         <h4>Promos &amp; Binder Cards</h4>
-        <p>Diamond's Omega Red vs. Wolverine Flairprint: Annual Retailer Seminar, Baltimore, June 11&ndash;14, 1994. Deadpool Flairprint: Heroes World Con 1994 (nslists; no published day range).</p>
+        <p>Two Deadpool Flairprints: one with the Heroes World / Special Sales Conference seal (Heroes World Con 1994, nslists; no published day range), and one without distributor branding. Two Omega Red vs. Wolverine Flairprints: a general promo with no distributor named, and Diamond's Annual Retailer Seminar piece (Baltimore, June 11&ndash;14, 1994).</p>
         <p>Binder inserts are oversized like Flairprints: Powerblast art without metallic finish, no Flair '94 logo/title, blank backs. Spider-Man binder verified in sealed <b>'95 Fleer Ultra X-Men</b> binders (2&ndash;3 per binder); some may also have been issued promotionally. Exact release timing isn't locked down.</p>
       </div>
       <div class="note-card wide">
@@ -1732,15 +1779,16 @@
       </div>
       <div class="note-card wide">
         <h4>About the Art Credits</h4>
-        <p>Most Flair cards reuse existing comic art, repainted for the set. Each card lists its front title, source, and artist. Blank credits aren't identified yet. Research by <a href="https://www.instagram.com/exotechktx/" target="_blank" rel="noopener" style="color:var(--gold-2)">@exotechktx</a>. Advanced research by <a href="https://d3n4c3.com/" target="_blank" rel="noopener" style="color:var(--gold-2)">d3n4c3</a>.</p>
-        <p>Likely unused in print: #10 Xavier, #42 Elektra, #44 Hobgoblin, #85 Bishop, Powerblast #5 Phoenix. #124 Bloodhawk source unconfirmed.</p>
+        <p>Most Flair cards reuse existing comic art, repainted for the set. Each card lists its front title, source, and artist. Only four cards still have unaccounted credits — everything else has a source. Card art and credit research by <a href="https://www.instagram.com/exotechktx/" target="_blank" rel="noopener" style="color:var(--gold-2)">@exotechktx</a>.</p>
+        <p>In the card viewer, flip past the back to see the original comic art when we have it — taken from <a href="https://www.instagram.com/exotechktx/" target="_blank" rel="noopener" style="color:var(--gold-2)">@exotechktx</a>'s Instagram source posts. His Instagram has source posts for base #100–150 and all Power Blast cards so far (he’s posting downward through the set — newest is #100). #001–099 aren’t up yet; they’ll get wired as he posts them.</p>
+        <p>Still unaccounted: #37 Black Cat, #44 Hobgoblin, #85 Bishop, and Powerblast #5 Phoenix. In-house sketch sources: #10 Xavier (Ron Lim), #42 Elektra (Frank Miller).</p>
       </div>
     </div>
   </section>
 </main>
 
 <footer>
-  <span>Checklist data from <a href="https://abs-cards.net/checklists/94flair.html" target="_blank" rel="noopener">abs-cards.net</a>. Source and artist credits researched by <a href="https://www.instagram.com/exotechktx/" target="_blank" rel="noopener">@exotechktx</a>. Advanced research by <a href="https://d3n4c3.com/" target="_blank" rel="noopener">d3n4c3</a>. Promo sizes from <a href="https://nslists.com/mrvfla94.htm" target="_blank" rel="noopener">nslists.com</a>. Comic and magazine ad appearances from the <a href="https://www.comics.org" target="_blank" rel="noopener">Grand Comics Database</a> and period copies. Marvel characters &copy; Marvel. This is a fan-made collector tool.</span>
+  <span>Checklist data from <a href="https://abs-cards.net/checklists/94flair.html" target="_blank" rel="noopener">abs-cards.net</a>. Card art provided by <a href="https://www.instagram.com/exotechktx/" target="_blank" rel="noopener">@exotechktx</a>. Source and artist credits researched by <a href="https://www.instagram.com/exotechktx/" target="_blank" rel="noopener">@exotechktx</a>. Promo sizes from <a href="https://nslists.com/mrvfla94.htm" target="_blank" rel="noopener">nslists.com</a>. Comic and magazine ad appearances from the <a href="https://www.comics.org" target="_blank" rel="noopener">Grand Comics Database</a> and period copies. Marvel characters &copy; Marvel. This is a fan-made collector tool.</span>
   <span id="savedAt"></span>
 </footer>
 
@@ -1753,11 +1801,16 @@
     <div class="v-card" id="vCard" title="Click to flip">
       <div class="v-face v-front"><img alt=""></div>
       <div class="v-face v-back"></div>
+      <div class="v-face v-source">
+        <div class="v-source-badge">Original art</div>
+        <div class="v-source-stage" id="vSourceStage"><img alt=""></div>
+      </div>
     </div>
     <figcaption>
       <div class="v-label" id="vLabel"></div>
       <div class="v-name" id="vName"></div>
       <div class="v-hint" id="vHint"></div>
+      <div class="v-source-credit" id="vSourceCredit"></div>
     </figcaption>
     <button class="v-flip" id="vFlip">Flip card</button>
   </figure>
@@ -1809,7 +1862,7 @@ const CREDITS = [
   ["Hulk -vs- Thing", "Fantastic Four Unlimited (1993) #4, Cover", "Herb Trimpe"],
   ["Origin of Vulture", "The Spectacular Spider-Man (1976) #188, Cover", "Sal Buscema"],
   ["Origin of Doc Ock", "Lethal Foes of Spider-Man (1994) #3, Page 2", "Keith Pollard; David Boller"],
-  ["Origin of The X-Men", "In-house art; suspected unused in print. Used as X-Men playing cards (1994), store counter standee (1995), and X-Men magnets (1996)", "Ron Lim"],
+  ["Origin of The X-Men", "In-house sketches by Ron Lim. Also used as X-Men playing cards (1994), store counter standee (1995), and X-Men magnets (1996)", "Ron Lim"],
   ["Avengers Assemble", "The Avengers (1963) Annual #20, Page 56", "Mike Mignola"],
   ["Origin of Dr. Strange", "Marvel Treasury Edition (1974) #6, Page 57", "Frank Brunner"],
   ["Brotherhood of Evil Mutants", "The Avengers (1963) #75, Cover", "John Buscema"],
@@ -1841,7 +1894,7 @@ const CREDITS = [
   ["Origin of She-Hulk", "The Sensational She-Hulk #1, Cover", "John Byrne"],
   ["Origin of Moon Knight", "Marc Spector: Moon Knight (1989) #56, Cover", "Stephen Platt"],
   ["Days of Future Past", "X-Men Adventures (1992) #1, Page 12", "Andrew Wildman"],
-  ["Elektra Appears", "Suspected unused in print. Not yet found in other media. Part of 4-figure sketches by Frank Miller.", "Frank Miller"],
+  ["Elektra Appears", "In-house sketches by Frank Miller", "Frank Miller"],
   ["Death of Elektra", "Daredevil: The Man Without Fear (1964) #182, Cover", "Frank Miller"],
   ["Hobgoblin Appears", "Suspected unused in print, possibly shelved for a Web of Spider-Man Annual #3 pin-up. Used as a large 5' store stand-up display (1987)", ""],
   ["Origin of Alpha Flight", "Alpha Flight (1983) #128, Page 13", "Dario Carrasco Jr."],
@@ -1923,7 +1976,7 @@ const CREDITS = [
   ["Xavier vs. Magneto", "The Uncanny X-Men (1963) #304, Page 41", "John Romita Jr."],
   ["X-Man No More", "The Uncanny X-Men (1963) #304, Page 40", "John Romita Jr."],
   ["Exodus Appears", "X-Factor (1986) #92, Page 14", "Joe Quesada"],
-  ["Origin of X-Men 2099", "X-Men 2099 (1993) #3, Page 2 (unconfirmed)", ""],
+  ["Origin of X-Men 2099", "1994 Marvel Universe", ""],
   ["Return of Zarathos", "Ghost Rider & Blaze: Spirits of Vengeance #16, Page 1", "Henry Martinez"],
   ["Mr. Fantastic vs. Dr. Doom", "Fantastic Four (1963) #381, Page 22", "Paul Ryan"],
   ["The Return of Centurious", "Ghost Rider (1990) #43, Cover", "Ron Garney"],
@@ -1983,7 +2036,9 @@ const FLAIRPRINTS = [["Cable", 1], ["Cyclops", 2], ["Ghost Rider", 9], ["Iron Ma
 const BINDER = [["Captain America", 11], ["Gambit", 12], ["Thor", 13], ["Silver Surfer", 14], ["Spider-Man", 15]];
 
 const PROMOS = [
-  ["Deadpool Flairprint", "Heroes World Distribution. 6\u00bd\u2033 \u00d7 10\u2033. Handed out at Heroes World Con, 1994. Logo in the lower right; blank back except for a barcode."],
+  ["Deadpool Flairprint", "Heroes World Distribution. 6\u00bd\u2033 \u00d7 10\u2033. Handed out at Heroes World Con, 1994. Special Sales Conference seal in the lower right; blank back except for a barcode."],
+  ["Deadpool Flairprint", "General promo, no distributor seal. Same art and size; blank back except for a barcode."],
+  ["Omega Red vs. Wolverine Flairprint", "General promo, no distributor named"],
   ["Omega Red vs. Wolverine Flairprint", "Diamond Comic Distributors. Blank back. Handed out at Diamond's Annual Retailer Seminar in Baltimore, June 11\u201314, 1994"]
 ];
 
@@ -2036,6 +2091,7 @@ const AD_MAGS = [
 const FOUR_CARD = [
   ["\"Ships June 1994\" \u2014 Gold Sticker", "Black text on gold paste-on sticker"],
   ["\"Ships June 1994\" \u2014 Foil Etched", "White text etched in gold foil"],
+  ["\"The Ultimate Collectable\" Title Card", "Released front variant; same Flair logo / Bone Claws / Phoenix / Maximum Carnage lineup as the Ships June sheets"],
   ["Unreleased 4-Card Sheet", "Gambit & Rogue, Infinity Crusade, Maximum Carnage, Bone Claws. No text on the front; card back reads \"presents\" instead of \"present\" (4th bullet). Surfaced on eBay."]
 ];
 const FOUR_CARD_CONTENTS = "Front: Flair logo, Bone Claws, Phoenix, Maximum Carnage. Back: Bodyslide, Spider-Man 2099, Thunderstrike, New Ghost Rider";
@@ -2054,14 +2110,32 @@ const NINE_CARD = [
 
 const STORE_KEY = "flair94-checklist-v1";
 let owned = new Set(JSON.parse(localStorage.getItem(STORE_KEY) || "[]"));
-// "The Ultimate Collectable" (old u4-3) was the unreleased sheet (old u4-4), now u4-3.
-if (owned.delete("u4-4")) owned.add("u4-3");
-// Dropped phantom "general promo" Omega Red Flairprint (old pr2). Diamond Seminar was pr3, now pr2.
+// Promo Flairprints restored to four entries.
+// A (original): pr1 Deadpool HW, pr2 Omega general, pr3 Diamond
+// B (after phantom-drop): pr1 Deadpool HW, pr2 Diamond
+// C (now): pr1 Deadpool HW, pr2 Deadpool general, pr3 Omega general, pr4 Diamond
 {
-  const hadDiamond = owned.has("pr3");
+  const pr2 = owned.has("pr2");
+  const pr3 = owned.has("pr3");
+  const pr4 = owned.has("pr4");
   owned.delete("pr2");
   owned.delete("pr3");
-  if (hadDiamond) owned.add("pr2");
+  owned.delete("pr4");
+  if (pr4) {
+    owned.add("pr4");
+    if (pr3) owned.add("pr3");
+    if (pr2) owned.add("pr2");
+  } else if (pr3) {
+    if (pr2) owned.add("pr3");
+    owned.add("pr4");
+  } else if (pr2) {
+    owned.add("pr4");
+  }
+}
+// Unreleased teaser was parked at u4-3 while Ultimate Collectable was missing; move it to u4-4.
+if (owned.has("u4-3") && !owned.has("u4-4")) {
+  owned.delete("u4-3");
+  owned.add("u4-4");
 }
 // Comics and magazines used to be checklist items; they're reference only now.
 [...owned].filter(id => /^(ad|mg|ma)\d+$/.test(id)).forEach(id => owned.delete(id));
@@ -2086,28 +2160,173 @@ const printSrc = name => `${artDir.replace("cards", "print")}/${name}.jpg`;
 const thumbOf = src => src.replace(/images\/(.+)-fx\/hd\//, "images/thumbs/$1/");
 // Powerblast backs not photographed yet
 const PB_BACK_MISSING = new Set([]);
-// Card backs designed to be read landscape (stored as portrait scans with sideways text).
+// Card backs designed to be read landscape (#1–134). New Drive scans are native landscape
+// files; older portrait-sideways scans still get a CSS rotate via img.landscape.
 const landscapeBaseBack = n => n >= 1 && n <= 134;
 
 // Promo art, keyed by tile id: [file in promo-fx, caption]
 const PROMO_ART = {
-  pr1: ["deadpool-flairprint"],
-  pr2: ["omega-red-wolverine", "Diamond Annual Retailer Seminar Flairprint"],
+  pr1: ["deadpool-flairprint", "Heroes World / Special Sales Conference seal"],
+  pr2: ["deadpool-flairprint-general", "No distributor seal"],
+  pr3: ["omega-red-wolverine-general", "General promo Flairprint"],
+  pr4: ["omega-red-wolverine", "Diamond Annual Retailer Seminar Flairprint"],
   "u4-1": ["sheet4-sticker", "Front shown: the gold \"Ships June 1994\" title card"],
   "u4-2": ["sheet4-foil", "Front shown: the gold-foil etched title card"],
-  "u4-3": ["sheet4-unreleased"],
-  "u9-1": ["sheet9-1", "Panel layout from base card scans"],
-  "u9-2": ["sheet9-2", "Photographed promo panel"],
-  "u9-3": ["sheet9-3", "Panel layout from base card scans"],
-  "u9-4": ["sheet9-4", "Panel layout from base card scans"],
-  "u9-5": ["sheet9-5", "Panel layout from base card scans"],
-  "u9-6": ["sheet9-6", "Panel layout from base card scans"],
-  "u9-7": ["sheet9-7", "Panel layout from base card scans"],
-  "u9-8": ["sheet9-8", "Panel layout from base card scans"],
-  "u9-9": ["sheet9-9", "Panel layout from base card scans"]
+  "u4-3": ["sheet4-ultimate", "Front shown: \"The Ultimate Collectable\" title card"],
+  "u4-4": ["sheet4-unreleased"],
+  "u9-1": ["sheet9-1", "Front: panel layout from base card scans"],
+  "u9-2": ["sheet9-2", "Front: photographed promo panel"],
+  "u9-3": ["sheet9-3", "Front: panel layout from base card scans"],
+  "u9-4": ["sheet9-4", "Front: panel layout from base card scans"],
+  "u9-5": ["sheet9-5", "Front: panel layout from base card scans"],
+  "u9-6": ["sheet9-6", "Front: panel layout from base card scans"],
+  "u9-7": ["sheet9-7", "Front: panel layout from base card scans"],
+  "u9-8": ["sheet9-8", "Front: panel layout from base card scans"],
+  "u9-9": ["sheet9-9", "Front: panel layout from base card scans"]
 };
-// Shared back for the two released 4-card sheets (sticker + foil).
+// Shared back for the three released 4-card sheets (sticker, foil, Ultimate Collectable).
 const SHEET4_RELEASED_BACK = "sheet4-released-back";
+
+// Original comic art for the viewer's third face (@exotechktx crops + approved #001–099 covers).
+// Keys: zero-padded base card ("001") or Powerblast ("pb05").
+const SOURCE_ART = {
+  "001": { file: "001.jpg", comic: "001-comic.jpg", credit: "Fantastic Four Unlimited (1993) #1, Cover" },
+  "002": { file: "002.jpg", comic: "002-comic.jpg", credit: "The Incredible Hulk (1968) #393, Cover" },
+  "004": { file: "004.jpg", comic: "004-comic.jpg", credit: "Journey Into Mystery (1952) #89, Cover" },
+  "006": { file: "006.jpg", comic: "006-comic.jpg", credit: "Tales of Suspense (1959) #39, Page 1" },
+  "007": { file: "007.jpg", comic: "007-comic.jpg", credit: "Fantastic Four Unlimited (1993) #4, Cover" },
+  "008": { file: "008.jpg", comic: "008-comic.jpg", credit: "The Spectacular Spider-Man (1976) #188, Cover" },
+  "009": { file: "009.jpg", comic: "009-comic.jpg", credit: "Lethal Foes of Spider-Man (1994) #3, Page 2" },
+  "010": { file: "010.jpg", credit: "In-house sketches by Ron Lim. Also used as X-Men playing cards (1994), store counter standee (1995), and X-Men magnets (1996)" },
+  "012": { file: "012.jpg", comic: "012-comic.jpg", credit: "Marvel Treasury Edition (1974) #6, Page 57" },
+  "013": { file: "013.jpg", comic: "013-comic.jpg", credit: "The Avengers (1963) #75, Cover" },
+  "015": { file: "015.jpg", comic: "015-comic.jpg", credit: "The Amazing Spider-Man (1963) #20, Cover" },
+  "016": { file: "016.jpg", comic: "016-comic.jpg", credit: "Captain America #111, Cover" },
+  "017": { file: "017.jpg", comic: "017-comic.jpg", credit: "Daredevil: The Man Without Fear (1964) #7, Cover" },
+  "018": { file: "018.jpg", comic: "018-comic.jpg", credit: "Fantastic Four (1963) #375, Cover" },
+  "019": { file: "019.jpg", comic: "019-comic.jpg", credit: "Uncanny X-Men (1963) #140, Cover" },
+  "020": { file: "020.jpg", comic: "020-comic.jpg", credit: "Fantastic Four (1961) #48, Page 21" },
+  "022": { file: "022.jpg", comic: "022-comic.jpg", credit: "The Amazing Spider-Man (1963) #39, Cover" },
+  "023": { file: "023.jpg", comic: "023-comic.jpg", credit: "The Amazing Spider-Man (1963) #43, Cover" },
+  "024": { file: "024.jpg", comic: "024-comic.jpg", credit: "Marvel Swimsuit Issue (1992) #2, Page 17" },
+  "026": { file: "026.jpg", comic: "026-comic.jpg", credit: "The Warlock Chronicles (1993) #1, Cover" },
+  "027": { file: "027.jpg", comic: "027-comic.jpg", credit: "The Avengers (1963) #57, Cover" },
+  "030": { file: "030.jpg", comic: "030-comic.jpg", credit: "The Original Ghost Rider (1992) #8, Cover" },
+  "034": { file: "034.jpg", comic: "034-comic.jpg", credit: "The Incredible Hulk (1968) #340, Cover" },
+  "036": { file: "036.jpg", comic: "036-comic.jpg", credit: "The Invaders (1993) #1, Cover" },
+  "038": { file: "038.jpg", comic: "038-comic.jpg", credit: "The Uncanny X-Men (1963) #281, Page 6" },
+  "039": { file: "039.jpg", comic: "039-comic.jpg", credit: "The Sensational She-Hulk #1, Cover" },
+  "040": { file: "040.jpg", comic: "040-comic.jpg", credit: "Marc Spector: Moon Knight (1989) #56, Cover" },
+  "042": { file: "042.jpg", credit: "In-house sketches by Frank Miller" },
+  "043": { file: "043.jpg", comic: "043-comic.jpg", credit: "Daredevil: The Man Without Fear (1964) #182, Cover" },
+  "045": { file: "045.jpg", credit: "Alpha Flight (1983) #128, Page 13" },
+  "046": { file: "046.jpg", comic: "046-comic.jpg", credit: "Thor (1966) #339, Page 20" },
+  "047": { file: "047.jpg", comic: "047-comic.jpg", credit: "The Fantastic Four (1963) #262, Page 8" },
+  "048": { file: "048.jpg", comic: "048-comic.jpg", credit: "Marvel Tales (1964) #266, Cover" },
+  "049": { file: "049.jpg", comic: "049-comic.jpg", credit: "Marvel Tales (1964) #271, Cover" },
+  "050": { file: "050.jpg", comic: "050-comic.jpg", credit: "Silver Sable and the Wild Pack (1992) #17, Cover" },
+  "053": { file: "053.jpg", comic: "053-comic.jpg", credit: "The Uncanny X-Men (1963) #213, Cover" },
+  "055": { file: "055.jpg", comic: "055-comic.jpg", credit: "X-Factor (1988) #24, Page 16" },
+  "060": { file: "060.jpg", comic: "060-comic.jpg", credit: "The Spectacular Spider-Man (1976) #206, Cover" },
+  "063": { file: "063.jpg", comic: "063-comic.jpg", credit: "The Fantastic Four (1963) #348, Cover" },
+  "068": { file: "068.jpg", comic: "068-comic.jpg", credit: "Nomad (1990) #1, Cover" },
+  "069": { file: "069.jpg", credit: "The Thanos Quest (1990) #1, Page 48" },
+  "074": { file: "074.jpg", comic: "074-comic.jpg", credit: "The New Mutants (1983) #93, Cover" },
+  "079": { file: "079.jpg", comic: "079-comic.jpg", credit: "X-Force (1991) Annual #1, Cover" },
+  "080": { file: "080.jpg", comic: "080-comic.jpg", credit: "The New Mutants (1983) #100, Cover" },
+  "082": { file: "082.jpg", comic: "082-comic.jpg", credit: "X-Factor (1986) #66, Cover" },
+  "083": { file: "083.jpg", comic: "083-comic.jpg", credit: "X-Factor (1986) #71, Cover" },
+  "084": { file: "084.jpg", comic: "084-comic.jpg", credit: "The Uncanny X-Men (1963) #300, Cover" },
+  "086": { file: "086.jpg", credit: "X-Men (1991) #5, Cover" },
+  "087": { file: "087.jpg", comic: "087-comic.jpg", credit: "The Punisher: War Zone (1993) #8, Cover" },
+  "088": { file: "088.jpg", comic: "088-comic.jpg", credit: "The Amazing Spider-Man (1963) #384, Page 16" },
+  "089": { file: "089.jpg", comic: "089-comic.jpg", credit: "Cage (1992) #1, Cover" },
+  "090": { file: "090.jpg", comic: "090-comic.jpg", credit: "Iron Man (1968) #282, Cover" },
+  "092": { file: "092.jpg", comic: "092-comic.jpg", credit: "The Amazing Spider-Man (1963) #368, Cover" },
+  "098": { file: "098.jpg", comic: "098-comic.jpg", credit: "Wonder Man (1991) #25, Cover" },
+  "099": { file: "099.jpg", comic: "099-comic.jpg", credit: "Doom 2099 (1992) #2, Cover" },
+  "100": { file: "100.jpg", comic: "100-comic.jpg", credit: "Venom: Lethal Protector (Vol. 1, 1993) Issue #1 (1993), Cover", ig: "DRhEcIckbPc" },
+  "101": { file: "101.jpg", comic: "101-comic.jpg", credit: "Punisher 2099 (Vol. 1, 1993) Issue #1 (1993), Cover", ig: "DRhES5gkUEH" },
+  "102": { file: "102.jpg", comic: "102-comic.jpg", credit: "The Spectacular Spider-Man (Vol. 1, 1976) Issue #200 (1993), Page 30", ig: "DRhEInMEe8H" },
+  "103": { file: "103.jpg", comic: "103-comic.jpg", credit: "The Avengers (Vol. 1, 1963) Issue #360 (1993), Cover", ig: "DRhD9pXkRS9" },
+  "104": { file: "104.jpg", comic: "104-comic.jpg", credit: "Spider-Man Unlimited (Vol. 1, 1993) Issue #2 (1993), Cover", ig: "DRhDzGpEYio" },
+  "105": { file: "105.jpg", comic: "105-comic.jpg", credit: "Namor the Submariner (Vol. 1, 1990) Issue #37 (1993), Page 20", ig: "DRbIMY3EZwW" },
+  "106": { file: "106.jpg", comic: "106-comic.jpg", credit: "X-Factor (Vol. 1, 1986) Issue #88, Page 5", ig: "DRbICbxEY_k" },
+  "107": { file: "107.jpg", comic: "107-comic.jpg", credit: "1992 Impel Marvel Universe Series III, Psyclocke, Card #51", ig: "DRbH5NiEXhO" },
+  "108": { file: "108.jpg", comic: "108-comic.jpg", credit: "Fantastic Four (Vol. 1, 1963) Issue #383 (1993), Page 22", ig: "DRbHv-XkWqX" },
+  "109": { file: "109.jpg", comic: "109-comic.jpg", credit: "Thunderstrike! (Vol. 1, 1993) Issue #1 (1993), Cover", ig: "DRbHlr-ERuE" },
+  "110": { file: "110.jpg", comic: "110-comic.jpg", credit: "Infinity Crusade (Vol. 1, 1993) Issue #5 (1993), Cover; Infinity Crusade (Vol. 1, 1993) Issue #2 (1993), Page 38", ig: "DRWM1d8DfU8" },
+  "111": { file: "111.jpg", comic: "111-comic.jpg", credit: "2099 Unlimited (Vol. 1, 1993) Issue #1 (1993), Page 23", ig: "DRWMrLnDQhP" },
+  "112": { file: "112.jpg", comic: "112-comic.jpg", credit: "X-Force (Vol. 1, 1991) Issue #25 (1993), Page 20", ig: "DRWMhmnDdBK" },
+  "113": { file: "113.jpg", comic: "113-comic.jpg", credit: "Uncanny X-Men (Vol. 1, 1963) Issue #303 (1993), Page 23", ig: "DRWMX5aDSIx" },
+  "114": { file: "114.jpg", comic: "114-comic.jpg", credit: "X-Men (Vol.2, 1991) Issue #24 (1993), Cover", ig: "DRWMNv-DT1b" },
+  "115": { file: "115.jpg", comic: "115-comic.jpg", credit: "Ghost Rider (1990) Issue #46 (1994), Page 11", ig: "DRCB7VSEXB-" },
+  "116": { file: "116.jpg", comic: "116-comic.jpg", credit: "Daredevil: The Man Without Fear (1964) Issue #325 (1994), Page 39", ig: "DRCByBgERyf" },
+  "117": { file: "117.jpg", comic: "117-comic.jpg", credit: "Ravage 2099 (1992) Issue #12 (1993), Page 2", ig: "DRCBnz6kQbo" },
+  "118": { file: "118.jpg", comic: "118-comic.jpg", credit: "Wolverine (Vol.1, 1988) Issue #75 (1993), Page 4", ig: "DRCBdONEZP6" },
+  "119": { file: "119.jpg", comic: "119-comic.jpg", credit: "Wolverine (Vol.1, 1988) Issue #75 (1993), Page 34", ig: "DRCBDq0EVAP" },
+  "120": { file: "120.jpg", comic: "120-comic.jpg", credit: "Uncanny X-Men (1963) Issue #304 (1993), Page 16 & 17", ig: "DQ7cCHXEVia" },
+  "121": { file: "121.jpg", comic: "121-comic.jpg", credit: "Uncanny X-Men (1963) Issue #304 (1993), Page 47 & 48", ig: "DQ7b44QkeTo" },
+  "122": { file: "122.jpg", comic: "122-comic.jpg", credit: "Uncanny X-Men (1963) Issue #304 (1993), Page 46", ig: "DQ7bvTjEbXy" },
+  "123": { file: "123.jpg", comic: "123-comic.jpg", credit: "X-Factor (Vol.1, 1986) Issue #92 (1993), Page 14", ig: "DQ7blGqEdj4" },
+  "124": { file: "124.jpg", comic: "124-comic.jpg", credit: "1994 Fleer Marvel Universe Series V, Bloodhawk, Card #171", ig: "DQ7bcLFkRrD" },
+  "125": { file: "125.jpg", comic: "125-comic.jpg", credit: "Ghost Rider/Blaze: Spirits of Vengeance (Vol. 1, 1992) Issue #16 (1993), Page 1", ig: "DQ3HgPSkZhN" },
+  "126": { file: "126.jpg", comic: "126-comic.jpg", credit: "Fantastic Four (Vol. 1, 1963) Issue #381 (1993), Page 22", ig: "DQ3HW37EXuw" },
+  "127": { file: "127.jpg", comic: "127-comic.jpg", credit: "Ghost Rider (Vol. 2, 1990) Issue #43 (1993), Cover", ig: "DQ3HM3fEaBE" },
+  "128": { file: "128.jpg", comic: "128-comic.jpg", credit: "Thor Corps - Marvel Press Poster #109", ig: "DQ3HCSpkWtX" },
+  "129": { file: "129.jpg", comic: "129-comic.jpg", credit: "X-Men (Vol. 2, 1991) Issue #28 (1994), Cover", ig: "DQ3G5DVEV_J" },
+  "130": { file: "130.jpg", comic: "130-comic.jpg", credit: "Venom: The Madness (Vol.1, 1993) Issue #2 (1993), Page 3", ig: "DQ0ycqBjXkd" },
+  "131": { file: "131.jpg", comic: "131-comic.jpg", credit: "Doctor Strange, Sorcerer Supreme (Vol.1, 1988) Issue #61, Cover", ig: "DQ0rCUljWeW" },
+  "132": { file: "132.jpg", comic: "132-comic.jpg", credit: "Punisher: War Journal (Vol.1, 1988) Issue #61 (1993), Cover", ig: "DQ0qlL4DZsk" },
+  "133": { file: "133.jpg", comic: "133-comic.jpg", credit: "Silver Surfer (Vol.1, 1987) Annual #6 (1993), Cover", ig: "DQ0p2oujXYm" },
+  "134": { file: "134.jpg", comic: "134-comic.jpg", credit: "New Warriors: Ashcan Edition (1994) Issue #1, Back Cover", ig: "DQ0og8ljfK6" },
+  "135": { file: "135.jpg", comic: "135-comic.jpg", credit: "1992 Impel Marvel Universe Series III, Carnage, Card #120", ig: "DQw2y0sEVKq" },
+  "136": { file: "136.jpg", comic: "136-comic.jpg", credit: "Ghost Rider/Blaze: Spirits of Vengeance (Vol.1, 1992) Issue #6 (1992), Cover", ig: "DQw1l5rkYq6" },
+  "137": { file: "137.jpg", comic: "137-comic.jpg", credit: "Amazing Spider-Man (Vol.1, 1963) Issue #384 (1993), Page 16", ig: "DQw0BRGEazS" },
+  "138": { file: "138.jpg", comic: "138-comic.jpg", credit: "Amazing Spider-Man (Vol.1, 1963) Issue #379 (1993), Page 8", ig: "DQwy2t3EbYH" },
+  "139": { file: "139.jpg", comic: "139-comic.jpg", credit: "Amazing Spider-Man (Vol. 1, 1961) Issue #336 (1990), Page 13", ig: "DQwyYrgEe6m" },
+  "140": { file: "140.jpg", comic: "140-comic.jpg", credit: "Spider-Man vs. Venom TPB (1990), Back Cover", ig: "DQvfJ35jZxq" },
+  "141": { file: "141.jpg", comic: "141-comic.jpg", credit: "X-Men (Vol. 2, 1991) Issue #26 (1993), Cover", ig: "DQve_s9DWoQ" },
+  "142": { file: "142.jpg", comic: "142-comic.jpg", credit: "1993 Impel X-Men Series II, Jean Grey, #13", ig: "DQve04tjZ__" },
+  "143": { file: "143.jpg", comic: "143-comic.jpg", credit: "Uncanny X-Men (Vol. 1, 1963) Annual #17 (1993), Page 54", ig: "DQveqY6DUlN" },
+  "144": { file: "144.jpg", comic: "144-comic.jpg", credit: "X-Force (Vol.1, 1991) Issue #15 (1992), Page 14", ig: "DQvef-vjSNL" },
+  "145": { file: "145.jpg", comic: "145-comic.jpg", credit: "X-Men (Vol. 2, 1991) Annual #1 (1992), Cover", ig: "DQm0ug7EVOg" },
+  "146": { file: "146.jpg", comic: "146-comic.jpg", credit: "X-Force (Vol., 1991) Issue #23 (1993), Cover", ig: "DQm0klzkXKg" },
+  "147": { file: "147.jpg", comic: "147-comic.jpg", credit: "X-Force (Vol., 1991) Issue #19 (1993), Page 1", ig: "DQm0Z0NkS3w" },
+  "148": { file: "148.jpg", comic: "148-comic.jpg", credit: "Marvel Age (Vol.1, 1983) Issue #116 (1993), Page 10", ig: "DQm0PBZkfqP" },
+  "149": { file: "149.jpg", comic: "149-comic.jpg", credit: "X-Factor (Vol. 1, 1986) Issue #90 (1992), Page 8", ig: "DQm0ExpkTII" },
+  "150": { file: "150.jpg", comic: "150-comic.jpg", credit: "N/A", ig: "DQmz6BmEZWt" },
+  "pb01": { file: "pb01.jpg", comic: "pb01-comic.jpg", credit: "X-Force (Vol. 1, 1991) Issue #25 (1993), Hologram Card Art", ig: "DQe1z4GkRDT" },
+  "pb02": { file: "pb02.jpg", comic: "pb02-comic.jpg", credit: "1992 X-Men Team Pin-Up (1992 Diamond Comics Fall Flings Pin-Up)", ig: "DQe1p7gkYTC" },
+  "pb03": { file: "pb03.jpg", comic: "pb03-comic.jpg", credit: "Iron Man (Vol. 1, 1968) Issue #301 (1994), Cover", ig: "DQe1gT4EfLn" },
+  "pb04": { file: "pb04.jpg", comic: "pb04-comic.jpg", credit: "The Uncanny X-Men (Vol. 1, 1963) Issue #269 (1990), Page 22", ig: "DQe1WGSEQa2" },
+  "pb05": { file: "pb05.jpg", comic: "pb05-comic.jpg", credit: "", ig: "DQe1MWiEeQm" },
+  "pb06": { file: "pb06.jpg", comic: "pb06-comic.jpg", credit: "1992 Impel Marvel Universe (Series III), Base Card #30", ig: "DPnkbPiDS1S" },
+  "pb07": { file: "pb07.jpg", comic: "pb07-comic.jpg", credit: "Venom: Lethal Protector (Vol. 1, 1993) Issue #2, Page 12", ig: "DPnRzzTjcOG" },
+  "pb08": { file: "pb08.jpg", comic: "pb08-comic.jpg", credit: "Wolverine (Vol. 1, 1988) Issue #67 (1993), Cover", ig: "DPk1Fx_jfb1" },
+  "pb09": { file: "pb09.jpg", comic: "pb09-comic.jpg", credit: "Sleepwalker (Vol. 1, 1991) Issue #11 (1992), Page 6", ig: "DPh664pkc3G" },
+  "pb10": { file: "pb10.jpg", comic: "pb10-comic.jpg", credit: "The Punisher: War Journal (1988) Issue #42 (1992), Cover", ig: "DPhqxvQkk_x" },
+  "pb11": { file: "pb11.jpg", comic: "pb11-comic.jpg", credit: "Uncanny X-Men (Vol. 1, 1963) #268 (1990), Page 1", ig: "DPg9ayekWUG" },
+  "pb12": { file: "pb12.jpg", comic: "pb12-comic.jpg", credit: "X-Men (Vol. 2, 1991) Annual #1 (1992), Page 41", ig: "DPgADNAjelO" },
+  "pb13": { file: "pb13.jpg", comic: "pb13-comic.jpg", credit: "Thor (Vol. 1, 1966) Issue #400 (1989), Page 36", ig: "DPf8ZoBDdyq" },
+  "pb14": { file: "pb14.jpg", comic: "pb14-comic.jpg", credit: "Silver Surfer (Vol. 3, 1987) Issue #31 (1989), Cover (Flipped Horizontally)", ig: "DPVRWsPjZ6W" },
+  "pb15": { file: "pb15.jpg", comic: "pb15-comic.jpg", credit: "The Amazing Spider-Man (Vol. 1, 1963), Issue #322, Page 8", ig: "DPSvdFCDeAu" },
+  "pb16": { file: "pb16.jpg", comic: "pb16-comic.jpg", credit: "Marvel Spotlight (June 1993) Issue 6; Marvel Press Posters (July 1993), #143", ig: "DPScWmnEY1W" },
+  "pb17": { file: "pb17.jpg", comic: "pb17-comic.jpg", credit: "Fantastic Four (Vol. 1, 1961), Issue #351 (1991), Page 12", ig: "DPRcmIkkaBu" },
+  "pb18": { file: "pb18.jpg", comic: "pb18-comic.jpg", credit: "Fantastic Four (Vol. 1, 1961) Issue #330 (1989), Cover", ig: "DPRTlKqEUXW" },
+};
+const sourceSrc = (file) => `${artDir.replace("cards", "sources")}/${file}`;
+function sourceArtFor(kind, n) {
+  const key = kind === "p" ? `pb${String(n).padStart(2, "0")}` : pad3(n);
+  const s = SOURCE_ART[key];
+  if (!s) return null;
+  return {
+    sourceImg: sourceSrc(s.file),
+    sourceComic: s.comic ? sourceSrc(s.comic) : "",
+    sourceCredit: s.credit || "",
+    sourceIg: s.ig ? `https://www.instagram.com/p/${s.ig}/` : ""
+  };
+}
 
 function credit(key) {
   const kind = key.match(/^[a-z]+(\d-)?/)[0];
@@ -2118,13 +2337,13 @@ function credit(key) {
     const [front, source, artist] = CREDITS[n - 1];
     return { label: `Card #${n}`, n, name, chars, note, front, source, artist, img: cardSrc(n),
       back: `${artDir.replace("cards", "backs")}/${pad3(n)}.jpg`,
-      landscapeBack: landscapeBaseBack(n) };
+      landscapeBack: landscapeBaseBack(n), ...sourceArtFor("b", n) };
   }
   if (kind === "p") {
     const [source, artist] = PB_CREDITS[n - 1];
     return { label: `Powerblast ${n} of 18`, name: POWERBLAST[n - 1], source, artist, img: insertSrc("powerblast", n),
       back: PB_BACK_MISSING.has(n) ? "" : insertSrc("powerblast-backs", n),
-      landscapeBack: !PB_BACK_MISSING.has(n) };
+      landscapeBack: !PB_BACK_MISSING.has(n), ...sourceArtFor("p", n) };
   }
   if (kind === "bi") {
     const [name, pb] = BINDER[n - 1];
@@ -2132,22 +2351,21 @@ function credit(key) {
     return { label: "Binder Insert", name, chars: `Same art as Powerblast #${pb}, without the metallic finish`, source, artist,
       img: insertSrc("binder", n), imgClass: "flairprint",
       imgNote: "Photographed binder insert \u00b7 no Flair logo, character title, or metallic finish",
-      backNote: "Completely blank back" };
+      backNote: "Completely blank back", ...sourceArtFor("p", pb) };
   }
   if (kind === "f") {
     const [name, pb] = FLAIRPRINTS[n - 1];
     const [source, artist] = PB_CREDITS[pb - 1];
     return { label: "Flairprint \u00b7 Case Bonus", name, chars: `Same art as Powerblast #${pb}, enlarged`, source, artist,
-      img: insertSrc("flairprint", n), imgClass: "flairprint", backNote: "Blank back with UPC 0 41199 00258 1" };
+      img: insertSrc("flairprint", n), imgClass: "flairprint", backNote: "Blank back with UPC 0 41199 00258 1",
+      ...sourceArtFor("p", pb) };
   }
   if (kind === "pr") {
     const [name, chars] = PROMOS[n - 1];
-    const art = promoArt.img
-      ? promoArt
-      : name.startsWith("Omega Red")
-        ? { img: promoSrc("omega-red-wolverine"), imgClass: "flairprint", imgNote: "Retailer Seminar Flairprint photo (same art as base #86)" }
-        : {};
-    const backNote = n === 1 ? "Blank back except for a barcode" : n === 2 ? "Blank back" : "";
+    const art = promoArt.img ? { ...promoArt, imgClass: "flairprint" } : {};
+    const backNote = name.startsWith("Deadpool")
+      ? "Blank back except for a barcode"
+      : "Blank back";
     return { label: "Promo Flairprint \u00b7 1994", name, chars, ...art, backNote };
   }
   if (kind === "u4-") {
@@ -2159,7 +2377,9 @@ function credit(key) {
   }
   if (kind === "u9-") {
     const nums = NINE_CARD[n - 1].flat().map(x => parseInt(x, 10));
-    return { label: "9-Card Uncut Sheet \u00b7 1994 Press Kit", name: `Sheet ${n}`, chars: `Cards ${nums.join(", ")}`, ...promoArt };
+    return { label: "9-Card Uncut Sheet \u00b7 1994 Press Kit", name: `Sheet ${n}`, chars: `Cards ${nums.join(", ")}`, ...promoArt,
+      back: promoSrc(`sheet9-${n}-back`),
+      backNote: "Back: matching card backs in the same 3\u00d73 layout" };
   }
   if (kind === "ap") {
     const [name, shows, , ran, file] = AD_PAGES[n - 1];
@@ -2513,13 +2733,23 @@ const viewer = (function cardViewer() {
   const card = document.getElementById("vCard");
   const frontImg = card.querySelector(".v-front img");
   const back = card.querySelector(".v-back");
+  const sourceFace = card.querySelector(".v-source");
+  const sourceImg = sourceFace.querySelector("img");
   const flipBtn = document.getElementById("vFlip");
-  let list = [], index = 0, opener = null;
+  const sourceCredit = document.getElementById("vSourceCredit");
+  let list = [], index = 0, opener = null, faceIdx = 0, faceOrder = ["front"], current = null;
 
   function frameAr(landscapeView) {
+    if (card.classList.contains("show-source") && sourceImg.naturalWidth && sourceImg.naturalHeight) {
+      return sourceImg.naturalWidth / sourceImg.naturalHeight;
+    }
     if (landscapeView) {
-      const backImg = back.querySelector("img.landscape");
+      const backImg = back.querySelector("img.landscape, img.landscape-native");
       if (backImg && backImg.naturalWidth && backImg.naturalHeight) {
+        // Native landscape file: use width/height. Portrait-sideways scan: swap after CSS rotate.
+        if (backImg.classList.contains("landscape-native") || backImg.naturalWidth >= backImg.naturalHeight) {
+          return backImg.naturalWidth / backImg.naturalHeight;
+        }
         return backImg.naturalHeight / backImg.naturalWidth;
       }
       return 1024 / 738;
@@ -2528,41 +2758,95 @@ const viewer = (function cardViewer() {
     return 738 / 1024;
   }
   function applyFrame() {
-    const landscapeView = card.classList.contains("landscape-back") && card.classList.contains("flipped");
+    const landscapeView = card.classList.contains("landscape-back") && faceOrder[faceIdx] === "back";
     card.style.setProperty("--ar", frameAr(landscapeView));
+  }
+  function classifyLandscapeBack(img) {
+    if (!img || !img.naturalWidth || !img.naturalHeight) return;
+    const native = img.naturalWidth >= img.naturalHeight;
+    img.classList.toggle("landscape-native", native);
+    img.classList.toggle("landscape", !native);
+  }
+  function setFace(nextIdx) {
+    faceIdx = ((nextIdx % faceOrder.length) + faceOrder.length) % faceOrder.length;
+    const which = faceOrder[faceIdx];
+    card.classList.toggle("flipped", which === "back");
+    card.classList.toggle("show-source", which === "source");
+    const next = faceOrder[(faceIdx + 1) % faceOrder.length];
+    if (faceOrder.length < 2) flipBtn.textContent = "Flip card";
+    else if (next === "back") flipBtn.textContent = "Flip to back";
+    else if (next === "source") flipBtn.textContent = "Show original art";
+    else flipBtn.textContent = "Show front";
+    if (which === "source" && current) {
+      sourceCredit.textContent = current.sourceCredit
+        ? `Source · ${current.sourceCredit}`
+        : (current.source || "");
+    } else {
+      sourceCredit.textContent = "";
+    }
+    applyFrame();
   }
   function show(i) {
     index = (i + list.length) % list.length;
     const key = list[index].dataset.view;
     const c = credit(key);
-    card.classList.remove("flipped");
+    current = c;
+    faceIdx = 0;
+    card.classList.remove("flipped", "show-source");
     card.style.setProperty("--ar", 738 / 1024);
     frontImg.onload = () => applyFrame();
     frontImg.src = c.img;
     frontImg.alt = c.name;
     const hasBack = !!(c.back || c.backNote);
+    const hasSource = !!c.sourceImg;
     const landscape = !!(c.landscapeBack && c.back);
     back.innerHTML = c.back ? `<img src="${c.back}" alt="Back of ${esc(c.name)}"${landscape ? ' class="landscape"' : ""}>`
       : c.backNote ? `<div class="v-blank"><div><b>Card back</b>${esc(c.backNote)}</div></div>` : "";
     if (landscape) {
-      const backImg = back.querySelector("img.landscape");
-      if (backImg) backImg.onload = () => applyFrame();
+      const backImg = back.querySelector("img.landscape, img.landscape-native");
+      if (backImg) {
+        const finish = () => { classifyLandscapeBack(backImg); applyFrame(); };
+        if (backImg.complete && backImg.naturalWidth) finish();
+        else backImg.onload = finish;
+      }
     }
+    if (hasSource) {
+      sourceImg.onload = () => applyFrame();
+      sourceImg.src = c.sourceImg;
+      sourceImg.alt = `Original art for ${c.name}`;
+    } else {
+      sourceImg.removeAttribute("src");
+    }
+    // Cycle: front → back → original art → front (skip missing faces).
+    faceOrder = ["front"];
+    if (hasBack) faceOrder.push("back");
+    if (hasSource) faceOrder.push("source");
     card.classList.toggle("no-back", !hasBack);
+    card.classList.toggle("has-source", hasSource);
     card.classList.toggle("landscape-back", landscape);
-    applyFrame();
-    flipBtn.disabled = !hasBack;
+    flipBtn.disabled = faceOrder.length < 2;
     document.getElementById("vLabel").textContent = c.label;
     document.getElementById("vName").textContent = c.name;
     const touch = matchMedia("(hover: none)").matches;
-    document.getElementById("vHint").textContent = !hasBack ? c.imgNote || "Back not pictured"
-      : landscape ? (touch ? "Tap to flip \u00b7 Frame rotates with the back" : "Click or press F to flip \u00b7 Frame rotates with the back \u00b7 Arrow keys for next")
-      : touch ? "Tap the card to flip" : "Click the card or press F to flip \u00b7 Arrow keys for next";
+    let hint;
+    if (faceOrder.length < 2) hint = c.imgNote || "Back not pictured";
+    else if (hasSource && hasBack) {
+      hint = touch
+        ? "Tap to cycle front · back · original art"
+        : "Click or press F to cycle front \u00b7 back \u00b7 original art \u00b7 Arrow keys for next";
+    } else if (hasSource) {
+      hint = touch ? "Tap to cycle front \u00b7 original art" : "Click or press F to cycle front \u00b7 original art \u00b7 Arrow keys for next";
+    } else if (landscape) {
+      hint = touch ? "Tap to flip \u00b7 Frame rotates with the back" : "Click or press F to flip \u00b7 Frame rotates with the back \u00b7 Arrow keys for next";
+    } else {
+      hint = touch ? "Tap the card to flip" : "Click the card or press F to flip \u00b7 Arrow keys for next";
+    }
+    document.getElementById("vHint").textContent = hint;
+    setFace(0);
   }
   const flip = () => {
     if (flipBtn.disabled) return;
-    card.classList.toggle("flipped");
-    applyFrame();
+    setFace(faceIdx + 1);
   };
   function open(trigger) {
     const sheet = trigger.closest(".mini");
@@ -2576,10 +2860,11 @@ const viewer = (function cardViewer() {
   }
   function close() {
     el.classList.remove("show");
+    card.classList.remove("show-source", "flipped");
     if (opener) opener.focus();
   }
 
-  card.addEventListener("click", flip);
+  card.addEventListener("click", () => flip());
   flipBtn.addEventListener("click", flip);
   el.querySelector(".v-close").addEventListener("click", close);
   el.querySelector(".prev").addEventListener("click", () => show(index - 1));

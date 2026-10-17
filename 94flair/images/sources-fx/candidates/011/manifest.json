@@ -1,0 +1,85 @@
+{
+  "n": 11,
+  "key": "011",
+  "title": "Avengers Assemble",
+  "source": "The Avengers (1963) Annual #20, Page 56",
+  "tokens": [
+    "Avengers",
+    "Assemble"
+  ],
+  "page": 56,
+  "promo": false,
+  "status": "ok",
+  "candidates": [
+    {
+      "idx": 1,
+      "file": "01.jpg",
+      "wiki": "File:Avengers Assemble Vol 1 1 Textless.jpg",
+      "score": 46,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/e/e3/Avengers_Assemble_Vol_1_1_Textless.jpg/revision/latest?cb=20100222135153"
+    },
+    {
+      "idx": 2,
+      "file": "02.jpg",
+      "wiki": "File:Avengers Assemble Vol 2 16 Conner Variant Textless.jpg",
+      "score": 46,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/5/50/Avengers_Assemble_Vol_2_16_Conner_Variant_Textless.jpg/revision/latest?cb=20130520202646"
+    },
+    {
+      "idx": 3,
+      "file": "03.jpg",
+      "wiki": "File:Avengers Assemble Vol 2 2 Avengers Variant Textless.jpg",
+      "score": 46,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/7/75/Avengers_Assemble_Vol_2_2_Avengers_Variant_Textless.jpg/revision/latest?cb=20120124215057"
+    },
+    {
+      "idx": 4,
+      "file": "04.jpg",
+      "wiki": "File:Avengers Assemble Vol 2 3 Variant Textless.jpg",
+      "score": 46,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/1/1c/Avengers_Assemble_Vol_2_3_Variant_Textless.jpg/revision/latest?cb=20120510211930"
+    },
+    {
+      "idx": 5,
+      "file": "05.jpg",
+      "wiki": "File:Avengers Assemble Vol 3 3 Jacket Variant Textless.jpg",
+      "score": 46,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/0/00/Avengers_Assemble_Vol_3_3_Jacket_Variant_Textless.jpg/revision/latest/scale-to-width-down/1400?cb=20241013182528"
+    },
+    {
+      "idx": 6,
+      "file": "06.jpg",
+      "wiki": "File:Avengers Assemble Vol 3 4 Stormbreakers Variant Textless.jpg",
+      "score": 46,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/9/9b/Avengers_Assemble_Vol_3_4_Stormbreakers_Variant_Textless.jpg/revision/latest?cb=20241201024628"
+    },
+    {
+      "idx": 7,
+      "file": "07.jpg",
+      "wiki": "File:Arthur Douglas (Earth-616) from Avengers Assemble Vol 2 6 cover.jpg",
+      "score": 44,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/3/31/Arthur_Douglas_%28Earth-616%29_from_Avengers_Assemble_Vol_2_6_cover.jpg/revision/latest?cb=20120613201230"
+    },
+    {
+      "idx": 8,
+      "file": "08.jpg",
+      "wiki": "File:Avengers Assemble (Animated Series) poster 003.jpg",
+      "score": 42,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/0/0c/Avengers_Assemble_%28Animated_Series%29_poster_003.jpg/revision/latest?cb=20130308222441"
+    },
+    {
+      "idx": 9,
+      "file": "09.jpg",
+      "wiki": "File:Avengers Assemble! 001.jpg",
+      "score": 42,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/9/9a/Avengers_Assemble%21_001.jpg/revision/latest?cb=20260823181738"
+    },
+    {
+      "idx": 10,
+      "file": "10.jpg",
+      "wiki": "File:Marvel's Avengers Assemble Poster 001.jpg",
+      "score": 42,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/9/93/Marvel%27s_Avengers_Assemble_Poster_001.jpg/revision/latest?cb=20130528101739"
+    }
+  ]
+}

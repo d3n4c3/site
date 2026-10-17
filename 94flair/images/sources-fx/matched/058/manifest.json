@@ -1,0 +1,51 @@
+{
+  "n": 58,
+  "key": "058",
+  "title": "The Origin of Jubilee",
+  "source": "Uncanny X-Men (1963) #258, Page 8",
+  "artist": "Jim Lee",
+  "matches": [
+    {
+      "idx": 1,
+      "file": "01.jpg",
+      "score": 0.0613,
+      "kind": "wiki-candidate",
+      "label": "File:Uncanny X-Men Vol 1 258.jpg"
+    },
+    {
+      "idx": 2,
+      "file": "02.jpg",
+      "score": 0.0611,
+      "kind": "wiki-candidate",
+      "label": "File:Wolverine and Jubilee Vol 1 1 Textless Nimit Malavia Variant.jpg"
+    },
+    {
+      "idx": 3,
+      "file": "03.jpg",
+      "score": 0.058,
+      "kind": "wiki-candidate",
+      "label": "File:Uncanny X-Men Vol 1 258 Reprint.jpg"
+    },
+    {
+      "idx": 4,
+      "file": "04.jpg",
+      "score": 0.0543,
+      "kind": "wiki-candidate",
+      "label": "File:Elizabeth Braddock (Earth-616) and Mandarin (Earth-616) from Uncanny X-Men Vol 1 258 001.png"
+    },
+    {
+      "idx": 5,
+      "file": "05.jpg",
+      "score": 0.0478,
+      "kind": "wiki-candidate",
+      "label": "File:Jubilee Vol 1 1 Textless.jpg"
+    },
+    {
+      "idx": 6,
+      "file": "06.jpg",
+      "score": 0.042,
+      "kind": "wiki-candidate",
+      "label": "File:Jubilee Vol 1 2 Textless.jpg"
+    }
+  ]
+}

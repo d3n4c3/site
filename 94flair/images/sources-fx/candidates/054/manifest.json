@@ -1,0 +1,84 @@
+{
+  "n": 54,
+  "key": "054",
+  "title": "Formation of Excalibur",
+  "source": "The Uncanny X-Men (1963) #300, Page 1",
+  "tokens": [
+    "Excalibur"
+  ],
+  "page": 1,
+  "promo": false,
+  "status": "ok",
+  "candidates": [
+    {
+      "idx": 1,
+      "file": "01.jpg",
+      "wiki": "File:Excalibur (Earth-616) and Technet (Multiverse) from Excalibur Special Edition Vol 1 1 001.jpg",
+      "score": 32,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/6/60/Excalibur_%28Earth-616%29_and_Technet_%28Multiverse%29_from_Excalibur_Special_Edition_Vol_1_1_001.jpg/revision/latest?cb=20170813032220"
+    },
+    {
+      "idx": 2,
+      "file": "02.jpg",
+      "wiki": "File:Excalibur (Earth-616) and X-Men (Earth-616) from Excalibur Vol 1 71 001.jpg",
+      "score": 32,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/2/2d/Excalibur_%28Earth-616%29_and_X-Men_%28Earth-616%29_from_Excalibur_Vol_1_71_001.jpg/revision/latest/scale-to-width-down/1400?cb=20240520054150"
+    },
+    {
+      "idx": 3,
+      "file": "03.jpg",
+      "wiki": "File:Excalibur (Earth-616) from Excalibur Special Edition Vol 1 1 0001.jpg",
+      "score": 32,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/2/2d/Excalibur_%28Earth-616%29_from_Excalibur_Special_Edition_Vol_1_1_0001.jpg/revision/latest?cb=20191224050005"
+    },
+    {
+      "idx": 4,
+      "file": "04.jpg",
+      "wiki": "File:Excalibur (Earth-616) from Excalibur Special Edition Vol 1 1 001.jpg",
+      "score": 32,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/6/63/Excalibur_%28Earth-616%29_from_Excalibur_Special_Edition_Vol_1_1_001.jpg/revision/latest/scale-to-width-down/1400?cb=20250111185632"
+    },
+    {
+      "idx": 5,
+      "file": "05.jpg",
+      "wiki": "File:Excalibur (Earth-616) from Excalibur Trading Cards 0003.jpg",
+      "score": 32,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/8/8b/Excalibur_%28Earth-616%29_from_Excalibur_Trading_Cards_0003.jpg/revision/latest?cb=20160129044051"
+    },
+    {
+      "idx": 6,
+      "file": "06.jpg",
+      "wiki": "File:Excalibur (Earth-616) from Excalibur Vol 4 16 001.jpg",
+      "score": 32,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/2/26/Excalibur_%28Earth-616%29_from_Excalibur_Vol_4_16_001.jpg/revision/latest/scale-to-width-down/1400?cb=20201223232147"
+    },
+    {
+      "idx": 7,
+      "file": "07.jpg",
+      "wiki": "File:Excalibur (Earth-616) from Marvel Comics Presents Vol 1 38 001.jpg",
+      "score": 32,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/2/24/Excalibur_%28Earth-616%29_from_Marvel_Comics_Presents_Vol_1_38_001.jpg/revision/latest?cb=20191218022204"
+    },
+    {
+      "idx": 8,
+      "file": "08.jpg",
+      "wiki": "File:Excalibur (Earth-616) from Marvel Universe Cards Series I 0001.jpg",
+      "score": 32,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/f/f1/Excalibur_%28Earth-616%29_from_Marvel_Universe_Cards_Series_I_0001.jpg/revision/latest?cb=20160107022503"
+    },
+    {
+      "idx": 9,
+      "file": "09.jpg",
+      "wiki": "File:Excalibur (Earth-616) from Marvel Universe Cards Series II 0001.jpg",
+      "score": 32,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/8/8d/Excalibur_%28Earth-616%29_from_Marvel_Universe_Cards_Series_II_0001.jpg/revision/latest?cb=20160110052517"
+    },
+    {
+      "idx": 10,
+      "file": "10.jpg",
+      "wiki": "File:Excalibur (Earth-616) from Marvel Universe Cards Series III 0001.jpg",
+      "score": 32,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/6/60/Excalibur_%28Earth-616%29_from_Marvel_Universe_Cards_Series_III_0001.jpg/revision/latest?cb=20160111033523"
+    }
+  ]
+}

@@ -1,0 +1,84 @@
+{
+  "n": 31,
+  "key": "031",
+  "title": "Thanos Attacks",
+  "source": "The Infinity War (1992) #6, Page 14",
+  "tokens": [
+    "Thanos"
+  ],
+  "page": 14,
+  "promo": false,
+  "status": "ok",
+  "candidates": [
+    {
+      "idx": 1,
+      "file": "01.jpg",
+      "wiki": "File:Thanos (Earth-616) from Infinity Gauntlet Vol 1 6 0001.jpg",
+      "score": 32,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/3/39/Thanos_%28Earth-616%29_from_Infinity_Gauntlet_Vol_1_6_0001.jpg/revision/latest?cb=20200908020646"
+    },
+    {
+      "idx": 2,
+      "file": "02.jpg",
+      "wiki": "File:Thanos (Earth-616) from Infinity War Vol 1 1 001.jpg",
+      "score": 32,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/6/64/Thanos_%28Earth-616%29_from_Infinity_War_Vol_1_1_001.jpg/revision/latest/scale-to-width-down/1400?cb=20250731030726"
+    },
+    {
+      "idx": 3,
+      "file": "03.jpg",
+      "wiki": "File:Thanos Legacy Vol 1 1 IGComicStore Exclusive Wraparound Variant Textless.jpg",
+      "score": 28,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/7/7b/Thanos_Legacy_Vol_1_1_IGComicStore_Exclusive_Wraparound_Variant_Textless.jpg/revision/latest/scale-to-width-down/1400?cb=20180914121636"
+    },
+    {
+      "idx": 4,
+      "file": "04.jpg",
+      "wiki": "File:Thanos Vol 2 1 Hip-Hop Variant Textless.jpg",
+      "score": 28,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/e/e7/Thanos_Vol_2_1_Hip-Hop_Variant_Textless.jpg/revision/latest?cb=20161025172801"
+    },
+    {
+      "idx": 5,
+      "file": "05.jpg",
+      "wiki": "File:Thanos Vol 2 1 Toy Variant Textless.jpg",
+      "score": 28,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/9/9c/Thanos_Vol_2_1_Toy_Variant_Textless.jpg/revision/latest?cb=20161020195550"
+    },
+    {
+      "idx": 6,
+      "file": "06.jpg",
+      "wiki": "File:Thanos Vol 2 4 Corner Box Variant Textless.jpg",
+      "score": 28,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/b/b6/Thanos_Vol_2_4_Corner_Box_Variant_Textless.jpg/revision/latest?cb=20210301040535"
+    },
+    {
+      "idx": 7,
+      "file": "07.jpg",
+      "wiki": "File:Thanos (Doppleganger) (Earth-616) from Infinity War Vol 1 1.jpg",
+      "score": 26,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/1/13/Thanos_%28Doppleganger%29_%28Earth-616%29_from_Infinity_War_Vol_1_1.jpg/revision/latest?cb=20160102051742"
+    },
+    {
+      "idx": 8,
+      "file": "08.jpg",
+      "wiki": "File:Thanos (Earth-616) from Avengers Vol 5 27 cover.jpg",
+      "score": 26,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/5/5f/Thanos_%28Earth-616%29_from_Avengers_Vol_5_27_cover.jpg/revision/latest?cb=20140122160748"
+    },
+    {
+      "idx": 9,
+      "file": "09.jpg",
+      "wiki": "File:Nebula (Earth-199999) and Thanos (Earth-199999) from Avengers Infinity War 001.png",
+      "score": 24,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/0/03/Nebula_%28Earth-199999%29_and_Thanos_%28Earth-199999%29_from_Avengers_Infinity_War_001.png/revision/latest?cb=20231110174422"
+    },
+    {
+      "idx": 10,
+      "file": "10.jpg",
+      "wiki": "File:Peter Quill (Earth-199999), Gamora (Earth-199999), and Thanos (Earth-199999) from Avengers Infinity War 001.jpg",
+      "score": 24,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/b/bb/Peter_Quill_%28Earth-199999%29%2C_Gamora_%28Earth-199999%29%2C_and_Thanos_%28Earth-199999%29_from_Avengers_Infinity_War_001.jpg/revision/latest?cb=20230423200337"
+    }
+  ]
+}

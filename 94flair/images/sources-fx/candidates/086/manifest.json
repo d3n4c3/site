@@ -1,0 +1,86 @@
+{
+  "n": 86,
+  "key": "086",
+  "title": "Omega Red vs. Wolverine",
+  "source": "X-Men (1991) #5, Cover",
+  "tokens": [
+    "Omega Red",
+    "Omega",
+    "Red"
+  ],
+  "page": null,
+  "promo": false,
+  "status": "ok",
+  "candidates": [
+    {
+      "idx": 1,
+      "file": "01.jpg",
+      "wiki": "File:Arkady Rossovich (Earth-616) from X-Men Vol 2 5 001.jpg",
+      "score": 164,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/4/4f/Arkady_Rossovich_%28Earth-616%29_from_X-Men_Vol_2_5_001.jpg/revision/latest?cb=20171015103403"
+    },
+    {
+      "idx": 2,
+      "file": "02.jpg",
+      "wiki": "File:Forge (Earth-616) from X-Men Vol 2 5 001.jpg",
+      "score": 164,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/4/4f/Forge_%28Earth-616%29_from_X-Men_Vol_2_5_001.jpg/revision/latest?cb=20171015163826"
+    },
+    {
+      "idx": 3,
+      "file": "03.jpg",
+      "wiki": "File:Forge (Earth-616) from X-Men Vol 2 5 002.jpg",
+      "score": 164,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/8/85/Forge_%28Earth-616%29_from_X-Men_Vol_2_5_002.jpg/revision/latest?cb=20191210060312"
+    },
+    {
+      "idx": 4,
+      "file": "04.jpg",
+      "wiki": "File:X-Men Vol 2 5 Remastered.jpg",
+      "score": 98,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/5/57/X-Men_Vol_2_5_Remastered.jpg/revision/latest/scale-to-width-down/1400?cb=20171015181845"
+    },
+    {
+      "idx": 5,
+      "file": "05.jpg",
+      "wiki": "File:Ava'Dara Naganandini (Earth-616) from Amazing X-Men Vol 2 5 001.jpg",
+      "score": 94,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/f/fe/Ava%27Dara_Naganandini_%28Earth-616%29_from_Amazing_X-Men_Vol_2_5_001.jpg/revision/latest?cb=20170610175415"
+    },
+    {
+      "idx": 6,
+      "file": "06.jpg",
+      "wiki": "File:Benjamin Hammil (Earth-616) from New X-Men Vol 2 5 0001.jpg",
+      "score": 94,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/4/42/Benjamin_Hammil_%28Earth-616%29_from_New_X-Men_Vol_2_5_0001.jpg/revision/latest?cb=20191129220143"
+    },
+    {
+      "idx": 7,
+      "file": "07.jpg",
+      "wiki": "File:Brian Cruz (Earth-616) from New X-Men Vol 2 5 0001.jpg",
+      "score": 94,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/b/b9/Brian_Cruz_%28Earth-616%29_from_New_X-Men_Vol_2_5_0001.jpg/revision/latest?cb=20191129220344"
+    },
+    {
+      "idx": 8,
+      "file": "08.jpg",
+      "wiki": "File:Justin Pierce (Earth-616) from New X-Men Vol 2 5 0001.jpg",
+      "score": 94,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/3/34/Justin_Pierce_%28Earth-616%29_from_New_X-Men_Vol_2_5_0001.jpg/revision/latest?cb=20191129220738"
+    },
+    {
+      "idx": 9,
+      "file": "09.jpg",
+      "wiki": "File:Kurt Wagner (Earth-616) from Amazing X-Men Vol 2 5 002.jpg",
+      "score": 94,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/f/fb/Kurt_Wagner_%28Earth-616%29_from_Amazing_X-Men_Vol_2_5_002.jpg/revision/latest?cb=20170610174041"
+    },
+    {
+      "idx": 10,
+      "file": "10.jpg",
+      "wiki": "File:Madelyne Pryor (Earth-616) from Dark X-Men Vol 2 5 002.jpg",
+      "score": 94,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/c/cf/Madelyne_Pryor_%28Earth-616%29_from_Dark_X-Men_Vol_2_5_002.jpg/revision/latest?cb=20240714150338"
+    }
+  ]
+}

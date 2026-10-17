@@ -1,0 +1,704 @@
+{
+  "counts": {
+    "shipped": 50,
+    "mismatch": 47,
+    "missing": 10,
+    "unchecked": 3,
+    "remaining": 60
+  },
+  "cards": [
+    {
+      "n": 1,
+      "title": "Origin of the Fantastic Four!",
+      "source": "Fantastic Four Unlimited (1993) #1, Cover",
+      "verdict": "shipped",
+      "note": "Approved and wired into the main flipper"
+    },
+    {
+      "n": 2,
+      "title": "Origin of the Incredible Hulk",
+      "source": "The Incredible Hulk (1968) #393, Cover",
+      "verdict": "shipped",
+      "note": "Approved and wired into the main flipper"
+    },
+    {
+      "n": 3,
+      "title": "Origin of Spider-Man",
+      "source": "1992 Impel Amazing Spider-Man 30th Anniversary Card Set",
+      "verdict": "missing",
+      "note": "No candidate image on file"
+    },
+    {
+      "n": 4,
+      "title": "Origin of Thor",
+      "source": "Journey Into Mystery (1952) #89, Cover",
+      "verdict": "shipped",
+      "note": "Approved and wired into the main flipper"
+    },
+    {
+      "n": 5,
+      "title": "Amazing Spider-Man #1",
+      "source": "Web of Spider-Man (1985) #105, Page 2",
+      "verdict": "mismatch",
+      "note": "Card Spidey aerial web-shoot pose is not on Web of Spider-Man #105."
+    },
+    {
+      "n": 6,
+      "title": "The Origin of Iron Man",
+      "source": "Tales of Suspense (1959) #39, Page 1",
+      "verdict": "shipped",
+      "note": "User-picked candidate #3"
+    },
+    {
+      "n": 7,
+      "title": "Hulk -vs- Thing",
+      "source": "Fantastic Four Unlimited (1993) #4, Cover",
+      "verdict": "shipped",
+      "note": "Approved and wired into the main flipper"
+    },
+    {
+      "n": 8,
+      "title": "Origin of Vulture",
+      "source": "The Spectacular Spider-Man (1976) #188, Cover",
+      "verdict": "shipped",
+      "note": "Approved and wired into the main flipper"
+    },
+    {
+      "n": 9,
+      "title": "Origin of Doc Ock",
+      "source": "Lethal Foes of Spider-Man (1994) #3, Page 2",
+      "verdict": "shipped",
+      "note": "User-picked candidate #1"
+    },
+    {
+      "n": 10,
+      "title": "Origin of The X-Men",
+      "source": "In-house sketches by Ron Lim. Also used as X-Men playing cards (1994), store counter standee (1995), and X-Men magnets (1996)",
+      "verdict": "missing",
+      "note": "No candidate image on file"
+    },
+    {
+      "n": 11,
+      "title": "Avengers Assemble",
+      "source": "The Avengers (1963) Annual #20, Page 56",
+      "verdict": "mismatch",
+      "note": "Founding Avengers group art differs from Avengers Annual #20 Cap\u2019s Quartet cover."
+    },
+    {
+      "n": 12,
+      "title": "Origin of Dr. Strange",
+      "source": "Marvel Treasury Edition (1974) #6, Page 57",
+      "verdict": "shipped",
+      "note": "User-picked candidate #1"
+    },
+    {
+      "n": 13,
+      "title": "Brotherhood of Evil Mutants",
+      "source": "The Avengers (1963) #75, Cover",
+      "verdict": "shipped",
+      "note": "Approved and wired into the main flipper"
+    },
+    {
+      "n": 14,
+      "title": "Origin of Daredevil",
+      "source": "Daredevil: The Man Without Fear (1964) #1, Cover",
+      "verdict": "mismatch",
+      "note": "Yellow-suited Daredevil leap is not on Man Without Fear #1."
+    },
+    {
+      "n": 15,
+      "title": "Scorpion -vs- Spider-Man",
+      "source": "The Amazing Spider-Man (1963) #20, Cover",
+      "verdict": "shipped",
+      "note": "Approved and wired into the main flipper"
+    },
+    {
+      "n": 16,
+      "title": "The Origin of Captain America",
+      "source": "Captain America #111, Cover",
+      "verdict": "shipped",
+      "note": "Approved and wired into the main flipper"
+    },
+    {
+      "n": 17,
+      "title": "Daredevil -vs- Submariner",
+      "source": "Daredevil: The Man Without Fear (1964) #7, Cover",
+      "verdict": "shipped",
+      "note": "Approved and wired into the main flipper"
+    },
+    {
+      "n": 18,
+      "title": "Wedding of Reed & Sue",
+      "source": "Fantastic Four (1963) #375, Cover",
+      "verdict": "shipped",
+      "note": "Approved and wired into the main flipper"
+    },
+    {
+      "n": 19,
+      "title": "Origin of the Sentinels",
+      "source": "Uncanny X-Men (1963) #140, Cover",
+      "verdict": "shipped",
+      "note": "User-picked candidate #2"
+    },
+    {
+      "n": 20,
+      "title": "Galactus Appears",
+      "source": "Fantastic Four (1961) #48, Page 21",
+      "verdict": "shipped",
+      "note": "User-picked candidate #3"
+    },
+    {
+      "n": 21,
+      "title": "Origin of Silver Surfer",
+      "source": "The Incredible Hulk (1968) #414, Page 20",
+      "verdict": "mismatch",
+      "note": "Surfer crouching pin-up differs from Hulk #414 firing pose."
+    },
+    {
+      "n": 22,
+      "title": "Spider-Man -vs- Green Goblin",
+      "source": "The Amazing Spider-Man (1963) #39, Cover",
+      "verdict": "shipped",
+      "note": "Approved and wired into the main flipper"
+    },
+    {
+      "n": 23,
+      "title": "Origin of Rhino",
+      "source": "The Amazing Spider-Man (1963) #43, Cover",
+      "verdict": "shipped",
+      "note": "Approved and wired into the main flipper"
+    },
+    {
+      "n": 24,
+      "title": "Peter Meets Mary Jane",
+      "source": "Marvel Swimsuit Issue (1992) #2, Page 17",
+      "verdict": "shipped",
+      "note": "User-picked candidate #1"
+    },
+    {
+      "n": 25,
+      "title": "Doom Steals the Power Cosmic",
+      "source": "The Fantastic Four (1961) #128, Page 21",
+      "verdict": "mismatch",
+      "note": "Doom arms-crossed portrait does not appear on FF #128."
+    },
+    {
+      "n": 26,
+      "title": "Origin of Warlock",
+      "source": "The Warlock Chronicles (1993) #1, Cover",
+      "verdict": "shipped",
+      "note": "Approved and wired into the main flipper"
+    },
+    {
+      "n": 27,
+      "title": "Origin of The Vision",
+      "source": "The Avengers (1963) #57, Cover",
+      "verdict": "shipped",
+      "note": "Approved and wired into the main flipper"
+    },
+    {
+      "n": 28,
+      "title": "Mephisto Appears",
+      "source": "West Coast Avengers (1985) Annual #8, Page 51",
+      "verdict": "mismatch",
+      "note": "CREDITS cite an interior page, but candidate is a full cover (wrong image type)."
+    },
+    {
+      "n": 29,
+      "title": "Origin of Morbius",
+      "source": "Morbius (1992) #1, Mini-Poster",
+      "verdict": "unchecked",
+      "note": "Not visually confirmed yet"
+    },
+    {
+      "n": 30,
+      "title": "Origin of Ghost Rider",
+      "source": "The Original Ghost Rider (1992) #8, Cover",
+      "verdict": "shipped",
+      "note": "Approved and wired into the main flipper"
+    },
+    {
+      "n": 31,
+      "title": "Thanos Attacks",
+      "source": "The Infinity War (1992) #6, Page 14",
+      "verdict": "mismatch",
+      "note": "CREDITS cite an interior page, but candidate is a full cover (wrong image type)."
+    },
+    {
+      "n": 32,
+      "title": "Death of Gwen Stacy",
+      "source": "The Spectacular Spider-Man (1976) #200, Page 42",
+      "verdict": "mismatch",
+      "note": "CREDITS cite an interior page, but candidate is a full cover (wrong image type)."
+    },
+    {
+      "n": 33,
+      "title": "Punisher vs. Spider-Man",
+      "source": "The Punisher (1987) Ad/Poster",
+      "verdict": "missing",
+      "note": "No candidate image on file"
+    },
+    {
+      "n": 34,
+      "title": "Wolverine vs. Hulk",
+      "source": "The Incredible Hulk (1968) #340, Cover",
+      "verdict": "shipped",
+      "note": "Approved and wired into the main flipper"
+    },
+    {
+      "n": 35,
+      "title": "The Wedding",
+      "source": "X-Men (1991) #26, Cover",
+      "verdict": "mismatch",
+      "note": "Scarlet Witch portrait is absent from X-Men #26 cover."
+    },
+    {
+      "n": 36,
+      "title": "Origin of the Invaders",
+      "source": "The Invaders (1993) #1, Cover",
+      "verdict": "shipped",
+      "note": "Approved and wired into the main flipper"
+    },
+    {
+      "n": 37,
+      "title": "Spider-Man meets the Black Cat",
+      "source": "",
+      "verdict": "missing",
+      "note": "No candidate image on file"
+    },
+    {
+      "n": 38,
+      "title": "The Hellfire Club Revealed",
+      "source": "The Uncanny X-Men (1963) #281, Page 6",
+      "verdict": "shipped",
+      "note": "User-picked candidate #2"
+    },
+    {
+      "n": 39,
+      "title": "Origin of She-Hulk",
+      "source": "The Sensational She-Hulk #1, Cover",
+      "verdict": "shipped",
+      "note": "Approved and wired into the main flipper"
+    },
+    {
+      "n": 40,
+      "title": "Origin of Moon Knight",
+      "source": "Marc Spector: Moon Knight (1989) #56, Cover",
+      "verdict": "shipped",
+      "note": "Approved and wired into the main flipper"
+    },
+    {
+      "n": 41,
+      "title": "Days of Future Past",
+      "source": "X-Men Adventures (1992) #1, Page 12",
+      "verdict": "mismatch",
+      "note": "CREDITS cite an interior page, but candidate is a full cover (wrong image type)."
+    },
+    {
+      "n": 42,
+      "title": "Elektra Appears",
+      "source": "In-house sketches by Frank Miller",
+      "verdict": "missing",
+      "note": "No candidate image on file"
+    },
+    {
+      "n": 43,
+      "title": "Death of Elektra",
+      "source": "Daredevil: The Man Without Fear (1964) #182, Cover",
+      "verdict": "shipped",
+      "note": "Approved and wired into the main flipper"
+    },
+    {
+      "n": 44,
+      "title": "Hobgoblin Appears",
+      "source": "Suspected unused in print, possibly shelved for a Web of Spider-Man Annual #3 pin-up. Used as a large 5' store stand-up display (1987)",
+      "verdict": "missing",
+      "note": "No candidate image on file"
+    },
+    {
+      "n": 45,
+      "title": "Origin of Alpha Flight",
+      "source": "Alpha Flight (1983) #128, Page 13",
+      "verdict": "mismatch",
+      "note": "Northstar flying pose is not the Alpha Flight #128 pile-up figure."
+    },
+    {
+      "n": 46,
+      "title": "Ballad of Beta Ray Bill",
+      "source": "Thor (1966) #339, Page 20",
+      "verdict": "shipped",
+      "note": "User-picked candidate #1"
+    },
+    {
+      "n": 47,
+      "title": "The Trial of Reed Richards",
+      "source": "The Fantastic Four (1963) #262, Page 8",
+      "verdict": "shipped",
+      "note": "User-picked candidate #1"
+    },
+    {
+      "n": 48,
+      "title": "The Black Costume Saga",
+      "source": "Marvel Tales (1964) #266, Cover",
+      "verdict": "shipped",
+      "note": "Approved and wired into the main flipper"
+    },
+    {
+      "n": 49,
+      "title": "Origin of Puma",
+      "source": "Marvel Tales (1964) #271, Cover",
+      "verdict": "shipped",
+      "note": "Approved and wired into the main flipper"
+    },
+    {
+      "n": 50,
+      "title": "Silver Sable Inc.",
+      "source": "Silver Sable and the Wild Pack (1992) #17, Cover",
+      "verdict": "shipped",
+      "note": "Approved and wired into the main flipper"
+    },
+    {
+      "n": 51,
+      "title": "Formation of X-Factor",
+      "source": "X-Men Unlimited (1993) #1, Page 62",
+      "verdict": "mismatch",
+      "note": "CREDITS cite an interior page, but candidate is a full cover (wrong image type)."
+    },
+    {
+      "n": 52,
+      "title": "Apocalypse Attacks",
+      "source": "X-Factor (1988) #65, Page 20",
+      "verdict": "mismatch",
+      "note": "CREDITS cite an interior page, but candidate is a full cover (wrong image type)."
+    },
+    {
+      "n": 53,
+      "title": "Sabretooth vs. Wolverine",
+      "source": "The Uncanny X-Men (1963) #213, Cover",
+      "verdict": "shipped",
+      "note": "Approved and wired into the main flipper"
+    },
+    {
+      "n": 54,
+      "title": "Formation of Excalibur",
+      "source": "The Uncanny X-Men (1963) #300, Page 1",
+      "verdict": "mismatch",
+      "note": "CREDITS cite an interior page, but candidate is a full cover (wrong image type)."
+    },
+    {
+      "n": 55,
+      "title": "The Creation of Archangel",
+      "source": "X-Factor (1988) #24, Page 16",
+      "verdict": "shipped",
+      "note": "User-picked candidate #4"
+    },
+    {
+      "n": 56,
+      "title": "Mr. Sinister Appears",
+      "source": "The Uncanny X-Men (1963) #239, Page 4",
+      "verdict": "mismatch",
+      "note": "CREDITS cite an interior page, but candidate is a full cover (wrong image type)."
+    },
+    {
+      "n": 57,
+      "title": "The Wedding of Spider-Man & Mary Jane",
+      "source": "Web of Spider-Man (1985) Annual #4, Page 43",
+      "verdict": "mismatch",
+      "note": "CREDITS cite an interior page, but candidate is a full cover (wrong image type)."
+    },
+    {
+      "n": 58,
+      "title": "The Origin of Jubilee",
+      "source": "Uncanny X-Men (1963) #258, Page 8",
+      "verdict": "mismatch",
+      "note": "CREDITS cite an interior page, but candidate is a full cover (wrong image type)."
+    },
+    {
+      "n": 59,
+      "title": "Armor Wars",
+      "source": "Iron Man (1968) Annual #10, Page 50",
+      "verdict": "mismatch",
+      "note": "CREDITS cite an interior page, but candidate is a full cover (wrong image type)."
+    },
+    {
+      "n": 60,
+      "title": "Tombstone vs. Spider-Man",
+      "source": "The Spectacular Spider-Man (1976) #206, Cover",
+      "verdict": "shipped",
+      "note": "Approved and wired into the main flipper"
+    },
+    {
+      "n": 61,
+      "title": "Origin of Venom",
+      "source": "Venom: Lethal Protector (1993) Gold Retailer Incentive, Back Cover",
+      "verdict": "mismatch",
+      "note": "Eddie/Venom face transform is not Lethal Protector #1 crouch art."
+    },
+    {
+      "n": 62,
+      "title": "Origin of Typhoid Mary",
+      "source": "Daredevil: The Man Without Fear (1964) #254, Page 2",
+      "verdict": "mismatch",
+      "note": "CREDITS cite an interior page, but candidate is a full cover (wrong image type)."
+    },
+    {
+      "n": 63,
+      "title": "Mr. Fix-It",
+      "source": "The Fantastic Four (1963) #348, Cover",
+      "verdict": "shipped",
+      "note": "Approved and wired into the main flipper"
+    },
+    {
+      "n": 64,
+      "title": "The Origin of Speedball",
+      "source": "The New Warriors (1990) #31, Page 14",
+      "verdict": "mismatch",
+      "note": "CREDITS cite an interior page, but candidate is a full cover (wrong image type)."
+    },
+    {
+      "n": 65,
+      "title": "Captain America vs. The Captain",
+      "source": "Captain America (1968) #422, Page 8",
+      "verdict": "mismatch",
+      "note": "Cap forward lunge differs from Cap #422 defensive pose."
+    },
+    {
+      "n": 66,
+      "title": "Universal Guardian",
+      "source": "1992 Comic Images Silver Surfer Card Set #66; Unused Corner Box Art",
+      "verdict": "missing",
+      "note": "No candidate image on file"
+    },
+    {
+      "n": 67,
+      "title": "The Cosmic Spider-Man",
+      "source": "The Spectacular Spider-Man (1976) #201, Page 21",
+      "verdict": "mismatch",
+      "note": "CREDITS cite an interior page, but candidate is a full cover (wrong image type)."
+    },
+    {
+      "n": 68,
+      "title": "The Origin of Nomad",
+      "source": "Nomad (1990) #1, Cover",
+      "verdict": "shipped",
+      "note": "Approved and wired into the main flipper"
+    },
+    {
+      "n": 69,
+      "title": "Thanos Quest",
+      "source": "The Thanos Quest (1990) #1, Page 48",
+      "verdict": "mismatch",
+      "note": "CREDITS cite an interior page, but candidate is a full cover (wrong image type)."
+    },
+    {
+      "n": 70,
+      "title": "Cable Returns from the Future",
+      "source": "1992 Impel X-Men Series I by Jim Lee",
+      "verdict": "missing",
+      "note": "No candidate image on file"
+    },
+    {
+      "n": 71,
+      "title": "Ghost Rider #1",
+      "source": "Ghost Rider (1990) #1, Cover",
+      "verdict": "mismatch",
+      "note": "Danny Ketch motorcycle Rider vs Western Ghost Rider #1 on horseback."
+    },
+    {
+      "n": 72,
+      "title": "The Creation of Deathlok",
+      "source": "Deathlok (1990) #1, Page 28",
+      "verdict": "mismatch",
+      "note": "CREDITS cite an interior page, but candidate is a full cover (wrong image type)."
+    },
+    {
+      "n": 73,
+      "title": "Origin of the New Warriors",
+      "source": "Nova (1993) #1, Page 1",
+      "verdict": "mismatch",
+      "note": "CREDITS cite an interior page, but candidate is a full cover (wrong image type)."
+    },
+    {
+      "n": 74,
+      "title": "Cable vs. Wolverine",
+      "source": "The New Mutants (1983) #93, Cover",
+      "verdict": "shipped",
+      "note": "Approved and wired into the main flipper"
+    },
+    {
+      "n": 75,
+      "title": "Gambit Appears",
+      "source": "X-Men (1991) #25, Gambit Hologram",
+      "verdict": "mismatch",
+      "note": "Gambit card art is not the X-Men #25 Magneto/Wolverine cover."
+    },
+    {
+      "n": 76,
+      "title": "X-Tinction Agenda",
+      "source": "X-Tinction Agenda House Ad/Promotional Material; X-Men (1991) #1 Composite (Cyclops)",
+      "verdict": "missing",
+      "note": "No candidate image on file"
+    },
+    {
+      "n": 77,
+      "title": "Hulk Reborn",
+      "source": "The Incredible Hulk (1968) #391, Page 19",
+      "verdict": "mismatch",
+      "note": "CREDITS cite an interior page, but candidate is a full cover (wrong image type)."
+    },
+    {
+      "n": 78,
+      "title": "Deadpool Strikes",
+      "source": "Deadpool: The Circle Chase (1993) #2, Page 5",
+      "verdict": "mismatch",
+      "note": "CREDITS cite an interior page, but candidate is a full cover (wrong image type)."
+    },
+    {
+      "n": 79,
+      "title": "Origin of Shatterstar",
+      "source": "X-Force (1991) Annual #1, Cover",
+      "verdict": "shipped",
+      "note": "Approved and wired into the main flipper"
+    },
+    {
+      "n": 80,
+      "title": "New Mutants No More",
+      "source": "The New Mutants (1983) #100, Cover",
+      "verdict": "shipped",
+      "note": "Approved and wired into the main flipper"
+    },
+    {
+      "n": 81,
+      "title": "The Return of Blaze",
+      "source": "Ghost Rider & Blaze: Spirits of Vengeance (1992) #1, Mini-Poster",
+      "verdict": "unchecked",
+      "note": "Not visually confirmed yet"
+    },
+    {
+      "n": 82,
+      "title": "Child of the Future",
+      "source": "X-Factor (1986) #66, Cover",
+      "verdict": "shipped",
+      "note": "Approved and wired into the main flipper"
+    },
+    {
+      "n": 83,
+      "title": "The New X-Factor",
+      "source": "X-Factor (1986) #71, Cover",
+      "verdict": "shipped",
+      "note": "Approved and wired into the main flipper"
+    },
+    {
+      "n": 84,
+      "title": "Two Teams of X-Men",
+      "source": "The Uncanny X-Men (1963) #300, Cover",
+      "verdict": "shipped",
+      "note": "Approved and wired into the main flipper"
+    },
+    {
+      "n": 85,
+      "title": "The Origin of Bishop",
+      "source": "Suspected unused in print. Used on a licensed Comic Images T-shirt in 1993.",
+      "verdict": "missing",
+      "note": "No candidate image on file"
+    },
+    {
+      "n": 86,
+      "title": "Omega Red vs. Wolverine",
+      "source": "X-Men (1991) #5, Cover",
+      "verdict": "mismatch",
+      "note": "Omega Red vs Wolverine vs unrelated X-Men #5."
+    },
+    {
+      "n": 87,
+      "title": "The Punisher Infiltrates the Mob",
+      "source": "The Punisher: War Zone (1993) #8, Cover",
+      "verdict": "shipped",
+      "note": "Approved and wired into the main flipper"
+    },
+    {
+      "n": 88,
+      "title": "Origin of Carnage",
+      "source": "The Amazing Spider-Man (1963) #384, Page 16",
+      "verdict": "shipped",
+      "note": "User-picked candidate #6"
+    },
+    {
+      "n": 89,
+      "title": "The New Cage",
+      "source": "Cage (1992) #1, Cover",
+      "verdict": "shipped",
+      "note": "Approved and wired into the main flipper"
+    },
+    {
+      "n": 90,
+      "title": "Outbreak of War Machine",
+      "source": "Iron Man (1968) #282, Cover",
+      "verdict": "shipped",
+      "note": "Approved and wired into the main flipper"
+    },
+    {
+      "n": 91,
+      "title": "Death of Mariko",
+      "source": "Wolverine (1988) #65, Page 18",
+      "verdict": "mismatch",
+      "note": "CREDITS cite an interior page, but candidate is a full cover (wrong image type)."
+    },
+    {
+      "n": 92,
+      "title": "Invasion of the Spider-Slayers",
+      "source": "The Amazing Spider-Man (1963) #368, Cover",
+      "verdict": "shipped",
+      "note": "Approved and wired into the main flipper"
+    },
+    {
+      "n": 93,
+      "title": "The Origin of Nightstalkers",
+      "source": "Nightstalkers (1992) #1, Mini-Poster",
+      "verdict": "unchecked",
+      "note": "Not visually confirmed yet"
+    },
+    {
+      "n": 94,
+      "title": "The Origin of Spider-Man 2099",
+      "source": "Spider-Man 2099 (1993) #6, Page 5",
+      "verdict": "mismatch",
+      "note": "CREDITS cite an interior page, but candidate is a full cover (wrong image type)."
+    },
+    {
+      "n": 95,
+      "title": "Hulk Leads the Pantheon",
+      "source": "The Incredible Hulk (1968) #410, Page 15",
+      "verdict": "mismatch",
+      "note": "Full-body roaring Hulk differs from Incredible Hulk #410 face close-up."
+    },
+    {
+      "n": 96,
+      "title": "X-Cutioner's Song",
+      "source": "X-Factor (1986) #88, Page 1; Page 18 (Composite)",
+      "verdict": "mismatch",
+      "note": "CREDITS cite an interior page, but candidate is a full cover (wrong image type)."
+    },
+    {
+      "n": 97,
+      "title": "Cable vs. Stryfe",
+      "source": "The New Mutants (1983) #94, Page 20",
+      "verdict": "mismatch",
+      "note": "CREDITS cite an interior page, but candidate is a full cover (wrong image type)."
+    },
+    {
+      "n": 98,
+      "title": "Wonder Man Resurrected",
+      "source": "Wonder Man (1991) #25, Cover",
+      "verdict": "shipped",
+      "note": "Approved and wired into the main flipper"
+    },
+    {
+      "n": 99,
+      "title": "Doom of the Future",
+      "source": "Doom 2099 (1992) #2, Cover",
+      "verdict": "shipped",
+      "note": "Approved and wired into the main flipper"
+    }
+  ]
+}

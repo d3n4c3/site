@@ -1,0 +1,51 @@
+{
+  "n": 96,
+  "key": "096",
+  "title": "X-Cutioner's Song",
+  "source": "X-Factor (1986) #88, Page 1; Page 18 (Composite)",
+  "artist": "Jae Lee",
+  "matches": [
+    {
+      "idx": 1,
+      "file": "01.jpg",
+      "score": 0.077,
+      "kind": "wiki-candidate",
+      "label": "File:Pietro Maximoff (Earth-616) and Crystalia Amaquelin (Earth-616) from X-Factor Vol 1 88 0001.jpg"
+    },
+    {
+      "idx": 2,
+      "file": "02.jpg",
+      "score": 0.0756,
+      "kind": "wiki-candidate",
+      "label": "File:X-Factor Vol 1 88.jpg"
+    },
+    {
+      "idx": 3,
+      "file": "03.jpg",
+      "score": 0.0508,
+      "kind": "wiki-candidate",
+      "label": "File:X-Cutioner's Song from Marvel Universe Cards Series IV 0001.jpg"
+    },
+    {
+      "idx": 4,
+      "file": "04.jpg",
+      "score": 0.0507,
+      "kind": "wiki-candidate",
+      "label": "File:Marshall Stone III (Earth-616) from X-Factor Vol 1 88.jpg"
+    },
+    {
+      "idx": 5,
+      "file": "05.jpg",
+      "score": 0.05,
+      "kind": "wiki-candidate",
+      "label": "File:X-Patriots (Earth-616) from X-Factor Vol 1 88 0001.png"
+    },
+    {
+      "idx": 6,
+      "file": "06.jpg",
+      "score": 0.0448,
+      "kind": "wiki-candidate",
+      "label": "File:X-Men Milestones X-Cutioner's Song Vol 1 1.jpg"
+    }
+  ]
+}

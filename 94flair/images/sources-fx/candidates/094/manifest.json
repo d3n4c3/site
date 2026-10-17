@@ -1,0 +1,84 @@
+{
+  "n": 94,
+  "key": "094",
+  "title": "The Origin of Spider-Man 2099",
+  "source": "Spider-Man 2099 (1993) #6, Page 5",
+  "tokens": [
+    "Spider-Man"
+  ],
+  "page": 5,
+  "promo": false,
+  "status": "ok",
+  "candidates": [
+    {
+      "idx": 1,
+      "file": "01.jpg",
+      "wiki": "File:Avatarr (Earth-928) from Spider-Man 2099 Vol 1 6 001.jpg",
+      "score": 174,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/3/34/Avatarr_%28Earth-928%29_from_Spider-Man_2099_Vol_1_6_001.jpg/revision/latest?cb=20171223151748"
+    },
+    {
+      "idx": 2,
+      "file": "02.jpg",
+      "wiki": "File:Danko (Earth-928) from Spider-Man 2099 Vol 1 6 001.png",
+      "score": 174,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/4/48/Danko_%28Earth-928%29_from_Spider-Man_2099_Vol_1_6_001.png/revision/latest?cb=20140515114506"
+    },
+    {
+      "idx": 3,
+      "file": "03.jpg",
+      "wiki": "File:Doctor Morrow (Earth-928) from Spider-Man 2099 Vol 1 6 001.png",
+      "score": 174,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/0/0f/Doctor_Morrow_%28Earth-928%29_from_Spider-Man_2099_Vol_1_6_001.png/revision/latest?cb=20140515113707"
+    },
+    {
+      "idx": 4,
+      "file": "04.jpg",
+      "wiki": "File:Frank Fuchs (Earth-928) from Spider-Man 2099 Vol 1 6 001.png",
+      "score": 174,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/b/b9/Frank_Fuchs_%28Earth-928%29_from_Spider-Man_2099_Vol_1_6_001.png/revision/latest?cb=20140515114422"
+    },
+    {
+      "idx": 5,
+      "file": "05.jpg",
+      "wiki": "File:Freakers (Earth-928) from Spider-Man 2099 Vol 1 6 001.png",
+      "score": 174,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/8/87/Freakers_%28Earth-928%29_from_Spider-Man_2099_Vol_1_6_001.png/revision/latest?cb=20200417171628"
+    },
+    {
+      "idx": 6,
+      "file": "06.jpg",
+      "wiki": "File:Throwbacks (Earth-928) from Spider-Man 2099 Vol 1 6 001.png",
+      "score": 174,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/b/bf/Throwbacks_%28Earth-928%29_from_Spider-Man_2099_Vol_1_6_001.png/revision/latest?cb=20200417171528"
+    },
+    {
+      "idx": 7,
+      "file": "07.jpg",
+      "wiki": "File:Tomi Quan (Earth-928) from Spider-Man 2099 Vol 1 6 001.png",
+      "score": 174,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/8/8f/Tomi_Quan_%28Earth-928%29_from_Spider-Man_2099_Vol_1_6_001.png/revision/latest?cb=20140515113329"
+    },
+    {
+      "idx": 8,
+      "file": "08.jpg",
+      "wiki": "File:Watchdog Inc. (Earth-928) from Spider-Man 2099 Vol 1 6 001.png",
+      "score": 174,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/d/d7/Watchdog_Inc._%28Earth-928%29_from_Spider-Man_2099_Vol_1_6_001.png/revision/latest?cb=20140515113814"
+    },
+    {
+      "idx": 9,
+      "file": "09.jpg",
+      "wiki": "File:Rhonda Fleming (Earth-616) from Spider-Man 2099 Vol 3 6 001.jpg",
+      "score": 107,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/7/7a/Rhonda_Fleming_%28Earth-616%29_from_Spider-Man_2099_Vol_3_6_001.jpg/revision/latest?cb=20171213011724"
+    },
+    {
+      "idx": 10,
+      "file": "10.jpg",
+      "wiki": "File:42nd Street from Spider-Man 2099 Vol 3 6 001.jpg",
+      "score": 99,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/8/8e/42nd_Street_from_Spider-Man_2099_Vol_3_6_001.jpg/revision/latest?cb=20171213020627"
+    }
+  ]
+}

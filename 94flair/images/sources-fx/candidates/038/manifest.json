@@ -1,0 +1,66 @@
+{
+  "n": 38,
+  "key": "038",
+  "title": "The Hellfire Club Revealed",
+  "source": "The Uncanny X-Men (1963) #281, Page 6",
+  "issue_keys": [
+    "The Uncanny X-Men Vol 1 281",
+    "The Uncanny X-Men Vol 2 281",
+    "The Uncanny X-Men 281",
+    "Uncanny X-Men Vol 1 281"
+  ],
+  "page": 6,
+  "part": "page",
+  "status": "ok",
+  "candidates": [
+    {
+      "idx": 1,
+      "file": "01.jpg",
+      "wiki": "File:Emma Frost (Earth-616) and Hellions (Earth-616) from Uncanny X-Men Vol 1 281 001.jpg",
+      "score": 95,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/b/b4/Emma_Frost_%28Earth-616%29_and_Hellions_%28Earth-616%29_from_Uncanny_X-Men_Vol_1_281_001.jpg/revision/latest?cb=20200914221725"
+    },
+    {
+      "idx": 2,
+      "file": "02.jpg",
+      "wiki": "File:Emma Frost (Earth-616) from Uncanny X-Men Vol 1 281 001.jpg",
+      "score": 95,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/b/b3/Emma_Frost_%28Earth-616%29_from_Uncanny_X-Men_Vol_1_281_001.jpg/revision/latest?cb=20200914221512"
+    },
+    {
+      "idx": 3,
+      "file": "03.jpg",
+      "wiki": "File:Uncanny X-Men Vol 1 281.jpg",
+      "score": 67,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/3/39/Uncanny_X-Men_Vol_1_281.jpg/revision/latest?cb=20180910045851"
+    },
+    {
+      "idx": 4,
+      "file": "04.jpg",
+      "wiki": "File:Uncanny X-Men Vol 1 281 Wraparound Textless.jpg",
+      "score": 58,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/2/29/Uncanny_X-Men_Vol_1_281_Wraparound_Textless.jpg/revision/latest/scale-to-width-down/1400?cb=20200914085148"
+    },
+    {
+      "idx": 5,
+      "file": "05.jpg",
+      "wiki": "File:Uncanny X-Men Vol 1 281 Back.jpg",
+      "score": 50,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/5/56/Uncanny_X-Men_Vol_1_281_Back.jpg/revision/latest?cb=20140117220750"
+    },
+    {
+      "idx": 6,
+      "file": "06.jpg",
+      "wiki": "File:Uncanny X-Men Vol 1 281 Second Printing Variant.jpg",
+      "score": 50,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/7/7e/Uncanny_X-Men_Vol_1_281_Second_Printing_Variant.jpg/revision/latest?cb=20070228055725"
+    },
+    {
+      "idx": 7,
+      "file": "07.jpg",
+      "wiki": "File:Uncanny X-Men Vol 1 281 Wraparound.jpg",
+      "score": 50,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/f/f3/Uncanny_X-Men_Vol_1_281_Wraparound.jpg/revision/latest/scale-to-width-down/1400?cb=20200914090936"
+    }
+  ]
+}
