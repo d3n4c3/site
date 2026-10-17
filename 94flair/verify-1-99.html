@@ -1,0 +1,1724 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>94 Flair — verify sources #001–099</title>
+<style>
+  :root { color-scheme: dark; --bg:#100e14; --panel:#1a1620; --text:#f2ebe0; --muted:#a89b8a; --gold:#e0b85a; --line:rgba(224,184,90,.25); }
+  * { box-sizing: border-box; }
+  body { margin:0; font: 15px/1.45 "Segoe UI", system-ui, sans-serif; background: var(--bg); color: var(--text); }
+  header.top { position: sticky; top:0; z-index:5; padding: 14px 18px; background: rgba(16,14,20,.94); border-bottom: 1px solid var(--line); backdrop-filter: blur(8px); }
+  header.top h1 { margin:0; font-size: 18px; letter-spacing: .04em; }
+  header.top p { margin: 6px 0 0; color: var(--muted); max-width: 70rem; }
+  .warn { color: #f0c27a; }
+  nav { display:flex; flex-wrap:wrap; gap:6px; margin-top:10px; }
+  nav a { color: var(--gold); text-decoration:none; font-size:12px; padding:2px 6px; border:1px solid var(--line); border-radius:4px; }
+  main { padding: 16px 18px 48px; display: grid; gap: 22px; max-width: 1100px; margin: 0 auto; }
+  .row { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: 14px; }
+  .row header { display:flex; flex-wrap:wrap; gap:8px; align-items:baseline; font-size:16px; }
+  .badge { font-size:11px; color: var(--muted); border:1px solid var(--line); border-radius:99px; padding:2px 8px; }
+  .cite { margin: 6px 0 12px; color: var(--muted); font-size: 13px; }
+  .pair { display:grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  figure { margin:0; }
+  figcaption { font-size:12px; letter-spacing:.08em; text-transform:uppercase; color: var(--gold); margin-bottom:8px; }
+  img { width:100%; height:auto; max-height: 420px; object-fit: contain; background:#0b0910; border-radius:6px; display:block; }
+  .missing { min-height:200px; display:grid; place-items:center; background:#0b0910; border-radius:6px; color:var(--muted); }
+  @media (max-width:720px) { .pair { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<header class="top">
+  <h1>Verify source art — base #001–099</h1>
+  <p class="warn">Review only. These are <b>not</b> wired into the card flipper. Left = Flair card front. Right = candidate from the CREDITS citation (usually a Marvel Database cover/page). Mark which ones match the card art — many will be wrong, same as before.</p>
+  <p>Missing candidate images: 003, 010, 033, 037, 042, 044, 066, 070, 076, 085.</p>
+  <nav><a href="#c001">1</a><a href="#c002">2</a><a href="#c003">3</a><a href="#c004">4</a><a href="#c005">5</a><a href="#c006">6</a><a href="#c007">7</a><a href="#c008">8</a><a href="#c009">9</a><a href="#c010">10</a><a href="#c011">11</a><a href="#c012">12</a><a href="#c013">13</a><a href="#c014">14</a><a href="#c015">15</a><a href="#c016">16</a><a href="#c017">17</a><a href="#c018">18</a><a href="#c019">19</a><a href="#c020">20</a><a href="#c021">21</a><a href="#c022">22</a><a href="#c023">23</a><a href="#c024">24</a><a href="#c025">25</a><a href="#c026">26</a><a href="#c027">27</a><a href="#c028">28</a><a href="#c029">29</a><a href="#c030">30</a><a href="#c031">31</a><a href="#c032">32</a><a href="#c033">33</a><a href="#c034">34</a><a href="#c035">35</a><a href="#c036">36</a><a href="#c037">37</a><a href="#c038">38</a><a href="#c039">39</a><a href="#c040">40</a><a href="#c041">41</a><a href="#c042">42</a><a href="#c043">43</a><a href="#c044">44</a><a href="#c045">45</a><a href="#c046">46</a><a href="#c047">47</a><a href="#c048">48</a><a href="#c049">49</a><a href="#c050">50</a><a href="#c051">51</a><a href="#c052">52</a><a href="#c053">53</a><a href="#c054">54</a><a href="#c055">55</a><a href="#c056">56</a><a href="#c057">57</a><a href="#c058">58</a><a href="#c059">59</a><a href="#c060">60</a><a href="#c061">61</a><a href="#c062">62</a><a href="#c063">63</a><a href="#c064">64</a><a href="#c065">65</a><a href="#c066">66</a><a href="#c067">67</a><a href="#c068">68</a><a href="#c069">69</a><a href="#c070">70</a><a href="#c071">71</a><a href="#c072">72</a><a href="#c073">73</a><a href="#c074">74</a><a href="#c075">75</a><a href="#c076">76</a><a href="#c077">77</a><a href="#c078">78</a><a href="#c079">79</a><a href="#c080">80</a><a href="#c081">81</a><a href="#c082">82</a><a href="#c083">83</a><a href="#c084">84</a><a href="#c085">85</a><a href="#c086">86</a><a href="#c087">87</a><a href="#c088">88</a><a href="#c089">89</a><a href="#c090">90</a><a href="#c091">91</a><a href="#c092">92</a><a href="#c093">93</a><a href="#c094">94</a><a href="#c095">95</a><a href="#c096">96</a><a href="#c097">97</a><a href="#c098">98</a><a href="#c099">99</a></nav>
+</header>
+<main>
+
+    <article class="row" id="c001">
+      <header>
+        <b>#001</b> Origin of the Fantastic Four!
+        <span class="badge">CREDITS → wiki cover candidate</span>
+      </header>
+      <p class="cite">Cited: Fantastic Four Unlimited (1993) #1, Cover · Herb Trimpe</p>
+      <div class="pair">
+        <figure>
+          <figcaption>Card front</figcaption>
+          <img src="images/thumbs/cards/001.jpg" alt="Card 001 front" loading="lazy">
+        </figure>
+        <figure>
+          <figcaption>Proposed source</figcaption>
+          <img src="images/thumbs/sources/001.jpg" alt="Proposed source 001" loading="lazy">
+        </figure>
+      </div>
+    </article>
+    <article class="row" id="c002">
+      <header>
+        <b>#002</b> Origin of the Incredible Hulk
+        <span class="badge">CREDITS → wiki cover candidate</span>
+      </header>
+      <p class="cite">Cited: The Incredible Hulk (1968) #393, Cover · Dale Keown</p>
+      <div class="pair">
+        <figure>
+          <figcaption>Card front</figcaption>
+          <img src="images/thumbs/cards/002.jpg" alt="Card 002 front" loading="lazy">
+        </figure>
+        <figure>
+          <figcaption>Proposed source</figcaption>
+          <img src="images/thumbs/sources/002.jpg" alt="Proposed source 002" loading="lazy">
+        </figure>
+      </div>
+    </article>
+    <article class="row" id="c003">
+      <header>
+        <b>#003</b> Origin of Spider-Man
+        <span class="badge">none</span>
+      </header>
+      <p class="cite">Cited: 1992 Impel Amazing Spider-Man 30th Anniversary Card Set · Ron Frenz; Al Milgrom</p>
+      <div class="pair">
+        <figure>
+          <figcaption>Card front</figcaption>
+          <img src="images/thumbs/cards/003.jpg" alt="Card 003 front" loading="lazy">
+        </figure>
+        <figure>
+          <figcaption>Proposed source</figcaption>
+          <div class="missing">No candidate image</div>
+        </figure>
+      </div>
+    </article>
+    <article class="row" id="c004">
+      <header>
+        <b>#004</b> Origin of Thor
+        <span class="badge">CREDITS → wiki cover candidate</span>
+      </header>
+      <p class="cite">Cited: Journey Into Mystery (1952) #89, Cover · Jack Kirby</p>
+      <div class="pair">
+        <figure>
+          <figcaption>Card front</figcaption>
+          <img src="images/thumbs/cards/004.jpg" alt="Card 004 front" loading="lazy">
+        </figure>
+        <figure>
+          <figcaption>Proposed source</figcaption>
+          <img src="images/thumbs/sources/004.jpg" alt="Proposed source 004" loading="lazy">
+        </figure>
+      </div>
+    </article>
+    <article class="row" id="c005">
+      <header>
+        <b>#005</b> Amazing Spider-Man #1
+        <span class="badge">CREDITS → wiki cover candidate</span>
+      </header>
+      <p class="cite">Cited: Web of Spider-Man (1985) #105, Page 2 · Rurik Tyler</p>
+      <div class="pair">
+        <figure>
+          <figcaption>Card front</figcaption>
+          <img src="images/thumbs/cards/005.jpg" alt="Card 005 front" loading="lazy">
+        </figure>
+        <figure>
+          <figcaption>Proposed source</figcaption>
+          <img src="images/thumbs/sources/005.jpg" alt="Proposed source 005" loading="lazy">
+        </figure>
+      </div>
+    </article>
+    <article class="row" id="c006">
+      <header>
+        <b>#006</b> The Origin of Iron Man
+        <span class="badge">CREDITS → wiki cover candidate</span>
+      </header>
+      <p class="cite">Cited: Tales of Suspense (1959) #39, Page 1 · Don Heck</p>
+      <div class="pair">
+        <figure>
+          <figcaption>Card front</figcaption>
+          <img src="images/thumbs/cards/006.jpg" alt="Card 006 front" loading="lazy">
+        </figure>
+        <figure>
+          <figcaption>Proposed source</figcaption>
+          <img src="images/thumbs/sources/006.jpg" alt="Proposed source 006" loading="lazy">
+        </figure>
+      </div>
+    </article>
+    <article class="row" id="c007">
+      <header>
+        <b>#007</b> Hulk -vs- Thing
+        <span class="badge">CREDITS → wiki cover candidate</span>
+      </header>
+      <p class="cite">Cited: Fantastic Four Unlimited (1993) #4, Cover · Herb Trimpe</p>
+      <div class="pair">
+        <figure>
+          <figcaption>Card front</figcaption>
+          <img src="images/thumbs/cards/007.jpg" alt="Card 007 front" loading="lazy">
+        </figure>
+        <figure>
+          <figcaption>Proposed source</figcaption>
+          <img src="images/thumbs/sources/007.jpg" alt="Proposed source 007" loading="lazy">
+        </figure>
+      </div>
+    </article>
+    <article class="row" id="c008">
+      <header>
+        <b>#008</b> Origin of Vulture
+        <span class="badge">CREDITS → wiki cover candidate</span>
+      </header>
+      <p class="cite">Cited: The Spectacular Spider-Man (1976) #188, Cover · Sal Buscema</p>
+      <div class="pair">
+        <figure>
+          <figcaption>Card front</figcaption>
+          <img src="images/thumbs/cards/008.jpg" alt="Card 008 front" loading="lazy">
+        </figure>
+        <figure>
+          <figcaption>Proposed source</figcaption>
+          <img src="images/thumbs/sources/008.jpg" alt="Proposed source 008" loading="lazy">
+        </figure>
+      </div>
+    </article>
+    <article class="row" id="c009">
+      <header>
+        <b>#009</b> Origin of Doc Ock
+        <span class="badge">CREDITS → wiki cover candidate</span>
+      </header>
+      <p class="cite">Cited: Lethal Foes of Spider-Man (1994) #3, Page 2 · Keith Pollard; David Boller</p>
+      <div class="pair">
+        <figure>
+          <figcaption>Card front</figcaption>
+          <img src="images/thumbs/cards/009.jpg" alt="Card 009 front" loading="lazy">
+        </figure>
+        <figure>
+          <figcaption>Proposed source</figcaption>
+          <img src="images/thumbs/sources/009.jpg" alt="Proposed source 009" loading="lazy">
+        </figure>
+      </div>
+    </article>
+    <article class="row" id="c010">
+      <header>
+        <b>#010</b> Origin of The X-Men
+        <span class="badge">none</span>
+      </header>
+      <p class="cite">Cited: In-house sketches by Ron Lim. Also used as X-Men playing cards (1994), store counter standee (1995), and X-Men magnets (1996) · Ron Lim</p>
+      <div class="pair">
+        <figure>
+          <figcaption>Card front</figcaption>
+          <img src="images/thumbs/cards/010.jpg" alt="Card 010 front" loading="lazy">
+        </figure>
+        <figure>
+          <figcaption>Proposed source</figcaption>
+          <div class="missing">No candidate image</div>
+        </figure>
+      </div>
+    </article>
+    <article class="row" id="c011">
+      <header>
+        <b>#011</b> Avengers Assemble
+        <span class="badge">CREDITS → wiki cover candidate</span>
+      </header>
+      <p class="cite">Cited: The Avengers (1963) Annual #20, Page 56 · Mike Mignola</p>
+      <div class="pair">
+        <figure>
+          <figcaption>Card front</figcaption>
+          <img src="images/thumbs/cards/011.jpg" alt="Card 011 front" loading="lazy">
+        </figure>
+        <figure>
+          <figcaption>Proposed source</figcaption>
+          <img src="images/thumbs/sources/011.jpg" alt="Proposed source 011" loading="lazy">
+        </figure>
+      </div>
+    </article>
+    <article class="row" id="c012">
+      <header>
+        <b>#012</b> Origin of Dr. Strange
+        <span class="badge">CREDITS → wiki cover candidate</span>
+      </header>
+      <p class="cite">Cited: Marvel Treasury Edition (1974) #6, Page 57 · Frank Brunner</p>
+      <div class="pair">
+        <figure>
+          <figcaption>Card front</figcaption>
+          <img src="images/thumbs/cards/012.jpg" alt="Card 012 front" loading="lazy">
+        </figure>
+        <figure>
+          <figcaption>Proposed source</figcaption>
+          <img src="images/thumbs/sources/012.jpg" alt="Proposed source 012" loading="lazy">
+        </figure>
+      </div>
+    </article>
+    <article class="row" id="c013">
+      <header>
+        <b>#013</b> Brotherhood of Evil Mutants
+        <span class="badge">CREDITS → wiki cover candidate</span>
+      </header>
+      <p class="cite">Cited: The Avengers (1963) #75, Cover · John Buscema</p>
+      <div class="pair">
+        <figure>
+          <figcaption>Card front</figcaption>
+          <img src="images/thumbs/cards/013.jpg" alt="Card 013 front" loading="lazy">
+        </figure>
+        <figure>
+          <figcaption>Proposed source</figcaption>
+          <img src="images/thumbs/sources/013.jpg" alt="Proposed source 013" loading="lazy">
+        </figure>
+      </div>
+    </article>
+    <article class="row" id="c014">
+      <header>
+        <b>#014</b> Origin of Daredevil
+        <span class="badge">CREDITS → wiki cover candidate</span>
+      </header>
+      <p class="cite">Cited: Daredevil: The Man Without Fear (1964) #1, Cover · Bill Everett</p>
+      <div class="pair">
+        <figure>
+          <figcaption>Card front</figcaption>
+          <img src="images/thumbs/cards/014.jpg" alt="Card 014 front" loading="lazy">
+        </figure>
+        <figure>
+          <figcaption>Proposed source</figcaption>
+          <img src="images/thumbs/sources/014.jpg" alt="Proposed source 014" loading="lazy">
+        </figure>
+      </div>
+    </article>
+    <article class="row" id="c015">
+      <header>
+        <b>#015</b> Scorpion -vs- Spider-Man
+        <span class="badge">CREDITS → wiki cover candidate</span>
+      </header>
+      <p class="cite">Cited: The Amazing Spider-Man (1963) #20, Cover · Steve Ditko</p>
+      <div class="pair">
+        <figure>
+          <figcaption>Card front</figcaption>
+          <img src="images/thumbs/cards/015.jpg" alt="Card 015 front" loading="lazy">
+        </figure>
+        <figure>
+          <figcaption>Proposed source</figcaption>
+          <img src="images/thumbs/sources/015.jpg" alt="Proposed source 015" loading="lazy">
+        </figure>
+      </div>
+    </article>
+    <article class="row" id="c016">
+      <header>
+        <b>#016</b> The Origin of Captain America
+        <span class="badge">CREDITS → wiki cover candidate</span>
+      </header>
+      <p class="cite">Cited: Captain America #111, Cover · </p>
+      <div class="pair">
+        <figure>
+          <figcaption>Card front</figcaption>
+          <img src="images/thumbs/cards/016.jpg" alt="Card 016 front" loading="lazy">
+        </figure>
+        <figure>
+          <figcaption>Proposed source</figcaption>
+          <img src="images/thumbs/sources/016.jpg" alt="Proposed source 016" loading="lazy">
+        </figure>
+      </div>
+    </article>
+    <article class="row" id="c017">
+      <header>
+        <b>#017</b> Daredevil -vs- Submariner
+        <span class="badge">CREDITS → wiki cover candidate</span>
+      </header>
+      <p class="cite">Cited: Daredevil: The Man Without Fear (1964) #7, Cover · Wally Wood</p>
+      <div class="pair">
+        <figure>
+          <figcaption>Card front</figcaption>
+          <img src="images/thumbs/cards/017.jpg" alt="Card 017 front" loading="lazy">
+        </figure>
+        <figure>
+          <figcaption>Proposed source</figcaption>
+          <img src="images/thumbs/sources/017.jpg" alt="Proposed source 017" loading="lazy">
+        </figure>
+      </div>
+    </article>
+    <article class="row" id="c018">
+      <header>
+        <b>#018</b> Wedding of Reed & Sue
+        <span class="badge">CREDITS → wiki cover candidate</span>
+      </header>
+      <p class="cite">Cited: Fantastic Four (1963) #375, Cover · Tom DeFalco</p>
+      <div class="pair">
+        <figure>
+          <figcaption>Card front</figcaption>
+          <img src="images/thumbs/cards/018.jpg" alt="Card 018 front" loading="lazy">
+        </figure>
+        <figure>
+          <figcaption>Proposed source</figcaption>
+          <img src="images/thumbs/sources/018.jpg" alt="Proposed source 018" loading="lazy">
+        </figure>
+      </div>
+    </article>
+    <article class="row" id="c019">
+      <header>
+        <b>#019</b> Origin of the Sentinels
+        <span class="badge">CREDITS → wiki cover candidate</span>
+      </header>
+      <p class="cite">Cited: Uncanny X-Men (1963) #140, Cover · John Byrne</p>
+      <div class="pair">
+        <figure>
+          <figcaption>Card front</figcaption>
+          <img src="images/thumbs/cards/019.jpg" alt="Card 019 front" loading="lazy">
+        </figure>
+        <figure>
+          <figcaption>Proposed source</figcaption>
+          <img src="images/thumbs/sources/019.jpg" alt="Proposed source 019" loading="lazy">
+        </figure>
+      </div>
+    </article>
+    <article class="row" id="c020">
+      <header>
+        <b>#020</b> Galactus Appears
+        <span class="badge">CREDITS → wiki cover candidate</span>
+      </header>
+      <p class="cite">Cited: Fantastic Four (1961) #48, Page 21 · Jack Kirby</p>
+      <div class="pair">
+        <figure>
+          <figcaption>Card front</figcaption>
+          <img src="images/thumbs/cards/020.jpg" alt="Card 020 front" loading="lazy">
+        </figure>
+        <figure>
+          <figcaption>Proposed source</figcaption>
+          <img src="images/thumbs/sources/020.jpg" alt="Proposed source 020" loading="lazy">
+        </figure>
+      </div>
+    </article>
+    <article class="row" id="c021">
+      <header>
+        <b>#021</b> Origin of Silver Surfer
+        <span class="badge">CREDITS → wiki cover candidate</span>
+      </header>
+      <p class="cite">Cited: The Incredible Hulk (1968) #414, Page 20 · Gary Frank</p>
+      <div class="pair">
+        <figure>
+          <figcaption>Card front</figcaption>
+          <img src="images/thumbs/cards/021.jpg" alt="Card 021 front" loading="lazy">
+        </figure>
+        <figure>
+          <figcaption>Proposed source</figcaption>
+          <img src="images/thumbs/sources/021.jpg" alt="Proposed source 021" loading="lazy">
+        </figure>
+      </div>
+    </article>
+    <article class="row" id="c022">
+      <header>
+        <b>#022</b> Spider-Man -vs- Green Goblin
+        <span class="badge">CREDITS → wiki cover candidate</span>
+      </header>
+      <p class="cite">Cited: The Amazing Spider-Man (1963) #39, Cover · John Romita Sr.</p>
+      <div class="pair">
+        <figure>
+          <figcaption>Card front</figcaption>
+          <img src="images/thumbs/cards/022.jpg" alt="Card 022 front" loading="lazy">
+        </figure>
+        <figure>
+          <figcaption>Proposed source</figcaption>
+          <img src="images/thumbs/sources/022.jpg" alt="Proposed source 022" loading="lazy">
+        </figure>
+      </div>
+    </article>
+    <article class="row" id="c023">
+      <header>
+        <b>#023</b> Origin of Rhino
+        <span class="badge">CREDITS → wiki cover candidate</span>
+      </header>
+      <p class="cite">Cited: The Amazing Spider-Man (1963) #43, Cover · John Romita Sr.</p>
+      <div class="pair">
+        <figure>
+          <figcaption>Card front</figcaption>
+          <img src="images/thumbs/cards/023.jpg" alt="Card 023 front" loading="lazy">
+        </figure>
+        <figure>
+          <figcaption>Proposed source</figcaption>
+          <img src="images/thumbs/sources/023.jpg" alt="Proposed source 023" loading="lazy">
+        </figure>
+      </div>
+    </article>
+    <article class="row" id="c024">
+      <header>
+        <b>#024</b> Peter Meets Mary Jane
+        <span class="badge">CREDITS → wiki cover candidate</span>
+      </header>
+      <p class="cite">Cited: Marvel Swimsuit Issue (1992) #2, Page 17 · Kirk Jarvinen</p>
+      <div class="pair">
+        <figure>
+          <figcaption>Card front</figcaption>
+          <img src="images/thumbs/cards/024.jpg" alt="Card 024 front" loading="lazy">
+        </figure>
+        <figure>
+          <figcaption>Proposed source</figcaption>
+          <img src="images/thumbs/sources/024.jpg" alt="Proposed source 024" loading="lazy">
+        </figure>
+      </div>
+    </article>
+    <article class="row" id="c025">
+      <header>
+        <b>#025</b> Doom Steals the Power Cosmic
+        <span class="badge">CREDITS → wiki cover candidate</span>
+      </header>
+      <p class="cite">Cited: The Fantastic Four (1961) #128, Page 21 · </p>
+      <div class="pair">
+        <figure>
+          <figcaption>Card front</figcaption>
+          <img src="images/thumbs/cards/025.jpg" alt="Card 025 front" loading="lazy">
+        </figure>
+        <figure>
+          <figcaption>Proposed source</figcaption>
+          <img src="images/thumbs/sources/025.jpg" alt="Proposed source 025" loading="lazy">
+        </figure>
+      </div>
+    </article>
+    <article class="row" id="c026">
+      <header>
+        <b>#026</b> Origin of Warlock
+        <span class="badge">CREDITS → wiki cover candidate</span>
+      </header>
+      <p class="cite">Cited: The Warlock Chronicles (1993) #1, Cover · Tom Raney</p>
+      <div class="pair">
+        <figure>
+          <figcaption>Card front</figcaption>
+          <img src="images/thumbs/cards/026.jpg" alt="Card 026 front" loading="lazy">
+        </figure>
+        <figure>
+          <figcaption>Proposed source</figcaption>
+          <img src="images/thumbs/sources/026.jpg" alt="Proposed source 026" loading="lazy">
+        </figure>
+      </div>
+    </article>
+    <article class="row" id="c027">
+      <header>
+        <b>#027</b> Origin of The Vision
+        <span class="badge">CREDITS → wiki cover candidate</span>
+      </header>
+      <p class="cite">Cited: The Avengers (1963) #57, Cover · John Buscema</p>
+      <div class="pair">
+        <figure>
+          <figcaption>Card front</figcaption>
+          <img src="images/thumbs/cards/027.jpg" alt="Card 027 front" loading="lazy">
+        </figure>
+        <figure>
+          <figcaption>Proposed source</figcaption>
+          <img src="images/thumbs/sources/027.jpg" alt="Proposed source 027" loading="lazy">
+        </figure>
+      </div>
+    </article>
+    <article class="row" id="c028">
+      <header>
+        <b>#028</b> Mephisto Appears
+        <span class="badge">CREDITS → wiki cover candidate</span>
+      </header>
+      <p class="cite">Cited: West Coast Avengers (1985) Annual #8, Page 51 · Larry Alexander</p>
+      <div class="pair">
+        <figure>
+          <figcaption>Card front</figcaption>
+          <img src="images/thumbs/cards/028.jpg" alt="Card 028 front" loading="lazy">
+        </figure>
+        <figure>
+          <figcaption>Proposed source</figcaption>
+          <img src="images/thumbs/sources/028.jpg" alt="Proposed source 028" loading="lazy">
+        </figure>
+      </div>
+    </article>
+    <article class="row" id="c029">
+      <header>
+        <b>#029</b> Origin of Morbius
+        <span class="badge">CREDITS → wiki cover candidate</span>
+      </header>
+      <p class="cite">Cited: Morbius (1992) #1, Mini-Poster · Ron Wagner; Mike Witherby</p>
+      <div class="pair">
+        <figure>
+          <figcaption>Card front</figcaption>
+          <img src="images/thumbs/cards/029.jpg" alt="Card 029 front" loading="lazy">
+        </figure>
+        <figure>
+          <figcaption>Proposed source</figcaption>
+          <img src="images/thumbs/sources/029.jpg" alt="Proposed source 029" loading="lazy">
+        </figure>
+      </div>
+    </article>
+    <article class="row" id="c030">
+      <header>
+        <b>#030</b> Origin of Ghost Rider
+        <span class="badge">CREDITS → wiki cover candidate</span>
+      </header>
+      <p class="cite">Cited: The Original Ghost Rider (1992) #8, Cover · Mike Ploog</p>
+      <div class="pair">
+        <figure>
+          <figcaption>Card front</figcaption>
+          <img src="images/thumbs/cards/030.jpg" alt="Card 030 front" loading="lazy">
+        </figure>
+        <figure>
+          <figcaption>Proposed source</figcaption>
+          <img src="images/thumbs/sources/030.jpg" alt="Proposed source 030" loading="lazy">
+        </figure>
+      </div>
+    </article>
+    <article class="row" id="c031">
+      <header>
+        <b>#031</b> Thanos Attacks
+        <span class="badge">CREDITS → wiki cover candidate</span>
+      </header>
+      <p class="cite">Cited: The Infinity War (1992) #6, Page 14 · Ron Lim</p>
+      <div class="pair">
+        <figure>
+          <figcaption>Card front</figcaption>
+          <img src="images/thumbs/cards/031.jpg" alt="Card 031 front" loading="lazy">
+        </figure>
+        <figure>
+          <figcaption>Proposed source</figcaption>
+          <img src="images/thumbs/sources/031.jpg" alt="Proposed source 031" loading="lazy">
+        </figure>
+      </div>
+    </article>
+    <article class="row" id="c032">
+      <header>
+        <b>#032</b> Death of Gwen Stacy
+        <span class="badge">CREDITS → wiki cover candidate</span>
+      </header>
+      <p class="cite">Cited: The Spectacular Spider-Man (1976) #200, Page 42 · Sal Buscema</p>
+      <div class="pair">
+        <figure>
+          <figcaption>Card front</figcaption>
+          <img src="images/thumbs/cards/032.jpg" alt="Card 032 front" loading="lazy">
+        </figure>
+        <figure>
+          <figcaption>Proposed source</figcaption>
+          <img src="images/thumbs/sources/032.jpg" alt="Proposed source 032" loading="lazy">
+        </figure>
+      </div>
+    </article>
+    <article class="row" id="c033">
+      <header>
+        <b>#033</b> Punisher vs. Spider-Man
+        <span class="badge">none</span>
+      </header>
+      <p class="cite">Cited: The Punisher (1987) Ad/Poster · Klaus Janson</p>
+      <div class="pair">
+        <figure>
+          <figcaption>Card front</figcaption>
+          <img src="images/thumbs/cards/033.jpg" alt="Card 033 front" loading="lazy">
+        </figure>
+        <figure>
+          <figcaption>Proposed source</figcaption>
+          <div class="missing">No candidate image</div>
+        </figure>
+      </div>
+    </article>
+    <article class="row" id="c034">
+      <header>
+        <b>#034</b> Wolverine vs. Hulk
+        <span class="badge">CREDITS → wiki cover candidate</span>
+      </header>
+      <p class="cite">Cited: The Incredible Hulk (1968) #340, Cover · Todd McFarlane</p>
+      <div class="pair">
+        <figure>
+          <figcaption>Card front</figcaption>
+          <img src="images/thumbs/cards/034.jpg" alt="Card 034 front" loading="lazy">
+        </figure>
+        <figure>
+          <figcaption>Proposed source</figcaption>
+          <img src="images/thumbs/sources/034.jpg" alt="Proposed source 034" loading="lazy">
+        </figure>
+      </div>
+    </article>
+    <article class="row" id="c035">
+      <header>
+        <b>#035</b> The Wedding
+        <span class="badge">CREDITS → wiki cover candidate</span>
+      </header>
+      <p class="cite">Cited: X-Men (1991) #26, Cover · Andy Kubert</p>
+      <div class="pair">
+        <figure>
+          <figcaption>Card front</figcaption>
+          <img src="images/thumbs/cards/035.jpg" alt="Card 035 front" loading="lazy">
+        </figure>
+        <figure>
+          <figcaption>Proposed source</figcaption>
+          <img src="images/thumbs/sources/035.jpg" alt="Proposed source 035" loading="lazy">
+        </figure>
+      </div>
+    </article>
+    <article class="row" id="c036">
+      <header>
+        <b>#036</b> Origin of the Invaders
+        <span class="badge">CREDITS → wiki cover candidate</span>
+      </header>
+      <p class="cite">Cited: The Invaders (1993) #1, Cover · Dave Hoover</p>
+      <div class="pair">
+        <figure>
+          <figcaption>Card front</figcaption>
+          <img src="images/thumbs/cards/036.jpg" alt="Card 036 front" loading="lazy">
+        </figure>
+        <figure>
+          <figcaption>Proposed source</figcaption>
+          <img src="images/thumbs/sources/036.jpg" alt="Proposed source 036" loading="lazy">
+        </figure>
+      </div>
+    </article>
+    <article class="row" id="c037">
+      <header>
+        <b>#037</b> Spider-Man meets the Black Cat
+        <span class="badge">none</span>
+      </header>
+      <p class="cite">Cited:  · </p>
+      <div class="pair">
+        <figure>
+          <figcaption>Card front</figcaption>
+          <img src="images/thumbs/cards/037.jpg" alt="Card 037 front" loading="lazy">
+        </figure>
+        <figure>
+          <figcaption>Proposed source</figcaption>
+          <div class="missing">No candidate image</div>
+        </figure>
+      </div>
+    </article>
+    <article class="row" id="c038">
+      <header>
+        <b>#038</b> The Hellfire Club Revealed
+        <span class="badge">CREDITS → wiki cover candidate</span>
+      </header>
+      <p class="cite">Cited: The Uncanny X-Men (1963) #281, Page 6 · Whilce Portacio</p>
+      <div class="pair">
+        <figure>
+          <figcaption>Card front</figcaption>
+          <img src="images/thumbs/cards/038.jpg" alt="Card 038 front" loading="lazy">
+        </figure>
+        <figure>
+          <figcaption>Proposed source</figcaption>
+          <img src="images/thumbs/sources/038.jpg" alt="Proposed source 038" loading="lazy">
+        </figure>
+      </div>
+    </article>
+    <article class="row" id="c039">
+      <header>
+        <b>#039</b> Origin of She-Hulk
+        <span class="badge">CREDITS → wiki cover candidate</span>
+      </header>
+      <p class="cite">Cited: The Sensational She-Hulk #1, Cover · John Byrne</p>
+      <div class="pair">
+        <figure>
+          <figcaption>Card front</figcaption>
+          <img src="images/thumbs/cards/039.jpg" alt="Card 039 front" loading="lazy">
+        </figure>
+        <figure>
+          <figcaption>Proposed source</figcaption>
+          <img src="images/thumbs/sources/039.jpg" alt="Proposed source 039" loading="lazy">
+        </figure>
+      </div>
+    </article>
+    <article class="row" id="c040">
+      <header>
+        <b>#040</b> Origin of Moon Knight
+        <span class="badge">CREDITS → wiki cover candidate</span>
+      </header>
+      <p class="cite">Cited: Marc Spector: Moon Knight (1989) #56, Cover · Stephen Platt</p>
+      <div class="pair">
+        <figure>
+          <figcaption>Card front</figcaption>
+          <img src="images/thumbs/cards/040.jpg" alt="Card 040 front" loading="lazy">
+        </figure>
+        <figure>
+          <figcaption>Proposed source</figcaption>
+          <img src="images/thumbs/sources/040.jpg" alt="Proposed source 040" loading="lazy">
+        </figure>
+      </div>
+    </article>
+    <article class="row" id="c041">
+      <header>
+        <b>#041</b> Days of Future Past
+        <span class="badge">CREDITS → wiki cover candidate</span>
+      </header>
+      <p class="cite">Cited: X-Men Adventures (1992) #1, Page 12 · Andrew Wildman</p>
+      <div class="pair">
+        <figure>
+          <figcaption>Card front</figcaption>
+          <img src="images/thumbs/cards/041.jpg" alt="Card 041 front" loading="lazy">
+        </figure>
+        <figure>
+          <figcaption>Proposed source</figcaption>
+          <img src="images/thumbs/sources/041.jpg" alt="Proposed source 041" loading="lazy">
+        </figure>
+      </div>
+    </article>
+    <article class="row" id="c042">
+      <header>
+        <b>#042</b> Elektra Appears
+        <span class="badge">none</span>
+      </header>
+      <p class="cite">Cited: In-house sketches by Frank Miller · Frank Miller</p>
+      <div class="pair">
+        <figure>
+          <figcaption>Card front</figcaption>
+          <img src="images/thumbs/cards/042.jpg" alt="Card 042 front" loading="lazy">
+        </figure>
+        <figure>
+          <figcaption>Proposed source</figcaption>
+          <div class="missing">No candidate image</div>
+        </figure>
+      </div>
+    </article>
+    <article class="row" id="c043">
+      <header>
+        <b>#043</b> Death of Elektra
+        <span class="badge">CREDITS → wiki cover candidate</span>
+      </header>
+      <p class="cite">Cited: Daredevil: The Man Without Fear (1964) #182, Cover · Frank Miller</p>
+      <div class="pair">
+        <figure>
+          <figcaption>Card front</figcaption>
+          <img src="images/thumbs/cards/043.jpg" alt="Card 043 front" loading="lazy">
+        </figure>
+        <figure>
+          <figcaption>Proposed source</figcaption>
+          <img src="images/thumbs/sources/043.jpg" alt="Proposed source 043" loading="lazy">
+        </figure>
+      </div>
+    </article>
+    <article class="row" id="c044">
+      <header>
+        <b>#044</b> Hobgoblin Appears
+        <span class="badge">none</span>
+      </header>
+      <p class="cite">Cited: Suspected unused in print, possibly shelved for a Web of Spider-Man Annual #3 pin-up. Used as a large 5' store stand-up display (1987) · </p>
+      <div class="pair">
+        <figure>
+          <figcaption>Card front</figcaption>
+          <img src="images/thumbs/cards/044.jpg" alt="Card 044 front" loading="lazy">
+        </figure>
+        <figure>
+          <figcaption>Proposed source</figcaption>
+          <div class="missing">No candidate image</div>
+        </figure>
+      </div>
+    </article>
+    <article class="row" id="c045">
+      <header>
+        <b>#045</b> Origin of Alpha Flight
+        <span class="badge">CREDITS → wiki cover candidate</span>
+      </header>
+      <p class="cite">Cited: Alpha Flight (1983) #128, Page 13 · Dario Carrasco Jr.</p>
+      <div class="pair">
+        <figure>
+          <figcaption>Card front</figcaption>
+          <img src="images/thumbs/cards/045.jpg" alt="Card 045 front" loading="lazy">
+        </figure>
+        <figure>
+          <figcaption>Proposed source</figcaption>
+          <img src="images/thumbs/sources/045.jpg" alt="Proposed source 045" loading="lazy">
+        </figure>
+      </div>
+    </article>
+    <article class="row" id="c046">
+      <header>
+        <b>#046</b> Ballad of Beta Ray Bill
+        <span class="badge">CREDITS → wiki cover candidate</span>
+      </header>
+      <p class="cite">Cited: Thor (1966) #339, Page 20 · Walter Simonson</p>
+      <div class="pair">
+        <figure>
+          <figcaption>Card front</figcaption>
+          <img src="images/thumbs/cards/046.jpg" alt="Card 046 front" loading="lazy">
+        </figure>
+        <figure>
+          <figcaption>Proposed source</figcaption>
+          <img src="images/thumbs/sources/046.jpg" alt="Proposed source 046" loading="lazy">
+        </figure>
+      </div>
+    </article>
+    <article class="row" id="c047">
+      <header>
+        <b>#047</b> The Trial of Reed Richards
+        <span class="badge">CREDITS → wiki cover candidate</span>
+      </header>
+      <p class="cite">Cited: The Fantastic Four (1963) #262, Page 8 · John Byrne</p>
+      <div class="pair">
+        <figure>
+          <figcaption>Card front</figcaption>
+          <img src="images/thumbs/cards/047.jpg" alt="Card 047 front" loading="lazy">
+        </figure>
+        <figure>
+          <figcaption>Proposed source</figcaption>
+          <img src="images/thumbs/sources/047.jpg" alt="Proposed source 047" loading="lazy">
+        </figure>
+      </div>
+    </article>
+    <article class="row" id="c048">
+      <header>
+        <b>#048</b> The Black Costume Saga
+        <span class="badge">CREDITS → wiki cover candidate</span>
+      </header>
+      <p class="cite">Cited: Marvel Tales (1964) #266, Cover · Ron Lim</p>
+      <div class="pair">
+        <figure>
+          <figcaption>Card front</figcaption>
+          <img src="images/thumbs/cards/048.jpg" alt="Card 048 front" loading="lazy">
+        </figure>
+        <figure>
+          <figcaption>Proposed source</figcaption>
+          <img src="images/thumbs/sources/048.jpg" alt="Proposed source 048" loading="lazy">
+        </figure>
+      </div>
+    </article>
+    <article class="row" id="c049">
+      <header>
+        <b>#049</b> Origin of Puma
+        <span class="badge">CREDITS → wiki cover candidate</span>
+      </header>
+      <p class="cite">Cited: Marvel Tales (1964) #271, Cover · Ron Lim</p>
+      <div class="pair">
+        <figure>
+          <figcaption>Card front</figcaption>
+          <img src="images/thumbs/cards/049.jpg" alt="Card 049 front" loading="lazy">
+        </figure>
+        <figure>
+          <figcaption>Proposed source</figcaption>
+          <img src="images/thumbs/sources/049.jpg" alt="Proposed source 049" loading="lazy">
+        </figure>
+      </div>
+    </article>
+    <article class="row" id="c050">
+      <header>
+        <b>#050</b> Silver Sable Inc.
+        <span class="badge">CREDITS → wiki cover candidate</span>
+      </header>
+      <p class="cite">Cited: Silver Sable and the Wild Pack (1992) #17, Cover · Steven Butler</p>
+      <div class="pair">
+        <figure>
+          <figcaption>Card front</figcaption>
+          <img src="images/thumbs/cards/050.jpg" alt="Card 050 front" loading="lazy">
+        </figure>
+        <figure>
+          <figcaption>Proposed source</figcaption>
+          <img src="images/thumbs/sources/050.jpg" alt="Proposed source 050" loading="lazy">
+        </figure>
+      </div>
+    </article>
+    <article class="row" id="c051">
+      <header>
+        <b>#051</b> Formation of X-Factor
+        <span class="badge">CREDITS → wiki cover candidate</span>
+      </header>
+      <p class="cite">Cited: X-Men Unlimited (1993) #1, Page 62 · Joe Quesada</p>
+      <div class="pair">
+        <figure>
+          <figcaption>Card front</figcaption>
+          <img src="images/thumbs/cards/051.jpg" alt="Card 051 front" loading="lazy">
+        </figure>
+        <figure>
+          <figcaption>Proposed source</figcaption>
+          <img src="images/thumbs/sources/051.jpg" alt="Proposed source 051" loading="lazy">
+        </figure>
+      </div>
+    </article>
+    <article class="row" id="c052">
+      <header>
+        <b>#052</b> Apocalypse Attacks
+        <span class="badge">CREDITS → wiki cover candidate</span>
+      </header>
+      <p class="cite">Cited: X-Factor (1988) #65, Page 20 · Whilce Portacio</p>
+      <div class="pair">
+        <figure>
+          <figcaption>Card front</figcaption>
+          <img src="images/thumbs/cards/052.jpg" alt="Card 052 front" loading="lazy">
+        </figure>
+        <figure>
+          <figcaption>Proposed source</figcaption>
+          <img src="images/thumbs/sources/052.jpg" alt="Proposed source 052" loading="lazy">
+        </figure>
+      </div>
+    </article>
+    <article class="row" id="c053">
+      <header>
+        <b>#053</b> Sabretooth vs. Wolverine
+        <span class="badge">CREDITS → wiki cover candidate</span>
+      </header>
+      <p class="cite">Cited: The Uncanny X-Men (1963) #213, Cover · Alan Davis</p>
+      <div class="pair">
+        <figure>
+          <figcaption>Card front</figcaption>
+          <img src="images/thumbs/cards/053.jpg" alt="Card 053 front" loading="lazy">
+        </figure>
+        <figure>
+          <figcaption>Proposed source</figcaption>
+          <img src="images/thumbs/sources/053.jpg" alt="Proposed source 053" loading="lazy">
+        </figure>
+      </div>
+    </article>
+    <article class="row" id="c054">
+      <header>
+        <b>#054</b> Formation of Excalibur
+        <span class="badge">CREDITS → wiki cover candidate</span>
+      </header>
+      <p class="cite">Cited: The Uncanny X-Men (1963) #300, Page 1 · John Romita Jr.</p>
+      <div class="pair">
+        <figure>
+          <figcaption>Card front</figcaption>
+          <img src="images/thumbs/cards/054.jpg" alt="Card 054 front" loading="lazy">
+        </figure>
+        <figure>
+          <figcaption>Proposed source</figcaption>
+          <img src="images/thumbs/sources/054.jpg" alt="Proposed source 054" loading="lazy">
+        </figure>
+      </div>
+    </article>
+    <article class="row" id="c055">
+      <header>
+        <b>#055</b> The Creation of Archangel
+        <span class="badge">CREDITS → wiki cover candidate</span>
+      </header>
+      <p class="cite">Cited: X-Factor (1988) #24, Page 16 · </p>
+      <div class="pair">
+        <figure>
+          <figcaption>Card front</figcaption>
+          <img src="images/thumbs/cards/055.jpg" alt="Card 055 front" loading="lazy">
+        </figure>
+        <figure>
+          <figcaption>Proposed source</figcaption>
+          <img src="images/thumbs/sources/055.jpg" alt="Proposed source 055" loading="lazy">
+        </figure>
+      </div>
+    </article>
+    <article class="row" id="c056">
+      <header>
+        <b>#056</b> Mr. Sinister Appears
+        <span class="badge">CREDITS → wiki cover candidate</span>
+      </header>
+      <p class="cite">Cited: The Uncanny X-Men (1963) #239, Page 4 · Marc Silvestri</p>
+      <div class="pair">
+        <figure>
+          <figcaption>Card front</figcaption>
+          <img src="images/thumbs/cards/056.jpg" alt="Card 056 front" loading="lazy">
+        </figure>
+        <figure>
+          <figcaption>Proposed source</figcaption>
+          <img src="images/thumbs/sources/056.jpg" alt="Proposed source 056" loading="lazy">
+        </figure>
+      </div>
+    </article>
+    <article class="row" id="c057">
+      <header>
+        <b>#057</b> The Wedding of Spider-Man & Mary Jane
+        <span class="badge">CREDITS → wiki cover candidate</span>
+      </header>
+      <p class="cite">Cited: Web of Spider-Man (1985) Annual #4, Page 43 · John Romita Sr.; John Romita Jr.</p>
+      <div class="pair">
+        <figure>
+          <figcaption>Card front</figcaption>
+          <img src="images/thumbs/cards/057.jpg" alt="Card 057 front" loading="lazy">
+        </figure>
+        <figure>
+          <figcaption>Proposed source</figcaption>
+          <img src="images/thumbs/sources/057.jpg" alt="Proposed source 057" loading="lazy">
+        </figure>
+      </div>
+    </article>
+    <article class="row" id="c058">
+      <header>
+        <b>#058</b> The Origin of Jubilee
+        <span class="badge">CREDITS → wiki cover candidate</span>
+      </header>
+      <p class="cite">Cited: Uncanny X-Men (1963) #258, Page 8 · Jim Lee</p>
+      <div class="pair">
+        <figure>
+          <figcaption>Card front</figcaption>
+          <img src="images/thumbs/cards/058.jpg" alt="Card 058 front" loading="lazy">
+        </figure>
+        <figure>
+          <figcaption>Proposed source</figcaption>
+          <img src="images/thumbs/sources/058.jpg" alt="Proposed source 058" loading="lazy">
+        </figure>
+      </div>
+    </article>
+    <article class="row" id="c059">
+      <header>
+        <b>#059</b> Armor Wars
+        <span class="badge">CREDITS → wiki cover candidate</span>
+      </header>
+      <p class="cite">Cited: Iron Man (1968) Annual #10, Page 50 · Bob Layton</p>
+      <div class="pair">
+        <figure>
+          <figcaption>Card front</figcaption>
+          <img src="images/thumbs/cards/059.jpg" alt="Card 059 front" loading="lazy">
+        </figure>
+        <figure>
+          <figcaption>Proposed source</figcaption>
+          <img src="images/thumbs/sources/059.jpg" alt="Proposed source 059" loading="lazy">
+        </figure>
+      </div>
+    </article>
+    <article class="row" id="c060">
+      <header>
+        <b>#060</b> Tombstone vs. Spider-Man
+        <span class="badge">CREDITS → wiki cover candidate</span>
+      </header>
+      <p class="cite">Cited: The Spectacular Spider-Man (1976) #206, Cover · Sal Buscema</p>
+      <div class="pair">
+        <figure>
+          <figcaption>Card front</figcaption>
+          <img src="images/thumbs/cards/060.jpg" alt="Card 060 front" loading="lazy">
+        </figure>
+        <figure>
+          <figcaption>Proposed source</figcaption>
+          <img src="images/thumbs/sources/060.jpg" alt="Proposed source 060" loading="lazy">
+        </figure>
+      </div>
+    </article>
+    <article class="row" id="c061">
+      <header>
+        <b>#061</b> Origin of Venom
+        <span class="badge">CREDITS → wiki cover candidate</span>
+      </header>
+      <p class="cite">Cited: Venom: Lethal Protector (1993) Gold Retailer Incentive, Back Cover · Mark Bagley; Al Milgrom</p>
+      <div class="pair">
+        <figure>
+          <figcaption>Card front</figcaption>
+          <img src="images/thumbs/cards/061.jpg" alt="Card 061 front" loading="lazy">
+        </figure>
+        <figure>
+          <figcaption>Proposed source</figcaption>
+          <img src="images/thumbs/sources/061.jpg" alt="Proposed source 061" loading="lazy">
+        </figure>
+      </div>
+    </article>
+    <article class="row" id="c062">
+      <header>
+        <b>#062</b> Origin of Typhoid Mary
+        <span class="badge">CREDITS → wiki cover candidate</span>
+      </header>
+      <p class="cite">Cited: Daredevil: The Man Without Fear (1964) #254, Page 2 · John Romita Jr.</p>
+      <div class="pair">
+        <figure>
+          <figcaption>Card front</figcaption>
+          <img src="images/thumbs/cards/062.jpg" alt="Card 062 front" loading="lazy">
+        </figure>
+        <figure>
+          <figcaption>Proposed source</figcaption>
+          <img src="images/thumbs/sources/062.jpg" alt="Proposed source 062" loading="lazy">
+        </figure>
+      </div>
+    </article>
+    <article class="row" id="c063">
+      <header>
+        <b>#063</b> Mr. Fix-It
+        <span class="badge">CREDITS → wiki cover candidate</span>
+      </header>
+      <p class="cite">Cited: The Fantastic Four (1963) #348, Cover · Arthur Adams</p>
+      <div class="pair">
+        <figure>
+          <figcaption>Card front</figcaption>
+          <img src="images/thumbs/cards/063.jpg" alt="Card 063 front" loading="lazy">
+        </figure>
+        <figure>
+          <figcaption>Proposed source</figcaption>
+          <img src="images/thumbs/sources/063.jpg" alt="Proposed source 063" loading="lazy">
+        </figure>
+      </div>
+    </article>
+    <article class="row" id="c064">
+      <header>
+        <b>#064</b> The Origin of Speedball
+        <span class="badge">CREDITS → wiki cover candidate</span>
+      </header>
+      <p class="cite">Cited: The New Warriors (1990) #31, Page 14 · Darick Robertson</p>
+      <div class="pair">
+        <figure>
+          <figcaption>Card front</figcaption>
+          <img src="images/thumbs/cards/064.jpg" alt="Card 064 front" loading="lazy">
+        </figure>
+        <figure>
+          <figcaption>Proposed source</figcaption>
+          <img src="images/thumbs/sources/064.jpg" alt="Proposed source 064" loading="lazy">
+        </figure>
+      </div>
+    </article>
+    <article class="row" id="c065">
+      <header>
+        <b>#065</b> Captain America vs. The Captain
+        <span class="badge">CREDITS → wiki cover candidate</span>
+      </header>
+      <p class="cite">Cited: Captain America (1968) #422, Page 8 · </p>
+      <div class="pair">
+        <figure>
+          <figcaption>Card front</figcaption>
+          <img src="images/thumbs/cards/065.jpg" alt="Card 065 front" loading="lazy">
+        </figure>
+        <figure>
+          <figcaption>Proposed source</figcaption>
+          <img src="images/thumbs/sources/065.jpg" alt="Proposed source 065" loading="lazy">
+        </figure>
+      </div>
+    </article>
+    <article class="row" id="c066">
+      <header>
+        <b>#066</b> Universal Guardian
+        <span class="badge">none</span>
+      </header>
+      <p class="cite">Cited: 1992 Comic Images Silver Surfer Card Set #66; Unused Corner Box Art · Andy Smith</p>
+      <div class="pair">
+        <figure>
+          <figcaption>Card front</figcaption>
+          <img src="images/thumbs/cards/066.jpg" alt="Card 066 front" loading="lazy">
+        </figure>
+        <figure>
+          <figcaption>Proposed source</figcaption>
+          <div class="missing">No candidate image</div>
+        </figure>
+      </div>
+    </article>
+    <article class="row" id="c067">
+      <header>
+        <b>#067</b> The Cosmic Spider-Man
+        <span class="badge">CREDITS → wiki cover candidate</span>
+      </header>
+      <p class="cite">Cited: The Spectacular Spider-Man (1976) #201, Page 21 · Sal Buscema</p>
+      <div class="pair">
+        <figure>
+          <figcaption>Card front</figcaption>
+          <img src="images/thumbs/cards/067.jpg" alt="Card 067 front" loading="lazy">
+        </figure>
+        <figure>
+          <figcaption>Proposed source</figcaption>
+          <img src="images/thumbs/sources/067.jpg" alt="Proposed source 067" loading="lazy">
+        </figure>
+      </div>
+    </article>
+    <article class="row" id="c068">
+      <header>
+        <b>#068</b> The Origin of Nomad
+        <span class="badge">CREDITS → wiki cover candidate</span>
+      </header>
+      <p class="cite">Cited: Nomad (1990) #1, Cover · S. Clarke Hawbaker</p>
+      <div class="pair">
+        <figure>
+          <figcaption>Card front</figcaption>
+          <img src="images/thumbs/cards/068.jpg" alt="Card 068 front" loading="lazy">
+        </figure>
+        <figure>
+          <figcaption>Proposed source</figcaption>
+          <img src="images/thumbs/sources/068.jpg" alt="Proposed source 068" loading="lazy">
+        </figure>
+      </div>
+    </article>
+    <article class="row" id="c069">
+      <header>
+        <b>#069</b> Thanos Quest
+        <span class="badge">CREDITS → wiki cover candidate</span>
+      </header>
+      <p class="cite">Cited: The Thanos Quest (1990) #1, Page 48 · Ron Lim</p>
+      <div class="pair">
+        <figure>
+          <figcaption>Card front</figcaption>
+          <img src="images/thumbs/cards/069.jpg" alt="Card 069 front" loading="lazy">
+        </figure>
+        <figure>
+          <figcaption>Proposed source</figcaption>
+          <img src="images/thumbs/sources/069.jpg" alt="Proposed source 069" loading="lazy">
+        </figure>
+      </div>
+    </article>
+    <article class="row" id="c070">
+      <header>
+        <b>#070</b> Cable Returns from the Future
+        <span class="badge">none</span>
+      </header>
+      <p class="cite">Cited: 1992 Impel X-Men Series I by Jim Lee · Jim Lee</p>
+      <div class="pair">
+        <figure>
+          <figcaption>Card front</figcaption>
+          <img src="images/thumbs/cards/070.jpg" alt="Card 070 front" loading="lazy">
+        </figure>
+        <figure>
+          <figcaption>Proposed source</figcaption>
+          <div class="missing">No candidate image</div>
+        </figure>
+      </div>
+    </article>
+    <article class="row" id="c071">
+      <header>
+        <b>#071</b> Ghost Rider #1
+        <span class="badge">CREDITS → wiki cover candidate</span>
+      </header>
+      <p class="cite">Cited: Ghost Rider (1990) #1, Cover · Javier Saltares</p>
+      <div class="pair">
+        <figure>
+          <figcaption>Card front</figcaption>
+          <img src="images/thumbs/cards/071.jpg" alt="Card 071 front" loading="lazy">
+        </figure>
+        <figure>
+          <figcaption>Proposed source</figcaption>
+          <img src="images/thumbs/sources/071.jpg" alt="Proposed source 071" loading="lazy">
+        </figure>
+      </div>
+    </article>
+    <article class="row" id="c072">
+      <header>
+        <b>#072</b> The Creation of Deathlok
+        <span class="badge">CREDITS → wiki cover candidate</span>
+      </header>
+      <p class="cite">Cited: Deathlok (1990) #1, Page 28 · Jackson Guice</p>
+      <div class="pair">
+        <figure>
+          <figcaption>Card front</figcaption>
+          <img src="images/thumbs/cards/072.jpg" alt="Card 072 front" loading="lazy">
+        </figure>
+        <figure>
+          <figcaption>Proposed source</figcaption>
+          <img src="images/thumbs/sources/072.jpg" alt="Proposed source 072" loading="lazy">
+        </figure>
+      </div>
+    </article>
+    <article class="row" id="c073">
+      <header>
+        <b>#073</b> Origin of the New Warriors
+        <span class="badge">CREDITS → wiki cover candidate</span>
+      </header>
+      <p class="cite">Cited: Nova (1993) #1, Page 1 · Chris Marrinan</p>
+      <div class="pair">
+        <figure>
+          <figcaption>Card front</figcaption>
+          <img src="images/thumbs/cards/073.jpg" alt="Card 073 front" loading="lazy">
+        </figure>
+        <figure>
+          <figcaption>Proposed source</figcaption>
+          <img src="images/thumbs/sources/073.jpg" alt="Proposed source 073" loading="lazy">
+        </figure>
+      </div>
+    </article>
+    <article class="row" id="c074">
+      <header>
+        <b>#074</b> Cable vs. Wolverine
+        <span class="badge">CREDITS → wiki cover candidate</span>
+      </header>
+      <p class="cite">Cited: The New Mutants (1983) #93, Cover · Rob Liefeld</p>
+      <div class="pair">
+        <figure>
+          <figcaption>Card front</figcaption>
+          <img src="images/thumbs/cards/074.jpg" alt="Card 074 front" loading="lazy">
+        </figure>
+        <figure>
+          <figcaption>Proposed source</figcaption>
+          <img src="images/thumbs/sources/074.jpg" alt="Proposed source 074" loading="lazy">
+        </figure>
+      </div>
+    </article>
+    <article class="row" id="c075">
+      <header>
+        <b>#075</b> Gambit Appears
+        <span class="badge">CREDITS → wiki cover candidate</span>
+      </header>
+      <p class="cite">Cited: X-Men (1991) #25, Gambit Hologram · Andy Kubert</p>
+      <div class="pair">
+        <figure>
+          <figcaption>Card front</figcaption>
+          <img src="images/thumbs/cards/075.jpg" alt="Card 075 front" loading="lazy">
+        </figure>
+        <figure>
+          <figcaption>Proposed source</figcaption>
+          <img src="images/thumbs/sources/075.jpg" alt="Proposed source 075" loading="lazy">
+        </figure>
+      </div>
+    </article>
+    <article class="row" id="c076">
+      <header>
+        <b>#076</b> X-Tinction Agenda
+        <span class="badge">none</span>
+      </header>
+      <p class="cite">Cited: X-Tinction Agenda House Ad/Promotional Material; X-Men (1991) #1 Composite (Cyclops) · Jim Lee</p>
+      <div class="pair">
+        <figure>
+          <figcaption>Card front</figcaption>
+          <img src="images/thumbs/cards/076.jpg" alt="Card 076 front" loading="lazy">
+        </figure>
+        <figure>
+          <figcaption>Proposed source</figcaption>
+          <div class="missing">No candidate image</div>
+        </figure>
+      </div>
+    </article>
+    <article class="row" id="c077">
+      <header>
+        <b>#077</b> Hulk Reborn
+        <span class="badge">CREDITS → wiki cover candidate</span>
+      </header>
+      <p class="cite">Cited: The Incredible Hulk (1968) #391, Page 19 · Dale Keown</p>
+      <div class="pair">
+        <figure>
+          <figcaption>Card front</figcaption>
+          <img src="images/thumbs/cards/077.jpg" alt="Card 077 front" loading="lazy">
+        </figure>
+        <figure>
+          <figcaption>Proposed source</figcaption>
+          <img src="images/thumbs/sources/077.jpg" alt="Proposed source 077" loading="lazy">
+        </figure>
+      </div>
+    </article>
+    <article class="row" id="c078">
+      <header>
+        <b>#078</b> Deadpool Strikes
+        <span class="badge">CREDITS → wiki cover candidate</span>
+      </header>
+      <p class="cite">Cited: Deadpool: The Circle Chase (1993) #2, Page 5 · Joe Madureira</p>
+      <div class="pair">
+        <figure>
+          <figcaption>Card front</figcaption>
+          <img src="images/thumbs/cards/078.jpg" alt="Card 078 front" loading="lazy">
+        </figure>
+        <figure>
+          <figcaption>Proposed source</figcaption>
+          <img src="images/thumbs/sources/078.jpg" alt="Proposed source 078" loading="lazy">
+        </figure>
+      </div>
+    </article>
+    <article class="row" id="c079">
+      <header>
+        <b>#079</b> Origin of Shatterstar
+        <span class="badge">CREDITS → wiki cover candidate</span>
+      </header>
+      <p class="cite">Cited: X-Force (1991) Annual #1, Cover · Greg Capullo</p>
+      <div class="pair">
+        <figure>
+          <figcaption>Card front</figcaption>
+          <img src="images/thumbs/cards/079.jpg" alt="Card 079 front" loading="lazy">
+        </figure>
+        <figure>
+          <figcaption>Proposed source</figcaption>
+          <img src="images/thumbs/sources/079.jpg" alt="Proposed source 079" loading="lazy">
+        </figure>
+      </div>
+    </article>
+    <article class="row" id="c080">
+      <header>
+        <b>#080</b> New Mutants No More
+        <span class="badge">CREDITS → wiki cover candidate</span>
+      </header>
+      <p class="cite">Cited: The New Mutants (1983) #100, Cover · Rob Liefeld</p>
+      <div class="pair">
+        <figure>
+          <figcaption>Card front</figcaption>
+          <img src="images/thumbs/cards/080.jpg" alt="Card 080 front" loading="lazy">
+        </figure>
+        <figure>
+          <figcaption>Proposed source</figcaption>
+          <img src="images/thumbs/sources/080.jpg" alt="Proposed source 080" loading="lazy">
+        </figure>
+      </div>
+    </article>
+    <article class="row" id="c081">
+      <header>
+        <b>#081</b> The Return of Blaze
+        <span class="badge">CREDITS → wiki cover candidate</span>
+      </header>
+      <p class="cite">Cited: Ghost Rider & Blaze: Spirits of Vengeance (1992) #1, Mini-Poster · Adam Kubert</p>
+      <div class="pair">
+        <figure>
+          <figcaption>Card front</figcaption>
+          <img src="images/thumbs/cards/081.jpg" alt="Card 081 front" loading="lazy">
+        </figure>
+        <figure>
+          <figcaption>Proposed source</figcaption>
+          <img src="images/thumbs/sources/081.jpg" alt="Proposed source 081" loading="lazy">
+        </figure>
+      </div>
+    </article>
+    <article class="row" id="c082">
+      <header>
+        <b>#082</b> Child of the Future
+        <span class="badge">CREDITS → wiki cover candidate</span>
+      </header>
+      <p class="cite">Cited: X-Factor (1986) #66, Cover · Whilce Portacio</p>
+      <div class="pair">
+        <figure>
+          <figcaption>Card front</figcaption>
+          <img src="images/thumbs/cards/082.jpg" alt="Card 082 front" loading="lazy">
+        </figure>
+        <figure>
+          <figcaption>Proposed source</figcaption>
+          <img src="images/thumbs/sources/082.jpg" alt="Proposed source 082" loading="lazy">
+        </figure>
+      </div>
+    </article>
+    <article class="row" id="c083">
+      <header>
+        <b>#083</b> The New X-Factor
+        <span class="badge">CREDITS → wiki cover candidate</span>
+      </header>
+      <p class="cite">Cited: X-Factor (1986) #71, Cover · Larry Stroman</p>
+      <div class="pair">
+        <figure>
+          <figcaption>Card front</figcaption>
+          <img src="images/thumbs/cards/083.jpg" alt="Card 083 front" loading="lazy">
+        </figure>
+        <figure>
+          <figcaption>Proposed source</figcaption>
+          <img src="images/thumbs/sources/083.jpg" alt="Proposed source 083" loading="lazy">
+        </figure>
+      </div>
+    </article>
+    <article class="row" id="c084">
+      <header>
+        <b>#084</b> Two Teams of X-Men
+        <span class="badge">CREDITS → wiki cover candidate</span>
+      </header>
+      <p class="cite">Cited: The Uncanny X-Men (1963) #300, Cover · John Romita Jr.</p>
+      <div class="pair">
+        <figure>
+          <figcaption>Card front</figcaption>
+          <img src="images/thumbs/cards/084.jpg" alt="Card 084 front" loading="lazy">
+        </figure>
+        <figure>
+          <figcaption>Proposed source</figcaption>
+          <img src="images/thumbs/sources/084.jpg" alt="Proposed source 084" loading="lazy">
+        </figure>
+      </div>
+    </article>
+    <article class="row" id="c085">
+      <header>
+        <b>#085</b> The Origin of Bishop
+        <span class="badge">none</span>
+      </header>
+      <p class="cite">Cited: Suspected unused in print. Used on a licensed Comic Images T-shirt in 1993. · </p>
+      <div class="pair">
+        <figure>
+          <figcaption>Card front</figcaption>
+          <img src="images/thumbs/cards/085.jpg" alt="Card 085 front" loading="lazy">
+        </figure>
+        <figure>
+          <figcaption>Proposed source</figcaption>
+          <div class="missing">No candidate image</div>
+        </figure>
+      </div>
+    </article>
+    <article class="row" id="c086">
+      <header>
+        <b>#086</b> Omega Red vs. Wolverine
+        <span class="badge">CREDITS → wiki cover candidate</span>
+      </header>
+      <p class="cite">Cited: X-Men (1991) #5, Cover · Jim Lee</p>
+      <div class="pair">
+        <figure>
+          <figcaption>Card front</figcaption>
+          <img src="images/thumbs/cards/086.jpg" alt="Card 086 front" loading="lazy">
+        </figure>
+        <figure>
+          <figcaption>Proposed source</figcaption>
+          <img src="images/thumbs/sources/086.jpg" alt="Proposed source 086" loading="lazy">
+        </figure>
+      </div>
+    </article>
+    <article class="row" id="c087">
+      <header>
+        <b>#087</b> The Punisher Infiltrates the Mob
+        <span class="badge">CREDITS → wiki cover candidate</span>
+      </header>
+      <p class="cite">Cited: The Punisher: War Zone (1993) #8, Cover · John Romita Jr.</p>
+      <div class="pair">
+        <figure>
+          <figcaption>Card front</figcaption>
+          <img src="images/thumbs/cards/087.jpg" alt="Card 087 front" loading="lazy">
+        </figure>
+        <figure>
+          <figcaption>Proposed source</figcaption>
+          <img src="images/thumbs/sources/087.jpg" alt="Proposed source 087" loading="lazy">
+        </figure>
+      </div>
+    </article>
+    <article class="row" id="c088">
+      <header>
+        <b>#088</b> Origin of Carnage
+        <span class="badge">CREDITS → wiki cover candidate</span>
+      </header>
+      <p class="cite">Cited: The Amazing Spider-Man (1963) #384, Page 16 · Mark Bagley</p>
+      <div class="pair">
+        <figure>
+          <figcaption>Card front</figcaption>
+          <img src="images/thumbs/cards/088.jpg" alt="Card 088 front" loading="lazy">
+        </figure>
+        <figure>
+          <figcaption>Proposed source</figcaption>
+          <img src="images/thumbs/sources/088.jpg" alt="Proposed source 088" loading="lazy">
+        </figure>
+      </div>
+    </article>
+    <article class="row" id="c089">
+      <header>
+        <b>#089</b> The New Cage
+        <span class="badge">CREDITS → wiki cover candidate</span>
+      </header>
+      <p class="cite">Cited: Cage (1992) #1, Cover · Dwayne Turner</p>
+      <div class="pair">
+        <figure>
+          <figcaption>Card front</figcaption>
+          <img src="images/thumbs/cards/089.jpg" alt="Card 089 front" loading="lazy">
+        </figure>
+        <figure>
+          <figcaption>Proposed source</figcaption>
+          <img src="images/thumbs/sources/089.jpg" alt="Proposed source 089" loading="lazy">
+        </figure>
+      </div>
+    </article>
+    <article class="row" id="c090">
+      <header>
+        <b>#090</b> Outbreak of War Machine
+        <span class="badge">CREDITS → wiki cover candidate</span>
+      </header>
+      <p class="cite">Cited: Iron Man (1968) #282, Cover · Kevin Hopgood</p>
+      <div class="pair">
+        <figure>
+          <figcaption>Card front</figcaption>
+          <img src="images/thumbs/cards/090.jpg" alt="Card 090 front" loading="lazy">
+        </figure>
+        <figure>
+          <figcaption>Proposed source</figcaption>
+          <img src="images/thumbs/sources/090.jpg" alt="Proposed source 090" loading="lazy">
+        </figure>
+      </div>
+    </article>
+    <article class="row" id="c091">
+      <header>
+        <b>#091</b> Death of Mariko
+        <span class="badge">CREDITS → wiki cover candidate</span>
+      </header>
+      <p class="cite">Cited: Wolverine (1988) #65, Page 18 · Mark Texeira</p>
+      <div class="pair">
+        <figure>
+          <figcaption>Card front</figcaption>
+          <img src="images/thumbs/cards/091.jpg" alt="Card 091 front" loading="lazy">
+        </figure>
+        <figure>
+          <figcaption>Proposed source</figcaption>
+          <img src="images/thumbs/sources/091.jpg" alt="Proposed source 091" loading="lazy">
+        </figure>
+      </div>
+    </article>
+    <article class="row" id="c092">
+      <header>
+        <b>#092</b> Invasion of the Spider-Slayers
+        <span class="badge">CREDITS → wiki cover candidate</span>
+      </header>
+      <p class="cite">Cited: The Amazing Spider-Man (1963) #368, Cover · Mark Bagley</p>
+      <div class="pair">
+        <figure>
+          <figcaption>Card front</figcaption>
+          <img src="images/thumbs/cards/092.jpg" alt="Card 092 front" loading="lazy">
+        </figure>
+        <figure>
+          <figcaption>Proposed source</figcaption>
+          <img src="images/thumbs/sources/092.jpg" alt="Proposed source 092" loading="lazy">
+        </figure>
+      </div>
+    </article>
+    <article class="row" id="c093">
+      <header>
+        <b>#093</b> The Origin of Nightstalkers
+        <span class="badge">CREDITS → wiki cover candidate</span>
+      </header>
+      <p class="cite">Cited: Nightstalkers (1992) #1, Mini-Poster · Andy Kubert; Adam Kubert</p>
+      <div class="pair">
+        <figure>
+          <figcaption>Card front</figcaption>
+          <img src="images/thumbs/cards/093.jpg" alt="Card 093 front" loading="lazy">
+        </figure>
+        <figure>
+          <figcaption>Proposed source</figcaption>
+          <img src="images/thumbs/sources/093.jpg" alt="Proposed source 093" loading="lazy">
+        </figure>
+      </div>
+    </article>
+    <article class="row" id="c094">
+      <header>
+        <b>#094</b> The Origin of Spider-Man 2099
+        <span class="badge">CREDITS → wiki cover candidate</span>
+      </header>
+      <p class="cite">Cited: Spider-Man 2099 (1993) #6, Page 5 · Rick Leonardi</p>
+      <div class="pair">
+        <figure>
+          <figcaption>Card front</figcaption>
+          <img src="images/thumbs/cards/094.jpg" alt="Card 094 front" loading="lazy">
+        </figure>
+        <figure>
+          <figcaption>Proposed source</figcaption>
+          <img src="images/thumbs/sources/094.jpg" alt="Proposed source 094" loading="lazy">
+        </figure>
+      </div>
+    </article>
+    <article class="row" id="c095">
+      <header>
+        <b>#095</b> Hulk Leads the Pantheon
+        <span class="badge">CREDITS → wiki cover candidate</span>
+      </header>
+      <p class="cite">Cited: The Incredible Hulk (1968) #410, Page 15 · </p>
+      <div class="pair">
+        <figure>
+          <figcaption>Card front</figcaption>
+          <img src="images/thumbs/cards/095.jpg" alt="Card 095 front" loading="lazy">
+        </figure>
+        <figure>
+          <figcaption>Proposed source</figcaption>
+          <img src="images/thumbs/sources/095.jpg" alt="Proposed source 095" loading="lazy">
+        </figure>
+      </div>
+    </article>
+    <article class="row" id="c096">
+      <header>
+        <b>#096</b> X-Cutioner's Song
+        <span class="badge">CREDITS → wiki cover candidate</span>
+      </header>
+      <p class="cite">Cited: X-Factor (1986) #88, Page 1; Page 18 (Composite) · Jae Lee</p>
+      <div class="pair">
+        <figure>
+          <figcaption>Card front</figcaption>
+          <img src="images/thumbs/cards/096.jpg" alt="Card 096 front" loading="lazy">
+        </figure>
+        <figure>
+          <figcaption>Proposed source</figcaption>
+          <img src="images/thumbs/sources/096.jpg" alt="Proposed source 096" loading="lazy">
+        </figure>
+      </div>
+    </article>
+    <article class="row" id="c097">
+      <header>
+        <b>#097</b> Cable vs. Stryfe
+        <span class="badge">CREDITS → wiki cover candidate</span>
+      </header>
+      <p class="cite">Cited: The New Mutants (1983) #94, Page 20 · Rob Liefeld</p>
+      <div class="pair">
+        <figure>
+          <figcaption>Card front</figcaption>
+          <img src="images/thumbs/cards/097.jpg" alt="Card 097 front" loading="lazy">
+        </figure>
+        <figure>
+          <figcaption>Proposed source</figcaption>
+          <img src="images/thumbs/sources/097.jpg" alt="Proposed source 097" loading="lazy">
+        </figure>
+      </div>
+    </article>
+    <article class="row" id="c098">
+      <header>
+        <b>#098</b> Wonder Man Resurrected
+        <span class="badge">CREDITS → wiki cover candidate</span>
+      </header>
+      <p class="cite">Cited: Wonder Man (1991) #25, Cover · Jeff Johnson</p>
+      <div class="pair">
+        <figure>
+          <figcaption>Card front</figcaption>
+          <img src="images/thumbs/cards/098.jpg" alt="Card 098 front" loading="lazy">
+        </figure>
+        <figure>
+          <figcaption>Proposed source</figcaption>
+          <img src="images/thumbs/sources/098.jpg" alt="Proposed source 098" loading="lazy">
+        </figure>
+      </div>
+    </article>
+    <article class="row" id="c099">
+      <header>
+        <b>#099</b> Doom of the Future
+        <span class="badge">CREDITS → wiki cover candidate</span>
+      </header>
+      <p class="cite">Cited: Doom 2099 (1992) #2, Cover · Pat Broderick</p>
+      <div class="pair">
+        <figure>
+          <figcaption>Card front</figcaption>
+          <img src="images/thumbs/cards/099.jpg" alt="Card 099 front" loading="lazy">
+        </figure>
+        <figure>
+          <figcaption>Proposed source</figcaption>
+          <img src="images/thumbs/sources/099.jpg" alt="Proposed source 099" loading="lazy">
+        </figure>
+      </div>
+    </article>
+</main>
+</body>
+</html>
