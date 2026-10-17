@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta name="x-flair-deploy" content="2026-10-17T00:27:31Z">
+<meta name="x-flair-deploy" content="2026-10-17T01:09:23Z">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>'94 Flair Presents the Marvel Universe &mdash; Masterset Checklist</title>
@@ -790,13 +790,14 @@
     cursor: pointer;
   }
   .viewer .v-card.flipped { transform: rotateY(180deg); }
+  .viewer .v-card.show-source { transform: rotateY(0deg); }
   /* Landscape backs: gold frame becomes landscape with the rotated art (not portrait-only). */
-  .viewer .v-card.landscape-back.flipped {
+  .viewer .v-card.landscape-back.flipped:not(.show-source) {
     --ar: 1.387533875; /* 1024/738 — landscape frame for rotated portrait scans */
     width: min(92vw, calc(70vh * var(--ar)), 1100px);
     max-height: 70vh;
   }
-  .viewer .v-card.no-back { cursor: default; }
+  .viewer .v-card.no-back:not(.has-source) { cursor: default; }
   /* No overflow:hidden on faces — it breaks backface-visibility in Firefox (mirrored front on flip). */
   .viewer .v-face {
     position: absolute; inset: 0; border-radius: 14px;
@@ -810,10 +811,40 @@
   }
   .viewer .v-front { transform: translateZ(1px); }
   .viewer .v-back { transform: rotateY(180deg) translateZ(1px); }
+  .viewer .v-source {
+    transform: translateZ(2px);
+    visibility: hidden;
+    background: #100e16;
+  }
+  .viewer .v-card.show-source .v-source { visibility: visible; }
+  .viewer .v-card.show-source .v-front,
+  .viewer .v-card.show-source .v-back { visibility: hidden; }
+  .viewer .v-source .v-source-stage {
+    position: absolute; inset: 0; overflow: hidden; border-radius: 14px;
+    display: grid; place-items: center; cursor: zoom-in;
+  }
+  .viewer .v-card.source-zoomed .v-source .v-source-stage { cursor: zoom-out; overflow: auto; }
+  .viewer .v-source img {
+    width: 100%; height: 100%; object-fit: contain;
+    transition: transform .35s ease;
+    transform-origin: center center;
+  }
+  .viewer .v-card.source-zoomed .v-source img {
+    width: auto; height: auto; max-width: none; max-height: none;
+    min-width: 160%; min-height: 160%;
+    object-fit: none;
+  }
+  .viewer .v-source .v-source-badge {
+    position: absolute; left: 12px; top: 12px; z-index: 2;
+    padding: 5px 10px; border-radius: 99px;
+    background: rgba(8, 6, 14, 0.78); border: 1px solid rgba(242, 199, 92, 0.45);
+    font-family: "Oswald", sans-serif; font-size: 10px; letter-spacing: .14em;
+    text-transform: uppercase; color: var(--gold-1);
+  }
   /* Firefox fallback: force the hidden face off once the flip class is set. */
   @supports (-moz-appearance: none) {
-    .viewer .v-card.flipped .v-front { visibility: hidden; }
-    .viewer .v-card:not(.flipped) .v-back { visibility: hidden; }
+    .viewer .v-card.flipped:not(.show-source) .v-front { visibility: hidden; }
+    .viewer .v-card:not(.flipped):not(.show-source) .v-back { visibility: hidden; }
   }
   /* Portrait scans of landscape backs: size the img to the swapped box, then rotate flush to the frame.
      (rotate + fixed scale with object-fit:contain left letterbox gaps inside the gold border.) */
@@ -855,6 +886,11 @@
   .viewer .v-label { font-family: "Oswald", sans-serif; letter-spacing: .18em; text-transform: uppercase; font-size: 12px; color: var(--gold-2); }
   .viewer .v-name { font-family: "Anton", sans-serif; font-size: 26px; letter-spacing: .02em; text-transform: uppercase; line-height: 1.1; }
   .viewer .v-hint { margin-top: 4px; font-size: 12px; color: var(--muted); }
+  .viewer .v-source-credit {
+    margin-top: 6px; font-size: 12px; color: var(--gold-1); line-height: 1.35;
+    max-width: min(640px, 90vw);
+  }
+  .viewer .v-source-credit:empty { display: none; }
   .viewer button { cursor: pointer; font: inherit; color: var(--text); }
   .viewer .v-close, .viewer .v-nav {
     position: absolute; display: grid; place-items: center; border-radius: 50%;
@@ -1752,6 +1788,7 @@
       <div class="note-card wide">
         <h4>About the Art Credits</h4>
         <p>Most Flair cards reuse existing comic art, repainted for the set. Each card lists its front title, source, and artist. Only four cards still have unaccounted credits — everything else has a source. Card art and credit research by <a href="https://www.instagram.com/exotechktx/" target="_blank" rel="noopener" style="color:var(--gold-2)">@exotechktx</a>.</p>
+        <p>In the card viewer, flip past the back to see the original comic art when we have it — cropped from @exotechktx's source posts, with a zoom that opens the full comic page/cover for context.</p>
         <p>Still unaccounted: #37 Black Cat, #44 Hobgoblin, #85 Bishop, and Powerblast #5 Phoenix. In-house sketch sources: #10 Xavier (Ron Lim), #42 Elektra (Frank Miller).</p>
       </div>
     </div>
@@ -1772,11 +1809,16 @@
     <div class="v-card" id="vCard" title="Click to flip">
       <div class="v-face v-front"><img alt=""></div>
       <div class="v-face v-back"></div>
+      <div class="v-face v-source">
+        <div class="v-source-badge">Original art</div>
+        <div class="v-source-stage" id="vSourceStage"><img alt=""></div>
+      </div>
     </div>
     <figcaption>
       <div class="v-label" id="vLabel"></div>
       <div class="v-name" id="vName"></div>
       <div class="v-hint" id="vHint"></div>
+      <div class="v-source-credit" id="vSourceCredit"></div>
     </figcaption>
     <button class="v-flip" id="vFlip">Flip card</button>
   </figure>
@@ -2153,6 +2195,35 @@ const PROMO_ART = {
 // Shared back for the three released 4-card sheets (sticker, foil, Ultimate Collectable).
 const SHEET4_RELEASED_BACK = "sheet4-released-back";
 
+// Original comic art for the viewer's third face, scraped from @exotechktx Instagram carousels.
+// Keys: zero-padded base card ("100") or Powerblast ("pb05"). More entries land as the scrape continues.
+const SOURCE_ART = {
+  "100": { file: "100.jpg", comic: "100-comic.jpg", credit: "Venom: Lethal Protector (Vol. 1, 1993) Issue #1 (1993), Cover", ig: "DRhEcIckbPc" },
+  "101": { file: "101.jpg", comic: "101-comic.jpg", credit: "Punisher 2099 (Vol. 1, 1993) Issue #1 (1993), Cover", ig: "DRhES5gkUEH" },
+  "102": { file: "102.jpg", comic: "102-comic.jpg", credit: "The Spectacular Spider-Man (Vol. 1, 1976) Issue #200 (1993), Page 30", ig: "DRhEInMEe8H" },
+  "103": { file: "103.jpg", comic: "103-comic.jpg", credit: "The Avengers (Vol. 1, 1963) Issue #360 (1993), Cover", ig: "DRhD9pXkRS9" },
+  "104": { file: "104.jpg", comic: "104-comic.jpg", credit: "Spider-Man Unlimited (Vol. 1, 1993) Issue #2 (1993), Cover", ig: "DRhDzGpEYio" },
+  "105": { file: "105.jpg", comic: "105-comic.jpg", credit: "Namor the Submariner (Vol. 1, 1990) Issue #37 (1993), Page 20", ig: "DRbIMY3EZwW" },
+  "106": { file: "106.jpg", comic: "106-comic.jpg", credit: "X-Factor (Vol. 1, 1986) Issue #88, Page 5", ig: "DRbICbxEY_k" },
+  "107": { file: "107.jpg", comic: "107-comic.jpg", credit: "1992 Impel Marvel Universe Series III, Psyclocke, Card #51", ig: "DRbH5NiEXhO" },
+  "108": { file: "108.jpg", comic: "108-comic.jpg", credit: "Fantastic Four (Vol. 1, 1963) Issue #383 (1993), Page 22", ig: "DRbHv-XkWqX" },
+  "109": { file: "109.jpg", comic: "109-comic.jpg", credit: "Thunderstrike! (Vol. 1, 1993) Issue #1 (1993), Cover", ig: "DRbHlr-ERuE" },
+  "110": { file: "110.jpg", comic: "110-comic.jpg", credit: "Infinity Crusade (Vol. 1, 1993) Issue #5 (1993), Cover; Infinity Crusade (Vol. 1, 1993) Issue #2 (1993), Page 38", ig: "DRWM1d8DfU8" },
+  "111": { file: "111.jpg", comic: "111-comic.jpg", credit: "2099 Unlimited (Vol. 1, 1993) Issue #1 (1993), Page 23", ig: "DRWMrLnDQhP" }
+};
+const sourceSrc = (file) => `${artDir.replace("cards", "sources")}/${file}`;
+function sourceArtFor(kind, n) {
+  const key = kind === "p" ? `pb${String(n).padStart(2, "0")}` : pad3(n);
+  const s = SOURCE_ART[key];
+  if (!s) return null;
+  return {
+    sourceImg: sourceSrc(s.file),
+    sourceComic: s.comic ? sourceSrc(s.comic) : "",
+    sourceCredit: s.credit || "",
+    sourceIg: s.ig ? `https://www.instagram.com/p/${s.ig}/` : ""
+  };
+}
+
 function credit(key) {
   const kind = key.match(/^[a-z]+(\d-)?/)[0];
   const n = parseInt(key.slice(kind.length), 10);
@@ -2162,13 +2233,13 @@ function credit(key) {
     const [front, source, artist] = CREDITS[n - 1];
     return { label: `Card #${n}`, n, name, chars, note, front, source, artist, img: cardSrc(n),
       back: `${artDir.replace("cards", "backs")}/${pad3(n)}.jpg`,
-      landscapeBack: landscapeBaseBack(n) };
+      landscapeBack: landscapeBaseBack(n), ...sourceArtFor("b", n) };
   }
   if (kind === "p") {
     const [source, artist] = PB_CREDITS[n - 1];
     return { label: `Powerblast ${n} of 18`, name: POWERBLAST[n - 1], source, artist, img: insertSrc("powerblast", n),
       back: PB_BACK_MISSING.has(n) ? "" : insertSrc("powerblast-backs", n),
-      landscapeBack: !PB_BACK_MISSING.has(n) };
+      landscapeBack: !PB_BACK_MISSING.has(n), ...sourceArtFor("p", n) };
   }
   if (kind === "bi") {
     const [name, pb] = BINDER[n - 1];
@@ -2176,13 +2247,14 @@ function credit(key) {
     return { label: "Binder Insert", name, chars: `Same art as Powerblast #${pb}, without the metallic finish`, source, artist,
       img: insertSrc("binder", n), imgClass: "flairprint",
       imgNote: "Photographed binder insert \u00b7 no Flair logo, character title, or metallic finish",
-      backNote: "Completely blank back" };
+      backNote: "Completely blank back", ...sourceArtFor("p", pb) };
   }
   if (kind === "f") {
     const [name, pb] = FLAIRPRINTS[n - 1];
     const [source, artist] = PB_CREDITS[pb - 1];
     return { label: "Flairprint \u00b7 Case Bonus", name, chars: `Same art as Powerblast #${pb}, enlarged`, source, artist,
-      img: insertSrc("flairprint", n), imgClass: "flairprint", backNote: "Blank back with UPC 0 41199 00258 1" };
+      img: insertSrc("flairprint", n), imgClass: "flairprint", backNote: "Blank back with UPC 0 41199 00258 1",
+      ...sourceArtFor("p", pb) };
   }
   if (kind === "pr") {
     const [name, chars] = PROMOS[n - 1];
@@ -2557,10 +2629,17 @@ const viewer = (function cardViewer() {
   const card = document.getElementById("vCard");
   const frontImg = card.querySelector(".v-front img");
   const back = card.querySelector(".v-back");
+  const sourceFace = card.querySelector(".v-source");
+  const sourceImg = sourceFace.querySelector("img");
+  const sourceStage = document.getElementById("vSourceStage");
   const flipBtn = document.getElementById("vFlip");
-  let list = [], index = 0, opener = null;
+  const sourceCredit = document.getElementById("vSourceCredit");
+  let list = [], index = 0, opener = null, faceIdx = 0, faceOrder = ["front"], current = null;
 
   function frameAr(landscapeView) {
+    if (card.classList.contains("show-source") && sourceImg.naturalWidth && sourceImg.naturalHeight) {
+      return sourceImg.naturalWidth / sourceImg.naturalHeight;
+    }
     if (landscapeView) {
       const backImg = back.querySelector("img.landscape, img.landscape-native");
       if (backImg && backImg.naturalWidth && backImg.naturalHeight) {
@@ -2576,7 +2655,7 @@ const viewer = (function cardViewer() {
     return 738 / 1024;
   }
   function applyFrame() {
-    const landscapeView = card.classList.contains("landscape-back") && card.classList.contains("flipped");
+    const landscapeView = card.classList.contains("landscape-back") && faceOrder[faceIdx] === "back";
     card.style.setProperty("--ar", frameAr(landscapeView));
   }
   function classifyLandscapeBack(img) {
@@ -2585,16 +2664,39 @@ const viewer = (function cardViewer() {
     img.classList.toggle("landscape-native", native);
     img.classList.toggle("landscape", !native);
   }
+  function setFace(nextIdx) {
+    faceIdx = ((nextIdx % faceOrder.length) + faceOrder.length) % faceOrder.length;
+    const which = faceOrder[faceIdx];
+    card.classList.toggle("flipped", which === "back");
+    card.classList.toggle("show-source", which === "source");
+    card.classList.remove("source-zoomed");
+    const next = faceOrder[(faceIdx + 1) % faceOrder.length];
+    if (faceOrder.length < 2) flipBtn.textContent = "Flip card";
+    else if (next === "back") flipBtn.textContent = "Flip to back";
+    else if (next === "source") flipBtn.textContent = "Show original art";
+    else flipBtn.textContent = "Show front";
+    if (which === "source" && current) {
+      sourceCredit.textContent = current.sourceCredit
+        ? `Source · ${current.sourceCredit}`
+        : (current.source || "");
+    } else {
+      sourceCredit.textContent = "";
+    }
+    applyFrame();
+  }
   function show(i) {
     index = (i + list.length) % list.length;
     const key = list[index].dataset.view;
     const c = credit(key);
-    card.classList.remove("flipped");
+    current = c;
+    faceIdx = 0;
+    card.classList.remove("flipped", "show-source", "source-zoomed");
     card.style.setProperty("--ar", 738 / 1024);
     frontImg.onload = () => applyFrame();
     frontImg.src = c.img;
     frontImg.alt = c.name;
     const hasBack = !!(c.back || c.backNote);
+    const hasSource = !!c.sourceImg;
     const landscape = !!(c.landscapeBack && c.back);
     back.innerHTML = c.back ? `<img src="${c.back}" alt="Back of ${esc(c.name)}"${landscape ? ' class="landscape"' : ""}>`
       : c.backNote ? `<div class="v-blank"><div><b>Card back</b>${esc(c.backNote)}</div></div>` : "";
@@ -2606,22 +2708,60 @@ const viewer = (function cardViewer() {
         else backImg.onload = finish;
       }
     }
+    if (hasSource) {
+      sourceImg.onload = () => applyFrame();
+      // Cropped source matches the Flair reinterpretation; comic page is used when zoomed.
+      sourceImg.dataset.crop = c.sourceImg;
+      sourceImg.dataset.comic = c.sourceComic || c.sourceImg;
+      sourceImg.src = c.sourceImg;
+      sourceImg.alt = `Original art for ${c.name}`;
+    } else {
+      sourceImg.removeAttribute("src");
+      sourceImg.removeAttribute("data-crop");
+      sourceImg.removeAttribute("data-comic");
+    }
+    // Cycle: front → back → original art (skip missing faces).
+    faceOrder = ["front"];
+    if (hasBack) faceOrder.push("back");
+    if (hasSource) faceOrder.push("source");
     card.classList.toggle("no-back", !hasBack);
+    card.classList.toggle("has-source", hasSource);
     card.classList.toggle("landscape-back", landscape);
-    applyFrame();
-    flipBtn.disabled = !hasBack;
+    flipBtn.disabled = faceOrder.length < 2;
     document.getElementById("vLabel").textContent = c.label;
     document.getElementById("vName").textContent = c.name;
     const touch = matchMedia("(hover: none)").matches;
-    document.getElementById("vHint").textContent = !hasBack ? c.imgNote || "Back not pictured"
-      : landscape ? (touch ? "Tap to flip \u00b7 Frame rotates with the back" : "Click or press F to flip \u00b7 Frame rotates with the back \u00b7 Arrow keys for next")
-      : touch ? "Tap the card to flip" : "Click the card or press F to flip \u00b7 Arrow keys for next";
+    let hint;
+    if (faceOrder.length < 2) hint = c.imgNote || "Back not pictured";
+    else if (hasSource && hasBack) {
+      hint = touch
+        ? "Tap to cycle front · back · original art \u00b7 Tap original to zoom"
+        : "Click or press F to cycle front \u00b7 back \u00b7 original art \u00b7 Click original to zoom \u00b7 Arrow keys for next";
+    } else if (hasSource) {
+      hint = touch ? "Tap to show original art \u00b7 Tap original to zoom" : "Click or press F for original art \u00b7 Click original to zoom";
+    } else if (landscape) {
+      hint = touch ? "Tap to flip \u00b7 Frame rotates with the back" : "Click or press F to flip \u00b7 Frame rotates with the back \u00b7 Arrow keys for next";
+    } else {
+      hint = touch ? "Tap the card to flip" : "Click the card or press F to flip \u00b7 Arrow keys for next";
+    }
+    document.getElementById("vHint").textContent = hint;
+    setFace(0);
   }
   const flip = () => {
     if (flipBtn.disabled) return;
-    card.classList.toggle("flipped");
-    applyFrame();
+    setFace(faceIdx + 1);
   };
+  function toggleSourceZoom(e) {
+    if (!card.classList.contains("show-source")) return;
+    e.stopPropagation();
+    const zooming = !card.classList.contains("source-zoomed");
+    card.classList.toggle("source-zoomed", zooming);
+    // Prefer the full comic page/cover when zoomed for context.
+    const next = zooming
+      ? (sourceImg.dataset.comic || sourceImg.dataset.crop)
+      : (sourceImg.dataset.crop || sourceImg.dataset.comic);
+    if (next && sourceImg.getAttribute("src") !== next) sourceImg.src = next;
+  }
   function open(trigger) {
     const sheet = trigger.closest(".mini");
     list = sheet ? [...sheet.querySelectorAll("[data-view]")]
@@ -2634,10 +2774,15 @@ const viewer = (function cardViewer() {
   }
   function close() {
     el.classList.remove("show");
+    card.classList.remove("source-zoomed", "show-source", "flipped");
     if (opener) opener.focus();
   }
 
-  card.addEventListener("click", flip);
+  card.addEventListener("click", e => {
+    if (e.target.closest(".v-source-stage")) return;
+    flip();
+  });
+  sourceStage.addEventListener("click", toggleSourceZoom);
   flipBtn.addEventListener("click", flip);
   el.querySelector(".v-close").addEventListener("click", close);
   el.querySelector(".prev").addEventListener("click", () => show(index - 1));
@@ -2645,10 +2790,14 @@ const viewer = (function cardViewer() {
   el.addEventListener("click", e => { if (e.target === el) close(); });
   document.addEventListener("keydown", e => {
     if (!el.classList.contains("show")) return;
-    if (e.key === "Escape") close();
+    if (e.key === "Escape") {
+      if (card.classList.contains("source-zoomed")) { card.classList.remove("source-zoomed"); return; }
+      close();
+    }
     else if (e.key === "ArrowLeft") show(index - 1);
     else if (e.key === "ArrowRight") show(index + 1);
     else if (e.key === "f" || e.key === "F") flip();
+    else if ((e.key === "z" || e.key === "Z") && card.classList.contains("show-source")) toggleSourceZoom(e);
     else return;
     e.preventDefault();
   });
