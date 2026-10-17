@@ -1,0 +1,73 @@
+{
+  "n": 88,
+  "key": "088",
+  "title": "Origin of Carnage",
+  "source": "The Amazing Spider-Man (1963) #384, Page 16",
+  "issue_keys": [
+    "The Amazing Spider-Man Vol 1 384",
+    "The Amazing Spider-Man Vol 2 384",
+    "The Amazing Spider-Man 384",
+    "Amazing Spider-Man Vol 1 384"
+  ],
+  "page": 16,
+  "part": "page",
+  "status": "ok",
+  "candidates": [
+    {
+      "idx": 1,
+      "file": "01.jpg",
+      "wiki": "File:Cletus Kasady (Earth-616), Carnage (Symbiote) (Earth-616), Malcolm McBride (Earth-616), Frances Barrison (Earth-616), Demogoblin (Earth-616), and Doppelganger (Spider-Man) (Earth-616) from Amazing Spider-Man Vol 1 384 001.jpg",
+      "score": 110,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/b/b0/Cletus_Kasady_%28Earth-616%29%2C_Carnage_%28Symbiote%29_%28Earth-616%29%2C_Malcolm_McBride_%28Earth-616%29%2C_Frances_Barrison_%28Earth-616%29%2C_Demogoblin_%28Earth-616%29%2C_and_Doppelganger_%28Spider-Man%29_%28Earth-616%29_from_Amazing_Spider-Man_Vol_1_384_001.jpg/revision/latest?cb=20200227063521"
+    },
+    {
+      "idx": 2,
+      "file": "02.jpg",
+      "wiki": "File:Peter Parker (Earth-616) and Venom (Symbiote) (Earth-616) from Amazing Spider-Man Vol 1 384.jpg",
+      "score": 95,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/1/14/Peter_Parker_%28Earth-616%29_and_Venom_%28Symbiote%29_%28Earth-616%29_from_Amazing_Spider-Man_Vol_1_384.jpg/revision/latest?cb=20251004201926"
+    },
+    {
+      "idx": 3,
+      "file": "03.jpg",
+      "wiki": "File:Reuben Traid (Earth-616) from Amazing Spider-Man Vol 1 384 001.png",
+      "score": 95,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/3/39/Reuben_Traid_%28Earth-616%29_from_Amazing_Spider-Man_Vol_1_384_001.png/revision/latest?cb=20200227063757"
+    },
+    {
+      "idx": 4,
+      "file": "04.jpg",
+      "wiki": "File:Susie Karnowsky (Earth-616) from Amazing Spider-Man Vol 1 384 001.png",
+      "score": 95,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/0/05/Susie_Karnowsky_%28Earth-616%29_from_Amazing_Spider-Man_Vol_1_384_001.png/revision/latest?cb=20200227063858"
+    },
+    {
+      "idx": 5,
+      "file": "05.jpg",
+      "wiki": "File:United Nations Headquarters from Amazing Spider-Man Vol 1 384 001.png",
+      "score": 95,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/9/94/United_Nations_Headquarters_from_Amazing_Spider-Man_Vol_1_384_001.png/revision/latest?cb=20200227063931"
+    },
+    {
+      "idx": 6,
+      "file": "06.jpg",
+      "wiki": "File:Cletus Kasady (Earth-616) from Amazing Spider-Man Vol 1 384 0001.jpg",
+      "score": 90,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/d/d5/Cletus_Kasady_%28Earth-616%29_from_Amazing_Spider-Man_Vol_1_384_0001.jpg/revision/latest?cb=20200227063405"
+    },
+    {
+      "idx": 7,
+      "file": "07.jpg",
+      "wiki": "File:Cletus Kasady (Earth-616) from Amazing Spider-Man Vol 1 384 0002.jpg",
+      "score": 90,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/a/ae/Cletus_Kasady_%28Earth-616%29_from_Amazing_Spider-Man_Vol_1_384_0002.jpg/revision/latest?cb=20200227063459"
+    },
+    {
+      "idx": 8,
+      "file": "08.jpg",
+      "wiki": "File:Amazing Spider-Man Vol 1 384.jpg",
+      "score": 67,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/7/7c/Amazing_Spider-Man_Vol_1_384.jpg/revision/latest?cb=20180112230819"
+    }
+  ]
+}

@@ -1,0 +1,73 @@
+{
+  "n": 54,
+  "key": "054",
+  "title": "Formation of Excalibur",
+  "source": "The Uncanny X-Men (1963) #300, Page 1",
+  "issue_keys": [
+    "The Uncanny X-Men Vol 1 300",
+    "The Uncanny X-Men Vol 2 300",
+    "The Uncanny X-Men 300",
+    "Uncanny X-Men Vol 1 300"
+  ],
+  "page": 1,
+  "part": "page",
+  "status": "ok",
+  "candidates": [
+    {
+      "idx": 1,
+      "file": "01.jpg",
+      "wiki": "File:X-Men (Earth-616) from Uncanny X-Men Vol 1 300 001.jpg",
+      "score": 125,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/b/bd/X-Men_%28Earth-616%29_from_Uncanny_X-Men_Vol_1_300_001.jpg/revision/latest?cb=20221231135812"
+    },
+    {
+      "idx": 2,
+      "file": "02.jpg",
+      "wiki": "File:Amelia Voght (Earth-616) from Uncanny X-Men Vol 1 300 0001.jpg",
+      "score": 120,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/f/f4/Amelia_Voght_%28Earth-616%29_from_Uncanny_X-Men_Vol_1_300_0001.jpg/revision/latest?cb=20191128015134"
+    },
+    {
+      "idx": 3,
+      "file": "03.jpg",
+      "wiki": "File:Andrew Graves (Earth-616) from Uncanny X-Men Vol 1 300 0001.jpg",
+      "score": 120,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/8/84/Andrew_Graves_%28Earth-616%29_from_Uncanny_X-Men_Vol_1_300_0001.jpg/revision/latest?cb=20191128015502"
+    },
+    {
+      "idx": 4,
+      "file": "04.jpg",
+      "wiki": "File:Joanna Cargill (Earth-616) from Uncanny X-Men Vol 1 300 0001.jpg",
+      "score": 120,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/e/e8/Joanna_Cargill_%28Earth-616%29_from_Uncanny_X-Men_Vol_1_300_0001.jpg/revision/latest?cb=20191128015408"
+    },
+    {
+      "idx": 5,
+      "file": "05.jpg",
+      "wiki": "File:Robert Drake (Earth-616) from Uncanny X-Men Vol 1 300 0001.jpg",
+      "score": 120,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/6/6e/Robert_Drake_%28Earth-616%29_from_Uncanny_X-Men_Vol_1_300_0001.jpg/revision/latest?cb=20191128015302"
+    },
+    {
+      "idx": 6,
+      "file": "06.jpg",
+      "wiki": "File:Andrew Graves (Earth-616) from Uncanny X-Men Vol 1 300.png",
+      "score": 95,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/a/ae/Andrew_Graves_%28Earth-616%29_from_Uncanny_X-Men_Vol_1_300.png/revision/latest?cb=20141103171112"
+    },
+    {
+      "idx": 7,
+      "file": "07.jpg",
+      "wiki": "File:Uncanny X-Men Vol 1 300.jpg",
+      "score": 67,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/1/1b/Uncanny_X-Men_Vol_1_300.jpg/revision/latest?cb=20180127171110"
+    },
+    {
+      "idx": 8,
+      "file": "08.jpg",
+      "wiki": "File:ABC News Studios from Uncanny X-Men Vol 1 299 001.png",
+      "score": 35,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/6/6c/ABC_News_Studios_from_Uncanny_X-Men_Vol_1_299_001.png/revision/latest?cb=20180615150145"
+    }
+  ]
+}

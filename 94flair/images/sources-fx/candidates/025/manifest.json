@@ -1,0 +1,52 @@
+{
+  "n": 25,
+  "key": "025",
+  "title": "Doom Steals the Power Cosmic",
+  "source": "The Fantastic Four (1961) #128, Page 21",
+  "issue_keys": [
+    "The Fantastic Four Vol 1 128",
+    "The Fantastic Four Vol 2 128",
+    "The Fantastic Four 128",
+    "Fantastic Four Vol 1 128"
+  ],
+  "page": 21,
+  "part": "page",
+  "status": "ok",
+  "candidates": [
+    {
+      "idx": 1,
+      "file": "01.jpg",
+      "wiki": "File:Frightful Four (Earth-616) from Fantastic Four Vol 1 128 001.jpg",
+      "score": 95,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/0/0c/Frightful_Four_%28Earth-616%29_from_Fantastic_Four_Vol_1_128_001.jpg/revision/latest?cb=20240110041049"
+    },
+    {
+      "idx": 2,
+      "file": "02.jpg",
+      "wiki": "File:Josiah Mandiz (Earth-616) from Fantastic Four Vol 1 128 001.png",
+      "score": 95,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/b/b4/Josiah_Mandiz_%28Earth-616%29_from_Fantastic_Four_Vol_1_128_001.png/revision/latest?cb=20201017075504"
+    },
+    {
+      "idx": 3,
+      "file": "03.jpg",
+      "wiki": "File:Fantastic Four Vol 1 128.jpg",
+      "score": 67,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/9/98/Fantastic_Four_Vol_1_128.jpg/revision/latest?cb=20180502040745"
+    },
+    {
+      "idx": 4,
+      "file": "04.jpg",
+      "wiki": "File:Fantastic Four (Earth-616) and Norrin Radd (Earth-616) battle the Doomsman II (Earth-616) from Fantastic Four Vol 1 157 001.jpg",
+      "score": 20,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/2/23/Fantastic_Four_%28Earth-616%29_and_Norrin_Radd_%28Earth-616%29_battle_the_Doomsman_II_%28Earth-616%29_from_Fantastic_Four_Vol_1_157_001.jpg/revision/latest?cb=20161021213836"
+    },
+    {
+      "idx": 5,
+      "file": "05.jpg",
+      "wiki": "File:Power Man Joins the Fantastic Four from Fantastic Four Vol 1 168.jpg",
+      "score": 20,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/8/8f/Power_Man_Joins_the_Fantastic_Four_from_Fantastic_Four_Vol_1_168.jpg/revision/latest?cb=20161022145622"
+    }
+  ]
+}

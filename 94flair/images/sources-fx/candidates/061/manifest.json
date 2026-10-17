@@ -1,0 +1,65 @@
+{
+  "n": 61,
+  "key": "061",
+  "title": "Origin of Venom",
+  "source": "Venom: Lethal Protector (1993) Gold Retailer Incentive, Back Cover",
+  "status": "ok",
+  "candidates": [
+    {
+      "idx": 1,
+      "file": "01.jpg",
+      "wiki": "File:True Believers Venom - Lethal Protector Vol 1 1.jpg",
+      "score": 100,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/e/ef/True_Believers_Venom_-_Lethal_Protector_Vol_1_1.jpg/revision/latest/scale-to-width-down/1400?cb=20200129090440"
+    },
+    {
+      "idx": 2,
+      "file": "02.jpg",
+      "wiki": "File:Venom Lethal Protector Vol 1 1.jpg",
+      "score": 100,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/d/d4/Venom_Lethal_Protector_Vol_1_1.jpg/revision/latest/scale-to-width-down/1400?cb=20220716153720"
+    },
+    {
+      "idx": 3,
+      "file": "03.jpg",
+      "wiki": "File:Venom Lethal Protector Vol 1 1 Gold Foil Variant.jpg",
+      "score": 100,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/7/7c/Venom_Lethal_Protector_Vol_1_1_Gold_Foil_Variant.jpg/revision/latest?cb=20210322053655"
+    },
+    {
+      "idx": 4,
+      "file": "04.jpg",
+      "wiki": "File:Treece International (Earth-616) from Venom Lethal Protector Vol 1 1 001.jpg",
+      "score": 100,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/f/fd/Treece_International_%28Earth-616%29_from_Venom_Lethal_Protector_Vol_1_1_001.jpg/revision/latest?cb=20180613204245"
+    },
+    {
+      "idx": 5,
+      "file": "05.jpg",
+      "wiki": "File:Edward Brock (Earth-616) from Venom Lethal Protector Vol 1 1 0001.jpg",
+      "score": 100,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/4/42/Edward_Brock_%28Earth-616%29_from_Venom_Lethal_Protector_Vol_1_1_0001.jpg/revision/latest/scale-to-width-down/1400?cb=20100604143606"
+    },
+    {
+      "idx": 6,
+      "file": "06.jpg",
+      "wiki": "File:Simon (SFPD) (Earth-616) from Venom Lethal Protector Vol 1 1 0001.jpg",
+      "score": 100,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/a/ae/Simon_%28SFPD%29_%28Earth-616%29_from_Venom_Lethal_Protector_Vol_1_1_0001.jpg/revision/latest?cb=20180522231335"
+    },
+    {
+      "idx": 7,
+      "file": "07.jpg",
+      "wiki": "File:Venom Lethal Protector TPB Vol 1 1 2018.jpg",
+      "score": 100,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/8/80/Venom_Lethal_Protector_TPB_Vol_1_1_2018.jpg/revision/latest?cb=20240103110005"
+    },
+    {
+      "idx": 8,
+      "file": "08.jpg",
+      "wiki": "File:Venom Annual Vol 1 1 Scorpion Comics and Sonny's Comics Exclusive Virgin Variant B.jpg",
+      "score": 100,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/2/24/Venom_Annual_Vol_1_1_Scorpion_Comics_and_Sonny%27s_Comics_Exclusive_Virgin_Variant_B.jpg/revision/latest?cb=20210217012028"
+    }
+  ]
+}

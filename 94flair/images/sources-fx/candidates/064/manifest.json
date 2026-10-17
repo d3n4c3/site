@@ -1,0 +1,38 @@
+{
+  "n": 64,
+  "key": "064",
+  "title": "The Origin of Speedball",
+  "source": "The New Warriors (1990) #31, Page 14",
+  "issue_keys": [
+    "The New Warriors Vol 1 31",
+    "The New Warriors Vol 2 31",
+    "The New Warriors 31",
+    "New Warriors Vol 1 31"
+  ],
+  "page": 14,
+  "part": "page",
+  "status": "ok",
+  "candidates": [
+    {
+      "idx": 1,
+      "file": "01.jpg",
+      "wiki": "File:Springdale from New Warriors Vol 1 31 001.png",
+      "score": 95,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/8/81/Springdale_from_New_Warriors_Vol_1_31_001.png/revision/latest?cb=20220716040822"
+    },
+    {
+      "idx": 2,
+      "file": "02.jpg",
+      "wiki": "File:New Warriors Vol 1 31.jpg",
+      "score": 62,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/8/81/New_Warriors_Vol_1_31.jpg/revision/latest/scale-to-width-down/1400?cb=20251207191021"
+    },
+    {
+      "idx": 3,
+      "file": "03.jpg",
+      "wiki": "File:New Warriors Vol 4 14.jpg",
+      "score": 10,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/9/96/New_Warriors_Vol_4_14.jpg/revision/latest?cb=20190520014606"
+    }
+  ]
+}

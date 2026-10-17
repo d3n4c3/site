@@ -1,0 +1,24 @@
+{
+  "n": 41,
+  "key": "041",
+  "title": "Days of Future Past",
+  "source": "X-Men Adventures (1992) #1, Page 12",
+  "issue_keys": [
+    "X-Men Adventures Vol 1 1",
+    "X-Men Adventures Vol 2 1",
+    "X-Men Adventures 1",
+    "The X-Men Adventures Vol 1 1"
+  ],
+  "page": 12,
+  "part": "page",
+  "status": "ok",
+  "candidates": [
+    {
+      "idx": 1,
+      "file": "01.jpg",
+      "wiki": "File:X-Men (UK) Vol 1 12.jpg",
+      "score": 10,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/7/70/X-Men_%28UK%29_Vol_1_12.jpg/revision/latest?cb=20221204154604"
+    }
+  ]
+}

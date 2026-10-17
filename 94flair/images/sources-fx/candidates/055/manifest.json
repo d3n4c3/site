@@ -1,0 +1,59 @@
+{
+  "n": 55,
+  "key": "055",
+  "title": "The Creation of Archangel",
+  "source": "X-Factor (1988) #24, Page 16",
+  "issue_keys": [
+    "X-Factor Vol 1 24",
+    "X-Factor Vol 2 24",
+    "X-Factor 24",
+    "The X-Factor Vol 1 24"
+  ],
+  "page": 16,
+  "part": "page",
+  "status": "ok",
+  "candidates": [
+    {
+      "idx": 1,
+      "file": "01.jpg",
+      "wiki": "File:Horsemen of Apocalypse (Earth-616) from X-Factor Vol 1 24 001.jpg",
+      "score": 95,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/1/1f/Horsemen_of_Apocalypse_%28Earth-616%29_from_X-Factor_Vol_1_24_001.jpg/revision/latest/scale-to-width-down/1400?cb=20201023193602"
+    },
+    {
+      "idx": 2,
+      "file": "02.jpg",
+      "wiki": "File:Horsemen of Apocalypse (Earth-616) from X-Factor Vol 1 24 002.jpg",
+      "score": 95,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/7/7c/Horsemen_of_Apocalypse_%28Earth-616%29_from_X-Factor_Vol_1_24_002.jpg/revision/latest/scale-to-width-down/1400?cb=20201023195006"
+    },
+    {
+      "idx": 3,
+      "file": "03.jpg",
+      "wiki": "File:En Sabah Nur (Earth-616) from X-Factor Vol 1 24 0001.png",
+      "score": 90,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/a/a5/En_Sabah_Nur_%28Earth-616%29_from_X-Factor_Vol_1_24_0001.png/revision/latest?cb=20070313123411"
+    },
+    {
+      "idx": 4,
+      "file": "04.jpg",
+      "wiki": "File:Warren Worthington III (Earth-616) from X-Factor Vol 1 24 0001.jpg",
+      "score": 90,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/7/79/Warren_Worthington_III_%28Earth-616%29_from_X-Factor_Vol_1_24_0001.jpg/revision/latest?cb=20211126110653"
+    },
+    {
+      "idx": 5,
+      "file": "05.jpg",
+      "wiki": "File:X-Factor Vol 1 24.jpg",
+      "score": 62,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/2/20/X-Factor_Vol_1_24.jpg/revision/latest?cb=20191128002022"
+    },
+    {
+      "idx": 6,
+      "file": "06.jpg",
+      "wiki": "File:X-Factor Vol 1 16.jpg",
+      "score": 10,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/3/3d/X-Factor_Vol_1_16.jpg/revision/latest/scale-to-width-down/1400?cb=20220613075604"
+    }
+  ]
+}

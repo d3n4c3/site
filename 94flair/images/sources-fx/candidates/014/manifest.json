@@ -1,0 +1,73 @@
+{
+  "n": 14,
+  "key": "014",
+  "title": "Origin of Daredevil",
+  "source": "Daredevil: The Man Without Fear (1964) #1, Cover",
+  "issue_keys": [
+    "Daredevil: The Man Without Fear Vol 1 1",
+    "Daredevil: The Man Without Fear Vol 2 1",
+    "Daredevil: The Man Without Fear 1",
+    "The Daredevil: The Man Without Fear Vol 1 1"
+  ],
+  "page": null,
+  "part": "cover",
+  "status": "ok",
+  "candidates": [
+    {
+      "idx": 1,
+      "file": "01.jpg",
+      "wiki": "File:Captain Universe Daredevil - The Man Without Fear! Vol 1 1 Textless.jpg",
+      "score": 23,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/8/88/Captain_Universe_Daredevil_-_The_Man_Without_Fear%21_Vol_1_1_Textless.jpg/revision/latest?cb=20170323070643"
+    },
+    {
+      "idx": 2,
+      "file": "02.jpg",
+      "wiki": "File:Daredevil The Man Without Fear (novel) (Russian cover) Textless.jpg",
+      "score": 23,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/4/4b/Daredevil_The_Man_Without_Fear_%28novel%29_%28Russian_cover%29_Textless.jpg/revision/latest/scale-to-width-down/1400?cb=20251231051247"
+    },
+    {
+      "idx": 3,
+      "file": "03.jpg",
+      "wiki": "File:Daredevil Woman Without Fear Vol 1 1 Textless.jpg",
+      "score": 23,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/5/5a/Daredevil_Woman_Without_Fear_Vol_1_1_Textless.jpg/revision/latest/scale-to-width-down/1400?cb=20211015224240"
+    },
+    {
+      "idx": 4,
+      "file": "04.jpg",
+      "wiki": "File:Daredevil Woman Without Fear Vol 1 2 Bagley Variant Textless.jpg",
+      "score": 23,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/4/42/Daredevil_Woman_Without_Fear_Vol_1_2_Bagley_Variant_Textless.jpg/revision/latest/scale-to-width-down/1400?cb=20220203225820"
+    },
+    {
+      "idx": 5,
+      "file": "05.jpg",
+      "wiki": "File:Daredevil Woman Without Fear Vol 1 2 Textless.jpg",
+      "score": 23,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/0/0f/Daredevil_Woman_Without_Fear_Vol_1_2_Textless.jpg/revision/latest?cb=20211105052158"
+    },
+    {
+      "idx": 6,
+      "file": "06.jpg",
+      "wiki": "File:72nd Street from Daredevil the Man Without Fear Vol 1 4 001.png",
+      "score": 20,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/4/4b/72nd_Street_from_Daredevil_the_Man_Without_Fear_Vol_1_4_001.png/revision/latest?cb=20160417134326"
+    },
+    {
+      "idx": 7,
+      "file": "07.jpg",
+      "wiki": "File:8th Street from Daredevil the Man Without Fear Vol 1 4 001.png",
+      "score": 20,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/f/f4/8th_Street_from_Daredevil_the_Man_Without_Fear_Vol_1_4_001.png/revision/latest?cb=20160417134205"
+    },
+    {
+      "idx": 8,
+      "file": "08.jpg",
+      "wiki": "File:Carl Lombardi (Earth-616) from Captain Universe Daredevil - The Man Without Fear! Vol 1 1 001.jpg",
+      "score": 20,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/5/52/Carl_Lombardi_%28Earth-616%29_from_Captain_Universe_Daredevil_-_The_Man_Without_Fear%21_Vol_1_1_001.jpg/revision/latest?cb=20140303004925"
+    }
+  ]
+}

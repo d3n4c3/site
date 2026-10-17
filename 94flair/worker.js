@@ -56,10 +56,19 @@ export default {
         const selected = Array.isArray(body.selected)
           ? [...new Set(body.selected.map((n) => Number(n)).filter((n) => n >= 1 && n <= 99))].sort((a, b) => a - b)
           : [];
+        const candidates = Array.isArray(body.candidates)
+          ? body.candidates
+              .map((c) => ({
+                n: Number(c && c.n),
+                candidate: Number(c && c.candidate),
+              }))
+              .filter((c) => c.n >= 1 && c.n <= 99 && c.candidate >= 1 && c.candidate <= 20)
+          : [];
         const payload = {
           submitted: true,
           submittedAt: new Date().toISOString(),
           selected,
+          candidates,
           count: selected.length,
           notes,
           userAgent: request.headers.get("user-agent") || "",

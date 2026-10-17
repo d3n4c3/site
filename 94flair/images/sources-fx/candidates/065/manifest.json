@@ -1,0 +1,73 @@
+{
+  "n": 65,
+  "key": "065",
+  "title": "Captain America vs. The Captain",
+  "source": "Captain America (1968) #422, Page 8",
+  "issue_keys": [
+    "Captain America Vol 1 422",
+    "Captain America Vol 2 422",
+    "Captain America 422",
+    "The Captain America Vol 1 422"
+  ],
+  "page": 8,
+  "part": "page",
+  "status": "ok",
+  "candidates": [
+    {
+      "idx": 1,
+      "file": "01.jpg",
+      "wiki": "File:Victor Lillian (Earth-616) from Captain America Vol 1 422 0001.jpg",
+      "score": 120,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/9/94/Victor_Lillian_%28Earth-616%29_from_Captain_America_Vol_1_422_0001.jpg/revision/latest?cb=20161119000127"
+    },
+    {
+      "idx": 2,
+      "file": "02.jpg",
+      "wiki": "File:Captain America Vol 1 422.jpg",
+      "score": 97,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/1/1f/Captain_America_Vol_1_422.jpg/revision/latest?cb=20171228032608"
+    },
+    {
+      "idx": 3,
+      "file": "03.jpg",
+      "wiki": "File:Accuser Corps (Earth-616) from Captain America Vol 1 399 001.jpg",
+      "score": 35,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/a/a9/Accuser_Corps_%28Earth-616%29_from_Captain_America_Vol_1_399_001.jpg/revision/latest?cb=20210125024205"
+    },
+    {
+      "idx": 4,
+      "file": "04.jpg",
+      "wiki": "File:Avengers (Earth-616) from Captain America Vol 1 251 001.jpg",
+      "score": 35,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/c/c1/Avengers_%28Earth-616%29_from_Captain_America_Vol_1_251_001.jpg/revision/latest?cb=20251106142809"
+    },
+    {
+      "idx": 5,
+      "file": "05.jpg",
+      "wiki": "File:Cam (Earth-616) from Captain America Symbol of Truth Vol 1 3 001.jpg",
+      "score": 35,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/5/53/Cam_%28Earth-616%29_from_Captain_America_Symbol_of_Truth_Vol_1_3_001.jpg/revision/latest?cb=20220730084246"
+    },
+    {
+      "idx": 6,
+      "file": "06.jpg",
+      "wiki": "File:Captain America II (A.I.vengers) (Earth-616) from Secret Empire Vol 1 6 001.jpg",
+      "score": 35,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/a/a1/Captain_America_II_%28A.I.vengers%29_%28Earth-616%29_from_Secret_Empire_Vol_1_6_001.jpg/revision/latest?cb=20170720142315"
+    },
+    {
+      "idx": 7,
+      "file": "07.jpg",
+      "wiki": "File:Captain America Vol 1 316.jpg",
+      "score": 35,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/b/ba/Captain_America_Vol_1_316.jpg/revision/latest?cb=20171228021335"
+    },
+    {
+      "idx": 8,
+      "file": "08.jpg",
+      "wiki": "File:Captain America Vol 1 323.jpg",
+      "score": 35,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/b/b6/Captain_America_Vol_1_323.jpg/revision/latest?cb=20171228021652"
+    }
+  ]
+}

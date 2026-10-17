@@ -1,0 +1,59 @@
+{
+  "n": 59,
+  "key": "059",
+  "title": "Armor Wars",
+  "source": "Iron Man (1968) Annual #10, Page 50",
+  "issue_keys": [
+    "Iron Man Annual Vol 1 10",
+    "Iron Man Vol 1 Annual 10",
+    "Iron Man Annual 10",
+    "The Iron Man Annual Vol 1 10"
+  ],
+  "page": 50,
+  "part": "page",
+  "status": "ok",
+  "candidates": [
+    {
+      "idx": 1,
+      "file": "01.jpg",
+      "wiki": "File:Set (Earth-616) and Atum (Earth-616) from Iron Man Annual Vol 1 10 001.jpg",
+      "score": 95,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/9/99/Set_%28Earth-616%29_and_Atum_%28Earth-616%29_from_Iron_Man_Annual_Vol_1_10_001.jpg/revision/latest?cb=20221217160728"
+    },
+    {
+      "idx": 2,
+      "file": "02.jpg",
+      "wiki": "File:Set (Earth-616) and Atum (Earth-616) from Iron Man Annual Vol 1 10 002.jpg",
+      "score": 95,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/e/e3/Set_%28Earth-616%29_and_Atum_%28Earth-616%29_from_Iron_Man_Annual_Vol_1_10_002.jpg/revision/latest?cb=20221217004425"
+    },
+    {
+      "idx": 3,
+      "file": "03.jpg",
+      "wiki": "File:Dakkor (Earth-616) from Iron Man Annual Vol 1 10 0001.jpg",
+      "score": 90,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/e/ea/Dakkor_%28Earth-616%29_from_Iron_Man_Annual_Vol_1_10_0001.jpg/revision/latest?cb=20190705001132"
+    },
+    {
+      "idx": 4,
+      "file": "04.jpg",
+      "wiki": "File:Omega Rocket from Iron Man Annual Vol 1 10.png",
+      "score": 90,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/0/04/Omega_Rocket_from_Iron_Man_Annual_Vol_1_10.png/revision/latest?cb=20200604044224"
+    },
+    {
+      "idx": 5,
+      "file": "05.jpg",
+      "wiki": "File:Iron Man Annual Vol 1 10.jpg",
+      "score": 62,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/8/80/Iron_Man_Annual_Vol_1_10.jpg/revision/latest?cb=20191220001714"
+    },
+    {
+      "idx": 6,
+      "file": "06.jpg",
+      "wiki": "File:Iron Man Armor from New Avengers Annual Vol 1 1 001.jpg",
+      "score": 20,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/a/aa/Iron_Man_Armor_from_New_Avengers_Annual_Vol_1_1_001.jpg/revision/latest?cb=20151106202252"
+    }
+  ]
+}

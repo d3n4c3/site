@@ -1,0 +1,38 @@
+{
+  "n": 62,
+  "key": "062",
+  "title": "Origin of Typhoid Mary",
+  "source": "Daredevil: The Man Without Fear (1964) #254, Page 2",
+  "issue_keys": [
+    "Daredevil: The Man Without Fear Vol 1 254",
+    "Daredevil: The Man Without Fear Vol 2 254",
+    "Daredevil: The Man Without Fear 254",
+    "The Daredevil: The Man Without Fear Vol 1 254"
+  ],
+  "page": 2,
+  "part": "page",
+  "status": "ok",
+  "candidates": [
+    {
+      "idx": 1,
+      "file": "01.jpg",
+      "wiki": "File:Don Rigoletto (Original) (Earth-616) from Daredevil The Man Without Fear Vol 1 3 002.jpg",
+      "score": 35,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/b/b7/Don_Rigoletto_%28Original%29_%28Earth-616%29_from_Daredevil_The_Man_Without_Fear_Vol_1_3_002.jpg/revision/latest?cb=20170920181914"
+    },
+    {
+      "idx": 2,
+      "file": "02.jpg",
+      "wiki": "File:Daredevil The Man Without Fear Vol 1 2.jpg",
+      "score": 10,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/b/b3/Daredevil_The_Man_Without_Fear_Vol_1_2.jpg/revision/latest?cb=20180403031423"
+    },
+    {
+      "idx": 3,
+      "file": "03.jpg",
+      "wiki": "File:Man Without Fear Vol 1 2.jpg",
+      "score": 10,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/4/48/Man_Without_Fear_Vol_1_2.jpg/revision/latest?cb=20181219011209"
+    }
+  ]
+}

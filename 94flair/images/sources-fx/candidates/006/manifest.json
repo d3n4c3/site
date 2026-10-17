@@ -1,0 +1,73 @@
+{
+  "n": 6,
+  "key": "006",
+  "title": "The Origin of Iron Man",
+  "source": "Tales of Suspense (1959) #39, Page 1",
+  "issue_keys": [
+    "Tales of Suspense Vol 1 39",
+    "Tales of Suspense Vol 2 39",
+    "Tales of Suspense 39",
+    "The Tales of Suspense Vol 1 39"
+  ],
+  "page": 1,
+  "part": "page",
+  "status": "ok",
+  "candidates": [
+    {
+      "idx": 1,
+      "file": "01.jpg",
+      "wiki": "File:Iron Man Armor Model 1 from Tales of Suspense Vol 1 39 001.jpg",
+      "score": 155,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/7/7d/Iron_Man_Armor_Model_1_from_Tales_of_Suspense_Vol_1_39_001.jpg/revision/latest?cb=20151018210713"
+    },
+    {
+      "idx": 2,
+      "file": "02.jpg",
+      "wiki": "File:Adam (Earth-63339) from Tales of Suspense Vol 1 39 001.jpg",
+      "score": 125,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/5/52/Adam_%28Earth-63339%29_from_Tales_of_Suspense_Vol_1_39_001.jpg/revision/latest?cb=20260318185333"
+    },
+    {
+      "idx": 3,
+      "file": "03.jpg",
+      "wiki": "File:Anthony Stark (Earth-616) from Tales of Suspense Vol 1 39 001.jpg",
+      "score": 125,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/e/ea/Anthony_Stark_%28Earth-616%29_from_Tales_of_Suspense_Vol_1_39_001.jpg/revision/latest/scale-to-width-down/1400?cb=20151018204548"
+    },
+    {
+      "idx": 4,
+      "file": "04.jpg",
+      "wiki": "File:Earth-63339 from Tales of Suspense Vol 1 39 001.jpg",
+      "score": 125,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/c/cf/Earth-63339_from_Tales_of_Suspense_Vol_1_39_001.jpg/revision/latest?cb=20260318200543"
+    },
+    {
+      "idx": 5,
+      "file": "05.jpg",
+      "wiki": "File:Eve (Earth-63339) from Tales of Suspense Vol 1 39 001.jpg",
+      "score": 125,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/c/cc/Eve_%28Earth-63339%29_from_Tales_of_Suspense_Vol_1_39_001.jpg/revision/latest?cb=20260318195218"
+    },
+    {
+      "idx": 6,
+      "file": "06.jpg",
+      "wiki": "File:Gundar (Sailor) (Earth-616) from Tales of Suspense Vol 1 39 001.jpg",
+      "score": 125,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/d/de/Gundar_%28Sailor%29_%28Earth-616%29_from_Tales_of_Suspense_Vol_1_39_001.jpg/revision/latest?cb=20260318203050"
+    },
+    {
+      "idx": 7,
+      "file": "07.jpg",
+      "wiki": "File:Gundar (Viking) (Earth-616) from Tales of Suspense Vol 1 39 001.jpg",
+      "score": 125,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/e/e9/Gundar_%28Viking%29_%28Earth-616%29_from_Tales_of_Suspense_Vol_1_39_001.jpg/revision/latest?cb=20231003221517"
+    },
+    {
+      "idx": 8,
+      "file": "08.jpg",
+      "wiki": "File:Ho Yinsen (Earth-616) from Tales of Suspense Vol 1 39 001.jpg",
+      "score": 125,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/6/68/Ho_Yinsen_%28Earth-616%29_from_Tales_of_Suspense_Vol_1_39_001.jpg/revision/latest?cb=20191125190744"
+    }
+  ]
+}

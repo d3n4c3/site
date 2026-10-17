@@ -1,0 +1,38 @@
+{
+  "n": 58,
+  "key": "058",
+  "title": "The Origin of Jubilee",
+  "source": "Uncanny X-Men (1963) #258, Page 8",
+  "issue_keys": [
+    "Uncanny X-Men Vol 1 258",
+    "Uncanny X-Men Vol 2 258",
+    "Uncanny X-Men 258",
+    "The Uncanny X-Men Vol 1 258"
+  ],
+  "page": 8,
+  "part": "page",
+  "status": "ok",
+  "candidates": [
+    {
+      "idx": 1,
+      "file": "01.jpg",
+      "wiki": "File:Elizabeth Braddock (Earth-616) and Mandarin (Earth-616) from Uncanny X-Men Vol 1 258 001.png",
+      "score": 95,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/5/5b/Elizabeth_Braddock_%28Earth-616%29_and_Mandarin_%28Earth-616%29_from_Uncanny_X-Men_Vol_1_258_001.png/revision/latest?cb=20201204001328"
+    },
+    {
+      "idx": 2,
+      "file": "02.jpg",
+      "wiki": "File:Uncanny X-Men Vol 1 258.jpg",
+      "score": 67,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/6/65/Uncanny_X-Men_Vol_1_258.jpg/revision/latest/scale-to-width-down/1400?cb=20241002211750"
+    },
+    {
+      "idx": 3,
+      "file": "03.jpg",
+      "wiki": "File:Uncanny X-Men Vol 1 258 Reprint.jpg",
+      "score": 50,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/c/cc/Uncanny_X-Men_Vol_1_258_Reprint.jpg/revision/latest?cb=20070228202830"
+    }
+  ]
+}

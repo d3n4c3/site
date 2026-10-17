@@ -1,0 +1,73 @@
+{
+  "n": 73,
+  "key": "073",
+  "title": "Origin of the New Warriors",
+  "source": "Nova (1993) #1, Page 1",
+  "issue_keys": [
+    "Nova Vol 1 1",
+    "Nova Vol 2 1",
+    "Nova 1",
+    "The Nova Vol 1 1"
+  ],
+  "page": 1,
+  "part": "page",
+  "status": "ok",
+  "candidates": [
+    {
+      "idx": 1,
+      "file": "01.jpg",
+      "wiki": "File:Jack (Earth-616) from Nova Vol 1 1 001.png",
+      "score": 125,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/8/88/Jack_%28Earth-616%29_from_Nova_Vol_1_1_001.png/revision/latest?cb=20200109021027"
+    },
+    {
+      "idx": 2,
+      "file": "02.jpg",
+      "wiki": "File:Mr. Ryan (Earth-616) from Nova Vol 1 1 001.png",
+      "score": 125,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/7/78/Mr._Ryan_%28Earth-616%29_from_Nova_Vol_1_1_001.png/revision/latest?cb=20200109021511"
+    },
+    {
+      "idx": 3,
+      "file": "03.jpg",
+      "wiki": "File:Uncle Fudge from Nova Vol 1 1 001.png",
+      "score": 125,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/8/87/Uncle_Fudge_from_Nova_Vol_1_1_001.png/revision/latest?cb=20200109021416"
+    },
+    {
+      "idx": 4,
+      "file": "04.jpg",
+      "wiki": "File:Rhomann Dey (Earth-616) from Nova Vol 1 1 0001.png",
+      "score": 120,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/5/52/Rhomann_Dey_%28Earth-616%29_from_Nova_Vol_1_1_0001.png/revision/latest?cb=20200109021116"
+    },
+    {
+      "idx": 5,
+      "file": "05.jpg",
+      "wiki": "File:Richard Rider (Earth-616) from Nova Vol 1 1 0001.jpg",
+      "score": 120,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/d/d7/Richard_Rider_%28Earth-616%29_from_Nova_Vol_1_1_0001.jpg/revision/latest/scale-to-width-down/1400?cb=20200109021734"
+    },
+    {
+      "idx": 6,
+      "file": "06.jpg",
+      "wiki": "File:Zorr (Luphomoid) (Earth-616) from Nova Vol 1 1 0001.jpg",
+      "score": 120,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/4/43/Zorr_%28Luphomoid%29_%28Earth-616%29_from_Nova_Vol_1_1_0001.jpg/revision/latest?cb=20170109060120"
+    },
+    {
+      "idx": 7,
+      "file": "07.jpg",
+      "wiki": "File:Hampstead from Nova Vol 1 1.jpg",
+      "score": 100,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/7/71/Hampstead_from_Nova_Vol_1_1.jpg/revision/latest?cb=20250525160341"
+    },
+    {
+      "idx": 8,
+      "file": "08.jpg",
+      "wiki": "File:Hempstead Hospital from Nova Vol 1 1.jpg",
+      "score": 100,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/3/30/Hempstead_Hospital_from_Nova_Vol_1_1.jpg/revision/latest?cb=20250525164511"
+    }
+  ]
+}

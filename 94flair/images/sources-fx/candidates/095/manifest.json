@@ -1,0 +1,73 @@
+{
+  "n": 95,
+  "key": "095",
+  "title": "Hulk Leads the Pantheon",
+  "source": "The Incredible Hulk (1968) #410, Page 15",
+  "issue_keys": [
+    "The Incredible Hulk Vol 1 410",
+    "The Incredible Hulk Vol 2 410",
+    "The Incredible Hulk 410",
+    "Incredible Hulk Vol 1 410"
+  ],
+  "page": 15,
+  "part": "page",
+  "status": "ok",
+  "candidates": [
+    {
+      "idx": 1,
+      "file": "01.jpg",
+      "wiki": "File:Fort Cheer from Incredible Hulk Vol 1 410 001.png",
+      "score": 110,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/f/fb/Fort_Cheer_from_Incredible_Hulk_Vol_1_410_001.png/revision/latest?cb=20231004115322"
+    },
+    {
+      "idx": 2,
+      "file": "02.jpg",
+      "wiki": "File:Marlo Chandler (Earth-616) from Incredible Hulk Vol 1 410 001.jpg",
+      "score": 110,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/6/60/Marlo_Chandler_%28Earth-616%29_from_Incredible_Hulk_Vol_1_410_001.jpg/revision/latest?cb=20220825142553"
+    },
+    {
+      "idx": 3,
+      "file": "03.jpg",
+      "wiki": "File:Oliveris (Earth-616) from Incredible Hulk Vol 1 410 001.jpg",
+      "score": 110,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/0/00/Oliveris_%28Earth-616%29_from_Incredible_Hulk_Vol_1_410_001.jpg/revision/latest?cb=20231004115308"
+    },
+    {
+      "idx": 4,
+      "file": "04.jpg",
+      "wiki": "File:Susan Jacobson (Earth-616) from Incredible Hulk Vol 1 410 001.jpg",
+      "score": 110,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/1/14/Susan_Jacobson_%28Earth-616%29_from_Incredible_Hulk_Vol_1_410_001.jpg/revision/latest?cb=20231004130400"
+    },
+    {
+      "idx": 5,
+      "file": "05.jpg",
+      "wiki": "File:Tarkington (Earth-616) from Incredible Hulk Vol 1 410 001.png",
+      "score": 110,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/3/39/Tarkington_%28Earth-616%29_from_Incredible_Hulk_Vol_1_410_001.png/revision/latest?cb=20231004115316"
+    },
+    {
+      "idx": 6,
+      "file": "06.jpg",
+      "wiki": "File:Fort Cheer from Incredible Hulk Vol 1 410 0001.jpg",
+      "score": 105,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/5/58/Fort_Cheer_from_Incredible_Hulk_Vol_1_410_0001.jpg/revision/latest?cb=20200919202247"
+    },
+    {
+      "idx": 7,
+      "file": "07.jpg",
+      "wiki": "File:Incredible Hulk Vol 1 410.jpg",
+      "score": 82,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/3/31/Incredible_Hulk_Vol_1_410.jpg/revision/latest?cb=20200509074545"
+    },
+    {
+      "idx": 8,
+      "file": "08.jpg",
+      "wiki": "File:Immortal Hulk Vol 1 1 Textless.jpg",
+      "score": 23,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/a/ad/Immortal_Hulk_Vol_1_1_Textless.jpg/revision/latest?cb=20180601072622"
+    }
+  ]
+}

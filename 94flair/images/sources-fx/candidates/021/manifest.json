@@ -1,0 +1,24 @@
+{
+  "n": 21,
+  "key": "021",
+  "title": "Origin of Silver Surfer",
+  "source": "The Incredible Hulk (1968) #414, Page 20",
+  "issue_keys": [
+    "The Incredible Hulk Vol 1 414",
+    "The Incredible Hulk Vol 2 414",
+    "The Incredible Hulk 414",
+    "Incredible Hulk Vol 1 414"
+  ],
+  "page": 20,
+  "part": "page",
+  "status": "ok",
+  "candidates": [
+    {
+      "idx": 1,
+      "file": "01.jpg",
+      "wiki": "File:Incredible Hulk Vol 1 414.jpg",
+      "score": 67,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/5/5e/Incredible_Hulk_Vol_1_414.jpg/revision/latest?cb=20200509075121"
+    }
+  ]
+}

@@ -1,0 +1,73 @@
+{
+  "n": 96,
+  "key": "096",
+  "title": "X-Cutioner's Song",
+  "source": "X-Factor (1986) #88, Page 1; Page 18 (Composite)",
+  "issue_keys": [
+    "X-Factor Vol 1 88",
+    "X-Factor Vol 2 88",
+    "X-Factor 88",
+    "The X-Factor Vol 1 88"
+  ],
+  "page": 1,
+  "part": "page",
+  "status": "ok",
+  "candidates": [
+    {
+      "idx": 1,
+      "file": "01.jpg",
+      "wiki": "File:Cedar Sinai Hospital from X-Factor Vol 1 88 001.png",
+      "score": 125,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/e/eb/Cedar_Sinai_Hospital_from_X-Factor_Vol_1_88_001.png/revision/latest?cb=20130630120249"
+    },
+    {
+      "idx": 2,
+      "file": "02.jpg",
+      "wiki": "File:MacMurphy (Earth-616) from X-Factor Vol 1 88 001.png",
+      "score": 125,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/7/76/MacMurphy_%28Earth-616%29_from_X-Factor_Vol_1_88_001.png/revision/latest?cb=20130630120459"
+    },
+    {
+      "idx": 3,
+      "file": "03.jpg",
+      "wiki": "File:Marshall Stone III (Earth-616) from X-Factor Vol 1 88 001.jpg",
+      "score": 125,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/b/b6/Marshall_Stone_III_%28Earth-616%29_from_X-Factor_Vol_1_88_001.jpg/revision/latest?cb=20080506123510"
+    },
+    {
+      "idx": 4,
+      "file": "04.jpg",
+      "wiki": "File:Pietro Maximoff (Earth-616) and Crystalia Amaquelin (Earth-616) from X-Factor Vol 1 88 0001.jpg",
+      "score": 120,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/2/2a/Pietro_Maximoff_%28Earth-616%29_and_Crystalia_Amaquelin_%28Earth-616%29_from_X-Factor_Vol_1_88_0001.jpg/revision/latest?cb=20250813065829"
+    },
+    {
+      "idx": 5,
+      "file": "05.jpg",
+      "wiki": "File:X-Patriots (Earth-616) from X-Factor Vol 1 88 0001.png",
+      "score": 120,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/5/55/X-Patriots_%28Earth-616%29_from_X-Factor_Vol_1_88_0001.png/revision/latest?cb=20130630121346"
+    },
+    {
+      "idx": 6,
+      "file": "06.jpg",
+      "wiki": "File:Marshall Stone III (Earth-616) from X-Factor Vol 1 88.jpg",
+      "score": 90,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/2/2d/Marshall_Stone_III_%28Earth-616%29_from_X-Factor_Vol_1_88.jpg/revision/latest?cb=20080506123511"
+    },
+    {
+      "idx": 7,
+      "file": "07.jpg",
+      "wiki": "File:X-Factor Vol 1 88.jpg",
+      "score": 62,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/c/c9/X-Factor_Vol_1_88.jpg/revision/latest?cb=20180428013643"
+    },
+    {
+      "idx": 8,
+      "file": "08.jpg",
+      "wiki": "File:Monitor (Earth-616) from X-Factor Vol 1 35 001.png",
+      "score": 35,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/2/27/Monitor_%28Earth-616%29_from_X-Factor_Vol_1_35_001.png/revision/latest?cb=20130615163029"
+    }
+  ]
+}

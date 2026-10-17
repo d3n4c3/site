@@ -1,0 +1,73 @@
+{
+  "n": 11,
+  "key": "011",
+  "title": "Avengers Assemble",
+  "source": "The Avengers (1963) Annual #20, Page 56",
+  "issue_keys": [
+    "The Avengers Annual Vol 1 20",
+    "The Avengers Vol 1 Annual 20",
+    "The Avengers Annual 20",
+    "Avengers Annual Vol 1 20"
+  ],
+  "page": 56,
+  "part": "page",
+  "status": "ok",
+  "candidates": [
+    {
+      "idx": 1,
+      "file": "01.jpg",
+      "wiki": "File:Gor-Tok I (Earth-616) from Avengers Annual Vol 1 20 001.jpg",
+      "score": 110,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/9/9f/Gor-Tok_I_%28Earth-616%29_from_Avengers_Annual_Vol_1_20_001.jpg/revision/latest?cb=20220702044526"
+    },
+    {
+      "idx": 2,
+      "file": "02.jpg",
+      "wiki": "File:Grandma Rivera (Earth-616) from Avengers Annual Vol 1 20 001.png",
+      "score": 110,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/f/f8/Grandma_Rivera_%28Earth-616%29_from_Avengers_Annual_Vol_1_20_001.png/revision/latest?cb=20160928201645"
+    },
+    {
+      "idx": 3,
+      "file": "03.jpg",
+      "wiki": "File:Jeffrey Crane (Earth-616) from Avengers Annual Vol 1 20 001.png",
+      "score": 110,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/7/73/Jeffrey_Crane_%28Earth-616%29_from_Avengers_Annual_Vol_1_20_001.png/revision/latest?cb=20160929074452"
+    },
+    {
+      "idx": 4,
+      "file": "04.jpg",
+      "wiki": "File:Thomas Rivera (Earth-616) from Avengers Annual Vol 1 20 001.png",
+      "score": 110,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/9/93/Thomas_Rivera_%28Earth-616%29_from_Avengers_Annual_Vol_1_20_001.png/revision/latest?cb=20160928201301"
+    },
+    {
+      "idx": 5,
+      "file": "05.jpg",
+      "wiki": "File:Brutus (Deviant) (Earth-616) from Avengers Annual Vol 1 20 0001.jpg",
+      "score": 105,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/4/4b/Brutus_%28Deviant%29_%28Earth-616%29_from_Avengers_Annual_Vol_1_20_0001.jpg/revision/latest?cb=20191218043023"
+    },
+    {
+      "idx": 6,
+      "file": "06.jpg",
+      "wiki": "File:Gor-Tok (Earth-616) from Avengers Annual Vol 1 20 0001.jpg",
+      "score": 105,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/0/0b/Gor-Tok_%28Earth-616%29_from_Avengers_Annual_Vol_1_20_0001.jpg/revision/latest?cb=20191218042713"
+    },
+    {
+      "idx": 7,
+      "file": "07.jpg",
+      "wiki": "File:Harvey Elder (Earth-616) from Avengers Annual Vol 1 20 0001.jpg",
+      "score": 105,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/7/7e/Harvey_Elder_%28Earth-616%29_from_Avengers_Annual_Vol_1_20_0001.jpg/revision/latest?cb=20191218042914"
+    },
+    {
+      "idx": 8,
+      "file": "08.jpg",
+      "wiki": "File:Avengers Annual Vol 1 20.jpg",
+      "score": 77,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/8/8e/Avengers_Annual_Vol_1_20.jpg/revision/latest?cb=20180909051144"
+    }
+  ]
+}

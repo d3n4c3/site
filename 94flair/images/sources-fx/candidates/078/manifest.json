@@ -1,0 +1,73 @@
+{
+  "n": 78,
+  "key": "078",
+  "title": "Deadpool Strikes",
+  "source": "Deadpool: The Circle Chase (1993) #2, Page 5",
+  "issue_keys": [
+    "Deadpool: The Circle Chase Vol 1 2",
+    "Deadpool: The Circle Chase Vol 2 2",
+    "Deadpool: The Circle Chase 2",
+    "The Deadpool: The Circle Chase Vol 1 2"
+  ],
+  "page": 5,
+  "part": "page",
+  "status": "ok",
+  "candidates": [
+    {
+      "idx": 1,
+      "file": "01.jpg",
+      "wiki": "File:Deadpool & Cable Split Second Vol 1 2 Textless.jpg",
+      "score": 23,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/1/18/Deadpool_%26_Cable_Split_Second_Vol_1_2_Textless.jpg/revision/latest?cb=20151021083018"
+    },
+    {
+      "idx": 2,
+      "file": "02.jpg",
+      "wiki": "File:Deadpool Badder Blood Vol 1 2 Kirkham Variant Textless.jpg",
+      "score": 23,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/2/27/Deadpool_Badder_Blood_Vol_1_2_Kirkham_Variant_Textless.jpg/revision/latest?cb=20260905231449"
+    },
+    {
+      "idx": 3,
+      "file": "03.jpg",
+      "wiki": "File:You Are Deadpool Vol 1 2 Textless.jpg",
+      "score": 23,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/4/4f/You_Are_Deadpool_Vol_1_2_Textless.jpg/revision/latest?cb=20180405195049"
+    },
+    {
+      "idx": 4,
+      "file": "04.jpg",
+      "wiki": "File:Alphabet City from Deadpool Vol 1 2 001.png",
+      "score": 20,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/6/6d/Alphabet_City_from_Deadpool_Vol_1_2_001.png/revision/latest?cb=20130616141719"
+    },
+    {
+      "idx": 5,
+      "file": "05.jpg",
+      "wiki": "File:Amie Zamborano (Earth-616) from Deadpool The Circle Chase Vol 1 3 001.jpg",
+      "score": 20,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/8/85/Amie_Zamborano_%28Earth-616%29_from_Deadpool_The_Circle_Chase_Vol_1_3_001.jpg/revision/latest?cb=20191226222744"
+    },
+    {
+      "idx": 6,
+      "file": "06.jpg",
+      "wiki": "File:Amie Zamborano (Earth-616) from Deadpool The Circle Chase Vol 1 3 002.jpg",
+      "score": 20,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/3/3f/Amie_Zamborano_%28Earth-616%29_from_Deadpool_The_Circle_Chase_Vol_1_3_002.jpg/revision/latest?cb=20130808223856"
+    },
+    {
+      "idx": 7,
+      "file": "07.jpg",
+      "wiki": "File:Cairo International Airport from Deadpool The Circle Chase Vol 1 2 001.jpg",
+      "score": 20,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/e/ea/Cairo_International_Airport_from_Deadpool_The_Circle_Chase_Vol_1_2_001.jpg/revision/latest/scale-to-width-down/1400?cb=20210324234236"
+    },
+    {
+      "idx": 8,
+      "file": "08.jpg",
+      "wiki": "File:Damarus Cove Islands from Deadpool The Circle Chase Vol 1 2 001.jpg",
+      "score": 20,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/a/a9/Damarus_Cove_Islands_from_Deadpool_The_Circle_Chase_Vol_1_2_001.jpg/revision/latest?cb=20210324233538"
+    }
+  ]
+}

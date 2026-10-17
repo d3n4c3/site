@@ -1,0 +1,73 @@
+{
+  "n": 67,
+  "key": "067",
+  "title": "The Cosmic Spider-Man",
+  "source": "The Spectacular Spider-Man (1976) #201, Page 21",
+  "issue_keys": [
+    "The Spectacular Spider-Man Vol 1 201",
+    "The Spectacular Spider-Man Vol 2 201",
+    "The Spectacular Spider-Man 201",
+    "Spectacular Spider-Man Vol 1 201"
+  ],
+  "page": 21,
+  "part": "page",
+  "status": "ok",
+  "candidates": [
+    {
+      "idx": 1,
+      "file": "01.jpg",
+      "wiki": "File:Spectacular Spider-Man Vol 1 201.jpg",
+      "score": 82,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/1/1f/Spectacular_Spider-Man_Vol_1_201.jpg/revision/latest?cb=20251207203427"
+    },
+    {
+      "idx": 2,
+      "file": "02.jpg",
+      "wiki": "File:Peter Parker The Spectacular Spider-Man Vol 1 1 ComicXposure Exclusive Variant Textless.jpg",
+      "score": 23,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/f/fb/Peter_Parker_The_Spectacular_Spider-Man_Vol_1_1_ComicXposure_Exclusive_Variant_Textless.jpg/revision/latest?cb=20180102222827"
+    },
+    {
+      "idx": 3,
+      "file": "03.jpg",
+      "wiki": "File:Peter Parker The Spectacular Spider-Man Vol 1 1 Remastered Variant Textless.jpg",
+      "score": 23,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/7/7a/Peter_Parker_The_Spectacular_Spider-Man_Vol_1_1_Remastered_Variant_Textless.jpg/revision/latest?cb=20180102172333"
+    },
+    {
+      "idx": 4,
+      "file": "04.jpg",
+      "wiki": "File:Peter Parker The Spectacular Spider-Man Vol 1 300 Remastered Variant Textless.jpg",
+      "score": 23,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/2/25/Peter_Parker_The_Spectacular_Spider-Man_Vol_1_300_Remastered_Variant_Textless.jpg/revision/latest?cb=20180223030914"
+    },
+    {
+      "idx": 5,
+      "file": "05.jpg",
+      "wiki": "File:Peter Parker The Spectacular Spider-Man Vol 1 300 Ross Variant Textless.jpg",
+      "score": 23,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/f/ff/Peter_Parker_The_Spectacular_Spider-Man_Vol_1_300_Ross_Variant_Textless.jpg/revision/latest?cb=20171122034233"
+    },
+    {
+      "idx": 6,
+      "file": "06.jpg",
+      "wiki": "File:Peter Parker The Spectacular Spider-Man Vol 1 303 Textless.jpg",
+      "score": 23,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/0/0f/Peter_Parker_The_Spectacular_Spider-Man_Vol_1_303_Textless.jpg/revision/latest?cb=20180124061327"
+    },
+    {
+      "idx": 7,
+      "file": "07.jpg",
+      "wiki": "File:Peter Parker The Spectacular Spider-Man Vol 1 305 Textless.jpg",
+      "score": 23,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/8/82/Peter_Parker_The_Spectacular_Spider-Man_Vol_1_305_Textless.jpg/revision/latest?cb=20180320230915"
+    },
+    {
+      "idx": 8,
+      "file": "08.jpg",
+      "wiki": "File:Spectacular Spider-Man (UK) Vol 1 201 Textless.jpg",
+      "score": 23,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/6/6c/Spectacular_Spider-Man_%28UK%29_Vol_1_201_Textless.jpg/revision/latest?cb=20240310115101"
+    }
+  ]
+}

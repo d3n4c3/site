@@ -1,0 +1,73 @@
+{
+  "n": 20,
+  "key": "020",
+  "title": "Galactus Appears",
+  "source": "Fantastic Four (1961) #48, Page 21",
+  "issue_keys": [
+    "Fantastic Four Vol 1 48",
+    "Fantastic Four Vol 2 48",
+    "Fantastic Four 48",
+    "The Fantastic Four Vol 1 48"
+  ],
+  "page": 21,
+  "part": "page",
+  "status": "ok",
+  "candidates": [
+    {
+      "idx": 1,
+      "file": "01.jpg",
+      "wiki": "File:Atmo-Gun from Fantastic Four Vol 1 48 001.png",
+      "score": 95,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/a/aa/Atmo-Gun_from_Fantastic_Four_Vol_1_48_001.png/revision/latest?cb=20200301174740"
+    },
+    {
+      "idx": 2,
+      "file": "02.jpg",
+      "wiki": "File:Benjamin Grimm (Earth-616) from Fantastic Four Vol 1 48 001.jpg",
+      "score": 95,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/6/65/Benjamin_Grimm_%28Earth-616%29_from_Fantastic_Four_Vol_1_48_001.jpg/revision/latest?cb=20240706055727"
+    },
+    {
+      "idx": 3,
+      "file": "03.jpg",
+      "wiki": "File:Galan (Earth-616) from Fantastic Four Vol 1 48 001.jpg",
+      "score": 95,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/2/2f/Galan_%28Earth-616%29_from_Fantastic_Four_Vol_1_48_001.jpg/revision/latest/scale-to-width-down/1400?cb=20180217175211"
+    },
+    {
+      "idx": 4,
+      "file": "04.jpg",
+      "wiki": "File:Matter Mobilizer from Fantastic Four Vol 1 48 001.png",
+      "score": 95,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/8/83/Matter_Mobilizer_from_Fantastic_Four_Vol_1_48_001.png/revision/latest?cb=20200301175034"
+    },
+    {
+      "idx": 5,
+      "file": "05.jpg",
+      "wiki": "File:Maximus' Citadel from Fantastic Four Vol 1 48 0001.jpg",
+      "score": 90,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/c/c3/Maximus%27_Citadel_from_Fantastic_Four_Vol_1_48_0001.jpg/revision/latest?cb=20191203022758"
+    },
+    {
+      "idx": 6,
+      "file": "06.jpg",
+      "wiki": "File:Negative Barrier from Fantastic Four Vol 1 48.jpg",
+      "score": 90,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/d/d4/Negative_Barrier_from_Fantastic_Four_Vol_1_48.jpg/revision/latest?cb=20200301174834"
+    },
+    {
+      "idx": 7,
+      "file": "07.jpg",
+      "wiki": "File:Fantastic Four Vol 1 48.jpg",
+      "score": 62,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/f/fe/Fantastic_Four_Vol_1_48.jpg/revision/latest?cb=20180126030715"
+    },
+    {
+      "idx": 8,
+      "file": "08.jpg",
+      "wiki": "File:Fantastic Four Behold... Galactus! Vol 1 1.jpg",
+      "score": 15,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/1/10/Fantastic_Four_Behold..._Galactus%21_Vol_1_1.jpg/revision/latest?cb=20250824045635"
+    }
+  ]
+}

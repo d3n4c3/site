@@ -1,0 +1,73 @@
+{
+  "n": 77,
+  "key": "077",
+  "title": "Hulk Reborn",
+  "source": "The Incredible Hulk (1968) #391, Page 19",
+  "issue_keys": [
+    "The Incredible Hulk Vol 1 391",
+    "The Incredible Hulk Vol 2 391",
+    "The Incredible Hulk 391",
+    "Incredible Hulk Vol 1 391"
+  ],
+  "page": 19,
+  "part": "page",
+  "status": "ok",
+  "candidates": [
+    {
+      "idx": 1,
+      "file": "01.jpg",
+      "wiki": "File:Gammal (Earth-616) from Incredible Hulk Vol 1 391 001.png",
+      "score": 110,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/a/ab/Gammal_%28Earth-616%29_from_Incredible_Hulk_Vol_1_391_001.png/revision/latest?cb=20190210155425"
+    },
+    {
+      "idx": 2,
+      "file": "02.jpg",
+      "wiki": "File:Jacqueline Shorr (Earth-616) from Incredible Hulk Vol 1 391 001.jpg",
+      "score": 110,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/6/6b/Jacqueline_Shorr_%28Earth-616%29_from_Incredible_Hulk_Vol_1_391_001.jpg/revision/latest?cb=20131215153012"
+    },
+    {
+      "idx": 3,
+      "file": "03.jpg",
+      "wiki": "File:Sendara Pass from Incredible Hulk Vol 1 391 001.png",
+      "score": 110,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/e/e3/Sendara_Pass_from_Incredible_Hulk_Vol_1_391_001.png/revision/latest?cb=20190210160247"
+    },
+    {
+      "idx": 4,
+      "file": "04.jpg",
+      "wiki": "File:Trans-Sabalian Air Force (Earth-616) from Incredible Hulk Vol 1 391 001.png",
+      "score": 110,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/3/3c/Trans-Sabalian_Air_Force_%28Earth-616%29_from_Incredible_Hulk_Vol_1_391_001.png/revision/latest?cb=20190210160006"
+    },
+    {
+      "idx": 5,
+      "file": "05.jpg",
+      "wiki": "File:Incredible Hulk Vol 1 391.jpg",
+      "score": 82,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/9/95/Incredible_Hulk_Vol_1_391.jpg/revision/latest?cb=20200509073534"
+    },
+    {
+      "idx": 6,
+      "file": "06.jpg",
+      "wiki": "File:Bunkport from Incredible Hulk Vol 1 374 001.png",
+      "score": 20,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/3/38/Bunkport_from_Incredible_Hulk_Vol_1_374_001.png/revision/latest?cb=20171118094715"
+    },
+    {
+      "idx": 7,
+      "file": "07.jpg",
+      "wiki": "File:California Institute of Technology from Incredible Hulk Vol 1 367 001.jpg",
+      "score": 20,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/6/61/California_Institute_of_Technology_from_Incredible_Hulk_Vol_1_367_001.jpg/revision/latest?cb=20210311165754"
+    },
+    {
+      "idx": 8,
+      "file": "08.jpg",
+      "wiki": "File:David Banner (Earth-400005) from The Incredible Hulk (TV series) Season 2 20 001.jpg",
+      "score": 20,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/5/56/David_Banner_%28Earth-400005%29_from_The_Incredible_Hulk_%28TV_series%29_Season_2_20_001.jpg/revision/latest?cb=20170204220405"
+    }
+  ]
+}

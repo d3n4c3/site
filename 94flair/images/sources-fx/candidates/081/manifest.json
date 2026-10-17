@@ -1,0 +1,73 @@
+{
+  "n": 81,
+  "key": "081",
+  "title": "The Return of Blaze",
+  "source": "Ghost Rider & Blaze: Spirits of Vengeance (1992) #1, Mini-Poster",
+  "issue_keys": [
+    "Ghost Rider & Blaze: Spirits of Vengeance Vol 1 1",
+    "Ghost Rider & Blaze: Spirits of Vengeance Vol 2 1",
+    "Ghost Rider & Blaze: Spirits of Vengeance 1",
+    "The Ghost Rider & Blaze: Spirits of Vengeance Vol 1 1"
+  ],
+  "page": null,
+  "part": "poster",
+  "status": "ok",
+  "candidates": [
+    {
+      "idx": 1,
+      "file": "01.jpg",
+      "wiki": "File:Adam Brigman (Earth-616) from Ghost Rider Blaze Spirits of Vengeance Vol 1 1 001.png",
+      "score": 20,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/b/b7/Adam_Brigman_%28Earth-616%29_from_Ghost_Rider_Blaze_Spirits_of_Vengeance_Vol_1_1_001.png/revision/latest?cb=20180730070154"
+    },
+    {
+      "idx": 2,
+      "file": "02.jpg",
+      "wiki": "File:Birth of Vengeance from Ghost Rider & Blaze Spirits of Vengeance Vol 1 9 001.jpg",
+      "score": 20,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/6/65/Birth_of_Vengeance_from_Ghost_Rider_%26_Blaze_Spirits_of_Vengeance_Vol_1_9_001.jpg/revision/latest?cb=20250128011556"
+    },
+    {
+      "idx": 3,
+      "file": "03.jpg",
+      "wiki": "File:Boston Harbor from Ghost Rider Blaze Spirits of Vengeance Vol 1 3 001.png",
+      "score": 20,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/d/de/Boston_Harbor_from_Ghost_Rider_Blaze_Spirits_of_Vengeance_Vol_1_3_001.png/revision/latest?cb=20180731090248"
+    },
+    {
+      "idx": 4,
+      "file": "04.jpg",
+      "wiki": "File:Brooklyn Queens Expressway from Ghost Rider Blaze Spirits of Vengeance Vol 1 1 001.png",
+      "score": 20,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/b/b5/Brooklyn_Queens_Expressway_from_Ghost_Rider_Blaze_Spirits_of_Vengeance_Vol_1_1_001.png/revision/latest?cb=20180730065735"
+    },
+    {
+      "idx": 5,
+      "file": "05.jpg",
+      "wiki": "File:Bucks County from Ghost Rider Blaze Spirits of Vengeance Vol 1 14 001.png",
+      "score": 20,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/7/74/Bucks_County_from_Ghost_Rider_Blaze_Spirits_of_Vengeance_Vol_1_14_001.png/revision/latest?cb=20190809063342"
+    },
+    {
+      "idx": 6,
+      "file": "06.jpg",
+      "wiki": "File:Carver (Earth-616) from Ghost Rider Blaze Spirits of Vengeance Vol 1 23 001.jpg",
+      "score": 20,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/1/16/Carver_%28Earth-616%29_from_Ghost_Rider_Blaze_Spirits_of_Vengeance_Vol_1_23_001.jpg/revision/latest?cb=20201120102519"
+    },
+    {
+      "idx": 7,
+      "file": "07.jpg",
+      "wiki": "File:Chatham from Ghost Rider Blaze Spirits of Vengeance Vol 1 3 001.png",
+      "score": 20,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/c/cd/Chatham_from_Ghost_Rider_Blaze_Spirits_of_Vengeance_Vol_1_3_001.png/revision/latest?cb=20180731084347"
+    },
+    {
+      "idx": 8,
+      "file": "08.jpg",
+      "wiki": "File:Clara Menninger (Earth-616) from Ghost Rider Blaze Spirits of Vengeance Vol 1 1 001.jpg",
+      "score": 20,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/2/2f/Clara_Menninger_%28Earth-616%29_from_Ghost_Rider_Blaze_Spirits_of_Vengeance_Vol_1_1_001.jpg/revision/latest?cb=20100116132233"
+    }
+  ]
+}

@@ -1,0 +1,73 @@
+{
+  "n": 31,
+  "key": "031",
+  "title": "Thanos Attacks",
+  "source": "The Infinity War (1992) #6, Page 14",
+  "issue_keys": [
+    "The Infinity War Vol 1 6",
+    "The Infinity War Vol 2 6",
+    "The Infinity War 6",
+    "Infinity War Vol 1 6"
+  ],
+  "page": 14,
+  "part": "page",
+  "status": "ok",
+  "candidates": [
+    {
+      "idx": 1,
+      "file": "01.jpg",
+      "wiki": "File:Eternity (Earth-616) and Infinity (Earth-616) from Infinity War Vol 1 6 001.jpg",
+      "score": 95,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/a/a1/Eternity_%28Earth-616%29_and_Infinity_%28Earth-616%29_from_Infinity_War_Vol_1_6_001.jpg/revision/latest?cb=20220701171305"
+    },
+    {
+      "idx": 2,
+      "file": "02.jpg",
+      "wiki": "File:Soul World from Infinity War Vol 1 6 001.png",
+      "score": 95,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/1/11/Soul_World_from_Infinity_War_Vol_1_6_001.png/revision/latest?cb=20131212232037"
+    },
+    {
+      "idx": 3,
+      "file": "03.jpg",
+      "wiki": "File:Adam Warlock (Earth-616) and Magus (Earth-7528) from Infinity War Vol 1 6 001.jpeg",
+      "score": 90,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/9/9b/Adam_Warlock_%28Earth-616%29_and_Magus_%28Earth-7528%29_from_Infinity_War_Vol_1_6_001.jpeg/revision/latest/scale-to-width-down/1400?cb=20250731234323"
+    },
+    {
+      "idx": 4,
+      "file": "04.jpg",
+      "wiki": "File:Infinity War Vol 1 6.jpg",
+      "score": 62,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/4/48/Infinity_War_Vol_1_6.jpg/revision/latest?cb=20190417004309"
+    },
+    {
+      "idx": 5,
+      "file": "05.jpg",
+      "wiki": "File:Infinity War Vol 1 6 Wraparound.jpg",
+      "score": 50,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/1/16/Infinity_War_Vol_1_6_Wraparound.jpg/revision/latest/scale-to-width-down/1400?cb=20220718025146"
+    },
+    {
+      "idx": 6,
+      "file": "06.jpg",
+      "wiki": "File:Thanos (Earth-199999) and Gamora (Earth-199999) from Avengers Infinity War 001.png",
+      "score": 20,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/6/63/Thanos_%28Earth-199999%29_and_Gamora_%28Earth-199999%29_from_Avengers_Infinity_War_001.png/revision/latest?cb=20230411142040"
+    },
+    {
+      "idx": 7,
+      "file": "07.jpg",
+      "wiki": "File:Thanos (Earth-616) from Infinity War Vol 1 1 001.jpg",
+      "score": 20,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/6/64/Thanos_%28Earth-616%29_from_Infinity_War_Vol_1_1_001.jpg/revision/latest/scale-to-width-down/1400?cb=20250731030726"
+    },
+    {
+      "idx": 8,
+      "file": "08.jpg",
+      "wiki": "File:Thanos (Earth-199999) from Avengers Infinity War 0002.jpg",
+      "score": 15,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/6/6d/Thanos_%28Earth-199999%29_from_Avengers_Infinity_War_0002.jpg/revision/latest?cb=20180509194738"
+    }
+  ]
+}

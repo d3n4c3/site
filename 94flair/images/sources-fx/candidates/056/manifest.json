@@ -1,0 +1,73 @@
+{
+  "n": 56,
+  "key": "056",
+  "title": "Mr. Sinister Appears",
+  "source": "The Uncanny X-Men (1963) #239, Page 4",
+  "issue_keys": [
+    "The Uncanny X-Men Vol 1 239",
+    "The Uncanny X-Men Vol 2 239",
+    "The Uncanny X-Men 239",
+    "Uncanny X-Men Vol 1 239"
+  ],
+  "page": 4,
+  "part": "page",
+  "status": "ok",
+  "candidates": [
+    {
+      "idx": 1,
+      "file": "01.jpg",
+      "wiki": "File:Nathan Summers (Earth-616) and Nathaniel Essex (Mister Sinister) (Earth-616) from Uncanny X-Men Vol 1 239 001.png",
+      "score": 110,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/e/e7/Nathan_Summers_%28Earth-616%29_and_Nathaniel_Essex_%28Mister_Sinister%29_%28Earth-616%29_from_Uncanny_X-Men_Vol_1_239_001.png/revision/latest?cb=20201228195207"
+    },
+    {
+      "idx": 2,
+      "file": "02.jpg",
+      "wiki": "File:Alison Blaire (Earth-616) from Uncanny X-Men Vol 1 239 001.jpg",
+      "score": 95,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/6/68/Alison_Blaire_%28Earth-616%29_from_Uncanny_X-Men_Vol_1_239_001.jpg/revision/latest?cb=20260729000940"
+    },
+    {
+      "idx": 3,
+      "file": "03.jpg",
+      "wiki": "File:Elizabeth Braddock (Earth-616) from Uncanny X-Men Vol 1 239 001.png",
+      "score": 95,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/6/67/Elizabeth_Braddock_%28Earth-616%29_from_Uncanny_X-Men_Vol_1_239_001.png/revision/latest?cb=20201203191851"
+    },
+    {
+      "idx": 4,
+      "file": "04.jpg",
+      "wiki": "File:Rogue (Anna-Marie) (Earth-616) and Elizabeth Braddock (Earth-616) from Uncanny X-Men Vol 1 239 001.png",
+      "score": 95,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/3/3a/Rogue_%28Anna-Marie%29_%28Earth-616%29_and_Elizabeth_Braddock_%28Earth-616%29_from_Uncanny_X-Men_Vol_1_239_001.png/revision/latest?cb=20201203191849"
+    },
+    {
+      "idx": 5,
+      "file": "05.jpg",
+      "wiki": "File:Rogue (Anna-Marie) (Earth-616) and Elizabeth Braddock (Earth-616) from Uncanny X-Men Vol 1 239 002.png",
+      "score": 95,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/0/08/Rogue_%28Anna-Marie%29_%28Earth-616%29_and_Elizabeth_Braddock_%28Earth-616%29_from_Uncanny_X-Men_Vol_1_239_002.png/revision/latest?cb=20201203191850"
+    },
+    {
+      "idx": 6,
+      "file": "06.jpg",
+      "wiki": "File:Alison Blaire (Earth-616) from Uncanny X-Men Vol 1 239 0001.jpg",
+      "score": 90,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/8/83/Alison_Blaire_%28Earth-616%29_from_Uncanny_X-Men_Vol_1_239_0001.jpg/revision/latest/scale-to-width-down/1400?cb=20191217044205"
+    },
+    {
+      "idx": 7,
+      "file": "07.jpg",
+      "wiki": "File:Uncanny X-Men Vol 1 239.jpg",
+      "score": 67,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/3/34/Uncanny_X-Men_Vol_1_239.jpg/revision/latest?cb=20180208042919"
+    },
+    {
+      "idx": 8,
+      "file": "08.jpg",
+      "wiki": "File:Uncanny X-Men Vol 1 239 Newsstand.jpg",
+      "score": 50,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/6/67/Uncanny_X-Men_Vol_1_239_Newsstand.jpg/revision/latest?cb=20130913214538"
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "n": 97,
+  "key": "097",
+  "title": "Cable vs. Stryfe",
+  "source": "The New Mutants (1983) #94, Page 20",
+  "issue_keys": [
+    "The New Mutants Vol 1 94",
+    "The New Mutants Vol 2 94",
+    "The New Mutants 94",
+    "New Mutants Vol 1 94"
+  ],
+  "page": 20,
+  "part": "page",
+  "status": "ok",
+  "candidates": [
+    {
+      "idx": 1,
+      "file": "01.jpg",
+      "wiki": "File:New Mutants Vol 1 94.jpg",
+      "score": 62,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/4/47/New_Mutants_Vol_1_94.jpg/revision/latest?cb=20191225041323"
+    },
+    {
+      "idx": 2,
+      "file": "02.jpg",
+      "wiki": "File:Cable and the New Mutants TPB Vol 1 1.jpg",
+      "score": 15,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/d/d9/Cable_and_the_New_Mutants_TPB_Vol_1_1.jpg/revision/latest?cb=20240521081419"
+    },
+    {
+      "idx": 3,
+      "file": "03.jpg",
+      "wiki": "File:X-Force Cable and the New Mutants HC Vol 1 1 variant.jpg",
+      "score": 15,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/7/70/X-Force_Cable_and_the_New_Mutants_HC_Vol_1_1_variant.jpg/revision/latest?cb=20240521091235"
+    },
+    {
+      "idx": 4,
+      "file": "04.jpg",
+      "wiki": "File:X-Force Cable and the New Mutants HC Vol 1 1.jpg",
+      "score": 15,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/6/67/X-Force_Cable_and_the_New_Mutants_HC_Vol_1_1.jpg/revision/latest?cb=20240521090059"
+    }
+  ]
+}

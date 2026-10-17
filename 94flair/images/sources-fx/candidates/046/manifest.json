@@ -1,0 +1,66 @@
+{
+  "n": 46,
+  "key": "046",
+  "title": "Ballad of Beta Ray Bill",
+  "source": "Thor (1966) #339, Page 20",
+  "issue_keys": [
+    "Thor Vol 1 339",
+    "Thor Vol 2 339",
+    "Thor 339",
+    "The Thor Vol 1 339"
+  ],
+  "page": 20,
+  "part": "page",
+  "status": "ok",
+  "candidates": [
+    {
+      "idx": 1,
+      "file": "01.jpg",
+      "wiki": "File:Beta Ray Bill (Earth-616) from Thor Vol 1 339 001.jpg",
+      "score": 140,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/c/c5/Beta_Ray_Bill_%28Earth-616%29_from_Thor_Vol_1_339_001.jpg/revision/latest?cb=20200514054149"
+    },
+    {
+      "idx": 2,
+      "file": "02.jpg",
+      "wiki": "File:Furnaces from Thor Vol 1 339.jpg",
+      "score": 95,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/7/70/Furnaces_from_Thor_Vol_1_339.jpg/revision/latest?cb=20110211102335"
+    },
+    {
+      "idx": 3,
+      "file": "03.jpg",
+      "wiki": "File:Nidavellir from Thor Vol 1 339.jpg",
+      "score": 95,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/4/41/Nidavellir_from_Thor_Vol_1_339.jpg/revision/latest?cb=20110211102324"
+    },
+    {
+      "idx": 4,
+      "file": "04.jpg",
+      "wiki": "File:Rene Baroque (Earth-616) from Thor Vol 1 339 001.jpg",
+      "score": 95,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/8/89/Rene_Baroque_%28Earth-616%29_from_Thor_Vol_1_339_001.jpg/revision/latest?cb=20210904175440"
+    },
+    {
+      "idx": 5,
+      "file": "05.jpg",
+      "wiki": "File:Stormbreaker from Thor Vol 1 339.jpg",
+      "score": 95,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/2/20/Stormbreaker_from_Thor_Vol_1_339.jpg/revision/latest?cb=20160111104216"
+    },
+    {
+      "idx": 6,
+      "file": "06.jpg",
+      "wiki": "File:Throgg from Thor Vol 1 339.jpg",
+      "score": 95,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/4/4b/Throgg_from_Thor_Vol_1_339.jpg/revision/latest?cb=20110211102329"
+    },
+    {
+      "idx": 7,
+      "file": "07.jpg",
+      "wiki": "File:Thor Vol 1 339.jpg",
+      "score": 67,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/8/87/Thor_Vol_1_339.jpg/revision/latest?cb=20180503005435"
+    }
+  ]
+}

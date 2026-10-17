@@ -1,0 +1,73 @@
+{
+  "n": 72,
+  "key": "072",
+  "title": "The Creation of Deathlok",
+  "source": "Deathlok (1990) #1, Page 28",
+  "issue_keys": [
+    "Deathlok Vol 1 1",
+    "Deathlok Vol 2 1",
+    "Deathlok 1",
+    "The Deathlok Vol 1 1"
+  ],
+  "page": 28,
+  "part": "page",
+  "status": "ok",
+  "candidates": [
+    {
+      "idx": 1,
+      "file": "01.jpg",
+      "wiki": "File:Clayton Burr (Earth-616) from Deathlok Vol 1 1 001.png",
+      "score": 110,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/e/e7/Clayton_Burr_%28Earth-616%29_from_Deathlok_Vol_1_1_001.png/revision/latest?cb=20160127135009"
+    },
+    {
+      "idx": 2,
+      "file": "02.jpg",
+      "wiki": "File:Cybertek Systems from Deathlok Vol 1 1 001.jpg",
+      "score": 110,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/d/da/Cybertek_Systems_from_Deathlok_Vol_1_1_001.jpg/revision/latest?cb=20130610095814"
+    },
+    {
+      "idx": 3,
+      "file": "03.jpg",
+      "wiki": "File:John Kelly (Earth-616) from Deathlok Vol 1 1 001.png",
+      "score": 110,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/c/c9/John_Kelly_%28Earth-616%29_from_Deathlok_Vol_1_1_001.png/revision/latest?cb=20230731172652"
+    },
+    {
+      "idx": 4,
+      "file": "04.jpg",
+      "wiki": "File:SQ1 from Deathlok Vol 1 1 001.png",
+      "score": 110,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/9/91/SQ1_from_Deathlok_Vol_1_1_001.png/revision/latest?cb=20160126225056"
+    },
+    {
+      "idx": 5,
+      "file": "05.jpg",
+      "wiki": "File:William Hansen (Earth-616) from Deathlok Vol 1 1 001.jpg",
+      "score": 110,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/4/4a/William_Hansen_%28Earth-616%29_from_Deathlok_Vol_1_1_001.jpg/revision/latest?cb=20130610094335"
+    },
+    {
+      "idx": 6,
+      "file": "06.jpg",
+      "wiki": "File:Ben Jacobs (Earth-616) from Deathlok Vol 1 1 0001.jpg",
+      "score": 105,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/4/4c/Ben_Jacobs_%28Earth-616%29_from_Deathlok_Vol_1_1_0001.jpg/revision/latest?cb=20130610094942"
+    },
+    {
+      "idx": 7,
+      "file": "07.jpg",
+      "wiki": "File:Cybertank from Deathlok Vol 1 1 0001.png",
+      "score": 105,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/2/21/Cybertank_from_Deathlok_Vol_1_1_0001.png/revision/latest?cb=20160126204226"
+    },
+    {
+      "idx": 8,
+      "file": "08.jpg",
+      "wiki": "File:Emilia Verdugo (Earth-616) from Deathlok Vol 1 1 0001.png",
+      "score": 105,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/b/b6/Emilia_Verdugo_%28Earth-616%29_from_Deathlok_Vol_1_1_0001.png/revision/latest?cb=20160127134611"
+    }
+  ]
+}
