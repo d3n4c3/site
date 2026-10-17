@@ -47,18 +47,16 @@ def fit_to(im: Image.Image, tw: int, th: int) -> Image.Image:
 
 
 def back_cell(n: int) -> Image.Image:
-    """Portrait cell matching the front sheet; letterbox landscape backs."""
+    """Portrait cell matching the front sheet, using each back scan as-is.
+
+    Landscape back scans (#1–134) are rotated 90° to fill the portrait cell
+    the same way the card viewer does — no letterboxed horizontal strips.
+    Already-portrait Mutant Genesis backs (#135+) are fitted directly.
+    """
     im = Image.open(HD_BACKS / f"{int(n):03d}.jpg").convert("RGB")
-    tw, th = CELL_W, CELL_H
-    if im.width <= im.height:
-        return fit_to(im, tw, th)
-    # Landscape reading-orientation scan → letterbox into portrait cell.
-    scale = tw / im.width
-    nw, nh = tw, max(1, int(im.height * scale))
-    im = im.resize((nw, nh), Image.Resampling.LANCZOS)
-    canvas = Image.new("RGB", (tw, th), (12, 10, 16))
-    canvas.paste(im, (0, (th - nh) // 2))
-    return canvas
+    if im.width > im.height:
+        im = im.rotate(90, expand=True)
+    return fit_to(im, CELL_W, CELL_H)
 
 
 def save_thumb(im: Image.Image, path: Path, thumb_w: int = 220) -> None:
