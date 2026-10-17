@@ -2197,6 +2197,7 @@ const SOURCE_ART = {
   "007": { file: "007.jpg", comic: "007-comic.jpg", credit: "Fantastic Four Unlimited (1993) #4, Cover" },
   "008": { file: "008.jpg", comic: "008-comic.jpg", credit: "The Spectacular Spider-Man (1976) #188, Cover" },
   "009": { file: "009.jpg", comic: "009-comic.jpg", credit: "Lethal Foes of Spider-Man (1994) #3, Page 2" },
+  "010": { file: "010.jpg", credit: "In-house sketches by Ron Lim. Also used as X-Men playing cards (1994), store counter standee (1995), and X-Men magnets (1996)" },
   "012": { file: "012.jpg", comic: "012-comic.jpg", credit: "Marvel Treasury Edition (1974) #6, Page 57" },
   "013": { file: "013.jpg", comic: "013-comic.jpg", credit: "The Avengers (1963) #75, Cover" },
   "015": { file: "015.jpg", comic: "015-comic.jpg", credit: "The Amazing Spider-Man (1963) #20, Cover" },
@@ -2216,7 +2217,9 @@ const SOURCE_ART = {
   "038": { file: "038.jpg", comic: "038-comic.jpg", credit: "The Uncanny X-Men (1963) #281, Page 6" },
   "039": { file: "039.jpg", comic: "039-comic.jpg", credit: "The Sensational She-Hulk #1, Cover" },
   "040": { file: "040.jpg", comic: "040-comic.jpg", credit: "Marc Spector: Moon Knight (1989) #56, Cover" },
+  "042": { file: "042.jpg", credit: "In-house sketches by Frank Miller" },
   "043": { file: "043.jpg", comic: "043-comic.jpg", credit: "Daredevil: The Man Without Fear (1964) #182, Cover" },
+  "045": { file: "045.jpg", credit: "Alpha Flight (1983) #128, Page 13" },
   "046": { file: "046.jpg", comic: "046-comic.jpg", credit: "Thor (1966) #339, Page 20" },
   "047": { file: "047.jpg", comic: "047-comic.jpg", credit: "The Fantastic Four (1963) #262, Page 8" },
   "048": { file: "048.jpg", comic: "048-comic.jpg", credit: "Marvel Tales (1964) #266, Cover" },
@@ -2227,12 +2230,14 @@ const SOURCE_ART = {
   "060": { file: "060.jpg", comic: "060-comic.jpg", credit: "The Spectacular Spider-Man (1976) #206, Cover" },
   "063": { file: "063.jpg", comic: "063-comic.jpg", credit: "The Fantastic Four (1963) #348, Cover" },
   "068": { file: "068.jpg", comic: "068-comic.jpg", credit: "Nomad (1990) #1, Cover" },
+  "069": { file: "069.jpg", credit: "The Thanos Quest (1990) #1, Page 48" },
   "074": { file: "074.jpg", comic: "074-comic.jpg", credit: "The New Mutants (1983) #93, Cover" },
   "079": { file: "079.jpg", comic: "079-comic.jpg", credit: "X-Force (1991) Annual #1, Cover" },
   "080": { file: "080.jpg", comic: "080-comic.jpg", credit: "The New Mutants (1983) #100, Cover" },
   "082": { file: "082.jpg", comic: "082-comic.jpg", credit: "X-Factor (1986) #66, Cover" },
   "083": { file: "083.jpg", comic: "083-comic.jpg", credit: "X-Factor (1986) #71, Cover" },
   "084": { file: "084.jpg", comic: "084-comic.jpg", credit: "The Uncanny X-Men (1963) #300, Cover" },
+  "086": { file: "086.jpg", credit: "X-Men (1991) #5, Cover" },
   "087": { file: "087.jpg", comic: "087-comic.jpg", credit: "The Punisher: War Zone (1993) #8, Cover" },
   "088": { file: "088.jpg", comic: "088-comic.jpg", credit: "The Amazing Spider-Man (1963) #384, Page 16" },
   "089": { file: "089.jpg", comic: "089-comic.jpg", credit: "Cage (1992) #1, Cover" },
@@ -2308,7 +2313,7 @@ const SOURCE_ART = {
   "pb15": { file: "pb15.jpg", comic: "pb15-comic.jpg", credit: "The Amazing Spider-Man (Vol. 1, 1963), Issue #322, Page 8", ig: "DPSvdFCDeAu" },
   "pb16": { file: "pb16.jpg", comic: "pb16-comic.jpg", credit: "Marvel Spotlight (June 1993) Issue 6; Marvel Press Posters (July 1993), #143", ig: "DPScWmnEY1W" },
   "pb17": { file: "pb17.jpg", comic: "pb17-comic.jpg", credit: "Fantastic Four (Vol. 1, 1961), Issue #351 (1991), Page 12", ig: "DPRcmIkkaBu" },
-  "pb18": { file: "pb18.jpg", comic: "pb18-comic.jpg", credit: "Fantastic Four (Vol. 1, 1961) Issue #330 (1989), Cover", ig: "DPRTlKqEUXW" }
+  "pb18": { file: "pb18.jpg", comic: "pb18-comic.jpg", credit: "Fantastic Four (Vol. 1, 1961) Issue #330 (1989), Cover", ig: "DPRTlKqEUXW" },
 };
 const sourceSrc = (file) => `${artDir.replace("cards", "sources")}/${file}`;
 function sourceArtFor(kind, n) {
