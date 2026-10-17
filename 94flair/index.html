@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta name="x-flair-deploy" content="2026-10-17T04:03:49Z">
+<meta name="x-flair-deploy" content="2026-10-17T04:18:48Z">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>'94 Flair Presents the Marvel Universe &mdash; Masterset Checklist</title>
@@ -821,18 +821,10 @@
   .viewer .v-card.show-source .v-back { visibility: hidden; }
   .viewer .v-source .v-source-stage {
     position: absolute; inset: 0; overflow: hidden; border-radius: 14px;
-    display: grid; place-items: center; cursor: zoom-in;
+    display: grid; place-items: center; cursor: pointer;
   }
-  .viewer .v-card.source-zoomed .v-source .v-source-stage { cursor: zoom-out; overflow: auto; }
   .viewer .v-source img {
     width: 100%; height: 100%; object-fit: contain;
-    transition: transform .35s ease;
-    transform-origin: center center;
-  }
-  .viewer .v-card.source-zoomed .v-source img {
-    width: auto; height: auto; max-width: none; max-height: none;
-    min-width: 160%; min-height: 160%;
-    object-fit: none;
   }
   .viewer .v-source .v-source-badge {
     position: absolute; left: 12px; top: 12px; z-index: 2;
@@ -1788,7 +1780,7 @@
       <div class="note-card wide">
         <h4>About the Art Credits</h4>
         <p>Most Flair cards reuse existing comic art, repainted for the set. Each card lists its front title, source, and artist. Only four cards still have unaccounted credits — everything else has a source. Card art and credit research by <a href="https://www.instagram.com/exotechktx/" target="_blank" rel="noopener" style="color:var(--gold-2)">@exotechktx</a>.</p>
-        <p>In the card viewer, flip past the back to see the original comic art when we have it — taken from <a href="https://www.instagram.com/exotechktx/" target="_blank" rel="noopener" style="color:var(--gold-2)">@exotechktx</a>'s Instagram source posts (matched crop + full comic page on zoom). His Instagram has source posts for base #100–150 and all Power Blast cards so far (he’s posting downward through the set — newest is #100). #001–099 aren’t up yet; they’ll get wired as he posts them.</p>
+        <p>In the card viewer, flip past the back to see the original comic art when we have it — taken from <a href="https://www.instagram.com/exotechktx/" target="_blank" rel="noopener" style="color:var(--gold-2)">@exotechktx</a>'s Instagram source posts. His Instagram has source posts for base #100–150 and all Power Blast cards so far (he’s posting downward through the set — newest is #100). #001–099 aren’t up yet; they’ll get wired as he posts them.</p>
         <p>Still unaccounted: #37 Black Cat, #44 Hobgoblin, #85 Bishop, and Powerblast #5 Phoenix. In-house sketch sources: #10 Xavier (Ron Lim), #42 Elektra (Frank Miller).</p>
       </div>
     </div>
@@ -2688,7 +2680,6 @@ const viewer = (function cardViewer() {
   const back = card.querySelector(".v-back");
   const sourceFace = card.querySelector(".v-source");
   const sourceImg = sourceFace.querySelector("img");
-  const sourceStage = document.getElementById("vSourceStage");
   const flipBtn = document.getElementById("vFlip");
   const sourceCredit = document.getElementById("vSourceCredit");
   let list = [], index = 0, opener = null, faceIdx = 0, faceOrder = ["front"], current = null;
@@ -2726,7 +2717,6 @@ const viewer = (function cardViewer() {
     const which = faceOrder[faceIdx];
     card.classList.toggle("flipped", which === "back");
     card.classList.toggle("show-source", which === "source");
-    card.classList.remove("source-zoomed");
     const next = faceOrder[(faceIdx + 1) % faceOrder.length];
     if (faceOrder.length < 2) flipBtn.textContent = "Flip card";
     else if (next === "back") flipBtn.textContent = "Flip to back";
@@ -2747,7 +2737,7 @@ const viewer = (function cardViewer() {
     const c = credit(key);
     current = c;
     faceIdx = 0;
-    card.classList.remove("flipped", "show-source", "source-zoomed");
+    card.classList.remove("flipped", "show-source");
     card.style.setProperty("--ar", 738 / 1024);
     frontImg.onload = () => applyFrame();
     frontImg.src = c.img;
@@ -2767,17 +2757,12 @@ const viewer = (function cardViewer() {
     }
     if (hasSource) {
       sourceImg.onload = () => applyFrame();
-      // Cropped source matches the Flair reinterpretation; comic page is used when zoomed.
-      sourceImg.dataset.crop = c.sourceImg;
-      sourceImg.dataset.comic = c.sourceComic || c.sourceImg;
       sourceImg.src = c.sourceImg;
       sourceImg.alt = `Original art for ${c.name}`;
     } else {
       sourceImg.removeAttribute("src");
-      sourceImg.removeAttribute("data-crop");
-      sourceImg.removeAttribute("data-comic");
     }
-    // Cycle: front → back → original art (skip missing faces).
+    // Cycle: front → back → original art → front (skip missing faces).
     faceOrder = ["front"];
     if (hasBack) faceOrder.push("back");
     if (hasSource) faceOrder.push("source");
@@ -2792,10 +2777,10 @@ const viewer = (function cardViewer() {
     if (faceOrder.length < 2) hint = c.imgNote || "Back not pictured";
     else if (hasSource && hasBack) {
       hint = touch
-        ? "Tap to cycle front · back · original art \u00b7 Tap original to zoom"
-        : "Click or press F to cycle front \u00b7 back \u00b7 original art \u00b7 Click original to zoom \u00b7 Arrow keys for next";
+        ? "Tap to cycle front · back · original art"
+        : "Click or press F to cycle front \u00b7 back \u00b7 original art \u00b7 Arrow keys for next";
     } else if (hasSource) {
-      hint = touch ? "Tap to show original art \u00b7 Tap original to zoom" : "Click or press F for original art \u00b7 Click original to zoom";
+      hint = touch ? "Tap to cycle front \u00b7 original art" : "Click or press F to cycle front \u00b7 original art \u00b7 Arrow keys for next";
     } else if (landscape) {
       hint = touch ? "Tap to flip \u00b7 Frame rotates with the back" : "Click or press F to flip \u00b7 Frame rotates with the back \u00b7 Arrow keys for next";
     } else {
@@ -2808,17 +2793,6 @@ const viewer = (function cardViewer() {
     if (flipBtn.disabled) return;
     setFace(faceIdx + 1);
   };
-  function toggleSourceZoom(e) {
-    if (!card.classList.contains("show-source")) return;
-    e.stopPropagation();
-    const zooming = !card.classList.contains("source-zoomed");
-    card.classList.toggle("source-zoomed", zooming);
-    // Prefer the full comic page/cover when zoomed for context.
-    const next = zooming
-      ? (sourceImg.dataset.comic || sourceImg.dataset.crop)
-      : (sourceImg.dataset.crop || sourceImg.dataset.comic);
-    if (next && sourceImg.getAttribute("src") !== next) sourceImg.src = next;
-  }
   function open(trigger) {
     const sheet = trigger.closest(".mini");
     list = sheet ? [...sheet.querySelectorAll("[data-view]")]
@@ -2831,15 +2805,11 @@ const viewer = (function cardViewer() {
   }
   function close() {
     el.classList.remove("show");
-    card.classList.remove("source-zoomed", "show-source", "flipped");
+    card.classList.remove("show-source", "flipped");
     if (opener) opener.focus();
   }
 
-  card.addEventListener("click", e => {
-    if (e.target.closest(".v-source-stage")) return;
-    flip();
-  });
-  sourceStage.addEventListener("click", toggleSourceZoom);
+  card.addEventListener("click", () => flip());
   flipBtn.addEventListener("click", flip);
   el.querySelector(".v-close").addEventListener("click", close);
   el.querySelector(".prev").addEventListener("click", () => show(index - 1));
@@ -2847,14 +2817,10 @@ const viewer = (function cardViewer() {
   el.addEventListener("click", e => { if (e.target === el) close(); });
   document.addEventListener("keydown", e => {
     if (!el.classList.contains("show")) return;
-    if (e.key === "Escape") {
-      if (card.classList.contains("source-zoomed")) { card.classList.remove("source-zoomed"); return; }
-      close();
-    }
+    if (e.key === "Escape") close();
     else if (e.key === "ArrowLeft") show(index - 1);
     else if (e.key === "ArrowRight") show(index + 1);
     else if (e.key === "f" || e.key === "F") flip();
-    else if ((e.key === "z" || e.key === "Z") && card.classList.contains("show-source")) toggleSourceZoom(e);
     else return;
     e.preventDefault();
   });
