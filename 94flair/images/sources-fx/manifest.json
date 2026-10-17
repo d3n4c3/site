@@ -1,30 +1,36 @@
 {
   "001": {
-    "comic": "001.jpg",
-    "disabled": true,
+    "approved": true,
+    "artist": "Herb Trimpe",
+    "comic": "001-comic.jpg",
+    "credit": "Fantastic Four Unlimited (1993) #1, Cover",
+    "disabled": false,
     "file": "001.jpg",
-    "kind": "wiki",
-    "note": "wiki cover \u2014 not exotechktx crop; excluded from viewer until IG source lands",
-    "source_line": "Fantastic Four Unlimited (1993) #1, Cover",
-    "wiki_file": "Fantastic_Four_Unlimited_Vol_1_1.jpg"
+    "kind": "crop",
+    "note": "user-approved wiki cover match (cleaned for viewer)",
+    "source_line": "Fantastic Four Unlimited (1993) #1, Cover"
   },
   "002": {
-    "comic": "002.jpg",
-    "disabled": true,
+    "approved": true,
+    "artist": "Dale Keown",
+    "comic": "002-comic.jpg",
+    "credit": "The Incredible Hulk (1968) #393, Cover",
+    "disabled": false,
     "file": "002.jpg",
-    "kind": "wiki",
-    "note": "wiki cover \u2014 not exotechktx crop; excluded from viewer until IG source lands",
-    "source_line": "The Incredible Hulk (1968) #393, Cover",
-    "wiki_file": "Incredible_Hulk_Vol_1_393.jpg"
+    "kind": "crop",
+    "note": "user-approved wiki cover match (cleaned for viewer)",
+    "source_line": "The Incredible Hulk (1968) #393, Cover"
   },
   "004": {
-    "comic": "004.jpg",
-    "disabled": true,
+    "approved": true,
+    "artist": "Jack Kirby",
+    "comic": "004-comic.jpg",
+    "credit": "Journey Into Mystery (1952) #89, Cover",
+    "disabled": false,
     "file": "004.jpg",
-    "kind": "wiki",
-    "note": "wiki cover \u2014 not exotechktx crop; excluded from viewer until IG source lands",
-    "source_line": "Journey Into Mystery (1952) #89, Cover",
-    "wiki_file": "Journey_Into_Mystery_Vol_1_89.jpg"
+    "kind": "crop",
+    "note": "user-approved wiki cover match (cleaned for viewer)",
+    "source_line": "Journey Into Mystery (1952) #89, Cover"
   },
   "005": {
     "comic": "005.jpg",
@@ -45,22 +51,26 @@
     "wiki_file": "Tales_of_Suspense_Vol_1_39.jpg"
   },
   "007": {
-    "comic": "007.jpg",
-    "disabled": true,
+    "approved": true,
+    "artist": "Herb Trimpe",
+    "comic": "007-comic.jpg",
+    "credit": "Fantastic Four Unlimited (1993) #4, Cover",
+    "disabled": false,
     "file": "007.jpg",
-    "kind": "wiki",
-    "note": "wiki cover \u2014 not exotechktx crop; excluded from viewer until IG source lands",
-    "source_line": "Fantastic Four Unlimited (1993) #4, Cover",
-    "wiki_file": "Fantastic_Four_Unlimited_Vol_1_4.jpg"
+    "kind": "crop",
+    "note": "user-approved wiki cover match (cleaned for viewer)",
+    "source_line": "Fantastic Four Unlimited (1993) #4, Cover"
   },
   "008": {
-    "comic": "008.jpg",
-    "disabled": true,
+    "approved": true,
+    "artist": "Sal Buscema",
+    "comic": "008-comic.jpg",
+    "credit": "The Spectacular Spider-Man (1976) #188, Cover",
+    "disabled": false,
     "file": "008.jpg",
-    "kind": "wiki",
-    "note": "wiki cover \u2014 not exotechktx crop; excluded from viewer until IG source lands",
-    "source_line": "The Spectacular Spider-Man (1976) #188, Cover",
-    "wiki_file": "Spectacular_Spider-Man_Vol_1_188.jpg"
+    "kind": "crop",
+    "note": "user-approved wiki cover match (cleaned for viewer)",
+    "source_line": "The Spectacular Spider-Man (1976) #188, Cover"
   },
   "009": {
     "comic": "009.jpg",
@@ -90,13 +100,15 @@
     "wiki_file": "Marvel_Treasury_Edition_Vol_1_6.jpg"
   },
   "013": {
-    "comic": "013.jpg",
-    "disabled": true,
+    "approved": true,
+    "artist": "John Buscema",
+    "comic": "013-comic.jpg",
+    "credit": "The Avengers (1963) #75, Cover",
+    "disabled": false,
     "file": "013.jpg",
-    "kind": "wiki",
-    "note": "wiki cover \u2014 not exotechktx crop; excluded from viewer until IG source lands",
-    "source_line": "The Avengers (1963) #75, Cover",
-    "wiki_file": "Avengers_Vol_1_75.jpg"
+    "kind": "crop",
+    "note": "user-approved wiki cover match (cleaned for viewer)",
+    "source_line": "The Avengers (1963) #75, Cover"
   },
   "014": {
     "comic": "014.jpg",
@@ -108,40 +120,48 @@
     "wiki_file": "Daredevil_The_Man_Without_Fear_Vol_1_1.jpg"
   },
   "015": {
-    "comic": "015.jpg",
-    "disabled": true,
+    "approved": true,
+    "artist": "Steve Ditko",
+    "comic": "015-comic.jpg",
+    "credit": "The Amazing Spider-Man (1963) #20, Cover",
+    "disabled": false,
     "file": "015.jpg",
-    "kind": "wiki",
-    "note": "wiki cover \u2014 not exotechktx crop; excluded from viewer until IG source lands",
-    "source_line": "The Amazing Spider-Man (1963) #20, Cover",
-    "wiki_file": "Amazing_Spider-Man_Vol_1_20.jpg"
+    "kind": "crop",
+    "note": "user-approved wiki cover match (cleaned for viewer)",
+    "source_line": "The Amazing Spider-Man (1963) #20, Cover"
   },
   "016": {
-    "comic": "016.jpg",
-    "disabled": true,
+    "approved": true,
+    "artist": "",
+    "comic": "016-comic.jpg",
+    "credit": "Captain America #111, Cover",
+    "disabled": false,
     "file": "016.jpg",
-    "kind": "wiki",
-    "note": "wiki cover \u2014 not exotechktx crop; excluded from viewer until IG source lands",
-    "source_line": "Captain America #111, Cover",
-    "wiki_file": "Captain_America_Vol_1_111.jpg"
+    "kind": "crop",
+    "note": "user-approved wiki cover match (cleaned for viewer)",
+    "source_line": "Captain America #111, Cover"
   },
   "017": {
-    "comic": "017.jpg",
-    "disabled": true,
+    "approved": true,
+    "artist": "Wally Wood",
+    "comic": "017-comic.jpg",
+    "credit": "Daredevil: The Man Without Fear (1964) #7, Cover",
+    "disabled": false,
     "file": "017.jpg",
-    "kind": "wiki",
-    "note": "wiki cover \u2014 not exotechktx crop; excluded from viewer until IG source lands",
-    "source_line": "Daredevil: The Man Without Fear (1964) #7, Cover",
-    "wiki_file": "Daredevil_Vol_1_7.jpg"
+    "kind": "crop",
+    "note": "user-approved wiki cover match (cleaned for viewer)",
+    "source_line": "Daredevil: The Man Without Fear (1964) #7, Cover"
   },
   "018": {
-    "comic": "018.jpg",
-    "disabled": true,
+    "approved": true,
+    "artist": "Tom DeFalco",
+    "comic": "018-comic.jpg",
+    "credit": "Fantastic Four (1963) #375, Cover",
+    "disabled": false,
     "file": "018.jpg",
-    "kind": "wiki",
-    "note": "wiki cover \u2014 not exotechktx crop; excluded from viewer until IG source lands",
-    "source_line": "Fantastic Four (1963) #375, Cover",
-    "wiki_file": "Fantastic_Four_Vol_1_375.jpg"
+    "kind": "crop",
+    "note": "user-approved wiki cover match (cleaned for viewer)",
+    "source_line": "Fantastic Four (1963) #375, Cover"
   },
   "019": {
     "comic": "019.jpg",
@@ -171,22 +191,26 @@
     "wiki_file": "Incredible_Hulk_Vol_1_414.jpg"
   },
   "022": {
-    "comic": "022.jpg",
-    "disabled": true,
+    "approved": true,
+    "artist": "John Romita Sr.",
+    "comic": "022-comic.jpg",
+    "credit": "The Amazing Spider-Man (1963) #39, Cover",
+    "disabled": false,
     "file": "022.jpg",
-    "kind": "wiki",
-    "note": "wiki cover \u2014 not exotechktx crop; excluded from viewer until IG source lands",
-    "source_line": "The Amazing Spider-Man (1963) #39, Cover",
-    "wiki_file": "Amazing_Spider-Man_Vol_1_39.jpg"
+    "kind": "crop",
+    "note": "user-approved wiki cover match (cleaned for viewer)",
+    "source_line": "The Amazing Spider-Man (1963) #39, Cover"
   },
   "023": {
-    "comic": "023.jpg",
-    "disabled": true,
+    "approved": true,
+    "artist": "John Romita Sr.",
+    "comic": "023-comic.jpg",
+    "credit": "The Amazing Spider-Man (1963) #43, Cover",
+    "disabled": false,
     "file": "023.jpg",
-    "kind": "wiki",
-    "note": "wiki cover \u2014 not exotechktx crop; excluded from viewer until IG source lands",
-    "source_line": "The Amazing Spider-Man (1963) #43, Cover",
-    "wiki_file": "Amazing_Spider-Man_Vol_1_43.jpg"
+    "kind": "crop",
+    "note": "user-approved wiki cover match (cleaned for viewer)",
+    "source_line": "The Amazing Spider-Man (1963) #43, Cover"
   },
   "024": {
     "comic": "024.jpg",
@@ -207,22 +231,26 @@
     "wiki_file": "Fantastic_Four_Vol_1_128.jpg"
   },
   "026": {
-    "comic": "026.jpg",
-    "disabled": true,
+    "approved": true,
+    "artist": "Tom Raney",
+    "comic": "026-comic.jpg",
+    "credit": "The Warlock Chronicles (1993) #1, Cover",
+    "disabled": false,
     "file": "026.jpg",
-    "kind": "wiki",
-    "note": "wiki cover \u2014 not exotechktx crop; excluded from viewer until IG source lands",
-    "source_line": "The Warlock Chronicles (1993) #1, Cover",
-    "wiki_file": "Warlock_Chronicles_Vol_1_1.jpg"
+    "kind": "crop",
+    "note": "user-approved wiki cover match (cleaned for viewer)",
+    "source_line": "The Warlock Chronicles (1993) #1, Cover"
   },
   "027": {
-    "comic": "027.jpg",
-    "disabled": true,
+    "approved": true,
+    "artist": "John Buscema",
+    "comic": "027-comic.jpg",
+    "credit": "The Avengers (1963) #57, Cover",
+    "disabled": false,
     "file": "027.jpg",
-    "kind": "wiki",
-    "note": "wiki cover \u2014 not exotechktx crop; excluded from viewer until IG source lands",
-    "source_line": "The Avengers (1963) #57, Cover",
-    "wiki_file": "Avengers_Vol_1_57.jpg"
+    "kind": "crop",
+    "note": "user-approved wiki cover match (cleaned for viewer)",
+    "source_line": "The Avengers (1963) #57, Cover"
   },
   "028": {
     "comic": "028.jpg",
@@ -243,13 +271,15 @@
     "wiki_file": "Morbius_Vol_1_1.jpg"
   },
   "030": {
-    "comic": "030.jpg",
-    "disabled": true,
+    "approved": true,
+    "artist": "Mike Ploog",
+    "comic": "030-comic.jpg",
+    "credit": "The Original Ghost Rider (1992) #8, Cover",
+    "disabled": false,
     "file": "030.jpg",
-    "kind": "wiki",
-    "note": "wiki cover \u2014 not exotechktx crop; excluded from viewer until IG source lands",
-    "source_line": "The Original Ghost Rider (1992) #8, Cover",
-    "wiki_file": "Original_Ghost_Rider_Vol_1_8.jpg"
+    "kind": "crop",
+    "note": "user-approved wiki cover match (cleaned for viewer)",
+    "source_line": "The Original Ghost Rider (1992) #8, Cover"
   },
   "031": {
     "comic": "031.jpg",
@@ -270,13 +300,15 @@
     "wiki_file": "Spectacular_Spider-Man_Vol_1_200.jpg"
   },
   "034": {
-    "comic": "034.jpg",
-    "disabled": true,
+    "approved": true,
+    "artist": "Todd McFarlane",
+    "comic": "034-comic.jpg",
+    "credit": "The Incredible Hulk (1968) #340, Cover",
+    "disabled": false,
     "file": "034.jpg",
-    "kind": "wiki",
-    "note": "wiki cover \u2014 not exotechktx crop; excluded from viewer until IG source lands",
-    "source_line": "The Incredible Hulk (1968) #340, Cover",
-    "wiki_file": "Incredible_Hulk_Vol_1_340.jpg"
+    "kind": "crop",
+    "note": "user-approved wiki cover match (cleaned for viewer)",
+    "source_line": "The Incredible Hulk (1968) #340, Cover"
   },
   "035": {
     "comic": "035.jpg",
@@ -288,13 +320,15 @@
     "wiki_file": "X-Men_Vol_1_26.jpg"
   },
   "036": {
-    "comic": "036.jpg",
-    "disabled": true,
+    "approved": true,
+    "artist": "Dave Hoover",
+    "comic": "036-comic.jpg",
+    "credit": "The Invaders (1993) #1, Cover",
+    "disabled": false,
     "file": "036.jpg",
-    "kind": "wiki",
-    "note": "wiki cover \u2014 not exotechktx crop; excluded from viewer until IG source lands",
-    "source_line": "The Invaders (1993) #1, Cover",
-    "wiki_file": "Invaders_Vol_1_1.jpg"
+    "kind": "crop",
+    "note": "user-approved wiki cover match (cleaned for viewer)",
+    "source_line": "The Invaders (1993) #1, Cover"
   },
   "038": {
     "comic": "038.jpg",
@@ -306,22 +340,26 @@
     "wiki_file": "Uncanny_X-Men_Vol_1_281.jpg"
   },
   "039": {
-    "comic": "039.jpg",
-    "disabled": true,
+    "approved": true,
+    "artist": "John Byrne",
+    "comic": "039-comic.jpg",
+    "credit": "The Sensational She-Hulk #1, Cover",
+    "disabled": false,
     "file": "039.jpg",
-    "kind": "wiki",
-    "note": "wiki cover \u2014 not exotechktx crop; excluded from viewer until IG source lands",
-    "source_line": "The Sensational She-Hulk #1, Cover",
-    "wiki_file": "Sensational_She-Hulk_Vol_1_1.jpg"
+    "kind": "crop",
+    "note": "user-approved wiki cover match (cleaned for viewer)",
+    "source_line": "The Sensational She-Hulk #1, Cover"
   },
   "040": {
-    "comic": "040.jpg",
-    "disabled": true,
+    "approved": true,
+    "artist": "Stephen Platt",
+    "comic": "040-comic.jpg",
+    "credit": "Marc Spector: Moon Knight (1989) #56, Cover",
+    "disabled": false,
     "file": "040.jpg",
-    "kind": "wiki",
-    "note": "wiki cover \u2014 not exotechktx crop; excluded from viewer until IG source lands",
-    "source_line": "Marc Spector: Moon Knight (1989) #56, Cover",
-    "wiki_file": "Marc_Spector_Moon_Knight_Vol_1_56.jpg"
+    "kind": "crop",
+    "note": "user-approved wiki cover match (cleaned for viewer)",
+    "source_line": "Marc Spector: Moon Knight (1989) #56, Cover"
   },
   "041": {
     "comic": "041.jpg",
@@ -333,13 +371,15 @@
     "wiki_file": "X-Men_Adventures_Vol_1_1.jpg"
   },
   "043": {
-    "comic": "043.jpg",
-    "disabled": true,
+    "approved": true,
+    "artist": "Frank Miller",
+    "comic": "043-comic.jpg",
+    "credit": "Daredevil: The Man Without Fear (1964) #182, Cover",
+    "disabled": false,
     "file": "043.jpg",
-    "kind": "wiki",
-    "note": "wiki cover \u2014 not exotechktx crop; excluded from viewer until IG source lands",
-    "source_line": "Daredevil: The Man Without Fear (1964) #182, Cover",
-    "wiki_file": "Daredevil_Vol_1_182.jpg"
+    "kind": "crop",
+    "note": "user-approved wiki cover match (cleaned for viewer)",
+    "source_line": "Daredevil: The Man Without Fear (1964) #182, Cover"
   },
   "045": {
     "comic": "045.jpg",
@@ -369,31 +409,37 @@
     "wiki_file": "Fantastic_Four_Vol_1_262.jpg"
   },
   "048": {
-    "comic": "048.jpg",
-    "disabled": true,
+    "approved": true,
+    "artist": "Ron Lim",
+    "comic": "048-comic.jpg",
+    "credit": "Marvel Tales (1964) #266, Cover",
+    "disabled": false,
     "file": "048.jpg",
-    "kind": "wiki",
-    "note": "wiki cover \u2014 not exotechktx crop; excluded from viewer until IG source lands",
-    "source_line": "Marvel Tales (1964) #266, Cover",
-    "wiki_file": "Marvel_Tales_Vol_2_266.jpg"
+    "kind": "crop",
+    "note": "user-approved wiki cover match (cleaned for viewer)",
+    "source_line": "Marvel Tales (1964) #266, Cover"
   },
   "049": {
-    "comic": "049.jpg",
-    "disabled": true,
+    "approved": true,
+    "artist": "Ron Lim",
+    "comic": "049-comic.jpg",
+    "credit": "Marvel Tales (1964) #271, Cover",
+    "disabled": false,
     "file": "049.jpg",
-    "kind": "wiki",
-    "note": "wiki cover \u2014 not exotechktx crop; excluded from viewer until IG source lands",
-    "source_line": "Marvel Tales (1964) #271, Cover",
-    "wiki_file": "Marvel_Tales_Vol_2_271.jpg"
+    "kind": "crop",
+    "note": "user-approved wiki cover match (cleaned for viewer)",
+    "source_line": "Marvel Tales (1964) #271, Cover"
   },
   "050": {
-    "comic": "050.jpg",
-    "disabled": true,
+    "approved": true,
+    "artist": "Steven Butler",
+    "comic": "050-comic.jpg",
+    "credit": "Silver Sable and the Wild Pack (1992) #17, Cover",
+    "disabled": false,
     "file": "050.jpg",
-    "kind": "wiki",
-    "note": "wiki cover \u2014 not exotechktx crop; excluded from viewer until IG source lands",
-    "source_line": "Silver Sable and the Wild Pack (1992) #17, Cover",
-    "wiki_file": "Silver_Sable_and_the_Wild_Pack_Vol_1_17.jpg"
+    "kind": "crop",
+    "note": "user-approved wiki cover match (cleaned for viewer)",
+    "source_line": "Silver Sable and the Wild Pack (1992) #17, Cover"
   },
   "051": {
     "comic": "051.jpg",
@@ -414,13 +460,15 @@
     "wiki_file": "X-Factor_Vol_1_65.jpg"
   },
   "053": {
-    "comic": "053.jpg",
-    "disabled": true,
+    "approved": true,
+    "artist": "Alan Davis",
+    "comic": "053-comic.jpg",
+    "credit": "The Uncanny X-Men (1963) #213, Cover",
+    "disabled": false,
     "file": "053.jpg",
-    "kind": "wiki",
-    "note": "wiki cover \u2014 not exotechktx crop; excluded from viewer until IG source lands",
-    "source_line": "The Uncanny X-Men (1963) #213, Cover",
-    "wiki_file": "Uncanny_X-Men_Vol_1_213.jpg"
+    "kind": "crop",
+    "note": "user-approved wiki cover match (cleaned for viewer)",
+    "source_line": "The Uncanny X-Men (1963) #213, Cover"
   },
   "054": {
     "comic": "054.jpg",
@@ -477,13 +525,15 @@
     "wiki_file": "Iron_Man_Annual_Vol_1_10.jpg"
   },
   "060": {
-    "comic": "060.jpg",
-    "disabled": true,
+    "approved": true,
+    "artist": "Sal Buscema",
+    "comic": "060-comic.jpg",
+    "credit": "The Spectacular Spider-Man (1976) #206, Cover",
+    "disabled": false,
     "file": "060.jpg",
-    "kind": "wiki",
-    "note": "wiki cover \u2014 not exotechktx crop; excluded from viewer until IG source lands",
-    "source_line": "The Spectacular Spider-Man (1976) #206, Cover",
-    "wiki_file": "Spectacular_Spider-Man_Vol_1_206.jpg"
+    "kind": "crop",
+    "note": "user-approved wiki cover match (cleaned for viewer)",
+    "source_line": "The Spectacular Spider-Man (1976) #206, Cover"
   },
   "061": {
     "comic": "061.jpg",
@@ -504,13 +554,15 @@
     "wiki_file": "Daredevil_Vol_1_254.jpg"
   },
   "063": {
-    "comic": "063.jpg",
-    "disabled": true,
+    "approved": true,
+    "artist": "Arthur Adams",
+    "comic": "063-comic.jpg",
+    "credit": "The Fantastic Four (1963) #348, Cover",
+    "disabled": false,
     "file": "063.jpg",
-    "kind": "wiki",
-    "note": "wiki cover \u2014 not exotechktx crop; excluded from viewer until IG source lands",
-    "source_line": "The Fantastic Four (1963) #348, Cover",
-    "wiki_file": "Fantastic_Four_Vol_1_348.jpg"
+    "kind": "crop",
+    "note": "user-approved wiki cover match (cleaned for viewer)",
+    "source_line": "The Fantastic Four (1963) #348, Cover"
   },
   "064": {
     "comic": "064.jpg",
@@ -540,13 +592,15 @@
     "wiki_file": "Spectacular_Spider-Man_Vol_1_201.jpg"
   },
   "068": {
-    "comic": "068.jpg",
-    "disabled": true,
+    "approved": true,
+    "artist": "S. Clarke Hawbaker",
+    "comic": "068-comic.jpg",
+    "credit": "Nomad (1990) #1, Cover",
+    "disabled": false,
     "file": "068.jpg",
-    "kind": "wiki",
-    "note": "wiki cover \u2014 not exotechktx crop; excluded from viewer until IG source lands",
-    "source_line": "Nomad (1990) #1, Cover",
-    "wiki_file": "Nomad_Vol_1_1.jpg"
+    "kind": "crop",
+    "note": "user-approved wiki cover match (cleaned for viewer)",
+    "source_line": "Nomad (1990) #1, Cover"
   },
   "069": {
     "comic": "069.jpg",
@@ -585,13 +639,15 @@
     "wiki_file": "Nova_Vol_1_1.jpg"
   },
   "074": {
-    "comic": "074.jpg",
-    "disabled": true,
+    "approved": true,
+    "artist": "Rob Liefeld",
+    "comic": "074-comic.jpg",
+    "credit": "The New Mutants (1983) #93, Cover",
+    "disabled": false,
     "file": "074.jpg",
-    "kind": "wiki",
-    "note": "wiki cover \u2014 not exotechktx crop; excluded from viewer until IG source lands",
-    "source_line": "The New Mutants (1983) #93, Cover",
-    "wiki_file": "New_Mutants_Vol_1_93.jpg"
+    "kind": "crop",
+    "note": "user-approved wiki cover match (cleaned for viewer)",
+    "source_line": "The New Mutants (1983) #93, Cover"
   },
   "075": {
     "comic": "075.jpg",
@@ -621,22 +677,26 @@
     "wiki_file": "Deadpool_The_Circle_Chase_Vol_1_2.jpg"
   },
   "079": {
-    "comic": "079.jpg",
-    "disabled": true,
+    "approved": true,
+    "artist": "Greg Capullo",
+    "comic": "079-comic.jpg",
+    "credit": "X-Force (1991) Annual #1, Cover",
+    "disabled": false,
     "file": "079.jpg",
-    "kind": "wiki",
-    "note": "wiki cover \u2014 not exotechktx crop; excluded from viewer until IG source lands",
-    "source_line": "X-Force (1991) Annual #1, Cover",
-    "wiki_file": "X-Force_Annual_Vol_1_1.jpg"
+    "kind": "crop",
+    "note": "user-approved wiki cover match (cleaned for viewer)",
+    "source_line": "X-Force (1991) Annual #1, Cover"
   },
   "080": {
-    "comic": "080.jpg",
-    "disabled": true,
+    "approved": true,
+    "artist": "Rob Liefeld",
+    "comic": "080-comic.jpg",
+    "credit": "The New Mutants (1983) #100, Cover",
+    "disabled": false,
     "file": "080.jpg",
-    "kind": "wiki",
-    "note": "wiki cover \u2014 not exotechktx crop; excluded from viewer until IG source lands",
-    "source_line": "The New Mutants (1983) #100, Cover",
-    "wiki_file": "New_Mutants_Vol_1_100.jpg"
+    "kind": "crop",
+    "note": "user-approved wiki cover match (cleaned for viewer)",
+    "source_line": "The New Mutants (1983) #100, Cover"
   },
   "081": {
     "comic": "081.jpg",
@@ -648,31 +708,37 @@
     "wiki_file": "Spirits_of_Vengeance_Vol_1_1.jpg"
   },
   "082": {
-    "comic": "082.jpg",
-    "disabled": true,
+    "approved": true,
+    "artist": "Whilce Portacio",
+    "comic": "082-comic.jpg",
+    "credit": "X-Factor (1986) #66, Cover",
+    "disabled": false,
     "file": "082.jpg",
-    "kind": "wiki",
-    "note": "wiki cover \u2014 not exotechktx crop; excluded from viewer until IG source lands",
-    "source_line": "X-Factor (1986) #66, Cover",
-    "wiki_file": "X-Factor_Vol_1_66.jpg"
+    "kind": "crop",
+    "note": "user-approved wiki cover match (cleaned for viewer)",
+    "source_line": "X-Factor (1986) #66, Cover"
   },
   "083": {
-    "comic": "083.jpg",
-    "disabled": true,
+    "approved": true,
+    "artist": "Larry Stroman",
+    "comic": "083-comic.jpg",
+    "credit": "X-Factor (1986) #71, Cover",
+    "disabled": false,
     "file": "083.jpg",
-    "kind": "wiki",
-    "note": "wiki cover \u2014 not exotechktx crop; excluded from viewer until IG source lands",
-    "source_line": "X-Factor (1986) #71, Cover",
-    "wiki_file": "X-Factor_Vol_1_71.jpg"
+    "kind": "crop",
+    "note": "user-approved wiki cover match (cleaned for viewer)",
+    "source_line": "X-Factor (1986) #71, Cover"
   },
   "084": {
-    "comic": "084.jpg",
-    "disabled": true,
+    "approved": true,
+    "artist": "John Romita Jr.",
+    "comic": "084-comic.jpg",
+    "credit": "The Uncanny X-Men (1963) #300, Cover",
+    "disabled": false,
     "file": "084.jpg",
-    "kind": "wiki",
-    "note": "wiki cover \u2014 not exotechktx crop; excluded from viewer until IG source lands",
-    "source_line": "The Uncanny X-Men (1963) #300, Cover",
-    "wiki_file": "Uncanny_X-Men_Vol_1_300.jpg"
+    "kind": "crop",
+    "note": "user-approved wiki cover match (cleaned for viewer)",
+    "source_line": "The Uncanny X-Men (1963) #300, Cover"
   },
   "086": {
     "comic": "086.jpg",
@@ -684,13 +750,15 @@
     "wiki_file": "X-Men_Vol_1_5.jpg"
   },
   "087": {
-    "comic": "087.jpg",
-    "disabled": true,
+    "approved": true,
+    "artist": "John Romita Jr.",
+    "comic": "087-comic.jpg",
+    "credit": "The Punisher: War Zone (1993) #8, Cover",
+    "disabled": false,
     "file": "087.jpg",
-    "kind": "wiki",
-    "note": "wiki cover \u2014 not exotechktx crop; excluded from viewer until IG source lands",
-    "source_line": "The Punisher: War Zone (1993) #8, Cover",
-    "wiki_file": "Punisher_War_Zone_Vol_1_8.jpg"
+    "kind": "crop",
+    "note": "user-approved wiki cover match (cleaned for viewer)",
+    "source_line": "The Punisher: War Zone (1993) #8, Cover"
   },
   "088": {
     "comic": "088.jpg",
@@ -702,22 +770,26 @@
     "wiki_file": "Amazing_Spider-Man_Vol_1_384.jpg"
   },
   "089": {
-    "comic": "089.jpg",
-    "disabled": true,
+    "approved": true,
+    "artist": "Dwayne Turner",
+    "comic": "089-comic.jpg",
+    "credit": "Cage (1992) #1, Cover",
+    "disabled": false,
     "file": "089.jpg",
-    "kind": "wiki",
-    "note": "wiki cover \u2014 not exotechktx crop; excluded from viewer until IG source lands",
-    "source_line": "Cage (1992) #1, Cover",
-    "wiki_file": "Cage_Vol_1_1.jpg"
+    "kind": "crop",
+    "note": "user-approved wiki cover match (cleaned for viewer)",
+    "source_line": "Cage (1992) #1, Cover"
   },
   "090": {
-    "comic": "090.jpg",
-    "disabled": true,
+    "approved": true,
+    "artist": "Kevin Hopgood",
+    "comic": "090-comic.jpg",
+    "credit": "Iron Man (1968) #282, Cover",
+    "disabled": false,
     "file": "090.jpg",
-    "kind": "wiki",
-    "note": "wiki cover \u2014 not exotechktx crop; excluded from viewer until IG source lands",
-    "source_line": "Iron Man (1968) #282, Cover",
-    "wiki_file": "Iron_Man_Vol_1_282.jpg"
+    "kind": "crop",
+    "note": "user-approved wiki cover match (cleaned for viewer)",
+    "source_line": "Iron Man (1968) #282, Cover"
   },
   "091": {
     "comic": "091.jpg",
@@ -729,13 +801,15 @@
     "wiki_file": "Wolverine_Vol_2_65.jpg"
   },
   "092": {
-    "comic": "092.jpg",
-    "disabled": true,
+    "approved": true,
+    "artist": "Mark Bagley",
+    "comic": "092-comic.jpg",
+    "credit": "The Amazing Spider-Man (1963) #368, Cover",
+    "disabled": false,
     "file": "092.jpg",
-    "kind": "wiki",
-    "note": "wiki cover \u2014 not exotechktx crop; excluded from viewer until IG source lands",
-    "source_line": "The Amazing Spider-Man (1963) #368, Cover",
-    "wiki_file": "Amazing_Spider-Man_Vol_1_368.jpg"
+    "kind": "crop",
+    "note": "user-approved wiki cover match (cleaned for viewer)",
+    "source_line": "The Amazing Spider-Man (1963) #368, Cover"
   },
   "093": {
     "comic": "093.jpg",
@@ -783,22 +857,26 @@
     "wiki_file": "New_Mutants_Vol_1_94.jpg"
   },
   "098": {
-    "comic": "098.jpg",
-    "disabled": true,
+    "approved": true,
+    "artist": "Jeff Johnson",
+    "comic": "098-comic.jpg",
+    "credit": "Wonder Man (1991) #25, Cover",
+    "disabled": false,
     "file": "098.jpg",
-    "kind": "wiki",
-    "note": "wiki cover \u2014 not exotechktx crop; excluded from viewer until IG source lands",
-    "source_line": "Wonder Man (1991) #25, Cover",
-    "wiki_file": "Wonder_Man_Vol_2_25.jpg"
+    "kind": "crop",
+    "note": "user-approved wiki cover match (cleaned for viewer)",
+    "source_line": "Wonder Man (1991) #25, Cover"
   },
   "099": {
-    "comic": "099.jpg",
-    "disabled": true,
+    "approved": true,
+    "artist": "Pat Broderick",
+    "comic": "099-comic.jpg",
+    "credit": "Doom 2099 (1992) #2, Cover",
+    "disabled": false,
     "file": "099.jpg",
-    "kind": "wiki",
-    "note": "wiki cover \u2014 not exotechktx crop; excluded from viewer until IG source lands",
-    "source_line": "Doom 2099 (1992) #2, Cover",
-    "wiki_file": "Doom_2099_Vol_1_2.jpg"
+    "kind": "crop",
+    "note": "user-approved wiki cover match (cleaned for viewer)",
+    "source_line": "Doom 2099 (1992) #2, Cover"
   },
   "100": {
     "comic": "100-comic.jpg",

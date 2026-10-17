@@ -1,24 +1,25 @@
 {
   "counts": {
-    "match": 39,
+    "shipped": 39,
     "mismatch": 47,
     "missing": 10,
-    "unchecked": 3
+    "unchecked": 3,
+    "remaining": 60
   },
   "cards": [
     {
       "n": 1,
       "title": "Origin of the Fantastic Four!",
       "source": "Fantastic Four Unlimited (1993) #1, Cover",
-      "verdict": "match",
-      "note": "Thing leaping punch is a painted recreation of Fantastic Four Unlimited #1."
+      "verdict": "shipped",
+      "note": "Approved and wired into the main flipper"
     },
     {
       "n": 2,
       "title": "Origin of the Incredible Hulk",
       "source": "The Incredible Hulk (1968) #393, Cover",
-      "verdict": "match",
-      "note": "Hulk looming over Banner matches Incredible Hulk #393 cover figures."
+      "verdict": "shipped",
+      "note": "Approved and wired into the main flipper"
     },
     {
       "n": 3,
@@ -31,8 +32,8 @@
       "n": 4,
       "title": "Origin of Thor",
       "source": "Journey Into Mystery (1952) #89, Cover",
-      "verdict": "match",
-      "note": "Thor spinning Mjolnir recreates Journey Into Mystery #89."
+      "verdict": "shipped",
+      "note": "Approved and wired into the main flipper"
     },
     {
       "n": 5,
@@ -52,15 +53,15 @@
       "n": 7,
       "title": "Hulk -vs- Thing",
       "source": "Fantastic Four Unlimited (1993) #4, Cover",
-      "verdict": "match",
-      "note": "Hulk vs Thing combat poses match Fantastic Four Unlimited #4."
+      "verdict": "shipped",
+      "note": "Approved and wired into the main flipper"
     },
     {
       "n": 8,
       "title": "Origin of Vulture",
       "source": "The Spectacular Spider-Man (1976) #188, Cover",
-      "verdict": "match",
-      "note": "Vulture/Spidey midair clinch matches Spectacular Spider-Man #188."
+      "verdict": "shipped",
+      "note": "Approved and wired into the main flipper"
     },
     {
       "n": 9,
@@ -94,8 +95,8 @@
       "n": 13,
       "title": "Brotherhood of Evil Mutants",
       "source": "The Avengers (1963) #75, Cover",
-      "verdict": "match",
-      "note": "Quicksilver running figure recreates Avengers #75."
+      "verdict": "shipped",
+      "note": "Approved and wired into the main flipper"
     },
     {
       "n": 14,
@@ -108,29 +109,29 @@
       "n": 15,
       "title": "Scorpion -vs- Spider-Man",
       "source": "The Amazing Spider-Man (1963) #20, Cover",
-      "verdict": "match",
-      "note": "Scorpion holding Spidey overhead matches Amazing Spider-Man #20."
+      "verdict": "shipped",
+      "note": "Approved and wired into the main flipper"
     },
     {
       "n": 16,
       "title": "The Origin of Captain America",
       "source": "Captain America #111, Cover",
-      "verdict": "match",
-      "note": "Cap with shield raised recreates Captain America #111."
+      "verdict": "shipped",
+      "note": "Approved and wired into the main flipper"
     },
     {
       "n": 17,
       "title": "Daredevil -vs- Submariner",
       "source": "Daredevil: The Man Without Fear (1964) #7, Cover",
-      "verdict": "match",
-      "note": "Upside-down DD vs Namor underwater matches Daredevil #7."
+      "verdict": "shipped",
+      "note": "Approved and wired into the main flipper"
     },
     {
       "n": 18,
       "title": "Wedding of Reed & Sue",
       "source": "Fantastic Four (1963) #375, Cover",
-      "verdict": "match",
-      "note": "Invisible Woman with rifle matches Fantastic Four #375 central figure."
+      "verdict": "shipped",
+      "note": "Approved and wired into the main flipper"
     },
     {
       "n": 19,
@@ -157,15 +158,15 @@
       "n": 22,
       "title": "Spider-Man -vs- Green Goblin",
       "source": "The Amazing Spider-Man (1963) #39, Cover",
-      "verdict": "match",
-      "note": "Goblin towing bound unmasked Peter matches Amazing Spider-Man #39."
+      "verdict": "shipped",
+      "note": "Approved and wired into the main flipper"
     },
     {
       "n": 23,
       "title": "Origin of Rhino",
       "source": "The Amazing Spider-Man (1963) #43, Cover",
-      "verdict": "match",
-      "note": "Spidey atop Rhino recreates Amazing Spider-Man #43."
+      "verdict": "shipped",
+      "note": "Approved and wired into the main flipper"
     },
     {
       "n": 24,
@@ -185,15 +186,15 @@
       "n": 26,
       "title": "Origin of Warlock",
       "source": "The Warlock Chronicles (1993) #1, Cover",
-      "verdict": "match",
-      "note": "Warlock with staff matches Warlock Chronicles #1."
+      "verdict": "shipped",
+      "note": "Approved and wired into the main flipper"
     },
     {
       "n": 27,
       "title": "Origin of The Vision",
       "source": "The Avengers (1963) #57, Cover",
-      "verdict": "match",
-      "note": "Vision outstretched-arm pose recreates Avengers #57."
+      "verdict": "shipped",
+      "note": "Approved and wired into the main flipper"
     },
     {
       "n": 28,
@@ -213,8 +214,8 @@
       "n": 30,
       "title": "Origin of Ghost Rider",
       "source": "The Original Ghost Rider (1992) #8, Cover",
-      "verdict": "match",
-      "note": "Original Ghost Rider bike pose matches Original Ghost Rider #8."
+      "verdict": "shipped",
+      "note": "Approved and wired into the main flipper"
     },
     {
       "n": 31,
@@ -241,8 +242,8 @@
       "n": 34,
       "title": "Wolverine vs. Hulk",
       "source": "The Incredible Hulk (1968) #340, Cover",
-      "verdict": "match",
-      "note": "Wolverine claws reflecting Hulk matches Incredible Hulk #340."
+      "verdict": "shipped",
+      "note": "Approved and wired into the main flipper"
     },
     {
       "n": 35,
@@ -255,8 +256,8 @@
       "n": 36,
       "title": "Origin of the Invaders",
       "source": "The Invaders (1993) #1, Cover",
-      "verdict": "match",
-      "note": "Invaders figures recreate Invaders #1 cover poses."
+      "verdict": "shipped",
+      "note": "Approved and wired into the main flipper"
     },
     {
       "n": 37,
@@ -276,15 +277,15 @@
       "n": 39,
       "title": "Origin of She-Hulk",
       "source": "The Sensational She-Hulk #1, Cover",
-      "verdict": "match",
-      "note": "She-Hulk stance matches Sensational She-Hulk #1."
+      "verdict": "shipped",
+      "note": "Approved and wired into the main flipper"
     },
     {
       "n": 40,
       "title": "Origin of Moon Knight",
       "source": "Marc Spector: Moon Knight (1989) #56, Cover",
-      "verdict": "match",
-      "note": "Moon Knight cape-halo leap matches Marc Spector: Moon Knight #56."
+      "verdict": "shipped",
+      "note": "Approved and wired into the main flipper"
     },
     {
       "n": 41,
@@ -304,8 +305,8 @@
       "n": 43,
       "title": "Death of Elektra",
       "source": "Daredevil: The Man Without Fear (1964) #182, Cover",
-      "verdict": "match",
-      "note": "Murdock hugging Elektra\u2019s cross matches Daredevil #182."
+      "verdict": "shipped",
+      "note": "Approved and wired into the main flipper"
     },
     {
       "n": 44,
@@ -339,22 +340,22 @@
       "n": 48,
       "title": "The Black Costume Saga",
       "source": "Marvel Tales (1964) #266, Cover",
-      "verdict": "match",
-      "note": "Red/blue Spidey with looming black-suit silhouette matches Marvel Tales #266."
+      "verdict": "shipped",
+      "note": "Approved and wired into the main flipper"
     },
     {
       "n": 49,
       "title": "Origin of Puma",
       "source": "Marvel Tales (1964) #271, Cover",
-      "verdict": "match",
-      "note": "Puma vs black-suit Spidey matches Marvel Tales #271."
+      "verdict": "shipped",
+      "note": "Approved and wired into the main flipper"
     },
     {
       "n": 50,
       "title": "Silver Sable Inc.",
       "source": "Silver Sable and the Wild Pack (1992) #17, Cover",
-      "verdict": "match",
-      "note": "Silver Sable aiming gun recreates Silver Sable #17 central figure."
+      "verdict": "shipped",
+      "note": "Approved and wired into the main flipper"
     },
     {
       "n": 51,
@@ -374,8 +375,8 @@
       "n": 53,
       "title": "Sabretooth vs. Wolverine",
       "source": "The Uncanny X-Men (1963) #213, Cover",
-      "verdict": "match",
-      "note": "Sabretooth grappling Wolverine matches Uncanny X-Men #213."
+      "verdict": "shipped",
+      "note": "Approved and wired into the main flipper"
     },
     {
       "n": 54,
@@ -423,8 +424,8 @@
       "n": 60,
       "title": "Tombstone vs. Spider-Man",
       "source": "The Spectacular Spider-Man (1976) #206, Cover",
-      "verdict": "match",
-      "note": "Tombstone with shredded Spidey mask matches Spectacular Spider-Man #206."
+      "verdict": "shipped",
+      "note": "Approved and wired into the main flipper"
     },
     {
       "n": 61,
@@ -444,8 +445,8 @@
       "n": 63,
       "title": "Mr. Fix-It",
       "source": "The Fantastic Four (1963) #348, Cover",
-      "verdict": "match",
-      "note": "Mr. Fixit leaping boot-forward matches Fantastic Four #348."
+      "verdict": "shipped",
+      "note": "Approved and wired into the main flipper"
     },
     {
       "n": 64,
@@ -479,8 +480,8 @@
       "n": 68,
       "title": "The Origin of Nomad",
       "source": "Nomad (1990) #1, Cover",
-      "verdict": "match",
-      "note": "Nomad wide stance recreates Nomad #1."
+      "verdict": "shipped",
+      "note": "Approved and wired into the main flipper"
     },
     {
       "n": 69,
@@ -521,8 +522,8 @@
       "n": 74,
       "title": "Cable vs. Wolverine",
       "source": "The New Mutants (1983) #93, Cover",
-      "verdict": "match",
-      "note": "Cable vs Wolverine with sword matches New Mutants #93."
+      "verdict": "shipped",
+      "note": "Approved and wired into the main flipper"
     },
     {
       "n": 75,
@@ -556,15 +557,15 @@
       "n": 79,
       "title": "Origin of Shatterstar",
       "source": "X-Force (1991) Annual #1, Cover",
-      "verdict": "match",
-      "note": "Shatterstar crossed-swords leap matches X-Force Annual #1."
+      "verdict": "shipped",
+      "note": "Approved and wired into the main flipper"
     },
     {
       "n": 80,
       "title": "New Mutants No More",
       "source": "The New Mutants (1983) #100, Cover",
-      "verdict": "match",
-      "note": "X-Force group composition recreates New Mutants #100."
+      "verdict": "shipped",
+      "note": "Approved and wired into the main flipper"
     },
     {
       "n": 81,
@@ -577,22 +578,22 @@
       "n": 82,
       "title": "Child of the Future",
       "source": "X-Factor (1986) #66, Cover",
-      "verdict": "match",
-      "note": "Cyclops/Jean with baby and Apocalypse face matches X-Factor #66."
+      "verdict": "shipped",
+      "note": "Approved and wired into the main flipper"
     },
     {
       "n": 83,
       "title": "The New X-Factor",
       "source": "X-Factor (1986) #71, Cover",
-      "verdict": "match",
-      "note": "X-Factor team composition matches X-Factor #71."
+      "verdict": "shipped",
+      "note": "Approved and wired into the main flipper"
     },
     {
       "n": 84,
       "title": "Two Teams of X-Men",
       "source": "The Uncanny X-Men (1963) #300, Cover",
-      "verdict": "match",
-      "note": "Blue & Gold poses match Uncanny X-Men #300."
+      "verdict": "shipped",
+      "note": "Approved and wired into the main flipper"
     },
     {
       "n": 85,
@@ -612,8 +613,8 @@
       "n": 87,
       "title": "The Punisher Infiltrates the Mob",
       "source": "The Punisher: War Zone (1993) #8, Cover",
-      "verdict": "match",
-      "note": "Punisher dual-gun charge matches War Zone #8."
+      "verdict": "shipped",
+      "note": "Approved and wired into the main flipper"
     },
     {
       "n": 88,
@@ -626,15 +627,15 @@
       "n": 89,
       "title": "The New Cage",
       "source": "Cage (1992) #1, Cover",
-      "verdict": "match",
-      "note": "Cage chain-break pose matches Cage #1."
+      "verdict": "shipped",
+      "note": "Approved and wired into the main flipper"
     },
     {
       "n": 90,
       "title": "Outbreak of War Machine",
       "source": "Iron Man (1968) #282, Cover",
-      "verdict": "match",
-      "note": "War Machine firing pose matches Iron Man #282."
+      "verdict": "shipped",
+      "note": "Approved and wired into the main flipper"
     },
     {
       "n": 91,
@@ -647,8 +648,8 @@
       "n": 92,
       "title": "Invasion of the Spider-Slayers",
       "source": "The Amazing Spider-Man (1963) #368, Cover",
-      "verdict": "match",
-      "note": "Spider-Slayer scene matches ASM #368."
+      "verdict": "shipped",
+      "note": "Approved and wired into the main flipper"
     },
     {
       "n": 93,
@@ -689,15 +690,15 @@
       "n": 98,
       "title": "Wonder Man Resurrected",
       "source": "Wonder Man (1991) #25, Cover",
-      "verdict": "match",
-      "note": "Wonder Man pose matches Wonder Man #25."
+      "verdict": "shipped",
+      "note": "Approved and wired into the main flipper"
     },
     {
       "n": 99,
       "title": "Doom of the Future",
       "source": "Doom 2099 (1992) #2, Cover",
-      "verdict": "match",
-      "note": "Doom 2099 crouch with energy palms matches Doom 2099 #2."
+      "verdict": "shipped",
+      "note": "Approved and wired into the main flipper"
     }
   ]
 }
