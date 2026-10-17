@@ -3,36 +3,82 @@
   "key": "058",
   "title": "The Origin of Jubilee",
   "source": "Uncanny X-Men (1963) #258, Page 8",
-  "issue_keys": [
-    "Uncanny X-Men Vol 1 258",
-    "Uncanny X-Men Vol 2 258",
-    "Uncanny X-Men 258",
-    "The Uncanny X-Men Vol 1 258"
+  "tokens": [
+    "Jubilee"
   ],
   "page": 8,
-  "part": "page",
+  "promo": false,
   "status": "ok",
   "candidates": [
     {
       "idx": 1,
       "file": "01.jpg",
       "wiki": "File:Elizabeth Braddock (Earth-616) and Mandarin (Earth-616) from Uncanny X-Men Vol 1 258 001.png",
-      "score": 95,
+      "score": 89,
       "url": "https://static.wikia.nocookie.net/marveldatabase/images/5/5b/Elizabeth_Braddock_%28Earth-616%29_and_Mandarin_%28Earth-616%29_from_Uncanny_X-Men_Vol_1_258_001.png/revision/latest?cb=20201204001328"
     },
     {
       "idx": 2,
       "file": "02.jpg",
       "wiki": "File:Uncanny X-Men Vol 1 258.jpg",
-      "score": 67,
+      "score": 46,
       "url": "https://static.wikia.nocookie.net/marveldatabase/images/6/65/Uncanny_X-Men_Vol_1_258.jpg/revision/latest/scale-to-width-down/1400?cb=20241002211750"
     },
     {
       "idx": 3,
       "file": "03.jpg",
       "wiki": "File:Uncanny X-Men Vol 1 258 Reprint.jpg",
-      "score": 50,
+      "score": 40,
       "url": "https://static.wikia.nocookie.net/marveldatabase/images/c/cc/Uncanny_X-Men_Vol_1_258_Reprint.jpg/revision/latest?cb=20070228202830"
+    },
+    {
+      "idx": 4,
+      "file": "04.jpg",
+      "wiki": "File:Jubilee Vol 1 1 Textless.jpg",
+      "score": 28,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/5/50/Jubilee_Vol_1_1_Textless.jpg/revision/latest?cb=20081220022003"
+    },
+    {
+      "idx": 5,
+      "file": "05.jpg",
+      "wiki": "File:Jubilee Vol 1 2 Textless.jpg",
+      "score": 28,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/0/0e/Jubilee_Vol_1_2_Textless.jpg/revision/latest?cb=20081220022007"
+    },
+    {
+      "idx": 6,
+      "file": "06.jpg",
+      "wiki": "File:Jubilee Vol 1 3 Textless.jpg",
+      "score": 28,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/0/04/Jubilee_Vol_1_3_Textless.jpg/revision/latest?cb=20081220022055"
+    },
+    {
+      "idx": 7,
+      "file": "07.jpg",
+      "wiki": "File:Jubilee Vol 1 4 Textless.jpg",
+      "score": 28,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/5/51/Jubilee_Vol_1_4_Textless.jpg/revision/latest?cb=20081220022056"
+    },
+    {
+      "idx": 8,
+      "file": "08.jpg",
+      "wiki": "File:Jubilee Vol 1 5 Textless.jpg",
+      "score": 28,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/5/58/Jubilee_Vol_1_5_Textless.jpg/revision/latest?cb=20081220030426"
+    },
+    {
+      "idx": 9,
+      "file": "09.jpg",
+      "wiki": "File:Jubilee Vol 1 6 Textless.jpg",
+      "score": 28,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/4/4f/Jubilee_Vol_1_6_Textless.jpg/revision/latest?cb=20081220022058"
+    },
+    {
+      "idx": 10,
+      "file": "10.jpg",
+      "wiki": "File:Wolverine and Jubilee Vol 1 1 Textless Nimit Malavia Variant.jpg",
+      "score": 28,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/6/6d/Wolverine_and_Jubilee_Vol_1_1_Textless_Nimit_Malavia_Variant.jpg/revision/latest?cb=20110519221654"
     }
   ]
 }

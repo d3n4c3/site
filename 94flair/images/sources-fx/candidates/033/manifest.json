@@ -1,0 +1,85 @@
+{
+  "n": 33,
+  "key": "033",
+  "title": "Punisher vs. Spider-Man",
+  "source": "The Punisher (1987) Ad/Poster",
+  "tokens": [
+    "Spider-Man",
+    "Punisher"
+  ],
+  "page": null,
+  "promo": true,
+  "status": "ok",
+  "candidates": [
+    {
+      "idx": 1,
+      "file": "01.jpg",
+      "wiki": "File:Spider-Man Presents Punisher from Marvel Universe Cards Series I 0001.jpg",
+      "score": 42,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/b/b1/Spider-Man_Presents_Punisher_from_Marvel_Universe_Cards_Series_I_0001.jpg/revision/latest?cb=20160107023909"
+    },
+    {
+      "idx": 2,
+      "file": "02.jpg",
+      "wiki": "File:The Punisher (2004 film) poster textless 001.png",
+      "score": 34,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/e/e6/The_Punisher_%282004_film%29_poster_textless_001.png/revision/latest?cb=20260413141634"
+    },
+    {
+      "idx": 3,
+      "file": "03.jpg",
+      "wiki": "File:The Punisher (2004 film) poster textless 002.png",
+      "score": 34,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/a/a9/The_Punisher_%282004_film%29_poster_textless_002.png/revision/latest?cb=20260413141913"
+    },
+    {
+      "idx": 4,
+      "file": "04.jpg",
+      "wiki": "File:Abner Jenkins (Earth-616) Pin-Up from Amazing Spider-Man Annual Vol 1 2 0001.png",
+      "score": 32,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/5/51/Abner_Jenkins_%28Earth-616%29_Pin-Up_from_Amazing_Spider-Man_Annual_Vol_1_2_0001.png/revision/latest?cb=20210428224132"
+    },
+    {
+      "idx": 5,
+      "file": "05.jpg",
+      "wiki": "File:Benjamin Parker (Earth-616) from Spider-Man Heroes & Villains Collection (Trading Cards) 001.jpg",
+      "score": 32,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/7/71/Benjamin_Parker_%28Earth-616%29_from_Spider-Man_Heroes_%26_Villains_Collection_%28Trading_Cards%29_001.jpg/revision/latest?cb=20240619152118"
+    },
+    {
+      "idx": 6,
+      "file": "06.jpg",
+      "wiki": "File:Bruce Banner (Earth-616) and Peter Parker (Earth-616) from Spider-Man Team-Up (Trading Cards) 001.jpg",
+      "score": 32,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/8/86/Bruce_Banner_%28Earth-616%29_and_Peter_Parker_%28Earth-616%29_from_Spider-Man_Team-Up_%28Trading_Cards%29_001.jpg/revision/latest?cb=20160119053828"
+    },
+    {
+      "idx": 7,
+      "file": "07.jpg",
+      "wiki": "File:Curtis Connors (Earth-616) from Ultra Spider-Man (Trading Cards) Golden Web 001.jpg",
+      "score": 32,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/9/98/Curtis_Connors_%28Earth-616%29_from_Ultra_Spider-Man_%28Trading_Cards%29_Golden_Web_001.jpg/revision/latest?cb=20090922152711"
+    },
+    {
+      "idx": 8,
+      "file": "08.jpg",
+      "wiki": "File:Francis Castle (Earth-616) and Peter Parker (Earth-616) from Spider-Man Team-Up (Trading Cards) 001.jpg",
+      "score": 32,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/6/6f/Francis_Castle_%28Earth-616%29_and_Peter_Parker_%28Earth-616%29_from_Spider-Man_Team-Up_%28Trading_Cards%29_001.jpg/revision/latest?cb=20160119202935"
+    },
+    {
+      "idx": 9,
+      "file": "09.jpg",
+      "wiki": "File:Francis Castle (Earth-616) and Peter Parker (Earth-616) from Spider-Man Team-Up (Trading Cards) 002.jpg",
+      "score": 32,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/e/ef/Francis_Castle_%28Earth-616%29_and_Peter_Parker_%28Earth-616%29_from_Spider-Man_Team-Up_%28Trading_Cards%29_002.jpg/revision/latest?cb=20160119203049"
+    },
+    {
+      "idx": 10,
+      "file": "10.jpg",
+      "wiki": "File:Francis Castle (Earth-616) and Peter Parker (Earth-616) from Spider-Man Team-Up (Trading Cards) 003.jpg",
+      "score": 32,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/3/3c/Francis_Castle_%28Earth-616%29_and_Peter_Parker_%28Earth-616%29_from_Spider-Man_Team-Up_%28Trading_Cards%29_003.jpg/revision/latest?cb=20160120013732"
+    }
+  ]
+}

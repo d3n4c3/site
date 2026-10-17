@@ -1,0 +1,85 @@
+{
+  "n": 66,
+  "key": "066",
+  "title": "Universal Guardian",
+  "source": "1992 Comic Images Silver Surfer Card Set #66; Unused Corner Box Art",
+  "tokens": [
+    "Universal",
+    "Guardian"
+  ],
+  "page": null,
+  "promo": true,
+  "status": "ok",
+  "candidates": [
+    {
+      "idx": 1,
+      "file": "01.jpg",
+      "wiki": "File:Guardians Team-Up Vol 1 3 Cosmically Enhanced Variant Textless.jpg",
+      "score": 28,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/9/93/Guardians_Team-Up_Vol_1_3_Cosmically_Enhanced_Variant_Textless.jpg/revision/latest?cb=20141220213217"
+    },
+    {
+      "idx": 2,
+      "file": "02.jpg",
+      "wiki": "File:Infinity Wars Fallen Guardian Vol 1 1 Fantastic Four Villains Variant Textless.jpg",
+      "score": 28,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/2/21/Infinity_Wars_Fallen_Guardian_Vol_1_1_Fantastic_Four_Villains_Variant_Textless.jpg/revision/latest/scale-to-width-down/1400?cb=20210112083440"
+    },
+    {
+      "idx": 3,
+      "file": "03.jpg",
+      "wiki": "File:Infinity Wars Fallen Guardian Vol 1 1 Textless.jpg",
+      "score": 28,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/3/3b/Infinity_Wars_Fallen_Guardian_Vol_1_1_Textless.jpg/revision/latest?cb=20180918191954"
+    },
+    {
+      "idx": 4,
+      "file": "04.jpg",
+      "wiki": "File:Universal War One Revelations Vol 1 2 Textless.jpg",
+      "score": 28,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/a/ae/Universal_War_One_Revelations_Vol_1_2_Textless.jpg/revision/latest?cb=20130421001720"
+    },
+    {
+      "idx": 5,
+      "file": "05.jpg",
+      "wiki": "File:Widowmakers Red Guardian and Yelena Belova Vol 1 1 Lee Incentive Variant Textless.jpg",
+      "score": 28,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/b/ba/Widowmakers_Red_Guardian_and_Yelena_Belova_Vol_1_1_Lee_Incentive_Variant_Textless.jpg/revision/latest?cb=20250624050241"
+    },
+    {
+      "idx": 6,
+      "file": "06.jpg",
+      "wiki": "File:Widowmakers Red Guardian and Yelena Belova Vol 1 1 Textless.jpg",
+      "score": 28,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/7/76/Widowmakers_Red_Guardian_and_Yelena_Belova_Vol_1_1_Textless.jpg/revision/latest?cb=20200115023918"
+    },
+    {
+      "idx": 7,
+      "file": "07.jpg",
+      "wiki": "File:Guardians of the Galaxy - Cosmic Rewind Poster 001.jpg",
+      "score": 24,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/9/94/Guardians_of_the_Galaxy_-_Cosmic_Rewind_Poster_001.jpg/revision/latest?cb=20210215155624"
+    },
+    {
+      "idx": 8,
+      "file": "08.jpg",
+      "wiki": "File:Guardians of the Galaxy - Cosmic Rewind Poster 002.jpg",
+      "score": 24,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/8/85/Guardians_of_the_Galaxy_-_Cosmic_Rewind_Poster_002.jpg/revision/latest?cb=20211120195441"
+    },
+    {
+      "idx": 9,
+      "file": "09.jpg",
+      "wiki": "File:Guardians of the Galaxy - Cosmic Rewind Poster 003.jpg",
+      "score": 24,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/8/83/Guardians_of_the_Galaxy_-_Cosmic_Rewind_Poster_003.jpg/revision/latest/scale-to-width-down/1400?cb=20220404205428"
+    },
+    {
+      "idx": 10,
+      "file": "10.jpg",
+      "wiki": "File:Red Guardian from Marvel Snap 002.jpg",
+      "score": 24,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/f/fa/Red_Guardian_from_Marvel_Snap_002.jpg/revision/latest?cb=20241119224400"
+    }
+  ]
+}

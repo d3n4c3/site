@@ -1,0 +1,84 @@
+{
+  "n": 42,
+  "key": "042",
+  "title": "Elektra Appears",
+  "source": "In-house sketches by Frank Miller",
+  "tokens": [
+    "Elektra"
+  ],
+  "page": null,
+  "promo": true,
+  "status": "ok",
+  "candidates": [
+    {
+      "idx": 1,
+      "file": "01.jpg",
+      "wiki": "File:Elektra Natchios (Earth-616) from 1995 Marvel Masterpieces (Trading Cards) 0001.jpg",
+      "score": 32,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/5/54/Elektra_Natchios_%28Earth-616%29_from_1995_Marvel_Masterpieces_%28Trading_Cards%29_0001.jpg/revision/latest?cb=20061127162747"
+    },
+    {
+      "idx": 2,
+      "file": "02.jpg",
+      "wiki": "File:Elektra Natchios (Earth-616) from Marvel Legends (Trading Cards) 0001.jpg",
+      "score": 32,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/9/98/Elektra_Natchios_%28Earth-616%29_from_Marvel_Legends_%28Trading_Cards%29_0001.jpg/revision/latest?cb=20100221090207"
+    },
+    {
+      "idx": 3,
+      "file": "03.jpg",
+      "wiki": "File:Elektra Natchios (Earth-616) from Marvel Masterpieces (Trading Cards) 1996 001.jpg",
+      "score": 32,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/c/cd/Elektra_Natchios_%28Earth-616%29_from_Marvel_Masterpieces_%28Trading_Cards%29_1996_001.jpg/revision/latest?cb=20060126104653"
+    },
+    {
+      "idx": 4,
+      "file": "04.jpg",
+      "wiki": "File:Elektra Natchios (Earth-616) from Marvel Masterpieces Trading Cards 1992 0001.jpg",
+      "score": 32,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/f/f6/Elektra_Natchios_%28Earth-616%29_from_Marvel_Masterpieces_Trading_Cards_1992_0001.jpg/revision/latest?cb=20160616230555"
+    },
+    {
+      "idx": 5,
+      "file": "05.jpg",
+      "wiki": "File:Elektra Natchios (Earth-616) from Marvel Universe Cards Series I 0001.jpg",
+      "score": 32,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/d/df/Elektra_Natchios_%28Earth-616%29_from_Marvel_Universe_Cards_Series_I_0001.jpg/revision/latest?cb=20160107020116"
+    },
+    {
+      "idx": 6,
+      "file": "06.jpg",
+      "wiki": "File:Elektra Natchios (Earth-616) from Marvel War of Heroes 001.jpeg",
+      "score": 32,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/8/87/Elektra_Natchios_%28Earth-616%29_from_Marvel_War_of_Heroes_001.jpeg/revision/latest?cb=20261004173715"
+    },
+    {
+      "idx": 7,
+      "file": "07.jpg",
+      "wiki": "File:Elektra Natchios (Earth-616) from Marvel War of Heroes 002.jpeg",
+      "score": 32,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/b/bb/Elektra_Natchios_%28Earth-616%29_from_Marvel_War_of_Heroes_002.jpeg/revision/latest?cb=20261004173750"
+    },
+    {
+      "idx": 8,
+      "file": "08.jpg",
+      "wiki": "File:Elektra Natchios (Earth-616) from Marvel War of Heroes 003.jpeg",
+      "score": 32,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/d/d7/Elektra_Natchios_%28Earth-616%29_from_Marvel_War_of_Heroes_003.jpeg/revision/latest?cb=20261004173859"
+    },
+    {
+      "idx": 9,
+      "file": "09.jpg",
+      "wiki": "File:Elektra Natchios (Earth-616) from Marvel War of Heroes 004.jpeg",
+      "score": 32,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/6/60/Elektra_Natchios_%28Earth-616%29_from_Marvel_War_of_Heroes_004.jpeg/revision/latest?cb=20261004173949"
+    },
+    {
+      "idx": 10,
+      "file": "10.jpg",
+      "wiki": "File:Elektra Natchios (Earth-616) from Marvel War of Heroes 005.jpeg",
+      "score": 32,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/5/5a/Elektra_Natchios_%28Earth-616%29_from_Marvel_War_of_Heroes_005.jpeg/revision/latest?cb=20261004174013"
+    }
+  ]
+}

@@ -3,50 +3,85 @@
   "key": "025",
   "title": "Doom Steals the Power Cosmic",
   "source": "The Fantastic Four (1961) #128, Page 21",
-  "issue_keys": [
-    "The Fantastic Four Vol 1 128",
-    "The Fantastic Four Vol 2 128",
-    "The Fantastic Four 128",
-    "Fantastic Four Vol 1 128"
+  "tokens": [
+    "Doom",
+    "Steals",
+    "Power",
+    "Cosmic"
   ],
   "page": 21,
-  "part": "page",
+  "promo": false,
   "status": "ok",
   "candidates": [
     {
       "idx": 1,
       "file": "01.jpg",
-      "wiki": "File:Frightful Four (Earth-616) from Fantastic Four Vol 1 128 001.jpg",
-      "score": 95,
-      "url": "https://static.wikia.nocookie.net/marveldatabase/images/0/0c/Frightful_Four_%28Earth-616%29_from_Fantastic_Four_Vol_1_128_001.jpg/revision/latest?cb=20240110041049"
+      "wiki": "File:Victor von Doom (Earth-616) and Reed Richards (Earth-616) from Fantastic Four Vol 1 200 001.jpg",
+      "score": 32,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/6/62/Victor_von_Doom_%28Earth-616%29_and_Reed_Richards_%28Earth-616%29_from_Fantastic_Four_Vol_1_200_001.jpg/revision/latest?cb=20161022154003"
     },
     {
       "idx": 2,
       "file": "02.jpg",
-      "wiki": "File:Josiah Mandiz (Earth-616) from Fantastic Four Vol 1 128 001.png",
-      "score": 95,
-      "url": "https://static.wikia.nocookie.net/marveldatabase/images/b/b4/Josiah_Mandiz_%28Earth-616%29_from_Fantastic_Four_Vol_1_128_001.png/revision/latest?cb=20201017075504"
+      "wiki": "File:Victor von Doom (Earth-616) and Reed Richards (Earth-616) from Fantastic Four Vol 1 381 001.jpg",
+      "score": 32,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/3/3e/Victor_von_Doom_%28Earth-616%29_and_Reed_Richards_%28Earth-616%29_from_Fantastic_Four_Vol_1_381_001.jpg/revision/latest?cb=20161024190337"
     },
     {
       "idx": 3,
       "file": "03.jpg",
-      "wiki": "File:Fantastic Four Vol 1 128.jpg",
-      "score": 67,
-      "url": "https://static.wikia.nocookie.net/marveldatabase/images/9/98/Fantastic_Four_Vol_1_128.jpg/revision/latest?cb=20180502040745"
+      "wiki": "File:Victor von Doom (Earth-616) from Fantastic Four Vol 1 278 0004.jpg",
+      "score": 32,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/4/48/Victor_von_Doom_%28Earth-616%29_from_Fantastic_Four_Vol_1_278_0004.jpg/revision/latest?cb=20161003155940"
     },
     {
       "idx": 4,
       "file": "04.jpg",
-      "wiki": "File:Fantastic Four (Earth-616) and Norrin Radd (Earth-616) battle the Doomsman II (Earth-616) from Fantastic Four Vol 1 157 001.jpg",
-      "score": 20,
-      "url": "https://static.wikia.nocookie.net/marveldatabase/images/2/23/Fantastic_Four_%28Earth-616%29_and_Norrin_Radd_%28Earth-616%29_battle_the_Doomsman_II_%28Earth-616%29_from_Fantastic_Four_Vol_1_157_001.jpg/revision/latest?cb=20161021213836"
+      "wiki": "File:Victor von Doom (Earth-616) from Fantastic Four Vol 1 358 001.jpg",
+      "score": 32,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/e/eb/Victor_von_Doom_%28Earth-616%29_from_Fantastic_Four_Vol_1_358_001.jpg/revision/latest/scale-to-width-down/1400?cb=20240705232247"
     },
     {
       "idx": 5,
       "file": "05.jpg",
-      "wiki": "File:Power Man Joins the Fantastic Four from Fantastic Four Vol 1 168.jpg",
-      "score": 20,
-      "url": "https://static.wikia.nocookie.net/marveldatabase/images/8/8f/Power_Man_Joins_the_Fantastic_Four_from_Fantastic_Four_Vol_1_168.jpg/revision/latest?cb=20161022145622"
+      "wiki": "File:Victor von Doom (Earth-616) from Fantastic Four Vol 1 84 0001.jpg",
+      "score": 32,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/d/de/Victor_von_Doom_%28Earth-616%29_from_Fantastic_Four_Vol_1_84_0001.jpg/revision/latest/scale-to-width-down/1400?cb=20240601054329"
+    },
+    {
+      "idx": 6,
+      "file": "06.jpg",
+      "wiki": "File:Victor von Doom (Earth-616) from Fantastic Four Vol 3 566 001.jpg",
+      "score": 32,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/0/05/Victor_von_Doom_%28Earth-616%29_from_Fantastic_Four_Vol_3_566_001.jpg/revision/latest?cb=20161004025455"
+    },
+    {
+      "idx": 7,
+      "file": "07.jpg",
+      "wiki": "File:Victor von Doom (Earth-616) from Fantastic Four Vol 6 32 001.jpg",
+      "score": 32,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/c/c1/Victor_von_Doom_%28Earth-616%29_from_Fantastic_Four_Vol_6_32_001.jpg/revision/latest?cb=20210515041513"
+    },
+    {
+      "idx": 8,
+      "file": "08.jpg",
+      "wiki": "File:Victor von Doom (Earth-616) from Fantastic Four Vol 6 32 002.jpg",
+      "score": 32,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/4/4f/Victor_von_Doom_%28Earth-616%29_from_Fantastic_Four_Vol_6_32_002.jpg/revision/latest?cb=20210515041515"
+    },
+    {
+      "idx": 9,
+      "file": "09.jpg",
+      "wiki": "File:Victor von Doom (Earth-616) from Fantastic Four Vol 6 43 001.jpg",
+      "score": 32,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/8/8e/Victor_von_Doom_%28Earth-616%29_from_Fantastic_Four_Vol_6_43_001.jpg/revision/latest?cb=20220522232128"
+    },
+    {
+      "idx": 10,
+      "file": "10.jpg",
+      "wiki": "File:Doctor Doom Vol 1 9 Doctor Doom Phoenix Variant Textless.jpg",
+      "score": 28,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/f/ff/Doctor_Doom_Vol_1_9_Doctor_Doom_Phoenix_Variant_Textless.jpg/revision/latest?cb=20200822063921"
     }
   ]
 }

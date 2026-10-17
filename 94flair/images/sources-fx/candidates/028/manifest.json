@@ -3,14 +3,82 @@
   "key": "028",
   "title": "Mephisto Appears",
   "source": "West Coast Avengers (1985) Annual #8, Page 51",
-  "issue_keys": [
-    "West Coast Avengers Annual Vol 1 8",
-    "West Coast Avengers Vol 1 Annual 8",
-    "West Coast Avengers Annual 8",
-    "The West Coast Avengers Annual Vol 1 8"
+  "tokens": [
+    "Mephisto"
   ],
   "page": 51,
-  "part": "page",
-  "status": "none",
-  "candidates": []
+  "promo": false,
+  "status": "ok",
+  "candidates": [
+    {
+      "idx": 1,
+      "file": "01.jpg",
+      "wiki": "File:Mephisto (Earth-616) from Avengers Academy Marvel's Voices Infinity Comic Vol 1 24 001.jpg",
+      "score": 32,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/b/b4/Mephisto_%28Earth-616%29_from_Avengers_Academy_Marvel%27s_Voices_Infinity_Comic_Vol_1_24_001.jpg/revision/latest?cb=20241210203341"
+    },
+    {
+      "idx": 2,
+      "file": "02.jpg",
+      "wiki": "File:Mephisto (Earth-616) from Avengers Academy Marvel's Voices Infinity Comic Vol 1 24 002.jpg",
+      "score": 32,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/4/48/Mephisto_%28Earth-616%29_from_Avengers_Academy_Marvel%27s_Voices_Infinity_Comic_Vol_1_24_002.jpg/revision/latest?cb=20241210203315"
+    },
+    {
+      "idx": 3,
+      "file": "03.jpg",
+      "wiki": "File:Mephisto (Earth-616) from Avengers Academy Marvel's Voices Infinity Comic Vol 1 26 001.jpg",
+      "score": 32,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/a/af/Mephisto_%28Earth-616%29_from_Avengers_Academy_Marvel%27s_Voices_Infinity_Comic_Vol_1_26_001.jpg/revision/latest?cb=20241228224401"
+    },
+    {
+      "idx": 4,
+      "file": "04.jpg",
+      "wiki": "File:Mephisto (Earth-616) from Avengers Vol 8 18 001.jpg",
+      "score": 32,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/c/cd/Mephisto_%28Earth-616%29_from_Avengers_Vol_8_18_001.jpg/revision/latest?cb=20250421173839"
+    },
+    {
+      "idx": 5,
+      "file": "05.jpg",
+      "wiki": "File:Mephisto (Earth-616) from Avengers Vol 8 31 002.jpg",
+      "score": 32,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/e/ef/Mephisto_%28Earth-616%29_from_Avengers_Vol_8_31_002.jpg/revision/latest?cb=20210404034038"
+    },
+    {
+      "idx": 6,
+      "file": "06.jpg",
+      "wiki": "File:Mephisto (Earth-616) from Avengers Vol 8 32 001.jpg",
+      "score": 32,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/0/0a/Mephisto_%28Earth-616%29_from_Avengers_Vol_8_32_001.jpg/revision/latest?cb=20210405005740"
+    },
+    {
+      "idx": 7,
+      "file": "07.jpg",
+      "wiki": "File:Mephisto (Earth-616) from Avengers Vol 8 66 001.jpg",
+      "score": 32,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/7/70/Mephisto_%28Earth-616%29_from_Avengers_Vol_8_66_001.jpg/revision/latest/scale-to-width-down/1400?cb=20230308193027"
+    },
+    {
+      "idx": 8,
+      "file": "08.jpg",
+      "wiki": "File:Mephisto (Earth-616) from Avengers Vol 8 7 001.jpg",
+      "score": 32,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/3/3a/Mephisto_%28Earth-616%29_from_Avengers_Vol_8_7_001.jpg/revision/latest?cb=20250421173739"
+    },
+    {
+      "idx": 9,
+      "file": "09.jpg",
+      "wiki": "File:Mephisto (Earth-4111) from Avengers Vol 8 50 001.jpg",
+      "score": 24,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/4/42/Mephisto_%28Earth-4111%29_from_Avengers_Vol_8_50_001.jpg/revision/latest?cb=20230102225531"
+    },
+    {
+      "idx": 10,
+      "file": "10.jpg",
+      "wiki": "File:Mephisto (Earth-TRN1265) from Avengers Vol 1 177 0001.jpg",
+      "score": 24,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/8/84/Mephisto_%28Earth-TRN1265%29_from_Avengers_Vol_1_177_0001.jpg/revision/latest?cb=20231013122154"
+    }
+  ]
 }

@@ -1,0 +1,84 @@
+{
+  "n": 70,
+  "key": "070",
+  "title": "Cable Returns from the Future",
+  "source": "1992 Impel X-Men Series I by Jim Lee",
+  "tokens": [
+    "Cable"
+  ],
+  "page": null,
+  "promo": true,
+  "status": "ok",
+  "candidates": [
+    {
+      "idx": 1,
+      "file": "01.jpg",
+      "wiki": "File:Stepford Cuckoos (Earth-616) from Cable Vol 4 2 Textless Cover.jpg",
+      "score": 36,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/c/cd/Stepford_Cuckoos_%28Earth-616%29_from_Cable_Vol_4_2_Textless_Cover.jpg/revision/latest/scale-to-width-down/1400?cb=20210326105046"
+    },
+    {
+      "idx": 2,
+      "file": "02.jpg",
+      "wiki": "File:Carmella Unuscione (Earth-616) from Cable Vol 1 10 cover 001.jpg",
+      "score": 32,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/5/56/Carmella_Unuscione_%28Earth-616%29_from_Cable_Vol_1_10_cover_001.jpg/revision/latest?cb=20190626022321"
+    },
+    {
+      "idx": 3,
+      "file": "03.jpg",
+      "wiki": "File:Nathan Summers (Earth-616) and Remy LeBeau (Earth-616) Trading Card from Cable Vol 1 4 001.jpg",
+      "score": 32,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/8/8b/Nathan_Summers_%28Earth-616%29_and_Remy_LeBeau_%28Earth-616%29_Trading_Card_from_Cable_Vol_1_4_001.jpg/revision/latest?cb=20101113052525"
+    },
+    {
+      "idx": 4,
+      "file": "04.jpg",
+      "wiki": "File:Vision (Earth-616), Nathan Summers (Earth-616), and Sersi (Earth-616) Trading Card Back from Cable Vol 1 4 001.jpg",
+      "score": 32,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/6/60/Vision_%28Earth-616%29%2C_Nathan_Summers_%28Earth-616%29%2C_and_Sersi_%28Earth-616%29_Trading_Card_Back_from_Cable_Vol_1_4_001.jpg/revision/latest?cb=20101113052620"
+    },
+    {
+      "idx": 5,
+      "file": "05.jpg",
+      "wiki": "File:Cable & Deadpool Vol 1 10 Textless.jpg",
+      "score": 28,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/3/3c/Cable_%26_Deadpool_Vol_1_10_Textless.jpg/revision/latest?cb=20071023022908"
+    },
+    {
+      "idx": 6,
+      "file": "06.jpg",
+      "wiki": "File:Cable & Deadpool Vol 1 12 Textless.jpg",
+      "score": 28,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/5/5c/Cable_%26_Deadpool_Vol_1_12_Textless.jpg/revision/latest?cb=20071023022917"
+    },
+    {
+      "idx": 7,
+      "file": "07.jpg",
+      "wiki": "File:Cable & Deadpool Vol 1 14 Textless.jpg",
+      "score": 28,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/4/40/Cable_%26_Deadpool_Vol_1_14_Textless.jpg/revision/latest?cb=20161019140119"
+    },
+    {
+      "idx": 8,
+      "file": "08.jpg",
+      "wiki": "File:Cable & Deadpool Vol 1 17 Textless.jpg",
+      "score": 28,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/e/ed/Cable_%26_Deadpool_Vol_1_17_Textless.jpg/revision/latest?cb=20071102034353"
+    },
+    {
+      "idx": 9,
+      "file": "09.jpg",
+      "wiki": "File:Cable & Deadpool Vol 1 19 Textless.jpg",
+      "score": 28,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/1/16/Cable_%26_Deadpool_Vol_1_19_Textless.jpg/revision/latest?cb=20100412224900"
+    },
+    {
+      "idx": 10,
+      "file": "10.jpg",
+      "wiki": "File:Cable & Deadpool Vol 1 20 Textless.jpg",
+      "score": 28,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/7/75/Cable_%26_Deadpool_Vol_1_20_Textless.jpg/revision/latest?cb=20071027142056"
+    }
+  ]
+}

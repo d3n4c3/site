@@ -3,71 +3,83 @@
   "key": "069",
   "title": "Thanos Quest",
   "source": "The Thanos Quest (1990) #1, Page 48",
-  "issue_keys": [
-    "The Thanos Quest Vol 1 1",
-    "The Thanos Quest Vol 2 1",
-    "The Thanos Quest 1",
-    "Thanos Quest Vol 1 1"
+  "tokens": [
+    "Thanos",
+    "Quest"
   ],
   "page": 48,
-  "part": "page",
+  "promo": false,
   "status": "ok",
   "candidates": [
     {
       "idx": 1,
       "file": "01.jpg",
-      "wiki": "File:Infinity Well from Thanos Quest Vol 1 1 001.jpg",
-      "score": 125,
-      "url": "https://static.wikia.nocookie.net/marveldatabase/images/8/8e/Infinity_Well_from_Thanos_Quest_Vol_1_1_001.jpg/revision/latest/scale-to-width-down/1400?cb=20250731195223"
+      "wiki": "File:Ord Zyonz (Earth-616) from Thanos Quest Vol 1 1 0001.jpg",
+      "score": 50,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/5/54/Ord_Zyonz_%28Earth-616%29_from_Thanos_Quest_Vol_1_1_0001.jpg/revision/latest?cb=20161011033921"
     },
     {
       "idx": 2,
       "file": "02.jpg",
-      "wiki": "File:Power Gem from Thanos Quest Vol 1 1 001.jpg",
-      "score": 125,
-      "url": "https://static.wikia.nocookie.net/marveldatabase/images/c/c8/Power_Gem_from_Thanos_Quest_Vol_1_1_001.jpg/revision/latest?cb=20180506021953"
+      "wiki": "File:Ord Zyonz (Earth-616) from Thanos Quest Vol 1 1 0002.jpg",
+      "score": 50,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/3/3c/Ord_Zyonz_%28Earth-616%29_from_Thanos_Quest_Vol_1_1_0002.jpg/revision/latest?cb=20161011033937"
     },
     {
       "idx": 3,
       "file": "03.jpg",
-      "wiki": "File:Soul Gem from Thanos Quest Vol 1 1 001.jpg",
-      "score": 125,
-      "url": "https://static.wikia.nocookie.net/marveldatabase/images/d/d5/Soul_Gem_from_Thanos_Quest_Vol_1_1_001.jpg/revision/latest?cb=20180422050934"
+      "wiki": "File:Taneleer Tivan (Earth-616) from Thanos Quest Vol 1 2 001.jpg",
+      "score": 50,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/4/45/Taneleer_Tivan_%28Earth-616%29_from_Thanos_Quest_Vol_1_2_001.jpg/revision/latest?cb=20180429180811"
     },
     {
       "idx": 4,
       "file": "04.jpg",
-      "wiki": "File:Tamarata from Thanos Quest Vol 1 1 001.jpg",
-      "score": 125,
-      "url": "https://static.wikia.nocookie.net/marveldatabase/images/9/90/Tamarata_from_Thanos_Quest_Vol_1_1_001.jpg/revision/latest?cb=20251228155910"
+      "wiki": "File:Thanos (Earth-616) and Abstract Entities from Avengers Celestial Quest Vol 1 2 001.jpg",
+      "score": 50,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/9/9b/Thanos_%28Earth-616%29_and_Abstract_Entities_from_Avengers_Celestial_Quest_Vol_1_2_001.jpg/revision/latest/scale-to-width-down/1400?cb=20230522084446"
     },
     {
       "idx": 5,
       "file": "05.jpg",
-      "wiki": "File:Thanos (Earth-616) from Thanos Quest Vol 1 1 001.jpg",
-      "score": 125,
-      "url": "https://static.wikia.nocookie.net/marveldatabase/images/b/b8/Thanos_%28Earth-616%29_from_Thanos_Quest_Vol_1_1_001.jpg/revision/latest?cb=20180422065001"
+      "wiki": "File:Thanos (Earth-616) and Death (Earth-616) from Thanos Quest Vol 1 2 0001.jpg",
+      "score": 50,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/d/d0/Thanos_%28Earth-616%29_and_Death_%28Earth-616%29_from_Thanos_Quest_Vol_1_2_0001.jpg/revision/latest?cb=20161011031702"
     },
     {
       "idx": 6,
       "file": "06.jpg",
-      "wiki": "File:Time Gem from Thanos Quest Vol 1 1 001.jpg",
-      "score": 125,
-      "url": "https://static.wikia.nocookie.net/marveldatabase/images/1/13/Time_Gem_from_Thanos_Quest_Vol_1_1_001.jpg/revision/latest?cb=20180506024346"
+      "wiki": "File:Thanos (Earth-616) from Thanos Quest Vol 1 1 0001.jpg",
+      "score": 50,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/0/0e/Thanos_%28Earth-616%29_from_Thanos_Quest_Vol_1_1_0001.jpg/revision/latest/scale-to-width-down/1400?cb=20250816030556"
     },
     {
       "idx": 7,
       "file": "07.jpg",
-      "wiki": "File:Ord Zyonz (Earth-616) from Thanos Quest Vol 1 1 0001.jpg",
-      "score": 120,
-      "url": "https://static.wikia.nocookie.net/marveldatabase/images/5/54/Ord_Zyonz_%28Earth-616%29_from_Thanos_Quest_Vol_1_1_0001.jpg/revision/latest?cb=20161011033921"
+      "wiki": "File:Thanos (Earth-616) from Thanos Quest Vol 1 1 001.jpg",
+      "score": 50,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/b/b8/Thanos_%28Earth-616%29_from_Thanos_Quest_Vol_1_1_001.jpg/revision/latest?cb=20180422065001"
     },
     {
       "idx": 8,
       "file": "08.jpg",
-      "wiki": "File:Ord Zyonz (Earth-616) from Thanos Quest Vol 1 1 0002.jpg",
-      "score": 120,
-      "url": "https://static.wikia.nocookie.net/marveldatabase/images/3/3c/Ord_Zyonz_%28Earth-616%29_from_Thanos_Quest_Vol_1_1_0002.jpg/revision/latest?cb=20161011033937"
+      "wiki": "File:Thanos (Earth-616) from Thanos Quest Vol 1 2 0001.jpg",
+      "score": 50,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/e/e3/Thanos_%28Earth-616%29_from_Thanos_Quest_Vol_1_2_0001.jpg/revision/latest?cb=20161011031953"
+    },
+    {
+      "idx": 9,
+      "file": "09.jpg",
+      "wiki": "File:Thanos (Robot) (Earth-616) from Thanos Quest Vol 1 2 001.jpg",
+      "score": 50,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/4/40/Thanos_%28Robot%29_%28Earth-616%29_from_Thanos_Quest_Vol_1_2_001.jpg/revision/latest?cb=20251228170407"
+    },
+    {
+      "idx": 10,
+      "file": "10.jpg",
+      "wiki": "File:Tryco Slatterus (Earth-616) from Thanos Quest Vol 1 1 0001.jpg",
+      "score": 50,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/1/18/Tryco_Slatterus_%28Earth-616%29_from_Thanos_Quest_Vol_1_1_0001.jpg/revision/latest/scale-to-width-down/1400?cb=20200111174544"
     }
   ]
 }

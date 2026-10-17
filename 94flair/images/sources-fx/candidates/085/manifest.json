@@ -1,0 +1,84 @@
+{
+  "n": 85,
+  "key": "085",
+  "title": "The Origin of Bishop",
+  "source": "Suspected unused in print. Used on a licensed Comic Images T-shirt in 1993.",
+  "tokens": [
+    "Bishop"
+  ],
+  "page": null,
+  "promo": true,
+  "status": "ok",
+  "candidates": [
+    {
+      "idx": 1,
+      "file": "01.jpg",
+      "wiki": "File:Remy LeBeau (Earth-616) and Lucas Bishop (Earth-1191) from 1994 Ultra X-Men (Trading Cards) 001.jpg",
+      "score": 32,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/b/b2/Remy_LeBeau_%28Earth-616%29_and_Lucas_Bishop_%28Earth-1191%29_from_1994_Ultra_X-Men_%28Trading_Cards%29_001.jpg/revision/latest?cb=20080506084953"
+    },
+    {
+      "idx": 2,
+      "file": "02.jpg",
+      "wiki": "File:Bishop Vol 1 1 Textless.jpg",
+      "score": 28,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/1/19/Bishop_Vol_1_1_Textless.jpg/revision/latest?cb=20071111222415"
+    },
+    {
+      "idx": 3,
+      "file": "03.jpg",
+      "wiki": "File:Bishop War College Vol 1 1 Conley Variant Textless.jpg",
+      "score": 28,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/c/cb/Bishop_War_College_Vol_1_1_Conley_Variant_Textless.jpg/revision/latest/scale-to-width-down/1400?cb=20240413045102"
+    },
+    {
+      "idx": 4,
+      "file": "04.jpg",
+      "wiki": "File:Bishop War College Vol 1 1 Hidden Gem Variant Textless.jpg",
+      "score": 28,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/a/aa/Bishop_War_College_Vol_1_1_Hidden_Gem_Variant_Textless.jpg/revision/latest/scale-to-width-down/1400?cb=20240413051005"
+    },
+    {
+      "idx": 5,
+      "file": "05.jpg",
+      "wiki": "File:Bishop War College Vol 1 1 Liefeld Variant Textless.jpg",
+      "score": 28,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/c/c2/Bishop_War_College_Vol_1_1_Liefeld_Variant_Textless.jpg/revision/latest/scale-to-width-down/1400?cb=20240413050009"
+    },
+    {
+      "idx": 6,
+      "file": "06.jpg",
+      "wiki": "File:Bishop War College Vol 1 1 Portacio Variant Textless.jpg",
+      "score": 28,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/8/8f/Bishop_War_College_Vol_1_1_Portacio_Variant_Textless.jpg/revision/latest/scale-to-width-down/1400?cb=20240413050743"
+    },
+    {
+      "idx": 7,
+      "file": "07.jpg",
+      "wiki": "File:Bishop War College Vol 1 1 Textless.jpg",
+      "score": 28,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/8/8c/Bishop_War_College_Vol_1_1_Textless.jpg/revision/latest/scale-to-width-down/1400?cb=20230220173612"
+    },
+    {
+      "idx": 8,
+      "file": "08.jpg",
+      "wiki": "File:Bishop War College Vol 1 2 Lim Variant Textless.jpg",
+      "score": 28,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/a/a5/Bishop_War_College_Vol_1_2_Lim_Variant_Textless.jpg/revision/latest/scale-to-width-down/1400?cb=20240413054103"
+    },
+    {
+      "idx": 9,
+      "file": "09.jpg",
+      "wiki": "File:Bishop War College Vol 1 2 Randolph Variant Textless.jpg",
+      "score": 28,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/1/1f/Bishop_War_College_Vol_1_2_Randolph_Variant_Textless.jpg/revision/latest/scale-to-width-down/1400?cb=20240413041041"
+    },
+    {
+      "idx": 10,
+      "file": "10.jpg",
+      "wiki": "File:Bishop War College Vol 1 2 Textless.jpg",
+      "score": 28,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/5/50/Bishop_War_College_Vol_1_2_Textless.jpg/revision/latest/scale-to-width-down/1400?cb=20240413044408"
+    }
+  ]
+}

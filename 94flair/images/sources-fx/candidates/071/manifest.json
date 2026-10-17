@@ -3,71 +3,84 @@
   "key": "071",
   "title": "Ghost Rider #1",
   "source": "Ghost Rider (1990) #1, Cover",
-  "issue_keys": [
-    "Ghost Rider Vol 1 1",
-    "Ghost Rider Vol 2 1",
-    "Ghost Rider 1",
-    "The Ghost Rider Vol 1 1"
+  "tokens": [
+    "Ghost Rider",
+    "Ghost",
+    "Rider"
   ],
   "page": null,
-  "part": "cover",
+  "promo": false,
   "status": "ok",
   "candidates": [
     {
       "idx": 1,
       "file": "01.jpg",
-      "wiki": "File:Carter Slade (Earth-616) from Ghost Rider Vol 1 1 0002.gif",
-      "score": 120,
-      "url": "https://static.wikia.nocookie.net/marveldatabase/images/d/d9/Carter_Slade_%28Earth-616%29_from_Ghost_Rider_Vol_1_1_0002.gif/revision/latest?cb=20191223182555"
+      "wiki": "File:Ames (Earth-616) from Ghost Rider Vol 2 1 0001.jpg",
+      "score": 218,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/5/5d/Ames_%28Earth-616%29_from_Ghost_Rider_Vol_2_1_0001.jpg/revision/latest?cb=20201106222826"
     },
     {
       "idx": 2,
       "file": "02.jpg",
-      "wiki": "File:Ghost Rider Vol 1 1.jpg",
-      "score": 92,
-      "url": "https://static.wikia.nocookie.net/marveldatabase/images/4/47/Ghost_Rider_Vol_1_1.jpg/revision/latest?cb=20191202041749"
+      "wiki": "File:Barbara Ketch (Earth-616) from Ghost Rider Vol 3 1 0002.jpg",
+      "score": 218,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/d/d4/Barbara_Ketch_%28Earth-616%29_from_Ghost_Rider_Vol_3_1_0002.jpg/revision/latest?cb=20190425141134"
     },
     {
       "idx": 3,
       "file": "03.jpg",
-      "wiki": "File:All-New Ghost Rider Vol 1 1 Animal Variant Textless.jpg",
-      "score": 88,
-      "url": "https://static.wikia.nocookie.net/marveldatabase/images/6/6d/All-New_Ghost_Rider_Vol_1_1_Animal_Variant_Textless.jpg/revision/latest?cb=20131229050109"
+      "wiki": "File:Carl (Earth-616) from Ghost Rider Vol 3 1 001.jpg",
+      "score": 218,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/9/9d/Carl_%28Earth-616%29_from_Ghost_Rider_Vol_3_1_001.jpg/revision/latest?cb=20231214213038"
     },
     {
       "idx": 4,
       "file": "04.jpg",
-      "wiki": "File:All-New Ghost Rider Vol 1 1 Baby Variant Textless.jpg",
-      "score": 88,
-      "url": "https://static.wikia.nocookie.net/marveldatabase/images/c/c8/All-New_Ghost_Rider_Vol_1_1_Baby_Variant_Textless.jpg/revision/latest?cb=20140110183153"
+      "wiki": "File:Chapman (Earth-616) from Ghost Rider Vol 3 1 001.jpg",
+      "score": 218,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/a/a2/Chapman_%28Earth-616%29_from_Ghost_Rider_Vol_3_1_001.jpg/revision/latest?cb=20231214212522"
     },
     {
       "idx": 5,
       "file": "05.jpg",
-      "wiki": "File:All-New Ghost Rider Vol 1 1 Moore Variant Textless.jpg",
-      "score": 88,
-      "url": "https://static.wikia.nocookie.net/marveldatabase/images/b/b1/All-New_Ghost_Rider_Vol_1_1_Moore_Variant_Textless.jpg/revision/latest?cb=20170619003200"
+      "wiki": "File:Daniel Ketch (Earth-616) from Ghost Rider Vol 3 1 001.jpg",
+      "score": 218,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/3/3b/Daniel_Ketch_%28Earth-616%29_from_Ghost_Rider_Vol_3_1_001.jpg/revision/latest?cb=20091024045523"
     },
     {
       "idx": 6,
       "file": "06.jpg",
-      "wiki": "File:All-New Ghost Rider Vol 1 1 Smith Variant Textless.jpg",
-      "score": 88,
-      "url": "https://static.wikia.nocookie.net/marveldatabase/images/9/94/All-New_Ghost_Rider_Vol_1_1_Smith_Variant_Textless.jpg/revision/latest?cb=20131221225816"
+      "wiki": "File:Daniel Ketch (Earth-616) from Ghost Rider Vol 3 1 002.jpg",
+      "score": 218,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/4/45/Daniel_Ketch_%28Earth-616%29_from_Ghost_Rider_Vol_3_1_002.jpg/revision/latest?cb=20091024045620"
     },
     {
       "idx": 7,
       "file": "07.jpg",
-      "wiki": "File:All-New Ghost Rider Vol 1 1 Textless.jpg",
-      "score": 88,
-      "url": "https://static.wikia.nocookie.net/marveldatabase/images/e/e1/All-New_Ghost_Rider_Vol_1_1_Textless.jpg/revision/latest?cb=20131221225722"
+      "wiki": "File:Daniel Ketch (Earth-616) from Ghost Rider Vol 3 1 004.jpg",
+      "score": 218,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/1/10/Daniel_Ketch_%28Earth-616%29_from_Ghost_Rider_Vol_3_1_004.jpg/revision/latest?cb=20091024044505"
     },
     {
       "idx": 8,
       "file": "08.jpg",
-      "wiki": "File:Cosmic Ghost Rider Vol 1 1 Brooks Variant Textless.jpg",
-      "score": 88,
-      "url": "https://static.wikia.nocookie.net/marveldatabase/images/a/a3/Cosmic_Ghost_Rider_Vol_1_1_Brooks_Variant_Textless.jpg/revision/latest?cb=20200825175353"
+      "wiki": "File:Greentown Cemetery (Earth-616) from Ghost Rider Vol 2 1 0001.jpg",
+      "score": 218,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/4/43/Greentown_Cemetery_%28Earth-616%29_from_Ghost_Rider_Vol_2_1_0001.jpg/revision/latest?cb=20201106230028"
+    },
+    {
+      "idx": 9,
+      "file": "09.jpg",
+      "wiki": "File:J.D. (Earth-616) from Ghost Rider Vol 3 1 001.jpg",
+      "score": 218,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/7/77/J.D._%28Earth-616%29_from_Ghost_Rider_Vol_3_1_001.jpg/revision/latest?cb=20231214214847"
+    },
+    {
+      "idx": 10,
+      "file": "10.jpg",
+      "wiki": "File:Jimmy (Earth-616) from Ghost Rider Vol 3 1 001.jpg",
+      "score": 218,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/b/b2/Jimmy_%28Earth-616%29_from_Ghost_Rider_Vol_3_1_001.jpg/revision/latest?cb=20231214215358"
     }
   ]
 }

@@ -3,71 +3,82 @@
   "key": "075",
   "title": "Gambit Appears",
   "source": "X-Men (1991) #25, Gambit Hologram",
-  "issue_keys": [
-    "X-Men Vol 1 25",
-    "X-Men Vol 2 25",
-    "X-Men 25",
-    "The X-Men Vol 1 25"
+  "tokens": [
+    "Gambit"
   ],
   "page": null,
-  "part": "poster",
+  "promo": false,
   "status": "ok",
   "candidates": [
     {
       "idx": 1,
       "file": "01.jpg",
-      "wiki": "File:Abercrombie Orphanage from X-Men Vol 1 25 0001.png",
-      "score": 90,
-      "url": "https://static.wikia.nocookie.net/marveldatabase/images/7/76/Abercrombie_Orphanage_from_X-Men_Vol_1_25_0001.png/revision/latest?cb=20200212064407"
+      "wiki": "File:Acolytes (Earth-616) from X-Men Vol 2 25 001.jpg",
+      "score": 164,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/9/99/Acolytes_%28Earth-616%29_from_X-Men_Vol_2_25_001.jpg/revision/latest/scale-to-width-down/1400?cb=20210318134431"
     },
     {
       "idx": 2,
       "file": "02.jpg",
-      "wiki": "File:Juan Meroz (Earth-616) from X-Men Vol 1 25 0001.jpg",
-      "score": 90,
-      "url": "https://static.wikia.nocookie.net/marveldatabase/images/8/82/Juan_Meroz_%28Earth-616%29_from_X-Men_Vol_1_25_0001.jpg/revision/latest?cb=20200212064551"
+      "wiki": "File:Charles Xavier (Earth-616) and Max Eisenhardt (Earth-616) from X-Men Vol 2 25 001.jpg",
+      "score": 164,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/6/6d/Charles_Xavier_%28Earth-616%29_and_Max_Eisenhardt_%28Earth-616%29_from_X-Men_Vol_2_25_001.jpg/revision/latest?cb=20210103190552"
     },
     {
       "idx": 3,
       "file": "03.jpg",
-      "wiki": "File:Juan Meroz (Earth-616) from X-Men Vol 1 25 0002.jpg",
-      "score": 90,
-      "url": "https://static.wikia.nocookie.net/marveldatabase/images/6/63/Juan_Meroz_%28Earth-616%29_from_X-Men_Vol_1_25_0002.jpg/revision/latest?cb=20200212064723"
+      "wiki": "File:James Howlett & Max Eisenhardt (Earth-616) from X-Men Vol 2 25 0001.jpg",
+      "score": 164,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/f/f7/James_Howlett_%26_Max_Eisenhardt_%28Earth-616%29_from_X-Men_Vol_2_25_0001.jpg/revision/latest?cb=20201031045737"
     },
     {
       "idx": 4,
       "file": "04.jpg",
-      "wiki": "File:Ramon Dantas (Earth-616) from X-Men Vol 1 25 0001.jpg",
-      "score": 90,
-      "url": "https://static.wikia.nocookie.net/marveldatabase/images/b/b2/Ramon_Dantas_%28Earth-616%29_from_X-Men_Vol_1_25_0001.jpg/revision/latest?cb=20190807013939"
+      "wiki": "File:James Howlett (Earth-616) and Max Eisenhardt (Earth-616) from X-Men Vol 2 25 0001.jpg",
+      "score": 164,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/d/d9/James_Howlett_%28Earth-616%29_and_Max_Eisenhardt_%28Earth-616%29_from_X-Men_Vol_2_25_0001.jpg/revision/latest/scale-to-width-down/1400?cb=20191210034421"
     },
     {
       "idx": 5,
       "file": "05.jpg",
-      "wiki": "File:Sam (Earth-616) from X-Men Vol 1 25 0001.jpg",
-      "score": 90,
-      "url": "https://static.wikia.nocookie.net/marveldatabase/images/e/e1/Sam_%28Earth-616%29_from_X-Men_Vol_1_25_0001.jpg/revision/latest?cb=20190702162005"
+      "wiki": "File:Magda Eisenhardt (Earth-616) from X-Men Vol 2 25 001.jpg",
+      "score": 164,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/4/41/Magda_Eisenhardt_%28Earth-616%29_from_X-Men_Vol_2_25_001.jpg/revision/latest?cb=20210227163059"
     },
     {
       "idx": 6,
       "file": "06.jpg",
-      "wiki": "File:Toloc (Earth-616) from X-Men Vol 1 25 0001.jpg",
-      "score": 90,
-      "url": "https://static.wikia.nocookie.net/marveldatabase/images/6/60/Toloc_%28Earth-616%29_from_X-Men_Vol_1_25_0001.jpg/revision/latest?cb=20200403084257"
+      "wiki": "File:Remy LeBeau (Earth-616) from X-Men Vol 2 25 001.jpg",
+      "score": 164,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/1/1c/Remy_LeBeau_%28Earth-616%29_from_X-Men_Vol_2_25_001.jpg/revision/latest?cb=20250310035911"
     },
     {
       "idx": 7,
       "file": "07.jpg",
-      "wiki": "File:X-Men Vol 1 25.jpg",
-      "score": 62,
-      "url": "https://static.wikia.nocookie.net/marveldatabase/images/7/7e/X-Men_Vol_1_25.jpg/revision/latest?cb=20180128184218"
+      "wiki": "File:Remy LeBeau (Earth-616) from X-Men Vol 2 25 002.jpg",
+      "score": 164,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/c/c8/Remy_LeBeau_%28Earth-616%29_from_X-Men_Vol_2_25_002.jpg/revision/latest?cb=20260822093016"
     },
     {
       "idx": 8,
       "file": "08.jpg",
-      "wiki": "File:All-New X-Men Vol 1 25 Cho Variant Textless.jpg",
-      "score": 58,
-      "url": "https://static.wikia.nocookie.net/marveldatabase/images/8/82/All-New_X-Men_Vol_1_25_Cho_Variant_Textless.jpg/revision/latest?cb=20140704165400"
+      "wiki": "File:X-Men (Earth-616) from X-Men Vol 2 25 001.jpg",
+      "score": 164,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/5/5d/X-Men_%28Earth-616%29_from_X-Men_Vol_2_25_001.jpg/revision/latest/scale-to-width-down/1400?cb=20231023151218"
+    },
+    {
+      "idx": 9,
+      "file": "09.jpg",
+      "wiki": "File:Alpha Squadron (Earth-616) from New X-Men Vol 2 25 0001.jpg",
+      "score": 94,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/e/e6/Alpha_Squadron_%28Earth-616%29_from_New_X-Men_Vol_2_25_0001.jpg/revision/latest?cb=20191128025744"
+    },
+    {
+      "idx": 10,
+      "file": "10.jpg",
+      "wiki": "File:Benjamin Hammil (Earth-616) from New X-Men Vol 2 25 0001.jpg",
+      "score": 94,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/f/fc/Benjamin_Hammil_%28Earth-616%29_from_New_X-Men_Vol_2_25_0001.jpg/revision/latest?cb=20191128030104"
     }
   ]
 }

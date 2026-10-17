@@ -1,6 +1,6 @@
 {
   "counts": {
-    "shipped": 39,
+    "shipped": 50,
     "mismatch": 47,
     "missing": 10,
     "unchecked": 3,
@@ -46,8 +46,8 @@
       "n": 6,
       "title": "The Origin of Iron Man",
       "source": "Tales of Suspense (1959) #39, Page 1",
-      "verdict": "mismatch",
-      "note": "Mark I bursting through metal differs from Tales of Suspense #39 walking pose."
+      "verdict": "shipped",
+      "note": "User-picked candidate #3"
     },
     {
       "n": 7,
@@ -67,8 +67,8 @@
       "n": 9,
       "title": "Origin of Doc Ock",
       "source": "Lethal Foes of Spider-Man (1994) #3, Page 2",
-      "verdict": "mismatch",
-      "note": "Laughing Doc Ock portrait is not the Lethal Foes #3 eye-montage figure."
+      "verdict": "shipped",
+      "note": "User-picked candidate #1"
     },
     {
       "n": 10,
@@ -88,8 +88,8 @@
       "n": 12,
       "title": "Origin of Dr. Strange",
       "source": "Marvel Treasury Edition (1974) #6, Page 57",
-      "verdict": "mismatch",
-      "note": "Strange bust portrait is not the Treasury Edition #6 full-body spell pose."
+      "verdict": "shipped",
+      "note": "User-picked candidate #1"
     },
     {
       "n": 13,
@@ -137,15 +137,15 @@
       "n": 19,
       "title": "Origin of the Sentinels",
       "source": "Uncanny X-Men (1963) #140, Cover",
-      "verdict": "mismatch",
-      "note": "Sentinel blast card has no shared art with X-Men #140 Wendigo cover."
+      "verdict": "shipped",
+      "note": "User-picked candidate #2"
     },
     {
       "n": 20,
       "title": "Galactus Appears",
       "source": "Fantastic Four (1961) #48, Page 21",
-      "verdict": "mismatch",
-      "note": "Galactus portrait vs FF #48 Watcher\u2014same story title only."
+      "verdict": "shipped",
+      "note": "User-picked candidate #3"
     },
     {
       "n": 21,
@@ -172,8 +172,8 @@
       "n": 24,
       "title": "Peter Meets Mary Jane",
       "source": "Marvel Swimsuit Issue (1992) #2, Page 17",
-      "verdict": "mismatch",
-      "note": "CREDITS cite an interior page, but candidate is a full cover (wrong image type)."
+      "verdict": "shipped",
+      "note": "User-picked candidate #1"
     },
     {
       "n": 25,
@@ -270,8 +270,8 @@
       "n": 38,
       "title": "The Hellfire Club Revealed",
       "source": "The Uncanny X-Men (1963) #281, Page 6",
-      "verdict": "mismatch",
-      "note": "CREDITS cite an interior page, but candidate is a full cover (wrong image type)."
+      "verdict": "shipped",
+      "note": "User-picked candidate #2"
     },
     {
       "n": 39,
@@ -326,15 +326,15 @@
       "n": 46,
       "title": "Ballad of Beta Ray Bill",
       "source": "Thor (1966) #339, Page 20",
-      "verdict": "mismatch",
-      "note": "CREDITS cite an interior page, but candidate is a full cover (wrong image type)."
+      "verdict": "shipped",
+      "note": "User-picked candidate #1"
     },
     {
       "n": 47,
       "title": "The Trial of Reed Richards",
       "source": "The Fantastic Four (1963) #262, Page 8",
-      "verdict": "mismatch",
-      "note": "CREDITS cite an interior page, but candidate is a full cover (wrong image type)."
+      "verdict": "shipped",
+      "note": "User-picked candidate #1"
     },
     {
       "n": 48,
@@ -389,8 +389,8 @@
       "n": 55,
       "title": "The Creation of Archangel",
       "source": "X-Factor (1988) #24, Page 16",
-      "verdict": "mismatch",
-      "note": "Standing Archangel differs from X-Factor #24 diving pose."
+      "verdict": "shipped",
+      "note": "User-picked candidate #4"
     },
     {
       "n": 56,
@@ -620,8 +620,8 @@
       "n": 88,
       "title": "Origin of Carnage",
       "source": "The Amazing Spider-Man (1963) #384, Page 16",
-      "verdict": "mismatch",
-      "note": "CREDITS cite an interior page, but candidate is a full cover (wrong image type)."
+      "verdict": "shipped",
+      "note": "User-picked candidate #6"
     },
     {
       "n": 89,

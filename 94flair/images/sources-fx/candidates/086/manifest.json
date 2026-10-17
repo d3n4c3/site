@@ -3,71 +3,84 @@
   "key": "086",
   "title": "Omega Red vs. Wolverine",
   "source": "X-Men (1991) #5, Cover",
-  "issue_keys": [
-    "X-Men Vol 1 5",
-    "X-Men Vol 2 5",
-    "X-Men 5",
-    "The X-Men Vol 1 5"
+  "tokens": [
+    "Omega Red",
+    "Omega",
+    "Red"
   ],
   "page": null,
-  "part": "cover",
+  "promo": false,
   "status": "ok",
   "candidates": [
     {
       "idx": 1,
       "file": "01.jpg",
-      "wiki": "File:Drone Pick-Up Capsule from X-Men Vol 1 5 001.jpg",
-      "score": 95,
-      "url": "https://static.wikia.nocookie.net/marveldatabase/images/0/0f/Drone_Pick-Up_Capsule_from_X-Men_Vol_1_5_001.jpg/revision/latest?cb=20221229150619"
+      "wiki": "File:Arkady Rossovich (Earth-616) from X-Men Vol 2 5 001.jpg",
+      "score": 164,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/4/4f/Arkady_Rossovich_%28Earth-616%29_from_X-Men_Vol_2_5_001.jpg/revision/latest?cb=20171015103403"
     },
     {
       "idx": 2,
       "file": "02.jpg",
-      "wiki": "File:Elaine Grey (Earth-616) from X-Men Vol 1 5 004.jpg",
-      "score": 95,
-      "url": "https://static.wikia.nocookie.net/marveldatabase/images/0/08/Elaine_Grey_%28Earth-616%29_from_X-Men_Vol_1_5_004.jpg/revision/latest?cb=20190227152820"
+      "wiki": "File:Forge (Earth-616) from X-Men Vol 2 5 001.jpg",
+      "score": 164,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/4/4f/Forge_%28Earth-616%29_from_X-Men_Vol_2_5_001.jpg/revision/latest?cb=20171015163826"
     },
     {
       "idx": 3,
       "file": "03.jpg",
-      "wiki": "File:Jason Wyngarde (Earth-616) from X-Men Vol 1 5 004.jpg",
-      "score": 95,
-      "url": "https://static.wikia.nocookie.net/marveldatabase/images/d/db/Jason_Wyngarde_%28Earth-616%29_from_X-Men_Vol_1_5_004.jpg/revision/latest?cb=20190324190638"
+      "wiki": "File:Forge (Earth-616) from X-Men Vol 2 5 002.jpg",
+      "score": 164,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/8/85/Forge_%28Earth-616%29_from_X-Men_Vol_2_5_002.jpg/revision/latest?cb=20191210060312"
     },
     {
       "idx": 4,
       "file": "04.jpg",
-      "wiki": "File:Magnetic Intensifier from X-Men Vol 1 5 001.jpg",
-      "score": 95,
-      "url": "https://static.wikia.nocookie.net/marveldatabase/images/d/da/Magnetic_Intensifier_from_X-Men_Vol_1_5_001.jpg/revision/latest?cb=20221229142911"
+      "wiki": "File:X-Men Vol 2 5 Remastered.jpg",
+      "score": 98,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/5/57/X-Men_Vol_2_5_Remastered.jpg/revision/latest/scale-to-width-down/1400?cb=20171015181845"
     },
     {
       "idx": 5,
       "file": "05.jpg",
-      "wiki": "File:Magnetic Wrist Device from X-Men Vol 1 5 001.jpg",
-      "score": 95,
-      "url": "https://static.wikia.nocookie.net/marveldatabase/images/4/40/Magnetic_Wrist_Device_from_X-Men_Vol_1_5_001.jpg/revision/latest?cb=20221229150100"
+      "wiki": "File:Ava'Dara Naganandini (Earth-616) from Amazing X-Men Vol 2 5 001.jpg",
+      "score": 94,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/f/fe/Ava%27Dara_Naganandini_%28Earth-616%29_from_Amazing_X-Men_Vol_2_5_001.jpg/revision/latest?cb=20170610175415"
     },
     {
       "idx": 6,
       "file": "06.jpg",
-      "wiki": "File:Max Eisenhardt (Earth-616) from X-Men Vol 1 5 001.jpg",
-      "score": 95,
-      "url": "https://static.wikia.nocookie.net/marveldatabase/images/f/fb/Max_Eisenhardt_%28Earth-616%29_from_X-Men_Vol_1_5_001.jpg/revision/latest?cb=20190319201716"
+      "wiki": "File:Benjamin Hammil (Earth-616) from New X-Men Vol 2 5 0001.jpg",
+      "score": 94,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/4/42/Benjamin_Hammil_%28Earth-616%29_from_New_X-Men_Vol_2_5_0001.jpg/revision/latest?cb=20191129220143"
     },
     {
       "idx": 7,
       "file": "07.jpg",
-      "wiki": "File:Max Eisenhardt (Earth-616) from X-Men Vol 1 5 002.jpg",
-      "score": 95,
-      "url": "https://static.wikia.nocookie.net/marveldatabase/images/a/a9/Max_Eisenhardt_%28Earth-616%29_from_X-Men_Vol_1_5_002.jpg/revision/latest?cb=20190319204844"
+      "wiki": "File:Brian Cruz (Earth-616) from New X-Men Vol 2 5 0001.jpg",
+      "score": 94,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/b/b9/Brian_Cruz_%28Earth-616%29_from_New_X-Men_Vol_2_5_0001.jpg/revision/latest?cb=20191129220344"
     },
     {
       "idx": 8,
       "file": "08.jpg",
-      "wiki": "File:Max Eisenhardt (Earth-616) from X-Men Vol 1 5 003.jpg",
-      "score": 95,
-      "url": "https://static.wikia.nocookie.net/marveldatabase/images/b/b3/Max_Eisenhardt_%28Earth-616%29_from_X-Men_Vol_1_5_003.jpg/revision/latest?cb=20190319211507"
+      "wiki": "File:Justin Pierce (Earth-616) from New X-Men Vol 2 5 0001.jpg",
+      "score": 94,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/3/34/Justin_Pierce_%28Earth-616%29_from_New_X-Men_Vol_2_5_0001.jpg/revision/latest?cb=20191129220738"
+    },
+    {
+      "idx": 9,
+      "file": "09.jpg",
+      "wiki": "File:Kurt Wagner (Earth-616) from Amazing X-Men Vol 2 5 002.jpg",
+      "score": 94,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/f/fb/Kurt_Wagner_%28Earth-616%29_from_Amazing_X-Men_Vol_2_5_002.jpg/revision/latest?cb=20170610174041"
+    },
+    {
+      "idx": 10,
+      "file": "10.jpg",
+      "wiki": "File:Madelyne Pryor (Earth-616) from Dark X-Men Vol 2 5 002.jpg",
+      "score": 94,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/c/cf/Madelyne_Pryor_%28Earth-616%29_from_Dark_X-Men_Vol_2_5_002.jpg/revision/latest?cb=20240714150338"
     }
   ]
 }

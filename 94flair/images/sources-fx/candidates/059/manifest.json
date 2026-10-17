@@ -3,57 +3,83 @@
   "key": "059",
   "title": "Armor Wars",
   "source": "Iron Man (1968) Annual #10, Page 50",
-  "issue_keys": [
-    "Iron Man Annual Vol 1 10",
-    "Iron Man Vol 1 Annual 10",
-    "Iron Man Annual 10",
-    "The Iron Man Annual Vol 1 10"
+  "tokens": [
+    "Armor",
+    "Wars"
   ],
   "page": 50,
-  "part": "page",
+  "promo": false,
   "status": "ok",
   "candidates": [
     {
       "idx": 1,
       "file": "01.jpg",
-      "wiki": "File:Set (Earth-616) and Atum (Earth-616) from Iron Man Annual Vol 1 10 001.jpg",
-      "score": 95,
-      "url": "https://static.wikia.nocookie.net/marveldatabase/images/9/99/Set_%28Earth-616%29_and_Atum_%28Earth-616%29_from_Iron_Man_Annual_Vol_1_10_001.jpg/revision/latest?cb=20221217160728"
+      "wiki": "File:Living Statue from Iron Man Vol 1 10 001.png",
+      "score": 156,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/4/49/Living_Statue_from_Iron_Man_Vol_1_10_001.png/revision/latest?cb=20230820083635"
     },
     {
       "idx": 2,
       "file": "02.jpg",
-      "wiki": "File:Set (Earth-616) and Atum (Earth-616) from Iron Man Annual Vol 1 10 002.jpg",
-      "score": 95,
-      "url": "https://static.wikia.nocookie.net/marveldatabase/images/e/e3/Set_%28Earth-616%29_and_Atum_%28Earth-616%29_from_Iron_Man_Annual_Vol_1_10_002.jpg/revision/latest?cb=20221217004425"
+      "wiki": "File:Iron Man Armor Model 63 from Tony Stark Iron Man Vol 1 10 001.jpg",
+      "score": 104,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/0/0b/Iron_Man_Armor_Model_63_from_Tony_Stark_Iron_Man_Vol_1_10_001.jpg/revision/latest/scale-to-width-down/1400?cb=20190803224820"
     },
     {
       "idx": 3,
       "file": "03.jpg",
-      "wiki": "File:Dakkor (Earth-616) from Iron Man Annual Vol 1 10 0001.jpg",
-      "score": 90,
-      "url": "https://static.wikia.nocookie.net/marveldatabase/images/e/ea/Dakkor_%28Earth-616%29_from_Iron_Man_Annual_Vol_1_10_0001.jpg/revision/latest?cb=20190705001132"
+      "wiki": "File:Anthony Stark (Earth-616) from Invincible Iron Man Vol 1 10 001.jpg",
+      "score": 94,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/c/c2/Anthony_Stark_%28Earth-616%29_from_Invincible_Iron_Man_Vol_1_10_001.jpg/revision/latest/scale-to-width-down/1400?cb=20200622020154"
     },
     {
       "idx": 4,
       "file": "04.jpg",
-      "wiki": "File:Omega Rocket from Iron Man Annual Vol 1 10.png",
-      "score": 90,
-      "url": "https://static.wikia.nocookie.net/marveldatabase/images/0/04/Omega_Rocket_from_Iron_Man_Annual_Vol_1_10.png/revision/latest?cb=20200604044224"
+      "wiki": "File:Anthony Stark (Earth-616) from Tony Stark Iron Man Vol 1 10 001.jpg",
+      "score": 94,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/e/eb/Anthony_Stark_%28Earth-616%29_from_Tony_Stark_Iron_Man_Vol_1_10_001.jpg/revision/latest?cb=20190803081210"
     },
     {
       "idx": 5,
       "file": "05.jpg",
-      "wiki": "File:Iron Man Annual Vol 1 10.jpg",
-      "score": 62,
-      "url": "https://static.wikia.nocookie.net/marveldatabase/images/8/80/Iron_Man_Annual_Vol_1_10.jpg/revision/latest?cb=20191220001714"
+      "wiki": "File:Anthony Stark (Earth-616) from Tony Stark Iron Man Vol 1 10 002.jpg",
+      "score": 94,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/2/23/Anthony_Stark_%28Earth-616%29_from_Tony_Stark_Iron_Man_Vol_1_10_002.jpg/revision/latest?cb=20190803081221"
     },
     {
       "idx": 6,
       "file": "06.jpg",
-      "wiki": "File:Iron Man Armor from New Avengers Annual Vol 1 1 001.jpg",
-      "score": 20,
-      "url": "https://static.wikia.nocookie.net/marveldatabase/images/a/aa/Iron_Man_Armor_from_New_Avengers_Annual_Vol_1_1_001.jpg/revision/latest?cb=20151106202252"
+      "wiki": "File:Anthony Stark (Earth-616) from Tony Stark Iron Man Vol 1 10 003.jpg",
+      "score": 94,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/0/08/Anthony_Stark_%28Earth-616%29_from_Tony_Stark_Iron_Man_Vol_1_10_003.jpg/revision/latest?cb=20190803081225"
+    },
+    {
+      "idx": 7,
+      "file": "07.jpg",
+      "wiki": "File:Anthony Stark (Earth-616) from Tony Stark Iron Man Vol 1 10 004.jpg",
+      "score": 94,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/1/17/Anthony_Stark_%28Earth-616%29_from_Tony_Stark_Iron_Man_Vol_1_10_004.jpg/revision/latest/scale-to-width-down/1400?cb=20190803081239"
+    },
+    {
+      "idx": 8,
+      "file": "08.jpg",
+      "wiki": "File:Anthony Stark (Earth-616) from Tony Stark Iron Man Vol 1 10 005.jpg",
+      "score": 94,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/5/5f/Anthony_Stark_%28Earth-616%29_from_Tony_Stark_Iron_Man_Vol_1_10_005.jpg/revision/latest/scale-to-width-down/1400?cb=20190803081250"
+    },
+    {
+      "idx": 9,
+      "file": "09.jpg",
+      "wiki": "File:Anthony Stark (Earth-616) from Tony Stark Iron Man Vol 1 10 006.jpg",
+      "score": 94,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/e/ee/Anthony_Stark_%28Earth-616%29_from_Tony_Stark_Iron_Man_Vol_1_10_006.jpg/revision/latest?cb=20190803081253"
+    },
+    {
+      "idx": 10,
+      "file": "10.jpg",
+      "wiki": "File:Arsenal Beta (Earth-616) from Tony Stark Iron Man Vol 1 10 001.jpg",
+      "score": 94,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/e/e7/Arsenal_Beta_%28Earth-616%29_from_Tony_Stark_Iron_Man_Vol_1_10_001.jpg/revision/latest/scale-to-width-down/1400?cb=20190501225707"
     }
   ]
 }

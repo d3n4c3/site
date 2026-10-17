@@ -3,14 +3,83 @@
   "key": "091",
   "title": "Death of Mariko",
   "source": "Wolverine (1988) #65, Page 18",
-  "issue_keys": [
-    "Wolverine Vol 1 65",
-    "Wolverine Vol 2 65",
-    "Wolverine 65",
-    "The Wolverine Vol 1 65"
+  "tokens": [
+    "Mariko",
+    "Death"
   ],
   "page": 18,
-  "part": "page",
-  "status": "none",
-  "candidates": []
+  "promo": false,
+  "status": "ok",
+  "candidates": [
+    {
+      "idx": 1,
+      "file": "01.jpg",
+      "wiki": "File:Raven Darkh\u00f6lme (Earth-616) from Wolverine Vol 3 65 0002.jpg",
+      "score": 89,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/9/99/Raven_Darkh%C3%B6lme_%28Earth-616%29_from_Wolverine_Vol_3_65_0002.jpg/revision/latest?cb=20100325111608"
+    },
+    {
+      "idx": 2,
+      "file": "02.jpg",
+      "wiki": "File:Syrian Desert from Wolverine Vol 3 65 001.png",
+      "score": 81,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/f/fe/Syrian_Desert_from_Wolverine_Vol_3_65_001.png/revision/latest?cb=20170624084028"
+    },
+    {
+      "idx": 3,
+      "file": "03.jpg",
+      "wiki": "File:Wolverine Vol 2 65.jpg",
+      "score": 80,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/2/29/Wolverine_Vol_2_65.jpg/revision/latest/scale-to-width-down/1400?cb=20250714071019"
+    },
+    {
+      "idx": 4,
+      "file": "04.jpg",
+      "wiki": "File:Wolverine Vol 3 65 Textless.jpg",
+      "score": 50,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/c/c1/Wolverine_Vol_3_65_Textless.jpg/revision/latest?cb=20100326191142"
+    },
+    {
+      "idx": 5,
+      "file": "05.jpg",
+      "wiki": "File:Wolverine Vol 3 65.jpg",
+      "score": 40,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/5/55/Wolverine_Vol_3_65.jpg/revision/latest?cb=20090603003930"
+    },
+    {
+      "idx": 6,
+      "file": "06.jpg",
+      "wiki": "File:Mariko Yashida (Earth-616) from Official Handbook of the Marvel Universe Wolverine 2004 Vol 1 1 001.jpg",
+      "score": 32,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/1/1c/Mariko_Yashida_%28Earth-616%29_from_Official_Handbook_of_the_Marvel_Universe_Wolverine_2004_Vol_1_1_001.jpg/revision/latest?cb=20061102202033"
+    },
+    {
+      "idx": 7,
+      "file": "07.jpg",
+      "wiki": "File:Mariko Yashida (Earth-616) from Wolverine Vol 1 1 001.jpg",
+      "score": 32,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/2/21/Mariko_Yashida_%28Earth-616%29_from_Wolverine_Vol_1_1_001.jpg/revision/latest?cb=20110402225109"
+    },
+    {
+      "idx": 8,
+      "file": "08.jpg",
+      "wiki": "File:Mariko Yashida (Earth-616) from X-Men Vol 1 118 001.jpg",
+      "score": 32,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/0/0e/Mariko_Yashida_%28Earth-616%29_from_X-Men_Vol_1_118_001.jpg/revision/latest?cb=20201011235123"
+    },
+    {
+      "idx": 9,
+      "file": "09.jpg",
+      "wiki": "File:Death of Wolverine Life After Logan Vol 1 1 Textless.jpg",
+      "score": 28,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/f/f3/Death_of_Wolverine_Life_After_Logan_Vol_1_1_Textless.jpg/revision/latest?cb=20140821050741"
+    },
+    {
+      "idx": 10,
+      "file": "10.jpg",
+      "wiki": "File:Death of Wolverine The Logan Legacy Vol 1 4 Textless.jpg",
+      "score": 28,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/6/61/Death_of_Wolverine_The_Logan_Legacy_Vol_1_4_Textless.jpg/revision/latest?cb=20140819215859"
+    }
+  ]
 }

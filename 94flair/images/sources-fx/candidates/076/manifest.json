@@ -1,0 +1,85 @@
+{
+  "n": 76,
+  "key": "076",
+  "title": "X-Tinction Agenda",
+  "source": "X-Tinction Agenda House Ad/Promotional Material; X-Men (1991) #1 Composite (Cyclops)",
+  "tokens": [
+    "X-Tinction",
+    "Agenda"
+  ],
+  "page": null,
+  "promo": true,
+  "status": "ok",
+  "candidates": [
+    {
+      "idx": 1,
+      "file": "01.jpg",
+      "wiki": "File:X-Tinction Agenda (Earth-616) from Marvel Universe Cards Series III 0001.jpg",
+      "score": 50,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/c/c6/X-Tinction_Agenda_%28Earth-616%29_from_Marvel_Universe_Cards_Series_III_0001.jpg/revision/latest?cb=20160111033713"
+    },
+    {
+      "idx": 2,
+      "file": "02.jpg",
+      "wiki": "File:Henry McCoy (Earth-24201) from X-Tinction Agenda Vol 1 2 Anka Variant Textless cover.jpg",
+      "score": 46,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/b/bb/Henry_McCoy_%28Earth-24201%29_from_X-Tinction_Agenda_Vol_1_2_Anka_Variant_Textless_cover.jpg/revision/latest?cb=20151130084230"
+    },
+    {
+      "idx": 3,
+      "file": "03.jpg",
+      "wiki": "File:X-Tinction Agenda Vol 1 1 Brooks Variant Textless.jpg",
+      "score": 46,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/9/9a/X-Tinction_Agenda_Vol_1_1_Brooks_Variant_Textless.jpg/revision/latest?cb=20150928090145"
+    },
+    {
+      "idx": 4,
+      "file": "04.jpg",
+      "wiki": "File:X-Tinction Agenda Vol 1 1 Deodato Variant Textless.jpg",
+      "score": 46,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/d/d7/X-Tinction_Agenda_Vol_1_1_Deodato_Variant_Textless.jpg/revision/latest?cb=20150318010810"
+    },
+    {
+      "idx": 5,
+      "file": "05.jpg",
+      "wiki": "File:X-Tinction Agenda Vol 1 1 Textless.jpg",
+      "score": 46,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/4/4a/X-Tinction_Agenda_Vol_1_1_Textless.jpg/revision/latest?cb=20150302204535"
+    },
+    {
+      "idx": 6,
+      "file": "06.jpg",
+      "wiki": "File:X-Tinction Agenda Vol 1 2 Anka Variant Textless.jpg",
+      "score": 46,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/f/fb/X-Tinction_Agenda_Vol_1_2_Anka_Variant_Textless.jpg/revision/latest?cb=20150528235826"
+    },
+    {
+      "idx": 7,
+      "file": "07.jpg",
+      "wiki": "File:X-Tinction Agenda Vol 1 2 Textless.jpg",
+      "score": 46,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/1/17/X-Tinction_Agenda_Vol_1_2_Textless.jpg/revision/latest?cb=20150422030858"
+    },
+    {
+      "idx": 8,
+      "file": "08.jpg",
+      "wiki": "File:X-Tinction Agenda Vol 1 3 Textless.jpg",
+      "score": 46,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/8/8e/X-Tinction_Agenda_Vol_1_3_Textless.jpg/revision/latest?cb=20150520071615"
+    },
+    {
+      "idx": 9,
+      "file": "09.jpg",
+      "wiki": "File:X-Tinction Agenda Vol 1 4 Textless.jpg",
+      "score": 46,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/a/ad/X-Tinction_Agenda_Vol_1_4_Textless.jpg/revision/latest?cb=20150619031701"
+    },
+    {
+      "idx": 10,
+      "file": "10.jpg",
+      "wiki": "File:Rachel Summers (Earth-24201) from X-Tinction Agenda Vol 1 2 001.jpg",
+      "score": 42,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/7/74/Rachel_Summers_%28Earth-24201%29_from_X-Tinction_Agenda_Vol_1_2_001.jpg/revision/latest?cb=20151201042007"
+    }
+  ]
+}

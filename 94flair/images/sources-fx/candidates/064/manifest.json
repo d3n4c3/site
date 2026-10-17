@@ -3,36 +3,82 @@
   "key": "064",
   "title": "The Origin of Speedball",
   "source": "The New Warriors (1990) #31, Page 14",
-  "issue_keys": [
-    "The New Warriors Vol 1 31",
-    "The New Warriors Vol 2 31",
-    "The New Warriors 31",
-    "New Warriors Vol 1 31"
+  "tokens": [
+    "Speedball"
   ],
   "page": 14,
-  "part": "page",
+  "promo": false,
   "status": "ok",
   "candidates": [
     {
       "idx": 1,
       "file": "01.jpg",
-      "wiki": "File:Springdale from New Warriors Vol 1 31 001.png",
-      "score": 95,
-      "url": "https://static.wikia.nocookie.net/marveldatabase/images/8/81/Springdale_from_New_Warriors_Vol_1_31_001.png/revision/latest?cb=20220716040822"
+      "wiki": "File:Marvel Apes Speedball Special Vol 1 1 Textless.jpg",
+      "score": 28,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/0/02/Marvel_Apes_Speedball_Special_Vol_1_1_Textless.jpg/revision/latest/scale-to-width-down/1400?cb=20091013205333"
     },
     {
       "idx": 2,
       "file": "02.jpg",
-      "wiki": "File:New Warriors Vol 1 31.jpg",
-      "score": 62,
-      "url": "https://static.wikia.nocookie.net/marveldatabase/images/8/81/New_Warriors_Vol_1_31.jpg/revision/latest/scale-to-width-down/1400?cb=20251207191021"
+      "wiki": "File:Marvel Apes Speedball Special Vol 1 1.jpg",
+      "score": 18,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/9/98/Marvel_Apes_Speedball_Special_Vol_1_1.jpg/revision/latest?cb=20201010203018"
     },
     {
       "idx": 3,
       "file": "03.jpg",
-      "wiki": "File:New Warriors Vol 4 14.jpg",
-      "score": 10,
-      "url": "https://static.wikia.nocookie.net/marveldatabase/images/9/96/New_Warriors_Vol_4_14.jpg/revision/latest?cb=20190520014606"
+      "wiki": "File:Speedball The Masked Marvel TPB Vol 1 1.jpg",
+      "score": 18,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/e/e4/Speedball_The_Masked_Marvel_TPB_Vol_1_1.jpg/revision/latest?cb=20240426150235"
+    },
+    {
+      "idx": 4,
+      "file": "04.jpg",
+      "wiki": "File:Speedball Vol 1 1.jpg",
+      "score": 18,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/a/a1/Speedball_Vol_1_1.jpg/revision/latest?cb=20200528184442"
+    },
+    {
+      "idx": 5,
+      "file": "05.jpg",
+      "wiki": "File:Speedball Vol 1 10.jpg",
+      "score": 18,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/1/1c/Speedball_Vol_1_10.jpg/revision/latest/scale-to-width-down/1400?cb=20230206084840"
+    },
+    {
+      "idx": 6,
+      "file": "06.jpg",
+      "wiki": "File:Speedball Vol 1 2.jpg",
+      "score": 18,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/3/30/Speedball_Vol_1_2.jpg/revision/latest/scale-to-width-down/1400?cb=20230206084641"
+    },
+    {
+      "idx": 7,
+      "file": "07.jpg",
+      "wiki": "File:Speedball Vol 1 3.jpg",
+      "score": 18,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/1/14/Speedball_Vol_1_3.jpg/revision/latest/scale-to-width-down/1400?cb=20230206084655"
+    },
+    {
+      "idx": 8,
+      "file": "08.jpg",
+      "wiki": "File:Speedball Vol 1 4.jpg",
+      "score": 18,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/d/dd/Speedball_Vol_1_4.jpg/revision/latest/scale-to-width-down/1400?cb=20230206084710"
+    },
+    {
+      "idx": 9,
+      "file": "09.jpg",
+      "wiki": "File:Speedball Vol 1 5.jpg",
+      "score": 18,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/c/c5/Speedball_Vol_1_5.jpg/revision/latest/scale-to-width-down/1400?cb=20230206084725"
+    },
+    {
+      "idx": 10,
+      "file": "10.jpg",
+      "wiki": "File:Speedball Vol 1 6.jpg",
+      "score": 18,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/f/fc/Speedball_Vol_1_6.jpg/revision/latest/scale-to-width-down/1400?cb=20230206084742"
     }
   ]
 }

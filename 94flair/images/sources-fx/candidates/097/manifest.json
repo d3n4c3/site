@@ -3,43 +3,83 @@
   "key": "097",
   "title": "Cable vs. Stryfe",
   "source": "The New Mutants (1983) #94, Page 20",
-  "issue_keys": [
-    "The New Mutants Vol 1 94",
-    "The New Mutants Vol 2 94",
-    "The New Mutants 94",
-    "New Mutants Vol 1 94"
+  "tokens": [
+    "Cable",
+    "Stryfe"
   ],
   "page": 20,
-  "part": "page",
+  "promo": false,
   "status": "ok",
   "candidates": [
     {
       "idx": 1,
       "file": "01.jpg",
-      "wiki": "File:New Mutants Vol 1 94.jpg",
-      "score": 62,
-      "url": "https://static.wikia.nocookie.net/marveldatabase/images/4/47/New_Mutants_Vol_1_94.jpg/revision/latest?cb=20191225041323"
+      "wiki": "File:Stepford Cuckoos (Earth-616) from Cable Vol 4 2 Textless Cover.jpg",
+      "score": 36,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/c/cd/Stepford_Cuckoos_%28Earth-616%29_from_Cable_Vol_4_2_Textless_Cover.jpg/revision/latest/scale-to-width-down/1400?cb=20210326105046"
     },
     {
       "idx": 2,
       "file": "02.jpg",
-      "wiki": "File:Cable and the New Mutants TPB Vol 1 1.jpg",
-      "score": 15,
-      "url": "https://static.wikia.nocookie.net/marveldatabase/images/d/d9/Cable_and_the_New_Mutants_TPB_Vol_1_1.jpg/revision/latest?cb=20240521081419"
+      "wiki": "File:Carmella Unuscione (Earth-616) from Cable Vol 1 10 cover 001.jpg",
+      "score": 32,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/5/56/Carmella_Unuscione_%28Earth-616%29_from_Cable_Vol_1_10_cover_001.jpg/revision/latest?cb=20190626022321"
     },
     {
       "idx": 3,
       "file": "03.jpg",
-      "wiki": "File:X-Force Cable and the New Mutants HC Vol 1 1 variant.jpg",
-      "score": 15,
-      "url": "https://static.wikia.nocookie.net/marveldatabase/images/7/70/X-Force_Cable_and_the_New_Mutants_HC_Vol_1_1_variant.jpg/revision/latest?cb=20240521091235"
+      "wiki": "File:Jean Grey (Earth-616) and Nathan Summers (Stryfe) (Earth-4935) from Uncanny X-Men Vol 1 295 001.jpg",
+      "score": 32,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/4/41/Jean_Grey_%28Earth-616%29_and_Nathan_Summers_%28Stryfe%29_%28Earth-4935%29_from_Uncanny_X-Men_Vol_1_295_001.jpg/revision/latest?cb=20251226121657"
     },
     {
       "idx": 4,
       "file": "04.jpg",
-      "wiki": "File:X-Force Cable and the New Mutants HC Vol 1 1.jpg",
-      "score": 15,
-      "url": "https://static.wikia.nocookie.net/marveldatabase/images/6/67/X-Force_Cable_and_the_New_Mutants_HC_Vol_1_1.jpg/revision/latest?cb=20240521090059"
+      "wiki": "File:Nathan Summers (Earth-616) and Nathan Summers (Stryfe) (Earth-4935) from Ultra X-Men (Trading Cards) 1995 Set 001.jpg",
+      "score": 32,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/6/63/Nathan_Summers_%28Earth-616%29_and_Nathan_Summers_%28Stryfe%29_%28Earth-4935%29_from_Ultra_X-Men_%28Trading_Cards%29_1995_Set_001.jpg/revision/latest?cb=20201014042031"
+    },
+    {
+      "idx": 5,
+      "file": "05.jpg",
+      "wiki": "File:Nathan Summers (Earth-616), Nathan Summers (Stryfe) (Earth-4935) and X-Men (Earth-616) from X-Force Vol 1 18 001.jpg",
+      "score": 32,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/8/8e/Nathan_Summers_%28Earth-616%29%2C_Nathan_Summers_%28Stryfe%29_%28Earth-4935%29_and_X-Men_%28Earth-616%29_from_X-Force_Vol_1_18_001.jpg/revision/latest?cb=20210103183750"
+    },
+    {
+      "idx": 6,
+      "file": "06.jpg",
+      "wiki": "File:Cable & Deadpool Vol 1 12 Textless.jpg",
+      "score": 28,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/5/5c/Cable_%26_Deadpool_Vol_1_12_Textless.jpg/revision/latest?cb=20071023022917"
+    },
+    {
+      "idx": 7,
+      "file": "07.jpg",
+      "wiki": "File:Cable & Deadpool Vol 1 14 Textless.jpg",
+      "score": 28,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/4/40/Cable_%26_Deadpool_Vol_1_14_Textless.jpg/revision/latest?cb=20161019140119"
+    },
+    {
+      "idx": 8,
+      "file": "08.jpg",
+      "wiki": "File:Cable & Deadpool Vol 1 17 Textless.jpg",
+      "score": 28,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/e/ed/Cable_%26_Deadpool_Vol_1_17_Textless.jpg/revision/latest?cb=20071102034353"
+    },
+    {
+      "idx": 9,
+      "file": "09.jpg",
+      "wiki": "File:Cable & Deadpool Vol 1 19 Textless.jpg",
+      "score": 28,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/1/16/Cable_%26_Deadpool_Vol_1_19_Textless.jpg/revision/latest?cb=20100412224900"
+    },
+    {
+      "idx": 10,
+      "file": "10.jpg",
+      "wiki": "File:Cable & Deadpool Vol 1 20 Textless.jpg",
+      "score": 28,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/7/75/Cable_%26_Deadpool_Vol_1_20_Textless.jpg/revision/latest?cb=20071027142056"
     }
   ]
 }

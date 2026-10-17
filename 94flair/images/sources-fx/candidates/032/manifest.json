@@ -3,64 +3,84 @@
   "key": "032",
   "title": "Death of Gwen Stacy",
   "source": "The Spectacular Spider-Man (1976) #200, Page 42",
-  "issue_keys": [
-    "The Spectacular Spider-Man Vol 1 200",
-    "The Spectacular Spider-Man Vol 2 200",
-    "The Spectacular Spider-Man 200",
-    "Spectacular Spider-Man Vol 1 200"
+  "tokens": [
+    "Death",
+    "Gwen",
+    "Stacy"
   ],
   "page": 42,
-  "part": "page",
+  "promo": false,
   "status": "ok",
   "candidates": [
     {
       "idx": 1,
       "file": "01.jpg",
-      "wiki": "File:Goblin Glider from Spectacular Spider-Man Vol 1 200 001.png",
-      "score": 95,
-      "url": "https://static.wikia.nocookie.net/marveldatabase/images/4/43/Goblin_Glider_from_Spectacular_Spider-Man_Vol_1_200_001.png/revision/latest?cb=20120702121632"
+      "wiki": "File:Harold Osborn (Earth-616) from Spectacular Spider-Man Vol 1 200 0001.jpg",
+      "score": 89,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/4/4c/Harold_Osborn_%28Earth-616%29_from_Spectacular_Spider-Man_Vol_1_200_0001.jpg/revision/latest?cb=20110118074045"
     },
     {
       "idx": 2,
       "file": "02.jpg",
       "wiki": "File:Norman Harold Osborn (Earth-616) from Spectacular Spider-Man Vol 1 200 001.jpg",
-      "score": 95,
+      "score": 89,
       "url": "https://static.wikia.nocookie.net/marveldatabase/images/6/67/Norman_Harold_Osborn_%28Earth-616%29_from_Spectacular_Spider-Man_Vol_1_200_001.jpg/revision/latest?cb=20190921215041"
     },
     {
       "idx": 3,
       "file": "03.jpg",
-      "wiki": "File:Osborn Foundation from Spectacular Spider-Man Vol 1 200 001.png",
-      "score": 95,
-      "url": "https://static.wikia.nocookie.net/marveldatabase/images/7/7e/Osborn_Foundation_from_Spectacular_Spider-Man_Vol_1_200_001.png/revision/latest?cb=20120603083210"
+      "wiki": "File:Peter Parker (Earth-616) and Harold Osborn (Earth-616) from Spectacular Spider-Man Vol 1 200 001.jpg",
+      "score": 89,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/2/23/Peter_Parker_%28Earth-616%29_and_Harold_Osborn_%28Earth-616%29_from_Spectacular_Spider-Man_Vol_1_200_001.jpg/revision/latest/scale-to-width-down/1400?cb=20211020011020"
     },
     {
       "idx": 4,
       "file": "04.jpg",
-      "wiki": "File:Peter Parker (Earth-616) and Harold Osborn (Earth-616) from Spectacular Spider-Man Vol 1 200 001.jpg",
-      "score": 95,
-      "url": "https://static.wikia.nocookie.net/marveldatabase/images/2/23/Peter_Parker_%28Earth-616%29_and_Harold_Osborn_%28Earth-616%29_from_Spectacular_Spider-Man_Vol_1_200_001.jpg/revision/latest/scale-to-width-down/1400?cb=20211020011020"
+      "wiki": "File:Peter Parker (Earth-616), Norman Harold Osborn (Earth-616), and Mary Jane Watson (Earth-616) from Spectacular Spider-Man Vol 1 200 001.jpg",
+      "score": 89,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/4/44/Peter_Parker_%28Earth-616%29%2C_Norman_Harold_Osborn_%28Earth-616%29%2C_and_Mary_Jane_Watson_%28Earth-616%29_from_Spectacular_Spider-Man_Vol_1_200_001.jpg/revision/latest?cb=20210531031200"
     },
     {
       "idx": 5,
       "file": "05.jpg",
-      "wiki": "File:Peter Parker (Earth-616), Norman Harold Osborn (Earth-616), and Mary Jane Watson (Earth-616) from Spectacular Spider-Man Vol 1 200 001.jpg",
-      "score": 95,
-      "url": "https://static.wikia.nocookie.net/marveldatabase/images/4/44/Peter_Parker_%28Earth-616%29%2C_Norman_Harold_Osborn_%28Earth-616%29%2C_and_Mary_Jane_Watson_%28Earth-616%29_from_Spectacular_Spider-Man_Vol_1_200_001.jpg/revision/latest?cb=20210531031200"
+      "wiki": "File:Goblin Glider from Spectacular Spider-Man Vol 1 200 001.png",
+      "score": 81,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/4/43/Goblin_Glider_from_Spectacular_Spider-Man_Vol_1_200_001.png/revision/latest?cb=20120702121632"
     },
     {
       "idx": 6,
       "file": "06.jpg",
-      "wiki": "File:Harold Osborn (Earth-616) from Spectacular Spider-Man Vol 1 200 0001.jpg",
-      "score": 90,
-      "url": "https://static.wikia.nocookie.net/marveldatabase/images/4/4c/Harold_Osborn_%28Earth-616%29_from_Spectacular_Spider-Man_Vol_1_200_0001.jpg/revision/latest?cb=20110118074045"
+      "wiki": "File:Osborn Foundation from Spectacular Spider-Man Vol 1 200 001.png",
+      "score": 81,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/7/7e/Osborn_Foundation_from_Spectacular_Spider-Man_Vol_1_200_001.png/revision/latest?cb=20120603083210"
     },
     {
       "idx": 7,
       "file": "07.jpg",
+      "wiki": "File:Amazing Spider-Man Vol 6 25 Gwen Stacy Variant Textless.jpg",
+      "score": 46,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/e/e0/Amazing_Spider-Man_Vol_6_25_Gwen_Stacy_Variant_Textless.jpg/revision/latest?cb=20240525104858"
+    },
+    {
+      "idx": 8,
+      "file": "08.jpg",
       "wiki": "File:Spectacular Spider-Man Vol 1 200.jpg",
-      "score": 67,
+      "score": 46,
       "url": "https://static.wikia.nocookie.net/marveldatabase/images/0/0d/Spectacular_Spider-Man_Vol_1_200.jpg/revision/latest/scale-to-width-down/1400?cb=20251207201338"
+    },
+    {
+      "idx": 9,
+      "file": "09.jpg",
+      "wiki": "File:Gwendolyne Stacy (Earth-26496) from Spectacular Spider-Man (animated series) Season 2 11 001.png",
+      "score": 42,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/d/d0/Gwendolyne_Stacy_%28Earth-26496%29_from_Spectacular_Spider-Man_%28animated_series%29_Season_2_11_001.png/revision/latest?cb=20180827185507"
+    },
+    {
+      "idx": 10,
+      "file": "10.jpg",
+      "wiki": "File:Gwendolyne Stacy (Earth-51838) from Peter Parker The Spectacular Spider-Man Vol 1 304 001.jpg",
+      "score": 42,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/1/18/Gwendolyne_Stacy_%28Earth-51838%29_from_Peter_Parker_The_Spectacular_Spider-Man_Vol_1_304_001.jpg/revision/latest?cb=20180510023337"
     }
   ]
 }

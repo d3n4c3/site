@@ -3,71 +3,84 @@
   "key": "045",
   "title": "Origin of Alpha Flight",
   "source": "Alpha Flight (1983) #128, Page 13",
-  "issue_keys": [
-    "Alpha Flight Vol 1 128",
-    "Alpha Flight Vol 2 128",
-    "Alpha Flight 128",
-    "The Alpha Flight Vol 1 128"
+  "tokens": [
+    "Alpha Flight",
+    "Alpha",
+    "Flight"
   ],
   "page": 13,
-  "part": "page",
+  "promo": false,
   "status": "ok",
   "candidates": [
     {
       "idx": 1,
       "file": "01.jpg",
-      "wiki": "File:Albert Louis (Earth-9418) from Alpha Flight Vol 1 128 001.jpg",
-      "score": 125,
-      "url": "https://static.wikia.nocookie.net/marveldatabase/images/e/e8/Albert_Louis_%28Earth-9418%29_from_Alpha_Flight_Vol_1_128_001.jpg/revision/latest?cb=20160726232304"
+      "wiki": "File:Reginald Tork (Earth-616) from Alpha Flight Vol 1 128 001.jpg",
+      "score": 218,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/c/c9/Reginald_Tork_%28Earth-616%29_from_Alpha_Flight_Vol_1_128_001.jpg/revision/latest?cb=20160620002027"
     },
     {
       "idx": 2,
       "file": "02.jpg",
-      "wiki": "File:Alpha Flight (Earth-9418) from Alpha Flight Vol 1 128 001.jpg",
-      "score": 125,
-      "url": "https://static.wikia.nocookie.net/marveldatabase/images/9/97/Alpha_Flight_%28Earth-9418%29_from_Alpha_Flight_Vol_1_128_001.jpg/revision/latest?cb=20160727010920"
+      "wiki": "File:Albert Louis (Earth-9418) from Alpha Flight Vol 1 128 001.jpg",
+      "score": 210,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/e/e8/Albert_Louis_%28Earth-9418%29_from_Alpha_Flight_Vol_1_128_001.jpg/revision/latest?cb=20160726232304"
     },
     {
       "idx": 3,
       "file": "03.jpg",
-      "wiki": "File:Alpha Flight (Earth-9418) from Alpha Flight Vol 1 128 002.jpg",
-      "score": 125,
-      "url": "https://static.wikia.nocookie.net/marveldatabase/images/9/97/Alpha_Flight_%28Earth-9418%29_from_Alpha_Flight_Vol_1_128_002.jpg/revision/latest?cb=20160727011306"
+      "wiki": "File:Alpha Flight (Earth-9418) from Alpha Flight Vol 1 128 001.jpg",
+      "score": 210,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/9/97/Alpha_Flight_%28Earth-9418%29_from_Alpha_Flight_Vol_1_128_001.jpg/revision/latest?cb=20160727010920"
     },
     {
       "idx": 4,
       "file": "04.jpg",
-      "wiki": "File:Earth-9418 from Alpha Flight Vol 1 128 001.jpg",
-      "score": 125,
-      "url": "https://static.wikia.nocookie.net/marveldatabase/images/e/e1/Earth-9418_from_Alpha_Flight_Vol_1_128_001.jpg/revision/latest?cb=20160727012934"
+      "wiki": "File:Alpha Flight (Earth-9418) from Alpha Flight Vol 1 128 002.jpg",
+      "score": 210,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/9/97/Alpha_Flight_%28Earth-9418%29_from_Alpha_Flight_Vol_1_128_002.jpg/revision/latest?cb=20160727011306"
     },
     {
       "idx": 5,
       "file": "05.jpg",
-      "wiki": "File:Elizabeth Twoyoungmen (Earth-9418) from Alpha Flight Vol 1 128 002.jpg",
-      "score": 125,
-      "url": "https://static.wikia.nocookie.net/marveldatabase/images/5/54/Elizabeth_Twoyoungmen_%28Earth-9418%29_from_Alpha_Flight_Vol_1_128_002.jpg/revision/latest?cb=20160726224755"
+      "wiki": "File:Earth-9418 from Alpha Flight Vol 1 128 001.jpg",
+      "score": 210,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/e/e1/Earth-9418_from_Alpha_Flight_Vol_1_128_001.jpg/revision/latest?cb=20160727012934"
     },
     {
       "idx": 6,
       "file": "06.jpg",
-      "wiki": "File:Eshu (Earth-9418) from Alpha Flight Vol 1 128 001.jpg",
-      "score": 125,
-      "url": "https://static.wikia.nocookie.net/marveldatabase/images/a/ad/Eshu_%28Earth-9418%29_from_Alpha_Flight_Vol_1_128_001.jpg/revision/latest?cb=20160726233901"
+      "wiki": "File:Elizabeth Twoyoungmen (Earth-9418) from Alpha Flight Vol 1 128 002.jpg",
+      "score": 210,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/5/54/Elizabeth_Twoyoungmen_%28Earth-9418%29_from_Alpha_Flight_Vol_1_128_002.jpg/revision/latest?cb=20160726224755"
     },
     {
       "idx": 7,
       "file": "07.jpg",
-      "wiki": "File:Eugene Judd (Earth-9418) from Alpha Flight Vol 1 128 001.jpg",
-      "score": 125,
-      "url": "https://static.wikia.nocookie.net/marveldatabase/images/d/d3/Eugene_Judd_%28Earth-9418%29_from_Alpha_Flight_Vol_1_128_001.jpg/revision/latest?cb=20160726221825"
+      "wiki": "File:Eshu (Earth-9418) from Alpha Flight Vol 1 128 001.jpg",
+      "score": 210,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/a/ad/Eshu_%28Earth-9418%29_from_Alpha_Flight_Vol_1_128_001.jpg/revision/latest?cb=20160726233901"
     },
     {
       "idx": 8,
       "file": "08.jpg",
+      "wiki": "File:Eugene Judd (Earth-9418) from Alpha Flight Vol 1 128 001.jpg",
+      "score": 210,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/d/d3/Eugene_Judd_%28Earth-9418%29_from_Alpha_Flight_Vol_1_128_001.jpg/revision/latest?cb=20160726221825"
+    },
+    {
+      "idx": 9,
+      "file": "09.jpg",
       "wiki": "File:Hardliners (Earth-9418) from Alpha Flight Vol 1 128 001.jpg",
-      "score": 125,
+      "score": 210,
       "url": "https://static.wikia.nocookie.net/marveldatabase/images/8/89/Hardliners_%28Earth-9418%29_from_Alpha_Flight_Vol_1_128_001.jpg/revision/latest?cb=20160726235216"
+    },
+    {
+      "idx": 10,
+      "file": "10.jpg",
+      "wiki": "File:Heather McNeil (Earth-9418) from Alpha Flight Vol 1 128 001.jpg",
+      "score": 210,
+      "url": "https://static.wikia.nocookie.net/marveldatabase/images/1/1b/Heather_McNeil_%28Earth-9418%29_from_Alpha_Flight_Vol_1_128_001.jpg/revision/latest?cb=20160726215633"
     }
   ]
 }
