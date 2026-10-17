@@ -1,150 +1,145 @@
 #!/usr/bin/env python3
-"""Slowly scrape @exotechktx Instagram Flair carousels for comic source art.
+"""Fetch @exotechktx Instagram Flair source crops via mobile feed API.
 
-Instagram rate-limits aggressively; this script backs off and resumes from
-manifest. Prefer running infrequently. Writes:
-  images/sources-fx/hd/{NNN}.jpg          cropped source (carousel #2)
-  images/sources-fx/hd/{NNN}-comic.jpg    full comic page/cover (#3)
-  images/thumbs/sources/{NNN}.jpg
-  images/sources-fx/manifest.json
+Slide 2 = cropped original art; slide 3 = full comic page/cover context.
 """
 from __future__ import annotations
 
 import json
+import random
 import re
 import time
 import urllib.error
+import urllib.parse
 import urllib.request
 from pathlib import Path
 
 from PIL import Image
 
 ROOT = Path(__file__).resolve().parents[1]
-OUT = ROOT / "images" / "sources-fx"
-HD = OUT / "hd"
+HD = ROOT / "images" / "sources-fx" / "hd"
 TH = ROOT / "images" / "thumbs" / "sources"
+MAN = ROOT / "images" / "sources-fx" / "manifest.json"
 RAW = Path("/tmp/exotechktx-sources/raw")
-UA = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
+
+UID = "46257896100"
 APP = "936619743392459"
+UAS = [
+    "Instagram 192.168.1.2.75 Android (31/12; 420dpi; 1080x2400; Google/google; Pixel 6; redfin; redfin; en_US; 458229237)",
+    "Instagram 10.0.1.1.107 Android (33/13; 480dpi; 1080x2340; samsung; SM-G991B; o1s; qcom; en_US; 458229258)",
+]
 
 
-def get(url: str, retries: int = 8) -> bytes:
-    headers = {
-        "User-Agent": UA,
-        "X-IG-App-ID": APP,
-        "Accept": "application/json,text/plain,*/*",
-        "Accept-Language": "en-US,en;q=0.9",
-        "Referer": "https://www.instagram.com/",
-    }
-    last = None
+def best_url(obj: dict) -> str | None:
+    vers = (obj.get("image_versions2") or {}).get("candidates") or []
+    if not vers:
+        return None
+    return sorted(vers, key=lambda c: c.get("width", 0) * c.get("height", 0), reverse=True)[0]["url"]
+
+
+def get(url: str, retries: int = 12) -> bytes:
+    last: Exception | None = None
     for i in range(retries):
+        h = {
+            "User-Agent": random.choice(UAS),
+            "X-IG-App-ID": APP,
+            "X-IG-Capabilities": "3brTvw==",
+            "Accept": "*/*",
+        }
         try:
-            req = urllib.request.Request(url, headers=headers)
-            with urllib.request.urlopen(req, timeout=60) as r:
-                return r.read()
+            req = urllib.request.Request(url, headers=h)
+            return urllib.request.urlopen(req, timeout=60).read()
         except urllib.error.HTTPError as e:
             last = e
-            if e.code in (429, 503):
-                wait = min(300, 15 * (2**i))
-                print(f"rate {e.code}, sleep {wait}s")
-                time.sleep(wait)
-                continue
-            raise
-    raise last  # type: ignore
+            wait = min(300, 20 * (2 ** min(i, 4)))
+            print(f"  HTTP {e.code}, sleep {wait}s", flush=True)
+            time.sleep(wait)
+    assert last
+    raise last
 
 
-def download(url: str, dest: Path) -> None:
-    req = urllib.request.Request(url, headers={"User-Agent": UA})
-    data = urllib.request.urlopen(req, timeout=90).read()
-    dest.write_bytes(data)
-
-
-def save_jpeg(src: Path, dest: Path, thumb: Path | None = None) -> None:
-    im = Image.open(src).convert("RGB")
-    dest.parent.mkdir(parents=True, exist_ok=True)
-    im.save(dest, quality=90, optimize=True)
-    if thumb is not None:
-        t = im.copy()
-        t.thumbnail((360, 360))
-        thumb.parent.mkdir(parents=True, exist_ok=True)
-        t.save(thumb, quality=82)
-
-
-def parse_caption(cap: str) -> dict:
-    base = re.search(r"Base\s*\((\d+)\s*of\s*150\)", cap, re.I)
+def card_key(cap: str) -> str | None:
+    m = re.search(r"Base\s*\((\d+)\s*of\s*150\)", cap, re.I)
+    if m:
+        return f"{int(m.group(1)):03d}"
     pb = re.search(r"Power\s*Blast[^\n]*\((\d+)\s*of\s*18\)", cap, re.I)
+    if pb:
+        return f"pb{int(pb.group(1)):02d}"
+    return None
+
+
+def save_item(it: dict, manifest: dict) -> bool:
+    cap = (it.get("caption") or {}).get("text") or ""
+    code = it.get("code") or ""
+    if "Flair" not in cap:
+        return False
+    key = card_key(cap)
+    if not key:
+        return False
+    if (manifest.get(key) or {}).get("kind") == "crop" and (HD / f"{key}.jpg").exists():
+        return False
     source = re.search(r"Source of Art:\s*(.+)", cap)
-    return {
-        "card": int(base.group(1)) if base else None,
-        "powerblast": int(pb.group(1)) if pb else None,
-        "source_line": source.group(1).strip() if source else "",
+    source_line = source.group(1).strip() if source else ""
+    urls = [u for u in (best_url(c) for c in (it.get("carousel_media") or [])) if u]
+    if len(urls) < 2:
+        print(f"  few imgs {key} {len(urls)}", flush=True)
+        return False
+    tmp = RAW / key
+    tmp.mkdir(parents=True, exist_ok=True)
+    for i, u in enumerate(urls, 1):
+        data = urllib.request.urlopen(
+            urllib.request.Request(u, headers={"User-Agent": "Mozilla/5.0"}), timeout=90
+        ).read()
+        (tmp / f"ig{i}.jpg").write_bytes(data)
+        time.sleep(0.15)
+    crop = tmp / "ig2.jpg"
+    comic = tmp / "ig3.jpg" if (tmp / "ig3.jpg").exists() else crop
+    im = Image.open(crop).convert("RGB")
+    HD.mkdir(parents=True, exist_ok=True)
+    TH.mkdir(parents=True, exist_ok=True)
+    im.save(HD / f"{key}.jpg", quality=90)
+    t = im.copy()
+    t.thumbnail((360, 360))
+    t.save(TH / f"{key}.jpg", quality=82)
+    Image.open(comic).convert("RGB").save(HD / f"{key}-comic.jpg", quality=90)
+    manifest[key] = {
+        "file": f"{key}.jpg",
+        "comic": f"{key}-comic.jpg",
+        "source_line": source_line,
+        "shortcode": code,
+        "kind": "crop",
+        "ig": code,
+        "disabled": False,
     }
+    print(f"  SAVED {key} {code} {source_line[:60]}", flush=True)
+    return True
 
 
 def main() -> None:
-    HD.mkdir(parents=True, exist_ok=True)
-    TH.mkdir(parents=True, exist_ok=True)
     RAW.mkdir(parents=True, exist_ok=True)
-
-    manifest_path = OUT / "manifest.json"
-    manifest = json.loads(manifest_path.read_text()) if manifest_path.exists() else {}
-
-    print("fetching profile…")
-    body = get("https://www.instagram.com/api/v1/users/web_profile_info/?username=exotechktx")
-    (RAW / "profile.json").write_bytes(body)
-    user = json.loads(body)["data"]["user"]
-    edges = user["edge_owner_to_timeline_media"]["edges"]
-    print(f"got {len(edges)} posts on first page (of {user['edge_owner_to_timeline_media']['count']})")
-
-    for e in edges:
-        node = e["node"]
-        caps = (
-            ((node.get("edge_media_to_caption") or {}).get("edges") or [{}])[0]
-            .get("node", {})
-            .get("text")
-            or ""
-        )
-        if "Flair" not in caps and "flair" not in caps.lower():
-            continue
-        meta = parse_caption(caps)
-        key = None
-        if meta["card"]:
-            key = f"{meta['card']:03d}"
-        elif meta["powerblast"]:
-            key = f"pb{meta['powerblast']:02d}"
-        else:
-            continue
-        if key in manifest and (HD / f"{key}.jpg").exists():
-            print(f"skip {key}")
-            continue
-        kids = [c["node"] for c in (node.get("edge_sidecar_to_children") or {}).get("edges") or []]
-        urls = [k.get("display_url") for k in kids if k.get("display_url")]
-        if len(urls) < 2:
-            print(f"skip {key}: only {len(urls)} images")
-            continue
-        tmp = RAW / f"{key}"
-        tmp.mkdir(exist_ok=True)
-        for i, url in enumerate(urls, 1):
-            download(url, tmp / f"ig{i}.jpg")
-            time.sleep(0.4)
-        # carousel: 1=front, 2=source crop, 3=comic, 4=back (usually)
-        crop = tmp / "ig2.jpg"
-        comic = tmp / ("ig3.jpg" if (tmp / "ig3.jpg").exists() else "ig2.jpg")
-        save_jpeg(crop, HD / f"{key}.jpg", TH / f"{key}.jpg")
-        save_jpeg(comic, HD / f"{key}-comic.jpg")
-        manifest[key] = {
-            "file": f"{key}.jpg",
-            "comic": f"{key}-comic.jpg",
-            "source_line": meta["source_line"],
-            "shortcode": node.get("shortcode"),
-            "kind": "crop",
-        }
-        manifest_path.write_text(json.dumps(manifest, indent=2, sort_keys=True))
-        print(f"saved {key}: {meta['source_line'][:80]}")
-        time.sleep(1.5)
-
-    print(f"done — {len(manifest)} sources in manifest")
-    print("Note: Instagram only returns ~12 posts per profile call; re-run later for more.")
+    manifest = json.loads(MAN.read_text()) if MAN.exists() else {}
+    max_id = None
+    pages = 0
+    saved = 0
+    while pages < 80:
+        url = f"https://i.instagram.com/api/v1/feed/user/{UID}/?count=12"
+        if max_id:
+            url += f"&max_id={urllib.parse.quote(str(max_id))}"
+        print(f"page {pages}…", flush=True)
+        body = get(url)
+        (RAW / f"mobile_feed_{pages}.json").write_bytes(body)
+        feed = json.loads(body)
+        for it in feed.get("items") or []:
+            if save_item(it, manifest):
+                saved += 1
+        MAN.write_text(json.dumps(manifest, indent=2, sort_keys=True))
+        pages += 1
+        if not feed.get("more_available") or not feed.get("next_max_id"):
+            break
+        max_id = feed["next_max_id"]
+        time.sleep(8 + random.random() * 6)
+    ig = sum(1 for v in manifest.values() if v.get("kind") == "crop")
+    print(f"DONE saved={saved} ig={ig}")
 
 
 if __name__ == "__main__":

@@ -802,518 +802,623 @@
   },
   "100": {
     "comic": "100-comic.jpg",
+    "disabled": false,
     "file": "100.jpg",
+    "ig": "DRhEcIckbPc",
     "kind": "crop",
     "shortcode": "DRhEcIckbPc",
     "source_line": "Venom: Lethal Protector (Vol. 1, 1993) Issue #1 (1993), Cover"
   },
   "101": {
     "comic": "101-comic.jpg",
+    "disabled": false,
     "file": "101.jpg",
+    "ig": "DRhES5gkUEH",
     "kind": "crop",
     "shortcode": "DRhES5gkUEH",
     "source_line": "Punisher 2099 (Vol. 1, 1993) Issue #1 (1993), Cover"
   },
   "102": {
     "comic": "102-comic.jpg",
+    "disabled": false,
     "file": "102.jpg",
+    "ig": "DRhEInMEe8H",
     "kind": "crop",
     "shortcode": "DRhEInMEe8H",
     "source_line": "The Spectacular Spider-Man (Vol. 1, 1976) Issue #200 (1993), Page 30"
   },
   "103": {
     "comic": "103-comic.jpg",
+    "disabled": false,
     "file": "103.jpg",
+    "ig": "DRhD9pXkRS9",
     "kind": "crop",
     "shortcode": "DRhD9pXkRS9",
     "source_line": "The Avengers (Vol. 1, 1963) Issue #360 (1993), Cover"
   },
   "104": {
     "comic": "104-comic.jpg",
+    "disabled": false,
     "file": "104.jpg",
+    "ig": "DRhDzGpEYio",
     "kind": "crop",
     "shortcode": "DRhDzGpEYio",
     "source_line": "Spider-Man Unlimited (Vol. 1, 1993) Issue #2 (1993), Cover"
   },
   "105": {
     "comic": "105-comic.jpg",
+    "disabled": false,
     "file": "105.jpg",
+    "ig": "DRbIMY3EZwW",
     "kind": "crop",
     "shortcode": "DRbIMY3EZwW",
     "source_line": "Namor the Submariner (Vol. 1, 1990) Issue #37 (1993), Page 20"
   },
   "106": {
     "comic": "106-comic.jpg",
+    "disabled": false,
     "file": "106.jpg",
+    "ig": "DRbICbxEY_k",
     "kind": "crop",
     "shortcode": "DRbICbxEY_k",
     "source_line": "X-Factor (Vol. 1, 1986) Issue #88, Page 5"
   },
   "107": {
     "comic": "107-comic.jpg",
+    "disabled": false,
     "file": "107.jpg",
+    "ig": "DRbH5NiEXhO",
     "kind": "crop",
     "shortcode": "DRbH5NiEXhO",
     "source_line": "1992 Impel Marvel Universe Series III, Psyclocke, Card #51"
   },
   "108": {
     "comic": "108-comic.jpg",
+    "disabled": false,
     "file": "108.jpg",
+    "ig": "DRbHv-XkWqX",
     "kind": "crop",
     "shortcode": "DRbHv-XkWqX",
     "source_line": "Fantastic Four (Vol. 1, 1963) Issue #383 (1993), Page 22"
   },
   "109": {
     "comic": "109-comic.jpg",
+    "disabled": false,
     "file": "109.jpg",
+    "ig": "DRbHlr-ERuE",
     "kind": "crop",
     "shortcode": "DRbHlr-ERuE",
     "source_line": "Thunderstrike! (Vol. 1, 1993) Issue #1 (1993), Cover"
   },
   "110": {
     "comic": "110-comic.jpg",
+    "disabled": false,
     "file": "110.jpg",
+    "ig": "DRWM1d8DfU8",
     "kind": "crop",
     "shortcode": "DRWM1d8DfU8",
     "source_line": "Infinity Crusade (Vol. 1, 1993) Issue #5 (1993), Cover; Infinity Crusade (Vol. 1, 1993) Issue #2 (1993), Page 38"
   },
   "111": {
     "comic": "111-comic.jpg",
+    "disabled": false,
     "file": "111.jpg",
+    "ig": "DRWMrLnDQhP",
     "kind": "crop",
     "shortcode": "DRWMrLnDQhP",
     "source_line": "2099 Unlimited (Vol. 1, 1993) Issue #1 (1993), Page 23"
   },
   "112": {
-    "comic": "112.jpg",
-    "disabled": true,
+    "comic": "112-comic.jpg",
+    "disabled": false,
     "file": "112.jpg",
-    "kind": "wiki",
-    "note": "wiki cover \u2014 not exotechktx crop; excluded from viewer until IG source lands",
-    "source_line": "X-Force (1991) #25, Page 22",
-    "wiki_file": "X-Force_Vol_1_25.jpg"
+    "ig": "DRWMhmnDdBK",
+    "kind": "crop",
+    "shortcode": "DRWMhmnDdBK",
+    "source_line": "X-Force (Vol. 1, 1991) Issue #25 (1993), Page 20"
   },
   "113": {
-    "comic": "113.jpg",
-    "disabled": true,
+    "comic": "113-comic.jpg",
+    "disabled": false,
     "file": "113.jpg",
-    "kind": "wiki",
-    "note": "wiki cover \u2014 not exotechktx crop; excluded from viewer until IG source lands",
-    "source_line": "The Uncanny X-Men (1963) #303, Page 22",
-    "wiki_file": "Uncanny_X-Men_Vol_1_303.jpg"
+    "ig": "DRWMX5aDSIx",
+    "kind": "crop",
+    "shortcode": "DRWMX5aDSIx",
+    "source_line": "Uncanny X-Men (Vol. 1, 1963) Issue #303 (1993), Page 23"
   },
   "114": {
-    "comic": "114.jpg",
-    "disabled": true,
+    "comic": "114-comic.jpg",
+    "disabled": false,
     "file": "114.jpg",
-    "kind": "wiki",
-    "note": "wiki cover \u2014 not exotechktx crop; excluded from viewer until IG source lands",
-    "source_line": "X-Men (1991) #24, Cover",
-    "wiki_file": "X-Men_Vol_1_24.jpg"
+    "ig": "DRWMNv-DT1b",
+    "kind": "crop",
+    "shortcode": "DRWMNv-DT1b",
+    "source_line": "X-Men (Vol.2, 1991) Issue #24 (1993), Cover"
   },
   "115": {
-    "comic": "115.jpg",
-    "disabled": true,
+    "comic": "115-comic.jpg",
+    "disabled": false,
     "file": "115.jpg",
-    "kind": "wiki",
-    "note": "wiki cover \u2014 not exotechktx crop; excluded from viewer until IG source lands",
-    "source_line": "Ghost Rider (1990) #46, Page 11",
-    "wiki_file": "Ghost_Rider_Vol_2_46.jpg"
+    "ig": "DRCB7VSEXB-",
+    "kind": "crop",
+    "shortcode": "DRCB7VSEXB-",
+    "source_line": "Ghost Rider (1990) Issue #46 (1994), Page 11"
   },
   "116": {
-    "comic": "116.jpg",
-    "disabled": true,
+    "comic": "116-comic.jpg",
+    "disabled": false,
     "file": "116.jpg",
-    "kind": "wiki",
-    "note": "wiki cover \u2014 not exotechktx crop; excluded from viewer until IG source lands",
-    "source_line": "Daredevil: The Man Without Fear (1964) #325, Page 39",
-    "wiki_file": "Daredevil_Vol_1_325.jpg"
+    "ig": "DRCByBgERyf",
+    "kind": "crop",
+    "shortcode": "DRCByBgERyf",
+    "source_line": "Daredevil: The Man Without Fear (1964) Issue #325 (1994), Page 39"
   },
   "117": {
-    "comic": "117.jpg",
-    "disabled": true,
+    "comic": "117-comic.jpg",
+    "disabled": false,
     "file": "117.jpg",
-    "kind": "wiki",
-    "note": "wiki cover \u2014 not exotechktx crop; excluded from viewer until IG source lands",
-    "source_line": "Ravage 2099 (1993) #12, Page 2",
-    "wiki_file": "Ravage_2099_Vol_1_12.jpg"
+    "ig": "DRCBnz6kQbo",
+    "kind": "crop",
+    "shortcode": "DRCBnz6kQbo",
+    "source_line": "Ravage 2099 (1992) Issue #12 (1993), Page 2"
   },
   "118": {
-    "comic": "118.jpg",
-    "disabled": true,
+    "comic": "118-comic.jpg",
+    "disabled": false,
     "file": "118.jpg",
-    "kind": "wiki",
-    "note": "wiki cover \u2014 not exotechktx crop; excluded from viewer until IG source lands",
-    "source_line": "Wolverine (1988) #75, Page 4",
-    "wiki_file": "Wolverine_Vol_2_75.jpg"
+    "ig": "DRCBdONEZP6",
+    "kind": "crop",
+    "shortcode": "DRCBdONEZP6",
+    "source_line": "Wolverine (Vol.1, 1988) Issue #75 (1993), Page 4"
   },
   "119": {
-    "comic": "119.jpg",
-    "disabled": true,
+    "comic": "119-comic.jpg",
+    "disabled": false,
     "file": "119.jpg",
-    "kind": "wiki",
-    "note": "wiki cover \u2014 not exotechktx crop; excluded from viewer until IG source lands",
-    "source_line": "Wolverine (1988) #75, Page 34",
-    "wiki_file": "Wolverine_Vol_2_75.jpg"
+    "ig": "DRCBDq0EVAP",
+    "kind": "crop",
+    "shortcode": "DRCBDq0EVAP",
+    "source_line": "Wolverine (Vol.1, 1988) Issue #75 (1993), Page 34"
   },
   "120": {
-    "comic": "120.jpg",
-    "disabled": true,
+    "comic": "120-comic.jpg",
+    "disabled": false,
     "file": "120.jpg",
-    "kind": "wiki",
-    "note": "wiki cover \u2014 not exotechktx crop; excluded from viewer until IG source lands",
-    "source_line": "The Uncanny X-Men (1963) #304, Page 16",
-    "wiki_file": "Uncanny_X-Men_Vol_1_304.jpg"
+    "ig": "DQ7cCHXEVia",
+    "kind": "crop",
+    "shortcode": "DQ7cCHXEVia",
+    "source_line": "Uncanny X-Men (1963) Issue #304 (1993), Page 16 & 17"
   },
   "121": {
-    "comic": "121.jpg",
-    "disabled": true,
+    "comic": "121-comic.jpg",
+    "disabled": false,
     "file": "121.jpg",
-    "kind": "wiki",
-    "note": "wiki cover \u2014 not exotechktx crop; excluded from viewer until IG source lands",
-    "source_line": "The Uncanny X-Men (1963) #304, Page 41",
-    "wiki_file": "Uncanny_X-Men_Vol_1_304.jpg"
+    "ig": "DQ7b44QkeTo",
+    "kind": "crop",
+    "shortcode": "DQ7b44QkeTo",
+    "source_line": "Uncanny X-Men (1963) Issue #304 (1993), Page 47 & 48"
   },
   "122": {
-    "comic": "122.jpg",
-    "disabled": true,
+    "comic": "122-comic.jpg",
+    "disabled": false,
     "file": "122.jpg",
-    "kind": "wiki",
-    "note": "wiki cover \u2014 not exotechktx crop; excluded from viewer until IG source lands",
-    "source_line": "The Uncanny X-Men (1963) #304, Page 40",
-    "wiki_file": "Uncanny_X-Men_Vol_1_304.jpg"
+    "ig": "DQ7bvTjEbXy",
+    "kind": "crop",
+    "shortcode": "DQ7bvTjEbXy",
+    "source_line": "Uncanny X-Men (1963) Issue #304 (1993), Page 46"
   },
   "123": {
-    "comic": "123.jpg",
-    "disabled": true,
+    "comic": "123-comic.jpg",
+    "disabled": false,
     "file": "123.jpg",
-    "kind": "wiki",
-    "note": "wiki cover \u2014 not exotechktx crop; excluded from viewer until IG source lands",
-    "source_line": "X-Factor (1986) #92, Page 14",
-    "wiki_file": "X-Factor_Vol_1_92.jpg"
+    "ig": "DQ7blGqEdj4",
+    "kind": "crop",
+    "shortcode": "DQ7blGqEdj4",
+    "source_line": "X-Factor (Vol.1, 1986) Issue #92 (1993), Page 14"
+  },
+  "124": {
+    "comic": "124-comic.jpg",
+    "disabled": false,
+    "file": "124.jpg",
+    "ig": "DQ7bcLFkRrD",
+    "kind": "crop",
+    "shortcode": "DQ7bcLFkRrD",
+    "source_line": "1994 Fleer Marvel Universe Series V, Bloodhawk, Card #171"
   },
   "125": {
-    "comic": "125.jpg",
-    "disabled": true,
+    "comic": "125-comic.jpg",
+    "disabled": false,
     "file": "125.jpg",
-    "kind": "wiki",
-    "note": "wiki cover \u2014 not exotechktx crop; excluded from viewer until IG source lands",
-    "source_line": "Ghost Rider & Blaze: Spirits of Vengeance #16, Page 1",
-    "wiki_file": "Spirits_of_Vengeance_Vol_1_16.jpg"
+    "ig": "DQ3HgPSkZhN",
+    "kind": "crop",
+    "shortcode": "DQ3HgPSkZhN",
+    "source_line": "Ghost Rider/Blaze: Spirits of Vengeance (Vol. 1, 1992) Issue #16 (1993), Page 1"
   },
   "126": {
-    "comic": "126.jpg",
-    "disabled": true,
+    "comic": "126-comic.jpg",
+    "disabled": false,
     "file": "126.jpg",
-    "kind": "wiki",
-    "note": "wiki cover \u2014 not exotechktx crop; excluded from viewer until IG source lands",
-    "source_line": "Fantastic Four (1963) #381, Page 22",
-    "wiki_file": "Fantastic_Four_Vol_1_381.jpg"
+    "ig": "DQ3HW37EXuw",
+    "kind": "crop",
+    "shortcode": "DQ3HW37EXuw",
+    "source_line": "Fantastic Four (Vol. 1, 1963) Issue #381 (1993), Page 22"
   },
   "127": {
-    "comic": "127.jpg",
-    "disabled": true,
+    "comic": "127-comic.jpg",
+    "disabled": false,
     "file": "127.jpg",
-    "kind": "wiki",
-    "note": "wiki cover \u2014 not exotechktx crop; excluded from viewer until IG source lands",
-    "source_line": "Ghost Rider (1990) #43, Cover",
-    "wiki_file": "Ghost_Rider_Vol_2_43.jpg"
+    "ig": "DQ3HM3fEaBE",
+    "kind": "crop",
+    "shortcode": "DQ3HM3fEaBE",
+    "source_line": "Ghost Rider (Vol. 2, 1990) Issue #43 (1993), Cover"
   },
   "128": {
-    "comic": "128.jpg",
-    "disabled": true,
+    "comic": "128-comic.jpg",
+    "disabled": false,
     "file": "128.jpg",
-    "kind": "wiki",
-    "note": "wiki cover \u2014 not exotechktx crop; excluded from viewer until IG source lands",
-    "source_line": "Marvel Treasury Edition (1974) #3, Back Cover",
-    "wiki_file": "Marvel_Treasury_Edition_Vol_1_3.jpg"
+    "ig": "DQ3HCSpkWtX",
+    "kind": "crop",
+    "shortcode": "DQ3HCSpkWtX",
+    "source_line": "Thor Corps - Marvel Press Poster #109"
   },
   "129": {
-    "comic": "129.jpg",
-    "disabled": true,
+    "comic": "129-comic.jpg",
+    "disabled": false,
     "file": "129.jpg",
-    "kind": "wiki",
-    "note": "wiki cover \u2014 not exotechktx crop; excluded from viewer until IG source lands",
-    "source_line": "X-Men (1991) #28, Cover",
-    "wiki_file": "X-Men_Vol_1_28.jpg"
+    "ig": "DQ3G5DVEV_J",
+    "kind": "crop",
+    "shortcode": "DQ3G5DVEV_J",
+    "source_line": "X-Men (Vol. 2, 1991) Issue #28 (1994), Cover"
   },
   "130": {
-    "comic": "130.jpg",
-    "disabled": true,
+    "comic": "130-comic.jpg",
+    "disabled": false,
     "file": "130.jpg",
-    "kind": "wiki",
-    "note": "wiki cover \u2014 not exotechktx crop; excluded from viewer until IG source lands",
-    "source_line": "Venom: The Madness (1993) #2, Page 4",
-    "wiki_file": "Venom_The_Madness_Vol_1_2.jpg"
+    "ig": "DQ0ycqBjXkd",
+    "kind": "crop",
+    "shortcode": "DQ0ycqBjXkd",
+    "source_line": "Venom: The Madness (Vol.1, 1993) Issue #2 (1993), Page 3"
   },
   "131": {
-    "comic": "131.jpg",
-    "disabled": true,
+    "comic": "131-comic.jpg",
+    "disabled": false,
     "file": "131.jpg",
-    "kind": "wiki",
-    "note": "wiki cover \u2014 not exotechktx crop; excluded from viewer until IG source lands",
-    "source_line": "Doctor Strange (1988) #61, Cover",
-    "wiki_file": "Doctor_Strange_Vol_2_61.jpg"
+    "ig": "DQ0rCUljWeW",
+    "kind": "crop",
+    "shortcode": "DQ0rCUljWeW",
+    "source_line": "Doctor Strange, Sorcerer Supreme (Vol.1, 1988) Issue #61, Cover"
   },
   "132": {
-    "comic": "132.jpg",
-    "disabled": true,
+    "comic": "132-comic.jpg",
+    "disabled": false,
     "file": "132.jpg",
-    "kind": "wiki",
-    "note": "wiki cover \u2014 not exotechktx crop; excluded from viewer until IG source lands",
-    "source_line": "Punisher: War Journal (1988) #61, Cover",
-    "wiki_file": "Punisher_War_Journal_Vol_1_61.jpg"
+    "ig": "DQ0qlL4DZsk",
+    "kind": "crop",
+    "shortcode": "DQ0qlL4DZsk",
+    "source_line": "Punisher: War Journal (Vol.1, 1988) Issue #61 (1993), Cover"
   },
   "133": {
-    "comic": "133.jpg",
-    "disabled": true,
+    "comic": "133-comic.jpg",
+    "disabled": false,
     "file": "133.jpg",
-    "kind": "wiki",
-    "note": "wiki cover \u2014 not exotechktx crop; excluded from viewer until IG source lands",
-    "source_line": "The Silver Surfer (1987) Annual #6, Cover",
-    "wiki_file": "Silver_Surfer_Vol_1_6.jpg"
+    "ig": "DQ0p2oujXYm",
+    "kind": "crop",
+    "shortcode": "DQ0p2oujXYm",
+    "source_line": "Silver Surfer (Vol.1, 1987) Annual #6 (1993), Cover"
+  },
+  "134": {
+    "comic": "134-comic.jpg",
+    "disabled": false,
+    "file": "134.jpg",
+    "ig": "DQ0og8ljfK6",
+    "kind": "crop",
+    "shortcode": "DQ0og8ljfK6",
+    "source_line": "New Warriors: Ashcan Edition (1994) Issue #1, Back Cover"
+  },
+  "135": {
+    "comic": "135-comic.jpg",
+    "disabled": false,
+    "file": "135.jpg",
+    "ig": "DQw2y0sEVKq",
+    "kind": "crop",
+    "shortcode": "DQw2y0sEVKq",
+    "source_line": "1992 Impel Marvel Universe Series III, Carnage, Card #120"
   },
   "136": {
-    "comic": "136.jpg",
-    "disabled": true,
+    "comic": "136-comic.jpg",
+    "disabled": false,
     "file": "136.jpg",
-    "kind": "wiki",
-    "note": "wiki cover \u2014 not exotechktx crop; excluded from viewer until IG source lands",
-    "source_line": "Ghost Rider & Blaze: Spirits of Vengeance #6, Cover",
-    "wiki_file": "Spirits_of_Vengeance_Vol_1_6.jpg"
+    "ig": "DQw1l5rkYq6",
+    "kind": "crop",
+    "shortcode": "DQw1l5rkYq6",
+    "source_line": "Ghost Rider/Blaze: Spirits of Vengeance (Vol.1, 1992) Issue #6 (1992), Cover"
   },
   "137": {
-    "comic": "137.jpg",
-    "disabled": true,
+    "comic": "137-comic.jpg",
+    "disabled": false,
     "file": "137.jpg",
-    "kind": "wiki",
-    "note": "wiki cover \u2014 not exotechktx crop; excluded from viewer until IG source lands",
-    "source_line": "The Amazing Spider-Man (1963) #384, Page 16",
-    "wiki_file": "Amazing_Spider-Man_Vol_1_384.jpg"
+    "ig": "DQw0BRGEazS",
+    "kind": "crop",
+    "shortcode": "DQw0BRGEazS",
+    "source_line": "Amazing Spider-Man (Vol.1, 1963) Issue #384 (1993), Page 16"
   },
   "138": {
-    "comic": "138.jpg",
-    "disabled": true,
+    "comic": "138-comic.jpg",
+    "disabled": false,
     "file": "138.jpg",
-    "kind": "wiki",
-    "note": "wiki cover \u2014 not exotechktx crop; excluded from viewer until IG source lands",
-    "source_line": "The Amazing Spider-Man (1963) #379, Page 8",
-    "wiki_file": "Amazing_Spider-Man_Vol_1_379.jpg"
+    "ig": "DQwy2t3EbYH",
+    "kind": "crop",
+    "shortcode": "DQwy2t3EbYH",
+    "source_line": "Amazing Spider-Man (Vol.1, 1963) Issue #379 (1993), Page 8"
   },
   "139": {
-    "comic": "139.jpg",
-    "disabled": true,
+    "comic": "139-comic.jpg",
+    "disabled": false,
     "file": "139.jpg",
-    "kind": "wiki",
-    "note": "wiki cover \u2014 not exotechktx crop; excluded from viewer until IG source lands",
-    "source_line": "Amazing Spider-Man (1961) #336, Page 13",
-    "wiki_file": "Amazing_Spider-Man_Vol_1_336.jpg"
+    "ig": "DQwyYrgEe6m",
+    "kind": "crop",
+    "shortcode": "DQwyYrgEe6m",
+    "source_line": "Amazing Spider-Man (Vol. 1, 1961) Issue #336 (1990), Page 13"
+  },
+  "140": {
+    "comic": "140-comic.jpg",
+    "disabled": false,
+    "file": "140.jpg",
+    "ig": "DQvfJ35jZxq",
+    "kind": "crop",
+    "shortcode": "DQvfJ35jZxq",
+    "source_line": "Spider-Man vs. Venom TPB (1990), Back Cover"
   },
   "141": {
-    "comic": "141.jpg",
-    "disabled": true,
+    "comic": "141-comic.jpg",
+    "disabled": false,
     "file": "141.jpg",
-    "kind": "wiki",
-    "note": "wiki cover \u2014 not exotechktx crop; excluded from viewer until IG source lands",
-    "source_line": "X-Men (1991) #26, Cover",
-    "wiki_file": "X-Men_Vol_1_26.jpg"
+    "ig": "DQve_s9DWoQ",
+    "kind": "crop",
+    "shortcode": "DQve_s9DWoQ",
+    "source_line": "X-Men (Vol. 2, 1991) Issue #26 (1993), Cover"
+  },
+  "142": {
+    "comic": "142-comic.jpg",
+    "disabled": false,
+    "file": "142.jpg",
+    "ig": "DQve04tjZ__",
+    "kind": "crop",
+    "shortcode": "DQve04tjZ__",
+    "source_line": "1993 Impel X-Men Series II, Jean Grey, #13"
   },
   "143": {
-    "comic": "143.jpg",
-    "disabled": true,
+    "comic": "143-comic.jpg",
+    "disabled": false,
     "file": "143.jpg",
-    "kind": "wiki",
-    "note": "wiki cover \u2014 not exotechktx crop; excluded from viewer until IG source lands",
-    "source_line": "Uncanny X-Men (1963) Annual #17, Page 62",
-    "wiki_file": "Uncanny_X-Men_Annual_Vol_1_17.jpg"
+    "ig": "DQveqY6DUlN",
+    "kind": "crop",
+    "shortcode": "DQveqY6DUlN",
+    "source_line": "Uncanny X-Men (Vol. 1, 1963) Annual #17 (1993), Page 54"
   },
   "144": {
-    "comic": "144.jpg",
-    "disabled": true,
+    "comic": "144-comic.jpg",
+    "disabled": false,
     "file": "144.jpg",
-    "kind": "wiki",
-    "note": "wiki cover \u2014 not exotechktx crop; excluded from viewer until IG source lands",
-    "source_line": "X-Force (1991) #15, Page 14",
-    "wiki_file": "X-Force_Vol_1_15.jpg"
+    "ig": "DQvef-vjSNL",
+    "kind": "crop",
+    "shortcode": "DQvef-vjSNL",
+    "source_line": "X-Force (Vol.1, 1991) Issue #15 (1992), Page 14"
   },
   "145": {
-    "comic": "145.jpg",
-    "disabled": true,
+    "comic": "145-comic.jpg",
+    "disabled": false,
     "file": "145.jpg",
-    "kind": "wiki",
-    "note": "wiki cover \u2014 not exotechktx crop; excluded from viewer until IG source lands",
-    "source_line": "X-Men (1991) Annual #1, Cover",
-    "wiki_file": "X-Men_Annual_Vol_1_1.jpg"
+    "ig": "DQm0ug7EVOg",
+    "kind": "crop",
+    "shortcode": "DQm0ug7EVOg",
+    "source_line": "X-Men (Vol. 2, 1991) Annual #1 (1992), Cover"
   },
   "146": {
-    "comic": "146.jpg",
-    "disabled": true,
+    "comic": "146-comic.jpg",
+    "disabled": false,
     "file": "146.jpg",
-    "kind": "wiki",
-    "note": "wiki cover \u2014 not exotechktx crop; excluded from viewer until IG source lands",
-    "source_line": "X-Force (1991) #23, Cover",
-    "wiki_file": "X-Force_Vol_1_23.jpg"
+    "ig": "DQm0klzkXKg",
+    "kind": "crop",
+    "shortcode": "DQm0klzkXKg",
+    "source_line": "X-Force (Vol., 1991) Issue #23 (1993), Cover"
   },
   "147": {
-    "comic": "147.jpg",
-    "disabled": true,
+    "comic": "147-comic.jpg",
+    "disabled": false,
     "file": "147.jpg",
-    "kind": "wiki",
-    "note": "wiki cover \u2014 not exotechktx crop; excluded from viewer until IG source lands",
-    "source_line": "X-Force (1991) #19, Page 1",
-    "wiki_file": "X-Force_Vol_1_19.jpg"
+    "ig": "DQm0Z0NkS3w",
+    "kind": "crop",
+    "shortcode": "DQm0Z0NkS3w",
+    "source_line": "X-Force (Vol., 1991) Issue #19 (1993), Page 1"
   },
   "148": {
-    "comic": "148.jpg",
-    "disabled": true,
+    "comic": "148-comic.jpg",
+    "disabled": false,
     "file": "148.jpg",
-    "kind": "wiki",
-    "note": "wiki cover \u2014 not exotechktx crop; excluded from viewer until IG source lands",
-    "source_line": "Marvel Age #116, Page 10",
-    "wiki_file": "Marvel_Age_Vol_1_116.jpg"
+    "ig": "DQm0PBZkfqP",
+    "kind": "crop",
+    "shortcode": "DQm0PBZkfqP",
+    "source_line": "Marvel Age (Vol.1, 1983) Issue #116 (1993), Page 10"
   },
   "149": {
-    "comic": "149.jpg",
-    "disabled": true,
+    "comic": "149-comic.jpg",
+    "disabled": false,
     "file": "149.jpg",
-    "kind": "wiki",
-    "note": "wiki cover \u2014 not exotechktx crop; excluded from viewer until IG source lands",
-    "source_line": "X-Factor (1986) #90, Page 8",
-    "wiki_file": "X-Factor_Vol_1_90.jpg"
+    "ig": "DQm0ExpkTII",
+    "kind": "crop",
+    "shortcode": "DQm0ExpkTII",
+    "source_line": "X-Factor (Vol. 1, 1986) Issue #90 (1992), Page 8"
+  },
+  "150": {
+    "comic": "150-comic.jpg",
+    "disabled": false,
+    "file": "150.jpg",
+    "ig": "DQmz6BmEZWt",
+    "kind": "crop",
+    "shortcode": "DQmz6BmEZWt",
+    "source_line": "N/A"
   },
   "pb01": {
-    "comic": "pb01.jpg",
-    "disabled": true,
+    "comic": "pb01-comic.jpg",
+    "disabled": false,
     "file": "pb01.jpg",
-    "kind": "wiki",
-    "note": "wiki cover \u2014 not exotechktx crop; excluded from viewer until IG source lands",
-    "source_line": "X-Men (1991) #25, Cable Hologram",
-    "wiki_file": "X-Men_Vol_2_25.jpg"
+    "ig": "DQe1z4GkRDT",
+    "kind": "crop",
+    "shortcode": "DQe1z4GkRDT",
+    "source_line": "X-Force (Vol. 1, 1991) Issue #25 (1993), Hologram Card Art"
+  },
+  "pb02": {
+    "comic": "pb02-comic.jpg",
+    "disabled": false,
+    "file": "pb02.jpg",
+    "ig": "DQe1p7gkYTC",
+    "kind": "crop",
+    "shortcode": "DQe1p7gkYTC",
+    "source_line": "1992 X-Men Team Pin-Up (1992 Diamond Comics Fall Flings Pin-Up)"
   },
   "pb03": {
-    "comic": "pb03.jpg",
-    "disabled": true,
+    "comic": "pb03-comic.jpg",
+    "disabled": false,
     "file": "pb03.jpg",
-    "kind": "wiki",
-    "note": "wiki cover \u2014 not exotechktx crop; excluded from viewer until IG source lands",
-    "source_line": "Iron Man (1968) #301, Cover",
-    "wiki_file": "Iron_Man_Vol_1_301.jpg"
+    "ig": "DQe1gT4EfLn",
+    "kind": "crop",
+    "shortcode": "DQe1gT4EfLn",
+    "source_line": "Iron Man (Vol. 1, 1968) Issue #301 (1994), Cover"
   },
   "pb04": {
-    "comic": "pb04.jpg",
-    "disabled": true,
+    "comic": "pb04-comic.jpg",
+    "disabled": false,
     "file": "pb04.jpg",
-    "kind": "wiki",
-    "note": "wiki cover \u2014 not exotechktx crop; excluded from viewer until IG source lands",
-    "source_line": "The Uncanny X-Men (1963) #269, Page 22",
-    "wiki_file": "Uncanny_X-Men_Vol_1_269.jpg"
+    "ig": "DQe1WGSEQa2",
+    "kind": "crop",
+    "shortcode": "DQe1WGSEQa2",
+    "source_line": "The Uncanny X-Men (Vol. 1, 1963) Issue #269 (1990), Page 22"
+  },
+  "pb05": {
+    "comic": "pb05-comic.jpg",
+    "disabled": false,
+    "file": "pb05.jpg",
+    "ig": "DQe1MWiEeQm",
+    "kind": "crop",
+    "shortcode": "DQe1MWiEeQm",
+    "source_line": ""
+  },
+  "pb06": {
+    "comic": "pb06-comic.jpg",
+    "disabled": false,
+    "file": "pb06.jpg",
+    "ig": "DPnkbPiDS1S",
+    "kind": "crop",
+    "shortcode": "DPnkbPiDS1S",
+    "source_line": "1992 Impel Marvel Universe (Series III), Base Card #30"
   },
   "pb07": {
-    "comic": "pb07.jpg",
-    "disabled": true,
+    "comic": "pb07-comic.jpg",
+    "disabled": false,
     "file": "pb07.jpg",
-    "kind": "wiki",
-    "note": "wiki cover \u2014 not exotechktx crop; excluded from viewer until IG source lands",
-    "source_line": "Venom: Lethal Protector #2",
-    "wiki_file": "Venom_Lethal_Protector_Vol_1_2.jpg"
+    "ig": "DPnRzzTjcOG",
+    "kind": "crop",
+    "shortcode": "DPnRzzTjcOG",
+    "source_line": "Venom: Lethal Protector (Vol. 1, 1993) Issue #2, Page 12"
   },
   "pb08": {
-    "comic": "pb08.jpg",
-    "disabled": true,
+    "comic": "pb08-comic.jpg",
+    "disabled": false,
     "file": "pb08.jpg",
-    "kind": "wiki",
-    "note": "wiki cover \u2014 not exotechktx crop; excluded from viewer until IG source lands",
-    "source_line": "Wolverine (1988) #67, Cover",
-    "wiki_file": "Wolverine_Vol_2_67.jpg"
+    "ig": "DPk1Fx_jfb1",
+    "kind": "crop",
+    "shortcode": "DPk1Fx_jfb1",
+    "source_line": "Wolverine (Vol. 1, 1988) Issue #67 (1993), Cover"
   },
   "pb09": {
-    "comic": "pb09.jpg",
-    "disabled": true,
+    "comic": "pb09-comic.jpg",
+    "disabled": false,
     "file": "pb09.jpg",
-    "kind": "wiki",
-    "note": "wiki cover \u2014 not exotechktx crop; excluded from viewer until IG source lands",
-    "source_line": "Sleepwalker (1991) #11, Page 6",
-    "wiki_file": "Sleepwalker_Vol_1_11.jpg"
+    "ig": "DPh664pkc3G",
+    "kind": "crop",
+    "shortcode": "DPh664pkc3G",
+    "source_line": "Sleepwalker (Vol. 1, 1991) Issue #11 (1992), Page 6"
   },
   "pb10": {
-    "comic": "pb10.jpg",
-    "disabled": true,
+    "comic": "pb10-comic.jpg",
+    "disabled": false,
     "file": "pb10.jpg",
-    "kind": "wiki",
-    "note": "wiki cover \u2014 not exotechktx crop; excluded from viewer until IG source lands",
-    "source_line": "Punisher: War Journal (1988) #42, Cover",
-    "wiki_file": "Punisher_War_Journal_Vol_1_42.jpg"
+    "ig": "DPhqxvQkk_x",
+    "kind": "crop",
+    "shortcode": "DPhqxvQkk_x",
+    "source_line": "The Punisher: War Journal (1988) Issue #42 (1992), Cover"
   },
   "pb11": {
-    "comic": "pb11.jpg",
-    "disabled": true,
+    "comic": "pb11-comic.jpg",
+    "disabled": false,
     "file": "pb11.jpg",
-    "kind": "wiki",
-    "note": "wiki cover \u2014 not exotechktx crop; excluded from viewer until IG source lands",
-    "source_line": "The Uncanny X-Men (1963) #268, Page 1",
-    "wiki_file": "Uncanny_X-Men_Vol_1_268.jpg"
+    "ig": "DPg9ayekWUG",
+    "kind": "crop",
+    "shortcode": "DPg9ayekWUG",
+    "source_line": "Uncanny X-Men (Vol. 1, 1963) #268 (1990), Page 1"
   },
   "pb12": {
-    "comic": "pb12.jpg",
-    "disabled": true,
+    "comic": "pb12-comic.jpg",
+    "disabled": false,
     "file": "pb12.jpg",
-    "kind": "wiki",
-    "note": "wiki cover \u2014 not exotechktx crop; excluded from viewer until IG source lands",
-    "source_line": "X-Men Annual (Vol. 2, 1992) #1, Page 41",
-    "wiki_file": "X-Men_Annual_Vol_2_1.jpg"
+    "ig": "DPgADNAjelO",
+    "kind": "crop",
+    "shortcode": "DPgADNAjelO",
+    "source_line": "X-Men (Vol. 2, 1991) Annual #1 (1992), Page 41"
   },
   "pb13": {
-    "comic": "pb13.jpg",
-    "disabled": true,
+    "comic": "pb13-comic.jpg",
+    "disabled": false,
     "file": "pb13.jpg",
-    "kind": "wiki",
-    "note": "wiki cover \u2014 not exotechktx crop; excluded from viewer until IG source lands",
-    "source_line": "Thor (1966) #400, Page 36",
-    "wiki_file": "Thor_Vol_1_400.jpg"
+    "ig": "DPf8ZoBDdyq",
+    "kind": "crop",
+    "shortcode": "DPf8ZoBDdyq",
+    "source_line": "Thor (Vol. 1, 1966) Issue #400 (1989), Page 36"
   },
   "pb14": {
-    "comic": "pb14.jpg",
-    "disabled": true,
+    "comic": "pb14-comic.jpg",
+    "disabled": false,
     "file": "pb14.jpg",
-    "kind": "wiki",
-    "note": "wiki cover \u2014 not exotechktx crop; excluded from viewer until IG source lands",
-    "source_line": "Silver Surfer #31, Cover",
-    "wiki_file": "Silver_Surfer_Vol_3_31.jpg"
+    "ig": "DPVRWsPjZ6W",
+    "kind": "crop",
+    "shortcode": "DPVRWsPjZ6W",
+    "source_line": "Silver Surfer (Vol. 3, 1987) Issue #31 (1989), Cover (Flipped Horizontally)"
   },
   "pb15": {
-    "comic": "pb15.jpg",
-    "disabled": true,
+    "comic": "pb15-comic.jpg",
+    "disabled": false,
     "file": "pb15.jpg",
-    "kind": "wiki",
-    "note": "wiki cover \u2014 not exotechktx crop; excluded from viewer until IG source lands",
-    "source_line": "The Amazing Spider-Man (1963) #322, Page 8",
-    "wiki_file": "Amazing_Spider-Man_Vol_1_322.jpg"
+    "ig": "DPSvdFCDeAu",
+    "kind": "crop",
+    "shortcode": "DPSvdFCDeAu",
+    "source_line": "The Amazing Spider-Man (Vol. 1, 1963), Issue #322, Page 8"
   },
   "pb16": {
-    "comic": "pb16.jpg",
-    "disabled": true,
+    "comic": "pb16-comic.jpg",
+    "disabled": false,
     "file": "pb16.jpg",
-    "kind": "wiki",
-    "note": "wiki cover \u2014 not exotechktx crop; excluded from viewer until IG source lands",
-    "source_line": "Marvel Spotlight Vol. 3 (1993) #6, Cover",
-    "wiki_file": "Marvel_Spotlight_Vol_3_6.jpg"
+    "ig": "DPScWmnEY1W",
+    "kind": "crop",
+    "shortcode": "DPScWmnEY1W",
+    "source_line": "Marvel Spotlight (June 1993) Issue 6; Marvel Press Posters (July 1993), #143"
   },
   "pb17": {
-    "comic": "pb17.jpg",
-    "disabled": true,
+    "comic": "pb17-comic.jpg",
+    "disabled": false,
     "file": "pb17.jpg",
-    "kind": "wiki",
-    "note": "wiki cover \u2014 not exotechktx crop; excluded from viewer until IG source lands",
-    "source_line": "The Fantastic Four (1961) #351, Page 12",
-    "wiki_file": "Fantastic_Four_Vol_1_351.jpg"
+    "ig": "DPRcmIkkaBu",
+    "kind": "crop",
+    "shortcode": "DPRcmIkkaBu",
+    "source_line": "Fantastic Four (Vol. 1, 1961), Issue #351 (1991), Page 12"
   },
   "pb18": {
-    "comic": "pb18.jpg",
-    "disabled": true,
+    "comic": "pb18-comic.jpg",
+    "disabled": false,
     "file": "pb18.jpg",
-    "kind": "wiki",
-    "note": "wiki cover \u2014 not exotechktx crop; excluded from viewer until IG source lands",
-    "source_line": "The Fantastic Four (1961) #330, Cover",
-    "wiki_file": "Fantastic_Four_Vol_1_330.jpg"
+    "ig": "DPRTlKqEUXW",
+    "kind": "crop",
+    "shortcode": "DPRTlKqEUXW",
+    "source_line": "Fantastic Four (Vol. 1, 1961) Issue #330 (1989), Cover"
   }
 }
