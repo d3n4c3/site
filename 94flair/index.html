@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta name="x-flair-deploy" content="2026-10-16T22:48:46Z">
+<meta name="x-flair-deploy" content="2026-10-17T00:01:51Z">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>'94 Flair Presents the Marvel Universe &mdash; Masterset Checklist</title>
@@ -2096,15 +2096,15 @@ const PROMO_ART = {
   "u4-1": ["sheet4-sticker", "Front shown: the gold \"Ships June 1994\" title card"],
   "u4-2": ["sheet4-foil", "Front shown: the gold-foil etched title card"],
   "u4-3": ["sheet4-unreleased"],
-  "u9-1": ["sheet9-1", "Panel layout from base card scans"],
-  "u9-2": ["sheet9-2", "Photographed promo panel"],
-  "u9-3": ["sheet9-3", "Panel layout from base card scans"],
-  "u9-4": ["sheet9-4", "Panel layout from base card scans"],
-  "u9-5": ["sheet9-5", "Panel layout from base card scans"],
-  "u9-6": ["sheet9-6", "Panel layout from base card scans"],
-  "u9-7": ["sheet9-7", "Panel layout from base card scans"],
-  "u9-8": ["sheet9-8", "Panel layout from base card scans"],
-  "u9-9": ["sheet9-9", "Panel layout from base card scans"]
+  "u9-1": ["sheet9-1", "Front: panel layout from base card scans"],
+  "u9-2": ["sheet9-2", "Front: photographed promo panel"],
+  "u9-3": ["sheet9-3", "Front: panel layout from base card scans"],
+  "u9-4": ["sheet9-4", "Front: panel layout from base card scans"],
+  "u9-5": ["sheet9-5", "Front: panel layout from base card scans"],
+  "u9-6": ["sheet9-6", "Front: panel layout from base card scans"],
+  "u9-7": ["sheet9-7", "Front: panel layout from base card scans"],
+  "u9-8": ["sheet9-8", "Front: panel layout from base card scans"],
+  "u9-9": ["sheet9-9", "Front: panel layout from base card scans"]
 };
 // Shared back for the two released 4-card sheets (sticker + foil).
 const SHEET4_RELEASED_BACK = "sheet4-released-back";
@@ -2159,7 +2159,9 @@ function credit(key) {
   }
   if (kind === "u9-") {
     const nums = NINE_CARD[n - 1].flat().map(x => parseInt(x, 10));
-    return { label: "9-Card Uncut Sheet \u00b7 1994 Press Kit", name: `Sheet ${n}`, chars: `Cards ${nums.join(", ")}`, ...promoArt };
+    return { label: "9-Card Uncut Sheet \u00b7 1994 Press Kit", name: `Sheet ${n}`, chars: `Cards ${nums.join(", ")}`, ...promoArt,
+      back: promoSrc(`sheet9-${n}-back`),
+      backNote: "Back: matching card backs in the same 3\u00d73 layout" };
   }
   if (kind === "ap") {
     const [name, shows, , ran, file] = AD_PAGES[n - 1];
