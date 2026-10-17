@@ -7,7 +7,7 @@
 <style>
   :root {
     --bg: #100e14; --text: #f2ebe0; --muted: #a89b8a; --gold: #f2c75c;
-    --line: rgba(242, 199, 92, 0.35); --card-ar: 857 / 1200;
+    --line: rgba(242, 199, 92, 0.35); --card-ar: 857 / 1200; --ok: #7dcea0;
   }
   * { box-sizing: border-box; }
   body {
@@ -18,6 +18,7 @@
       radial-gradient(900px 500px at 90% 0%, rgba(242,199,92,.1), transparent 55%),
       var(--bg);
     color: var(--text);
+    padding-bottom: 88px;
   }
   .top { padding: 18px 20px 8px; max-width: 960px; margin: 0 auto; }
   .top h1 {
@@ -27,6 +28,15 @@
   .top p { margin: 8px 0 0; color: var(--muted); max-width: 46rem; }
   .stats { display:flex; flex-wrap:wrap; gap:10px 16px; margin:12px 0 0; font-size:13px; color:var(--muted); }
   .stats b { color: var(--text); }
+  .helpers {
+    display:flex; flex-wrap:wrap; gap:8px; margin-top:12px;
+  }
+  .helpers button {
+    font: 12px/1 "Oswald", sans-serif; letter-spacing: .1em; text-transform: uppercase;
+    color: var(--gold); background: rgba(0,0,0,.35); border: 1px solid var(--line);
+    border-radius: 6px; padding: 8px 12px; cursor: pointer;
+  }
+  .helpers button:hover { background: rgba(242,199,92,.12); }
   nav.index {
     display:flex; flex-wrap:wrap; gap:5px; max-width:960px; margin:12px auto 0; padding:0 20px 8px;
   }
@@ -39,8 +49,31 @@
   nav.index a.mismatch { border-color: rgba(224,122,122,.55); color:#e07a7a; }
   nav.index a.missing { border-color: rgba(168,155,138,.4); color:var(--muted); }
   nav.index a.unchecked { border-color: rgba(224,184,90,.45); color:#e0b85a; }
-  main { padding:8px 20px 56px; display:grid; gap:28px; max-width:960px; margin:0 auto; }
-  .meta { display:flex; flex-wrap:wrap; gap:10px; align-items:baseline; margin-bottom:4px; }
+  nav.index a.picked { outline: 2px solid var(--ok); outline-offset: 1px; }
+  main { padding:8px 20px 24px; display:grid; gap:28px; max-width:960px; margin:0 auto; }
+  .row.is-picked { outline: 1px solid rgba(125,206,160,.35); outline-offset: 8px; border-radius: 8px; }
+  .meta { display:flex; flex-wrap:wrap; gap:10px; align-items:center; margin-bottom:4px; }
+  .pick {
+    display:inline-flex; align-items:center; gap:8px; cursor:pointer; user-select:none;
+    font-family: "Oswald", sans-serif; font-size: 12px; letter-spacing: .1em; text-transform: uppercase;
+    color: var(--muted);
+  }
+  .pick input { position:absolute; opacity:0; width:1px; height:1px; }
+  .pick-ui {
+    width: 22px; height: 22px; border-radius: 5px; border: 2px solid var(--line);
+    background: #0b0910; display:grid; place-items:center; flex: 0 0 auto;
+  }
+  .pick-ui::after {
+    content: ""; width: 10px; height: 6px; border-left: 2px solid transparent; border-bottom: 2px solid transparent;
+    transform: rotate(-45deg) translateY(-1px);
+  }
+  .pick input:checked + .pick-ui {
+    border-color: var(--ok); background: rgba(125,206,160,.2);
+  }
+  .pick input:checked + .pick-ui::after { border-color: var(--ok); }
+  .pick input:checked ~ .pick-label { color: var(--ok); }
+  .pick input:disabled + .pick-ui { opacity: .35; }
+  .pick:has(input:disabled) { cursor: not-allowed; opacity: .55; }
   .id { font-family:"Oswald","Arial Narrow",sans-serif; font-size:18px; letter-spacing:.06em; text-transform:uppercase; }
   .pill {
     font-family:"Oswald",sans-serif; font-size:11px; letter-spacing:.14em; text-transform:uppercase;
@@ -63,25 +96,57 @@
   }
   .face img { display:block; width:100%; height:100%; object-fit:contain; border-radius:14px; }
   .face.missing-face { display:grid; place-items:center; color:var(--muted); font-size:14px; }
+  .submit-bar {
+    position: fixed; left: 0; right: 0; bottom: 0; z-index: 20;
+    background: rgba(16,14,20,.94); border-top: 1px solid var(--line);
+    backdrop-filter: blur(10px);
+    padding: 12px 16px;
+  }
+  .submit-inner {
+    max-width: 960px; margin: 0 auto;
+    display: flex; flex-wrap: wrap; gap: 12px; align-items: center; justify-content: space-between;
+  }
+  .submit-inner .count { font-family: "Oswald", sans-serif; letter-spacing: .08em; color: var(--muted); }
+  .submit-inner .count b { color: var(--text); }
+  .submit-inner .actions { display:flex; gap:8px; flex-wrap:wrap; }
+  .submit-inner button {
+    font: 13px/1 "Oswald", sans-serif; letter-spacing: .12em; text-transform: uppercase;
+    border-radius: 8px; padding: 12px 18px; cursor: pointer; border: 1px solid var(--line);
+  }
+  #submitPicks {
+    background: var(--gold); color: #1a1208; border-color: transparent; font-weight: 600;
+  }
+  #submitPicks:disabled { opacity: .45; cursor: not-allowed; }
+  #statusMsg { width: 100%; margin: 0; font-size: 13px; color: var(--ok); min-height: 1.2em; }
+  #statusMsg.err { color: #e07a7a; }
   @media (max-width:720px) { .pair { grid-template-columns:1fr; } }
 </style>
 </head>
 <body>
   <div class="top">
     <h1>Verify source art · #001–099</h1>
-    <p>Review only — not wired into the flipper. Frames match the live card viewer (gold border, card aspect, object-fit contain). Green = same pose/figure. Red = wrong candidate. Gold = not confirmed.</p>
+    <p>Check <b>Correct source</b> on every pair you think matches, then hit <b>Submit picks</b> at the bottom. I’ll read your submission from the server. Green/red pills are only my prior guesses — your checks are what count.</p>
     <div class="stats">
-      <span><b>39</b> match</span>
-      <span><b>47</b> mismatch</span>
+      <span><b>39</b> auto-match</span>
+      <span><b>47</b> auto-mismatch</span>
       <span><b>3</b> unchecked</span>
       <span><b>10</b> missing</span>
     </div>
+    <div class="helpers">
+      <button type="button" id="selectMatches">Select all auto-matches</button>
+      <button type="button" id="clearPicks">Clear all</button>
+    </div>
   </div>
-  <nav class="index"><a class="n match" href="#c001">1</a><a class="n match" href="#c002">2</a><a class="n missing" href="#c003">3</a><a class="n match" href="#c004">4</a><a class="n mismatch" href="#c005">5</a><a class="n mismatch" href="#c006">6</a><a class="n match" href="#c007">7</a><a class="n match" href="#c008">8</a><a class="n mismatch" href="#c009">9</a><a class="n missing" href="#c010">10</a><a class="n mismatch" href="#c011">11</a><a class="n mismatch" href="#c012">12</a><a class="n match" href="#c013">13</a><a class="n mismatch" href="#c014">14</a><a class="n match" href="#c015">15</a><a class="n match" href="#c016">16</a><a class="n match" href="#c017">17</a><a class="n match" href="#c018">18</a><a class="n mismatch" href="#c019">19</a><a class="n mismatch" href="#c020">20</a><a class="n mismatch" href="#c021">21</a><a class="n match" href="#c022">22</a><a class="n match" href="#c023">23</a><a class="n mismatch" href="#c024">24</a><a class="n mismatch" href="#c025">25</a><a class="n match" href="#c026">26</a><a class="n match" href="#c027">27</a><a class="n mismatch" href="#c028">28</a><a class="n unchecked" href="#c029">29</a><a class="n match" href="#c030">30</a><a class="n mismatch" href="#c031">31</a><a class="n mismatch" href="#c032">32</a><a class="n missing" href="#c033">33</a><a class="n match" href="#c034">34</a><a class="n mismatch" href="#c035">35</a><a class="n match" href="#c036">36</a><a class="n missing" href="#c037">37</a><a class="n mismatch" href="#c038">38</a><a class="n match" href="#c039">39</a><a class="n match" href="#c040">40</a><a class="n mismatch" href="#c041">41</a><a class="n missing" href="#c042">42</a><a class="n match" href="#c043">43</a><a class="n missing" href="#c044">44</a><a class="n mismatch" href="#c045">45</a><a class="n mismatch" href="#c046">46</a><a class="n mismatch" href="#c047">47</a><a class="n match" href="#c048">48</a><a class="n match" href="#c049">49</a><a class="n match" href="#c050">50</a><a class="n mismatch" href="#c051">51</a><a class="n mismatch" href="#c052">52</a><a class="n match" href="#c053">53</a><a class="n mismatch" href="#c054">54</a><a class="n mismatch" href="#c055">55</a><a class="n mismatch" href="#c056">56</a><a class="n mismatch" href="#c057">57</a><a class="n mismatch" href="#c058">58</a><a class="n mismatch" href="#c059">59</a><a class="n match" href="#c060">60</a><a class="n mismatch" href="#c061">61</a><a class="n mismatch" href="#c062">62</a><a class="n match" href="#c063">63</a><a class="n mismatch" href="#c064">64</a><a class="n mismatch" href="#c065">65</a><a class="n missing" href="#c066">66</a><a class="n mismatch" href="#c067">67</a><a class="n match" href="#c068">68</a><a class="n mismatch" href="#c069">69</a><a class="n missing" href="#c070">70</a><a class="n mismatch" href="#c071">71</a><a class="n mismatch" href="#c072">72</a><a class="n mismatch" href="#c073">73</a><a class="n match" href="#c074">74</a><a class="n mismatch" href="#c075">75</a><a class="n missing" href="#c076">76</a><a class="n mismatch" href="#c077">77</a><a class="n mismatch" href="#c078">78</a><a class="n match" href="#c079">79</a><a class="n match" href="#c080">80</a><a class="n unchecked" href="#c081">81</a><a class="n match" href="#c082">82</a><a class="n match" href="#c083">83</a><a class="n match" href="#c084">84</a><a class="n missing" href="#c085">85</a><a class="n mismatch" href="#c086">86</a><a class="n match" href="#c087">87</a><a class="n mismatch" href="#c088">88</a><a class="n match" href="#c089">89</a><a class="n match" href="#c090">90</a><a class="n mismatch" href="#c091">91</a><a class="n match" href="#c092">92</a><a class="n unchecked" href="#c093">93</a><a class="n mismatch" href="#c094">94</a><a class="n mismatch" href="#c095">95</a><a class="n mismatch" href="#c096">96</a><a class="n mismatch" href="#c097">97</a><a class="n match" href="#c098">98</a><a class="n match" href="#c099">99</a></nav>
+  <nav class="index" id="indexNav"><a class="n match" href="#c001">1</a><a class="n match" href="#c002">2</a><a class="n missing" href="#c003">3</a><a class="n match" href="#c004">4</a><a class="n mismatch" href="#c005">5</a><a class="n mismatch" href="#c006">6</a><a class="n match" href="#c007">7</a><a class="n match" href="#c008">8</a><a class="n mismatch" href="#c009">9</a><a class="n missing" href="#c010">10</a><a class="n mismatch" href="#c011">11</a><a class="n mismatch" href="#c012">12</a><a class="n match" href="#c013">13</a><a class="n mismatch" href="#c014">14</a><a class="n match" href="#c015">15</a><a class="n match" href="#c016">16</a><a class="n match" href="#c017">17</a><a class="n match" href="#c018">18</a><a class="n mismatch" href="#c019">19</a><a class="n mismatch" href="#c020">20</a><a class="n mismatch" href="#c021">21</a><a class="n match" href="#c022">22</a><a class="n match" href="#c023">23</a><a class="n mismatch" href="#c024">24</a><a class="n mismatch" href="#c025">25</a><a class="n match" href="#c026">26</a><a class="n match" href="#c027">27</a><a class="n mismatch" href="#c028">28</a><a class="n unchecked" href="#c029">29</a><a class="n match" href="#c030">30</a><a class="n mismatch" href="#c031">31</a><a class="n mismatch" href="#c032">32</a><a class="n missing" href="#c033">33</a><a class="n match" href="#c034">34</a><a class="n mismatch" href="#c035">35</a><a class="n match" href="#c036">36</a><a class="n missing" href="#c037">37</a><a class="n mismatch" href="#c038">38</a><a class="n match" href="#c039">39</a><a class="n match" href="#c040">40</a><a class="n mismatch" href="#c041">41</a><a class="n missing" href="#c042">42</a><a class="n match" href="#c043">43</a><a class="n missing" href="#c044">44</a><a class="n mismatch" href="#c045">45</a><a class="n mismatch" href="#c046">46</a><a class="n mismatch" href="#c047">47</a><a class="n match" href="#c048">48</a><a class="n match" href="#c049">49</a><a class="n match" href="#c050">50</a><a class="n mismatch" href="#c051">51</a><a class="n mismatch" href="#c052">52</a><a class="n match" href="#c053">53</a><a class="n mismatch" href="#c054">54</a><a class="n mismatch" href="#c055">55</a><a class="n mismatch" href="#c056">56</a><a class="n mismatch" href="#c057">57</a><a class="n mismatch" href="#c058">58</a><a class="n mismatch" href="#c059">59</a><a class="n match" href="#c060">60</a><a class="n mismatch" href="#c061">61</a><a class="n mismatch" href="#c062">62</a><a class="n match" href="#c063">63</a><a class="n mismatch" href="#c064">64</a><a class="n mismatch" href="#c065">65</a><a class="n missing" href="#c066">66</a><a class="n mismatch" href="#c067">67</a><a class="n match" href="#c068">68</a><a class="n mismatch" href="#c069">69</a><a class="n missing" href="#c070">70</a><a class="n mismatch" href="#c071">71</a><a class="n mismatch" href="#c072">72</a><a class="n mismatch" href="#c073">73</a><a class="n match" href="#c074">74</a><a class="n mismatch" href="#c075">75</a><a class="n missing" href="#c076">76</a><a class="n mismatch" href="#c077">77</a><a class="n mismatch" href="#c078">78</a><a class="n match" href="#c079">79</a><a class="n match" href="#c080">80</a><a class="n unchecked" href="#c081">81</a><a class="n match" href="#c082">82</a><a class="n match" href="#c083">83</a><a class="n match" href="#c084">84</a><a class="n missing" href="#c085">85</a><a class="n mismatch" href="#c086">86</a><a class="n match" href="#c087">87</a><a class="n mismatch" href="#c088">88</a><a class="n match" href="#c089">89</a><a class="n match" href="#c090">90</a><a class="n mismatch" href="#c091">91</a><a class="n match" href="#c092">92</a><a class="n unchecked" href="#c093">93</a><a class="n mismatch" href="#c094">94</a><a class="n mismatch" href="#c095">95</a><a class="n mismatch" href="#c096">96</a><a class="n mismatch" href="#c097">97</a><a class="n match" href="#c098">98</a><a class="n match" href="#c099">99</a></nav>
   <main>
 
-<article class="row" id="c001" data-verdict="match">
+<article class="row" id="c001" data-verdict="match" data-n="1">
   <div class="meta">
+    <label class="pick">
+      <input type="checkbox" name="pick" value="1">
+      <span class="pick-ui" aria-hidden="true"></span>
+      <span class="pick-label">Correct source</span>
+    </label>
     <div class="id">#001 · Origin of the Fantastic Four!</div>
     <span class="pill" style="--pill:#7dcea0">MATCH</span>
   </div>
@@ -98,8 +163,13 @@
     </figure>
   </div>
 </article>
-<article class="row" id="c002" data-verdict="match">
+<article class="row" id="c002" data-verdict="match" data-n="2">
   <div class="meta">
+    <label class="pick">
+      <input type="checkbox" name="pick" value="2">
+      <span class="pick-ui" aria-hidden="true"></span>
+      <span class="pick-label">Correct source</span>
+    </label>
     <div class="id">#002 · Origin of the Incredible Hulk</div>
     <span class="pill" style="--pill:#7dcea0">MATCH</span>
   </div>
@@ -116,8 +186,13 @@
     </figure>
   </div>
 </article>
-<article class="row" id="c003" data-verdict="missing">
+<article class="row" id="c003" data-verdict="missing" data-n="3">
   <div class="meta">
+    <label class="pick">
+      <input type="checkbox" name="pick" value="3" disabled>
+      <span class="pick-ui" aria-hidden="true"></span>
+      <span class="pick-label">Correct source</span>
+    </label>
     <div class="id">#003 · Origin of Spider-Man</div>
     <span class="pill" style="--pill:#a89b8a">MISSING</span>
   </div>
@@ -134,8 +209,13 @@
     </figure>
   </div>
 </article>
-<article class="row" id="c004" data-verdict="match">
+<article class="row" id="c004" data-verdict="match" data-n="4">
   <div class="meta">
+    <label class="pick">
+      <input type="checkbox" name="pick" value="4">
+      <span class="pick-ui" aria-hidden="true"></span>
+      <span class="pick-label">Correct source</span>
+    </label>
     <div class="id">#004 · Origin of Thor</div>
     <span class="pill" style="--pill:#7dcea0">MATCH</span>
   </div>
@@ -152,8 +232,13 @@
     </figure>
   </div>
 </article>
-<article class="row" id="c005" data-verdict="mismatch">
+<article class="row" id="c005" data-verdict="mismatch" data-n="5">
   <div class="meta">
+    <label class="pick">
+      <input type="checkbox" name="pick" value="5">
+      <span class="pick-ui" aria-hidden="true"></span>
+      <span class="pick-label">Correct source</span>
+    </label>
     <div class="id">#005 · Amazing Spider-Man #1</div>
     <span class="pill" style="--pill:#e07a7a">MISMATCH</span>
   </div>
@@ -170,8 +255,13 @@
     </figure>
   </div>
 </article>
-<article class="row" id="c006" data-verdict="mismatch">
+<article class="row" id="c006" data-verdict="mismatch" data-n="6">
   <div class="meta">
+    <label class="pick">
+      <input type="checkbox" name="pick" value="6">
+      <span class="pick-ui" aria-hidden="true"></span>
+      <span class="pick-label">Correct source</span>
+    </label>
     <div class="id">#006 · The Origin of Iron Man</div>
     <span class="pill" style="--pill:#e07a7a">MISMATCH</span>
   </div>
@@ -188,8 +278,13 @@
     </figure>
   </div>
 </article>
-<article class="row" id="c007" data-verdict="match">
+<article class="row" id="c007" data-verdict="match" data-n="7">
   <div class="meta">
+    <label class="pick">
+      <input type="checkbox" name="pick" value="7">
+      <span class="pick-ui" aria-hidden="true"></span>
+      <span class="pick-label">Correct source</span>
+    </label>
     <div class="id">#007 · Hulk -vs- Thing</div>
     <span class="pill" style="--pill:#7dcea0">MATCH</span>
   </div>
@@ -206,8 +301,13 @@
     </figure>
   </div>
 </article>
-<article class="row" id="c008" data-verdict="match">
+<article class="row" id="c008" data-verdict="match" data-n="8">
   <div class="meta">
+    <label class="pick">
+      <input type="checkbox" name="pick" value="8">
+      <span class="pick-ui" aria-hidden="true"></span>
+      <span class="pick-label">Correct source</span>
+    </label>
     <div class="id">#008 · Origin of Vulture</div>
     <span class="pill" style="--pill:#7dcea0">MATCH</span>
   </div>
@@ -224,8 +324,13 @@
     </figure>
   </div>
 </article>
-<article class="row" id="c009" data-verdict="mismatch">
+<article class="row" id="c009" data-verdict="mismatch" data-n="9">
   <div class="meta">
+    <label class="pick">
+      <input type="checkbox" name="pick" value="9">
+      <span class="pick-ui" aria-hidden="true"></span>
+      <span class="pick-label">Correct source</span>
+    </label>
     <div class="id">#009 · Origin of Doc Ock</div>
     <span class="pill" style="--pill:#e07a7a">MISMATCH</span>
   </div>
@@ -242,8 +347,13 @@
     </figure>
   </div>
 </article>
-<article class="row" id="c010" data-verdict="missing">
+<article class="row" id="c010" data-verdict="missing" data-n="10">
   <div class="meta">
+    <label class="pick">
+      <input type="checkbox" name="pick" value="10" disabled>
+      <span class="pick-ui" aria-hidden="true"></span>
+      <span class="pick-label">Correct source</span>
+    </label>
     <div class="id">#010 · Origin of The X-Men</div>
     <span class="pill" style="--pill:#a89b8a">MISSING</span>
   </div>
@@ -260,8 +370,13 @@
     </figure>
   </div>
 </article>
-<article class="row" id="c011" data-verdict="mismatch">
+<article class="row" id="c011" data-verdict="mismatch" data-n="11">
   <div class="meta">
+    <label class="pick">
+      <input type="checkbox" name="pick" value="11">
+      <span class="pick-ui" aria-hidden="true"></span>
+      <span class="pick-label">Correct source</span>
+    </label>
     <div class="id">#011 · Avengers Assemble</div>
     <span class="pill" style="--pill:#e07a7a">MISMATCH</span>
   </div>
@@ -278,8 +393,13 @@
     </figure>
   </div>
 </article>
-<article class="row" id="c012" data-verdict="mismatch">
+<article class="row" id="c012" data-verdict="mismatch" data-n="12">
   <div class="meta">
+    <label class="pick">
+      <input type="checkbox" name="pick" value="12">
+      <span class="pick-ui" aria-hidden="true"></span>
+      <span class="pick-label">Correct source</span>
+    </label>
     <div class="id">#012 · Origin of Dr. Strange</div>
     <span class="pill" style="--pill:#e07a7a">MISMATCH</span>
   </div>
@@ -296,8 +416,13 @@
     </figure>
   </div>
 </article>
-<article class="row" id="c013" data-verdict="match">
+<article class="row" id="c013" data-verdict="match" data-n="13">
   <div class="meta">
+    <label class="pick">
+      <input type="checkbox" name="pick" value="13">
+      <span class="pick-ui" aria-hidden="true"></span>
+      <span class="pick-label">Correct source</span>
+    </label>
     <div class="id">#013 · Brotherhood of Evil Mutants</div>
     <span class="pill" style="--pill:#7dcea0">MATCH</span>
   </div>
@@ -314,8 +439,13 @@
     </figure>
   </div>
 </article>
-<article class="row" id="c014" data-verdict="mismatch">
+<article class="row" id="c014" data-verdict="mismatch" data-n="14">
   <div class="meta">
+    <label class="pick">
+      <input type="checkbox" name="pick" value="14">
+      <span class="pick-ui" aria-hidden="true"></span>
+      <span class="pick-label">Correct source</span>
+    </label>
     <div class="id">#014 · Origin of Daredevil</div>
     <span class="pill" style="--pill:#e07a7a">MISMATCH</span>
   </div>
@@ -332,8 +462,13 @@
     </figure>
   </div>
 </article>
-<article class="row" id="c015" data-verdict="match">
+<article class="row" id="c015" data-verdict="match" data-n="15">
   <div class="meta">
+    <label class="pick">
+      <input type="checkbox" name="pick" value="15">
+      <span class="pick-ui" aria-hidden="true"></span>
+      <span class="pick-label">Correct source</span>
+    </label>
     <div class="id">#015 · Scorpion -vs- Spider-Man</div>
     <span class="pill" style="--pill:#7dcea0">MATCH</span>
   </div>
@@ -350,8 +485,13 @@
     </figure>
   </div>
 </article>
-<article class="row" id="c016" data-verdict="match">
+<article class="row" id="c016" data-verdict="match" data-n="16">
   <div class="meta">
+    <label class="pick">
+      <input type="checkbox" name="pick" value="16">
+      <span class="pick-ui" aria-hidden="true"></span>
+      <span class="pick-label">Correct source</span>
+    </label>
     <div class="id">#016 · The Origin of Captain America</div>
     <span class="pill" style="--pill:#7dcea0">MATCH</span>
   </div>
@@ -368,8 +508,13 @@
     </figure>
   </div>
 </article>
-<article class="row" id="c017" data-verdict="match">
+<article class="row" id="c017" data-verdict="match" data-n="17">
   <div class="meta">
+    <label class="pick">
+      <input type="checkbox" name="pick" value="17">
+      <span class="pick-ui" aria-hidden="true"></span>
+      <span class="pick-label">Correct source</span>
+    </label>
     <div class="id">#017 · Daredevil -vs- Submariner</div>
     <span class="pill" style="--pill:#7dcea0">MATCH</span>
   </div>
@@ -386,8 +531,13 @@
     </figure>
   </div>
 </article>
-<article class="row" id="c018" data-verdict="match">
+<article class="row" id="c018" data-verdict="match" data-n="18">
   <div class="meta">
+    <label class="pick">
+      <input type="checkbox" name="pick" value="18">
+      <span class="pick-ui" aria-hidden="true"></span>
+      <span class="pick-label">Correct source</span>
+    </label>
     <div class="id">#018 · Wedding of Reed & Sue</div>
     <span class="pill" style="--pill:#7dcea0">MATCH</span>
   </div>
@@ -404,8 +554,13 @@
     </figure>
   </div>
 </article>
-<article class="row" id="c019" data-verdict="mismatch">
+<article class="row" id="c019" data-verdict="mismatch" data-n="19">
   <div class="meta">
+    <label class="pick">
+      <input type="checkbox" name="pick" value="19">
+      <span class="pick-ui" aria-hidden="true"></span>
+      <span class="pick-label">Correct source</span>
+    </label>
     <div class="id">#019 · Origin of the Sentinels</div>
     <span class="pill" style="--pill:#e07a7a">MISMATCH</span>
   </div>
@@ -422,8 +577,13 @@
     </figure>
   </div>
 </article>
-<article class="row" id="c020" data-verdict="mismatch">
+<article class="row" id="c020" data-verdict="mismatch" data-n="20">
   <div class="meta">
+    <label class="pick">
+      <input type="checkbox" name="pick" value="20">
+      <span class="pick-ui" aria-hidden="true"></span>
+      <span class="pick-label">Correct source</span>
+    </label>
     <div class="id">#020 · Galactus Appears</div>
     <span class="pill" style="--pill:#e07a7a">MISMATCH</span>
   </div>
@@ -440,8 +600,13 @@
     </figure>
   </div>
 </article>
-<article class="row" id="c021" data-verdict="mismatch">
+<article class="row" id="c021" data-verdict="mismatch" data-n="21">
   <div class="meta">
+    <label class="pick">
+      <input type="checkbox" name="pick" value="21">
+      <span class="pick-ui" aria-hidden="true"></span>
+      <span class="pick-label">Correct source</span>
+    </label>
     <div class="id">#021 · Origin of Silver Surfer</div>
     <span class="pill" style="--pill:#e07a7a">MISMATCH</span>
   </div>
@@ -458,8 +623,13 @@
     </figure>
   </div>
 </article>
-<article class="row" id="c022" data-verdict="match">
+<article class="row" id="c022" data-verdict="match" data-n="22">
   <div class="meta">
+    <label class="pick">
+      <input type="checkbox" name="pick" value="22">
+      <span class="pick-ui" aria-hidden="true"></span>
+      <span class="pick-label">Correct source</span>
+    </label>
     <div class="id">#022 · Spider-Man -vs- Green Goblin</div>
     <span class="pill" style="--pill:#7dcea0">MATCH</span>
   </div>
@@ -476,8 +646,13 @@
     </figure>
   </div>
 </article>
-<article class="row" id="c023" data-verdict="match">
+<article class="row" id="c023" data-verdict="match" data-n="23">
   <div class="meta">
+    <label class="pick">
+      <input type="checkbox" name="pick" value="23">
+      <span class="pick-ui" aria-hidden="true"></span>
+      <span class="pick-label">Correct source</span>
+    </label>
     <div class="id">#023 · Origin of Rhino</div>
     <span class="pill" style="--pill:#7dcea0">MATCH</span>
   </div>
@@ -494,8 +669,13 @@
     </figure>
   </div>
 </article>
-<article class="row" id="c024" data-verdict="mismatch">
+<article class="row" id="c024" data-verdict="mismatch" data-n="24">
   <div class="meta">
+    <label class="pick">
+      <input type="checkbox" name="pick" value="24">
+      <span class="pick-ui" aria-hidden="true"></span>
+      <span class="pick-label">Correct source</span>
+    </label>
     <div class="id">#024 · Peter Meets Mary Jane</div>
     <span class="pill" style="--pill:#e07a7a">MISMATCH</span>
   </div>
@@ -512,8 +692,13 @@
     </figure>
   </div>
 </article>
-<article class="row" id="c025" data-verdict="mismatch">
+<article class="row" id="c025" data-verdict="mismatch" data-n="25">
   <div class="meta">
+    <label class="pick">
+      <input type="checkbox" name="pick" value="25">
+      <span class="pick-ui" aria-hidden="true"></span>
+      <span class="pick-label">Correct source</span>
+    </label>
     <div class="id">#025 · Doom Steals the Power Cosmic</div>
     <span class="pill" style="--pill:#e07a7a">MISMATCH</span>
   </div>
@@ -530,8 +715,13 @@
     </figure>
   </div>
 </article>
-<article class="row" id="c026" data-verdict="match">
+<article class="row" id="c026" data-verdict="match" data-n="26">
   <div class="meta">
+    <label class="pick">
+      <input type="checkbox" name="pick" value="26">
+      <span class="pick-ui" aria-hidden="true"></span>
+      <span class="pick-label">Correct source</span>
+    </label>
     <div class="id">#026 · Origin of Warlock</div>
     <span class="pill" style="--pill:#7dcea0">MATCH</span>
   </div>
@@ -548,8 +738,13 @@
     </figure>
   </div>
 </article>
-<article class="row" id="c027" data-verdict="match">
+<article class="row" id="c027" data-verdict="match" data-n="27">
   <div class="meta">
+    <label class="pick">
+      <input type="checkbox" name="pick" value="27">
+      <span class="pick-ui" aria-hidden="true"></span>
+      <span class="pick-label">Correct source</span>
+    </label>
     <div class="id">#027 · Origin of The Vision</div>
     <span class="pill" style="--pill:#7dcea0">MATCH</span>
   </div>
@@ -566,8 +761,13 @@
     </figure>
   </div>
 </article>
-<article class="row" id="c028" data-verdict="mismatch">
+<article class="row" id="c028" data-verdict="mismatch" data-n="28">
   <div class="meta">
+    <label class="pick">
+      <input type="checkbox" name="pick" value="28">
+      <span class="pick-ui" aria-hidden="true"></span>
+      <span class="pick-label">Correct source</span>
+    </label>
     <div class="id">#028 · Mephisto Appears</div>
     <span class="pill" style="--pill:#e07a7a">MISMATCH</span>
   </div>
@@ -584,8 +784,13 @@
     </figure>
   </div>
 </article>
-<article class="row" id="c029" data-verdict="unchecked">
+<article class="row" id="c029" data-verdict="unchecked" data-n="29">
   <div class="meta">
+    <label class="pick">
+      <input type="checkbox" name="pick" value="29">
+      <span class="pick-ui" aria-hidden="true"></span>
+      <span class="pick-label">Correct source</span>
+    </label>
     <div class="id">#029 · Origin of Morbius</div>
     <span class="pill" style="--pill:#e0b85a">UNCHECKED</span>
   </div>
@@ -602,8 +807,13 @@
     </figure>
   </div>
 </article>
-<article class="row" id="c030" data-verdict="match">
+<article class="row" id="c030" data-verdict="match" data-n="30">
   <div class="meta">
+    <label class="pick">
+      <input type="checkbox" name="pick" value="30">
+      <span class="pick-ui" aria-hidden="true"></span>
+      <span class="pick-label">Correct source</span>
+    </label>
     <div class="id">#030 · Origin of Ghost Rider</div>
     <span class="pill" style="--pill:#7dcea0">MATCH</span>
   </div>
@@ -620,8 +830,13 @@
     </figure>
   </div>
 </article>
-<article class="row" id="c031" data-verdict="mismatch">
+<article class="row" id="c031" data-verdict="mismatch" data-n="31">
   <div class="meta">
+    <label class="pick">
+      <input type="checkbox" name="pick" value="31">
+      <span class="pick-ui" aria-hidden="true"></span>
+      <span class="pick-label">Correct source</span>
+    </label>
     <div class="id">#031 · Thanos Attacks</div>
     <span class="pill" style="--pill:#e07a7a">MISMATCH</span>
   </div>
@@ -638,8 +853,13 @@
     </figure>
   </div>
 </article>
-<article class="row" id="c032" data-verdict="mismatch">
+<article class="row" id="c032" data-verdict="mismatch" data-n="32">
   <div class="meta">
+    <label class="pick">
+      <input type="checkbox" name="pick" value="32">
+      <span class="pick-ui" aria-hidden="true"></span>
+      <span class="pick-label">Correct source</span>
+    </label>
     <div class="id">#032 · Death of Gwen Stacy</div>
     <span class="pill" style="--pill:#e07a7a">MISMATCH</span>
   </div>
@@ -656,8 +876,13 @@
     </figure>
   </div>
 </article>
-<article class="row" id="c033" data-verdict="missing">
+<article class="row" id="c033" data-verdict="missing" data-n="33">
   <div class="meta">
+    <label class="pick">
+      <input type="checkbox" name="pick" value="33" disabled>
+      <span class="pick-ui" aria-hidden="true"></span>
+      <span class="pick-label">Correct source</span>
+    </label>
     <div class="id">#033 · Punisher vs. Spider-Man</div>
     <span class="pill" style="--pill:#a89b8a">MISSING</span>
   </div>
@@ -674,8 +899,13 @@
     </figure>
   </div>
 </article>
-<article class="row" id="c034" data-verdict="match">
+<article class="row" id="c034" data-verdict="match" data-n="34">
   <div class="meta">
+    <label class="pick">
+      <input type="checkbox" name="pick" value="34">
+      <span class="pick-ui" aria-hidden="true"></span>
+      <span class="pick-label">Correct source</span>
+    </label>
     <div class="id">#034 · Wolverine vs. Hulk</div>
     <span class="pill" style="--pill:#7dcea0">MATCH</span>
   </div>
@@ -692,8 +922,13 @@
     </figure>
   </div>
 </article>
-<article class="row" id="c035" data-verdict="mismatch">
+<article class="row" id="c035" data-verdict="mismatch" data-n="35">
   <div class="meta">
+    <label class="pick">
+      <input type="checkbox" name="pick" value="35">
+      <span class="pick-ui" aria-hidden="true"></span>
+      <span class="pick-label">Correct source</span>
+    </label>
     <div class="id">#035 · The Wedding</div>
     <span class="pill" style="--pill:#e07a7a">MISMATCH</span>
   </div>
@@ -710,8 +945,13 @@
     </figure>
   </div>
 </article>
-<article class="row" id="c036" data-verdict="match">
+<article class="row" id="c036" data-verdict="match" data-n="36">
   <div class="meta">
+    <label class="pick">
+      <input type="checkbox" name="pick" value="36">
+      <span class="pick-ui" aria-hidden="true"></span>
+      <span class="pick-label">Correct source</span>
+    </label>
     <div class="id">#036 · Origin of the Invaders</div>
     <span class="pill" style="--pill:#7dcea0">MATCH</span>
   </div>
@@ -728,8 +968,13 @@
     </figure>
   </div>
 </article>
-<article class="row" id="c037" data-verdict="missing">
+<article class="row" id="c037" data-verdict="missing" data-n="37">
   <div class="meta">
+    <label class="pick">
+      <input type="checkbox" name="pick" value="37" disabled>
+      <span class="pick-ui" aria-hidden="true"></span>
+      <span class="pick-label">Correct source</span>
+    </label>
     <div class="id">#037 · Spider-Man meets the Black Cat</div>
     <span class="pill" style="--pill:#a89b8a">MISSING</span>
   </div>
@@ -746,8 +991,13 @@
     </figure>
   </div>
 </article>
-<article class="row" id="c038" data-verdict="mismatch">
+<article class="row" id="c038" data-verdict="mismatch" data-n="38">
   <div class="meta">
+    <label class="pick">
+      <input type="checkbox" name="pick" value="38">
+      <span class="pick-ui" aria-hidden="true"></span>
+      <span class="pick-label">Correct source</span>
+    </label>
     <div class="id">#038 · The Hellfire Club Revealed</div>
     <span class="pill" style="--pill:#e07a7a">MISMATCH</span>
   </div>
@@ -764,8 +1014,13 @@
     </figure>
   </div>
 </article>
-<article class="row" id="c039" data-verdict="match">
+<article class="row" id="c039" data-verdict="match" data-n="39">
   <div class="meta">
+    <label class="pick">
+      <input type="checkbox" name="pick" value="39">
+      <span class="pick-ui" aria-hidden="true"></span>
+      <span class="pick-label">Correct source</span>
+    </label>
     <div class="id">#039 · Origin of She-Hulk</div>
     <span class="pill" style="--pill:#7dcea0">MATCH</span>
   </div>
@@ -782,8 +1037,13 @@
     </figure>
   </div>
 </article>
-<article class="row" id="c040" data-verdict="match">
+<article class="row" id="c040" data-verdict="match" data-n="40">
   <div class="meta">
+    <label class="pick">
+      <input type="checkbox" name="pick" value="40">
+      <span class="pick-ui" aria-hidden="true"></span>
+      <span class="pick-label">Correct source</span>
+    </label>
     <div class="id">#040 · Origin of Moon Knight</div>
     <span class="pill" style="--pill:#7dcea0">MATCH</span>
   </div>
@@ -800,8 +1060,13 @@
     </figure>
   </div>
 </article>
-<article class="row" id="c041" data-verdict="mismatch">
+<article class="row" id="c041" data-verdict="mismatch" data-n="41">
   <div class="meta">
+    <label class="pick">
+      <input type="checkbox" name="pick" value="41">
+      <span class="pick-ui" aria-hidden="true"></span>
+      <span class="pick-label">Correct source</span>
+    </label>
     <div class="id">#041 · Days of Future Past</div>
     <span class="pill" style="--pill:#e07a7a">MISMATCH</span>
   </div>
@@ -818,8 +1083,13 @@
     </figure>
   </div>
 </article>
-<article class="row" id="c042" data-verdict="missing">
+<article class="row" id="c042" data-verdict="missing" data-n="42">
   <div class="meta">
+    <label class="pick">
+      <input type="checkbox" name="pick" value="42" disabled>
+      <span class="pick-ui" aria-hidden="true"></span>
+      <span class="pick-label">Correct source</span>
+    </label>
     <div class="id">#042 · Elektra Appears</div>
     <span class="pill" style="--pill:#a89b8a">MISSING</span>
   </div>
@@ -836,8 +1106,13 @@
     </figure>
   </div>
 </article>
-<article class="row" id="c043" data-verdict="match">
+<article class="row" id="c043" data-verdict="match" data-n="43">
   <div class="meta">
+    <label class="pick">
+      <input type="checkbox" name="pick" value="43">
+      <span class="pick-ui" aria-hidden="true"></span>
+      <span class="pick-label">Correct source</span>
+    </label>
     <div class="id">#043 · Death of Elektra</div>
     <span class="pill" style="--pill:#7dcea0">MATCH</span>
   </div>
@@ -854,8 +1129,13 @@
     </figure>
   </div>
 </article>
-<article class="row" id="c044" data-verdict="missing">
+<article class="row" id="c044" data-verdict="missing" data-n="44">
   <div class="meta">
+    <label class="pick">
+      <input type="checkbox" name="pick" value="44" disabled>
+      <span class="pick-ui" aria-hidden="true"></span>
+      <span class="pick-label">Correct source</span>
+    </label>
     <div class="id">#044 · Hobgoblin Appears</div>
     <span class="pill" style="--pill:#a89b8a">MISSING</span>
   </div>
@@ -872,8 +1152,13 @@
     </figure>
   </div>
 </article>
-<article class="row" id="c045" data-verdict="mismatch">
+<article class="row" id="c045" data-verdict="mismatch" data-n="45">
   <div class="meta">
+    <label class="pick">
+      <input type="checkbox" name="pick" value="45">
+      <span class="pick-ui" aria-hidden="true"></span>
+      <span class="pick-label">Correct source</span>
+    </label>
     <div class="id">#045 · Origin of Alpha Flight</div>
     <span class="pill" style="--pill:#e07a7a">MISMATCH</span>
   </div>
@@ -890,8 +1175,13 @@
     </figure>
   </div>
 </article>
-<article class="row" id="c046" data-verdict="mismatch">
+<article class="row" id="c046" data-verdict="mismatch" data-n="46">
   <div class="meta">
+    <label class="pick">
+      <input type="checkbox" name="pick" value="46">
+      <span class="pick-ui" aria-hidden="true"></span>
+      <span class="pick-label">Correct source</span>
+    </label>
     <div class="id">#046 · Ballad of Beta Ray Bill</div>
     <span class="pill" style="--pill:#e07a7a">MISMATCH</span>
   </div>
@@ -908,8 +1198,13 @@
     </figure>
   </div>
 </article>
-<article class="row" id="c047" data-verdict="mismatch">
+<article class="row" id="c047" data-verdict="mismatch" data-n="47">
   <div class="meta">
+    <label class="pick">
+      <input type="checkbox" name="pick" value="47">
+      <span class="pick-ui" aria-hidden="true"></span>
+      <span class="pick-label">Correct source</span>
+    </label>
     <div class="id">#047 · The Trial of Reed Richards</div>
     <span class="pill" style="--pill:#e07a7a">MISMATCH</span>
   </div>
@@ -926,8 +1221,13 @@
     </figure>
   </div>
 </article>
-<article class="row" id="c048" data-verdict="match">
+<article class="row" id="c048" data-verdict="match" data-n="48">
   <div class="meta">
+    <label class="pick">
+      <input type="checkbox" name="pick" value="48">
+      <span class="pick-ui" aria-hidden="true"></span>
+      <span class="pick-label">Correct source</span>
+    </label>
     <div class="id">#048 · The Black Costume Saga</div>
     <span class="pill" style="--pill:#7dcea0">MATCH</span>
   </div>
@@ -944,8 +1244,13 @@
     </figure>
   </div>
 </article>
-<article class="row" id="c049" data-verdict="match">
+<article class="row" id="c049" data-verdict="match" data-n="49">
   <div class="meta">
+    <label class="pick">
+      <input type="checkbox" name="pick" value="49">
+      <span class="pick-ui" aria-hidden="true"></span>
+      <span class="pick-label">Correct source</span>
+    </label>
     <div class="id">#049 · Origin of Puma</div>
     <span class="pill" style="--pill:#7dcea0">MATCH</span>
   </div>
@@ -962,8 +1267,13 @@
     </figure>
   </div>
 </article>
-<article class="row" id="c050" data-verdict="match">
+<article class="row" id="c050" data-verdict="match" data-n="50">
   <div class="meta">
+    <label class="pick">
+      <input type="checkbox" name="pick" value="50">
+      <span class="pick-ui" aria-hidden="true"></span>
+      <span class="pick-label">Correct source</span>
+    </label>
     <div class="id">#050 · Silver Sable Inc.</div>
     <span class="pill" style="--pill:#7dcea0">MATCH</span>
   </div>
@@ -980,8 +1290,13 @@
     </figure>
   </div>
 </article>
-<article class="row" id="c051" data-verdict="mismatch">
+<article class="row" id="c051" data-verdict="mismatch" data-n="51">
   <div class="meta">
+    <label class="pick">
+      <input type="checkbox" name="pick" value="51">
+      <span class="pick-ui" aria-hidden="true"></span>
+      <span class="pick-label">Correct source</span>
+    </label>
     <div class="id">#051 · Formation of X-Factor</div>
     <span class="pill" style="--pill:#e07a7a">MISMATCH</span>
   </div>
@@ -998,8 +1313,13 @@
     </figure>
   </div>
 </article>
-<article class="row" id="c052" data-verdict="mismatch">
+<article class="row" id="c052" data-verdict="mismatch" data-n="52">
   <div class="meta">
+    <label class="pick">
+      <input type="checkbox" name="pick" value="52">
+      <span class="pick-ui" aria-hidden="true"></span>
+      <span class="pick-label">Correct source</span>
+    </label>
     <div class="id">#052 · Apocalypse Attacks</div>
     <span class="pill" style="--pill:#e07a7a">MISMATCH</span>
   </div>
@@ -1016,8 +1336,13 @@
     </figure>
   </div>
 </article>
-<article class="row" id="c053" data-verdict="match">
+<article class="row" id="c053" data-verdict="match" data-n="53">
   <div class="meta">
+    <label class="pick">
+      <input type="checkbox" name="pick" value="53">
+      <span class="pick-ui" aria-hidden="true"></span>
+      <span class="pick-label">Correct source</span>
+    </label>
     <div class="id">#053 · Sabretooth vs. Wolverine</div>
     <span class="pill" style="--pill:#7dcea0">MATCH</span>
   </div>
@@ -1034,8 +1359,13 @@
     </figure>
   </div>
 </article>
-<article class="row" id="c054" data-verdict="mismatch">
+<article class="row" id="c054" data-verdict="mismatch" data-n="54">
   <div class="meta">
+    <label class="pick">
+      <input type="checkbox" name="pick" value="54">
+      <span class="pick-ui" aria-hidden="true"></span>
+      <span class="pick-label">Correct source</span>
+    </label>
     <div class="id">#054 · Formation of Excalibur</div>
     <span class="pill" style="--pill:#e07a7a">MISMATCH</span>
   </div>
@@ -1052,8 +1382,13 @@
     </figure>
   </div>
 </article>
-<article class="row" id="c055" data-verdict="mismatch">
+<article class="row" id="c055" data-verdict="mismatch" data-n="55">
   <div class="meta">
+    <label class="pick">
+      <input type="checkbox" name="pick" value="55">
+      <span class="pick-ui" aria-hidden="true"></span>
+      <span class="pick-label">Correct source</span>
+    </label>
     <div class="id">#055 · The Creation of Archangel</div>
     <span class="pill" style="--pill:#e07a7a">MISMATCH</span>
   </div>
@@ -1070,8 +1405,13 @@
     </figure>
   </div>
 </article>
-<article class="row" id="c056" data-verdict="mismatch">
+<article class="row" id="c056" data-verdict="mismatch" data-n="56">
   <div class="meta">
+    <label class="pick">
+      <input type="checkbox" name="pick" value="56">
+      <span class="pick-ui" aria-hidden="true"></span>
+      <span class="pick-label">Correct source</span>
+    </label>
     <div class="id">#056 · Mr. Sinister Appears</div>
     <span class="pill" style="--pill:#e07a7a">MISMATCH</span>
   </div>
@@ -1088,8 +1428,13 @@
     </figure>
   </div>
 </article>
-<article class="row" id="c057" data-verdict="mismatch">
+<article class="row" id="c057" data-verdict="mismatch" data-n="57">
   <div class="meta">
+    <label class="pick">
+      <input type="checkbox" name="pick" value="57">
+      <span class="pick-ui" aria-hidden="true"></span>
+      <span class="pick-label">Correct source</span>
+    </label>
     <div class="id">#057 · The Wedding of Spider-Man & Mary Jane</div>
     <span class="pill" style="--pill:#e07a7a">MISMATCH</span>
   </div>
@@ -1106,8 +1451,13 @@
     </figure>
   </div>
 </article>
-<article class="row" id="c058" data-verdict="mismatch">
+<article class="row" id="c058" data-verdict="mismatch" data-n="58">
   <div class="meta">
+    <label class="pick">
+      <input type="checkbox" name="pick" value="58">
+      <span class="pick-ui" aria-hidden="true"></span>
+      <span class="pick-label">Correct source</span>
+    </label>
     <div class="id">#058 · The Origin of Jubilee</div>
     <span class="pill" style="--pill:#e07a7a">MISMATCH</span>
   </div>
@@ -1124,8 +1474,13 @@
     </figure>
   </div>
 </article>
-<article class="row" id="c059" data-verdict="mismatch">
+<article class="row" id="c059" data-verdict="mismatch" data-n="59">
   <div class="meta">
+    <label class="pick">
+      <input type="checkbox" name="pick" value="59">
+      <span class="pick-ui" aria-hidden="true"></span>
+      <span class="pick-label">Correct source</span>
+    </label>
     <div class="id">#059 · Armor Wars</div>
     <span class="pill" style="--pill:#e07a7a">MISMATCH</span>
   </div>
@@ -1142,8 +1497,13 @@
     </figure>
   </div>
 </article>
-<article class="row" id="c060" data-verdict="match">
+<article class="row" id="c060" data-verdict="match" data-n="60">
   <div class="meta">
+    <label class="pick">
+      <input type="checkbox" name="pick" value="60">
+      <span class="pick-ui" aria-hidden="true"></span>
+      <span class="pick-label">Correct source</span>
+    </label>
     <div class="id">#060 · Tombstone vs. Spider-Man</div>
     <span class="pill" style="--pill:#7dcea0">MATCH</span>
   </div>
@@ -1160,8 +1520,13 @@
     </figure>
   </div>
 </article>
-<article class="row" id="c061" data-verdict="mismatch">
+<article class="row" id="c061" data-verdict="mismatch" data-n="61">
   <div class="meta">
+    <label class="pick">
+      <input type="checkbox" name="pick" value="61">
+      <span class="pick-ui" aria-hidden="true"></span>
+      <span class="pick-label">Correct source</span>
+    </label>
     <div class="id">#061 · Origin of Venom</div>
     <span class="pill" style="--pill:#e07a7a">MISMATCH</span>
   </div>
@@ -1178,8 +1543,13 @@
     </figure>
   </div>
 </article>
-<article class="row" id="c062" data-verdict="mismatch">
+<article class="row" id="c062" data-verdict="mismatch" data-n="62">
   <div class="meta">
+    <label class="pick">
+      <input type="checkbox" name="pick" value="62">
+      <span class="pick-ui" aria-hidden="true"></span>
+      <span class="pick-label">Correct source</span>
+    </label>
     <div class="id">#062 · Origin of Typhoid Mary</div>
     <span class="pill" style="--pill:#e07a7a">MISMATCH</span>
   </div>
@@ -1196,8 +1566,13 @@
     </figure>
   </div>
 </article>
-<article class="row" id="c063" data-verdict="match">
+<article class="row" id="c063" data-verdict="match" data-n="63">
   <div class="meta">
+    <label class="pick">
+      <input type="checkbox" name="pick" value="63">
+      <span class="pick-ui" aria-hidden="true"></span>
+      <span class="pick-label">Correct source</span>
+    </label>
     <div class="id">#063 · Mr. Fix-It</div>
     <span class="pill" style="--pill:#7dcea0">MATCH</span>
   </div>
@@ -1214,8 +1589,13 @@
     </figure>
   </div>
 </article>
-<article class="row" id="c064" data-verdict="mismatch">
+<article class="row" id="c064" data-verdict="mismatch" data-n="64">
   <div class="meta">
+    <label class="pick">
+      <input type="checkbox" name="pick" value="64">
+      <span class="pick-ui" aria-hidden="true"></span>
+      <span class="pick-label">Correct source</span>
+    </label>
     <div class="id">#064 · The Origin of Speedball</div>
     <span class="pill" style="--pill:#e07a7a">MISMATCH</span>
   </div>
@@ -1232,8 +1612,13 @@
     </figure>
   </div>
 </article>
-<article class="row" id="c065" data-verdict="mismatch">
+<article class="row" id="c065" data-verdict="mismatch" data-n="65">
   <div class="meta">
+    <label class="pick">
+      <input type="checkbox" name="pick" value="65">
+      <span class="pick-ui" aria-hidden="true"></span>
+      <span class="pick-label">Correct source</span>
+    </label>
     <div class="id">#065 · Captain America vs. The Captain</div>
     <span class="pill" style="--pill:#e07a7a">MISMATCH</span>
   </div>
@@ -1250,8 +1635,13 @@
     </figure>
   </div>
 </article>
-<article class="row" id="c066" data-verdict="missing">
+<article class="row" id="c066" data-verdict="missing" data-n="66">
   <div class="meta">
+    <label class="pick">
+      <input type="checkbox" name="pick" value="66" disabled>
+      <span class="pick-ui" aria-hidden="true"></span>
+      <span class="pick-label">Correct source</span>
+    </label>
     <div class="id">#066 · Universal Guardian</div>
     <span class="pill" style="--pill:#a89b8a">MISSING</span>
   </div>
@@ -1268,8 +1658,13 @@
     </figure>
   </div>
 </article>
-<article class="row" id="c067" data-verdict="mismatch">
+<article class="row" id="c067" data-verdict="mismatch" data-n="67">
   <div class="meta">
+    <label class="pick">
+      <input type="checkbox" name="pick" value="67">
+      <span class="pick-ui" aria-hidden="true"></span>
+      <span class="pick-label">Correct source</span>
+    </label>
     <div class="id">#067 · The Cosmic Spider-Man</div>
     <span class="pill" style="--pill:#e07a7a">MISMATCH</span>
   </div>
@@ -1286,8 +1681,13 @@
     </figure>
   </div>
 </article>
-<article class="row" id="c068" data-verdict="match">
+<article class="row" id="c068" data-verdict="match" data-n="68">
   <div class="meta">
+    <label class="pick">
+      <input type="checkbox" name="pick" value="68">
+      <span class="pick-ui" aria-hidden="true"></span>
+      <span class="pick-label">Correct source</span>
+    </label>
     <div class="id">#068 · The Origin of Nomad</div>
     <span class="pill" style="--pill:#7dcea0">MATCH</span>
   </div>
@@ -1304,8 +1704,13 @@
     </figure>
   </div>
 </article>
-<article class="row" id="c069" data-verdict="mismatch">
+<article class="row" id="c069" data-verdict="mismatch" data-n="69">
   <div class="meta">
+    <label class="pick">
+      <input type="checkbox" name="pick" value="69">
+      <span class="pick-ui" aria-hidden="true"></span>
+      <span class="pick-label">Correct source</span>
+    </label>
     <div class="id">#069 · Thanos Quest</div>
     <span class="pill" style="--pill:#e07a7a">MISMATCH</span>
   </div>
@@ -1322,8 +1727,13 @@
     </figure>
   </div>
 </article>
-<article class="row" id="c070" data-verdict="missing">
+<article class="row" id="c070" data-verdict="missing" data-n="70">
   <div class="meta">
+    <label class="pick">
+      <input type="checkbox" name="pick" value="70" disabled>
+      <span class="pick-ui" aria-hidden="true"></span>
+      <span class="pick-label">Correct source</span>
+    </label>
     <div class="id">#070 · Cable Returns from the Future</div>
     <span class="pill" style="--pill:#a89b8a">MISSING</span>
   </div>
@@ -1340,8 +1750,13 @@
     </figure>
   </div>
 </article>
-<article class="row" id="c071" data-verdict="mismatch">
+<article class="row" id="c071" data-verdict="mismatch" data-n="71">
   <div class="meta">
+    <label class="pick">
+      <input type="checkbox" name="pick" value="71">
+      <span class="pick-ui" aria-hidden="true"></span>
+      <span class="pick-label">Correct source</span>
+    </label>
     <div class="id">#071 · Ghost Rider #1</div>
     <span class="pill" style="--pill:#e07a7a">MISMATCH</span>
   </div>
@@ -1358,8 +1773,13 @@
     </figure>
   </div>
 </article>
-<article class="row" id="c072" data-verdict="mismatch">
+<article class="row" id="c072" data-verdict="mismatch" data-n="72">
   <div class="meta">
+    <label class="pick">
+      <input type="checkbox" name="pick" value="72">
+      <span class="pick-ui" aria-hidden="true"></span>
+      <span class="pick-label">Correct source</span>
+    </label>
     <div class="id">#072 · The Creation of Deathlok</div>
     <span class="pill" style="--pill:#e07a7a">MISMATCH</span>
   </div>
@@ -1376,8 +1796,13 @@
     </figure>
   </div>
 </article>
-<article class="row" id="c073" data-verdict="mismatch">
+<article class="row" id="c073" data-verdict="mismatch" data-n="73">
   <div class="meta">
+    <label class="pick">
+      <input type="checkbox" name="pick" value="73">
+      <span class="pick-ui" aria-hidden="true"></span>
+      <span class="pick-label">Correct source</span>
+    </label>
     <div class="id">#073 · Origin of the New Warriors</div>
     <span class="pill" style="--pill:#e07a7a">MISMATCH</span>
   </div>
@@ -1394,8 +1819,13 @@
     </figure>
   </div>
 </article>
-<article class="row" id="c074" data-verdict="match">
+<article class="row" id="c074" data-verdict="match" data-n="74">
   <div class="meta">
+    <label class="pick">
+      <input type="checkbox" name="pick" value="74">
+      <span class="pick-ui" aria-hidden="true"></span>
+      <span class="pick-label">Correct source</span>
+    </label>
     <div class="id">#074 · Cable vs. Wolverine</div>
     <span class="pill" style="--pill:#7dcea0">MATCH</span>
   </div>
@@ -1412,8 +1842,13 @@
     </figure>
   </div>
 </article>
-<article class="row" id="c075" data-verdict="mismatch">
+<article class="row" id="c075" data-verdict="mismatch" data-n="75">
   <div class="meta">
+    <label class="pick">
+      <input type="checkbox" name="pick" value="75">
+      <span class="pick-ui" aria-hidden="true"></span>
+      <span class="pick-label">Correct source</span>
+    </label>
     <div class="id">#075 · Gambit Appears</div>
     <span class="pill" style="--pill:#e07a7a">MISMATCH</span>
   </div>
@@ -1430,8 +1865,13 @@
     </figure>
   </div>
 </article>
-<article class="row" id="c076" data-verdict="missing">
+<article class="row" id="c076" data-verdict="missing" data-n="76">
   <div class="meta">
+    <label class="pick">
+      <input type="checkbox" name="pick" value="76" disabled>
+      <span class="pick-ui" aria-hidden="true"></span>
+      <span class="pick-label">Correct source</span>
+    </label>
     <div class="id">#076 · X-Tinction Agenda</div>
     <span class="pill" style="--pill:#a89b8a">MISSING</span>
   </div>
@@ -1448,8 +1888,13 @@
     </figure>
   </div>
 </article>
-<article class="row" id="c077" data-verdict="mismatch">
+<article class="row" id="c077" data-verdict="mismatch" data-n="77">
   <div class="meta">
+    <label class="pick">
+      <input type="checkbox" name="pick" value="77">
+      <span class="pick-ui" aria-hidden="true"></span>
+      <span class="pick-label">Correct source</span>
+    </label>
     <div class="id">#077 · Hulk Reborn</div>
     <span class="pill" style="--pill:#e07a7a">MISMATCH</span>
   </div>
@@ -1466,8 +1911,13 @@
     </figure>
   </div>
 </article>
-<article class="row" id="c078" data-verdict="mismatch">
+<article class="row" id="c078" data-verdict="mismatch" data-n="78">
   <div class="meta">
+    <label class="pick">
+      <input type="checkbox" name="pick" value="78">
+      <span class="pick-ui" aria-hidden="true"></span>
+      <span class="pick-label">Correct source</span>
+    </label>
     <div class="id">#078 · Deadpool Strikes</div>
     <span class="pill" style="--pill:#e07a7a">MISMATCH</span>
   </div>
@@ -1484,8 +1934,13 @@
     </figure>
   </div>
 </article>
-<article class="row" id="c079" data-verdict="match">
+<article class="row" id="c079" data-verdict="match" data-n="79">
   <div class="meta">
+    <label class="pick">
+      <input type="checkbox" name="pick" value="79">
+      <span class="pick-ui" aria-hidden="true"></span>
+      <span class="pick-label">Correct source</span>
+    </label>
     <div class="id">#079 · Origin of Shatterstar</div>
     <span class="pill" style="--pill:#7dcea0">MATCH</span>
   </div>
@@ -1502,8 +1957,13 @@
     </figure>
   </div>
 </article>
-<article class="row" id="c080" data-verdict="match">
+<article class="row" id="c080" data-verdict="match" data-n="80">
   <div class="meta">
+    <label class="pick">
+      <input type="checkbox" name="pick" value="80">
+      <span class="pick-ui" aria-hidden="true"></span>
+      <span class="pick-label">Correct source</span>
+    </label>
     <div class="id">#080 · New Mutants No More</div>
     <span class="pill" style="--pill:#7dcea0">MATCH</span>
   </div>
@@ -1520,8 +1980,13 @@
     </figure>
   </div>
 </article>
-<article class="row" id="c081" data-verdict="unchecked">
+<article class="row" id="c081" data-verdict="unchecked" data-n="81">
   <div class="meta">
+    <label class="pick">
+      <input type="checkbox" name="pick" value="81">
+      <span class="pick-ui" aria-hidden="true"></span>
+      <span class="pick-label">Correct source</span>
+    </label>
     <div class="id">#081 · The Return of Blaze</div>
     <span class="pill" style="--pill:#e0b85a">UNCHECKED</span>
   </div>
@@ -1538,8 +2003,13 @@
     </figure>
   </div>
 </article>
-<article class="row" id="c082" data-verdict="match">
+<article class="row" id="c082" data-verdict="match" data-n="82">
   <div class="meta">
+    <label class="pick">
+      <input type="checkbox" name="pick" value="82">
+      <span class="pick-ui" aria-hidden="true"></span>
+      <span class="pick-label">Correct source</span>
+    </label>
     <div class="id">#082 · Child of the Future</div>
     <span class="pill" style="--pill:#7dcea0">MATCH</span>
   </div>
@@ -1556,8 +2026,13 @@
     </figure>
   </div>
 </article>
-<article class="row" id="c083" data-verdict="match">
+<article class="row" id="c083" data-verdict="match" data-n="83">
   <div class="meta">
+    <label class="pick">
+      <input type="checkbox" name="pick" value="83">
+      <span class="pick-ui" aria-hidden="true"></span>
+      <span class="pick-label">Correct source</span>
+    </label>
     <div class="id">#083 · The New X-Factor</div>
     <span class="pill" style="--pill:#7dcea0">MATCH</span>
   </div>
@@ -1574,8 +2049,13 @@
     </figure>
   </div>
 </article>
-<article class="row" id="c084" data-verdict="match">
+<article class="row" id="c084" data-verdict="match" data-n="84">
   <div class="meta">
+    <label class="pick">
+      <input type="checkbox" name="pick" value="84">
+      <span class="pick-ui" aria-hidden="true"></span>
+      <span class="pick-label">Correct source</span>
+    </label>
     <div class="id">#084 · Two Teams of X-Men</div>
     <span class="pill" style="--pill:#7dcea0">MATCH</span>
   </div>
@@ -1592,8 +2072,13 @@
     </figure>
   </div>
 </article>
-<article class="row" id="c085" data-verdict="missing">
+<article class="row" id="c085" data-verdict="missing" data-n="85">
   <div class="meta">
+    <label class="pick">
+      <input type="checkbox" name="pick" value="85" disabled>
+      <span class="pick-ui" aria-hidden="true"></span>
+      <span class="pick-label">Correct source</span>
+    </label>
     <div class="id">#085 · The Origin of Bishop</div>
     <span class="pill" style="--pill:#a89b8a">MISSING</span>
   </div>
@@ -1610,8 +2095,13 @@
     </figure>
   </div>
 </article>
-<article class="row" id="c086" data-verdict="mismatch">
+<article class="row" id="c086" data-verdict="mismatch" data-n="86">
   <div class="meta">
+    <label class="pick">
+      <input type="checkbox" name="pick" value="86">
+      <span class="pick-ui" aria-hidden="true"></span>
+      <span class="pick-label">Correct source</span>
+    </label>
     <div class="id">#086 · Omega Red vs. Wolverine</div>
     <span class="pill" style="--pill:#e07a7a">MISMATCH</span>
   </div>
@@ -1628,8 +2118,13 @@
     </figure>
   </div>
 </article>
-<article class="row" id="c087" data-verdict="match">
+<article class="row" id="c087" data-verdict="match" data-n="87">
   <div class="meta">
+    <label class="pick">
+      <input type="checkbox" name="pick" value="87">
+      <span class="pick-ui" aria-hidden="true"></span>
+      <span class="pick-label">Correct source</span>
+    </label>
     <div class="id">#087 · The Punisher Infiltrates the Mob</div>
     <span class="pill" style="--pill:#7dcea0">MATCH</span>
   </div>
@@ -1646,8 +2141,13 @@
     </figure>
   </div>
 </article>
-<article class="row" id="c088" data-verdict="mismatch">
+<article class="row" id="c088" data-verdict="mismatch" data-n="88">
   <div class="meta">
+    <label class="pick">
+      <input type="checkbox" name="pick" value="88">
+      <span class="pick-ui" aria-hidden="true"></span>
+      <span class="pick-label">Correct source</span>
+    </label>
     <div class="id">#088 · Origin of Carnage</div>
     <span class="pill" style="--pill:#e07a7a">MISMATCH</span>
   </div>
@@ -1664,8 +2164,13 @@
     </figure>
   </div>
 </article>
-<article class="row" id="c089" data-verdict="match">
+<article class="row" id="c089" data-verdict="match" data-n="89">
   <div class="meta">
+    <label class="pick">
+      <input type="checkbox" name="pick" value="89">
+      <span class="pick-ui" aria-hidden="true"></span>
+      <span class="pick-label">Correct source</span>
+    </label>
     <div class="id">#089 · The New Cage</div>
     <span class="pill" style="--pill:#7dcea0">MATCH</span>
   </div>
@@ -1682,8 +2187,13 @@
     </figure>
   </div>
 </article>
-<article class="row" id="c090" data-verdict="match">
+<article class="row" id="c090" data-verdict="match" data-n="90">
   <div class="meta">
+    <label class="pick">
+      <input type="checkbox" name="pick" value="90">
+      <span class="pick-ui" aria-hidden="true"></span>
+      <span class="pick-label">Correct source</span>
+    </label>
     <div class="id">#090 · Outbreak of War Machine</div>
     <span class="pill" style="--pill:#7dcea0">MATCH</span>
   </div>
@@ -1700,8 +2210,13 @@
     </figure>
   </div>
 </article>
-<article class="row" id="c091" data-verdict="mismatch">
+<article class="row" id="c091" data-verdict="mismatch" data-n="91">
   <div class="meta">
+    <label class="pick">
+      <input type="checkbox" name="pick" value="91">
+      <span class="pick-ui" aria-hidden="true"></span>
+      <span class="pick-label">Correct source</span>
+    </label>
     <div class="id">#091 · Death of Mariko</div>
     <span class="pill" style="--pill:#e07a7a">MISMATCH</span>
   </div>
@@ -1718,8 +2233,13 @@
     </figure>
   </div>
 </article>
-<article class="row" id="c092" data-verdict="match">
+<article class="row" id="c092" data-verdict="match" data-n="92">
   <div class="meta">
+    <label class="pick">
+      <input type="checkbox" name="pick" value="92">
+      <span class="pick-ui" aria-hidden="true"></span>
+      <span class="pick-label">Correct source</span>
+    </label>
     <div class="id">#092 · Invasion of the Spider-Slayers</div>
     <span class="pill" style="--pill:#7dcea0">MATCH</span>
   </div>
@@ -1736,8 +2256,13 @@
     </figure>
   </div>
 </article>
-<article class="row" id="c093" data-verdict="unchecked">
+<article class="row" id="c093" data-verdict="unchecked" data-n="93">
   <div class="meta">
+    <label class="pick">
+      <input type="checkbox" name="pick" value="93">
+      <span class="pick-ui" aria-hidden="true"></span>
+      <span class="pick-label">Correct source</span>
+    </label>
     <div class="id">#093 · The Origin of Nightstalkers</div>
     <span class="pill" style="--pill:#e0b85a">UNCHECKED</span>
   </div>
@@ -1754,8 +2279,13 @@
     </figure>
   </div>
 </article>
-<article class="row" id="c094" data-verdict="mismatch">
+<article class="row" id="c094" data-verdict="mismatch" data-n="94">
   <div class="meta">
+    <label class="pick">
+      <input type="checkbox" name="pick" value="94">
+      <span class="pick-ui" aria-hidden="true"></span>
+      <span class="pick-label">Correct source</span>
+    </label>
     <div class="id">#094 · The Origin of Spider-Man 2099</div>
     <span class="pill" style="--pill:#e07a7a">MISMATCH</span>
   </div>
@@ -1772,8 +2302,13 @@
     </figure>
   </div>
 </article>
-<article class="row" id="c095" data-verdict="mismatch">
+<article class="row" id="c095" data-verdict="mismatch" data-n="95">
   <div class="meta">
+    <label class="pick">
+      <input type="checkbox" name="pick" value="95">
+      <span class="pick-ui" aria-hidden="true"></span>
+      <span class="pick-label">Correct source</span>
+    </label>
     <div class="id">#095 · Hulk Leads the Pantheon</div>
     <span class="pill" style="--pill:#e07a7a">MISMATCH</span>
   </div>
@@ -1790,8 +2325,13 @@
     </figure>
   </div>
 </article>
-<article class="row" id="c096" data-verdict="mismatch">
+<article class="row" id="c096" data-verdict="mismatch" data-n="96">
   <div class="meta">
+    <label class="pick">
+      <input type="checkbox" name="pick" value="96">
+      <span class="pick-ui" aria-hidden="true"></span>
+      <span class="pick-label">Correct source</span>
+    </label>
     <div class="id">#096 · X-Cutioner's Song</div>
     <span class="pill" style="--pill:#e07a7a">MISMATCH</span>
   </div>
@@ -1808,8 +2348,13 @@
     </figure>
   </div>
 </article>
-<article class="row" id="c097" data-verdict="mismatch">
+<article class="row" id="c097" data-verdict="mismatch" data-n="97">
   <div class="meta">
+    <label class="pick">
+      <input type="checkbox" name="pick" value="97">
+      <span class="pick-ui" aria-hidden="true"></span>
+      <span class="pick-label">Correct source</span>
+    </label>
     <div class="id">#097 · Cable vs. Stryfe</div>
     <span class="pill" style="--pill:#e07a7a">MISMATCH</span>
   </div>
@@ -1826,8 +2371,13 @@
     </figure>
   </div>
 </article>
-<article class="row" id="c098" data-verdict="match">
+<article class="row" id="c098" data-verdict="match" data-n="98">
   <div class="meta">
+    <label class="pick">
+      <input type="checkbox" name="pick" value="98">
+      <span class="pick-ui" aria-hidden="true"></span>
+      <span class="pick-label">Correct source</span>
+    </label>
     <div class="id">#098 · Wonder Man Resurrected</div>
     <span class="pill" style="--pill:#7dcea0">MATCH</span>
   </div>
@@ -1844,8 +2394,13 @@
     </figure>
   </div>
 </article>
-<article class="row" id="c099" data-verdict="match">
+<article class="row" id="c099" data-verdict="match" data-n="99">
   <div class="meta">
+    <label class="pick">
+      <input type="checkbox" name="pick" value="99">
+      <span class="pick-ui" aria-hidden="true"></span>
+      <span class="pick-label">Correct source</span>
+    </label>
     <div class="id">#099 · Doom of the Future</div>
     <span class="pill" style="--pill:#7dcea0">MATCH</span>
   </div>
@@ -1863,5 +2418,93 @@
   </div>
 </article>
   </main>
+  <div class="submit-bar">
+    <div class="submit-inner">
+      <div class="count"><b id="pickCount">0</b> selected as correct</div>
+      <div class="actions">
+        <button type="button" id="submitPicks">Submit picks</button>
+      </div>
+      <p id="statusMsg"></p>
+    </div>
+  </div>
+<script>
+(function () {
+  const boxes = [...document.querySelectorAll('input[name="pick"]')];
+  const countEl = document.getElementById('pickCount');
+  const statusEl = document.getElementById('statusMsg');
+  const submitBtn = document.getElementById('submitPicks');
+  const apiUrl = new URL('api/verify-selections', window.location.href).pathname.replace(/\/?$/, '') ;
+  // Prefer path under /94flair/
+  const endpoint = (window.location.pathname.replace(/\/verify-1-99\/?$/, '') || '/94flair') + '/api/verify-selections';
+
+  function selected() {
+    return boxes.filter(b => b.checked && !b.disabled).map(b => Number(b.value)).sort((a,b)=>a-b);
+  }
+  function sync() {
+    const sel = selected();
+    countEl.textContent = String(sel.length);
+    submitBtn.disabled = false;
+    const set = new Set(sel);
+    boxes.forEach(b => {
+      const row = b.closest('.row');
+      if (row) row.classList.toggle('is-picked', b.checked);
+    });
+    document.querySelectorAll('#indexNav a').forEach(a => {
+      const n = Number(a.textContent);
+      a.classList.toggle('picked', set.has(n));
+    });
+    try { localStorage.setItem('flair-verify-1-99-draft', JSON.stringify(sel)); } catch (_) {}
+  }
+
+  boxes.forEach(b => b.addEventListener('change', sync));
+
+  document.getElementById('selectMatches').addEventListener('click', () => {
+    boxes.forEach(b => {
+      if (b.disabled) return;
+      const row = b.closest('.row');
+      b.checked = row && row.dataset.verdict === 'match';
+    });
+    sync();
+  });
+  document.getElementById('clearPicks').addEventListener('click', () => {
+    boxes.forEach(b => { b.checked = false; });
+    sync();
+  });
+
+  try {
+    const draft = JSON.parse(localStorage.getItem('flair-verify-1-99-draft') || '[]');
+    if (Array.isArray(draft)) {
+      const set = new Set(draft.map(Number));
+      boxes.forEach(b => { if (!b.disabled) b.checked = set.has(Number(b.value)); });
+    }
+  } catch (_) {}
+  sync();
+
+  submitBtn.addEventListener('click', async () => {
+    const sel = selected();
+    statusEl.classList.remove('err');
+    statusEl.textContent = 'Submitting…';
+    submitBtn.disabled = true;
+    const payload = { selected: sel, notes: '', page: window.location.href };
+    try {
+      const res = await fetch(endpoint, {
+        method: 'POST',
+        headers: { 'content-type': 'application/json' },
+        body: JSON.stringify(payload),
+      });
+      const data = await res.json();
+      if (!res.ok || !data.ok) throw new Error(data.error || ('HTTP ' + res.status));
+      try { localStorage.setItem('flair-verify-1-99-submitted', JSON.stringify(data)); } catch (_) {}
+      statusEl.textContent = 'Submitted ' + data.count + ' picks. Thanks — I can read these now.';
+    } catch (err) {
+      statusEl.classList.add('err');
+      statusEl.textContent = 'Submit failed: ' + (err && err.message ? err.message : err) + '. Your picks are still saved in this browser.';
+    } finally {
+      submitBtn.disabled = false;
+      sync();
+    }
+  });
+})();
+</script>
 </body>
 </html>
