@@ -1,0 +1,51 @@
+{
+  "n": 3,
+  "key": "003",
+  "title": "Origin of Spider-Man",
+  "source": "1992 Impel Amazing Spider-Man 30th Anniversary Card Set",
+  "artist": "Ron Frenz; Al Milgrom",
+  "matches": [
+    {
+      "idx": 1,
+      "file": "01.jpg",
+      "score": 0.1007,
+      "kind": "wiki-candidate",
+      "label": "File:Benjamin Parker (Earth-616) from Spider-Man Heroes & Villains Collection (Trading Cards) 001.jpg"
+    },
+    {
+      "idx": 2,
+      "file": "02.jpg",
+      "score": 0.0798,
+      "kind": "wiki-candidate",
+      "label": "File:Jason Macendale Jr. (Earth-616) from Spider-Man Premium - Eternal Evil (Trading Cards) 1996 001.jpg"
+    },
+    {
+      "idx": 3,
+      "file": "03.jpg",
+      "score": 0.0714,
+      "kind": "wiki-candidate",
+      "label": "File:Bruce Banner (Earth-616) and Peter Parker (Earth-616) from Spider-Man Team-Up (Trading Cards) 001.jpg"
+    },
+    {
+      "idx": 4,
+      "file": "04.jpg",
+      "score": 0.0668,
+      "kind": "wiki-candidate",
+      "label": "File:Herman Schultz (Earth-616) from Ultra Spider-Man (Trading Cards) Holoblast 1997 Series 001.jpg"
+    },
+    {
+      "idx": 5,
+      "file": "05.jpg",
+      "score": 0.0486,
+      "kind": "wiki-candidate",
+      "label": "File:Judas Traveller (Earth-616) from Spider-Man Premium - Eternal Evil (Trading Cards) 001.jpg"
+    },
+    {
+      "idx": 6,
+      "file": "06.jpg",
+      "score": 0.0466,
+      "kind": "wiki-candidate",
+      "label": "File:Abner Jenkins (Earth-616) Pin-Up from Amazing Spider-Man Annual Vol 1 2 0001.png"
+    }
+  ]
+}

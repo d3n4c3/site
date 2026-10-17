@@ -1,0 +1,51 @@
+{
+  "n": 97,
+  "key": "097",
+  "title": "Cable vs. Stryfe",
+  "source": "The New Mutants (1983) #94, Page 20",
+  "artist": "Rob Liefeld",
+  "matches": [
+    {
+      "idx": 1,
+      "file": "01.jpg",
+      "score": 0.123,
+      "kind": "wiki-candidate",
+      "label": "File:Cable & Deadpool Vol 1 19 Textless.jpg"
+    },
+    {
+      "idx": 2,
+      "file": "02.jpg",
+      "score": 0.1047,
+      "kind": "wiki-candidate",
+      "label": "File:Jean Grey (Earth-616) and Nathan Summers (Stryfe) (Earth-4935) from Uncanny X-Men Vol 1 295 001.jpg"
+    },
+    {
+      "idx": 3,
+      "file": "03.jpg",
+      "score": 0.0894,
+      "kind": "wiki-candidate",
+      "label": "File:Nathan Summers (Earth-616), Nathan Summers (Stryfe) (Earth-4935) and X-Men (Earth-616) from X-Force Vol 1 18 001.jpg"
+    },
+    {
+      "idx": 4,
+      "file": "04.jpg",
+      "score": 0.0881,
+      "kind": "wiki-candidate",
+      "label": "File:Cable & Deadpool Vol 1 14 Textless.jpg"
+    },
+    {
+      "idx": 5,
+      "file": "05.jpg",
+      "score": 0.0847,
+      "kind": "wiki-candidate",
+      "label": "File:Cable & Deadpool Vol 1 12 Textless.jpg"
+    },
+    {
+      "idx": 6,
+      "file": "06.jpg",
+      "score": 0.0781,
+      "kind": "wiki-candidate",
+      "label": "File:Carmella Unuscione (Earth-616) from Cable Vol 1 10 cover 001.jpg"
+    }
+  ]
+}

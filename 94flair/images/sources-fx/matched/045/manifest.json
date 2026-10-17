@@ -1,0 +1,51 @@
+{
+  "n": 45,
+  "key": "045",
+  "title": "Origin of Alpha Flight",
+  "source": "Alpha Flight (1983) #128, Page 13",
+  "artist": "Dario Carrasco Jr.",
+  "matches": [
+    {
+      "idx": 1,
+      "file": "01.jpg",
+      "score": 0.098,
+      "kind": "wiki-candidate",
+      "label": "File:Elizabeth Twoyoungmen (Earth-9418) from Alpha Flight Vol 1 128 002.jpg"
+    },
+    {
+      "idx": 2,
+      "file": "02.jpg",
+      "score": 0.0891,
+      "kind": "wiki-candidate",
+      "label": "File:Alpha Flight (Earth-9418) from Alpha Flight Vol 1 128 002.jpg"
+    },
+    {
+      "idx": 3,
+      "file": "03.jpg",
+      "score": 0.0799,
+      "kind": "wiki-candidate",
+      "label": "File:Heather McNeil (Earth-9418) from Alpha Flight Vol 1 128 001.jpg"
+    },
+    {
+      "idx": 4,
+      "file": "04.jpg",
+      "score": 0.0775,
+      "kind": "wiki-candidate",
+      "label": "File:Hardliners (Earth-9418) from Alpha Flight Vol 1 128 001.jpg"
+    },
+    {
+      "idx": 5,
+      "file": "05.jpg",
+      "score": 0.0594,
+      "kind": "wiki-candidate",
+      "label": "File:Alpha Flight (Earth-9418) from Alpha Flight Vol 1 128 001.jpg"
+    },
+    {
+      "idx": 6,
+      "file": "06.jpg",
+      "score": 0.056,
+      "kind": "wiki-candidate",
+      "label": "File:Eshu (Earth-9418) from Alpha Flight Vol 1 128 001.jpg"
+    }
+  ]
+}

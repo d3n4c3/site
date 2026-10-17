@@ -1,0 +1,51 @@
+{
+  "n": 52,
+  "key": "052",
+  "title": "Apocalypse Attacks",
+  "source": "X-Factor (1988) #65, Page 20",
+  "artist": "Whilce Portacio",
+  "matches": [
+    {
+      "idx": 1,
+      "file": "01.jpg",
+      "score": 0.0738,
+      "kind": "wiki-candidate",
+      "label": "File:X-Factor Vol 1 65 Bonus Sheet 2.jpg"
+    },
+    {
+      "idx": 2,
+      "file": "02.jpg",
+      "score": 0.0733,
+      "kind": "wiki-candidate",
+      "label": "File:X-Factor Vol 1 65 Bonus Sheet 3.jpg"
+    },
+    {
+      "idx": 3,
+      "file": "03.jpg",
+      "score": 0.0658,
+      "kind": "wiki-candidate",
+      "label": "File:X-Factor (Earth-616) from X-Factor Vol 1 65 001.jpg"
+    },
+    {
+      "idx": 4,
+      "file": "04.jpg",
+      "score": 0.0657,
+      "kind": "wiki-candidate",
+      "label": "File:Foxbat (Earth-616) from X-Factor Vol 1 65 0001.jpg"
+    },
+    {
+      "idx": 5,
+      "file": "05.jpg",
+      "score": 0.0481,
+      "kind": "wiki-candidate",
+      "label": "File:X-Factor Vol 1 65.jpg"
+    },
+    {
+      "idx": 6,
+      "file": "06.jpg",
+      "score": 0.0466,
+      "kind": "wiki-candidate",
+      "label": "File:X-Factor (Earth-616) from X-Factor Vol 1 65 cover.JPG"
+    }
+  ]
+}

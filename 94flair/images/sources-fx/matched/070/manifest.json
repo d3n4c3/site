@@ -1,0 +1,51 @@
+{
+  "n": 70,
+  "key": "070",
+  "title": "Cable Returns from the Future",
+  "source": "1992 Impel X-Men Series I by Jim Lee",
+  "artist": "Jim Lee",
+  "matches": [
+    {
+      "idx": 1,
+      "file": "01.jpg",
+      "score": 0.0719,
+      "kind": "wiki-candidate",
+      "label": "File:Cable & Deadpool Vol 1 12 Textless.jpg"
+    },
+    {
+      "idx": 2,
+      "file": "02.jpg",
+      "score": 0.0713,
+      "kind": "wiki-candidate",
+      "label": "File:Cable & Deadpool Vol 1 20 Textless.jpg"
+    },
+    {
+      "idx": 3,
+      "file": "03.jpg",
+      "score": 0.0636,
+      "kind": "wiki-candidate",
+      "label": "File:Nathan Summers (Earth-616) and Remy LeBeau (Earth-616) Trading Card from Cable Vol 1 4 001.jpg"
+    },
+    {
+      "idx": 4,
+      "file": "04.jpg",
+      "score": 0.0622,
+      "kind": "wiki-candidate",
+      "label": "File:Cable & Deadpool Vol 1 14 Textless.jpg"
+    },
+    {
+      "idx": 5,
+      "file": "05.jpg",
+      "score": 0.0599,
+      "kind": "wiki-candidate",
+      "label": "File:Cable & Deadpool Vol 1 10 Textless.jpg"
+    },
+    {
+      "idx": 6,
+      "file": "06.jpg",
+      "score": 0.0585,
+      "kind": "wiki-candidate",
+      "label": "File:Cable & Deadpool Vol 1 17 Textless.jpg"
+    }
+  ]
+}

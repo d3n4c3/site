@@ -1,0 +1,51 @@
+{
+  "n": 71,
+  "key": "071",
+  "title": "Ghost Rider #1",
+  "source": "Ghost Rider (1990) #1, Cover",
+  "artist": "Javier Saltares",
+  "matches": [
+    {
+      "idx": 1,
+      "file": "01.jpg",
+      "score": 0.0731,
+      "kind": "wiki-candidate",
+      "label": "File:Daniel Ketch (Earth-616) from Ghost Rider Vol 3 1 004.jpg"
+    },
+    {
+      "idx": 2,
+      "file": "02.jpg",
+      "score": 0.07,
+      "kind": "wiki-candidate",
+      "label": "File:Ames (Earth-616) from Ghost Rider Vol 2 1 0001.jpg"
+    },
+    {
+      "idx": 3,
+      "file": "03.jpg",
+      "score": 0.0681,
+      "kind": "wiki-candidate",
+      "label": "File:J.D. (Earth-616) from Ghost Rider Vol 3 1 001.jpg"
+    },
+    {
+      "idx": 4,
+      "file": "04.jpg",
+      "score": 0.0672,
+      "kind": "wiki-candidate",
+      "label": "File:Daniel Ketch (Earth-616) from Ghost Rider Vol 3 1 002.jpg"
+    },
+    {
+      "idx": 5,
+      "file": "05.jpg",
+      "score": 0.0498,
+      "kind": "wiki-candidate",
+      "label": "File:Daniel Ketch (Earth-616) from Ghost Rider Vol 3 1 001.jpg"
+    },
+    {
+      "idx": 6,
+      "file": "06.jpg",
+      "score": 0.0492,
+      "kind": "wiki-candidate",
+      "label": "File:Greentown Cemetery (Earth-616) from Ghost Rider Vol 2 1 0001.jpg"
+    }
+  ]
+}

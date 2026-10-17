@@ -1,0 +1,51 @@
+{
+  "n": 57,
+  "key": "057",
+  "title": "The Wedding of Spider-Man & Mary Jane",
+  "source": "Web of Spider-Man (1985) Annual #4, Page 43",
+  "artist": "John Romita Sr.; John Romita Jr.",
+  "matches": [
+    {
+      "idx": 1,
+      "file": "01.jpg",
+      "score": 0.0958,
+      "kind": "wiki-candidate",
+      "label": "File:Jack (Earth-616) from Web of Spider-Man Vol 1 4 0001.jpg"
+    },
+    {
+      "idx": 2,
+      "file": "02.jpg",
+      "score": 0.0713,
+      "kind": "wiki-candidate",
+      "label": "File:Ylandris (Earth-616) from Web of Spider-Man Annual Vol 1 4 001.jpg"
+    },
+    {
+      "idx": 3,
+      "file": "03.jpg",
+      "score": 0.058,
+      "kind": "wiki-candidate",
+      "label": "File:Web of Spider-Man Vol 1 43.jpg"
+    },
+    {
+      "idx": 4,
+      "file": "04.jpg",
+      "score": 0.05,
+      "kind": "wiki-candidate",
+      "label": "File:Web of Spider-Man Vol 1 42.jpg"
+    },
+    {
+      "idx": 5,
+      "file": "05.jpg",
+      "score": 0.0478,
+      "kind": "wiki-candidate",
+      "label": "File:Web of Spider-Man Vol 1 4.jpg"
+    },
+    {
+      "idx": 6,
+      "file": "06.jpg",
+      "score": 0.0471,
+      "kind": "wiki-candidate",
+      "label": "File:Ulysses Lugman (Earth-616) from Web of Spider-Man Annual Vol 1 4 001.jpg"
+    }
+  ]
+}

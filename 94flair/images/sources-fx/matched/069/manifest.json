@@ -1,0 +1,51 @@
+{
+  "n": 69,
+  "key": "069",
+  "title": "Thanos Quest",
+  "source": "The Thanos Quest (1990) #1, Page 48",
+  "artist": "Ron Lim",
+  "matches": [
+    {
+      "idx": 1,
+      "file": "01.jpg",
+      "score": 0.0752,
+      "kind": "wiki-candidate",
+      "label": "File:Taneleer Tivan (Earth-616) from Thanos Quest Vol 1 2 001.jpg"
+    },
+    {
+      "idx": 2,
+      "file": "02.jpg",
+      "score": 0.0745,
+      "kind": "wiki-candidate",
+      "label": "File:Thanos (Earth-616) from Thanos Quest Vol 1 1 0001.jpg"
+    },
+    {
+      "idx": 3,
+      "file": "03.jpg",
+      "score": 0.0711,
+      "kind": "wiki-candidate",
+      "label": "File:Tryco Slatterus (Earth-616) from Thanos Quest Vol 1 1 0001.jpg"
+    },
+    {
+      "idx": 4,
+      "file": "04.jpg",
+      "score": 0.0696,
+      "kind": "wiki-candidate",
+      "label": "File:Thanos (Robot) (Earth-616) from Thanos Quest Vol 1 2 001.jpg"
+    },
+    {
+      "idx": 5,
+      "file": "05.jpg",
+      "score": 0.0556,
+      "kind": "wiki-candidate",
+      "label": "File:Thanos (Earth-616) and Abstract Entities from Avengers Celestial Quest Vol 1 2 001.jpg"
+    },
+    {
+      "idx": 6,
+      "file": "06.jpg",
+      "score": 0.0555,
+      "kind": "wiki-candidate",
+      "label": "File:Thanos (Earth-616) from Thanos Quest Vol 1 1 001.jpg"
+    }
+  ]
+}

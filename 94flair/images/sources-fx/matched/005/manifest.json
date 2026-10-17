@@ -1,0 +1,51 @@
+{
+  "n": 5,
+  "key": "005",
+  "title": "Amazing Spider-Man #1",
+  "source": "Web of Spider-Man (1985) #105, Page 2",
+  "artist": "Rurik Tyler",
+  "matches": [
+    {
+      "idx": 1,
+      "file": "01.jpg",
+      "score": 0.1046,
+      "kind": "wiki-candidate",
+      "label": "File:Amazing Spider-Man Vol 1 105.jpg"
+    },
+    {
+      "idx": 2,
+      "file": "02.jpg",
+      "score": 0.0727,
+      "kind": "wiki-candidate",
+      "label": "File:Amazing Spider-Man Vol 5 3 Textless.jpg"
+    },
+    {
+      "idx": 3,
+      "file": "03.jpg",
+      "score": 0.0623,
+      "kind": "wiki-candidate",
+      "label": "File:Amazing Spider-Man Vol 1 356.jpg"
+    },
+    {
+      "idx": 4,
+      "file": "04.jpg",
+      "score": 0.057,
+      "kind": "wiki-candidate",
+      "label": "File:Davis (Earth-616) from Web of Spider-Man Vol 1 105 001.png"
+    },
+    {
+      "idx": 5,
+      "file": "05.jpg",
+      "score": 0.0543,
+      "kind": "wiki-candidate",
+      "label": "File:Web of Spider-Man Vol 1 105.jpg"
+    },
+    {
+      "idx": 6,
+      "file": "06.jpg",
+      "score": 0.0541,
+      "kind": "wiki-candidate",
+      "label": "File:Order of the Web (Earth-616) from Amazing Spider-Man The Sins of Norman Osborn Vol 1 1 002.jpg"
+    }
+  ]
+}

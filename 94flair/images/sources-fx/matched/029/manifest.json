@@ -1,0 +1,51 @@
+{
+  "n": 29,
+  "key": "029",
+  "title": "Origin of Morbius",
+  "source": "Morbius (1992) #1, Mini-Poster",
+  "artist": "Ron Wagner; Mike Witherby",
+  "matches": [
+    {
+      "idx": 1,
+      "file": "01.jpg",
+      "score": 0.0999,
+      "kind": "wiki-candidate",
+      "label": "File:Legion of Monsters Morbius Vol 1 1.jpg"
+    },
+    {
+      "idx": 2,
+      "file": "02.jpg",
+      "score": 0.0751,
+      "kind": "wiki-candidate",
+      "label": "File:Morbius Vol 1 1 Lee Variant Textless.jpg"
+    },
+    {
+      "idx": 3,
+      "file": "03.jpg",
+      "score": 0.0659,
+      "kind": "wiki-candidate",
+      "label": "File:Morbius Vol 1 1 Hotz Variant Textless.jpg"
+    },
+    {
+      "idx": 4,
+      "file": "04.jpg",
+      "score": 0.0634,
+      "kind": "wiki-candidate",
+      "label": "File:Elizabeth Nikos (Earth-616) from Morbius Vol 1 1 001.jpg"
+    },
+    {
+      "idx": 5,
+      "file": "05.jpg",
+      "score": 0.0555,
+      "kind": "wiki-candidate",
+      "label": "File:Marvel-Verse Morbius Vol 1 1.jpg"
+    },
+    {
+      "idx": 6,
+      "file": "06.jpg",
+      "score": 0.0549,
+      "kind": "wiki-candidate",
+      "label": "File:Morbius The Living Vampire \u2013 The Man Called Morbius Vol 1 1.jpg"
+    }
+  ]
+}

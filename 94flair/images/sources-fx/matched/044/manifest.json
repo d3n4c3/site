@@ -1,0 +1,51 @@
+{
+  "n": 44,
+  "key": "044",
+  "title": "Hobgoblin Appears",
+  "source": "Suspected unused in print, possibly shelved for a Web of Spider-Man Annual #3 pin-up. Used as a large 5' store stand-up display (1987)",
+  "artist": "",
+  "matches": [
+    {
+      "idx": 1,
+      "file": "01.jpg",
+      "score": 0.0669,
+      "kind": "wiki-candidate",
+      "label": "File:Roderick Kingsley (Earth-616) from AXIS Hobgoblin Vol 1 1 001.png"
+    },
+    {
+      "idx": 2,
+      "file": "02.jpg",
+      "score": 0.0658,
+      "kind": "wiki-candidate",
+      "label": "File:AXIS Hobgoblin Vol 1 2 Textless.jpg"
+    },
+    {
+      "idx": 3,
+      "file": "03.jpg",
+      "score": 0.0565,
+      "kind": "wiki-candidate",
+      "label": "File:AXIS Hobgoblin Vol 1 3 Textless.jpg"
+    },
+    {
+      "idx": 4,
+      "file": "04.jpg",
+      "score": 0.052,
+      "kind": "wiki-candidate",
+      "label": "File:AXIS Hobgoblin Vol 1 1 Textless.jpg"
+    },
+    {
+      "idx": 5,
+      "file": "05.jpg",
+      "score": 0.0452,
+      "kind": "wiki-candidate",
+      "label": "File:Hobgoblin (Tsum Tsum) (Earth-616) from Marvel Tsum Tsum Vol 1 4 0001.jpg"
+    },
+    {
+      "idx": 6,
+      "file": "06.jpg",
+      "score": 0.043,
+      "kind": "wiki-candidate",
+      "label": "File:Hobgoblin (Claude) (Earth-616) from Superior Spider-Man Vol 1 26 001.jpg"
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "n": 25,
+  "key": "025",
+  "title": "Doom Steals the Power Cosmic",
+  "source": "The Fantastic Four (1961) #128, Page 21",
+  "artist": "",
+  "matches": [
+    {
+      "idx": 1,
+      "file": "01.jpg",
+      "score": 0.1037,
+      "kind": "wiki-candidate",
+      "label": "File:Victor von Doom (Earth-616) from Fantastic Four Vol 1 358 001.jpg"
+    },
+    {
+      "idx": 2,
+      "file": "02.jpg",
+      "score": 0.0837,
+      "kind": "wiki-candidate",
+      "label": "File:Victor von Doom (Earth-616) and Reed Richards (Earth-616) from Fantastic Four Vol 1 381 001.jpg"
+    },
+    {
+      "idx": 3,
+      "file": "03.jpg",
+      "score": 0.0652,
+      "kind": "wiki-candidate",
+      "label": "File:Victor von Doom (Earth-616) from Fantastic Four Vol 6 43 001.jpg"
+    },
+    {
+      "idx": 4,
+      "file": "04.jpg",
+      "score": 0.0553,
+      "kind": "wiki-candidate",
+      "label": "File:Victor von Doom (Earth-616) from Fantastic Four Vol 3 566 001.jpg"
+    },
+    {
+      "idx": 5,
+      "file": "05.jpg",
+      "score": 0.0531,
+      "kind": "wiki-candidate",
+      "label": "File:Victor von Doom (Earth-616) and Reed Richards (Earth-616) from Fantastic Four Vol 1 200 001.jpg"
+    },
+    {
+      "idx": 6,
+      "file": "06.jpg",
+      "score": 0.0502,
+      "kind": "wiki-candidate",
+      "label": "File:Victor von Doom (Earth-616) from Fantastic Four Vol 6 32 002.jpg"
+    }
+  ]
+}

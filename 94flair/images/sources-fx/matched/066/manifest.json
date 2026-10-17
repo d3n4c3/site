@@ -1,0 +1,51 @@
+{
+  "n": 66,
+  "key": "066",
+  "title": "Universal Guardian",
+  "source": "1992 Comic Images Silver Surfer Card Set #66; Unused Corner Box Art",
+  "artist": "Andy Smith",
+  "matches": [
+    {
+      "idx": 1,
+      "file": "01.jpg",
+      "score": 0.0816,
+      "kind": "wiki-candidate",
+      "label": "File:Guardians of the Galaxy - Cosmic Rewind Poster 002.jpg"
+    },
+    {
+      "idx": 2,
+      "file": "02.jpg",
+      "score": 0.0725,
+      "kind": "wiki-candidate",
+      "label": "File:Guardians of the Galaxy - Cosmic Rewind Poster 001.jpg"
+    },
+    {
+      "idx": 3,
+      "file": "03.jpg",
+      "score": 0.052,
+      "kind": "wiki-candidate",
+      "label": "File:Infinity Wars Fallen Guardian Vol 1 1 Fantastic Four Villains Variant Textless.jpg"
+    },
+    {
+      "idx": 4,
+      "file": "04.jpg",
+      "score": 0.0498,
+      "kind": "wiki-candidate",
+      "label": "File:Widowmakers Red Guardian and Yelena Belova Vol 1 1 Textless.jpg"
+    },
+    {
+      "idx": 5,
+      "file": "05.jpg",
+      "score": 0.0482,
+      "kind": "wiki-candidate",
+      "label": "File:Universal War One Revelations Vol 1 2 Textless.jpg"
+    },
+    {
+      "idx": 6,
+      "file": "06.jpg",
+      "score": 0.0478,
+      "kind": "wiki-candidate",
+      "label": "File:Infinity Wars Fallen Guardian Vol 1 1 Textless.jpg"
+    }
+  ]
+}

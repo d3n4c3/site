@@ -1,0 +1,44 @@
+{
+  "n": 42,
+  "key": "042",
+  "title": "Elektra Appears",
+  "source": "In-house sketches by Frank Miller",
+  "artist": "Frank Miller",
+  "matches": [
+    {
+      "idx": 1,
+      "file": "01.jpg",
+      "score": 0.99,
+      "kind": "sketch",
+      "label": "Frank Miller Elektra in-house sketch \u2014 overhead katana (pose 4)"
+    },
+    {
+      "idx": 2,
+      "file": "02.jpg",
+      "score": 0.5,
+      "kind": "sketch",
+      "label": "Frank Miller Elektra in-house sketch (pose 1)"
+    },
+    {
+      "idx": 3,
+      "file": "03.jpg",
+      "score": 0.5,
+      "kind": "sketch",
+      "label": "Frank Miller Elektra in-house sketch (pose 2)"
+    },
+    {
+      "idx": 4,
+      "file": "04.jpg",
+      "score": 0.5,
+      "kind": "sketch",
+      "label": "Frank Miller Elektra in-house sketch (pose 3)"
+    },
+    {
+      "idx": 5,
+      "file": "05.jpg",
+      "score": 0.5,
+      "kind": "sketch",
+      "label": "Frank Miller Elektra in-house sketch sheet"
+    }
+  ]
+}

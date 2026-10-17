@@ -36,18 +36,13 @@
     "wiki_file": "Web_of_Spider-Man_Vol_1_105.jpg"
   },
   "006": {
-    "approved": true,
-    "artist": "Don Heck",
-    "candidate_idx": 3,
-    "comic": "006-comic.jpg",
-    "credit": "Tales of Suspense (1959) #39, Page 1",
-    "disabled": false,
+    "comic": "006.jpg",
+    "disabled": true,
     "file": "006.jpg",
-    "kind": "crop",
-    "note": "user-picked candidate #3: File:Anthony Stark (Earth-616) from Tales of Suspense Vol 1 39 001.jpg",
+    "kind": "wiki",
+    "note": "wiki cover \u2014 not exotechktx crop; excluded from viewer until IG source lands",
     "source_line": "Tales of Suspense (1959) #39, Page 1",
-    "wiki_file": "Tales_of_Suspense_Vol_1_39.jpg",
-    "wiki_pick": "File:Anthony Stark (Earth-616) from Tales of Suspense Vol 1 39 001.jpg"
+    "wiki_file": "Tales_of_Suspense_Vol_1_39.jpg"
   },
   "007": {
     "comic": "007.jpg",
@@ -68,18 +63,13 @@
     "wiki_file": "Spectacular_Spider-Man_Vol_1_188.jpg"
   },
   "009": {
-    "approved": true,
-    "artist": "Keith Pollard; David Boller",
-    "candidate_idx": 1,
-    "comic": "009-comic.jpg",
-    "credit": "Lethal Foes of Spider-Man (1994) #3, Page 2",
-    "disabled": false,
+    "comic": "009.jpg",
+    "disabled": true,
     "file": "009.jpg",
-    "kind": "crop",
-    "note": "user-picked candidate #1: File:Lethal Foes of Spider-Man Vol 1 3.jpg",
+    "kind": "wiki",
+    "note": "wiki cover \u2014 not exotechktx crop; excluded from viewer until IG source lands",
     "source_line": "Lethal Foes of Spider-Man (1994) #3, Page 2",
-    "wiki_file": "Lethal_Foes_of_Spider-Man_Vol_1_3.jpg",
-    "wiki_pick": "File:Lethal Foes of Spider-Man Vol 1 3.jpg"
+    "wiki_file": "Lethal_Foes_of_Spider-Man_Vol_1_3.jpg"
   },
   "011": {
     "comic": "011.jpg",
@@ -91,18 +81,13 @@
     "wiki_file": "Avengers_Vol_1_20.jpg"
   },
   "012": {
-    "approved": true,
-    "artist": "Frank Brunner",
-    "candidate_idx": 1,
-    "comic": "012-comic.jpg",
-    "credit": "Marvel Treasury Edition (1974) #6, Page 57",
-    "disabled": false,
+    "comic": "012.jpg",
+    "disabled": true,
     "file": "012.jpg",
-    "kind": "crop",
-    "note": "user-picked candidate #1: File:Yao (Earth-616), Stephen Strange (Earth-616), and Clea (Earth-616) from Marvel Treasury Edition Vol 1 6 001.jpg",
+    "kind": "wiki",
+    "note": "wiki cover \u2014 not exotechktx crop; excluded from viewer until IG source lands",
     "source_line": "Marvel Treasury Edition (1974) #6, Page 57",
-    "wiki_file": "Marvel_Treasury_Edition_Vol_1_6.jpg",
-    "wiki_pick": "File:Yao (Earth-616), Stephen Strange (Earth-616), and Clea (Earth-616) from Marvel Treasury Edition Vol 1 6 001.jpg"
+    "wiki_file": "Marvel_Treasury_Edition_Vol_1_6.jpg"
   },
   "013": {
     "comic": "013.jpg",
@@ -159,32 +144,22 @@
     "wiki_file": "Fantastic_Four_Vol_1_375.jpg"
   },
   "019": {
-    "approved": true,
-    "artist": "John Byrne",
-    "candidate_idx": 2,
-    "comic": "019-comic.jpg",
-    "credit": "Uncanny X-Men (1963) #140, Cover",
-    "disabled": false,
+    "comic": "019.jpg",
+    "disabled": true,
     "file": "019.jpg",
-    "kind": "crop",
-    "note": "user-picked candidate #2: File:Uncanny X-Men Vol 1 142.jpg",
-    "source_line": "Uncanny X-Men (1963) #140, Cover",
-    "wiki_file": "X-Men_Vol_1_140.jpg",
-    "wiki_pick": "File:Uncanny X-Men Vol 1 142.jpg"
+    "kind": "wiki",
+    "note": "wiki cover \u2014 not exotechktx crop; excluded from viewer until IG source lands",
+    "source_line": "Uncanny X-Men #140, Cover",
+    "wiki_file": "X-Men_Vol_1_140.jpg"
   },
   "020": {
-    "approved": true,
-    "artist": "Jack Kirby",
-    "candidate_idx": 3,
-    "comic": "020-comic.jpg",
-    "credit": "Fantastic Four (1961) #48, Page 21",
-    "disabled": false,
+    "comic": "020.jpg",
+    "disabled": true,
     "file": "020.jpg",
-    "kind": "crop",
-    "note": "user-picked candidate #3: File:Galan (Earth-616) from Fantastic Four Vol 1 48 001.jpg",
+    "kind": "wiki",
+    "note": "wiki cover \u2014 not exotechktx crop; excluded from viewer until IG source lands",
     "source_line": "Fantastic Four (1961) #48, Page 21",
-    "wiki_file": "Fantastic_Four_Vol_1_48.jpg",
-    "wiki_pick": "File:Galan (Earth-616) from Fantastic Four Vol 1 48 001.jpg"
+    "wiki_file": "Fantastic_Four_Vol_1_48.jpg"
   },
   "021": {
     "comic": "021.jpg",
@@ -214,18 +189,13 @@
     "wiki_file": "Amazing_Spider-Man_Vol_1_43.jpg"
   },
   "024": {
-    "approved": true,
-    "artist": "Kirk Jarvinen",
-    "candidate_idx": 1,
-    "comic": "024-comic.jpg",
-    "credit": "Marvel Swimsuit Issue (1992) #2, Page 17",
-    "disabled": false,
+    "comic": "024.jpg",
+    "disabled": true,
     "file": "024.jpg",
-    "kind": "crop",
-    "note": "user-picked candidate #1: File:Mary Jane Watson (Earth-616) and Maybelle Parker (Earth-616) from Marvel Swimsuit Vol 1 2.jpg",
-    "source_line": "Marvel Swimsuit Issue (1992) #2, Page 17",
-    "wiki_file": "Marvel_Swimsuit_Special_Vol_1_2.jpg",
-    "wiki_pick": "File:Mary Jane Watson (Earth-616) and Maybelle Parker (Earth-616) from Marvel Swimsuit Vol 1 2.jpg"
+    "kind": "wiki",
+    "note": "wiki cover \u2014 not exotechktx crop; excluded from viewer until IG source lands",
+    "source_line": "Marvel Swimsuit Issue #2, Page 17",
+    "wiki_file": "Marvel_Swimsuit_Special_Vol_1_2.jpg"
   },
   "025": {
     "comic": "025.jpg",
@@ -327,18 +297,13 @@
     "wiki_file": "Invaders_Vol_1_1.jpg"
   },
   "038": {
-    "approved": true,
-    "artist": "Whilce Portacio",
-    "candidate_idx": 2,
-    "comic": "038-comic.jpg",
-    "credit": "The Uncanny X-Men (1963) #281, Page 6",
-    "disabled": false,
+    "comic": "038.jpg",
+    "disabled": true,
     "file": "038.jpg",
-    "kind": "crop",
-    "note": "user-picked candidate #2: File:Emma Frost (Earth-616) from Uncanny X-Men Vol 1 281 001.jpg",
+    "kind": "wiki",
+    "note": "wiki cover \u2014 not exotechktx crop; excluded from viewer until IG source lands",
     "source_line": "The Uncanny X-Men (1963) #281, Page 6",
-    "wiki_file": "Uncanny_X-Men_Vol_1_281.jpg",
-    "wiki_pick": "File:Emma Frost (Earth-616) from Uncanny X-Men Vol 1 281 001.jpg"
+    "wiki_file": "Uncanny_X-Men_Vol_1_281.jpg"
   },
   "039": {
     "comic": "039.jpg",
@@ -386,32 +351,22 @@
     "wiki_file": "Alpha_Flight_Vol_1_128.jpg"
   },
   "046": {
-    "approved": true,
-    "artist": "Walter Simonson",
-    "candidate_idx": 1,
-    "comic": "046-comic.jpg",
-    "credit": "Thor (1966) #339, Page 20",
-    "disabled": false,
+    "comic": "046.jpg",
+    "disabled": true,
     "file": "046.jpg",
-    "kind": "crop",
-    "note": "user-picked candidate #1: File:Beta Ray Bill (Earth-616) from Thor Vol 1 339 001.jpg",
+    "kind": "wiki",
+    "note": "wiki cover \u2014 not exotechktx crop; excluded from viewer until IG source lands",
     "source_line": "Thor (1966) #339, Page 20",
-    "wiki_file": "Thor_Vol_1_339.jpg",
-    "wiki_pick": "File:Beta Ray Bill (Earth-616) from Thor Vol 1 339 001.jpg"
+    "wiki_file": "Thor_Vol_1_339.jpg"
   },
   "047": {
-    "approved": true,
-    "artist": "John Byrne",
-    "candidate_idx": 1,
-    "comic": "047-comic.jpg",
-    "credit": "The Fantastic Four (1963) #262, Page 8",
-    "disabled": false,
+    "comic": "047.jpg",
+    "disabled": true,
     "file": "047.jpg",
-    "kind": "crop",
-    "note": "user-picked candidate #1: File:Reed Richards (Earth-616) on trail from Fantastic Four Vol 1 262.jpg",
+    "kind": "wiki",
+    "note": "wiki cover \u2014 not exotechktx crop; excluded from viewer until IG source lands",
     "source_line": "The Fantastic Four (1963) #262, Page 8",
-    "wiki_file": "Fantastic_Four_Vol_1_262.jpg",
-    "wiki_pick": "File:Reed Richards (Earth-616) on trail from Fantastic Four Vol 1 262.jpg"
+    "wiki_file": "Fantastic_Four_Vol_1_262.jpg"
   },
   "048": {
     "comic": "048.jpg",
@@ -477,18 +432,13 @@
     "wiki_file": "Uncanny_X-Men_Vol_1_300.jpg"
   },
   "055": {
-    "approved": true,
-    "artist": "",
-    "candidate_idx": 4,
-    "comic": "055-comic.jpg",
-    "credit": "X-Factor (1988) #24, Page 16",
-    "disabled": false,
+    "comic": "055.jpg",
+    "disabled": true,
     "file": "055.jpg",
-    "kind": "crop",
-    "note": "user-picked candidate #4: File:Warren Worthington III (Earth-616) from X-Factor Vol 1 24 0001.jpg",
+    "kind": "wiki",
+    "note": "wiki cover \u2014 not exotechktx crop; excluded from viewer until IG source lands",
     "source_line": "X-Factor (1988) #24, Page 16",
-    "wiki_file": "X-Factor_Vol_1_24.jpg",
-    "wiki_pick": "File:Warren Worthington III (Earth-616) from X-Factor Vol 1 24 0001.jpg"
+    "wiki_file": "X-Factor_Vol_1_24.jpg"
   },
   "056": {
     "comic": "056.jpg",
@@ -743,18 +693,13 @@
     "wiki_file": "Punisher_War_Zone_Vol_1_8.jpg"
   },
   "088": {
-    "approved": true,
-    "artist": "Mark Bagley",
-    "candidate_idx": 6,
-    "comic": "088-comic.jpg",
-    "credit": "The Amazing Spider-Man (1963) #384, Page 16",
-    "disabled": false,
+    "comic": "088.jpg",
+    "disabled": true,
     "file": "088.jpg",
-    "kind": "crop",
-    "note": "user-picked candidate #6: File:Cletus Kasady (Earth-616) from Amazing Spider-Man Vol 1 384 0001.jpg",
+    "kind": "wiki",
+    "note": "wiki cover \u2014 not exotechktx crop; excluded from viewer until IG source lands",
     "source_line": "The Amazing Spider-Man (1963) #384, Page 16",
-    "wiki_file": "Amazing_Spider-Man_Vol_1_384.jpg",
-    "wiki_pick": "File:Cletus Kasady (Earth-616) from Amazing Spider-Man Vol 1 384 0001.jpg"
+    "wiki_file": "Amazing_Spider-Man_Vol_1_384.jpg"
   },
   "089": {
     "comic": "089.jpg",

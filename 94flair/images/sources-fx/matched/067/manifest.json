@@ -1,0 +1,51 @@
+{
+  "n": 67,
+  "key": "067",
+  "title": "The Cosmic Spider-Man",
+  "source": "The Spectacular Spider-Man (1976) #201, Page 21",
+  "artist": "Sal Buscema",
+  "matches": [
+    {
+      "idx": 1,
+      "file": "01.jpg",
+      "score": 0.0956,
+      "kind": "wiki-candidate",
+      "label": "File:Oblivion (Earth-616) from G.O.D.S. Vol 1 3 Cosmic Homage Variant cover 001.jpg"
+    },
+    {
+      "idx": 2,
+      "file": "02.jpg",
+      "score": 0.0729,
+      "kind": "wiki-candidate",
+      "label": "File:Tyrant (Earth-616) from Cosmic Powers Vol 1 6 cover 001.jpg"
+    },
+    {
+      "idx": 3,
+      "file": "03.jpg",
+      "score": 0.0691,
+      "kind": "wiki-candidate",
+      "label": "File:Spectacular Spider-Man Vol 1 201.jpg"
+    },
+    {
+      "idx": 4,
+      "file": "04.jpg",
+      "score": 0.0545,
+      "kind": "wiki-candidate",
+      "label": "File:Cosmic Ghost Rider Destroys Marvel History Vol 1 4 Johnson Variant Textless.jpg"
+    },
+    {
+      "idx": 5,
+      "file": "05.jpg",
+      "score": 0.044,
+      "kind": "wiki-candidate",
+      "label": "File:Sammy Skalek (Earth-616) from Spectacular Spider-Man Vol 1 225 0001.png"
+    },
+    {
+      "idx": 6,
+      "file": "06.jpg",
+      "score": 0.0437,
+      "kind": "wiki-candidate",
+      "label": "File:Susie Jablonski (Earth-616) from Peter Parker, The Spectacular Spider-Man Vol 1 109 001.png"
+    }
+  ]
+}

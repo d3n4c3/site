@@ -1,0 +1,51 @@
+{
+  "n": 33,
+  "key": "033",
+  "title": "Punisher vs. Spider-Man",
+  "source": "The Punisher (1987) Ad/Poster",
+  "artist": "Klaus Janson",
+  "matches": [
+    {
+      "idx": 1,
+      "file": "01.jpg",
+      "score": 0.0879,
+      "kind": "wiki-candidate",
+      "label": "File:Benjamin Parker (Earth-616) from Spider-Man Heroes & Villains Collection (Trading Cards) 001.jpg"
+    },
+    {
+      "idx": 2,
+      "file": "02.jpg",
+      "score": 0.0855,
+      "kind": "wiki-candidate",
+      "label": "File:The Punisher (2004 film) poster textless 002.png"
+    },
+    {
+      "idx": 3,
+      "file": "03.jpg",
+      "score": 0.0823,
+      "kind": "wiki-candidate",
+      "label": "File:Abner Jenkins (Earth-616) Pin-Up from Amazing Spider-Man Annual Vol 1 2 0001.png"
+    },
+    {
+      "idx": 4,
+      "file": "04.jpg",
+      "score": 0.0689,
+      "kind": "wiki-candidate",
+      "label": "File:Spider-Man Presents Punisher from Marvel Universe Cards Series I 0001.jpg"
+    },
+    {
+      "idx": 5,
+      "file": "05.jpg",
+      "score": 0.0647,
+      "kind": "wiki-candidate",
+      "label": "File:Francis Castle (Earth-616) and Peter Parker (Earth-616) from Spider-Man Team-Up (Trading Cards) 003.jpg"
+    },
+    {
+      "idx": 6,
+      "file": "06.jpg",
+      "score": 0.0636,
+      "kind": "wiki-candidate",
+      "label": "File:The Punisher (2004 film) poster textless 001.png"
+    }
+  ]
+}

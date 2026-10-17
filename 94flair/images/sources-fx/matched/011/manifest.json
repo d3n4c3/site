@@ -1,0 +1,51 @@
+{
+  "n": 11,
+  "key": "011",
+  "title": "Avengers Assemble",
+  "source": "The Avengers (1963) Annual #20, Page 56",
+  "artist": "Mike Mignola",
+  "matches": [
+    {
+      "idx": 1,
+      "file": "01.jpg",
+      "score": 0.0609,
+      "kind": "wiki-candidate",
+      "label": "File:Avengers Assemble Vol 2 3 Variant Textless.jpg"
+    },
+    {
+      "idx": 2,
+      "file": "02.jpg",
+      "score": 0.0507,
+      "kind": "wiki-candidate",
+      "label": "File:Avengers Assemble Vol 1 1 Textless.jpg"
+    },
+    {
+      "idx": 3,
+      "file": "03.jpg",
+      "score": 0.0499,
+      "kind": "wiki-candidate",
+      "label": "File:Avengers Assemble (Animated Series) poster 003.jpg"
+    },
+    {
+      "idx": 4,
+      "file": "04.jpg",
+      "score": 0.0418,
+      "kind": "wiki-candidate",
+      "label": "File:Avengers Assemble Vol 3 3 Jacket Variant Textless.jpg"
+    },
+    {
+      "idx": 5,
+      "file": "05.jpg",
+      "score": 0.035,
+      "kind": "wiki-candidate",
+      "label": "File:Avengers Assemble! 001.jpg"
+    },
+    {
+      "idx": 6,
+      "file": "06.jpg",
+      "score": 0.0344,
+      "kind": "wiki-candidate",
+      "label": "File:Avengers Assemble Vol 3 4 Stormbreakers Variant Textless.jpg"
+    }
+  ]
+}
