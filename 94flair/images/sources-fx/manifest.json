@@ -260,13 +260,13 @@
     "note": "Ron Lim Thanos close-up (middle-right panel) \u2014 Magus confrontation; replaces Infinity War #6 cover placeholder"
   },
   "032": {
-    "comic": "032.jpg",
-    "disabled": true,
     "file": "032.jpg",
-    "kind": "wiki",
-    "note": "wiki cover \u2014 not exotechktx crop; excluded from viewer until IG source lands",
+    "comic": "032-comic.jpg",
+    "kind": "comic-page",
+    "disabled": false,
     "source_line": "The Spectacular Spider-Man (1976) #200, Page 42",
-    "wiki_file": "Spectacular_Spider-Man_Vol_1_200.jpg"
+    "artist": "Sal Buscema",
+    "note": "Sal Buscema mourning Spidey panel (Harry Osborn death coda) \u2014 replaces wiki placeholder"
   },
   "034": {
     "comic": "034.jpg",
@@ -278,13 +278,13 @@
     "wiki_file": "Incredible_Hulk_Vol_1_340.jpg"
   },
   "035": {
-    "comic": "035.jpg",
-    "disabled": true,
     "file": "035.jpg",
-    "kind": "wiki",
-    "note": "wiki cover \u2014 not exotechktx crop; excluded from viewer until IG source lands",
+    "comic": "035-comic.jpg",
+    "kind": "comic-page",
+    "disabled": false,
     "source_line": "X-Men (1991) #26, Cover",
-    "wiki_file": "X-Men_Vol_1_26.jpg"
+    "artist": "Andy Kubert",
+    "note": "Andy Kubert/Matthew Ryan Bloodties cover \u2014 replaces wrong-series/wiki placeholder"
   },
   "036": {
     "comic": "036.jpg",

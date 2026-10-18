@@ -1,51 +1,5 @@
 {
-  "n": 35,
   "key": "035",
-  "title": "The Wedding",
-  "source": "X-Men (1991) #26, Cover",
-  "artist": "Andy Kubert",
-  "matches": [
-    {
-      "idx": 1,
-      "file": "01.jpg",
-      "score": 0.1302,
-      "kind": "wiki-candidate",
-      "label": "File:New X-Men Vol 2 26 Textless.jpg"
-    },
-    {
-      "idx": 2,
-      "file": "02.jpg",
-      "score": 0.0831,
-      "kind": "wiki-candidate",
-      "label": "File:William Stryker (Earth-616) from New X-Men Vol 2 26 0001.jpg"
-    },
-    {
-      "idx": 3,
-      "file": "03.jpg",
-      "score": 0.0808,
-      "kind": "wiki-candidate",
-      "label": "File:Albert (Fisherman) (Earth-616) from X-Men Vol 1 26 0001.png"
-    },
-    {
-      "idx": 4,
-      "file": "04.jpg",
-      "score": 0.0781,
-      "kind": "wiki-candidate",
-      "label": "File:Sooraya Qadir (Earth-616) from New X-Men Vol 2 26 0001.jpg"
-    },
-    {
-      "idx": 5,
-      "file": "05.jpg",
-      "score": 0.0713,
-      "kind": "wiki-candidate",
-      "label": "File:Purifiers (Earth-616) and Sooraya Qadir (Earth-616) from New X-Men Vol 2 26 0001.jpg"
-    },
-    {
-      "idx": 6,
-      "file": "06.jpg",
-      "score": 0.066,
-      "kind": "wiki-candidate",
-      "label": "File:Remy LeBeau (Earth-616) from X-Men Vol 2 26 001.jpg"
-    }
-  ]
+  "credit": "X-Men (1991) #26, Cover",
+  "artist": "Andy Kubert"
 }
