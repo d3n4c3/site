@@ -162,13 +162,13 @@
     "wiki_file": "Fantastic_Four_Vol_1_48.jpg"
   },
   "021": {
-    "comic": "021.jpg",
-    "disabled": true,
     "file": "021.jpg",
-    "kind": "wiki",
-    "note": "wiki cover \u2014 not exotechktx crop; excluded from viewer until IG source lands",
+    "comic": "021-comic.jpg",
+    "kind": "comic-page",
+    "disabled": false,
     "source_line": "The Incredible Hulk (1968) #414, Page 20",
-    "wiki_file": "Incredible_Hulk_Vol_1_414.jpg"
+    "artist": "Gary Frank",
+    "note": "Gary Frank/Cam Smith Surfer warp splash (Troyjan War) \u2014 replaces Hulk #414 cover placeholder"
   },
   "022": {
     "comic": "022.jpg",
