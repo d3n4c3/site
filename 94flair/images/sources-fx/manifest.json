@@ -233,13 +233,13 @@
     "note": "Larry Alexander/Tom Palmer Mephisto hell pin-up \u2014 replaces AWC Annual #8 cover placeholder"
   },
   "029": {
-    "comic": "029.jpg",
-    "disabled": true,
     "file": "029.jpg",
-    "kind": "wiki",
-    "note": "wiki cover \u2014 not exotechktx crop; excluded from viewer until IG source lands",
+    "comic": "029-comic.jpg",
+    "kind": "comic-page",
+    "disabled": false,
     "source_line": "Morbius (1992) #1, Mini-Poster",
-    "wiki_file": "Morbius_Vol_1_1.jpg"
+    "artist": "Ron Wagner; Mike Witherby",
+    "note": "Morbius #1 polybag mini-poster (Midnight Sons insert) \u2014 replaces #1 cover placeholder"
   },
   "030": {
     "comic": "030.jpg",
