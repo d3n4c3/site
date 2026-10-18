@@ -224,13 +224,13 @@
     "wiki_file": "Avengers_Vol_1_57.jpg"
   },
   "028": {
-    "comic": "028.jpg",
-    "disabled": true,
     "file": "028.jpg",
-    "kind": "wiki",
-    "note": "wiki cover \u2014 not exotechktx crop; excluded from viewer until IG source lands",
+    "comic": "028-comic.jpg",
+    "kind": "comic-page",
+    "disabled": false,
     "source_line": "West Coast Avengers (1985) Annual #8, Page 51",
-    "wiki_file": "Avengers_West_Coast_Annual_Vol_1_8.jpg"
+    "artist": "Larry Alexander; Tom Palmer",
+    "note": "Larry Alexander/Tom Palmer Mephisto hell pin-up \u2014 replaces AWC Annual #8 cover placeholder"
   },
   "029": {
     "comic": "029.jpg",
