@@ -99,13 +99,13 @@
     "wiki_file": "Avengers_Vol_1_75.jpg"
   },
   "014": {
-    "comic": "014.jpg",
-    "disabled": true,
     "file": "014.jpg",
-    "kind": "wiki",
-    "note": "wiki cover \u2014 not exotechktx crop; excluded from viewer until IG source lands",
+    "comic": "014-comic.jpg",
+    "kind": "cover",
+    "disabled": false,
     "source_line": "Daredevil: The Man Without Fear (1964) #1, Cover",
-    "wiki_file": "Daredevil_The_Man_Without_Fear_Vol_1_1.jpg"
+    "artist": "Bill Everett",
+    "note": "1964 Daredevil #1 cover (was wrongly 1993 Man Without Fear #1 JRJR cover)"
   },
   "015": {
     "comic": "015.jpg",
