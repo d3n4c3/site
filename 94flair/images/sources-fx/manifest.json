@@ -530,13 +530,13 @@
     "wiki_file": "Captain_America_Vol_1_422.jpg"
   },
   "067": {
-    "comic": "067.jpg",
-    "disabled": true,
     "file": "067.jpg",
-    "kind": "wiki",
-    "note": "wiki cover \u2014 not exotechktx crop; excluded from viewer until IG source lands",
+    "comic": "067-comic.jpg",
+    "kind": "comic-page",
+    "disabled": false,
     "source_line": "The Spectacular Spider-Man (1976) #201, Page 21",
-    "wiki_file": "Spectacular_Spider-Man_Vol_1_201.jpg"
+    "artist": "Sal Buscema",
+    "note": "Sal Buscema Spec #201 closing splash (arms raised) \u2014 Cosmic Spider-Man pose source"
   },
   "068": {
     "comic": "068.jpg",
@@ -557,13 +557,13 @@
     "wiki_file": "Thanos_Quest_Vol_1_1.jpg"
   },
   "071": {
-    "comic": "071.jpg",
-    "disabled": true,
     "file": "071.jpg",
-    "kind": "wiki",
-    "note": "wiki cover \u2014 not exotechktx crop; excluded from viewer until IG source lands",
+    "comic": "071-comic.jpg",
+    "kind": "comic-page",
+    "disabled": false,
     "source_line": "Ghost Rider (1990) #1, Cover",
-    "wiki_file": "Ghost_Rider_Vol_1_1.jpg"
+    "artist": "Javier Saltares",
+    "note": "Javier Saltares Ghost Rider #1 cover \u2014 New Ghost Rider on hellcycle"
   },
   "072": {
     "comic": "072.jpg",
@@ -575,13 +575,13 @@
     "wiki_file": "Deathlok_Vol_1_1.jpg"
   },
   "073": {
-    "comic": "073.jpg",
-    "disabled": true,
     "file": "073.jpg",
-    "kind": "wiki",
-    "note": "wiki cover \u2014 not exotechktx crop; excluded from viewer until IG source lands",
+    "comic": "073-comic.jpg",
+    "kind": "comic-page",
+    "disabled": false,
     "source_line": "Nova (1993) #1, Page 1",
-    "wiki_file": "Nova_Vol_1_1.jpg"
+    "artist": "Chris Marrinan",
+    "note": "Chris Marrinan Nova #1 opening splash over Manhattan \u2014 Origin of the New Warriors / New Nova"
   },
   "074": {
     "comic": "074.jpg",
