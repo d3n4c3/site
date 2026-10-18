@@ -72,13 +72,13 @@
     "note": "Doc Ock POWER STRUGGLE splash \u2014 replaces cover placeholder"
   },
   "011": {
-    "comic": "011.jpg",
-    "disabled": true,
     "file": "011.jpg",
-    "kind": "wiki",
-    "note": "wiki cover \u2014 not exotechktx crop; excluded from viewer until IG source lands",
+    "comic": "011-comic.jpg",
+    "kind": "comic-page",
+    "disabled": false,
     "source_line": "The Avengers (1963) Annual #20, Page 56",
-    "wiki_file": "Avengers_Vol_1_20.jpg"
+    "artist": "Mike Mignola",
+    "note": "Mignola Marvel Masterwork Pin-Up (founders + Loki); Flair paints Cap in Loki\u2019s spot"
   },
   "012": {
     "comic": "012.jpg",
