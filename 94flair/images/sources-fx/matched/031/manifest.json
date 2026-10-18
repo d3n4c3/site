@@ -1,51 +1,12 @@
 {
-  "n": 31,
   "key": "031",
-  "title": "Thanos Attacks",
   "source": "The Infinity War (1992) #6, Page 14",
-  "artist": "Ron Lim",
-  "matches": [
-    {
-      "idx": 1,
-      "file": "01.jpg",
-      "score": 0.0972,
-      "kind": "wiki-candidate",
-      "label": "File:Peter Quill (Earth-199999), Gamora (Earth-199999), and Thanos (Earth-199999) from Avengers Infinity War 001.jpg"
-    },
-    {
-      "idx": 2,
-      "file": "02.jpg",
-      "score": 0.0873,
-      "kind": "wiki-candidate",
-      "label": "File:Thanos Vol 2 1 Hip-Hop Variant Textless.jpg"
-    },
-    {
-      "idx": 3,
-      "file": "03.jpg",
-      "score": 0.0868,
-      "kind": "wiki-candidate",
-      "label": "File:Thanos Vol 2 1 Toy Variant Textless.jpg"
-    },
-    {
-      "idx": 4,
-      "file": "04.jpg",
-      "score": 0.0644,
-      "kind": "wiki-candidate",
-      "label": "File:Thanos (Earth-616) from Infinity Gauntlet Vol 1 6 0001.jpg"
-    },
-    {
-      "idx": 5,
-      "file": "05.jpg",
-      "score": 0.0588,
-      "kind": "wiki-candidate",
-      "label": "File:Thanos (Doppleganger) (Earth-616) from Infinity War Vol 1 1.jpg"
-    },
-    {
-      "idx": 6,
-      "file": "06.jpg",
-      "score": 0.0546,
-      "kind": "wiki-candidate",
-      "label": "File:Thanos (Earth-616) from Infinity War Vol 1 1 001.jpg"
-    }
-  ]
+  "panel": "middle-right Thanos close-up",
+  "crop_box_frac": [
+    0.545,
+    0.325,
+    0.995,
+    0.675
+  ],
+  "file": "Infinity War - Collected Edition-220.jpg"
 }

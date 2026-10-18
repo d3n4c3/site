@@ -251,13 +251,13 @@
     "wiki_file": "Original_Ghost_Rider_Vol_1_8.jpg"
   },
   "031": {
-    "comic": "031.jpg",
-    "disabled": true,
     "file": "031.jpg",
-    "kind": "wiki",
-    "note": "wiki cover \u2014 not exotechktx crop; excluded from viewer until IG source lands",
+    "comic": "031-comic.jpg",
+    "kind": "comic-page",
+    "disabled": false,
     "source_line": "The Infinity War (1992) #6, Page 14",
-    "wiki_file": "Infinity_War_Vol_1_6.jpg"
+    "artist": "Ron Lim",
+    "note": "Ron Lim Thanos close-up (middle-right panel) \u2014 Magus confrontation; replaces Infinity War #6 cover placeholder"
   },
   "032": {
     "comic": "032.jpg",
