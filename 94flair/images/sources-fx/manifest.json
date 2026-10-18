@@ -27,13 +27,13 @@
     "wiki_file": "Journey_Into_Mystery_Vol_1_89.jpg"
   },
   "005": {
-    "comic": "005.jpg",
-    "disabled": true,
     "file": "005.jpg",
-    "kind": "wiki",
-    "note": "wiki cover \u2014 not exotechktx crop; excluded from viewer until IG source lands",
-    "source_line": "Web of Spider-Man (1985) #105, Page 2",
-    "wiki_file": "Web_of_Spider-Man_Vol_1_105.jpg"
+    "comic": "005-comic.jpg",
+    "kind": "comic-page",
+    "disabled": false,
+    "source_line": "Web of Spider-Man (1985) #109, Page 2",
+    "artist": "Rurik Tyler; Sam De La Rosa",
+    "note": "Rurik Tyler guest pencils \u2014 Flair #5 pose match (was mis-cited as #105)"
   },
   "006": {
     "comic": "006.jpg",
