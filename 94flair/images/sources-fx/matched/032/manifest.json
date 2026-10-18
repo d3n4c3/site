@@ -1,5 +1,20 @@
 {
   "key": "032",
-  "credit": "The Spectacular Spider-Man (1976) #200, Page 42",
-  "artist": "Sal Buscema"
+  "crop_box_frac": [
+    0.67,
+    0.345,
+    0.94,
+    0.63
+  ],
+  "crop_box_px": [
+    647,
+    522,
+    908,
+    953
+  ],
+  "crop_size": [
+    900,
+    1486
+  ],
+  "note": "Flair-matched crop (final pass)"
 }

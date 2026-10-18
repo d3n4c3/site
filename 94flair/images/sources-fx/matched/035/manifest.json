@@ -1,5 +1,20 @@
 {
   "key": "035",
-  "credit": "X-Men (1991) #26, Cover",
-  "artist": "Andy Kubert"
+  "crop_box_frac": [
+    0.0,
+    0.34,
+    0.38,
+    0.78
+  ],
+  "crop_box_px": [
+    0,
+    1039,
+    755,
+    2384
+  ],
+  "crop_size": [
+    755,
+    1345
+  ],
+  "note": "Flair-matched crop (final pass)"
 }

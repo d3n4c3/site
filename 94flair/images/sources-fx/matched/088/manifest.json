@@ -1,0 +1,20 @@
+{
+  "key": "088",
+  "crop_box_frac": [
+    0.655,
+    0.0,
+    1.0,
+    1.0
+  ],
+  "crop_box_px": [
+    532,
+    0,
+    812,
+    452
+  ],
+  "crop_size": [
+    900,
+    1452
+  ],
+  "note": "reframed to match Flair card composition (pass 2)"
+}

@@ -1,51 +1,20 @@
 {
-  "n": 14,
   "key": "014",
-  "title": "Origin of Daredevil",
-  "source": "Daredevil: The Man Without Fear (1964) #1, Cover",
-  "artist": "Bill Everett",
-  "matches": [
-    {
-      "idx": 1,
-      "file": "01.jpg",
-      "score": 0.0893,
-      "kind": "wiki-candidate",
-      "label": "File:Matthew Murdock (Earth-616) being trained by Stick from Daredevil The Man Without Fear Vol 1 1.jpg"
-    },
-    {
-      "idx": 2,
-      "file": "02.jpg",
-      "score": 0.0676,
-      "kind": "wiki-candidate",
-      "label": "File:Angelo (Earth-616) from Daredevil The Man Without Fear Vol 1 2 0001.png"
-    },
-    {
-      "idx": 3,
-      "file": "03.jpg",
-      "score": 0.0654,
-      "kind": "wiki-candidate",
-      "label": "File:Daredevil The Man Without Fear Vol 1 1.jpg"
-    },
-    {
-      "idx": 4,
-      "file": "04.jpg",
-      "score": 0.0612,
-      "kind": "wiki-candidate",
-      "label": "File:Carl Lombardi (Earth-616) from Captain Universe Daredevil - The Man Without Fear! Vol 1 1 001.jpg"
-    },
-    {
-      "idx": 5,
-      "file": "05.jpg",
-      "score": 0.0594,
-      "kind": "wiki-candidate",
-      "label": "File:Baby Karen (Earth-616) from Daredevil Vol 2 1 0001.png"
-    },
-    {
-      "idx": 6,
-      "file": "06.jpg",
-      "score": 0.0471,
-      "kind": "wiki-candidate",
-      "label": "File:Matthew Murdock (Earth-616) as a boy from Daredevil the Man Without Fear Vol 1 1.jpg"
-    }
-  ]
+  "crop_box_frac": [
+    0.08,
+    0.3,
+    0.58,
+    0.9
+  ],
+  "crop_box_px": [
+    120,
+    643,
+    870,
+    1929
+  ],
+  "crop_size": [
+    750,
+    1286
+  ],
+  "note": "Flair-matched crop (final pass)"
 }

@@ -1,5 +1,20 @@
 {
   "key": "073",
-  "credit": "Nova (1993) #1, Page 1",
-  "artist": "Chris Marrinan"
+  "crop_box_frac": [
+    0.28,
+    0.12,
+    0.96,
+    0.86
+  ],
+  "crop_box_px": [
+    273,
+    173,
+    936,
+    1239
+  ],
+  "crop_size": [
+    663,
+    1066
+  ],
+  "note": "Flair-matched crop"
 }

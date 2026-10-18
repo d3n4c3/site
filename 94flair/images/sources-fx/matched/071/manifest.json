@@ -1,5 +1,20 @@
 {
   "key": "071",
-  "credit": "Ghost Rider (1990) #1, Cover",
-  "artist": "Javier Saltares"
+  "crop_box_frac": [
+    0.08,
+    0.2,
+    0.97,
+    0.94
+  ],
+  "crop_box_px": [
+    79,
+    300,
+    959,
+    1410
+  ],
+  "crop_size": [
+    880,
+    1110
+  ],
+  "note": "Flair-matched crop"
 }

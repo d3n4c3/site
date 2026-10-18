@@ -1,51 +1,14 @@
 {
-  "n": 28,
   "key": "028",
-  "title": "Mephisto Appears",
-  "source": "West Coast Avengers (1985) Annual #8, Page 51",
-  "artist": "Larry Alexander",
-  "matches": [
-    {
-      "idx": 1,
-      "file": "01.jpg",
-      "score": 0.0873,
-      "kind": "wiki-candidate",
-      "label": "File:Mephisto (Earth-616) from Avengers Vol 8 7 001.jpg"
-    },
-    {
-      "idx": 2,
-      "file": "02.jpg",
-      "score": 0.0838,
-      "kind": "wiki-candidate",
-      "label": "File:Mephisto (Earth-4111) from Avengers Vol 8 50 001.jpg"
-    },
-    {
-      "idx": 3,
-      "file": "03.jpg",
-      "score": 0.0595,
-      "kind": "wiki-candidate",
-      "label": "File:Mephisto (Earth-616) from Avengers Vol 8 31 002.jpg"
-    },
-    {
-      "idx": 4,
-      "file": "04.jpg",
-      "score": 0.0504,
-      "kind": "wiki-candidate",
-      "label": "File:Mephisto (Earth-616) from Avengers Academy Marvel's Voices Infinity Comic Vol 1 24 001.jpg"
-    },
-    {
-      "idx": 5,
-      "file": "05.jpg",
-      "score": 0.0484,
-      "kind": "wiki-candidate",
-      "label": "File:Mephisto (Earth-616) from Avengers Vol 8 32 001.jpg"
-    },
-    {
-      "idx": 6,
-      "file": "06.jpg",
-      "score": 0.0471,
-      "kind": "wiki-candidate",
-      "label": "File:Mephisto (Earth-TRN1265) from Avengers Vol 1 177 0001.jpg"
-    }
-  ]
+  "crop_box_frac": [
+    0.36,
+    0.035,
+    0.69,
+    0.375
+  ],
+  "crop_size": [
+    630,
+    1008
+  ],
+  "note": "Flair-matched Mephisto portrait"
 }

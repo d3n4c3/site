@@ -1,12 +1,20 @@
 {
   "key": "031",
-  "source": "The Infinity War (1992) #6, Page 14",
-  "panel": "middle-right Thanos close-up",
   "crop_box_frac": [
-    0.545,
-    0.325,
-    0.995,
-    0.675
+    0.58,
+    0.355,
+    0.98,
+    0.68
   ],
-  "file": "Infinity War - Collected Edition-220.jpg"
+  "crop_box_px": [
+    1114,
+    1052,
+    1882,
+    2014
+  ],
+  "crop_size": [
+    768,
+    962
+  ],
+  "note": "Flair-matched crop"
 }

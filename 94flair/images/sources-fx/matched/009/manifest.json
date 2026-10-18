@@ -1,0 +1,20 @@
+{
+  "key": "009",
+  "crop_box_frac": [
+    0.36,
+    0.18,
+    0.8,
+    0.62
+  ],
+  "crop_box_px": [
+    485,
+    369,
+    1077,
+    1270
+  ],
+  "crop_size": [
+    592,
+    901
+  ],
+  "note": "Flair-matched crop (final pass)"
+}
