@@ -198,13 +198,12 @@
     "wiki_file": "Marvel_Swimsuit_Special_Vol_1_2.jpg"
   },
   "025": {
-    "comic": "025.jpg",
-    "disabled": true,
     "file": "025.jpg",
-    "kind": "wiki",
-    "note": "wiki cover \u2014 not exotechktx crop; excluded from viewer until IG source lands",
+    "comic": "025-comic.jpg",
+    "kind": "comic-page",
+    "disabled": false,
     "source_line": "The Fantastic Four (1961) #128, Page 21",
-    "wiki_file": "Fantastic_Four_Vol_1_128.jpg"
+    "note": "Buscema Friends & Foes Doom pin-up (arms crossed) \u2014 replaces FF #128 cover placeholder"
   },
   "026": {
     "comic": "026.jpg",
