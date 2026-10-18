@@ -63,13 +63,13 @@
     "wiki_file": "Spectacular_Spider-Man_Vol_1_188.jpg"
   },
   "009": {
-    "comic": "009.jpg",
-    "disabled": true,
     "file": "009.jpg",
-    "kind": "wiki",
-    "note": "wiki cover \u2014 not exotechktx crop; excluded from viewer until IG source lands",
+    "comic": "009-comic.jpg",
+    "kind": "comic-page",
+    "disabled": false,
     "source_line": "Lethal Foes of Spider-Man (1994) #3, Page 2",
-    "wiki_file": "Lethal_Foes_of_Spider-Man_Vol_1_3.jpg"
+    "artist": "Keith Pollard; David Boller",
+    "note": "Doc Ock POWER STRUGGLE splash \u2014 replaces cover placeholder"
   },
   "011": {
     "comic": "011.jpg",
