@@ -1,10 +1,11 @@
 {
   "key": "091",
-  "credit": "Wolverine (1988) #57, Cover",
-  "artist": "Marc Silvestri",
-  "note": "Death of Mariko cover (Wolverine cradling dying Mariko). Citation listed #65 p13 which was a later grief recount (SPLOOT); Flair casket painting is reinterpretation of this death beat. Pack file labeled v1 but issue #57 is the Mariko death cover.",
+  "credit": "Wolverine (1988) #65, Page 18",
+  "artist": "Mark Texeira",
+  "note": "User-confirmed source for Flair #091 Death of Mariko. Bandaged Wolverine leaning on console \u2014 Flair reinterprets as grief over Mariko memorial. Prior #57 cover install was wrong. HD from user scan (1320x1930); pack extract is wolverine65_17.jpg (~story p18).",
+  "src": "/home/ubuntu/.cursor/projects/workspace/assets/01a154ed-9697-71ff-bea1-93a80ffcbe28.jpg",
   "size": [
-    770,
-    1183
+    1320,
+    1930
   ]
 }
