@@ -1,51 +1,10 @@
 {
-  "n": 75,
   "key": "075",
-  "title": "Gambit Appears",
-  "source": "X-Men (1991) #25, Gambit Hologram",
+  "credit": "X-Men (1991) #25, Gambit Hologram",
   "artist": "Andy Kubert",
-  "matches": [
-    {
-      "idx": 1,
-      "file": "01.jpg",
-      "score": 0.0913,
-      "kind": "wiki-candidate",
-      "label": "File:James Howlett (Earth-616) and Max Eisenhardt (Earth-616) from X-Men Vol 2 25 0001.jpg"
-    },
-    {
-      "idx": 2,
-      "file": "02.jpg",
-      "score": 0.0821,
-      "kind": "wiki-candidate",
-      "label": "File:X-Men (Earth-616) from X-Men Vol 2 25 001.jpg"
-    },
-    {
-      "idx": 3,
-      "file": "03.jpg",
-      "score": 0.0662,
-      "kind": "wiki-candidate",
-      "label": "File:Acolytes (Earth-616) from X-Men Vol 2 25 001.jpg"
-    },
-    {
-      "idx": 4,
-      "file": "04.jpg",
-      "score": 0.06,
-      "kind": "wiki-candidate",
-      "label": "File:Charles Xavier (Earth-616) and Max Eisenhardt (Earth-616) from X-Men Vol 2 25 001.jpg"
-    },
-    {
-      "idx": 5,
-      "file": "05.jpg",
-      "score": 0.0568,
-      "kind": "wiki-candidate",
-      "label": "File:James Howlett & Max Eisenhardt (Earth-616) from X-Men Vol 2 25 0001.jpg"
-    },
-    {
-      "idx": 6,
-      "file": "06.jpg",
-      "score": 0.053,
-      "kind": "wiki-candidate",
-      "label": "File:Remy LeBeau (Earth-616) from X-Men Vol 2 25 001.jpg"
-    }
+  "note": "intact full source",
+  "size": [
+    913,
+    393
   ]
 }

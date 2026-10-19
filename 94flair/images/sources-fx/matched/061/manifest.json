@@ -1,51 +1,10 @@
 {
-  "n": 61,
   "key": "061",
-  "title": "Origin of Venom",
-  "source": "Venom: Lethal Protector (1993) Gold Retailer Incentive, Back Cover",
+  "credit": "Venom: Lethal Protector (1993) Gold Retailer Incentive, Back Cover (Spider-Man: Venom Returns cover reprint)",
   "artist": "Mark Bagley; Al Milgrom",
-  "matches": [
-    {
-      "idx": 1,
-      "file": "01.jpg",
-      "score": 0.0733,
-      "kind": "wiki-candidate",
-      "label": "File:Edward Brock (Earth-616) and Anti-Venom (Symbiote) (Earth-616) from Marvel War of Heroes 002.jpeg"
-    },
-    {
-      "idx": 2,
-      "file": "02.jpg",
-      "score": 0.0718,
-      "kind": "wiki-candidate",
-      "label": "File:Edward Brock (Earth-616) and Venom (Symbiote) (Earth-616) from Marvel Masterpieces (Trading Cards) 1994 Holofoil 001.jpg"
-    },
-    {
-      "idx": 3,
-      "file": "03.jpg",
-      "score": 0.0686,
-      "kind": "wiki-candidate",
-      "label": "File:Benjamin Reilly (Earth-616), Edward Brock (Earth-616), and Venom (Symbiote) (Earth-616) from Ultra Spider-Man (Trading Cards) - HoloBlast 1997 Series 001.jpg"
-    },
-    {
-      "idx": 4,
-      "file": "04.jpg",
-      "score": 0.0647,
-      "kind": "wiki-candidate",
-      "label": "File:Edward Brock (Earth-616) and Anti-Venom (Symbiote) (Earth-616) from Marvel War of Heroes 001.jpeg"
-    },
-    {
-      "idx": 5,
-      "file": "05.jpg",
-      "score": 0.064,
-      "kind": "wiki-candidate",
-      "label": "File:Edward Brock (Earth-616) and Venom (Symbiote) (Earth-616) from Marvel Masterpieces (Trading Cards) 1996 001.jpg"
-    },
-    {
-      "idx": 6,
-      "file": "06.jpg",
-      "score": 0.0532,
-      "kind": "wiki-candidate",
-      "label": "File:Edward Brock (Earth-616) and Anti-Venom (Symbiote) (Earth-616) from Marvel War of Heroes 004.jpeg"
-    }
+  "note": "intact full source",
+  "size": [
+    474,
+    720
   ]
 }
