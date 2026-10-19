@@ -1,51 +1,10 @@
 {
-  "n": 41,
   "key": "041",
-  "title": "Days of Future Past",
-  "source": "X-Men Adventures (1992) #1, Page 12",
+  "credit": "X-Men Adventures (1992) #1, Page 12",
   "artist": "Andrew Wildman",
-  "matches": [
-    {
-      "idx": 1,
-      "file": "01.jpg",
-      "score": 0.0891,
-      "kind": "wiki-candidate",
-      "label": "File:X-Factor Vol 4 2 Days of Future Past Wraparound Variant.jpg"
-    },
-    {
-      "idx": 2,
-      "file": "02.jpg",
-      "score": 0.0753,
-      "kind": "wiki-candidate",
-      "label": "File:X-Men Days of Future Past - Doomsday Vol 1 1 Hellfire Gala Variant.jpg"
-    },
-    {
-      "idx": 3,
-      "file": "03.jpg",
-      "score": 0.0697,
-      "kind": "wiki-candidate",
-      "label": "File:Wolverine Vol 7 4 Days of Future Past Wraparound Variant.jpg"
-    },
-    {
-      "idx": 4,
-      "file": "04.jpg",
-      "score": 0.0633,
-      "kind": "wiki-candidate",
-      "label": "File:X-Men Days of Future Past - Doomsday Vol 1 1 Hellfire Gala Variant Textless.jpg"
-    },
-    {
-      "idx": 5,
-      "file": "05.jpg",
-      "score": 0.0613,
-      "kind": "wiki-candidate",
-      "label": "File:Marauders Vol 1 11 Days of Future Past Variant.jpg"
-    },
-    {
-      "idx": 6,
-      "file": "06.jpg",
-      "score": 0.0612,
-      "kind": "wiki-candidate",
-      "label": "File:Wolverine Vol 7 4 Days of Future Past Variant.jpg"
-    }
+  "note": "Corrected: was issue cover; now intact page 12 (Cyclops blast / Sentinel head)",
+  "size": [
+    1821,
+    2800
   ]
 }
