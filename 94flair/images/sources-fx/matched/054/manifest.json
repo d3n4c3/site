@@ -1,51 +1,10 @@
 {
-  "n": 54,
   "key": "054",
-  "title": "Formation of Excalibur",
-  "source": "The Uncanny X-Men (1963) #300, Page 1",
+  "credit": "The Uncanny X-Men (1963) #300, Page 1",
   "artist": "John Romita Jr.",
-  "matches": [
-    {
-      "idx": 1,
-      "file": "01.jpg",
-      "score": 0.0876,
-      "kind": "wiki-candidate",
-      "label": "File:Excalibur (Earth-616) from Marvel Comics Presents Vol 1 38 001.jpg"
-    },
-    {
-      "idx": 2,
-      "file": "02.jpg",
-      "score": 0.0762,
-      "kind": "wiki-candidate",
-      "label": "File:Excalibur (Earth-616) from Excalibur Special Edition Vol 1 1 0001.jpg"
-    },
-    {
-      "idx": 3,
-      "file": "03.jpg",
-      "score": 0.0734,
-      "kind": "wiki-candidate",
-      "label": "File:Excalibur (Earth-616) and Technet (Multiverse) from Excalibur Special Edition Vol 1 1 001.jpg"
-    },
-    {
-      "idx": 4,
-      "file": "04.jpg",
-      "score": 0.0679,
-      "kind": "wiki-candidate",
-      "label": "File:Excalibur (Earth-616) from Excalibur Trading Cards 0003.jpg"
-    },
-    {
-      "idx": 5,
-      "file": "05.jpg",
-      "score": 0.0668,
-      "kind": "wiki-candidate",
-      "label": "File:Excalibur (Earth-616) from Excalibur Vol 4 16 001.jpg"
-    },
-    {
-      "idx": 6,
-      "file": "06.jpg",
-      "score": 0.0569,
-      "kind": "wiki-candidate",
-      "label": "File:Excalibur (Earth-616) from Excalibur Special Edition Vol 1 1 001.jpg"
-    }
+  "note": "Was wrong cover; now intact UX #300 page 1 Nightcrawler BAMF splash",
+  "size": [
+    1988,
+    3056
   ]
 }

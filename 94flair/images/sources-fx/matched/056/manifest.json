@@ -1,51 +1,10 @@
 {
-  "n": 56,
   "key": "056",
-  "title": "Mr. Sinister Appears",
-  "source": "The Uncanny X-Men (1963) #239, Page 4",
+  "credit": "The Uncanny X-Men (1963) #239, Page 4",
   "artist": "Marc Silvestri",
-  "matches": [
-    {
-      "idx": 1,
-      "file": "01.jpg",
-      "score": 0.0813,
-      "kind": "wiki-candidate",
-      "label": "File:Nathaniel Essex (Mister Sinister) (Earth-616) and Scott Summers (Earth-616) from Uncanny X-Men Vol 2 2 001.png"
-    },
-    {
-      "idx": 2,
-      "file": "02.jpg",
-      "score": 0.0749,
-      "kind": "wiki-candidate",
-      "label": "File:Nathaniel Essex (Mister Sinister) (Earth-616) concept art 001.jpg"
-    },
-    {
-      "idx": 3,
-      "file": "03.jpg",
-      "score": 0.0613,
-      "kind": "wiki-candidate",
-      "label": "File:Nathaniel Essex (Mister Sinister) (Earth-616) from Uncanny X-Men Vol 1 221 001.png"
-    },
-    {
-      "idx": 4,
-      "file": "04.jpg",
-      "score": 0.0572,
-      "kind": "wiki-candidate",
-      "label": "File:Madelyne Pryor and Nathaniel Essex (Mister Sinister) (Earth-616) from Uncanny X-Men Vol 1 241 0001.jpg"
-    },
-    {
-      "idx": 5,
-      "file": "05.jpg",
-      "score": 0.0549,
-      "kind": "wiki-candidate",
-      "label": "File:Jean Grey (Earth-616) and Nathaniel Essex (Mister Sinister) (Earth-616) from Uncanny X-Men Vol 1 243 001.jpg"
-    },
-    {
-      "idx": 6,
-      "file": "06.jpg",
-      "score": 0.0454,
-      "kind": "wiki-candidate",
-      "label": "File:Nathaniel Essex (Mister Sinister) (Earth-616) from Uncanny X-Men Vol 1 240 001.png"
-    }
+  "note": "Was UX #239 cover; now intact interior Sinister throne splash",
+  "size": [
+    2063,
+    3131
   ]
 }
