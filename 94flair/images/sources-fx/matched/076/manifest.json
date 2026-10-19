@@ -1,51 +1,10 @@
 {
-  "n": 76,
   "key": "076",
-  "title": "X-Tinction Agenda",
-  "source": "X-Tinction Agenda House Ad/Promotional Material; X-Men (1991) #1 Composite (Cyclops)",
+  "credit": "X-Tinction Agenda House Ad/Promotional Material; X-Men (1991) #1 Composite (Cyclops)",
   "artist": "Jim Lee",
-  "matches": [
-    {
-      "idx": 1,
-      "file": "01.jpg",
-      "score": 0.0973,
-      "kind": "wiki-candidate",
-      "label": "File:X-Tinction Agenda Vol 1 2 Textless.jpg"
-    },
-    {
-      "idx": 2,
-      "file": "02.jpg",
-      "score": 0.0956,
-      "kind": "wiki-candidate",
-      "label": "File:X-Tinction Agenda Vol 1 1 Textless.jpg"
-    },
-    {
-      "idx": 3,
-      "file": "03.jpg",
-      "score": 0.0772,
-      "kind": "wiki-candidate",
-      "label": "File:X-Tinction Agenda Vol 1 2 Anka Variant Textless.jpg"
-    },
-    {
-      "idx": 4,
-      "file": "04.jpg",
-      "score": 0.0714,
-      "kind": "wiki-candidate",
-      "label": "File:X-Tinction Agenda Vol 1 4 Textless.jpg"
-    },
-    {
-      "idx": 5,
-      "file": "05.jpg",
-      "score": 0.0683,
-      "kind": "wiki-candidate",
-      "label": "File:X-Tinction Agenda Vol 1 1 Brooks Variant Textless.jpg"
-    },
-    {
-      "idx": 6,
-      "file": "06.jpg",
-      "score": 0.0544,
-      "kind": "wiki-candidate",
-      "label": "File:X-Tinction Agenda Vol 1 3 Textless.jpg"
-    }
+  "note": "intact full source (no panel crop)",
+  "size": [
+    489,
+    750
   ]
 }

@@ -1,51 +1,10 @@
 {
-  "n": 78,
   "key": "078",
-  "title": "Deadpool Strikes",
-  "source": "Deadpool: The Circle Chase (1993) #2, Page 5",
+  "credit": "Deadpool: The Circle Chase (1993) #2, Page 5",
   "artist": "Joe Madureira",
-  "matches": [
-    {
-      "idx": 1,
-      "file": "01.jpg",
-      "score": 0.0837,
-      "kind": "wiki-candidate",
-      "label": "File:Vanessa Carlysle (Earth-616) from Deadpool The Circle Chase Vol 1 2 003.jpg"
-    },
-    {
-      "idx": 2,
-      "file": "02.jpg",
-      "score": 0.0525,
-      "kind": "wiki-candidate",
-      "label": "File:Damarus Cove Islands from Deadpool The Circle Chase Vol 1 2 001.jpg"
-    },
-    {
-      "idx": 3,
-      "file": "03.jpg",
-      "score": 0.0498,
-      "kind": "wiki-candidate",
-      "label": "File:Gezdbadah (Earth-616) from Deadpool The Circle Chase Vol 1 2 0001.png"
-    },
-    {
-      "idx": 4,
-      "file": "04.jpg",
-      "score": 0.0475,
-      "kind": "wiki-candidate",
-      "label": "File:Mumbai from Deadpool The Circle Chase Vol 1 2 001.png"
-    },
-    {
-      "idx": 5,
-      "file": "05.jpg",
-      "score": 0.0455,
-      "kind": "wiki-candidate",
-      "label": "File:Vanessa Carlysle (Earth-616) from Deadpool The Circle Chase Vol 1 2 0001.jpg"
-    },
-    {
-      "idx": 6,
-      "file": "06.jpg",
-      "score": 0.0437,
-      "kind": "wiki-candidate",
-      "label": "File:Vanessa Carlysle (Earth-616) from Deadpool The Circle Chase Vol 1 2 002.jpg"
-    }
+  "note": "intact full source (no panel crop)",
+  "size": [
+    1074,
+    1650
   ]
 }
