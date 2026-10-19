@@ -2,10 +2,16 @@
   "key": "091",
   "credit": "Wolverine (1988) #65, Page 18",
   "artist": "Mark Texeira",
-  "note": "User-confirmed source for Flair #091 Death of Mariko. Bandaged Wolverine leaning on console \u2014 Flair reinterprets as grief over Mariko memorial. Prior #57 cover install was wrong. HD from user scan (1320x1930); pack extract is wolverine65_17.jpg (~story p18).",
+  "note": "User-confirmed source for Flair #091 Death of Mariko. Bandaged Wolverine leaning on console \u2014 Flair reinterprets as grief over Mariko memorial. Prior #57 cover install was wrong. HD from user scan (1320x1930); pack extract is wolverine65_17.jpg (~story p18). Black scan/page border cropped tight to panel block.",
   "src": "/home/ubuntu/.cursor/projects/workspace/assets/01a154ed-9697-71ff-bea1-93a80ffcbe28.jpg",
   "size": [
-    1320,
-    1930
+    1212,
+    1838
+  ],
+  "crop_box": [
+    54,
+    43,
+    1266,
+    1881
   ]
 }
