@@ -1,11 +1,11 @@
 {
   "key": "075",
-  "credit": "Uncanny X-Men (1963) #266, Cover",
+  "credit": "X-Men (1991) #25, Gambit Hologram",
   "artist": "Andy Kubert",
-  "note": "Card-back citation + sphere show UX #266 cover (Gambit debut lunge). Prior XM #25 p26 FSHRAAKK arms-out panel was wrong pose; user TSV hologram cite was incorrect.",
-  "src": "/tmp/fix4/install/075-gambit.jpg",
+  "note": "Retailer promo hologram for X-Men (1991) #25 (Fatal Attractions). Flair front is painted reinterpretation of this hologram pose (lunge + charged cards). Card-back cites UX #266 (Gambit debut story), not the visual source. Scan from collectablechris (533x800).",
+  "src": "/tmp/fix4/holo/sites/chris-06-533x800.jpg",
   "size": [
-    2048,
-    3139
+    533,
+    800
   ]
 }
