@@ -2,10 +2,16 @@
   "key": "075",
   "credit": "X-Men (1991) #25, Gambit Hologram",
   "artist": "Andy Kubert",
-  "note": "X-Men #25 anniversary wraparound cover with embedded Gambit hologram (Fatal Attractions). Flair #075 is a painted reinterpretation of the hologram pose. HD scan from Ruby Lane (2048x2048).",
+  "note": "X-Men #25 anniversary wraparound with Gambit hologram; white studio padding cropped tight to cover edges. Ruby Lane 2048 scan.",
   "src": "https://cdn0.rubylane.com/_podl/item/2194336/9466/X-Men-Anniversary-Issue-%2325-Wraparound-pic-1A-2048-5b6f5a93-f.jpg",
   "size": [
-    2048,
-    2048
+    1298,
+    1983
+  ],
+  "crop_box": [
+    366,
+    26,
+    1664,
+    2009
   ]
 }
