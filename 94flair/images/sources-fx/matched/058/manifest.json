@@ -1,9 +1,9 @@
 {
   "key": "058",
-  "credit": "Uncanny X-Men (1963) #258, Page 8",
-  "artist": "Jim Lee",
-  "note": "Confirm intact Jubilee vs Mandarin page (already correct citation)",
-  "src": "/tmp/gap-hunt/058-pages/008.jpg",
+  "credit": "Uncanny X-Men (1963) #244, Page 2",
+  "artist": "Marc Silvestri",
+  "note": "Card-back citation UX #244 (origin). Installed fireworks performance page (arms-out + plasmoids). Prior UX #258 Mandarin page was wrong citation from user TSV.",
+  "src": "/tmp/fix4/install/058-jubilee.jpg",
   "size": [
     2013,
     3056

@@ -1,11 +1,11 @@
 {
   "key": "075",
-  "credit": "X-Men (1991) #25, Page 26 (Gambit panel / hologram source)",
+  "credit": "Uncanny X-Men (1963) #266, Cover",
   "artist": "Andy Kubert",
-  "note": "Intact full page containing the FSHRAAKK Gambit charged-cards panel used on Flair #075",
-  "src": "/tmp/gap-hunt/075-pages/026.jpg",
+  "note": "Card-back citation + sphere show UX #266 cover (Gambit debut lunge). Prior XM #25 p26 FSHRAAKK arms-out panel was wrong pose; user TSV hologram cite was incorrect.",
+  "src": "/tmp/fix4/install/075-gambit.jpg",
   "size": [
-    1988,
-    3056
+    2048,
+    3139
   ]
 }

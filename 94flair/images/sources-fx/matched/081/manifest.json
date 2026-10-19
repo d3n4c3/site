@@ -1,10 +1,11 @@
 {
   "key": "081",
-  "credit": "Ghost Rider & Blaze: Spirits of Vengeance (1992) #1, Mini-Poster",
-  "artist": "Adam Kubert",
-  "note": "SoV #1 cover/poster art with shotgun Blaze (was wrong modern cover)",
+  "credit": "Ghost Rider (1990) #14, Page 4",
+  "artist": "Javier Saltares; Mark Texeira",
+  "note": "Card-back citation Ghost Rider #14 (Return of Blaze). Installed shotgun + flaming-skull splash. Prior SoV #1 cover was wrong; user TSV mini-poster cite mismatched card back.",
+  "src": "/tmp/fix4/install/081-blaze.jpg",
   "size": [
-    1988,
-    3056
+    1000,
+    1534
   ]
 }

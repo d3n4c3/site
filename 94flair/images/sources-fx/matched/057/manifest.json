@@ -1,11 +1,11 @@
 {
   "key": "057",
-  "credit": "Amazing Spider-Man (1963) Annual #21, Page 41",
+  "credit": "Amazing Spider-Man (1963) Annual #21, Cover",
   "artist": "John Romita Sr.; John Romita Jr.",
-  "note": "Iconic wedding ceremony splash. Source list cited WoSM Annual #4 p43 (Kraven/ads in that archive); ASM Annual #21 p41 is the wedding.",
-  "src": "/tmp/gap-hunt/057-asm21/41.jpg",
+  "note": "Card-back citation + sphere show ASM Annual #21 cover (Spidey + MJ wedding dress). Flair front swinging pose is painted reinterpretation; ceremony splash previously installed did not match.",
+  "src": "/tmp/fix4/install/057-wedding.jpg",
   "size": [
-    988,
-    1520
+    1829,
+    2802
   ]
 }
