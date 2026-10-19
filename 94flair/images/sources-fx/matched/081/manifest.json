@@ -1,11 +1,11 @@
 {
   "key": "081",
-  "credit": "Ghost Rider (1990) #14, Page 4",
-  "artist": "Javier Saltares; Mark Texeira",
-  "note": "Card-back citation Ghost Rider #14 (Return of Blaze). Installed shotgun + flaming-skull splash. Prior SoV #1 cover was wrong; user TSV mini-poster cite mismatched card back.",
-  "src": "/tmp/fix4/install/081-blaze.jpg",
+  "credit": "Ghost Rider & Blaze: Spirits of Vengeance (1992) #1, Mini-Poster",
+  "artist": "Adam Kubert",
+  "note": "Exact pose match to Flair (shotgun Blaze, sunglasses on forehead, blue/white stripe). Card-back story cite is GR #14; Flair art is from SoV #1 Midnight Sons mini-poster (wiki scan 526x683 \u2014 digital CBRs omit polybag insert).",
+  "src": "/tmp/fix4/install/081-poster.jpg",
   "size": [
-    1000,
-    1534
+    526,
+    683
   ]
 }
