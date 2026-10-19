@@ -1,20 +1,10 @@
 {
   "key": "042",
-  "crop_box_frac": [
-    0.47,
-    0.0,
-    0.75,
-    1.0
-  ],
-  "crop_box_px": [
-    566,
-    0,
-    904,
+  "credit": "In-house sketches by Frank Miller (full sheet)",
+  "artist": "Frank Miller",
+  "note": "Full sketch sheet on source flip (no single-figure crop)",
+  "size": [
+    1205,
     961
-  ],
-  "crop_size": [
-    900,
-    2558
-  ],
-  "note": "reframed to match Flair card composition (pass 2)"
+  ]
 }
