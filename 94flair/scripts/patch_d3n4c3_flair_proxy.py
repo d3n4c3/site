@@ -20,6 +20,41 @@ PATCHED = """const __flair_origin = "https://d3n4c3-94flair.dennis-mayer03.worke
 const __orig_default = worker_default2;
 const worker_default2_flair = {
   async fetch(request, env, ctx) {
+    const url = new URL(request.url);
+    if (url.pathname === "/94flair" || url.pathname.startsWith("/94flair/")) {
+      // Always proxy to the dedicated flair worker. Never fall through to
+      // embedded public/94flair assets (those go stale on daily main redeploys).
+      try {
+        if (env.FLAIR) {
+          // Rewrite request URL to the flair worker origin so asset binding resolves.
+          const targetUrl = __flair_origin + url.pathname + url.search;
+          const proxied = new Request(targetUrl, request);
+          return env.FLAIR.fetch(proxied);
+        }
+      } catch (e) {
+        console.error("[94flair-proxy] FLAIR binding failed, using origin fetch", e);
+      }
+      const target = __flair_origin + url.pathname + url.search;
+      const headers = new Headers(request.headers);
+      headers.delete("host");
+      return fetch(target, {
+        method: request.method,
+        headers,
+        body: request.method === "GET" || request.method === "HEAD" ? undefined : request.body,
+        redirect: "manual"
+      });
+    }
+    return __orig_default.fetch(request, env, ctx);
+  },
+  async scheduled(controller, env, ctx) {
+    if (typeof __orig_default.scheduled === "function") {
+      return __orig_default.scheduled(controller, env, ctx);
+    }
+  }
+};"""const __flair_origin = "https://d3n4c3-94flair.dennis-mayer03.workers.dev";
+const __orig_default = worker_default2;
+const worker_default2_flair = {
+  async fetch(request, env, ctx) {
     try {
       const url = new URL(request.url);
       if (url.pathname === "/94flair" || url.pathname.startsWith("/94flair/")) {
