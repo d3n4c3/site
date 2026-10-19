@@ -1,51 +1,10 @@
 {
-  "n": 62,
   "key": "062",
-  "title": "Origin of Typhoid Mary",
-  "source": "Daredevil: The Man Without Fear (1964) #254, Page 2",
+  "credit": "Daredevil: The Man Without Fear (1964) #254, Page 2",
   "artist": "John Romita Jr.",
-  "matches": [
-    {
-      "idx": 1,
-      "file": "01.jpg",
-      "score": 0.0951,
-      "kind": "wiki-candidate",
-      "label": "File:Marvel Legends Typhoid Mary.jpg"
-    },
-    {
-      "idx": 2,
-      "file": "02.jpg",
-      "score": 0.0799,
-      "kind": "wiki-candidate",
-      "label": "File:Mary (Earth-616) from Daredevil Vol 1 247 0001.jpg"
-    },
-    {
-      "idx": 3,
-      "file": "03.jpg",
-      "score": 0.07,
-      "kind": "wiki-candidate",
-      "label": "File:Jean Grey (Earth-616) from Typhoid Fever X-Men Vol 1 1 001.jpg"
-    },
-    {
-      "idx": 4,
-      "file": "04.jpg",
-      "score": 0.0637,
-      "kind": "wiki-candidate",
-      "label": "File:Kurt Wagner (Earth-616) from Typhoid Fever X-Men Vol 1 1 001.jpg"
-    },
-    {
-      "idx": 5,
-      "file": "05.jpg",
-      "score": 0.0624,
-      "kind": "wiki-candidate",
-      "label": "File:Mary Walker (Earth-616) from Typhoid Fever Iron Fist Vol 1 1 002.jpg"
-    },
-    {
-      "idx": 6,
-      "file": "06.jpg",
-      "score": 0.0519,
-      "kind": "wiki-candidate",
-      "label": "File:Daredevil Vol 5 26 Venomized Typhoid Mary Variant.jpg"
-    }
+  "note": "Typhoid! splash (was DD #254 cover)",
+  "size": [
+    937,
+    1395
   ]
 }

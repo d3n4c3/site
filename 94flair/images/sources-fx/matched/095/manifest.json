@@ -1,51 +1,11 @@
 {
-  "n": 95,
   "key": "095",
-  "title": "Hulk Leads the Pantheon",
-  "source": "The Incredible Hulk (1968) #410, Page 15",
+  "credit": "The Incredible Hulk (1968) #410, Page 15",
   "artist": "",
-  "matches": [
-    {
-      "idx": 1,
-      "file": "01.jpg",
-      "score": 0.0718,
-      "kind": "wiki-candidate",
-      "label": "File:Martin Bram (Earth-616) from The Incredible Hulk (1977 film) 001.jpg"
-    },
-    {
-      "idx": 2,
-      "file": "02.jpg",
-      "score": 0.0701,
-      "kind": "wiki-candidate",
-      "label": "File:Marlo Chandler (Earth-616) from Incredible Hulk Vol 1 410 001.jpg"
-    },
-    {
-      "idx": 3,
-      "file": "03.jpg",
-      "score": 0.0694,
-      "kind": "wiki-candidate",
-      "label": "File:Hank (Derrick Worker) (Earth-616) from Incredible Hulk Vol 2 50 001.png"
-    },
-    {
-      "idx": 4,
-      "file": "04.jpg",
-      "score": 0.0511,
-      "kind": "wiki-candidate",
-      "label": "File:She-Hulk Vol 5 1 Cover A Textless.jpg"
-    },
-    {
-      "idx": 5,
-      "file": "05.jpg",
-      "score": 0.0471,
-      "kind": "wiki-candidate",
-      "label": "File:Hulk! Vol 1 22 Textless.jpg"
-    },
-    {
-      "idx": 6,
-      "file": "06.jpg",
-      "score": 0.0449,
-      "kind": "wiki-candidate",
-      "label": "File:Tarkington (Earth-616) from Incredible Hulk Vol 1 410 001.png"
-    }
+  "note": "Intact BRA-KOW vault-smash splash matching Flair #095 Hulk Leads the Pantheon.",
+  "src": "/tmp/gap-hunt/095-hulk-pages/015.jpg",
+  "size": [
+    1988,
+    3056
   ]
 }

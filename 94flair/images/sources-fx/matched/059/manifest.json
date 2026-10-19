@@ -1,51 +1,10 @@
 {
-  "n": 59,
   "key": "059",
-  "title": "Armor Wars",
-  "source": "Iron Man (1968) Annual #10, Page 50",
+  "credit": "Iron Man (1968) Annual #10, Page 50",
   "artist": "Bob Layton",
-  "matches": [
-    {
-      "idx": 1,
-      "file": "01.jpg",
-      "score": 0.0756,
-      "kind": "wiki-candidate",
-      "label": "File:Iron Man Armor Model 63 from Tony Stark Iron Man Vol 1 10 001.jpg"
-    },
-    {
-      "idx": 2,
-      "file": "02.jpg",
-      "score": 0.0741,
-      "kind": "wiki-candidate",
-      "label": "File:Anthony Stark (Earth-616) from Tony Stark Iron Man Vol 1 10 005.jpg"
-    },
-    {
-      "idx": 3,
-      "file": "03.jpg",
-      "score": 0.0581,
-      "kind": "wiki-candidate",
-      "label": "File:Anthony Stark (Earth-616) from Tony Stark Iron Man Vol 1 10 003.jpg"
-    },
-    {
-      "idx": 4,
-      "file": "04.jpg",
-      "score": 0.0549,
-      "kind": "wiki-candidate",
-      "label": "File:Arsenal Beta (Earth-616) from Tony Stark Iron Man Vol 1 10 001.jpg"
-    },
-    {
-      "idx": 5,
-      "file": "05.jpg",
-      "score": 0.0496,
-      "kind": "wiki-candidate",
-      "label": "File:Anthony Stark (Earth-616) from Tony Stark Iron Man Vol 1 10 006.jpg"
-    },
-    {
-      "idx": 6,
-      "file": "06.jpg",
-      "score": 0.0485,
-      "kind": "wiki-candidate",
-      "label": "File:Anthony Stark (Earth-616) from Tony Stark Iron Man Vol 1 10 004.jpg"
-    }
+  "note": "Iron Man Portfolio pin-up from Annual #10 (was Atlantis Attacks cover)",
+  "size": [
+    1000,
+    1580
   ]
 }

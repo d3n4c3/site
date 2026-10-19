@@ -1,10 +1,11 @@
 {
   "key": "075",
-  "credit": "X-Men (1991) #25, Gambit Hologram",
+  "credit": "X-Men (1991) #25, Page 26 (Gambit panel / hologram source)",
   "artist": "Andy Kubert",
-  "note": "intact full source",
+  "note": "Intact full page containing the FSHRAAKK Gambit charged-cards panel used on Flair #075",
+  "src": "/tmp/gap-hunt/075-pages/026.jpg",
   "size": [
-    913,
-    393
+    1988,
+    3056
   ]
 }

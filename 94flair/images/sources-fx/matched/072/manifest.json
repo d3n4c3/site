@@ -1,51 +1,10 @@
 {
-  "n": 72,
   "key": "072",
-  "title": "The Creation of Deathlok",
-  "source": "Deathlok (1990) #1, Page 28",
+  "credit": "Deathlok (1990) #1, Page 28",
   "artist": "Jackson Guice",
-  "matches": [
-    {
-      "idx": 1,
-      "file": "01.jpg",
-      "score": 0.0603,
-      "kind": "wiki-candidate",
-      "label": "File:Jerome Mason (Earth-616) from Deathlok Vol 2 1 0001.JPG"
-    },
-    {
-      "idx": 2,
-      "file": "02.jpg",
-      "score": 0.0567,
-      "kind": "wiki-candidate",
-      "label": "File:Cyberwarriors (Earth-616) from Deathlok Vol 2 17 001.jpg"
-    },
-    {
-      "idx": 3,
-      "file": "03.jpg",
-      "score": 0.0473,
-      "kind": "wiki-candidate",
-      "label": "File:Clayton Burr (Earth-616) from Deathlok Vol 1 1 001.png"
-    },
-    {
-      "idx": 4,
-      "file": "04.jpg",
-      "score": 0.0439,
-      "kind": "wiki-candidate",
-      "label": "File:Biohazard (Earth-616) from Deathlok Vol 2 15 001.jpg"
-    },
-    {
-      "idx": 5,
-      "file": "05.jpg",
-      "score": 0.0439,
-      "kind": "wiki-candidate",
-      "label": "File:John Kelly (Earth-616) from Deathlok Vol 1 1 001.png"
-    },
-    {
-      "idx": 6,
-      "file": "06.jpg",
-      "score": 0.0377,
-      "kind": "wiki-candidate",
-      "label": "File:John Rozum (Earth-616) from Deathlok Vol 2 1 0001.jpg"
-    }
+  "note": "Deathlok wire-burst splash (was Deathlok #1 cover)",
+  "size": [
+    1920,
+    2915
   ]
 }

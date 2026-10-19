@@ -1,51 +1,10 @@
 {
-  "n": 65,
   "key": "065",
-  "title": "Captain America vs. The Captain",
-  "source": "Captain America (1968) #422, Page 8",
+  "credit": "Captain America (1968) #422, Page 8",
   "artist": "",
-  "matches": [
-    {
-      "idx": 1,
-      "file": "01.jpg",
-      "score": 0.1046,
-      "kind": "wiki-candidate",
-      "label": "File:Captain America Vol 1 422.jpg"
-    },
-    {
-      "idx": 2,
-      "file": "02.jpg",
-      "score": 0.0778,
-      "kind": "wiki-candidate",
-      "label": "File:Death-Throws (Earth-616) from Captain America Vol 1 317 0001.jpg"
-    },
-    {
-      "idx": 3,
-      "file": "03.jpg",
-      "score": 0.0546,
-      "kind": "wiki-candidate",
-      "label": "File:Avengers (Earth-616) from Captain America Vol 1 251 001.jpg"
-    },
-    {
-      "idx": 4,
-      "file": "04.jpg",
-      "score": 0.0462,
-      "kind": "wiki-candidate",
-      "label": "File:Victor Lillian (Earth-616) from Captain America Vol 1 422 0001.jpg"
-    },
-    {
-      "idx": 5,
-      "file": "05.jpg",
-      "score": 0.045,
-      "kind": "wiki-candidate",
-      "label": "File:Frank (TV Host) (Earth-616) from Captain America Vol 1 174 001.png"
-    },
-    {
-      "idx": 6,
-      "file": "06.jpg",
-      "score": 0.0333,
-      "kind": "wiki-candidate",
-      "label": "File:Am (Earth-616) from Captain America Comics Vol 1 52 0001.jpg"
-    }
+  "note": "Cap shield crouch panel page (was Cap #422 cover)",
+  "size": [
+    1988,
+    3056
   ]
 }
