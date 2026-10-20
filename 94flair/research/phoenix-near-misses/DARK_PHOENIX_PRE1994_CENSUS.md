@@ -5,9 +5,9 @@
 **PB5 target pose:** flying/floating; **LEFT** arm extended **palm blast toward viewer**; **RIGHT fist clenched at hip**. Costume color ignored for verdict.  
 **Verdict key:** `MATCH` · `STRONG COUSIN` · `WEAK COUSIN` · `MISS` · `UNKNOWN` (need scan) · `POST-1994 ECHO`
 
-**Status (2026-03):** No pre-1994 print `MATCH` found. Best pre-1994 pose cousins are **1992 Impel X-Men #24 (Jim Lee)** and **1992 Masterpieces #46 (Jusko)** — both Lee-era Jean costumes, not classic DP/Phoenix suit. Hamilton CAF Amano pencil (2006) is a near-exact pose echo but **too late**.
+**Status (2026-03 census pull):** No pre-1994 print `MATCH` found after scoring DPS covers/interiors, Classic XM #9–44 covers, MU II #5, MU III #195, MM92 #67, BA #27 cover, Phoenix Untold Story #1, and Master Edition Jean figure. Best pre-1994 pose cousins remain **1992 Impel X-Men #24 (Jim Lee)** and **1992 Masterpieces #46 (Jusko)** — both Lee-era Jean costumes, not classic DP/Phoenix suit. Hamilton CAF Amano pencil (2006) is a near-exact pose echo but **too late**.
 
-**Already SBS?** refers to local Powerblast #5 side-by-sides under `94flair/research/phoenix-near-misses/hq-sbs/` (source-hunt branch).
+**Already SBS?** refers to local Powerblast #5 side-by-sides under `94flair/research/phoenix-near-misses/hq-sbs/` (#01–76 prior hunt; **#77–93** this census wave).
 
 ---
 
@@ -18,36 +18,36 @@
 | 1 | Comic splash | 1976 | *Uncanny X-Men* #101 first Phoenix splash | Dave Cockrum | Both arms raised Y / fists up from bay | Yes #28 | MISS |
 | 2 | Comic cover | 1977 | *Uncanny X-Men* #105 cover (“Phoenix Unleashed”) | Dave Cockrum | Green Phoenix; both hands blasting sideways at Firelord | Yes #27 | MISS |
 | 3 | Comic interior | 1977 | UX #105 dual-blast page (~p.9) | Cockrum | Dual forward/side energy blasts | Yes #26 | MISS |
-| 4 | Comic cover | 1978 | *Uncanny X-Men* #108 cover | Cockrum | Green Phoenix focus (cover composition) | No | UNKNOWN |
+| 4 | Comic cover | 1978 | *Uncanny X-Men* #108 cover | Cockrum | Jahf golden hand / team toss — **Jean not on cover** | Yes #81 | MISS |
 | 5 | Comic interior | 1978 | UX #108 p.11 bottom blast panel | Cockrum | Left-hand energy crackle; right arm bent back (panel crop) | Yes #23 | WEAK COUSIN |
 | 6 | Comic interior | 1978 | UX #108 p.11 standing / p.12 energy | Cockrum | Standing / energy gestures — not PB5 geometry | Yes #24–25 | MISS |
 | 7 | Model sheet | ~1976–77 | Cockrum Phoenix design sheet (5 figures; green final) | Dave Cockrum | All five: **right fist-on-hip**, left arm at side (no blast) | Yes #20–21, #50 | WEAK COUSIN (hip only) |
-| 8 | Comic cover | 1980 | *X-Men* #134 cover (1st Dark Phoenix) | Byrne / Austin | Hellfire / transformation cover; Jean focus | No | UNKNOWN |
-| 9 | Comic splash/story | 1980 | *X-Men* #134 interior — “I am Phoenix!” / DP birth pages | Byrne / Austin | Full-figure DP panels exist; arm poses vary | Partial (saga wave) | UNKNOWN (need panel pull) |
-| 10 | Comic cover | 1980 | *X-Men* #135 “Dark Phoenix” cover | Byrne / Austin | Iconic DP vs X-Men (homage to UX #56) | No HQ solo crop | UNKNOWN |
+| 8 | Comic cover | 1980 | *X-Men* #134 cover (1st Dark Phoenix) | Byrne / Austin | Black Queen center; left arm raised open, right fist out at chest (not hip) | Yes #77 | MISS |
+| 9 | Comic splash/story | 1980 | *X-Men* #134 interior — “I am Phoenix!” / DP birth pages | Byrne / Austin | Birth splash: **both palms open sideways** in vortex; prior pages Black Queen run / temple clutch | Yes #82 (+ prior saga) | MISS |
+| 10 | Comic cover | 1980 | *X-Men* #135 “Dark Phoenix” cover | Byrne / Austin | Classic red DP; **both arms raised** crushing X-MEN logo | Yes #78 | MISS |
 | 11 | Comic splash | 1980 | UX #135 “Child of Light and Darkness” space splash | Byrne / Austin | Floating DP; **both palms open** (one up, one down); no hip fist | Yes #03 | MISS |
 | 12 | Comic interior | 1980 | UX #135 fight pages (p.2–4 crops) | Byrne / Austin | Asymmetric energy panels; green/red costume mixes in sequence | Yes #04, #14–19 | WEAK COUSIN (asymmetry only) |
 | 13 | Comic interior | 1980 | UX #135 p.8 space / p.14 planet-blast | Byrne / Austin | Cosmic blast gestures; not fist-at-hip + viewer palm | Yes #31–32 | MISS |
-| 14 | Comic cover | 1980 | *X-Men* #136 cover | Byrne / Austin | DP with Grey family / X-Men | No | UNKNOWN |
-| 15 | Comic cover | 1980 | *X-Men* #137 cover | Byrne / Austin | Moon duel / fate of Phoenix | No | UNKNOWN |
-| 16 | Comic interior | 1980 | UX #137 sacrifice / moon fight full-figures | Byrne / Austin | Multiple DP/Jean figures; no confirmed PB5 arms | No | UNKNOWN |
+| 14 | Comic cover | 1980 | *X-Men* #136 cover | Byrne / Austin | Pietà: limp DP in Cyclops arms — no active blast arms | Yes #79 | MISS |
+| 15 | Comic cover | 1980 | *X-Men* #137 cover | Byrne / Austin | Green Phoenix; **left arm raised** open; right arm around Cyclops | Yes #80 | MISS |
+| 16 | Comic interior | 1980 | UX #137 sacrifice / moon fight full-figures | Byrne / Austin | Splash standing DP arms-out; later pages dialogue / green Jean; no L-blast+R-hip-fist | Spot-check sheet | MISS |
 | 17 | Comic cover | 1981 | *What If?* #27 cover (“Phoenix Had Not Died”) | Frank Miller | Fiery Phoenix silhouette; **both fists at hips** | Yes #05 | MISS |
 | 18 | Comic splash | 1981 | *What If?* #27 interior Phoenix splash | Jerry Bingham / J. Stuart | Full-figure Phoenix; arms not PB5 | Yes #06 | MISS |
-| 19 | Data-page / pin-up | 1981 | *Bizarre Adventures* #27 — Xavier data-log Phoenix | (Marvel BA feature) | Handbook-style Phoenix figure(s) | No | UNKNOWN |
+| 19 | Data-page / pin-up | 1981 | *Bizarre Adventures* #27 — cover + Xavier data-log Phoenix | Gulacy (cover) / Cockrum (data log) | Cover: green Phoenix **both arms V raised**; data-page still need interior pull (cover scored) | Yes #90 (cover) | MISS (cover) · UNKNOWN (data-page interior) |
 | 20 | Comic cover | 1982 | *X-Men / New Teen Titans* #1 cover | Simonson / Austin | Dark Phoenix + Darkseid among cast (group) | No | MISS (group; not solo PB5) |
 | 21 | Handbook figure | 1983 | *OHOTMU* #9 Phoenix entry figure | John Romita Jr. / Joe Rubinstein | Frontal full-body handbook pose | CAF board exists | UNKNOWN |
-| 22 | Reprint cover | 1984 | *Phoenix* (1984) #1 / DPS reprint packaging | Various | Classic DP saga art reuse | No | UNKNOWN |
-| 23 | Reprint TPB | 1984 | *The Dark Phoenix Saga* / *Uncanny X-Men* trade packaging | Byrne et al. | Cover reuse of saga art | No | UNKNOWN |
+| 22 | Reprint cover | 1984 | *Phoenix: The Untold Story* #1 | Byrne / Austin | Crouched claw-hands DP + firebird — not viewer palm + hip fist | Yes #91 | MISS |
+| 23 | Reprint TPB | 1984+ | *The Dark Phoenix Saga* / Marvel’s Finest packaging | Byrne et al. | T-pose both arms out / open palms (packaging reuse) | Yes #93 | MISS |
 | 24 | Pin-up | 1985-01 | *Marvel Fanfare* #18 Baxter portfolio — Phoenix | Kevin Nowlan | Flying; **arms raised V** / flaming crackle; green Phoenix | Yes #72 | MISS |
 | 25 | Poster | 1986 | Marvel Press Poster **#24** Phoenix (22×34″) | Rick Leonardi / Terry Austin | Full-figure; **both arms raised**; firebird + X-Men below | Yes #10 | MISS |
 | 26 | Magazine reprint | ~1986 | *Comics Feature* B&W reprint of Leonardi/Austin poster | Leonardi / Austin | Same art as #25 | Same as #10 | MISS |
-| 27 | Reprint cover | 1987-05 | *Classic X-Men* #9 (UX #101 reprint cover era) | Adams et al. | Phoenix-era Classic cover | No | UNKNOWN |
-| 28 | Reprint cover | 1987-08 | *Classic X-Men* #12 cover (Jean / Phoenix era) | (Classic cover) | Jean-forward Classic cover | Yes #30 | MISS / need recheck color costume |
-| 29 | Reprint cover | 1987-09 | *Classic X-Men* #13 (“Phoenix Unleashed” / UX #105) | Adams | Phoenix unleashed Classic cover | No | UNKNOWN |
+| 27 | Reprint cover | 1987-05 | *Classic X-Men* #9 (UX #101 reprint era) | (Classic cover) | Green Phoenix emerging; **both arms raised** | Yes #86 | MISS |
+| 28 | Reprint cover | 1987-08 | *Classic X-Men* #12 cover (Jean / Phoenix era) | (Classic cover) | Jean-forward Classic cover | Yes #30 | MISS |
+| 29 | Reprint cover | 1987-09 | *Classic X-Men* #13 | Art Adams | Flying green Phoenix; left arm tucked across waist, right open out | Yes #87 | MISS |
 | 30 | Pin-up | 1987-11 | *Marvel Fanfare* #35 Baxter portfolio — Phoenix | Craig Hamilton | Arms-across / hand-to-brow; red DP look; style cousin only | Yes #02, #71 | MISS |
 | 31 | Reprint cover | 1989-08 | *Classic X-Men* #36 Dark Phoenix Saga cover | Rick Leonardi | Silhouette DP; **both arms raised V** | Yes #12 | MISS |
 | 32 | Reprint cover / pin-up | 1989-09 | *Classic X-Men* #37 Dark Phoenix Saga | (Classic) | Saga-era Jean/DP focus piece | Yes #13 | MISS |
-| 33 | Reprint covers | 1989–90 | *Classic X-Men* #38–44 (DPS reprints) | Various | Multiple DP full-figures / covers in sequence | Partial | UNKNOWN (spot-check remaining covers) |
+| 33 | Reprint covers | 1989–90 | *Classic X-Men* #38–44 (DPS reprints) | Lightle et al. | #38 wedding embrace; #39 Wolverine/Hellfire; #40 Mastermind + DP silhouette arms-down; #41 both palms raised; #42 energy hands not PB5; #43 Marvel Girl; #44 Cyclops graveyard (no Jean) | Yes #88–89 (+ sheet) | MISS (all spot-checked) |
 | 34 | Trading stickers | 1987 | Comic Images History of the X-Men stickers (Jean / MG) | (CI stickers) | Marvel Girl / Jean — usually not classic DP suit | TCDB | UNKNOWN / likely MISS (wrong costume) |
 | 35 | Trading stickers | 1986–89 | Comic Images MU / Mutant HOF stickers (Jean) | Various | Pre-Impel Jean stickers | TCDB | UNKNOWN |
 | 36 | Trading card | 1989 | Comic Images Arthur Adams #40 Marvel Girl | Arthur Adams | Marvel Girl costume | Gallery | MISS (costume + pose) |
@@ -55,22 +55,22 @@
 | 38 | Trading card | 1990 | Impel MU I **#98 Dark Phoenix Saga** (group) | (MU Series I) | Group saga card; Jean not solo PB5 | Yes #11 | MISS |
 | 39 | Trading card | 1990 | Impel MU Marvel Girl card (#9 family) | (MU Series I) | Forehead psychic — not DP suit blast | Yes #64 | MISS |
 | 40 | Comic DPS | 1990 | *X-Factor Annual* #5 Marvel Girl half of Beast DPS | Dale Keown / Bob McLeod | Over-shoulder open palm amid monsters; X-Factor MG suit | Yes #73 | MISS |
-| 41 | Trading card | 1991 | Impel Marvel Universe II **#5 Phoenix** | (MU II) | Super Heroes Phoenix card | No clear SBS | UNKNOWN |
+| 41 | Trading card | 1991 | Impel Marvel Universe II **#5 Phoenix** | (MU II; Rachel / hound marks) | Both arms overhead, open hands — **Rachel**, not Jean DP | Yes #83 | MISS (wrong character + pose) |
 | 42 | Trading card | 1991 | Impel MU II **#4 Marvel Girl** | Arthur Adams | Both arms down / MG suit | Yes #62 | MISS |
 | 43 | Trading card | 1991 | Impel MU II **#144 Dark Phoenix** (Legends) | (MU II Legends) | Classic red/gold DP; **both arms out** claw/open — no viewer palm + hip fist | Yes #01, #34, #63 | MISS |
 | 44 | Trading card | 1992 | Impel Marvel Universe III **#11 Phoenix** | (MU III) | T-pose / arms out | Yes #08, #60 | MISS |
 | 45 | Trading card | 1992 | Impel MU III **#66 Jean Grey** | Marc Silvestri | Psychic-at-temple; arm at hip; Lee-era Jean | Yes #56 | WEAK COUSIN |
-| 46 | Trading card | 1992 | Impel MU III **#195 Dark Phoenix Saga** (Milestones) | (MU III) | Milestone / saga art card | No | UNKNOWN |
+| 46 | Trading card | 1992 | Impel MU III **#195 Dark Phoenix Saga** (Milestones) | (MU III; Byrne-era reuse) | Floating DP; **arms Y / both palms open** + firebird | Yes #85 | MISS |
 | 47 | Trading card | 1992 | Impel X-Men Series 1 **#24 Jean Grey** | Jim Lee | **Left palm blast**, right arm tucked (open/tucked — not clenched fist-at-hip); blue/gold Lee suit | Yes #40–42, #74 overlay | STRONG COUSIN |
 | 48 | Trading card | 1992 | Impel X-Men Series 1 **#82 Dark Phoenix** | Jim Lee / Scott Williams | Classic red DP; **both palms out/down** | Yes #43 | MISS |
 | 49 | Trading card | 1992 | Marvel Masterpieces **#46 Jean Grey** | Joe Jusko | Floating; **left psychic blast**; right fist raised near chest/shoulder (not hip); Lee suit | Yes #53 | STRONG COUSIN |
-| 50 | Trading card | 1992 | Marvel Masterpieces **#67 Phoenix** | Joe Jusko | Phoenix entry (often Rachel / green firebird) | No | UNKNOWN |
+| 50 | Trading card | 1992 | Marvel Masterpieces **#67 Phoenix** | Joe Jusko | Rachel Summers molten Phoenix; **both fists raised V** | Yes #84 | MISS (Rachel + pose) |
 | 51 | Trading card | 1993 | Marvel Masterpieces II **#85 Phoenix** | Greg & Tim Hildebrandt / Harrison family scan path | Both arms raised | Yes #07, #59, #65 | MISS |
 | 52 | Trading card | 1993 | Marvel Masterpieces II **#75 Jean Grey** | Carl Potts | Floating psychic aura; no forward blast beam; Lee suit | Yes #76 | MISS |
 | 53 | Comic pin-up | 1993-06 | *X-Men Unlimited* #1 group pin-up (Gambit–Wolverine–Jean) | Joe Quesada / Jimmy Palmiotti | Standing; **right fist-at-hip** + left energy crackle; Lee suit; not flying beam | Yes #75 / #75b | WEAK COUSIN |
 | 54 | French album | ~early ’90s | French “Origines” Marvel album — Marvel Girl / red / p.119 pages | (Semic / French MU album art) | Full-figure Jean/Phoenix album art in local pulls | Yes #46–48 | MISS (ruled in prior wave) |
 | 55 | Promo / food | early ’90s | Pizza Hut Marvel Collector’s Edition (Jean/Phoenix piece) | (promo art) | Promo full-figure | Yes #51 | MISS |
-| 56 | Handbook | 1990–93 | *OHOTMU Master Edition* Dark Phoenix sheet | Keith Pollard / Joe Rubinstein | Frontal handbook Dark Phoenix | CAF listing | UNKNOWN |
+| 56 | Handbook | 1990–93 | *OHOTMU Master Edition* Dark Phoenix sheet | Keith Pollard / Joe Rubinstein | CAF board (Lyons) still Cloudflare-gated; pulled **Phoenix II / Rachel** Pollard ME #24 turnaround (arms-down A-pose) + Master Ed Jean Lee-suit figure (arms at sides) | Yes #92 (Jean ME fig) | MISS for pulled sheets · UNKNOWN for CAF Dark Phoenix board only |
 | 57 | Portfolio / book | pre-1994? | *Art of John Byrne* / Byrne Jean–DP B&W pieces | John Byrne | Fist-hip studies exist for other characters; DP-specific pages vary | Yes #29, #49 (related) | UNKNOWN / MISS for Jean DP |
 | 58 | CAF sketch | ~1980 | John Byrne Dark Phoenix convention sketch (CAF #900650 / #1651740) | John Byrne | Period sketch near DPS; pose not published PB5 | CAF | UNKNOWN |
 | 59 | CAF / vintage | ~1970s–80s | Dave Cockrum vintage Phoenix pencil (CAF #1620214) | Dave Cockrum | Early Phoenix pin-up; date/pose need pull | CAF | UNKNOWN |
@@ -107,21 +107,19 @@
 
 ## UNKNOWN — still need image pulls
 
-Priority pulls for pose scoring:
+Resolved this wave (all **MISS** vs PB5 unless noted): UX #108/#134–137 covers; UX #134 birth splash + #136/#137 interior spot-checks; Classic XM #9/#13/#36–44; MU II #5 (Rachel); MU III #195; MM92 #67 (Rachel); BA #27 **cover**; Phoenix Untold Story #1; DPS packaging reuse; Master Edition Jean figure; Pollard ME #24 Phoenix II turnaround (Rachel).
 
-1. **UX #134 / #135 / #136 / #137 covers** (Byrne) — full HQ crops  
-2. **UX #134–137 large splash panels** not already in SBS (esp. #134 transform splash, #137 moon)  
-3. **UX #108 cover**  
-4. **Classic X-Men #38–44** covers/pin-ups not scored  
-5. **Impel MU II #5 Phoenix**; **MU III #195 Dark Phoenix Saga**  
-6. **Masterpieces 1992 #67 Phoenix** (confirm character + arms)  
-7. **OHOTMU #9 Phoenix** (Romita Jr.) and **Master Edition Dark Phoenix** (Pollard)  
-8. **Bizarre Adventures #27** Phoenix data pages  
-9. **Phoenix (1984) #1** packaging / interior focus art  
-10. **French Origines** exact album title + year imprint (local pages scored MISS; catalog ID still soft)  
-11. **X-Men Poster Magazine #1–2** Jean/Phoenix checklist pages (still open per prior notes)  
-12. **CAF Byrne 1980 DP sketches** — pose still unscored from scan  
-13. **Best of Byrne** Jean piece (SBS #22 path) — confirm ID/year/pose  
+Still open / soft:
+
+1. **OHOTMU Deluxe #9 Phoenix** (Romita Jr. / Rubinstein) figure — CAF board Cloudflare-blocked; need alternate scan  
+2. **OHOTMU Master Edition Dark Phoenix** (Pollard / Rubinstein) Jean sheet — CAF Lyons board still gated (Phoenix II Rachel sheet pulled instead)  
+3. **Bizarre Adventures #27** Cockrum Xavier **data-log interior** page (cover scored MISS)  
+4. **CAF Byrne ~1980 DP convention sketches** (#900650 / #1651740) — CAF blocked  
+5. **CAF Cockrum vintage Phoenix pencil** (#1620214) — CAF blocked  
+6. **Comic Images stickers** (History of X-Men / Mutant HOF Jean) — TCDB thumbs only; costume usually MG → likely MISS  
+7. **X-Men Poster Magazine #1–2** Jean/Phoenix checklist pages  
+8. **French Origines** exact album title + year imprint (local pages already MISS; catalog ID soft)  
+9. **UX #136 interior** deep panel pass beyond spot-check sheet (cover + sampled pages MISS; no PB5 arms seen)
 
 ---
 

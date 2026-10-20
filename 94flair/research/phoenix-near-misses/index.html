@@ -1,10 +1,66 @@
-<!doctype html><meta charset=utf-8>
-<title>Phoenix PB5 research</title>
+<!doctype html>
+<meta charset=utf-8>
+<title>Phoenix PB5 — Dark Phoenix census</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<body style="margin:0;background:#0a0a0c;color:#ccc;font:18px/1.5 system-ui">
-<main style="max-width:900px;margin:0 auto;padding:32px 20px">
-<h1 style="color:#f0e6d2;font:700 34px/1.15 system-ui;margin:0 0 12px">Powerblast #5 Phoenix — research</h1>
-<p>Pose-first hunt for Flair PB#5 (left-hand blast, right fist at hip). Costume color ignored for pose verdicts. Source candidates must predate the ~June 1994 Flair Powerblast run.</p>
-<p><a style="color:#ffd264;font-weight:700;font-size:22px" href="DARK_PHOENIX_PRE1994_CENSUS.md">→ Pre–summer 1994 Dark Phoenix / classic Phoenix visual census (73 rows)</a></p>
-<p style="color:#888">No pre-1994 print MATCH found. Strongest pose cousins: 1992 Impel X-Men #24 (Jim Lee); 1992 Masterpieces #46 (Jusko). Large SBS gallery lives on the source-hunt working branch.</p>
+<style>
+  :root { --bg:#0a0a0c; --ink:#ccc; --hi:#f0e6d2; --acc:#ffd264; --dim:#888; --line:#2a2a30; }
+  body { margin:0; background:var(--bg); color:var(--ink); font:16px/1.5 system-ui,sans-serif; }
+  main { max-width:1100px; margin:0 auto; padding:28px 18px 64px; }
+  h1 { color:var(--hi); font:700 32px/1.15 system-ui; margin:0 0 10px; }
+  h2 { color:var(--hi); font:700 22px/1.2 system-ui; margin:36px 0 12px; border-top:1px solid var(--line); padding-top:24px; }
+  a { color:var(--acc); }
+  .lead { max-width:62ch; }
+  .badge { display:inline-block; background:#1c1c22; color:var(--acc); border:1px solid #3a3a44; padding:2px 8px; font-size:12px; letter-spacing:.04em; }
+  .grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(240px,1fr)); gap:14px; margin-top:14px; }
+  figure { margin:0; background:#121218; border:1px solid var(--line); }
+  figure img { display:block; width:100%; height:auto; }
+  figcaption { padding:8px 10px 12px; font-size:13px; color:#bbb; }
+  .miss { color:#f0a0a0; }
+  .note { color:var(--dim); font-size:14px; }
+</style>
+<main>
+  <p class="badge">PRE–JUNE 1994 CENSUS</p>
+  <h1>Powerblast #5 Phoenix — Dark Phoenix visual census</h1>
+  <p class="lead">Pose-first cross-check of classic green Phoenix / black-red Dark Phoenix appearances (comics, cards, posters, sketches) against Flair PB#5: <strong>left palm blast toward viewer + right fist clenched at hip</strong>. Costume color ignored for pose verdicts.</p>
+  <p><a href="DARK_PHOENIX_PRE1994_CENSUS.md"><strong>→ Full 73-row census markdown</strong></a></p>
+  <p class="note"><strong>Result:</strong> No pre-1994 print MATCH. Strongest pose cousins remain 1992 Impel X-Men #24 (Jim Lee) and 1992 Masterpieces #46 (Jusko) — Lee-era Jean suits, not classic DP. Census wave SBS #77–93 below; all MISS.</p>
+
+  <h2>Census wave SBS (#77–93)</h2>
+  <p class="note">Each panel: PB5 target (left) vs candidate (right).</p>
+  <div class="grid" id="sbs"></div>
+
+  <h2>Still open</h2>
+  <ul class="note">
+    <li>OHOTMU Deluxe #9 Phoenix (Romita Jr.) + Master Edition Dark Phoenix (Pollard) CAF boards</li>
+    <li>Bizarre Adventures #27 Cockrum data-log interior</li>
+    <li>Byrne / Cockrum CAF period sketches</li>
+    <li>Comic Images Jean stickers; X-Men Poster Magazine #1–2 checklist pages</li>
+  </ul>
 </main>
+<script>
+const items = [
+  ["77_ux134_cover.jpg", "UX #134 cover — Black Queen arms out/up"],
+  ["78_ux135_cover.jpg", "UX #135 cover — both arms up on logo"],
+  ["79_ux136_cover.jpg", "UX #136 cover — limp DP pietà"],
+  ["80_ux137_cover.jpg", "UX #137 cover — left arm up, right on Scott"],
+  ["81_ux108_cover.jpg", "UX #108 cover — Jean absent"],
+  ["82_ux134_birth_splash.jpg", "UX #134 DP birth splash — both palms out"],
+  ["83_mu2_005_phoenix.jpg", "MU II #5 Phoenix (Rachel) — arms overhead"],
+  ["84_mm92_067.jpg", "MM92 #67 Phoenix (Rachel) — fists up V"],
+  ["85_mu3_195.jpg", "MU III #195 DPS Milestone — arms Y"],
+  ["86_cxm09.jpg", "Classic XM #9 — both arms raised"],
+  ["87_cxm13.jpg", "Classic XM #13 Adams — flying tuck"],
+  ["88_cxm41.jpg", "Classic XM #41 Lightle — both palms raised"],
+  ["89_cxm42.jpg", "Classic XM #42 Lightle — energy hands"],
+  ["90_ba27_cover.jpg", "Bizarre Adventures #27 cover — arms V"],
+  ["91_phoenix_untold_1984.jpg", "Phoenix Untold Story #1 — claw crouch"],
+  ["92_ohotmu_master26_jean.jpg", "OHOTMU Master Ed Jean — arms at sides"],
+  ["93_dps_packaging.jpg", "DPS packaging reuse — T-arms out"],
+];
+const root = document.getElementById("sbs");
+for (const [file, cap] of items) {
+  const fig = document.createElement("figure");
+  fig.innerHTML = `<img loading="lazy" src="hq-sbs/${file}" alt="${cap}"><figcaption><span class="miss">MISS</span> — ${cap}</figcaption>`;
+  root.appendChild(fig);
+}
+</script>
