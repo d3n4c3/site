@@ -1,14 +1,21 @@
 /**
  * d3n4c3-flair-guard
- * After the daily ~14:06 UTC stock OpenNext/wrangler redeploy (author
- * dennis.mayer03@gmail.com), restores:
- *  - /94flair → d3n4c3-94flair proxy in the worker script
- *  - run_worker_first for /94flair* (required or stale ASSETS win)
- *  - FLAIR service binding
  *
- * RWF only sticks when assets-upload-session JWT is included AND the
- * worker module is uploaded as filename "worker.js".
+ * Survives the daily ~14:06 UTC stock OpenNext/wrangler wipe of `d3n4c3` by:
+ *  1) Re-injecting the /94flair → d3n4c3-94flair proxy
+ *  2) Restoring run_worker_first (JWT assets session required)
+ *  3) Re-binding Masterset index.html into main ASSETS (so even without RWF, Masterset wins)
+ *  4) Verifying live HTML contains "Masterset Checklist"
+ *
+ * Cron: every 10 minutes (one free-plan trigger).
  */
+import {
+  MASTERSET_PATH,
+  MASTERSET_HASH,
+  MASTERSET_SIZE,
+  mastersetBytes,
+} from "./masterset-asset.js";
+
 const ACCOUNT_ID = "c23dc2d5c3471b5eb145460c1d662228";
 const SCRIPT = "d3n4c3";
 const FLAIR_ORIGIN = "https://d3n4c3-94flair.dennis-mayer03.workers.dev";
@@ -90,17 +97,75 @@ function extractWorkerJs(buf) {
 
 async function liveLooksGood() {
   try {
-    const res = await fetch(LIVE_URL, {
-      headers: { "cache-control": "no-cache", pragma: "no-cache" },
-      cf: { cacheTtl: 0, cacheEverything: false },
-    });
+    const res = await fetch(LIVE_URL, { headers: { "cache-control": "no-cache", pragma: "no-cache" } });
     const html = await res.text();
     const good = html.includes(GOOD_MARKER);
     const bad = html.includes(BAD_MARKER) && !good;
-    return { ok: good && !bad, status: res.status, good, bad, sample: html.slice(0, 120) };
+    return { ok: res.ok && good && !bad, status: res.status, good, bad };
   } catch (e) {
     return { ok: false, error: String(e) };
   }
+}
+
+function bytesToBase64(bytes) {
+  let s = "";
+  const chunk = 0x8000;
+  for (let i = 0; i < bytes.length; i += chunk) {
+    s += String.fromCharCode(...bytes.subarray(i, i + chunk));
+  }
+  return btoa(s);
+}
+
+async function ensureMastersetAssetJwt(token) {
+  // Prefer binding known Masterset into ASSETS; upload bytes if CF asks for them.
+  const session = await cfJson(`workers/scripts/${SCRIPT}/assets-upload-session`, token, {
+    method: "POST",
+    body: JSON.stringify({
+      keep_assets: true,
+      manifest: {
+        [MASTERSET_PATH]: { hash: MASTERSET_HASH, size: MASTERSET_SIZE },
+      },
+    }),
+  });
+  if (!session.ok) {
+    // Fallback: empty manifest still yields a JWT for RWF-only repairs
+    const empty = await cfJson(`workers/scripts/${SCRIPT}/assets-upload-session`, token, {
+      method: "POST",
+      body: JSON.stringify({ manifest: {}, keep_assets: true }),
+    });
+    return {
+      ok: empty.ok,
+      jwt: empty.json.result?.jwt,
+      uploadedMasterset: false,
+      fallbackEmpty: true,
+      errors: empty.json.errors || session.json.errors,
+    };
+  }
+  let jwt = session.json.result?.jwt;
+  const buckets = session.json.result?.buckets || [];
+  let uploaded = false;
+  if (buckets.length) {
+    const bytes = mastersetBytes();
+    const b64 = bytesToBase64(bytes);
+    for (const bucket of buckets) {
+      const hashes = Array.isArray(bucket) ? bucket : bucket;
+      const form = new FormData();
+      for (const h of hashes) {
+        form.append(h, new Blob([b64], { type: "application/octet-stream" }), h);
+      }
+      const up = await fetch(
+        `https://api.cloudflare.com/client/v4/accounts/${ACCOUNT_ID}/workers/assets/upload?base64=true`,
+        { method: "POST", headers: { Authorization: `Bearer ${jwt}` }, body: form }
+      );
+      const upJson = await up.json();
+      if (!upJson.success) {
+        return { ok: false, error: "masterset asset upload failed", details: upJson.errors };
+      }
+      if (upJson.result?.jwt) jwt = upJson.result.jwt;
+      uploaded = true;
+    }
+  }
+  return { ok: !!jwt, jwt, uploadedMasterset: uploaded, buckets: buckets.length };
 }
 
 async function ensureProxy(env, { force = false } = {}) {
@@ -131,7 +196,6 @@ async function ensureProxy(env, { force = false } = {}) {
   }
 
   const live = await liveLooksGood();
-
   if (!force && alreadyPatched && hasFlairBind && hasRwf && live.ok) {
     return { ok: true, action: "noop", alreadyPatched, hasFlairBind, hasRwf, version: vid, live };
   }
@@ -151,14 +215,9 @@ async function ensureProxy(env, { force = false } = {}) {
     js = js.replace(EXPORT_OLD, EXPORT_NEW);
   }
 
-  // Assets upload session so run_worker_first actually sticks
-  const session = await cfJson(`workers/scripts/${SCRIPT}/assets-upload-session`, token, {
-    method: "POST",
-    body: JSON.stringify({ manifest: {}, keep_assets: true }),
-  });
-  const jwt = session.json.result?.jwt;
-  if (!session.ok || !jwt) {
-    return { ok: false, error: "assets-upload-session failed", details: session.json.errors || session.json, live };
+  const assetJwt = await ensureMastersetAssetJwt(token);
+  if (!assetJwt.ok || !assetJwt.jwt) {
+    return { ok: false, error: "assets-upload-session failed", details: assetJwt, live };
   }
 
   const newBindings = [];
@@ -186,9 +245,11 @@ async function ensureProxy(env, { force = false } = {}) {
     compatibility_flags: flags,
     keep_assets: true,
     bindings: newBindings,
-    annotations: { "workers/message": "flair-guard: restore /94flair proxy + run_worker_first" },
+    annotations: {
+      "workers/message": "flair-guard: proxy + RWF + Masterset ASSETS bake",
+    },
     assets: {
-      jwt,
+      jwt: assetJwt.jwt,
       config: {
         html_handling: "auto-trailing-slash",
         not_found_handling: "none",
@@ -215,6 +276,7 @@ async function ensureProxy(env, { force = false } = {}) {
       hasFlairBind,
       hasRwf,
       live,
+      assetJwt,
     };
   }
   const newVid = uploadJson.result.id;
@@ -229,20 +291,20 @@ async function ensureProxy(env, { force = false } = {}) {
     }),
   });
 
-  // Give edge a moment, then verify live HTML
   await new Promise((r) => setTimeout(r, 1500));
   const liveAfter = await liveLooksGood();
   const rwfOk = Array.isArray(rwfAfter) && rwfAfter.includes("/94flair");
 
   return {
     ok: !!deploy.json.success && rwfOk && liveAfter.ok,
-    action: alreadyPatched ? "redeploy-rwf" : "patched",
+    action: alreadyPatched ? "redeploy-rwf-assets" : "patched",
     newVersion: newVid,
     run_worker_first: rwfAfter,
     deploySuccess: !!deploy.json.success,
     alreadyPatched,
     hasFlairBind,
     hasRwfBefore: hasRwf,
+    uploadedMasterset: assetJwt.uploadedMasterset,
     liveBefore: live,
     liveAfter,
   };
@@ -256,9 +318,8 @@ export default {
     }
     if (url.pathname === "/repair" || url.pathname === "/repair/") {
       const force = url.searchParams.get("force") === "1";
-      const result = await ensureProxy(env, { force });
-      // If first pass left live bad (race with stock deploy), force once more
-      if (result.ok === false || (result.liveAfter && !result.liveAfter.ok) || (result.action === "noop" && result.live && !result.live.ok)) {
+      let result = await ensureProxy(env, { force });
+      if (!result.ok || (result.liveAfter && !result.liveAfter.ok) || (result.action === "noop" && result.live && !result.live.ok)) {
         const retry = await ensureProxy(env, { force: true });
         return Response.json({ first: result, retry }, { status: retry.ok ? 200 : 500 });
       }
@@ -276,18 +337,20 @@ export default {
         rwf = ver.json.result?.resources?.script_runtime?.assets?.raw_run_worker_first ?? null;
       }
       const live = await liveLooksGood();
-      return Response.json({
-        latestDeploy: latest?.created_on,
-        version: vid,
-        run_worker_first: rwf,
-        live,
-      });
+      return Response.json({ latestDeploy: latest?.created_on, version: vid, run_worker_first: rwf, live });
     }
     return Response.json({
       service: "d3n4c3-flair-guard",
-      endpoints: ["/health", "/status", "/repair"],
-      crons: ["10 14 * * *", "25 14 * * *"],
-      note: "Stock wipe ~14:06 UTC from wrangler as dennis.mayer03@gmail.com; disable that deploy for a permanent fix.",
+      endpoints: ["/health", "/status", "/repair", "/repair?force=1"],
+      crons: ["*/10 * * * *"],
+      durable: [
+        "proxy + FLAIR binding",
+        "run_worker_first via assets JWT",
+        "Masterset index.html baked into main ASSETS",
+        "live HTML verification + retry",
+        "every-10-minute cron",
+      ],
+      stillNeedsOwner: "Disable daily ~14:06 UTC wrangler/OpenNext deploy of d3n4c3 (author dennis.mayer03@gmail.com), or grant Zone Workers Routes Edit for /94flair*",
     });
   },
   async scheduled(controller, env, ctx) {
