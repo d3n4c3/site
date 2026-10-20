@@ -1,0 +1,9 @@
+name = "d3n4c3-flair-guard"
+main = "worker.js"
+compatibility_date = "2025-12-01"
+account_id = "c23dc2d5c3471b5eb145460c1d662228"
+workers_dev = true
+
+# Stock wipe ~14:06 UTC; repair shortly after (free plan ≤5 cron triggers account-wide)
+[triggers]
+crons = ["10 14 * * *", "25 14 * * *"]
