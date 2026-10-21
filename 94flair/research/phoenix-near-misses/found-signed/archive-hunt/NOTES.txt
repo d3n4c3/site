@@ -1,0 +1,34 @@
+PB5 signed-find archive hunt — 2026-10-21
+==========================================
+
+Digests (Wayback CDX = base32 SHA1, no padding)
+-----------------------------------------------
+found-phoenix.jpg     OLRNGWQAMRCDNVRCVXDJKAEHHNUVQMH5  (802x589, 97882 bytes)
+dreager1 live JPEG    AVW7D26KYQDLW2JKYIOY27VSZIHVHIAU  (802x589, 46163 bytes; md5 38be99fed9bbda034ce3baecae5af691)
+gangus 2006-07-01     P6OLVN66ER3CIUFYGF5XJNHA626GGXWF  (900x720; Angus / X2 — NOT match)
+CAF thumb 2012-10-16  MBIPD5KTKVZG5PBPHQHZURFIKTBGJIKP  (156x200)
+CAF full  2026-01-14  BA67AUWCXDDXN23N3PPHWGLHHCAGEIKE  (721x925; piece 148691 — NOT match)
+
+Key Wayback / IA results
+------------------------
+- dreager1.com/.../dark_phoenix.jpg (2011/01 and 2012/05): CDX=[], availability empty.
+  Homepage archived from 20120630143302; image URLs never crawled.
+- Digest filter for found + dreager digests over *.jpg: empty (not elsewhere in Wayback).
+- gangus.net/X2%20update/dark_phoenix.jpg: many 200 captures from 20060701124359; EXIF Photoshop 7.0 2005:10:23.
+- CAF galleryroom.asp?gsub=7667: 20140902131353 / 20140906163836 HTML.
+  Tip for piece 148691: Adam Hughes, Pencil, Commission, Added 3/26/2006, title "Dark Phoenix (AH)".
+- CAF CDN thumb: http://cdn.comicartfans.com/Images/Category_169/subcat_7667/Thumbs/DarkPhoenix_AH.JPG
+  CAF CDN full:  .../subcat_7667/DarkPhoenix_AH.JPG
+- Piece page gallerypiece.asp?piece=148691: no Wayback snapshot; live fetch failed here.
+
+Pixel checks
+------------
+found vs dreager: mean RGB diff ~0.29 (same frame, heavier recompress)
+found vs CAF full: corr ~0.00 (different art)
+found vs gangus:   corr ~0.02 (different art)
+
+Still open
+----------
+- No pre-2011 public host for the blast-pose painting.
+- AH! bang / authenticated listing for THIS composition still unproven.
+- SOURCE_ART.pb05 not installed.

@@ -55,11 +55,35 @@
   <figcaption style="color:#888;margin-top:8px">Found vs dreager1 2012 — same frame; amplified difference map shows only compression noise.</figcaption>
 </figure>
 
+<h2 style="color:#f0e6d2;margin-top:36px">Internet Archive / Wayback hunt (2026-10-21)</h2>
+<p>Targeted CDX + live downloads for the 802×589 frame and lookalike <code>dark_phoenix.jpg</code> hosts. Evidence files under <a style="color:#ffd264" href="archive-hunt/">archive-hunt/</a>.</p>
+<ul>
+<li><b>dreager1 <code>dark_phoenix.jpg</code> (2011/01 &amp; 2012/05 paths):</b> live copies still serve the same 802×589 JPEG (46,163 bytes; Wayback digest <code>AVW7D26KYQDLW2JKYIOY27VSZIHVHIAU</code>). CDX + availability both return <b>no archived snapshots</b> for the image URLs or the May 13, 2012 “Jean Grey vs Scarlet Witch” post. Homepage captures exist from 2012-06-30 onward, but the upload itself was never crawled. Digest filter over <code>*.jpg</code> also empty — this byte-identical file is not elsewhere in Wayback under that digest.</li>
+<li><b>Found scan digest</b> <code>OLRNGWQAMRCDNVRCVXDJKAEHHNUVQMH5</code>: likewise <b>not in Wayback</b>. No EXIF artist/date (JFIF 72dpi + empty Photoshop IRB).</li>
+<li><b>gangus.net <code>X2 update/dark_phoenix.jpg</code>:</b> heavily archived from <b>2006-07-01</b> (digest <code>P6OLVN66ER3CIUFYGF5XJNHA626GGXWF</code>, 900×720). Photoshop EXIF <code>2005:10:23</code>. Pixel corr vs found ≈ 0.02 — <b>Glen Angus Raven/X2 art, different painting</b>. Kept as a filename collision exclusion.</li>
+<li><b>CAF Chris Klamer “Dark Phoenix (AH)”</b> (piece <code>148691</code>, gallery room <code>gsub=7667</code>):
+  <ul>
+    <li>Room HTML archived 2014-09; tip text: Adam Hughes, <b>Pencil commission</b>, added to CAF <b>2006-03-26</b>.</li>
+    <li>Thumb on CDN archived <b>2012-10-16</b> (156×200). Full <code>DarkPhoenix_AH.JPG</code> archived <b>2026-01-14</b> (721×925, digest <code>BA67AUWCXDDXN23N3PPHWGLHHCAGEIKE</code>).</li>
+    <li>Pixel corr vs found ≈ 0.00 — <b>different piece</b> (portrait pencil vs horizontal airbrush blast). Does <em>not</em> confirm the AH reading on our find; it only shows Klamer owns a separate AH Dark Phoenix commission.</li>
+    <li>Piece page itself has no Wayback snapshot; live CAF fetch blocked from this environment.</li>
+  </ul>
+</li>
+<li><b>Common Crawl:</b> index API mostly 504/404 for 2012–2024 dreager queries during this pass; not used as negative proof.</li>
+<li><b>archive.ph:</b> 429 rate-limited; no extra mirrors confirmed.</li>
+<li><b>Geocities / Angelfire / Photobucket / imageshack / deviantart.net</b> CDX probes for <code>dark_phoenix.jpg</code> returned empty or timed out — no earlier public host found via those exact patterns.</li>
+</ul>
+
+<figure style="margin:28px 0">
+  <img src="archive-hunt/ruled-out-side-by-side.jpg" alt="Found vs CAF AH vs gangus Angus" style="width:100%;height:auto;display:block;border:1px solid #333">
+  <figcaption style="color:#888;margin-top:8px">Archive lookalikes ruled out: CAF “Dark Phoenix (AH)” (center) and gangus Angus 2006 (right) are not the PB5-pose painting.</figcaption>
+</figure>
+
 <h2 style="color:#f0e6d2;margin-top:36px">PB5 research status</h2>
 <ul>
 <li><b>Pose:</b> MATCH to Flair Powerblast #5 (the long-standing “except possibly Phoenix” card).</li>
-<li><b>Artist:</b> UNKNOWN — Adam Hughes is the leading signature hypothesis, not confirmed.</li>
-<li><b>Publish date:</b> UNKNOWN whether this painting circulated before the June 1994 Flair drop. Earliest open-web copy found so far is the 2011/2012 dreager1 upload (years after Flair).</li>
+<li><b>Artist:</b> UNKNOWN — Adam Hughes is still the leading signature hypothesis; CAF’s titled “Dark Phoenix (AH)” is a different commission and does not settle it.</li>
+<li><b>Publish date:</b> UNKNOWN pre–June 1994. Earliest <em>provable</em> open-web copy remains the live dreager1 2011/2012 upload; Wayback never archived that file. No pre-2011 archive hit for this frame yet.</li>
 <li><b>SOURCE_ART.pb05:</b> still not installed. Checklist already marks PB5 as “Suspected unused in print. Not yet found in other media.” This find is the strongest pre-CGI candidate yet, but artist/date still open.</li>
 </ul>
 
