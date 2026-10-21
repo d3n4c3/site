@@ -27,8 +27,17 @@ found vs dreager: mean RGB diff ~0.29 (same frame, heavier recompress)
 found vs CAF full: corr ~0.00 (different art)
 found vs gangus:   corr ~0.02 (different art)
 
+ORIGIN SOLVED (2026-10-21)
+--------------------------
+DeviantArt Admahum (Adham Hussain / AddHam2it), published 2006-03-20:
+https://www.deviantart.com/admahum/art/Dark-Phoenix-30640234
+Caption: 3×4 ft fan painting OF the Marvel trading card; destroyed in Katrina.
+DA file md5 38be99fed9bbda034ce3baecae5af691 == dreager1 byte-identical.
+AH monogram = Adham Hussain (also on his Silver Myr / Saint Michael Katrina recreations).
+Adam Hughes hypothesis RULED OUT.
+See ORIGIN_ADMAHUM.md.
+
 Still open
 ----------
-- No pre-2011 public host for the blast-pose painting.
-- AH! bang / authenticated listing for THIS composition still unproven.
+- Fleer PB5 *production* source artist / pre-1994 print still UNKNOWN.
 - SOURCE_ART.pb05 not installed.

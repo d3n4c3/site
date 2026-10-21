@@ -1,23 +1,5 @@
 [
   {
-    "id": "94_signed_find_pose_match",
-    "file": "94_signed_find_pose_match.jpg",
-    "title": "94 signed find pose match",
-    "note": "\u2605 NEW: Collector signed find \u2014 left palm blast + right fist-at-hip. AH-like monogram. Strongest POSE MATCH yet; artist/date still open.",
-    "verdict": "match",
-    "defaultRuledOut": false,
-    "priority": 0
-  },
-  {
-    "id": "97_dreager1_same_frame",
-    "file": "97_dreager1_same_frame.jpg",
-    "title": "97 dreager1 same frame",
-    "note": "dreager1.com 2011/2012 dark_phoenix.jpg \u2014 same 802\u00d7589 frame as signed find (heavier recompress). Web trail only.",
-    "verdict": "same-frame",
-    "defaultRuledOut": false,
-    "priority": 1
-  },
-  {
     "id": "20_cockrum_modelsheet",
     "file": "20_cockrum_modelsheet.jpg",
     "title": "20 cockrum modelsheet",
@@ -522,6 +504,15 @@
     "priority": 8
   },
   {
+    "id": "94_signed_find_pose_match",
+    "file": "94_signed_find_pose_match.jpg",
+    "title": "94 Admahum fan painting (was \u201csigned find\u201d)",
+    "note": "ORIGIN SOLVED: Adham Hussain (DeviantArt Admahum / AddHam2it). Posted 2006-03-20. Caption: painted a 3\u00d74 ft version of the Marvel trading card; destroyed in Katrina. The AH monogram is HIS initials \u2014 not Adam Hughes. Fan recreation OF Flair PB5, not the Fleer source. RULED OUT for SOURCE_ART.",
+    "verdict": "ruled-out",
+    "defaultRuledOut": true,
+    "priority": 8
+  },
+  {
     "id": "95_caf_klamer_darkphoenix_ah",
     "file": "95_caf_klamer_darkphoenix_ah.jpg",
     "title": "95 caf klamer darkphoenix ah",
@@ -535,6 +526,33 @@
     "file": "96_gangus_angus_2006.jpg",
     "title": "96 gangus angus 2006",
     "note": "gangus.net 2006 dark_phoenix.jpg \u2014 Glen Angus Raven/X2. Filename collision only. RULED OUT.",
+    "verdict": "ruled-out",
+    "defaultRuledOut": true,
+    "priority": 8
+  },
+  {
+    "id": "97_dreager1_same_frame",
+    "file": "97_dreager1_same_frame.jpg",
+    "title": "97 dreager1 = Admahum DA bytes",
+    "note": "dreager1 2011/2012 dark_phoenix.jpg is byte-identical to Admahum\u2019s DeviantArt upload (md5 38be99fe\u2026). Uncredited scrape of the fan painting.",
+    "verdict": "ruled-out",
+    "defaultRuledOut": true,
+    "priority": 8
+  },
+  {
+    "id": "98_admahum_fan_of_card",
+    "file": "98_admahum_fan_of_card.jpg",
+    "title": "98 Admahum DA vs Flair PB5",
+    "note": "Side-by-side: 1994 Flair PB5 card vs Admahum\u2019s 2006 DeviantArt fan painting. Same pose because he painted from the card.",
+    "verdict": "ruled-out",
+    "defaultRuledOut": true,
+    "priority": 8
+  },
+  {
+    "id": "99_found_vs_admahum",
+    "file": "99_found_vs_admahum.jpg",
+    "title": "99 found scan vs Admahum DA",
+    "note": "Collector found scan is a cleaner recompress of the same Admahum frame (mean RGB diff \u2248 0.29).",
     "verdict": "ruled-out",
     "defaultRuledOut": true,
     "priority": 8
