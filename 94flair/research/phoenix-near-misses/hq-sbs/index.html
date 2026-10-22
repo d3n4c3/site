@@ -1,0 +1,223 @@
+<!doctype html>
+<meta charset=utf-8>
+<title>Phoenix PB5 — pose matching board</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  :root {
+    --bg:#0a0a0c; --panel:#121218; --ink:#ccc; --hi:#f0e6d2; --acc:#ffd264;
+    --dim:#888; --line:#2a2a30; --miss:#f0a0a0; --ok:#8fd18f; --warn:#e0b070;
+  }
+  * { box-sizing: border-box; }
+  body { margin:0; background:var(--bg); color:var(--ink); font:16px/1.45 system-ui,sans-serif; }
+  main { max-width:1200px; margin:0 auto; padding:24px 16px 80px; }
+  h1 { color:var(--hi); font:700 30px/1.15 system-ui; margin:0 0 10px; }
+  h2 { color:var(--hi); font:700 20px/1.2 system-ui; margin:0 0 8px; }
+  a { color:var(--acc); }
+  .lead { max-width:70ch; color:#bbb; }
+  .toolbar {
+    display:flex; flex-wrap:wrap; gap:10px; align-items:center;
+    margin:20px 0; padding:12px 14px; background:var(--panel); border:1px solid var(--line);
+    position:sticky; top:0; z-index:5;
+  }
+  .toolbar button, .card-actions button {
+    appearance:none; border:1px solid #3a3a44; background:#1a1a22; color:var(--hi);
+    padding:8px 12px; font:600 13px/1 system-ui; cursor:pointer;
+  }
+  .toolbar button.active { border-color:var(--acc); color:var(--acc); }
+  .toolbar button:hover, .card-actions button:hover { border-color:var(--acc); }
+  .counts { color:var(--dim); font-size:13px; margin-left:auto; }
+  .hint { color:var(--dim); font-size:14px; max-width:80ch; margin:0 0 18px; }
+  .grid { display:grid; grid-template-columns:1fr; gap:18px; }
+  @media (min-width:900px) { .grid { grid-template-columns:1fr 1fr; } }
+  .card {
+    background:var(--panel); border:1px solid var(--line); display:flex; flex-direction:column;
+  }
+  .card.match { border-color:#6a5a20; box-shadow: inset 0 0 0 1px #3a3418; }
+  .card img { width:100%; height:auto; display:block; background:#000; }
+  .meta { padding:12px 14px 14px; display:flex; flex-direction:column; gap:8px; flex:1; }
+  .badge {
+    display:inline-block; align-self:flex-start; font:700 11px/1 system-ui;
+    letter-spacing:.04em; text-transform:uppercase; padding:4px 8px; border:1px solid #3a3a44;
+  }
+  .badge.match { color:var(--ok); border-color:#2a4a2a; background:#121a12; }
+  .badge.cousin { color:var(--acc); border-color:#4a3a18; background:#1a160c; }
+  .badge.same-frame { color:var(--warn); border-color:#4a3a20; background:#1a160c; }
+  .badge.miss, .badge.ruled-out, .badge.reviewed { color:var(--miss); border-color:#4a2a2a; background:#1a1212; }
+  .note { color:#bbb; font-size:14px; margin:0; }
+  .card-actions { display:flex; flex-wrap:wrap; gap:8px; margin-top:auto; }
+  .card-actions .danger { color:var(--miss); }
+  .empty { color:var(--dim); padding:28px 8px; }
+  #archive details { margin-top:36px; border-top:1px solid var(--line); padding-top:20px; }
+  #archive summary {
+    cursor:pointer; color:var(--hi); font:700 18px/1.3 system-ui; list-style:none;
+  }
+  #archive summary::-webkit-details-marker { display:none; }
+  #archive summary::before { content:"▸ "; color:var(--acc); }
+  #archive[open] summary::before { content:"▾ "; }
+  .archive-note { color:var(--dim); font-size:14px; margin:8px 0 16px; max-width:75ch; }
+</style>
+<main>
+  <p><a href="../">← Phoenix source hunt</a></p>
+  <h1>Powerblast #5 — pose matching board</h1>
+  <p class="lead">Left = Flair PB #5. Right = candidate. Score <b style="color:var(--acc)">pose</b> (left palm blast + right fist-at-hip), not costume color. <b style="color:var(--acc)">#94–99 Admahum lead closed:</b> 2006 fan painting of the card (not Fleer source) — starts in the archive.</p>
+  <p class="hint">Use <b>Not the source</b> to move a card into the ruled-out archive (kept for later context). Changes stick in this browser via localStorage. <b>Restore</b> brings one back; <b>Reset board</b> reloads the default lead set.</p>
+
+  <div class="toolbar">
+    <button type="button" data-view="active" class="active">Active leads</button>
+    <button type="button" data-view="archive">Ruled-out archive</button>
+    <button type="button" data-view="all">All</button>
+    <button type="button" id="resetBtn">Reset board</button>
+    <span class="counts" id="counts"></span>
+  </div>
+
+  <div class="grid" id="activeGrid"></div>
+  <p class="empty" id="activeEmpty" hidden>No active leads — open the archive or reset the board.</p>
+
+  <div id="archive" hidden>
+    <details open>
+      <summary>Ruled out — kept for context</summary>
+      <p class="archive-note">These are confirmed non-sources (wrong pose, wrong era, filename collisions, or already-reviewed misses). Hidden from the active board so only open leads stay in view.</p>
+      <div class="grid" id="archiveGrid"></div>
+    </details>
+  </div>
+</main>
+<script>
+const STORAGE_KEY = 'pb5-pose-board-v2'; // v2: Admahum origin — #94/#97 default archived
+let CANDIDATES = [];
+let view = 'active';
+let ruledOut = new Set();
+
+const activeGrid = document.getElementById('activeGrid');
+const archiveGrid = document.getElementById('archiveGrid');
+const archiveWrap = document.getElementById('archive');
+const activeEmpty = document.getElementById('activeEmpty');
+const counts = document.getElementById('counts');
+
+function defaultRuledOutSet() {
+  return new Set(CANDIDATES.filter(c => c.defaultRuledOut).map(c => c.id));
+}
+
+function loadState() {
+  ruledOut = defaultRuledOutSet();
+  try {
+    const raw = localStorage.getItem(STORAGE_KEY);
+    if (!raw) return;
+    const data = JSON.parse(raw);
+    const saved = new Set(Array.isArray(data.ruledOut) ? data.ruledOut : []);
+    const known = new Set(Array.isArray(data.knownIds) ? data.knownIds : []);
+    // Respect prior dismiss/restore choices for ids we've seen before.
+    for (const c of CANDIDATES) {
+      if (!known.has(c.id)) continue;
+      if (saved.has(c.id)) ruledOut.add(c.id);
+      else ruledOut.delete(c.id);
+    }
+  } catch {
+    ruledOut = defaultRuledOutSet();
+  }
+}
+
+function saveState() {
+  localStorage.setItem(STORAGE_KEY, JSON.stringify({
+    ruledOut: [...ruledOut],
+    knownIds: CANDIDATES.map(c => c.id),
+  }));
+}
+
+function badgeLabel(v) {
+  return ({
+    match: 'Pose match',
+    cousin: 'Cousin / lead',
+    'same-frame': 'Same frame',
+    miss: 'Miss',
+    'ruled-out': 'Ruled out',
+    reviewed: 'Reviewed',
+  })[v] || v;
+}
+
+function cardHTML(c, archived) {
+  const cls = ['card'];
+  if (c.verdict === 'match') cls.push('match');
+  const action = archived
+    ? `<button type="button" data-restore="${c.id}">Restore to active</button>`
+    : `<button type="button" class="danger" data-ruleout="${c.id}">Not the source — archive</button>`;
+  return `<article class="${cls.join(' ')}" data-id="${c.id}">
+    <a href="${c.file}" target="_blank" rel="noopener"><img loading="lazy" src="${c.file}" alt="${c.title}"></a>
+    <div class="meta">
+      <span class="badge ${c.verdict}">${badgeLabel(c.verdict)}</span>
+      <h2>${c.title}</h2>
+      <p class="note">${c.note}</p>
+      <div class="card-actions">${action}<a href="${c.file}" target="_blank" rel="noopener">Full size</a></div>
+    </div>
+  </article>`;
+}
+
+function render() {
+  const active = CANDIDATES.filter(c => !ruledOut.has(c.id));
+  const archived = CANDIDATES.filter(c => ruledOut.has(c.id));
+  counts.textContent = `${active.length} active · ${archived.length} archived · ${CANDIDATES.length} total`;
+
+  if (view === 'active') {
+    activeGrid.hidden = false;
+    archiveWrap.hidden = true;
+    activeGrid.innerHTML = active.map(c => cardHTML(c, false)).join('');
+    activeEmpty.hidden = active.length > 0;
+  } else if (view === 'archive') {
+    activeGrid.hidden = true;
+    activeEmpty.hidden = true;
+    archiveWrap.hidden = false;
+    archiveGrid.innerHTML = archived.map(c => cardHTML(c, true)).join('') || '<p class="empty">Archive empty.</p>';
+  } else {
+    activeGrid.hidden = false;
+    archiveWrap.hidden = false;
+    activeEmpty.hidden = true;
+    activeGrid.innerHTML = active.map(c => cardHTML(c, false)).join('') || '<p class="empty">No active leads.</p>';
+    archiveGrid.innerHTML = archived.map(c => cardHTML(c, true)).join('') || '<p class="empty">Archive empty.</p>';
+  }
+}
+
+document.querySelector('.toolbar').addEventListener('click', (e) => {
+  const btn = e.target.closest('button');
+  if (!btn) return;
+  if (btn.id === 'resetBtn') {
+    if (confirm('Reset to default active leads? Your archived choices will be cleared.')) {
+      ruledOut = defaultRuledOutSet();
+      saveState();
+      render();
+    }
+    return;
+  }
+  if (btn.dataset.view) {
+    view = btn.dataset.view;
+    document.querySelectorAll('.toolbar [data-view]').forEach(b => b.classList.toggle('active', b.dataset.view === view));
+    render();
+  }
+});
+
+document.body.addEventListener('click', (e) => {
+  const out = e.target.closest('[data-ruleout]');
+  if (out) {
+    ruledOut.add(out.dataset.ruleout);
+    saveState();
+    render();
+    return;
+  }
+  const restore = e.target.closest('[data-restore]');
+  if (restore) {
+    ruledOut.delete(restore.dataset.restore);
+    saveState();
+    render();
+  }
+});
+
+fetch('candidates.json')
+  .then(r => r.json())
+  .then(data => {
+    CANDIDATES = data;
+    loadState();
+    saveState();
+    render();
+  })
+  .catch(err => {
+    activeGrid.innerHTML = `<p class="empty">Failed to load candidates.json (${err}).</p>`;
+  });
+</script>

@@ -1,0 +1,857 @@
+[
+  {
+    "id": "20_cockrum_modelsheet",
+    "file": "20_cockrum_modelsheet.jpg",
+    "title": "20 cockrum modelsheet",
+    "note": "Cockrum Phoenix model sheet (fist-on-hip, no blast)",
+    "verdict": "cousin",
+    "defaultRuledOut": false,
+    "priority": 2
+  },
+  {
+    "id": "40_jimlee_impel_xm24_jean",
+    "file": "40_jimlee_impel_xm24_jean.jpg",
+    "title": "40 jimlee impel xm24 jean",
+    "note": "\u2605 BEST PRIOR: 1992 Impel X-Men #24 Jean Grey (Jim Lee) \u2014 left blast, right tucked",
+    "verdict": "cousin",
+    "defaultRuledOut": false,
+    "priority": 2
+  },
+  {
+    "id": "41_jimlee_xm24_ftp_marvelgirl2",
+    "file": "41_jimlee_xm24_ftp_marvelgirl2.jpg",
+    "title": "41 jimlee xm24 ftp marvelgirl2",
+    "note": "Jim Lee XM24 via FTP MarvelGirl2",
+    "verdict": "cousin",
+    "defaultRuledOut": false,
+    "priority": 2
+  },
+  {
+    "id": "42_jimlee_xm24_flipped",
+    "file": "42_jimlee_xm24_flipped.jpg",
+    "title": "42 jimlee xm24 flipped",
+    "note": "Jim Lee XM24 horizontally flipped",
+    "verdict": "cousin",
+    "defaultRuledOut": false,
+    "priority": 2
+  },
+  {
+    "id": "53_jusko_mm92_jean46",
+    "file": "53_jusko_mm92_jean46.jpg",
+    "title": "53 jusko mm92 jean46",
+    "note": "\u2605 NEW: 1992 Masterpieces #46 Jean Grey (Joe Jusko) \u2014 left blast, right fist-at-hip",
+    "verdict": "cousin",
+    "defaultRuledOut": false,
+    "priority": 2
+  },
+  {
+    "id": "56_silvestri_mu3_jean66",
+    "file": "56_silvestri_mu3_jean66.jpg",
+    "title": "56 silvestri mu3 jean66",
+    "note": "1992 MU III #66 Jean Grey (Silvestri) \u2014 psychic-at-temple, arm at hip",
+    "verdict": "cousin",
+    "defaultRuledOut": false,
+    "priority": 2
+  },
+  {
+    "id": "58_ultra_fabbri_jean",
+    "file": "58_ultra_fabbri_jean.jpg",
+    "title": "58 ultra fabbri jean",
+    "note": "'94 Ultra-style Jean (Fabbri) \u2014 open hand + hip (cousin-ish)",
+    "verdict": "cousin",
+    "defaultRuledOut": false,
+    "priority": 2
+  },
+  {
+    "id": "74_overlay_impel_xm24_edges",
+    "file": "74_overlay_impel_xm24_edges.jpg",
+    "title": "74 overlay impel xm24",
+    "note": "Edge overlay: PB5 (cyan) vs 1992 Impel XM #24 Jim Lee (magenta). Strong cousin, not 1:1 \u2014 right fist/hip still unmatched.",
+    "verdict": "cousin",
+    "defaultRuledOut": false,
+    "priority": 2
+  },
+  {
+    "id": "75_unlimited1_quesada_jean_group",
+    "file": "75_unlimited1_quesada_jean_group.jpg",
+    "title": "75 unlimited1 quesada group",
+    "note": "X-Men Unlimited #1 (1993) Quesada/Palmiotti Gambit\u2013Wolverine\u2013Jean group pin-up. Jean has fist-at-hip + energy hand but standing in a group \u2014 not PB5 source.",
+    "verdict": "cousin",
+    "defaultRuledOut": false,
+    "priority": 2
+  },
+  {
+    "id": "75b_unlimited1_quesada_jean_crop",
+    "file": "75b_unlimited1_quesada_jean_crop.jpg",
+    "title": "75b unlimited1 jean crop",
+    "note": "Jean crop from the same Unlimited #1 pin-up \u2014 arm cousin only.",
+    "verdict": "cousin",
+    "defaultRuledOut": false,
+    "priority": 2
+  },
+  {
+    "id": "03_ux135_splash_child",
+    "file": "03_ux135_splash_child.jpg",
+    "title": "03 ux135 splash child",
+    "note": "UX #135 Byrne splash \u201cChild of Light and Darkness\u201d (both hands open)",
+    "verdict": "reviewed",
+    "defaultRuledOut": true,
+    "priority": 7
+  },
+  {
+    "id": "04_ux135_p002_fight",
+    "file": "04_ux135_p002_fight.jpg",
+    "title": "04 ux135 p002 fight",
+    "note": "UX #135 p.2 fight page \u2014 asymmetric energy panels",
+    "verdict": "reviewed",
+    "defaultRuledOut": true,
+    "priority": 7
+  },
+  {
+    "id": "05_whatif_cover",
+    "file": "05_whatif_cover.jpg",
+    "title": "05 whatif cover",
+    "note": "What If? Phoenix cover (both fists at hips)",
+    "verdict": "reviewed",
+    "defaultRuledOut": true,
+    "priority": 7
+  },
+  {
+    "id": "06_whatif_splash",
+    "file": "06_whatif_splash.jpg",
+    "title": "06 whatif splash",
+    "note": "What If? Phoenix splash interior",
+    "verdict": "reviewed",
+    "defaultRuledOut": true,
+    "priority": 7
+  },
+  {
+    "id": "09_impel_1990_mu11",
+    "file": "09_impel_1990_mu11.jpg",
+    "title": "09 impel 1990 mu11",
+    "note": "Impel 1990 MU #11 Phoenix",
+    "verdict": "reviewed",
+    "defaultRuledOut": true,
+    "priority": 7
+  },
+  {
+    "id": "11_impel_1990_mu98",
+    "file": "11_impel_1990_mu98.jpg",
+    "title": "11 impel 1990 mu98",
+    "note": "Impel 1990 MU #98 Dark Phoenix Saga group",
+    "verdict": "reviewed",
+    "defaultRuledOut": true,
+    "priority": 7
+  },
+  {
+    "id": "12_classic_xm36",
+    "file": "12_classic_xm36.jpg",
+    "title": "12 classic xm36",
+    "note": "Classic X-Men #36 pin-up",
+    "verdict": "reviewed",
+    "defaultRuledOut": true,
+    "priority": 7
+  },
+  {
+    "id": "13_classic_xm37",
+    "file": "13_classic_xm37.jpg",
+    "title": "13 classic xm37",
+    "note": "Classic X-Men #37 pin-up",
+    "verdict": "reviewed",
+    "defaultRuledOut": true,
+    "priority": 7
+  },
+  {
+    "id": "14_ux135_p004_topleft",
+    "file": "14_ux135_p004_topleft.jpg",
+    "title": "14 ux135 p004 topleft",
+    "note": "UX #135 p.4 top-left action panel crop",
+    "verdict": "reviewed",
+    "defaultRuledOut": true,
+    "priority": 7
+  },
+  {
+    "id": "15_ux135_p004_mid",
+    "file": "15_ux135_p004_mid.jpg",
+    "title": "15 ux135 p004 mid",
+    "note": "UX #135 p.4 mid action panel crop",
+    "verdict": "reviewed",
+    "defaultRuledOut": true,
+    "priority": 7
+  },
+  {
+    "id": "16_ux135_p003_bottom",
+    "file": "16_ux135_p003_bottom.jpg",
+    "title": "16 ux135 p003 bottom",
+    "note": "UX #135 p.3 bottom Phoenix energy",
+    "verdict": "reviewed",
+    "defaultRuledOut": true,
+    "priority": 7
+  },
+  {
+    "id": "17_ux135_p003_profile",
+    "file": "17_ux135_p003_profile.jpg",
+    "title": "17 ux135 p003 profile",
+    "note": "UX #135 p.3 profile / energy",
+    "verdict": "reviewed",
+    "defaultRuledOut": true,
+    "priority": 7
+  },
+  {
+    "id": "18_ux135_p002_green",
+    "file": "18_ux135_p002_green.jpg",
+    "title": "18 ux135 p002 green",
+    "note": "UX #135 p.2 green-costume panels",
+    "verdict": "reviewed",
+    "defaultRuledOut": true,
+    "priority": 7
+  },
+  {
+    "id": "19_ux135_p004_full",
+    "file": "19_ux135_p004_full.jpg",
+    "title": "19 ux135 p004 full",
+    "note": "UX #135 p.4 full page",
+    "verdict": "reviewed",
+    "defaultRuledOut": true,
+    "priority": 7
+  },
+  {
+    "id": "21_cockrum_design5_green",
+    "file": "21_cockrum_design5_green.jpg",
+    "title": "21 cockrum design5 green",
+    "note": "Cockrum design sheet green variant",
+    "verdict": "reviewed",
+    "defaultRuledOut": true,
+    "priority": 7
+  },
+  {
+    "id": "22_best_of_byrne_45",
+    "file": "22_best_of_byrne_45.jpg",
+    "title": "22 best of byrne 45",
+    "note": "Best of Byrne Jean Grey",
+    "verdict": "reviewed",
+    "defaultRuledOut": true,
+    "priority": 7
+  },
+  {
+    "id": "24_ux108_p011_standing",
+    "file": "24_ux108_p011_standing.jpg",
+    "title": "24 ux108 p011 standing",
+    "note": "UX #108 p.11 standing",
+    "verdict": "reviewed",
+    "defaultRuledOut": true,
+    "priority": 7
+  },
+  {
+    "id": "25_ux108_p012_energy",
+    "file": "25_ux108_p012_energy.jpg",
+    "title": "25 ux108 p012 energy",
+    "note": "UX #108 p.12 energy",
+    "verdict": "reviewed",
+    "defaultRuledOut": true,
+    "priority": 7
+  },
+  {
+    "id": "26_ux105_p009_dual_blast",
+    "file": "26_ux105_p009_dual_blast.jpg",
+    "title": "26 ux105 p009 dual blast",
+    "note": "UX #105 dual blast",
+    "verdict": "reviewed",
+    "defaultRuledOut": true,
+    "priority": 7
+  },
+  {
+    "id": "27_ux105_cover",
+    "file": "27_ux105_cover.jpg",
+    "title": "27 ux105 cover",
+    "note": "UX #105 cover",
+    "verdict": "reviewed",
+    "defaultRuledOut": true,
+    "priority": 7
+  },
+  {
+    "id": "28_ux101_splash_arms_up",
+    "file": "28_ux101_splash_arms_up.jpg",
+    "title": "28 ux101 splash arms up",
+    "note": "UX #101 splash arms up",
+    "verdict": "reviewed",
+    "defaultRuledOut": true,
+    "priority": 7
+  },
+  {
+    "id": "29_artbyrne_bw_fist_hip",
+    "file": "29_artbyrne_bw_fist_hip.jpg",
+    "title": "29 artbyrne bw fist hip",
+    "note": "Art of Byrne B&W fist-hip",
+    "verdict": "reviewed",
+    "defaultRuledOut": true,
+    "priority": 7
+  },
+  {
+    "id": "30_classic12_cover_jean",
+    "file": "30_classic12_cover_jean.jpg",
+    "title": "30 classic12 cover jean",
+    "note": "Classic X-Men #12 cover Jean",
+    "verdict": "reviewed",
+    "defaultRuledOut": true,
+    "priority": 7
+  },
+  {
+    "id": "31_ux135_p008_space",
+    "file": "31_ux135_p008_space.jpg",
+    "title": "31 ux135 p008 space",
+    "note": "UX #135 p.8 space",
+    "verdict": "reviewed",
+    "defaultRuledOut": true,
+    "priority": 7
+  },
+  {
+    "id": "32_ux135_p014_planet_blast",
+    "file": "32_ux135_p014_planet_blast.jpg",
+    "title": "32 ux135 p014 planet blast",
+    "note": "UX #135 p.14 planet blast",
+    "verdict": "reviewed",
+    "defaultRuledOut": true,
+    "priority": 7
+  },
+  {
+    "id": "33_cand_action_180_green",
+    "file": "33_cand_action_180_green.jpg",
+    "title": "33 cand action 180 green",
+    "note": "Candidate action green costume",
+    "verdict": "reviewed",
+    "defaultRuledOut": true,
+    "priority": 7
+  },
+  {
+    "id": "34_impel_1991_mu144_b",
+    "file": "34_impel_1991_mu144_b.jpg",
+    "title": "34 impel 1991 mu144 b",
+    "note": "Impel 1991 MU #144 alt scan",
+    "verdict": "reviewed",
+    "defaultRuledOut": true,
+    "priority": 7
+  },
+  {
+    "id": "44_fleer_ultra_ezra_phoenix",
+    "file": "44_fleer_ultra_ezra_phoenix.jpg",
+    "title": "44 fleer ultra ezra phoenix",
+    "note": "Fleer Ultra Ezra Tucker Phoenix",
+    "verdict": "reviewed",
+    "defaultRuledOut": true,
+    "priority": 7
+  },
+  {
+    "id": "45_masterpieces_hildebrandt_jean",
+    "file": "45_masterpieces_hildebrandt_jean.jpg",
+    "title": "45 masterpieces hildebrandt jean",
+    "note": "1994 Masterpieces Hildebrandt Jean \u2014 palm/fist energy cousin",
+    "verdict": "reviewed",
+    "defaultRuledOut": true,
+    "priority": 7
+  },
+  {
+    "id": "46_fr_origines_marvel_girl",
+    "file": "46_fr_origines_marvel_girl.jpg",
+    "title": "46 fr origines marvel girl",
+    "note": "French Origines Marvel Girl",
+    "verdict": "reviewed",
+    "defaultRuledOut": true,
+    "priority": 7
+  },
+  {
+    "id": "47_fr_origines_red_page",
+    "file": "47_fr_origines_red_page.jpg",
+    "title": "47 fr origines red page",
+    "note": "French Origines red page",
+    "verdict": "reviewed",
+    "defaultRuledOut": true,
+    "priority": 7
+  },
+  {
+    "id": "48_fr_origines_119",
+    "file": "48_fr_origines_119.jpg",
+    "title": "48 fr origines 119",
+    "note": "French Origines p.119",
+    "verdict": "reviewed",
+    "defaultRuledOut": true,
+    "priority": 7
+  },
+  {
+    "id": "49_artbyrne_already",
+    "file": "49_artbyrne_already.jpg",
+    "title": "49 artbyrne already",
+    "note": "Art of Byrne (already reviewed)",
+    "verdict": "reviewed",
+    "defaultRuledOut": true,
+    "priority": 7
+  },
+  {
+    "id": "50_cockrum_full_sheet",
+    "file": "50_cockrum_full_sheet.jpg",
+    "title": "50 cockrum full sheet",
+    "note": "Cockrum full model sheet",
+    "verdict": "reviewed",
+    "defaultRuledOut": true,
+    "priority": 7
+  },
+  {
+    "id": "51_pizza_hut_mce",
+    "file": "51_pizza_hut_mce.jpg",
+    "title": "51 pizza hut mce",
+    "note": "Pizza Hut Marvel Collector Edition",
+    "verdict": "reviewed",
+    "defaultRuledOut": true,
+    "priority": 7
+  },
+  {
+    "id": "52_flair_base_jean",
+    "file": "52_flair_base_jean.jpg",
+    "title": "52 flair base jean",
+    "note": "Flair base #24 Jean Grey (fist-hip + reach \u2014 same set digital look)",
+    "verdict": "reviewed",
+    "defaultRuledOut": true,
+    "priority": 7
+  },
+  {
+    "id": "61_ultra134_ray_lago_dark_phoenix",
+    "file": "61_ultra134_ray_lago_dark_phoenix.jpg",
+    "title": "61 ultra134 ray lago dark phoenix",
+    "note": "1994 Ultra #134 Dark Phoenix (Ray Lago) \u2014 hand near hip, no forward blast",
+    "verdict": "reviewed",
+    "defaultRuledOut": true,
+    "priority": 7
+  },
+  {
+    "id": "65_ftp_mm_phoenix",
+    "file": "65_ftp_mm_phoenix.jpg",
+    "title": "65 ftp mm phoenix",
+    "note": "FTP 1993 Masterpieces II Phoenix scan (Harrison family)",
+    "verdict": "reviewed",
+    "defaultRuledOut": true,
+    "priority": 7
+  },
+  {
+    "id": "71_hamilton_fanfare35_phoenix_hi",
+    "file": "71_hamilton_fanfare35_phoenix_hi.jpg",
+    "title": "71 hamilton fanfare35 phoenix hi",
+    "note": "Marvel Fanfare #35 Hamilton Phoenix (1987) \u2014 arms-across style cousin; HQ recheck of portfolio pin-up",
+    "verdict": "reviewed",
+    "defaultRuledOut": true,
+    "priority": 7
+  },
+  {
+    "id": "54_overpower_jean_dark_phoenix",
+    "file": "54_overpower_jean_dark_phoenix.jpg",
+    "title": "54 overpower jean dark phoenix",
+    "note": "\u2605 NEW: OverPower Jean Grey: Dark Phoenix \u2014 left energy, right fist-at-hip (1999; pose cousin / possible Flair echo)",
+    "verdict": "ruled-out",
+    "defaultRuledOut": true,
+    "priority": 8
+  },
+  {
+    "id": "55_overpower_xmen_phoenix_rachel",
+    "file": "55_overpower_xmen_phoenix_rachel.jpg",
+    "title": "55 overpower xmen phoenix rachel",
+    "note": "OverPower X-Men Phoenix (Rachel) \u2014 one arm out, one tucked",
+    "verdict": "ruled-out",
+    "defaultRuledOut": true,
+    "priority": 8
+  },
+  {
+    "id": "57_overpower_8e_dark_phoenix",
+    "file": "57_overpower_8e_dark_phoenix.jpg",
+    "title": "57 overpower 8e dark phoenix",
+    "note": "OverPower Monumental 8E Dark Phoenix \u2014 open palms (weaker)",
+    "verdict": "ruled-out",
+    "defaultRuledOut": true,
+    "priority": 8
+  },
+  {
+    "id": "66_hamilton_amano_dark_phoenix_2006",
+    "file": "66_hamilton_amano_dark_phoenix_2006.jpg",
+    "title": "66 hamilton amano dark phoenix 2006",
+    "note": "NOT A SOURCE LEAD (post-1994) \u2014 CAF #286213 Dark Phoenix pencil, signed 1.4.06. Near-exact pose echo of PB#5; too late for Flair. Docs only.",
+    "verdict": "ruled-out",
+    "defaultRuledOut": true,
+    "priority": 8
+  },
+  {
+    "id": "67_hamilton_caf_pencil_phoenix_2005",
+    "file": "67_hamilton_caf_pencil_phoenix_2005.jpg",
+    "title": "67 hamilton caf pencil phoenix 2005",
+    "note": "post-1994 CAF #148194 Phoenix pencil pinup (\u201905) \u2014 both arms raised (POSE MISS + too late)",
+    "verdict": "ruled-out",
+    "defaultRuledOut": true,
+    "priority": 8
+  },
+  {
+    "id": "68_hamilton_trophy_wall",
+    "file": "68_hamilton_trophy_wall.jpg",
+    "title": "68 hamilton trophy wall",
+    "note": "CAF #163625 Dark Phoenix Trophy Wall \u2014 seated with X-Men cameos (POSE MISS)",
+    "verdict": "ruled-out",
+    "defaultRuledOut": true,
+    "priority": 8
+  },
+  {
+    "id": "70_hamilton_4c_dark_phoenix_2023",
+    "file": "70_hamilton_4c_dark_phoenix_2023.jpg",
+    "title": "70 hamilton 4c dark phoenix 2023",
+    "note": "post-1994 CAF #2007250 4C Dark Phoenix (2023) \u2014 claw hands (POSE MISS + too late)",
+    "verdict": "ruled-out",
+    "defaultRuledOut": true,
+    "priority": 8
+  },
+  {
+    "id": "94_signed_find_pose_match",
+    "file": "94_signed_find_pose_match.jpg",
+    "title": "94 Admahum fan painting (was \u201csigned find\u201d)",
+    "note": "ORIGIN SOLVED: Adham Hussain (DeviantArt Admahum / AddHam2it). Posted 2006-03-20. Caption: painted a 3\u00d74 ft version of the Marvel trading card; destroyed in Katrina. The AH monogram is HIS initials \u2014 not Adam Hughes. Fan recreation OF Flair PB5, not the Fleer source. RULED OUT for SOURCE_ART.",
+    "verdict": "ruled-out",
+    "defaultRuledOut": true,
+    "priority": 8
+  },
+  {
+    "id": "95_caf_klamer_darkphoenix_ah",
+    "file": "95_caf_klamer_darkphoenix_ah.jpg",
+    "title": "95 caf klamer darkphoenix ah",
+    "note": "CAF Chris Klamer #148691 \u201cDark Phoenix (AH)\u201d \u2014 Adam Hughes pencil commission (added CAF 2006). Different portrait. RULED OUT as PB5 source.",
+    "verdict": "ruled-out",
+    "defaultRuledOut": true,
+    "priority": 8
+  },
+  {
+    "id": "96_gangus_angus_2006",
+    "file": "96_gangus_angus_2006.jpg",
+    "title": "96 gangus angus 2006",
+    "note": "gangus.net 2006 dark_phoenix.jpg \u2014 Glen Angus Raven/X2. Filename collision only. RULED OUT.",
+    "verdict": "ruled-out",
+    "defaultRuledOut": true,
+    "priority": 8
+  },
+  {
+    "id": "97_dreager1_same_frame",
+    "file": "97_dreager1_same_frame.jpg",
+    "title": "97 dreager1 = Admahum DA bytes",
+    "note": "dreager1 2011/2012 dark_phoenix.jpg is byte-identical to Admahum\u2019s DeviantArt upload (md5 38be99fe\u2026). Uncredited scrape of the fan painting.",
+    "verdict": "ruled-out",
+    "defaultRuledOut": true,
+    "priority": 8
+  },
+  {
+    "id": "98_admahum_fan_of_card",
+    "file": "98_admahum_fan_of_card.jpg",
+    "title": "98 Admahum DA vs Flair PB5",
+    "note": "Side-by-side: 1994 Flair PB5 card vs Admahum\u2019s 2006 DeviantArt fan painting. Same pose because he painted from the card.",
+    "verdict": "ruled-out",
+    "defaultRuledOut": true,
+    "priority": 8
+  },
+  {
+    "id": "99_found_vs_admahum",
+    "file": "99_found_vs_admahum.jpg",
+    "title": "99 found scan vs Admahum DA",
+    "note": "Collector found scan is a cleaner recompress of the same Admahum frame (mean RGB diff \u2248 0.29).",
+    "verdict": "ruled-out",
+    "defaultRuledOut": true,
+    "priority": 8
+  },
+  {
+    "id": "01_impel_1991_mu144",
+    "file": "01_impel_1991_mu144.jpg",
+    "title": "01 impel 1991 mu144",
+    "note": "Impel 1991 MU #144 Dark Phoenix (card art near-miss)",
+    "verdict": "miss",
+    "defaultRuledOut": true,
+    "priority": 9
+  },
+  {
+    "id": "02_fanfare_hamilton",
+    "file": "02_fanfare_hamilton.jpg",
+    "title": "02 fanfare hamilton",
+    "note": "Marvel Fanfare #35 Craig Hamilton pin-up (arms across \u2014 NOT match)",
+    "verdict": "miss",
+    "defaultRuledOut": true,
+    "priority": 9
+  },
+  {
+    "id": "07_masterpieces_93",
+    "file": "07_masterpieces_93.jpg",
+    "title": "07 masterpieces 93",
+    "note": "1993 Masterpieces Harrison Phoenix (both arms raised)",
+    "verdict": "miss",
+    "defaultRuledOut": true,
+    "priority": 9
+  },
+  {
+    "id": "08_impel_1992_mu11",
+    "file": "08_impel_1992_mu11.jpg",
+    "title": "08 impel 1992 mu11",
+    "note": "Impel 1992 MU #11 Phoenix T-pose",
+    "verdict": "miss",
+    "defaultRuledOut": true,
+    "priority": 9
+  },
+  {
+    "id": "10_leonardi_poster",
+    "file": "10_leonardi_poster.jpg",
+    "title": "10 leonardi poster",
+    "note": "Leonardi/Austin Dark Phoenix poster (both arms raised)",
+    "verdict": "miss",
+    "defaultRuledOut": true,
+    "priority": 9
+  },
+  {
+    "id": "23_ux108_p011_bottom_blast",
+    "file": "23_ux108_p011_bottom_blast.jpg",
+    "title": "23 ux108 p011 bottom blast",
+    "note": "UX #108 p.11 bottom blast (left-hand energy near-miss)",
+    "verdict": "miss",
+    "defaultRuledOut": true,
+    "priority": 9
+  },
+  {
+    "id": "43_impel_xm82_dark_phoenix",
+    "file": "43_impel_xm82_dark_phoenix.jpg",
+    "title": "43 impel xm82 dark phoenix",
+    "note": "Impel X-Men #82 Dark Phoenix",
+    "verdict": "miss",
+    "defaultRuledOut": true,
+    "priority": 9
+  },
+  {
+    "id": "59_mm93_harrison_phoenix_recheck",
+    "file": "59_mm93_harrison_phoenix_recheck.jpg",
+    "title": "59 mm93 harrison phoenix recheck",
+    "note": "1993 Masterpieces #85 Phoenix (Harrison) \u2014 both arms raised (miss)",
+    "verdict": "miss",
+    "defaultRuledOut": true,
+    "priority": 9
+  },
+  {
+    "id": "60_mu3_phoenix11_tpose",
+    "file": "60_mu3_phoenix11_tpose.jpg",
+    "title": "60 mu3 phoenix11 tpose",
+    "note": "1992 MU #11 Phoenix T-pose (miss)",
+    "verdict": "miss",
+    "defaultRuledOut": true,
+    "priority": 9
+  },
+  {
+    "id": "62_mu91_marvel_girl4_adams",
+    "file": "62_mu91_marvel_girl4_adams.jpg",
+    "title": "62 mu91 marvel girl4 adams",
+    "note": "1991 MU #4 Marvel Girl (Arthur Adams) \u2014 both arms down (miss)",
+    "verdict": "miss",
+    "defaultRuledOut": true,
+    "priority": 9
+  },
+  {
+    "id": "63_mu91_dark_phoenix144",
+    "file": "63_mu91_dark_phoenix144.jpg",
+    "title": "63 mu91 dark phoenix144",
+    "note": "1991 MU #144 Dark Phoenix \u2014 both arms out (miss)",
+    "verdict": "miss",
+    "defaultRuledOut": true,
+    "priority": 9
+  },
+  {
+    "id": "64_mu90_marvel_girl9",
+    "file": "64_mu90_marvel_girl9.jpg",
+    "title": "64 mu90 marvel girl9",
+    "note": "1990 MU Marvel Girl \u2014 forehead blast (miss)",
+    "verdict": "miss",
+    "defaultRuledOut": true,
+    "priority": 9
+  },
+  {
+    "id": "69_hamilton_phoenix_painting",
+    "file": "69_hamilton_phoenix_painting.jpg",
+    "title": "69 hamilton phoenix painting",
+    "note": "CAF #173861 Phoenix Painting \u2014 arms-up V / legs crossed (POSE MISS)",
+    "verdict": "miss",
+    "defaultRuledOut": true,
+    "priority": 9
+  },
+  {
+    "id": "72_nowlan_fanfare18_phoenix",
+    "file": "72_nowlan_fanfare18_phoenix.jpg",
+    "title": "72 nowlan fanfare18 phoenix",
+    "note": "Same Baxter magazine format as Hamilton \u2014 Kevin Nowlan Phoenix, Marvel Fanfare #18 (Jan 1985). Arms raised / flaming V-wings. Pre-1994. Pose miss.",
+    "verdict": "miss",
+    "defaultRuledOut": true,
+    "priority": 9
+  },
+  {
+    "id": "73_keown_xfactor_annual5_marvel_girl",
+    "file": "73_keown_xfactor_annual5_marvel_girl.jpg",
+    "title": "73 keown xfactor annual5",
+    "note": "X-Factor Annual #5 (1990) Keown/McLeod Marvel Girl half of Beast DPS \u2014 over-shoulder open palm. POSE MISS.",
+    "verdict": "miss",
+    "defaultRuledOut": true,
+    "priority": 9
+  },
+  {
+    "id": "76_mm93_potts_jean75",
+    "file": "76_mm93_potts_jean75.jpg",
+    "title": "76 mm93 potts jean75",
+    "note": "1993 Masterpieces #75 Jean Grey (Carl Potts) \u2014 floating psychic aura; no forward blast beam. Pose miss.",
+    "verdict": "miss",
+    "defaultRuledOut": true,
+    "priority": 9
+  },
+  {
+    "id": "77_ux134_cover",
+    "file": "77_ux134_cover.jpg",
+    "title": "77 ux134 cover",
+    "note": "UX #134 cover \u2014 Black Queen arms out/up \u00b7 MISS",
+    "verdict": "miss",
+    "defaultRuledOut": true,
+    "priority": 9
+  },
+  {
+    "id": "78_ux135_cover",
+    "file": "78_ux135_cover.jpg",
+    "title": "78 ux135 cover",
+    "note": "UX #135 cover \u2014 both arms up on logo \u00b7 MISS",
+    "verdict": "miss",
+    "defaultRuledOut": true,
+    "priority": 9
+  },
+  {
+    "id": "79_ux136_cover",
+    "file": "79_ux136_cover.jpg",
+    "title": "79 ux136 cover",
+    "note": "UX #136 cover \u2014 limp DP piet\u00e0 \u00b7 MISS",
+    "verdict": "miss",
+    "defaultRuledOut": true,
+    "priority": 9
+  },
+  {
+    "id": "80_ux137_cover",
+    "file": "80_ux137_cover.jpg",
+    "title": "80 ux137 cover",
+    "note": "UX #137 cover \u2014 left arm up, right on Scott \u00b7 MISS",
+    "verdict": "miss",
+    "defaultRuledOut": true,
+    "priority": 9
+  },
+  {
+    "id": "81_ux108_cover",
+    "file": "81_ux108_cover.jpg",
+    "title": "81 ux108 cover",
+    "note": "UX #108 cover \u2014 Jean absent \u00b7 MISS",
+    "verdict": "miss",
+    "defaultRuledOut": true,
+    "priority": 9
+  },
+  {
+    "id": "82_ux134_birth_splash",
+    "file": "82_ux134_birth_splash.jpg",
+    "title": "82 ux134 birth splash",
+    "note": "UX #134 DP birth splash \u2014 both palms out \u00b7 MISS",
+    "verdict": "miss",
+    "defaultRuledOut": true,
+    "priority": 9
+  },
+  {
+    "id": "83_mu2_005_phoenix",
+    "file": "83_mu2_005_phoenix.jpg",
+    "title": "83 mu2 005 phoenix",
+    "note": "MU II #5 Phoenix (Rachel) \u2014 arms overhead \u00b7 MISS",
+    "verdict": "miss",
+    "defaultRuledOut": true,
+    "priority": 9
+  },
+  {
+    "id": "84_mm92_067",
+    "file": "84_mm92_067.jpg",
+    "title": "84 mm92 067",
+    "note": "MM92 #67 Phoenix (Rachel) \u2014 fists up V \u00b7 MISS",
+    "verdict": "miss",
+    "defaultRuledOut": true,
+    "priority": 9
+  },
+  {
+    "id": "85_mu3_195",
+    "file": "85_mu3_195.jpg",
+    "title": "85 mu3 195",
+    "note": "MU III #195 DPS Milestone \u2014 arms Y \u00b7 MISS",
+    "verdict": "miss",
+    "defaultRuledOut": true,
+    "priority": 9
+  },
+  {
+    "id": "86_cxm09",
+    "file": "86_cxm09.jpg",
+    "title": "86 cxm09",
+    "note": "Classic XM #9 \u2014 both arms raised \u00b7 MISS",
+    "verdict": "miss",
+    "defaultRuledOut": true,
+    "priority": 9
+  },
+  {
+    "id": "87_cxm13",
+    "file": "87_cxm13.jpg",
+    "title": "87 cxm13",
+    "note": "Classic XM #13 Adams \u2014 flying tuck \u00b7 MISS",
+    "verdict": "miss",
+    "defaultRuledOut": true,
+    "priority": 9
+  },
+  {
+    "id": "88_cxm41",
+    "file": "88_cxm41.jpg",
+    "title": "88 cxm41",
+    "note": "Classic XM #41 Lightle \u2014 both palms raised \u00b7 MISS",
+    "verdict": "miss",
+    "defaultRuledOut": true,
+    "priority": 9
+  },
+  {
+    "id": "89_cxm42",
+    "file": "89_cxm42.jpg",
+    "title": "89 cxm42",
+    "note": "Classic XM #42 Lightle \u2014 energy hands \u00b7 MISS",
+    "verdict": "miss",
+    "defaultRuledOut": true,
+    "priority": 9
+  },
+  {
+    "id": "90_ba27_cover",
+    "file": "90_ba27_cover.jpg",
+    "title": "90 ba27 cover",
+    "note": "Bizarre Adventures #27 cover \u2014 arms V \u00b7 MISS",
+    "verdict": "miss",
+    "defaultRuledOut": true,
+    "priority": 9
+  },
+  {
+    "id": "91_phoenix_untold_1984",
+    "file": "91_phoenix_untold_1984.jpg",
+    "title": "91 phoenix untold 1984",
+    "note": "Phoenix Untold Story #1 \u2014 claw crouch \u00b7 MISS",
+    "verdict": "miss",
+    "defaultRuledOut": true,
+    "priority": 9
+  },
+  {
+    "id": "92_ohotmu_master26_jean",
+    "file": "92_ohotmu_master26_jean.jpg",
+    "title": "92 ohotmu master26 jean",
+    "note": "OHOTMU Master Ed Jean \u2014 arms at sides \u00b7 MISS",
+    "verdict": "miss",
+    "defaultRuledOut": true,
+    "priority": 9
+  },
+  {
+    "id": "93_dps_packaging",
+    "file": "93_dps_packaging.jpg",
+    "title": "93 dps packaging",
+    "note": "DPS packaging reuse \u2014 T-arms out \u00b7 MISS",
+    "verdict": "miss",
+    "defaultRuledOut": true,
+    "priority": 9
+  }
+]
