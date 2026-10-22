@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta name="x-flair-deploy" content="2026-10-22T20:57:02Z">
+<meta name="x-flair-deploy" content="2026-10-22T21:34:49Z">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>'94 Flair Presents the Marvel Universe &mdash; Masterset Checklist</title>
@@ -1804,6 +1804,73 @@
     }
     .print-sheet .ps.have .box svg { opacity: 1; }
     .print-sheet .box svg path { stroke: #111; }
+
+    /* Closing notes. Starts on a fresh page so the checklist pages stay put. */
+    .print-sheet .ps-lore {
+      break-before: page;
+      page-break-before: always;
+    }
+    .print-sheet .ps-lore h2 { margin-top: 0; }
+    .print-sheet .ps-lore h3 {
+      margin: 8pt 0 2pt;
+      padding: 0 0 1pt;
+      border-bottom: 0.75pt solid #111;
+      font-family: "Oswald", sans-serif;
+      font-size: 9pt;
+      font-weight: 500;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      line-height: 1.2;
+      color: #111;
+      break-after: avoid;
+      page-break-after: avoid;
+    }
+    .print-sheet .ps-lore p,
+    .print-sheet .ps-lore li {
+      margin: 0 0 3pt;
+      font-size: 8.5pt;
+      line-height: 1.32;
+      color: #111;
+      break-after: auto;
+      page-break-after: auto;
+    }
+    .print-sheet .ps-lore .lede { margin-bottom: 4pt; }
+    .print-sheet .ps-lore ul { margin: 0 0 2pt; padding: 0 0 0 12pt; }
+    .print-sheet .ps-lore li { break-inside: avoid; page-break-inside: avoid; }
+    .print-sheet .ps-lore b { font-weight: 650; }
+    .print-sheet .ps-lore .with-thumb {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 88pt;
+      column-gap: 10pt;
+      align-items: start;
+    }
+    .print-sheet .ps-lore .with-thumb h3,
+    .print-sheet .ps-lore .with-thumb ul { grid-column: 1 / -1; }
+    .print-sheet .ps-lore .with-thumb > p { grid-column: 1; margin-top: 2pt; }
+    .print-sheet .ps-lore .with-thumb img {
+      grid-column: 2;
+      grid-row: 2;
+      width: 88pt;
+      height: auto;
+      margin: 2pt 0 0;
+      border: 0.6pt solid #111;
+      filter: grayscale(1);
+    }
+    .print-sheet .ps-lore .keep { break-inside: avoid; page-break-inside: avoid; }
+    .print-sheet .ps-lore .lore-ads {
+      display: grid;
+      grid-template-columns: 36pt 1fr;
+      gap: 5pt 8pt;
+      align-items: start;
+      margin: 2pt 0 4pt;
+    }
+    .print-sheet .ps-lore .lore-ads img {
+      width: 36pt;
+      height: auto;
+      border: 0.6pt solid #111;
+      filter: grayscale(1);
+    }
+    .print-sheet .ps-lore .lore-ads p { margin: 0; }
   }
 </style>
 </head>
@@ -3014,6 +3081,74 @@ function psSingleTable(entries, extra) {
 function psSection(title, count, blurb, table) {
   return `<section class="ps-sec"><h2>${esc(title)}<span>${count}</span></h2>${blurb ? `<p>${esc(blurb)}</p>` : ""}${table}</section>`;
 }
+function loreSection() {
+  const adNotes = [
+    "Newsprint, with \u201cAdvertisement\u201d along the bottom.",
+    "Glossy stock. Same headline; the three cards are Powerblast art, not the comic ad\u2019s lineup.",
+    "Glossy stock. Confirmed in Tuff Stuff\u2019s Collect! (July 1994) and Hero Illustrated #13. That July Collect! also ran the glossy Inaugural Edition ad."
+  ];
+  const adBlocks = AD_PAGES.map(([name, shows, where, , file], i) =>
+    `<img src="images/thumbs/print/${file}.jpg" alt=""><p><b>${esc(name)}</b> ${esc(shows)} ${esc(where)}. ${esc(adNotes[i])}</p>`).join("");
+  const magLine = rows => rows.map(([name, date, what]) =>
+    `<li><b>${esc(name)}</b> (${esc(date)}). ${esc(what)}</li>`).join("");
+  const comics = ADS.map(([name, date]) => `${name} (${date})`).join("; ");
+  return `<section class="ps-sec ps-lore">
+    <h2>Set Notes &amp; Lore</h2>
+    <p class="lede">Background from this checklist: the collector notes, the promo and ad records, and Jerry A. Novick’s July 1994 Marvel Age preview. The preview describes the set before it shipped. The lists above record what was issued.</p>
+
+    <div class="with-thumb">
+      <h3>Marvel Age #138</h3>
+      <img src="images/thumbs/print/ma138-p26-27.jpg" alt="Marvel Age #138, pages 26 and 27">
+      <p>Jerry A. Novick’s feature, pages 26–28, “Where the Past and Future Collide.” The issue also came with a 4-card promo sheet. The article’s own figures are the ones below; they are not the issued checklist.</p>
+      <ul>
+        <li>Marvel and Fleer’s set was scheduled for mid-June. A computer coloring process would enhance artwork Marvel supplied. Every card in the 150-card set would portray a major milestone in Marvel’s history.</li>
+        <li>McGrew Color Graphics colored previously published black line art. Bob Budiansky (Marvel Special Projects) said Marvel chose existing art, sent the black line pieces with color guides, and McGrew “painted” each piece on computer with context-sensitive effects. Richard Quinlan at McGrew named the programs: Kai Power Tools, Fractal Painter, and Adobe Photoshop.</li>
+        <li>The page shows three stages from Spider-Man 2099 #6: the printed comic page, the black-and-white copy given to the computer artist, and the computer-enhanced Flair version. The pack was compared with the previous year’s Flair Baseball packet.</li>
+        <li>John Taddeo, Fleer’s marketing manager, said “Flair” means how the cards are made, the paper stock, and the packaging, and that Fleer had decided on a limited press run. The article describes thicker stock, a double UV coating, foil on both sides, and re-closable card-stock boxes instead of foil or wax: ten cards a pack, a suggested $4.00, and 36 packs per display box.</li>
+        <li>“Let the Games Begin”: at press time Fleer planned one 20-card chase set through every chain of distribution. The nature of that chase set had not been finalized.</li>
+      </ul>
+    </div>
+
+    <h3>The set as issued</h3>
+    <ul>
+      <li>Base set: 150 cards, full-bleed art on 24-pt stock with a gold-foil Flair logo. No card #6. Two #8s: Iron Man (the real #6) and Vulture vs. Spider-Man.</li>
+      <li>Hobby box: 24 packs of 10 (240 cards). Packs are thick cardboard mini-boxes, shrink-wrapped, not wax. Four covers: Venom, Magneto, Cyclops, and Wolverine.</li>
+      <li>Powerblast: 18 prismatic, metallic-enhanced chase cards, about 1 in every 2 packs (about 12 a box). About 1.52 base sets per box if collation were perfect.</li>
+      <li>Most cards reuse existing comic art, repainted for the set. Still unaccounted: #37 Black Cat. In-house sketch sources: #10 Xavier (Ron Lim) and #42 Elektra (Frank Miller).</li>
+    </ul>
+
+    <h3>Flairprints, binders, promos, and sheets</h3>
+    <ul>
+      <li>Flairprints are a case bonus, not a pack card: 6½″ × 10″. Powerblast #1–10 art, enlarged, with the Flair ’94 logo and character name. Back blank, UPC 0 41199 00258 1. Cable, Cyclops, Ghost Rider, Iron Man, Magneto, Phoenix, Punisher, Storm, Venom, Wolverine.</li>
+      <li>Binder inserts are oversized, 2–3 per binder, five known: Powerblast #11–15 art without the metallic finish, no logo or title, blank backs. Captain America, Gambit, Thor, Silver Surfer, Spider-Man. The Spider-Man insert was verified in sealed ’95 Fleer Ultra X-Men binders. Exact timing isn’t locked down; some may have been promotional.</li>
+      <li>Tell them apart by the back: a Flairprint carries the UPC, a binder insert is blank. On the front, only the Flairprint keeps the logo, the name, and the metallic finish.</li>
+      <li>Promo Flairprints, also 6½″ × 10″, went out through distributors. Deadpool: one with the Heroes World / Special Sales Conference seal (Heroes World Con 1994; nslists, no published day range) and one with no distributor seal. Blank back except a barcode. Omega Red vs. Wolverine: one with no distributor named, and Diamond’s Annual Retailer Seminar piece (Baltimore, June 11–14, 1994).</li>
+      <li>4-card sheets are double-sided 5″ × 7″ panels. Released fronts: Flair logo, Bone Claws, Phoenix, Maximum Carnage. Back: Bodyslide, Spider-Man 2099, Thunderstrike, New Ghost Rider. Three title cards: “Ships June 1994” etched in gold foil, the same words on a gold paste-on sticker, and “The Ultimate Collectable.” The foil-etched version is reported as the Wizard #35 insert; the other magazine pairings are unknown. Bundled with Wizard #35, Advance Comics #67, and Marvel Age #138 (July 1994) and Tuff Stuff’s Collect! (June 1994). An unreleased sheet (Gambit &amp; Rogue, Infinity Crusade, Maximum Carnage, Bone Claws) has no front text; the back’s fourth bullet says “presents” instead of “present,” and that back is also headed “The Ultimate Collectable.”</li>
+      <li>9-card sheets, 7⅝″ × 10⅝″, came in Fleer’s 1994 media press kit: a Wolverine folder, the uncut sheets, single cards of Blade and Terrax, and Marvel-letterhead press documents. Preview material, never sold in packs. Which sheet came in which kit isn’t documented. Numbers run left to right, top to bottom; an asterisk is an unnumbered card.</li>
+    </ul>
+
+    <div class="keep">
+      <h3>Print ads</h3>
+      <p>The three ad pages are on the checklist. Fleer ran a newsprint comic version, a glossy magazine version with Powerblast art, and a separate Flairprints ad.</p>
+      <div class="lore-ads">${adBlocks}</div>
+    </div>
+
+    <h3>Magazines with a promo sheet</h3>
+    <p>Each came with a 4-card uncut sheet, which is on the checklist under Promos. Look for copies still sealed with the sheet inside.</p>
+    <ul>${magLine(MAGS)}</ul>
+
+    <h3>Magazines that carried the ads</h3>
+    <p>Hobby and comics magazines that ran the glossy “Inaugural Edition” ad and/or “Introducing FlairPrints.” These did not necessarily include a 4-card sheet.</p>
+    <ul>${magLine(AD_MAGS)}</ul>
+
+    <h3>Comics that carried the ad</h3>
+    <p>Newsprint “Inaugural Edition” comic ad, from the Grand Comics Database and period copies: ${esc(comics)}. Fleer ran it in Marvel’s ad pages next to its other 1994 card lines, so more titles from the same months likely carried it too.</p>
+
+    <h3>Credits</h3>
+    <p>Checklist data from abs-cards.net. Card art and the source and artist credits are by @exotechktx. Promo sizes from nslists.com. Marvel characters © Marvel. This is a fan-made collector sheet.</p>
+  </section>`;
+}
+
 function buildPrintSheet() {
   const base = BASE.map(([name, , note], i) => ({
     id: `b${i + 1}`,
@@ -3051,7 +3186,8 @@ function buildPrintSheet() {
     psSection("Promo Flairprints", "4", "Distributor promos, not from packs.", psSingleTable(promos)),
     psSection("4-Card Sheets", "4", "Uncut promo sheets.", psSingleTable(four)),
     psSection("9-Card Sheets", "9", "Press-kit sheets. Numbers run left to right, top to bottom. An asterisk marks an unnumbered card.", psSingleTable(nines, "ps-nums")),
-    psSection("Print Ads", "3", "Full-page ads.", psSingleTable(ads))
+    psSection("Print Ads", "3", "Full-page ads.", psSingleTable(ads)),
+    loreSection()
   ].join("");
   syncPrintHave();
 }
