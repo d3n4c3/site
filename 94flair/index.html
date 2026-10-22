@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta name="x-flair-deploy" content="2026-10-22T20:28:42Z">
+<meta name="x-flair-deploy" content="2026-10-22T20:43:25Z">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>'94 Flair Presents the Marvel Universe &mdash; Masterset Checklist</title>
@@ -941,10 +941,19 @@
   .article-view.show { display: flex; }
   .article-view .a-bar {
     position: sticky; top: 0; z-index: 2;
-    display: flex; align-items: center; justify-content: space-between; gap: 12px;
-    padding: 14px 64px 10px 18px;
-    background: rgba(7, 6, 11, 0.94); border-bottom: 1px solid rgba(242, 199, 92, 0.2);
+    display: flex; align-items: center; gap: 10px;
+    padding: 12px 14px;
+    background: rgba(7, 6, 11, 0.96); border-bottom: 1px solid rgba(242, 199, 92, 0.28);
   }
+  .article-view .a-heading { min-width: 0; flex: 1 1 160px; }
+  .article-view .a-actions { margin-left: auto; display: flex; align-items: center; gap: 8px; flex: 0 0 auto; }
+  .article-view .a-back {
+    flex: 0 0 auto; min-height: 44px; padding: 10px 16px; border: 0; border-radius: 99px; cursor: pointer;
+    background: var(--foil); color: #1a1205;
+    font-family: "Oswald", sans-serif; font-weight: 500; letter-spacing: .1em;
+    text-transform: uppercase; font-size: 13px; line-height: 1;
+  }
+  .article-view .a-back:focus-visible, .article-view .a-close:focus-visible { outline: 2px solid var(--gold-1); outline-offset: 2px; }
   .article-view .a-kicker {
     font-family: "Oswald", sans-serif; letter-spacing: .16em; text-transform: uppercase;
     font-size: 12px; color: var(--gold-2);
@@ -960,7 +969,7 @@
     text-transform: uppercase; font-size: 12px;
   }
   .article-view .a-close {
-    position: absolute; top: 12px; right: 14px; width: 44px; height: 44px;
+    width: 44px; height: 44px; flex: 0 0 auto;
     display: grid; place-items: center; border-radius: 50%; cursor: pointer;
     background: rgba(255, 255, 255, 0.06); border: 1px solid rgba(242, 199, 92, 0.35);
     color: var(--text); font-size: 22px;
@@ -1039,9 +1048,16 @@
   .sc { font-variant: small-caps; letter-spacing: .04em; }
   .p28 .feet { grid-column: 1 / -1; }
   @media (max-width: 800px) {
-    .article-view .a-bar { padding: 12px 56px 10px 12px; align-items: flex-start; }
+    .article-view .a-bar {
+      display: grid; grid-template-columns: minmax(0, 1fr) 44px;
+      align-items: center; gap: 8px; padding: 10px 12px;
+    }
+    .article-view .a-back { grid-column: 1; grid-row: 1; width: 100%; min-height: 48px; font-size: 14px; }
+    .article-view .a-close { grid-column: 2; grid-row: 1; }
+    .article-view .a-heading { grid-column: 1 / -1; grid-row: 2; }
+    .article-view .a-actions { grid-column: 1 / -1; grid-row: 3; margin-left: 0; }
     .article-view .a-title { font-size: 15px; }
-    .article-view .a-flip { padding: 8px 12px; letter-spacing: .08em; }
+    .article-view .a-flip { width: 100%; min-height: 44px; padding: 10px 12px; letter-spacing: .08em; }
     .spread-top, .spread-bot, .spread-cols, .p28, .p28-mid { display: flex; flex-direction: column; }
     .rail { min-height: 0; }
     .rail span { writing-mode: horizontal-tb; transform: none; font-size: 28px; padding: 8px 10px; display: block; }
@@ -1051,7 +1067,6 @@
     .spidey { float: none; width: min(240px, 70%); margin: 0 0 8px; }
     .mag p, .ycap { font-size: 15px; line-height: 1.45; }
     .mag-banner { font-size: 32px; }
-    .article-view .a-bar { flex-wrap: wrap; }
     .article-view .a-title { font-size: 14px; }
     .stages { order: 2; }
     .p28-mid { order: 3; }
@@ -1986,13 +2001,16 @@
 </div>
 
 <div class="article-view" id="articleView" role="dialog" aria-modal="true" aria-label="Marvel Age 138 Flair preview">
-  <button class="a-close" type="button" aria-label="Close">&times;</button>
   <div class="a-bar">
-    <div>
+    <button class="a-back" type="button">&#8592; Back to checklist</button>
+    <div class="a-heading">
       <div class="a-kicker">Original scans</div>
       <div class="a-title">Marvel Age #138 · Flair Marvel 1994</div>
     </div>
-    <button class="a-flip" type="button">Flip to digital</button>
+    <div class="a-actions">
+      <button class="a-flip" type="button">Flip to digital</button>
+    </div>
+    <button class="a-close" type="button" aria-label="Close">&times;</button>
   </div>
   <div class="a-scroll">
     <div class="a-scans">
@@ -2950,29 +2968,64 @@ function toast(msg) {
     kicker.textContent = on ? "Digital transcription" : "Original scans";
     scroller.scrollTop = 0;
   }
-  function open() {
+  const backBtn = el.querySelector(".a-back");
+  let pushed = false;
+  let expectPop = false;
+  function revealReferences() {
+    const target = openBtn.closest(".article-ref") || document.getElementById("print") || openBtn;
+    requestAnimationFrame(() => {
+      target.scrollIntoView({ block: "center" });
+      openBtn.focus({ preventScroll: true });
+    });
+  }
+  function open(push = true) {
     setMode(false);
     el.classList.add("show");
     document.body.style.overflow = "hidden";
-    el.querySelector(".a-close").focus();
+    if (push && location.hash !== "#ma138") {
+      history.pushState({ article: "ma138" }, "", "#ma138");
+      pushed = true;
+    }
+    backBtn.focus();
   }
-  function close() {
+  function close(fromPop) {
+    if (!el.classList.contains("show")) return;
     el.classList.remove("show");
     document.body.style.overflow = "";
-    openBtn.focus();
+    if (!fromPop && pushed) {
+      pushed = false;
+      expectPop = true;
+      history.back();
+      return;
+    }
+    pushed = false;
+    revealReferences();
   }
-  openBtn.addEventListener("click", open);
+  openBtn.addEventListener("click", () => open(true));
   flipBtn.addEventListener("click", () => setMode(!digitalOn));
-  el.querySelector(".a-close").addEventListener("click", close);
-  el.addEventListener("click", e => { if (e.target === el) close(); });
+  backBtn.addEventListener("click", () => close(false));
+  el.querySelector(".a-close").addEventListener("click", () => close(false));
+  el.addEventListener("click", e => { if (e.target === el) close(false); });
+  window.addEventListener("popstate", () => {
+    if (location.hash === "#ma138") {
+      if (!el.classList.contains("show")) open(false);
+      return;
+    }
+    if (el.classList.contains("show")) close(true);
+    else if (expectPop) {
+      expectPop = false;
+      revealReferences();
+    }
+  });
   document.addEventListener("keydown", e => {
     if (!el.classList.contains("show")) return;
-    if (e.key === "Escape") { close(); e.preventDefault(); }
+    if (e.key === "Escape") { close(false); e.preventDefault(); }
     else if ((e.key === "f" || e.key === "F") && !(e.target && (e.target.tagName === "INPUT" || e.target.tagName === "TEXTAREA" || e.target.isContentEditable))) {
       setMode(!digitalOn);
       e.preventDefault();
     }
   });
+  if (location.hash === "#ma138") open(false);
 })();
 
 render();
