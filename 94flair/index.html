@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta name="x-flair-deploy" content="2026-10-22T21:34:49Z">
+<meta name="x-flair-deploy" content="2026-10-22T21:55:12Z">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>'94 Flair Presents the Marvel Universe &mdash; Masterset Checklist</title>
@@ -1223,7 +1223,8 @@
   /* ---------- PRINT: masterset checklist sheet ---------- */
   .print-head,
   .print-facts,
-  .print-sheet { display: none; }
+  .print-sheet,
+  .print-footer-link { display: none; }
   .print-head {
     display: none;
     flex-direction: column; align-items: stretch; gap: 5px;
@@ -1330,15 +1331,14 @@
   @media print {
     @page {
       size: letter;
-      margin: 0.5in 0.48in 0.64in;
+      margin: 0.5in 0.48in 0.72in;
       @bottom-center {
-        content: "'94 Flair Marvel Masterset Checklist   \00b7   " counter(page) " of " counter(pages);
+        content: "'94 Flair Marvel Masterset Checklist  \00b7  d3n4c3.com/94flair  \00b7  page " counter(page) " of " counter(pages);
         font-family: "Oswald", sans-serif;
         font-size: 8pt;
-        letter-spacing: 0.05em;
+        letter-spacing: 0.04em;
         color: #1a1205;
-        border-top: 0.75pt solid #1a1205;
-        padding-top: 3pt;
+        margin-top: -74pt;
         width: 100%;
       }
     }
@@ -1660,10 +1660,33 @@
       color: #222;
     }
     .print-facts b { color: #111; }
-    .print-progress {
+    .print-progress { display: none !important; }
+    .print-site-line {
+      margin: 1pt 0 0;
+      font-family: "Oswald", sans-serif;
+      font-size: 9pt;
+      letter-spacing: .03em;
+      line-height: 1.2;
+    }
+    .print-site-line a {
       color: #111;
-      background: #fff !important;
-      border: 1pt solid #111;
+      text-decoration: none;
+      border-bottom: 0.6pt solid #111;
+    }
+    .print-footer-link {
+      display: block !important;
+      position: fixed;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 20pt;
+      color: transparent;
+      font-family: "Oswald", sans-serif;
+      font-size: 8pt;
+      letter-spacing: 0.04em;
+      text-align: center;
+      text-decoration: none;
+      line-height: 16pt;
     }
     .print-key { color: #222; font-size: 8pt; }
     .print-key-box,
@@ -1802,7 +1825,8 @@
       opacity: 0;
       transform: none;
     }
-    .print-sheet .ps.have .box svg { opacity: 1; }
+    .print-sheet .box svg,
+    .print-sheet .ps.have .box svg { opacity: 0 !important; }
     .print-sheet .box svg path { stroke: #111; }
 
     /* Closing notes. Starts on a fresh page so the checklist pages stay put. */
@@ -1982,12 +2006,14 @@
         </div>
       </div>
     </div>
+    <p class="print-site-line"><a href="https://d3n4c3.com/94flair/">d3n4c3.com/94flair</a></p>
     <div class="print-facts">
       <div><b>Set</b> 150 base &middot; 18 Powerblast &middot; 10 Flairprints &middot; 5 binder &middot; 17 promos/sheets &middot; 3 ads</div>
       <div><b>Box</b> 24&times;10 &middot; PB 1:2 &middot; Flairprints 1/case &middot; ~1.52 sets/box &middot; Covers: Venom, Magneto, Cyclops, Wolverine</div>
       <div><b>Notes</b> No #6 &middot; Iron Man as second #8 &middot; Binders in sealed &rsquo;95 Ultra X-Men (2&ndash;3 each)</div>
     </div>
   </div>
+  <a class="print-footer-link" href="https://d3n4c3.com/94flair/">d3n4c3.com/94flair</a>
   <div class="print-sheet" id="printSheet"></div>
 
   <section id="base">
@@ -3052,11 +3078,7 @@ function row(key, no, withFront, holo) {
 const creditsTable = (rows, withFront) => `<table class="credits"><thead><tr><th></th><th>#</th><th>Card</th>${withFront ? "<th>Front Title</th>" : ""}<th>Art Source</th><th>Artist</th></tr></thead><tbody>${rows}</tbody></table>`;
 
 function syncPrintHave() {
-  const sheet = document.getElementById("printSheet");
-  if (!sheet) return;
-  sheet.querySelectorAll(".ps").forEach(el => {
-    el.classList.toggle("have", owned.has(el.dataset.id));
-  });
+  document.querySelectorAll("#printSheet .ps.have").forEach(el => el.classList.remove("have"));
 }
 
 function psCell(id, no, name) {
