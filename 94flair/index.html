@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta name="x-flair-deploy" content="2026-10-22T13:35:03Z">
+<meta name="x-flair-deploy" content="2026-10-22T15:12:09Z">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>'94 Flair Presents the Marvel Universe &mdash; Masterset Checklist</title>
@@ -2010,7 +2010,7 @@ const PB_CREDITS = [
   ["X-Men Team Pin-Up", "Joe Quesada"],
   ["Iron Man (1968) #301, Cover", "Kevin Hopgood"],
   ["The Uncanny X-Men (1963) #269, Page 22", "Jim Lee"],
-  ["Toy Biz, 1994, X-Men 5-inch line, Phoenix Saga series (Series VIII), Phoenix figure, item code 49385, short card \"Fiery Phoenix Power!\" (art on the left vertical strip of the card front). Likely match, touched up for Flair; legs and colors differ.", "Possible: Bart Sears (figure designer for the line, packaging art unverified)"],
+  ["1994 Toy Biz X-Men Phoenix Saga figure card", "Possibly Bart Sears (unverified)"],
   ["1992 Impel Marvel Universe, Storm, #30", "Lee Weeks"],
   ["Venom: Lethal Protector #2", "Mark Bagley"],
   ["Wolverine (1988) #67, Cover", "Mark Texeira"],
@@ -2342,7 +2342,7 @@ const SOURCE_ART = {
   "pb02": { file: "pb02.jpg", comic: "pb02-comic.jpg", credit: "1992 X-Men Team Pin-Up (1992 Diamond Comics Fall Flings Pin-Up)", ig: "DQe1p7gkYTC" },
   "pb03": { file: "pb03.jpg", comic: "pb03-comic.jpg", credit: "Iron Man (Vol. 1, 1968) Issue #301 (1994), Cover", ig: "DQe1gT4EfLn" },
   "pb04": { file: "pb04.jpg", comic: "pb04-comic.jpg", credit: "The Uncanny X-Men (Vol. 1, 1963) Issue #269 (1990), Page 22", ig: "DQe1WGSEQa2" },
-  "pb05": { file: "pb05.jpg", comic: "pb05-comic.jpg", credit: "Toy Biz, 1994, X-Men 5-inch line, Phoenix Saga series (Series VIII), Phoenix figure, item code 49385, short card \"Fiery Phoenix Power!\" (art on the left vertical strip of the card front). Likely match, touched up for Flair; legs and colors differ." },
+  "pb05": { file: "pb05.jpg", comic: "pb05-comic.jpg", credit: "1994 Toy Biz X-Men Phoenix Saga figure card", detail: "Phoenix Saga series (Series VIII), Phoenix figure, item code 49385, short card \"Fiery Phoenix Power!\". Art is the left vertical strip of the card front. Likely match, touched up for Flair; legs and colors differ." },
   "pb06": { file: "pb06.jpg", comic: "pb06-comic.jpg", credit: "1992 Impel Marvel Universe (Series III), Base Card #30", ig: "DPnkbPiDS1S" },
   "pb07": { file: "pb07.jpg", comic: "pb07-comic.jpg", credit: "Venom: Lethal Protector (Vol. 1, 1993) Issue #2, Page 12", ig: "DPnRzzTjcOG" },
   "pb08": { file: "pb08.jpg", comic: "pb08-comic.jpg", credit: "Wolverine (Vol. 1, 1988) Issue #67 (1993), Cover", ig: "DPk1Fx_jfb1" },
@@ -2366,7 +2366,8 @@ function sourceArtFor(kind, n) {
     sourceImg: sourceSrc(s.file),
     sourceComic: s.comic ? sourceSrc(s.comic) : "",
     sourceCredit: s.credit || "",
-    sourceIg: s.ig ? `https://www.instagram.com/p/${s.ig}/` : ""
+    sourceIg: s.ig ? `https://www.instagram.com/p/${s.ig}/` : "",
+    ...(s.detail ? { imgNote: s.detail } : {})
   };
 }
 
@@ -2444,7 +2445,7 @@ function tile({ id, group, no, name, chars, note, holo, search, label, card }) {
   items.push({
     id, group, label,
     artists: c ? splitArtists(c.artist) : [],
-    search: [search || `${no} ${name} ${chars || ""}`, c && c.front, c && c.source, c && c.artist].filter(Boolean).join(" ").toLowerCase()
+    search: [search || `${no} ${name} ${chars || ""}`, c && c.front, c && c.source, c && c.artist, c && c.imgNote].filter(Boolean).join(" ").toLowerCase()
   });
   const badge = `<span class="badge${/^\d+$/.test(no) ? "" : " txt"}">${esc(no)}</span>`;
   const thumb = c && c.img ? `<button class="thumb" data-view="${card}" aria-label="View ${esc(name)}">${badge}<img src="${thumbOf(c.img)}" alt="" loading="lazy"><span class="zoom">${ZOOM}</span></button>` : "";
