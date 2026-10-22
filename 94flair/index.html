@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta name="x-flair-deploy" content="2026-10-22T20:43:25Z">
+<meta name="x-flair-deploy" content="2026-10-22T20:57:02Z">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>'94 Flair Presents the Marvel Universe &mdash; Masterset Checklist</title>
@@ -1222,7 +1222,8 @@
 
   /* ---------- PRINT: masterset checklist sheet ---------- */
   .print-head,
-  .print-facts { display: none; }
+  .print-facts,
+  .print-sheet { display: none; }
   .print-head {
     display: none;
     flex-direction: column; align-items: stretch; gap: 5px;
@@ -1327,7 +1328,20 @@
   .print-key-box.is-need { background: #fff; border-color: #666; }
 
   @media print {
-    @page { size: letter; margin: 0.4in; }
+    @page {
+      size: letter;
+      margin: 0.5in 0.48in 0.64in;
+      @bottom-center {
+        content: "'94 Flair Marvel Masterset Checklist   \00b7   " counter(page) " of " counter(pages);
+        font-family: "Oswald", sans-serif;
+        font-size: 8pt;
+        letter-spacing: 0.05em;
+        color: #1a1205;
+        border-top: 0.75pt solid #1a1205;
+        padding-top: 3pt;
+        width: 100%;
+      }
+    }
     * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; color-adjust: exact !important; }
     body { background: #fff; color: #1a1205; font-size: 10px; }
     .hero, .toolbar, .dash, .toast, .feature, .banner .bg, footer .actions { display: none !important; }
@@ -1613,6 +1627,183 @@
       break-before: avoid; page-break-before: avoid;
     }
     footer a { color: #8a5a12; }
+
+    /* Binder checklist. Screen sections stay for the site; this sheet is print-only. */
+    main > section,
+    footer { display: none !important; }
+    .print-sheet { display: block !important; }
+    .print-head {
+      margin: 0 0 8pt;
+      padding: 0 0 6pt;
+      border-bottom: 1.25pt solid #1a1205;
+      break-after: avoid;
+      page-break-after: avoid;
+    }
+    .print-brand-mark,
+    .print-brand-mark .yr,
+    .print-brand-mark .lair,
+    .print-brand-line,
+    .print-brand-edition,
+    .print-brand-checklist { color: #1a1205; }
+    .print-brand-mark .f { background: #1a1205; }
+    .print-brand-checklist::before,
+    .print-brand-checklist::after { background: #1a1205; }
+    .print-facts {
+      display: block !important;
+      margin: 4pt 0 0;
+      padding: 0;
+      background: none !important;
+      border: 0 !important;
+      border-radius: 0;
+      font-size: 8pt;
+      line-height: 1.35;
+      color: #222;
+    }
+    .print-facts b { color: #111; }
+    .print-progress {
+      color: #111;
+      background: #fff !important;
+      border: 1pt solid #111;
+    }
+    .print-key { color: #222; font-size: 8pt; }
+    .print-key-box,
+    .print-key-box.is-need {
+      width: 9pt; height: 9pt;
+      border: 1pt solid #111;
+      border-radius: 1pt;
+      background: #fff !important;
+    }
+    .print-key-box:not(.is-need)::after {
+      content: "\2713";
+      display: block;
+      color: #111;
+      font-size: 8pt;
+      line-height: 8pt;
+      text-align: center;
+    }
+    .print-sheet { color: #111; }
+    .print-sheet .ps-sec { break-inside: auto; page-break-inside: auto; }
+    .print-sheet h2 {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 12pt;
+      margin: 11pt 0 0;
+      padding: 0 0 2pt;
+      border-bottom: 1.5pt solid #111;
+      font-family: "Oswald", sans-serif;
+      font-size: 11pt;
+      font-weight: 500;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      line-height: 1.15;
+      color: #111;
+      break-after: avoid;
+      page-break-after: avoid;
+    }
+    .print-sheet .ps-sec:first-child h2 { margin-top: 8pt; }
+    .print-sheet h2 span {
+      font-size: 9pt;
+      letter-spacing: .06em;
+      font-weight: 500;
+    }
+    .print-sheet .ps-sec p {
+      margin: 2pt 0 3pt;
+      font-size: 8pt;
+      line-height: 1.3;
+      color: #222;
+      break-after: avoid;
+      page-break-after: avoid;
+    }
+    .print-sheet table {
+      width: 100%;
+      border-collapse: collapse;
+      table-layout: fixed;
+      margin: 0;
+      break-before: avoid;
+      page-break-before: avoid;
+    }
+    .print-sheet col.w-ck { width: 32pt; }
+    .print-sheet col.w-no { width: 24pt; }
+    .print-sheet col.w-gap { width: 16pt; }
+    .print-sheet table.ps-single col.w-name { width: 46%; }
+    .print-sheet table.ps-nums col.w-name { width: 22%; }
+    .print-sheet table.ps-nums td.note { font-size: 8pt; letter-spacing: 0; }
+    .print-sheet thead { display: table-header-group; }
+    .print-sheet tr { break-inside: avoid; page-break-inside: avoid; }
+    .print-sheet th {
+      height: 13pt;
+      padding: 1pt 4pt 2pt;
+      border-top: 0.75pt solid #111;
+      border-bottom: 0.75pt solid #111;
+      background: #fff !important;
+      color: #111;
+      font-family: "Oswald", sans-serif;
+      font-size: 7.5pt;
+      font-weight: 500;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      text-align: left;
+      line-height: 1;
+      vertical-align: bottom;
+    }
+    .print-sheet th.no { text-align: right; padding-right: 6pt; }
+    .print-sheet th.gap,
+    .print-sheet td.gap {
+      border: 0 !important;
+      background: transparent !important;
+      padding: 0;
+    }
+    .print-sheet td {
+      height: 17.5pt;
+      padding: 0 4pt;
+      border-bottom: 0.6pt solid #bdbdbd;
+      background: #fff !important;
+      color: #111;
+      font-size: 9pt;
+      line-height: 17.5pt;
+      vertical-align: middle;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .print-sheet td.no {
+      font-family: "Oswald", sans-serif;
+      font-size: 9pt;
+      font-weight: 500;
+      letter-spacing: .02em;
+      text-align: right;
+      padding-right: 6pt;
+      font-variant-numeric: tabular-nums;
+    }
+    .print-sheet td.ck { padding-left: 1pt; padding-right: 0; overflow: visible; }
+    .print-sheet td.empty { border-bottom-color: transparent; }
+    .print-sheet .flag {
+      font-style: normal;
+      font-weight: 500;
+      font-size: 8pt;
+      color: #333;
+    }
+    .print-sheet .flag::before { content: "\00b7\00a0"; color: #555; }
+    .print-sheet .ps { display: inline-grid; place-items: center; vertical-align: middle; }
+    .print-sheet .box {
+      width: 10.5pt;
+      height: 10.5pt;
+      border-radius: 1pt;
+      border: 1pt solid #111;
+      background: #fff !important;
+      display: grid;
+      place-items: center;
+      box-sizing: border-box;
+    }
+    .print-sheet .box svg {
+      width: 8pt;
+      height: 8pt;
+      opacity: 0;
+      transform: none;
+    }
+    .print-sheet .ps.have .box svg { opacity: 1; }
+    .print-sheet .box svg path { stroke: #111; }
   }
 </style>
 </head>
@@ -1730,6 +1921,7 @@
       <div><b>Notes</b> No #6 &middot; Iron Man as second #8 &middot; Binders in sealed &rsquo;95 Ultra X-Men (2&ndash;3 each)</div>
     </div>
   </div>
+  <div class="print-sheet" id="printSheet"></div>
 
   <section id="base">
     <div class="banner plain">
@@ -2792,6 +2984,78 @@ function row(key, no, withFront, holo) {
 
 const creditsTable = (rows, withFront) => `<table class="credits"><thead><tr><th></th><th>#</th><th>Card</th>${withFront ? "<th>Front Title</th>" : ""}<th>Art Source</th><th>Artist</th></tr></thead><tbody>${rows}</tbody></table>`;
 
+function syncPrintHave() {
+  const sheet = document.getElementById("printSheet");
+  if (!sheet) return;
+  sheet.querySelectorAll(".ps").forEach(el => {
+    el.classList.toggle("have", owned.has(el.dataset.id));
+  });
+}
+
+function psCell(id, no, name) {
+  return `<td class="ck"><span class="ps" data-id="${id}"><span class="box">${CHECK}</span></span></td><td class="no">${esc(no)}</td><td class="nm">${name}</td>`;
+}
+function psEmpty() {
+  return `<td class="ck empty"></td><td class="no empty"></td><td class="nm empty"></td>`;
+}
+function psPairTable(entries) {
+  const body = [];
+  for (let i = 0; i < entries.length; i += 2) {
+    const a = entries[i];
+    const b = entries[i + 1];
+    body.push(`<tr>${psCell(a.id, a.no, a.name)}<td class="gap"></td>${b ? psCell(b.id, b.no, b.name) : psEmpty()}</tr>`);
+  }
+  return `<table class="ps-pair"><colgroup><col class="w-ck"><col class="w-no"><col><col class="w-gap"><col class="w-ck"><col class="w-no"><col></colgroup><thead><tr><th class="ck">Have</th><th class="no">#</th><th>Card</th><th class="gap"></th><th class="ck">Have</th><th class="no">#</th><th>Card</th></tr></thead><tbody>${body.join("")}</tbody></table>`;
+}
+function psSingleTable(entries, extra) {
+  const body = entries.map(e => `<tr>${psCell(e.id, e.no, e.name)}<td class="note">${e.note || ""}</td></tr>`).join("");
+  return `<table class="ps-single${extra ? " " + extra : ""}"><colgroup><col class="w-ck"><col class="w-no"><col class="w-name"><col></colgroup><thead><tr><th class="ck">Have</th><th class="no">#</th><th>Card</th><th>Note</th></tr></thead><tbody>${body}</tbody></table>`;
+}
+function psSection(title, count, blurb, table) {
+  return `<section class="ps-sec"><h2>${esc(title)}<span>${count}</span></h2>${blurb ? `<p>${esc(blurb)}</p>` : ""}${table}</section>`;
+}
+function buildPrintSheet() {
+  const base = BASE.map(([name, , note], i) => ({
+    id: `b${i + 1}`,
+    no: i + 1,
+    name: esc(name) + (note ? ` <span class="flag">${esc(note)}</span>` : "")
+  }));
+  const pb = POWERBLAST.map((name, i) => ({ id: `p${i + 1}`, no: i + 1, name: esc(name) }));
+  const fp = FLAIRPRINTS.map(([name, n], i) => ({
+    id: `f${i + 1}`, no: "FP",
+    name: `${esc(name)} <span class="flag">Powerblast #${n}</span>`
+  }));
+  const bi = BINDER.map(([name, n], i) => ({
+    id: `bi${i + 1}`, no: "BI",
+    name: `${esc(name)} <span class="flag">Powerblast #${n}</span>`
+  }));
+  const promoNotes = ["Heroes World seal", "No distributor seal", "No distributor named", "Diamond seminar, June 11\u201314"];
+  const promos = PROMOS.map(([name], i) => ({ id: `pr${i + 1}`, no: "P", name: esc(name), note: esc(promoNotes[i] || "") }));
+  const four = [
+    ["Ships June 1994", "Gold sticker"],
+    ["Ships June 1994", "Foil etched"],
+    ["The Ultimate Collectable", "Released title card"],
+    ["Unreleased sheet", "Gambit & Rogue lineup"]
+  ].map(([name, note], i) => ({ id: `u4-${i + 1}`, no: "4\u00d7", name: esc(name), note: esc(note) }));
+  const nines = NINE_CARD.map((rows, i) => {
+    const nums = rows.flat().map(n => String(n).includes("*") ? `${String(n).replace("*", "")}*` : String(n));
+    const note = [0, 1, 2].map(r => nums.slice(r * 3, r * 3 + 3).join(" \u00b7 ")).join(" / ");
+    return { id: `u9-${i + 1}`, no: i + 1, name: `Sheet ${i + 1}`, note };
+  });
+  const ads = AD_PAGES.map(([name, , where], i) => ({ id: `ap${i + 1}`, no: "AD", name: esc(name), note: esc(where) }));
+  document.getElementById("printSheet").innerHTML = [
+    psSection("Base Set", "150", "No card #6. Iron Man is printed as a second #8.", psPairTable(base)),
+    psSection("Powerblast", "18", "Chase inserts.", psPairTable(pb)),
+    psSection("Flairprints", "10", "Case-bonus oversized cards.", psPairTable(fp)),
+    psSection("Binder Inserts", "5", "Oversized cards with blank backs.", psPairTable(bi)),
+    psSection("Promo Flairprints", "4", "Distributor promos, not from packs.", psSingleTable(promos)),
+    psSection("4-Card Sheets", "4", "Uncut promo sheets.", psSingleTable(four)),
+    psSection("9-Card Sheets", "9", "Press-kit sheets. Numbers run left to right, top to bottom. An asterisk marks an unnumbered card.", psSingleTable(nines, "ps-nums")),
+    psSection("Print Ads", "3", "Full-page ads.", psSingleTable(ads))
+  ].join("");
+  syncPrintHave();
+}
+
 function render() {
   document.getElementById("grid-base").innerHTML = BASE.map(([name, chars, note], i) =>
     tile({ id: `b${i + 1}`, group: "base", no: i + 1, name, chars, note, card: `b${i + 1}`, label: `#${i + 1} ${name}` })).join("");
@@ -2847,6 +3111,7 @@ function render() {
       <div class="box">${CHECK}</div>
     </div>`;
   }).join("");
+  buildPrintSheet();
 }
 
 const GROUPS = [
@@ -2901,6 +3166,7 @@ function update() {
   document.getElementById("ringPct").textContent = Math.round(pct * 100) + "%";
   document.getElementById("ringSub").textContent = `${allHave} / ${items.length}`;
   document.getElementById("printProgress").textContent = `Collected ${allHave} of ${items.length}`;
+  syncPrintHave();
 
   applyFilter();
 }
