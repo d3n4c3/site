@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta name="x-flair-deploy" content="2026-10-22T21:55:12Z">
+<meta name="x-flair-deploy" content="2026-10-23T02:13:05Z">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>'94 Flair Presents the Marvel Universe &mdash; Masterset Checklist</title>
@@ -995,8 +995,14 @@
     margin: .85em 0 .55em; padding: 4px 8px; background: #111; color: #fff; text-align: center;
     font-family: "Oswald", sans-serif; font-weight: 500; font-size: 12px; letter-spacing: .08em;
   }
-  .spread-top { display: grid; grid-template-columns: 156px minmax(0, 1fr) minmax(150px, 230px); gap: 12px 14px; align-items: start; }
-  .spread-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 12px 16px; min-width: 0; }
+  .spread-grid {
+    display: grid;
+    grid-template-columns: 72px minmax(0, 1fr) minmax(0, 1fr) minmax(140px, 210px);
+    gap: 12px 14px;
+    align-items: start;
+  }
+  .spread-grid .col26,
+  .spread-grid .col27 { min-width: 0; }
   .rail { background: #0b0b0b; min-height: 320px; display: flex; align-items: center; justify-content: center; padding: 10px 0; }
   .rail span {
     writing-mode: vertical-rl;
@@ -1015,8 +1021,7 @@
   .mag-banner b {
     display: inline-block; background: #111; color: #f0c43a; padding: 0 .1em .02em;
   }
-  .spread-bot { display: grid; grid-template-columns: max-content minmax(0, 1fr); gap: 12px 16px; align-items: start; }
-  .pull { display: flex; gap: 4px; align-items: stretch; }
+  .pull { display: flex; flex-wrap: wrap; gap: 4px; align-items: stretch; margin: .35em 0 .85em; }
   .pq {
     flex: 0 0 auto; height: 196px; display: flex; align-items: center; justify-content: center;
     background: #111; color: #fff; font-family: Arial, Helvetica, sans-serif; font-weight: 700;
@@ -1058,7 +1063,7 @@
     .article-view .a-actions { grid-column: 1 / -1; grid-row: 3; margin-left: 0; }
     .article-view .a-title { font-size: 15px; }
     .article-view .a-flip { width: 100%; min-height: 44px; padding: 10px 12px; letter-spacing: .08em; }
-    .spread-top, .spread-bot, .spread-cols, .p28, .p28-mid { display: flex; flex-direction: column; }
+    .spread-grid, .p28, .p28-mid { display: flex; flex-direction: column; }
     .rail { min-height: 0; }
     .rail span { writing-mode: horizontal-tb; transform: none; font-size: 28px; padding: 8px 10px; display: block; }
     .pull { flex-direction: column; }
@@ -2310,56 +2315,45 @@
     </div>
     <div class="a-digital" hidden>
       <article class="mag">
-        <div class="spread-top">
+        <h2 class="mag-banner">Where the Past and Future <b>Collide</b></h2>
+        <div class="spread-grid">
           <div class="rail"><span>FLAIR MARVEL 1994</span></div>
-          <div class="spread-cols">
-            <div>
-              <p>Comic book creativity and computer technology collide to vivid effect in Marvel and Fleer’s latest trading card outing, <i>Flair Marvel 1994</i>. This set, scheduled to hit stores in mid-June, will mark a number of “firsts” for comic book trading cards, not the least of which is the use of a new computer coloring technique that will enhance each piece of artwork provided by Marvel. Furthermore, every card in the 150-card <i>Flair Marvel 1994</i> set will portray a major milestone in Marvel’s hallowed history.</p>
-              <h3 class="sh">A FLAIR FOR THE DIFFERENT</h3>
-              <p>In the past, comic trading card art has been either fully painted by such noted artists as The Brothers Hildebrandt (like the popular <i>Fleer Ultra X-Men</i> set), or produced as black line art for “blue-line” coloring (like the <i>Spider-Man</i> set), most notably colored by artist Paul Mounts. The <i>Flair</i> cards, however, will be a beast of a <i>wholly</i> different color. Every <i>Flair</i> card will represent a piece of black line art that has been treated via a special computer coloring process by the innovative color studio McGrew Color Graphics.</p>
-              <p>How <i>Flair</i> came into existence represents a departure from the norm. For previous card sets, the subject matter came first, after which it was determined how the cards would be manufactured and presented. For <i>Flair</i>, however, it was the manufacturing process that drove the subject matter. Bill Jemas, Fleer’s Vice President of Entertainment and Business Development, explained why they started out to make <i>Flair</i> so different from previous Marvel card sets.</p>
-              <p>“Fleer is about bringing buyers the kind of products they want to collect. It sounds kind of marketing-oriented, but it’s actually a creative process,” he noted. “Each trading card set appeals to a person for different reason: subject matter, artwork, collectibility. The <i>Flair</i> set was designed to appeal to a different, large segment of today’s consumers. A good many people out there are into the crisp, high-tech look of television, especially animated works like <i>X-Men Adventures</i>. <i>Flair</i> is television-like in its artistic approach. The set portrays the richness of the Marvel Universe with a sort of graphic, well <i>flair</i>, that the buyer at large will be excited about.”</p>
-              <h3 class="sh">ALL THE COLORS OF THE RAINBOW. . .</h3>
-              <p>Each card in the set will consist of a previously published piece of artwork, be it a cover or an especially dramatic piece of interior art, freshly colored on computer, Jemas noted. This process will thus intertwine creations by artists who work primarily in pencil, pen and ink with the work of a new type of high-tech artist — those who use a computer keyboard to bring color to their creative vision.</p>
-              <p>This synergistic process was explained by Marvel’s Executive Editor of Special Projects, Bob Budiansky. “We, meaning Marvel Editorial’s Special Projects division, chose previously existing artwork that would present vivid images as uncolored black line art. We then provided these black line pieces — along with color guides to ensure accuracy — to McGrew Color Graphics who then “painted” each piece on computer, adding context-sensitive special effects to the art along the way.”</p>
+          <div class="col26">
+            <p>Comic book creativity and computer technology collide to vivid effect in Marvel and Fleer’s latest trading card outing, <i>Flair Marvel 1994</i>. This set, scheduled to hit stores in mid-June, will mark a number of “firsts” for comic book trading cards, not the least of which is the use of a new computer coloring technique that will enhance each piece of artwork provided by Marvel. Furthermore, every card in the 150-card <i>Flair Marvel 1994</i> set will portray a major milestone in Marvel’s hallowed history.</p>
+            <h3 class="sh">A FLAIR FOR THE DIFFERENT</h3>
+            <p>In the past, comic trading card art has been either fully painted by such noted artists as The Brothers Hildebrandt (like the popular <i>Fleer Ultra X-Men</i> set), or produced as black line art for “blue-line” coloring (like the <i>Spider-Man</i> set), most notably colored by artist Paul Mounts. The <i>Flair</i> cards, however, will be a beast of a <i>wholly</i> different color. Every <i>Flair</i> card will represent a piece of black line art that has been treated via a special computer coloring process by the innovative color studio McGrew Color Graphics.</p>
+            <p>How <i>Flair</i> came into existence represents a departure from the norm. For previous card sets, the subject matter came first, after which it was determined how the cards would be manufactured and presented. For <i>Flair</i>, however, it was the manufacturing process that drove the subject matter. Bill Jemas, Fleer’s Vice President of Entertainment and Business Development, explained why they started out to make <i>Flair</i> so different from previous Marvel card sets.</p>
+            <p>“Fleer is about bringing buyers the kind of products they want to collect. It sounds kind of marketing-oriented, but it’s actually a creative process,” he noted. “Each trading card set appeals to a person for different reason: subject matter, artwork, collectibility. The <i>Flair</i> set was designed to appeal to a different, large segment of today’s consumers. A good many people out there are into the crisp, high-tech look of television, especially animated works like <i>X-Men Adventures</i>. <i>Flair</i> is television-like in its artistic approach. The set portrays the richness of the Marvel Universe with a sort of graphic, well <i>flair</i>, that the buyer at large will be excited about.”</p>
+            <h3 class="sh">ALL THE COLORS OF THE RAINBOW. . .</h3>
+            <p>Each card in the set will consist of a previously published piece of artwork, be it a cover or an especially dramatic piece of interior art, freshly colored on computer, Jemas noted. This process will thus intertwine creations by artists who work primarily in pencil, pen and ink with the work of a new type of high-tech artist — those who use a computer keyboard to bring color to their creative vision.</p>
+            <p>This synergistic process was explained by Marvel’s Executive Editor of Special Projects, Bob Budiansky. “We, meaning Marvel Editorial’s Special Projects division, chose previously existing artwork that would present vivid images as uncolored black line art. We then provided these black line pieces — along with color guides to ensure accuracy — to McGrew Color Graphics who then “painted” each piece on computer, adding context-sensitive special effects to the art along the way.”</p>
+            <div class="pull" aria-label="Pull quote">
+              <span class="pq">“...the key to the</span>
+              <span class="pq">process is the</span>
+              <span class="pq">care we take to</span>
+              <span class="pq">get the most out</span>
+              <span class="pq">of each program</span>
+              <span class="pq">and have them</span>
+              <span class="pq">do their magic</span>
+              <span class="pq">on one piece of</span>
+              <span class="pq">art.”</span>
             </div>
-            <div>
-              <p>give us some of the special effects that will be present on the cards, from the cosmic feel of space scenes to the watery feel of ocean scenes. But how this all fits in with our use of the other programs and techniques, well. . .”</p>
-              <p>How McGrew treats each individual card and its subject matter is a major concern, he added. “With the special effects we can get from our process, the only limit to what we can achieve artistically is our imagination. We brought together nine top computer artists working in the field today and turned them loose. But everyone in this group not only needed to be a great computer artist, they also needed to have that “comic book” mentality that makes Marvel books so unique. They really needed to be in tune with the material they were working on. Marvel made that easy with the way they presented the artwork and color guides to us. Not only were we coloring art, we were learning the nuances of the characters and action as well.”</p>
-              <p>Marvel Editor Mariano Nicieza, who is one of the persons overseeing the project for Marvel, was impressed by McGrew’s results. “First of all, we’re witnessing the birth of an art technique we’ve never seen before,” he stated. “With the computers, McGrew’s able to create some visual effects impossible for the human hand to reproduce. They’ve been able to create enhancements that add dimension and depth that hand painting can’t produce, just like painted art achieves certain effects that computers can’t reproduce.”</p>
-              <h3 class="sh">HISTORY’S NEW TWIST</h3>
-              <p>As mentioned earlier, <i>Flair Marvel 1994</i> showcases previously published art. This is not to say, however, that this is merely a set of 150 reprints — the new technological enhancements make every illustration “new” again. Still, the question arose of why new art was not created specifically for the set.</p>
-              <p>Each card set needs a theme, be it “X-Men,” “Masterpieces” or “Spider-Man.” But with all the sets Marvel has done over the years, a dedicated depiction of their illustrious history was still</p>
-            </div>
+            <p>Richard Quinlan, Vice President of Manufacturing and Production at McGrew, explained McGrew’s end of the process. “Without giving away any trade secrets, I can tell you the short version of how we take Marvel’s black lines and turn them into Fleer’s <i>Flair</i> cards,” Quinlan said. “Primarily, we’ve designed a way to integrate three separate graphics programs and utilize them to color each card to stunning effect. The three programs — <i>Kai Power Tools</i>, <i>Fractal Painter</i>, and <i>Adobe Photoshop</i> — each manipulate the piece of art in their own way, but the key to the process is the care we take to get the most out of each program and have them do their magic on one piece of art. Kai, for instance, specializes in geometrical manipulation. We use it to</p>
+          </div>
+          <div class="col27">
+            <p>give us some of the special effects that will be present on the cards, from the cosmic feel of space scenes to the watery feel of ocean scenes. But how this all fits in with our use of the other programs and techniques, well. . .”</p>
+            <p>How McGrew treats each individual card and its subject matter is a major concern, he added. “With the special effects we can get from our process, the only limit to what we can achieve artistically is our imagination. We brought together nine top computer artists working in the field today and turned them loose. But everyone in this group not only needed to be a great computer artist, they also needed to have that “comic book” mentality that makes Marvel books so unique. They really needed to be in tune with the material they were working on. Marvel made that easy with the way they presented the artwork and color guides to us. Not only were we coloring art, we were learning the nuances of the characters and action as well.”</p>
+            <p>Marvel Editor Mariano Nicieza, who is one of the persons overseeing the project for Marvel, was impressed by McGrew’s results. “First of all, we’re witnessing the birth of an art technique we’ve never seen before,” he stated. “With the computers, McGrew’s able to create some visual effects impossible for the human hand to reproduce. They’ve been able to create enhancements that add dimension and depth that hand painting can’t produce, just like painted art achieves certain effects that computers can’t reproduce.”</p>
+            <h3 class="sh">HISTORY’S NEW TWIST</h3>
+            <p>As mentioned earlier, <i>Flair Marvel 1994</i> showcases previously published art. This is not to say, however, that this is merely a set of 150 reprints — the new technological enhancements make every illustration “new” again. Still, the question arose of why new art was not created specifically for the set.</p>
+            <p>Each card set needs a theme, be it “X-Men,” “Masterpieces” or “Spider-Man.” But with all the sets Marvel has done over the years, a dedicated depiction of their illustrious history was still missing, Budiansky noted. <i>Flair Marvel 1994</i> was designed to fill that void.</p>
+            <img class="spidey" src="images/print-fx/hd/ma138-spiderman.jpg" alt="Spider-Man artwork from the Flair Marvel 1994 preview">
+            <p>“Fleer and Marvel got together and decided to base this particular set on historical events from Marvel’s beginnings straight up to the present day,” Budiansky explained. “The art was chosen specifically because it best portrays key events in the Marvel Universe: classic battles, monumental first meetings, character origins, deaths. . . When you think about it, a lot of significant things have occurred since the first Marvel comic ever appeared, events that impact on the comics we create today.</p>
+            <p>“We feel that by using this particular coloring process, we’re bringing a fresh look to these events, as if they were happening</p>
           </div>
           <div class="heroes">
             <img src="images/print-fx/hd/ma138-wolverine.jpg" alt="Wolverine artwork from the Flair Marvel 1994 preview">
             <img class="storm" src="images/print-fx/hd/ma138-storm.jpg" alt="Storm artwork from the Flair Marvel 1994 preview">
-          </div>
-        </div>
-        <h2 class="mag-banner">Where the Past and Future <b>Collide</b></h2>
-        <div class="spread-bot">
-          <div class="pull" aria-label="Pull quote">
-            <span class="pq">“...the key to the</span>
-            <span class="pq">process is the</span>
-            <span class="pq">care we take to</span>
-            <span class="pq">get the most out</span>
-            <span class="pq">of each program</span>
-            <span class="pq">and have them</span>
-            <span class="pq">do their magic</span>
-            <span class="pq">on one piece of</span>
-            <span class="pq">art.”</span>
-          </div>
-          <div class="spread-cols">
-            <div>
-              <p>Richard Quinlan, Vice President of Manufacturing and Production at McGrew, explained McGrew’s end of the process. “Without giving away any trade secrets, I can tell you the short version of how we take Marvel’s black lines and turn them into Fleer’s <i>Flair</i> cards,” Quinlan said. “Primarily, we’ve designed a way to integrate three separate graphics programs and utilize them to color each card to stunning effect. The three programs — <i>Kai Power Tools</i>, <i>Fractal Painter</i>, and <i>Adobe Photoshop</i> — each manipulate the piece of art in their own way, but the key to the process is the care we take to get the most out of each program and have them do their magic on one piece of art. Kai, for instance, specializes in geometrical manipulation. We use it to</p>
-            </div>
-            <div>
-              <img class="spidey" src="images/print-fx/hd/ma138-spiderman.jpg" alt="Spider-Man artwork from the Flair Marvel 1994 preview">
-              <p>missing, Budiansky noted. <i>Flair Marvel 1994</i> was designed to fill that void.</p>
-              <p>“Fleer and Marvel got together and decided to base this particular set on historical events from Marvel’s beginnings straight up to the present day,” Budiansky explained. “The art was chosen specifically because it best portrays key events in the Marvel Universe: classic battles, monumental first meetings, character origins, deaths. . . When you think about it, a lot of significant things have occurred since the first Marvel comic ever appeared, events that impact on the comics we create today.</p>
-              <p>“We feel that by using this particular coloring process, we’re bringing a fresh look to these events, as if they were happening</p>
-            </div>
           </div>
         </div>
         <div class="feet"><span>26 • Marvel Age Magazine</span><span>Marvel Age Magazine • 27</span></div>
