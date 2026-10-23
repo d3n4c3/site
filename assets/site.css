@@ -49,8 +49,14 @@ body::before {
   mask-image: linear-gradient(to bottom, #000 0, transparent 42%);
 }
 
-a { color: var(--gold-1); text-underline-offset: 0.18em; }
+a { color: var(--gold-1); text-decoration-thickness: 1px; text-underline-offset: 0.18em; }
 a:hover { color: #fff; }
+.post-body a {
+  color: var(--gold-2);
+  font-weight: 700;
+  text-decoration: none;
+}
+.post-body a:hover { color: #fff; background: rgba(242, 199, 92, 0.16); }
 
 .skip {
   position: absolute;
@@ -394,16 +400,19 @@ main { position: relative; z-index: 1; padding: 1.5rem 0 3rem; }
 }
 .speech-bubble {
   margin: 1rem 0;
-  background: var(--gold-1);
-  color: #1a1204;
+  background: var(--ink);
+  color: var(--text);
   border: 3px solid #000;
-  box-shadow: 5px 5px 0 var(--red);
-  padding: 0.8rem 1rem;
+  box-shadow: 6px 6px 0 var(--red);
+  padding: 0.9rem 1rem;
 }
+.speech-bubble h3 { margin: 0 0 0.4rem; font-size: 1.45rem; }
 .speech-bubble h3,
-.speech-bubble p,
-.speech-bubble a { color: #1a1204; }
-.speech-bubble h3 { margin: 0 0 0.35rem; font-size: 1.35rem; }
+.speech-bubble h3 a { color: var(--gold-2); font-weight: 400; text-decoration: none; }
+.speech-bubble p { color: var(--text); }
+.speech-bubble a { color: var(--gold-1); font-weight: 700; text-decoration: none; }
+.speech-bubble a:hover,
+.speech-bubble h3 a:hover { color: #fff; background: transparent; }
 .post-actions { margin-top: 1rem; }
 
 .category-grid {
