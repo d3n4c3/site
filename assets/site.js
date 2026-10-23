@@ -68,8 +68,8 @@
 
   function imgPath(src) {
     src = src.replace(/^\.\//, "");
-    if (src.indexOf("94flair/cards/") !== -1) {
-      return "/94flair/blog-cards/" + src.split("/").pop();
+    if (src.indexOf("94flair/cards/") === 0) {
+      return "/blogs/" + src;
     }
     if (/^(https?:|\/)/.test(src)) return src;
     return "/blogs/" + src;
