@@ -318,7 +318,7 @@ main { position: relative; z-index: 1; padding: 1.5rem 0 3rem; }
   align-items: center;
   width: fit-content;
   background: var(--gold-2);
-  color: #1a1204;
+  color: var(--ink);
   font-family: Oswald, sans-serif;
   letter-spacing: 0.07em;
   text-transform: uppercase;
@@ -327,8 +327,10 @@ main { position: relative; z-index: 1; padding: 1.5rem 0 3rem; }
   padding: 0.18rem 0.45rem;
   border: 2px solid #000;
 }
-.caption a { color: #1a1204; text-decoration: none; }
-.caption a:hover { text-decoration: underline; }
+.caption a,
+.caption time,
+.caption span { color: var(--ink); text-decoration: none; }
+.caption a:hover { color: var(--ink); text-decoration: underline; }
 
 .post-card h2,
 .post-card h3 {
@@ -341,6 +343,10 @@ main { position: relative; z-index: 1; padding: 1.5rem 0 3rem; }
   margin: 0;
 }
 .post-card p { margin: 0; color: var(--muted); flex: 1; }
+.post-card .caption,
+.post-card .caption a,
+.post-card .caption time,
+.post-card .caption span { color: var(--ink); }
 
 .tags { display: flex; flex-wrap: wrap; gap: 0.35rem; }
 .tag {
@@ -423,6 +429,10 @@ main { position: relative; z-index: 1; padding: 1.5rem 0 3rem; }
   font-size: 2rem;
 }
 .category-card p { margin: 0; color: var(--muted); }
+.category-card .caption,
+.category-card .caption a,
+.category-card .caption time,
+.category-card .caption span { color: var(--ink); }
 
 .archive-note { color: var(--muted); margin: 1.5rem 0 0.6rem; }
 
