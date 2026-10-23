@@ -1,85 +1,55 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>404 Not Found | d3n4c3</title>
-    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Rubik:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism-coy.min.css">
-    <style>
-        html, body {
-            background: radial-gradient(circle, #2c003e, #0a0a0a);
-            color: #ffffff;
-            font-family: 'Rubik', sans-serif;
-            margin: 0;
-            padding: 0;
-            height: 100%;
-        }
-
-        header {
-            background: linear-gradient(90deg, #1b0033, #4b0082);
-            padding: 15px 20px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-        }
-
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-            nav h1 {
-                font-family: 'Bangers', cursive;
-                font-size: 2.5em;
-                color: #ffeb3b;
-                text-shadow: 3px 3px 0 #000, -2px -2px 0 #ff2a6d;
-                transform: rotate(-2deg);
-            }
-
-        #content {
-            max-width: 800px;
-            margin: 100px auto;
-            padding: 20px;
-            text-align: center;
-        }
-
-        h2 {
-            font-family: 'Bangers', cursive;
-            font-size: 4em;
-            color: #ffeb3b;
-            text-shadow: 2px 2px 0 #000;
-        }
-
-        p {
-            font-size: 1.2em;
-            color: #ddd;
-        }
-
-        a {
-            font-family: 'Bangers', cursive;
-            color: #ffeb3b;
-            font-size: 1.2em;
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-
-            a:hover {
-                color: #00ffea;
-            }
-    </style>
+<meta charset="utf-8">
+<meta name="x-blog-deploy" content="pending">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Not found | d3n4c3</title>
+<meta name="description" content="That page isn’t on the rack.">
+<link rel="canonical" href="https://d3n4c3.com/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;600;700&family=Oswald:wght@500;600&display=swap" rel="stylesheet">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="stylesheet" href="/assets/site.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <h1><a href="/" style="text-decoration:none; color:inherit;">d3n4c3</a></h1>
-        </nav>
-    </header>
-    <main id="content">
-        <h2>404</h2>
-        <p>Page not found. The resource you're looking for doesn't exist.</p>
-        <p><a href="/">← Back to Home</a></p>
-    </main>
+<a class="skip" href="#content">Skip to content</a>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="logo" href="/">d3n4c3</a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+    <nav id="site-nav" class="site-nav" aria-label="Main">
+      <a href="/">Home</a><a href="/about">About</a><a href="/categories">Categories</a><a href="/94flair/" class="nav-checklist">’94 Flair Checklist</a><a href="/fortnite">Fortnite</a><a href="/bets">Bets</a>
+    </nav>
+    <form class="search" role="search" action="/" method="get">
+      <label class="sr-only" for="site-search">Search posts</label>
+      <input id="site-search" name="q" type="search" placeholder="Search issues" autocomplete="off">
+    </form>
+  </div>
+</header>
+<main id="content">
+  <div class="wrap">
+<header><p class="kicker">404</p><h1 class="page-title">This issue sold out</h1></header>
+<p class="lede">Nothing lives at that address. Head back to the rack, or open the Flair checklist.</p>
+<p><a class="btn" href="/">All issues</a> <a class="btn btn-red" href="/94flair/">’94 Flair checklist</a></p>
+  </div>
+</main>
+<footer class="site-footer">
+  <div class="site-footer-inner">
+    <p class="burst">ZAP!</p>
+    <nav class="footer-links" aria-label="Footer">
+      <a href="/">Home</a>
+      <a href="/about">About</a>
+      <a href="/94flair/">’94 Flair Checklist</a>
+      <a href="/fortnite">Fortnite</a>
+      <a href="/login">Login</a>
+    </nav>
+    <p class="copy">© 2026 d3n4c3</p>
+  </div>
+</footer>
+<script src="/assets/site.js" defer></script>
 </body>
 </html>

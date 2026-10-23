@@ -1,553 +1,132 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0, minimum-scale=1.0">
-    <title>d3n4c3</title>
-    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Rubik:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism-coy.min.css">
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
-    <style>
-    :root {
-        --bg-color: #0a0a0a;
-        --text-color: #ffffff;
-        --accent-color: #ff2a6d;
-        --highlight-color: #00ffea;
-        --card-bg: #1c2526;
-        --card-border: #ff2a6d;
-        --card-shadow: rgba(255, 42, 109, 0.5);
-        --header-bg: #1b0033;
-        --comic-yellow: #ffeb3b;
-    }
-
-    * {
-        box-sizing: border-box;
-    }
-
-    html, body {
-        width: 100%;
-        min-width: 100%;
-        max-width: 100%;
-        overflow-x: hidden;
-        background-color: var(--bg-color);
-    }
-
-    body {
-        background: radial-gradient(circle, #2c003e, var(--bg-color));
-        background-color: var(--bg-color);
-        color: var(--text-color);
-        font-family: 'Rubik', sans-serif;
-        margin: 0;
-        padding: 0;
-        min-height: 100vh;
-        overflow-x: hidden;
-    }
-
-    a {
-        color: var(--comic-yellow);
-        text-decoration: none;
-        position: relative;
-        transition: color 0.3s ease, transform 0.2s ease;
-    }
-
-    a:not(#logo-link):hover {
-        color: var(--highlight-color);
-        transform: translateY(-2px);
-    }
-
-    a:not(#logo-link):not(.card-container a)::after {
-        content: '';
-        position: absolute;
-        width: 0;
-        height: 3px;
-        bottom: -3px;
-        left: 0;
-        background: var(--highlight-color);
-        transition: width 0.3s ease;
-    }
-
-    a:not(#logo-link):not(.card-container a):hover::after {
-        width: 100%;
-    }
-
-    header {
-        background: linear-gradient(90deg, var(--header-bg), #4b0082);
-        padding: 15px 20px;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-        position: sticky;
-        top: 0;
-        z-index: 100;
-        backdrop-filter: blur(8px);
-    }
-
-    nav {
-        max-width: 1200px;
-        margin: 0 auto;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-    }
-
-    nav h1 {
-        font-family: 'Bangers', cursive;
-        font-size: 2.5em;
-        margin: 0;
-        color: var(--comic-yellow);
-        text-shadow: 3px 3px 0 #000, -2px -2px 0 var(--accent-color);
-        transform: rotate(-2deg);
-        transition: transform 0.3s ease;
-    }
-
-    nav h1:hover {
-        transform: rotate(0deg) scale(1.05);
-    }
-
-    nav ul {
-        list-style: none;
-        padding: 0;
-        display: flex;
-        gap: 15px;
-        align-items: center;
-    }
-
-    nav li a {
-        font-family: 'Bangers', cursive;
-        font-size: 1.2em;
-        letter-spacing: 1px;
-        text-transform: uppercase;
-    }
-
-    #content {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 40px 20px;
-    }
-
-    .post-list {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
-        gap: 30px;
-    }
-
-    .post-item {
-        background: var(--card-bg);
-        border: 4px solid #000;
-        border-radius: 12px;
-        padding: 20px;
-        box-shadow: 6px 6px 0 #000, 0 0 20px var(--card-shadow);
-        transform: rotate(2deg);
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-        position: relative;
-        overflow: hidden;
-        cursor: pointer;
-    }
-
-    .post-item::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: radial-gradient(circle, transparent 60%, rgba(0, 0, 0, 0.2));
-        opacity: 0.3;
-        z-index: 0;
-    }
-
-    .post-item:hover {
-        transform: rotate(0deg) scale(1.03);
-        box-shadow: 8px 8px 0 #000, 0 0 30px var(--card-shadow);
-    }
-
-    .post-item h3 {
-        font-family: 'Bangers', cursive;
-        font-size: 2em;
-        color: var(--comic-yellow);
-        text-shadow: 2px 2px 0 #000;
-        margin: 0 0 10px;
-        position: relative;
-        z-index: 1;
-    }
-
-    .post-item p {
-        font-size: 1em;
-        color: #ddd;
-        margin: 0 0 15px;
-        display: -webkit-box;
-        -webkit-line-clamp: 3;
-        line-clamp: 3;
-        -webkit-box-orient: vertical;
-        overflow: hidden;
-        position: relative;
-        z-index: 1;
-    }
-
-    .post-item img {
-        width: 200px;
-        height: 300px;
-        object-fit: cover;
-        object-position: center;
-        border: 3px solid #000;
-        border-radius: 8px;
-        margin-top: 10px;
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .back-link {
-        font-family: 'Bangers', cursive;
-        font-size: 1.2em;
-        color: var(--comic-yellow);
-        display: inline-block;
-        margin-bottom: 20px;
-        text-shadow: 1px 1px 0 #000;
-    }
-
-    .back-link:hover {
-        color: var(--highlight-color);
-    }
-
-    h1, h2, h3 {
-        font-family: 'Bangers', cursive;
-        color: var(--comic-yellow);
-        text-shadow: 2px 2px 0 #000;
-    }
-
-    img {
-        max-width: 100%;
-        height: auto;
-        border-radius: 8px;
-        margin: 15px 0;
-        border: 3px solid #000;
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    img:hover {
-        transform: scale(1.05);
-        box-shadow: 0 0 15px var(--card-shadow);
-    }
-
-    pre {
-        background: #111;
-        padding: 20px;
-        border-radius: 8px;
-        border: 3px solid #000;
-        box-shadow: 4px 4px 0 #000;
-        overflow: auto;
-    }
-
-    /* Card table styles */
-    .card-table {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 20px;
-        justify-content: center;
-        margin: 20px 0;
-    }
-
-    .card-container {
-        background: transparent;
-        padding: 0;
-        position: relative;
-        flex: 1;
-        min-width: 200px;
-        max-width: 300px;
-    }
-
-    .card-images {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: nowrap;
-        justify-content: center;
-        gap: 10px;
-    }
-
-    .card-container img.front {
-        width: 100px;
-        max-width: 100%;
-        height: auto;
-        margin: 5px;
-    }
-
-    .card-container img.back {
-        width: 150px;
-        max-width: 100%;
-        height: auto;
-        margin: 5px;
-    }
-
-    .card-container a {
-        display: inline-block;
-    }
-
-    .card-title {
-        font-family: 'Bangers', cursive;
-        font-size: 1.2em;
-        color: var(--comic-yellow);
-        text-shadow: 1px 1px 0 #000;
-        margin-top: 10px;
-        position: relative;
-        z-index: 1;
-        text-align: center;
-    }
-
-    @media (max-width: 768px) {
-        .post-list {
-            grid-template-columns: 1fr;
-        }
-
-        .post-item {
-            transform: rotate(0deg);
-        }
-
-        .card-table {
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .card-container {
-            min-width: 80%;
-            max-width: 90%;
-        }
-
-        .card-container img.front {
-            width: 80px;
-        }
-
-        .card-container img.back {
-            width: 120px;
-        }
-    }
-
-    @media (max-width: 600px) {
-        .post-list {
-            grid-template-columns: 1fr;
-        }
-
-        .post-item {
-            transform: rotate(0deg);
-        }
-
-        nav h1 {
-            font-size: 1.8em;
-        }
-
-        nav li a {
-            font-size: 1em;
-        }
-    }
-
-    @media (max-width: 480px) {
-        .card-container {
-            padding: 0;
-        }
-
-        .card-container img.front {
-            width: 60px;
-        }
-
-        .card-container img.back {
-            width: 90px;
-        }
-
-        .card-title {
-            font-size: 1em;
-        }
-    }
-
-    .halftone {
-        background-image: radial-gradient(circle, #000 10%, transparent 10%);
-        background-size: 8px 8px;
-        opacity: 0.1;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        pointer-events: none;
-        z-index: -1;
-    }
-</style>
+<meta charset="utf-8">
+<meta name="x-blog-deploy" content="pending">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>d3n4c3</title>
+<meta name="description" content="d3n4c3 — projects, notes, and a 1994 Flair Marvel checklist.">
+<link rel="canonical" href="https://d3n4c3.com/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;600;700&family=Oswald:wght@500;600&display=swap" rel="stylesheet">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="stylesheet" href="/assets/site.css">
 </head>
 <body>
-    <div class="halftone"></div>
-    <header>
-        <nav>
-            <h1><a id="logo-link" href="#">d3n4c3</a></h1>
-            <ul>
-                <li><a href="#" id="blog-link">Home</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <div id="content">
-            <!-- Blog posts or content will load here -->
-            <!-- Example structure for card-container -->
-            <!--
-            <div class="card-table">
-                <div class="card-container">
-                    <div class="card-images">
-                        <img src="front.jpg" class="front" alt="Front of card">
-                        <img src="back.jpg" class="back" alt="Back of card">
-                    </div>
-                    <div class="card-title"><a href="#">Card Title</a></div>
-                </div>
-            </div>
-            -->
-        </div>
-    </main>
-    <script src="https://cdn.jsdelivr.net/npm/marked@4.3.0/marked.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-javascript.min.js"></script>
-    <script>
-        async function fetchPosts() {
-            try {
-                const response = await fetch('/blogs/index.json');
-                if (!response.ok) throw new Error('Failed to fetch posts');
-                return await response.json();
-            } catch (err) {
-                console.error('Error fetching posts:', err);
-                throw err;
-            }
-        }
-
-        async function fetchMarkdown(file) {
-            try {
-                const response = await fetch(`/blogs/${file}`);
-                if (!response.ok) throw new Error(`Failed to fetch ${file}`);
-                return await response.text();
-            } catch (err) {
-                console.error(`Error fetching markdown for ${file}:`, err);
-                throw err;
-            }
-        }
-
-        async function showPostList() {
-            const content = document.getElementById('content');
-            content.innerHTML = '<div class="post-list"></div>';
-            const postList = content.querySelector('.post-list');
-
-            try {
-                const posts = await fetchPosts();
-
-                for (const post of posts) {
-                    let description = post.description || '';
-                    let thumbnail = '';
-
-                    if (!description) {
-                        const markdownText = await fetchMarkdown(post.file);
-                        const lines = markdownText.split('\n').filter(line => line.trim() && !line.startsWith('#'));
-                        description = lines[0]?.trim().substring(0, 100) + (lines[0]?.length > 100 ? '...' : '') || 'No description available.';
-                        const imgMatch = markdownText.match(/!\[.*?\]\((.*?)\)/);
-                        if (imgMatch) {
-                            thumbnail = imgMatch[1].startsWith('http') || imgMatch[1].startsWith('/') ? imgMatch[1] : `/blogs/${imgMatch[1]}`;
-                        }
-                    }
-
-                    const postItem = document.createElement('div');
-                    postItem.className = 'post-item';
-                    postItem.innerHTML = `
-                        <h3>${post.title}</h3>
-                        <p>${description}</p>
-                        ${thumbnail ? `<img src="${thumbnail}" alt="Thumbnail">` : ''}
-                    `;
-                    postItem.addEventListener('click', () => {
-                        loadPost(post.file);
-                        history.pushState({ post: post.file }, '', `?post=${post.file}`);
-                    });
-                    postList.appendChild(postItem);
-                }
-            } catch (err) {
-                content.innerHTML = '<p>Error loading posts. Please check your server and /blogs/index.json.</p>';
-            }
-        }
-
-        async function loadPost(file) {
-            const content = document.getElementById('content');
-            try {
-                const markdownText = await fetchMarkdown(file);
-                let htmlContent = marked.parse(markdownText);
-                const tempDiv = document.createElement('div');
-                tempDiv.innerHTML = htmlContent;
-
-                tempDiv.querySelectorAll('img').forEach(img => {
-                    const src = img.getAttribute('src');
-                    if (!src.startsWith('http') && !src.startsWith('/')) {
-                        img.setAttribute('src', `/blogs/${src}`);
-                    }
-                });
-                tempDiv.querySelectorAll('a').forEach(link => {
-                    const href = link.getAttribute('href');
-                    if (!href.startsWith('http') && !href.startsWith('/')) {
-                        link.setAttribute('href', `/blogs/${href}`);
-                    }
-                });
-
-                content.innerHTML = `
-                    <a href="#" class="back-link" id="back-link">< Back to Home</a>
-                    ${tempDiv.innerHTML}
-                `;
-                Prism.highlightAll();
-
-                document.getElementById('back-link').addEventListener('click', (e) => {
-                    e.preventDefault();
-                    showPostList();
-                    history.pushState({}, '', window.location.pathname);
-                });
-
-                // Ensure images within .card-container are wrapped in .card-images
-                document.querySelectorAll('.card-container').forEach(container => {
-                    const frontImg = container.querySelector('img.front');
-                    const backImg = container.querySelector('img.back');
-                    if (frontImg && backImg) {
-                        const imagesWrapper = document.createElement('div');
-                        imagesWrapper.className = 'card-images';
-                        imagesWrapper.appendChild(frontImg);
-                        imagesWrapper.appendChild(backImg);
-                        container.insertBefore(imagesWrapper, container.querySelector('.card-title'));
-                    }
-                });
-            } catch (err) {
-                content.innerHTML = '<p>Error loading post.</p>';
-            }
-        }
-
-        function initialize() {
-            const urlParams = new URLSearchParams(window.location.search);
-            const postFile = urlParams.get('post');
-            if (postFile) {
-                loadPost(postFile);
-            } else {
-                showPostList();
-            }
-
-            document.getElementById('blog-link').addEventListener('click', (e) => {
-                e.preventDefault();
-                showPostList();
-                history.pushState({}, '', window.location.pathname);
-            });
-
-            document.getElementById('logo-link').addEventListener('click', (e) => {
-                e.preventDefault();
-                showPostList();
-                history.pushState({}, '', window.location.pathname);
-            });
-
-            window.addEventListener('popstate', (e) => {
-                const postFile = e.state?.post;
-                if (postFile) {
-                    loadPost(postFile);
-                } else {
-                    showPostList();
-                }
-            });
-        }
-
-        initialize();
-    </script>
+<a class="skip" href="#content">Skip to content</a>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="logo" href="/">d3n4c3</a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+    <nav id="site-nav" class="site-nav" aria-label="Main">
+      <a href="/" aria-current="page">Home</a><a href="/about">About</a><a href="/categories">Categories</a><a href="/94flair/" class="nav-checklist">’94 Flair Checklist</a><a href="/fortnite">Fortnite</a><a href="/bets">Bets</a>
+    </nav>
+    <form class="search" role="search" action="/" method="get">
+      <label class="sr-only" for="site-search">Search posts</label>
+      <input id="site-search" name="q" type="search" placeholder="Search issues" autocomplete="off">
+    </form>
+  </div>
+</header>
+<main id="content">
+  <div class="wrap">
+<section class="hero">
+  <div class="hero-copy">
+    <p class="kicker">Issue rack</p>
+    <h1>d3n4c3</h1>
+    <p class="lede">Projects, notes, and the stuff I’m building. Same shelf as the cards, just with more room to talk.</p>
+  </div>
+  <aside class="checklist-panel">
+    <p class="kicker">Collector’s edition</p>
+    <h2>’94 Flair checklist</h2>
+    <p>All 150 base cards, Powerblasts, Flairprints, promos, and uncut sheets, with art and artist credits.</p>
+    <a class="btn" href="/94flair/">Open the checklist</a>
+  </aside>
+</section>
+<div id="legacy-root" hidden></div>
+<div id="home-feed">
+  <h2 class="section-label">Latest issues</h2>
+  <div class="post-grid">
+    <article class="post-card post-card-featured" data-search="&#x27;94 Flair Marvel: A Collector Checklist Passion Project I built a full collector checklist for 1994 Flair Marvel Universe, with all 150 base cards, Powerblasts, Flairprints, promos, uncut sheets, and magazine ads, plus source and artist credits for every card. Projects flair marvel trading-cards collecting projects cgi">
+  <span class="issue-badge">Featured</span>
+  <img src="/94flair/images/hero-banner.jpg" alt="1994 Flair Marvel Universe collector checklist">
+  <div>
+    <p class="caption"><a href="/category/projects">Projects</a><time datetime="2026-10-10">October 10, 2026</time></p>
+    <h2><a href="/blog/94-flair-marvel-checklist">&#x27;94 Flair Marvel: A Collector Checklist Passion Project</a></h2>
+    <p>I built a full collector checklist for 1994 Flair Marvel Universe, with all 150 base cards, Powerblasts, Flairprints, promos, uncut sheets, and magazine ads, plus source and artist credits for every card.</p>
+    <div class="tags"><span class="tag">#flair</span><span class="tag">#marvel</span><span class="tag">#trading-cards</span><span class="tag">#collecting</span><span class="tag">#projects</span><span class="tag">#cgi</span></div>
+  </div>
+</article>
+    <article class="post-card" data-search="Welcome d3n4c3 is online — a home for my projects, experiments, and whatever I&#x27;m thinking about. Announcements welcome projects blog">
+  
+  
+  <div>
+    <p class="caption"><a href="/category/announcements">Announcements</a><time datetime="2026-05-17">May 17, 2026</time></p>
+    <h2><a href="/blog/welcome">Welcome</a></h2>
+    <p>d3n4c3 is online — a home for my projects, experiments, and whatever I&#x27;m thinking about.</p>
+    <div class="tags"><span class="tag">#welcome</span><span class="tag">#projects</span><span class="tag">#blog</span></div>
+  </div>
+</article><article class="post-card" data-search="Introducing 7empo — Free Fitness &amp; Diet Tracking 7empo.net is a free fitness and diet tracker I built to log workouts, meals, and habits without subscriptions. Projects 7empo fitness diet projects free">
+  
+  
+  <div>
+    <p class="caption"><a href="/category/projects">Projects</a><time datetime="2026-04-25">April 25, 2026</time></p>
+    <h2><a href="/blog/introducing-7empo">Introducing 7empo — Free Fitness &amp; Diet Tracking</a></h2>
+    <p>7empo.net is a free fitness and diet tracker I built to log workouts, meals, and habits without subscriptions.</p>
+    <div class="tags"><span class="tag">#7empo</span><span class="tag">#fitness</span><span class="tag">#diet</span><span class="tag">#projects</span><span class="tag">#free</span></div>
+  </div>
+</article><article class="post-card" data-search="Building a Trainer How I built an interactive training app, hosted it on this domain, and kept it running alongside the blog. Projects trainer projects web r2">
+  
+  
+  <div>
+    <p class="caption"><a href="/category/projects">Projects</a><time datetime="2026-02-21">February 21, 2026</time></p>
+    <h2><a href="/blog/building-a-trainer">Building a Trainer</a></h2>
+    <p>How I built an interactive training app, hosted it on this domain, and kept it running alongside the blog.</p>
+    <div class="tags"><span class="tag">#trainer</span><span class="tag">#projects</span><span class="tag">#web</span><span class="tag">#r2</span></div>
+  </div>
+</article>
+  </div>
+  <p class="archive-note section-label">From the archive</p>
+  <div class="post-grid">
+    <article class="post-card" data-search="1994 Marvel Masterpieces A gilded portal to the hand-painted epics of 1994. Projects marvel trading-cards masterpieces archive">
+  
+  
+  <div>
+    <p class="caption"><a href="/category/projects">Projects</a><span>Archive</span></p>
+    <h2><a href="/blog/1994-marvel-masterpieces">1994 Marvel Masterpieces</a></h2>
+    <p>A gilded portal to the hand-painted epics of 1994.</p>
+    <div class="tags"><span class="tag">#marvel</span><span class="tag">#trading-cards</span><span class="tag">#masterpieces</span><span class="tag">#archive</span></div>
+  </div>
+</article><article class="post-card" data-search="1994 Marvel Annual Flair The inaugural edition, card by card — base set, Powerblasts, and the chase. Projects flair marvel trading-cards archive">
+  
+  
+  <div>
+    <p class="caption"><a href="/category/projects">Projects</a><span>Archive</span></p>
+    <h2><a href="/blog/1994-marvel-flair-annual">1994 Marvel Annual Flair</a></h2>
+    <p>The inaugural edition, card by card — base set, Powerblasts, and the chase.</p>
+    <div class="tags"><span class="tag">#flair</span><span class="tag">#marvel</span><span class="tag">#trading-cards</span><span class="tag">#archive</span></div>
+  </div>
+</article>
+  </div>
+  <p id="search-empty" class="empty" hidden>No issues match that search.</p>
+</div>
+  </div>
+</main>
+<footer class="site-footer">
+  <div class="site-footer-inner">
+    <p class="burst">ZAP!</p>
+    <nav class="footer-links" aria-label="Footer">
+      <a href="/">Home</a>
+      <a href="/about">About</a>
+      <a href="/94flair/">’94 Flair Checklist</a>
+      <a href="/fortnite">Fortnite</a>
+      <a href="/login">Login</a>
+    </nav>
+    <p class="copy">© 2026 d3n4c3</p>
+  </div>
+</footer>
+<script src="/assets/site.js" defer></script>
 </body>
 </html>
