@@ -1985,6 +1985,7 @@
   <button class="btn" id="reset">Reset</button>
   <button class="btn primary" onclick="window.print()">Print Sheet</button>
   <a class="btn primary" style="text-decoration:none;display:inline-flex;align-items:center" href="/94flair/files/94-flair-section-dividers.pdf" target="_blank" rel="noopener" download>Printable Binder Dividers</a>
+  <a class="btn primary" style="text-decoration:none;display:inline-flex;align-items:center" href="/94flair/experience/">Take the Tour</a>
   <nav class="nav">
     <a href="/94flair/experience/">Experience</a><a href="#base">Base Set</a><a href="#powerblast">Powerblast</a><a href="#large">Flairprints &amp; Binder</a><a href="#promos">Promos</a><a href="#print">Ads &amp; Magazines</a><a href="#notes">Collector Notes</a>
   </nav>
@@ -3816,5 +3817,12 @@ document.getElementById("copyNeed").addEventListener("click", async () => {
   catch { prompt("Copy your want list:", text); }
 });
 </script>
+<div id="tourAsk" hidden style="position:fixed;inset:0;z-index:9999;background:rgba(0,0,0,.6);align-items:center;justify-content:center;padding:20px">
+<div style="background:#111;color:#fff;max-width:360px;width:100%;border-radius:14px;padding:24px;text-align:center;font-family:inherit;box-shadow:0 20px 60px rgba(0,0,0,.5)">
+<h3 style="margin:0 0 8px;font-size:20px">New here?</h3>
+<p style="margin:0 0 18px;opacity:.85;line-height:1.4">Take a tour of the collection. Flip, tilt and handle every 1994 Flair card.</p>
+<a class="btn primary" id="tourGo" href="/94flair/experience/" style="text-decoration:none;display:inline-flex;align-items:center;margin:4px">Take the tour</a>
+<button class="btn" id="tourNo" style="margin:4px">Maybe later</button></div></div>
+<script>(function(){try{var K="flair94-tour-asked";if(localStorage.getItem(K))return;var o=JSON.parse(localStorage.getItem(STORE_KEY)||"[]");if(o.length){localStorage.setItem(K,"1");return}var d=document.getElementById("tourAsk");d.hidden=false;d.style.display="flex";function done(){localStorage.setItem(K,"1");d.style.display="none"}document.getElementById("tourNo").onclick=done;document.getElementById("tourGo").onclick=done;d.onclick=function(e){if(e.target===d)done()}}catch(e){}})();</script>
 </body>
 </html>
