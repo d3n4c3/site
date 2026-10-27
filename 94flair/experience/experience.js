@@ -130,10 +130,8 @@ const beats=[
   deal:()=>fan(icon.slice(mob?2:3,8).concat([]).map(([n])=>card(n)).slice(0,mob?5:6),CY+CH*.08)},
  {k:'How the art was made',t:'Marvel’s Special Projects team sent previously published black line art, with color guides, to McGrew Color Graphics, which painted it on computer.',h:'',
   deal:()=>artDeal(),acts:()=>{btn('←',()=>{pi=(pi-PER+PAIRS.length)%PAIRS.length;redeal(artDeal())});btn('→',()=>{pi=(pi+PER)%PAIRS.length;redeal(artDeal())});jump=E('select','jump');jump.setAttribute('aria-label','Jump to card');PAIRS.forEach((p,i)=>{const o=E('option',0,(p.k.startsWith('pb')?'PB'+(+p.k.slice(2)):'#'+p.n)+' '+p.title);o.value=i;jump.append(o)});jump.onchange=()=>{pi=+jump.value;redeal(artDeal())};acts.append(jump);const g=btn('Ghost',()=>{const on=stage.classList.toggle('ghost');g.classList.toggle('on',on);if(on)onTable.forEach(c=>{if(c.o.ov){c.ur=0;c.set({x:c.o.hx,y:c.o.hy,r:0})}})})}},
- {k:'Powerblasts · 18',t:'The chase set: prismatic, metallic-enhanced cards, about one in every two packs. Marvel Age had promised 20; eighteen shipped.',h:'Spot the Powerblasts.',
-  deal:()=>{const n=mob?4:6,k=2;const ds=shuf([...shuf(Array.from({length:18},(_,i)=>i+1)).slice(0,k).map(pb),...randBase(n-k).map(card)]);
-   const g=grid(n,mob?2:3);return ds.map((d,i)=>[d,g[i][0],g[i][1],rnd(-3,3),{onGrab:spot,onFlip:spot}])},
-  after:()=>{found=0;hint(`Spot the Powerblasts · 0 of ${onTable.filter(c=>c.d.pb).length}`)}},
+ {k:'Powerblast showcase · 18',t:'All 18 Powerblasts: the prismatic, metallic-enhanced chase set, about one in every two packs, each replacing a base card. Marvel Age had promised 20; eighteen shipped.',h:'Double-tap to flip; drag one out to look closer.',
+  deal:()=>pbShow(),after:()=>revealDealt(onTable),acts:()=>{if(mob)btn('Next 6 →',()=>{pbo=(pbo+6)%18;redeal(pbShow());revealDealt(onTable)})}},
  {k:'Flairprints & binder inserts',t:'Flairprints were 6½″ × 10″ case bonuses, almost three cards tall, reusing Powerblast #1–10 art. The five binder inserts reuse Powerblast #11–15 art with no logo, no title and no foil.',h:'Shown at true size: a standard 2½″ × 3½″ card sits beside them for scale.',
   deal:()=>{/* true scale: Flairprint 6.5x10in (checklist notes); binder insert sized like Flairprints; standard card 2.5x3.5in */
    const ppi=mob?Math.min(AV*.86/10,W*.94/13.4):Math.min(AV*.9/10,W*.9/17.2),h=Math.round(10*ppi),w=6.5*ppi,ch=Math.round(3.5*ppi),cw=2.5*ppi;
@@ -142,14 +140,14 @@ const beats=[
    return[[{f:`${I}flairprint-fx/hd/${p2(1+(Math.random()*10|0))}.jpg`,ar:907/1400,h,blank:'Blank · UPC 0 41199 00258 1'},L[0][0],L[0][1],L[0][2]],
     [{f:`${I}binder-fx/hd/${p2(1+(Math.random()*5|0))}.jpg`,ar:907/1400,h,blank:'Completely blank back'},L[1][0],L[1][1],L[1][2]],
     [c,L[2][0],L[2][1],L[2][2]]]}},
- {k:'Promos & promo sheets',t:'Deadpool and Omega Red promo Flairprints went to the trade. Double-sided 5″ × 7″ 4-card sheets came bagged with Wizard #35, Advance Comics #67, Marvel Age #138 and Tuff Stuff’s Collect!. Nine uncut 7⅝″ × 10⅝″ 9-card sheets came in Fleer’s 1994 media press kit, never sold in packs.',h:'Double-tap a sheet to see its back. Tap a card on the 9-card sheet to pop it out.',
+ {k:'Promos & promo sheets',t:'Deadpool and Omega Red promo Flairprints went to the trade. Double-sided 5″ × 7″ 4-card sheets came bagged with Wizard #35, Advance Comics #67, Marvel Age #138 and Tuff Stuff’s Collect!. Nine uncut 7⅝″ × 10⅝″ 9-card sheets came in Fleer’s 1994 media press kit, never sold in packs.',h:'Double-tap a sheet to see its back.',
   deal:()=>{const it=[{f:PR+'deadpool-flairprint.jpg',ar:.65,flat:1},{f:PR+'omega-red-wolverine.jpg',ar:.65,flat:1},
     {f:PR+'sheet4-foil.jpg',b:PR+'sheet4-released-back.jpg',ar:999/1399,flat:1},{f:PR+'sheet4-unreleased.jpg',b:PR+'sheet4-unreleased-back.jpg',ar:999/1399,flat:1},
-    {f:PR+'sheet9-2.jpg',b:PR+'sheet9-2-back.jpg',ar:1018/1400,flat:1,pop:1}];
+    {f:PR+'sheet9-2.jpg',b:PR+'sheet9-2-back.jpg',ar:1018/1400,flat:1}];
    if(mob){const L=[it[Math.random()<.5?0:1],it[2],it[3],it[4]],h=Math.round(Math.min(AV*.44,(W/2-18)/.73)),dx=W*.235,dy=AV*.235;
-    return L.map((d,i)=>[{...d,h},(i%2?dx:-dx),CY+26+(i<2?-dy:dy),rnd(-3,3),d.pop?{onSingle:pop}:{}])}
+    return L.map((d,i)=>[{...d,h},(i%2?dx:-dx),CY+26+(i<2?-dy:dy),rnd(-3,3),{}])}
    const h=Math.round(Math.min(AV*.66,W*.88/5/.76)),sp=(W*.88-h*.76)/4;
-   return it.map((d,i)=>[{...d,h:d.pop?Math.round(h*1.08):h},(i-2)*sp,CY+(i%2?14:-10),rnd(-4,4),d.pop?{onSingle:pop}:{}])}},
+   return it.map((d,i)=>[{...d,h:d.f.includes('sheet9')?Math.round(h*1.08):h},(i-2)*sp,CY+(i%2?14:-10),rnd(-4,4),{}])}},
 ...TLE.map((e,k)=>({k:'Release timeline · 1994',t:'Scroll to move through the year, one piece at a time.',tl:k})),
  {k:'Free play',t:'Rip a pack opens one pack of 10 cards, base cards unique within the pack.',h:'Pack odds: Powerblast about 1 in 2 packs (about 12 per 24-pack box), per the checklist. Double-tap flips; two fingers twist.',
   deal:()=>openPack(),after:()=>{},acts:()=>{btn('Rip a pack',()=>{{const nc=deal(openPack());onTable.push(...nc);revealDealt(nc)}});
@@ -188,6 +186,10 @@ function openPack(){const hit=Math.random()<.5,base=randBase(hit?9:10).map(card)
  if(hit)ds.splice(Math.random()*10|0,0,pb(1+(Math.random()*18|0)));
  const y=CY+((packs++%3)-1)*(mob?CH*.28:CH*.22);
  return fan(ds,y).map(([d,x,yy,r])=>[d,x,yy,r,FP])}
+let pbo=0;function pbShow(){const ids=Array.from({length:18},(_,i)=>i+1),A=AV-12;
+ if(mob){const h=Math.round(Math.min(CH,A/3.08,(W-36)/2.08/.714)),w=h*.714;return ids.slice(pbo,pbo+6).map((n,i)=>[{...pb(n),h},(i%2?1:-1)*(w/2+5),CY+6+((i/2|0)-1)*(h+6),0,FP])}
+ const per=9,h=Math.round(Math.min(CH,A/2.06,(W-56)/(per+.4)/.714)),w=h*.714,sp=w+8;
+ return ids.map((n,i)=>{const r=i/per|0,k=i%per;return[{...pb(n),h},(k-(per-1)/2)*sp,CY+10+(r?1:-1)*(h/2+6),0,FP]})}
 function revealDealt(cs){cs.forEach((c,i)=>{if(c.d.pb)later(()=>{if(!c.gone)c.reveal()},500+70*i)})}
 const FP={onFlip:c=>{if(c.d.pb&&!c.flipped)c.reveal()}};
 /* scroll = dealer */
