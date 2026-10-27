@@ -415,17 +415,20 @@
   .btn.primary { background: var(--red); border-color: var(--red); }
   .btn.primary:hover { background: #ff3a43; }
   @media (min-width: 1024px) {
-    .toolbar { flex-wrap: wrap; column-gap: 6px; row-gap: 10px; padding-left: max(6vw, 24px); padding-right: max(6vw, 24px); justify-content: space-between; }
-    .toolbar .search { flex: 0 1 260px; min-width: 150px; }
+    .toolbar { flex-wrap: wrap; column-gap: 8px; row-gap: 10px; padding-left: max(6vw, 24px); padding-right: max(6vw, 24px); }
+    .toolbar .search { flex: 1 1 0; min-width: 200px; }
     .toolbar .search input { min-width: 0; }
     .toolbar .artist { max-width: 140px; }
     .toolbar .seg button { padding: 7px 8px; letter-spacing: .06em; }
     .toolbar .btn { padding: 0 9px; letter-spacing: .05em; font-size: 12px; white-space: nowrap; flex: none; }
-    .toolbar .nav { flex: 0 0 100%; flex-wrap: nowrap; justify-content: space-between; gap: 4px; white-space: nowrap; }
+    .toolbar .nav { flex: 0 0 100%; flex-wrap: wrap; justify-content: center; gap: 4px 28px; }
     .toolbar .nav a { flex: none; }
   }
-  @media (min-width: 1200px) and (max-width: 1399px) {
-    .toolbar .search { flex-basis: 180px; min-width: 0; }
+  @media (max-width: 1199px) {
+    .toolbar .nav { gap: 4px 6px; }
+  }
+  @media (min-width: 1200px) and (max-width: 1299px) {
+    .toolbar .search { min-width: 160px; }
   }
   .nav { display: flex; gap: 6px; flex-wrap: wrap; width: 100%; }
   .nav a {
