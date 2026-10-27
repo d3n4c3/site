@@ -9,7 +9,7 @@ button:hover{background:#ffffff1f}
 .stage{position:sticky;top:0;height:100vh;height:100svh;overflow:hidden;touch-action:pan-y;
  background:radial-gradient(90% 75% at 50% 45%,#17251d 0,#0c1510 60%,#070b09 100%)}
 .stage:after{content:"";position:absolute;inset:0;pointer-events:none;opacity:.35;background-image:radial-gradient(#ffffff08 1px,transparent 1px);background-size:3px 3px}
-.table{position:absolute;inset:0}
+.table{position:absolute;inset:0;z-index:1}
 .steps{position:relative;margin-top:-100vh;margin-top:-100svh;pointer-events:none}
 .step{height:120vh}
 /* caption chip */

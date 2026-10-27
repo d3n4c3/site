@@ -151,8 +151,8 @@ const beats=[
    const h=Math.round(Math.min(AV*.66,W*.88/5/.76)),sp=(W*.88-h*.76)/4;
    return it.map((d,i)=>[{...d,h:d.pop?Math.round(h*1.08):h},(i-2)*sp,CY+(i%2?14:-10),rnd(-4,4),d.pop?{onSingle:pop}:{}])}},
 ...TLE.map((e,k)=>({k:'Release timeline · 1994',t:'Scroll to move through the year, one piece at a time.',tl:k})),
- {k:'Free play',t:'Each Deal opens one pack of 10 cards, base cards unique within the pack.',h:'Pack odds: Powerblast about 1 in 2 packs (about 12 per 24-pack box), per the checklist. Double-tap flips; two fingers twist.',
-  deal:()=>openPack(),after:()=>{},acts:()=>{btn('Deal a pack',()=>{{const nc=deal(openPack());onTable.push(...nc);revealDealt(nc)}});
+ {k:'Free play',t:'Rip a pack opens one pack of 10 cards, base cards unique within the pack.',h:'Pack odds: Powerblast about 1 in 2 packs (about 12 per 24-pack box), per the checklist. Double-tap flips; two fingers twist.',
+  deal:()=>openPack(),after:()=>{},acts:()=>{btn('Rip a pack',()=>{{const nc=deal(openPack());onTable.push(...nc);revealDealt(nc)}});
    btn('Gather',()=>all().forEach((c,i)=>c.set({x:i*.5,y:CY-i*.5,r:rnd(-3,3)})));
    btn('Shuffle',()=>all().forEach(c=>{c.set({x:rnd(-W*.38,W*.38),y:CY+rnd(-H*.22,H*.2),r:rnd(-30,30)});c.el.style.zIndex=10+(Math.random()*999|0)}));
    btn('Flip all',()=>all().forEach(c=>c.flip()))}},
