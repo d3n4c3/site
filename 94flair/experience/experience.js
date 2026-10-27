@@ -134,11 +134,14 @@ const beats=[
   deal:()=>{const n=mob?4:6,k=2;const ds=shuf([...shuf(Array.from({length:18},(_,i)=>i+1)).slice(0,k).map(pb),...randBase(n-k).map(card)]);
    const g=grid(n,mob?2:3);return ds.map((d,i)=>[d,g[i][0],g[i][1],rnd(-3,3),{onGrab:spot,onFlip:spot}])},
   after:()=>{found=0;hint(`Spot the Powerblasts · 0 of ${onTable.filter(c=>c.d.pb).length}`)}},
- {k:'Flairprints & binder inserts',t:'Flairprints were 6½″ × 10″ case bonuses, almost three cards tall, reusing Powerblast #1–10 art. The five binder inserts reuse Powerblast #11–15 art with no logo, no title and no foil.',h:'A standard card sits beside them for scale.',
-  deal:()=>{const h=BIG(10,.648,mob?.5:.3),w=h*.648;const xs=mob?[-w*.42,w*.42]:[-w*.62,w*.62];
-   return[[{f:`${I}flairprint-fx/hd/${p2(1+(Math.random()*10|0))}.jpg`,ar:907/1400,h,blank:'Blank · UPC 0 41199 00258 1'},xs[0],CY,-3],
-    [{f:`${I}binder-fx/hd/${p2(1+(Math.random()*5|0))}.jpg`,ar:907/1400,h,blank:'Completely blank back'},xs[1],CY+(mob?24:0),3],
-    [card(randBase(1)[0]),mob?W*.5-CW*.55:w*1.25+CW*.3,CY+h/2-CH/2+(mob?CH*.2:0),6]]}},
+ {k:'Flairprints & binder inserts',t:'Flairprints were 6½″ × 10″ case bonuses, almost three cards tall, reusing Powerblast #1–10 art. The five binder inserts reuse Powerblast #11–15 art with no logo, no title and no foil.',h:'Shown at true size: a standard 2½″ × 3½″ card sits beside them for scale.',
+  deal:()=>{/* true scale: Flairprint 6.5x10in (checklist notes); binder insert sized like Flairprints; standard card 2.5x3.5in */
+   const ppi=mob?Math.min(AV*.86/10,W*.94/13.4):Math.min(AV*.9/10,W*.9/17.2),h=Math.round(10*ppi),w=6.5*ppi,ch=Math.round(3.5*ppi),cw=2.5*ppi;
+   const L=mob?[[-w*.52,CY,-2],[w*.52,CY+8,2],[W*.5-cw*.62,CY+h/2-ch*.45,6]]:[[-(cw/2+.5*ppi+w/2),CY,-2],[cw/2+.5*ppi+w/2,CY,2],[0,CY+h/2-ch/2,0]];
+   const c=card(randBase(1)[0]);c.h=ch;
+   return[[{f:`${I}flairprint-fx/hd/${p2(1+(Math.random()*10|0))}.jpg`,ar:907/1400,h,blank:'Blank · UPC 0 41199 00258 1'},L[0][0],L[0][1],L[0][2]],
+    [{f:`${I}binder-fx/hd/${p2(1+(Math.random()*5|0))}.jpg`,ar:907/1400,h,blank:'Completely blank back'},L[1][0],L[1][1],L[1][2]],
+    [c,L[2][0],L[2][1],L[2][2]]]}},
  {k:'Promos & promo sheets',t:'Deadpool and Omega Red promo Flairprints went to the trade. Double-sided 5″ × 7″ 4-card sheets came bagged with Wizard #35, Advance Comics #67, Marvel Age #138 and Tuff Stuff’s Collect!. Nine uncut 7⅝″ × 10⅝″ 9-card sheets came in Fleer’s 1994 media press kit, never sold in packs.',h:'Double-tap a sheet to see its back. Tap a card on the 9-card sheet to pop it out.',
   deal:()=>{const it=[{f:PR+'deadpool-flairprint.jpg',ar:.65,flat:1},{f:PR+'omega-red-wolverine.jpg',ar:.65,flat:1},
     {f:PR+'sheet4-foil.jpg',b:PR+'sheet4-released-back.jpg',ar:999/1399,flat:1},{f:PR+'sheet4-unreleased.jpg',b:PR+'sheet4-unreleased-back.jpg',ar:999/1399,flat:1},
