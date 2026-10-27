@@ -415,13 +415,17 @@
   .btn.primary { background: var(--red); border-color: var(--red); }
   .btn.primary:hover { background: #ff3a43; }
   @media (min-width: 1024px) {
-    .toolbar { flex-wrap: wrap; column-gap: 8px; row-gap: 10px; padding-left: 24px; padding-right: 24px; }
-    .toolbar .search { flex: 1 1 220px; min-width: 220px; }
-    .toolbar .artist { max-width: 160px; }
-    .toolbar .seg button { padding: 7px 9px; letter-spacing: .08em; }
-    .toolbar .btn { padding: 0 10px; letter-spacing: .06em; font-size: 12px; white-space: nowrap; flex: none; }
-    .toolbar .nav { flex: 0 0 100%; flex-wrap: nowrap; justify-content: center; gap: 4px; white-space: nowrap; }
+    .toolbar { flex-wrap: wrap; column-gap: 6px; row-gap: 10px; padding-left: max(6vw, 24px); padding-right: max(6vw, 24px); justify-content: space-between; }
+    .toolbar .search { flex: 0 1 260px; min-width: 150px; }
+    .toolbar .search input { min-width: 0; }
+    .toolbar .artist { max-width: 140px; }
+    .toolbar .seg button { padding: 7px 8px; letter-spacing: .06em; }
+    .toolbar .btn { padding: 0 9px; letter-spacing: .05em; font-size: 12px; white-space: nowrap; flex: none; }
+    .toolbar .nav { flex: 0 0 100%; flex-wrap: nowrap; justify-content: space-between; gap: 4px; white-space: nowrap; }
     .toolbar .nav a { flex: none; }
+  }
+  @media (min-width: 1200px) and (max-width: 1399px) {
+    .toolbar .search { flex-basis: 180px; min-width: 0; }
   }
   .nav { display: flex; gap: 6px; flex-wrap: wrap; width: 100%; }
   .nav a {
@@ -3832,6 +3836,6 @@ document.getElementById("copyNeed").addEventListener("click", async () => {
 <p style="margin:0 0 18px;opacity:.85;line-height:1.4">Take a tour of the collection in Flair ’94: Hands On. Flip, tilt and handle every 1994 Flair card.</p>
 <a class="btn primary" id="tourGo" href="/94flair/experience/" style="text-decoration:none;display:inline-flex;align-items:center;margin:4px">Take the tour</a>
 <button class="btn" id="tourNo" style="margin:4px">Maybe later</button></div></div>
-<script>(function(){try{var K="flair94-tour-asked";if(localStorage.getItem(K))return;var o=JSON.parse(localStorage.getItem(STORE_KEY)||"[]");if(o.length){localStorage.setItem(K,"1");return}var d=document.getElementById("tourAsk");d.hidden=false;d.style.display="flex";function done(){localStorage.setItem(K,"1");d.style.display="none"}document.getElementById("tourNo").onclick=done;document.getElementById("tourGo").onclick=done;d.onclick=function(e){if(e.target===d)done()}}catch(e){}})();</script>
+<script>(function(){try{if(window.self!==window.top||/[?&]embed=1/.test(location.search))return;var K="flair94-tour-asked";if(localStorage.getItem(K))return;var o=JSON.parse(localStorage.getItem(STORE_KEY)||"[]");if(o.length){localStorage.setItem(K,"1");return}var d=document.getElementById("tourAsk");d.hidden=false;d.style.display="flex";function done(){localStorage.setItem(K,"1");d.style.display="none"}document.getElementById("tourNo").onclick=done;document.getElementById("tourGo").onclick=done;d.onclick=function(e){if(e.target===d)done()}}catch(e){}})();</script>
 </body>
 </html>

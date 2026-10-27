@@ -78,9 +78,9 @@ button.on{background:var(--ink);color:#111}
 @media (max-width:760px){.jump{max-width:118px}.acts{gap:6px}.acts button{padding:.45em .8em}}
 
 /* outro */
-.outro{position:relative;height:220vh;--p:0}
+.outro{position:relative;height:300vh;--p:0}
 .ostick{position:sticky;top:0;height:100vh;height:100svh;overflow:hidden;background:#07060b}
-.opeek{position:absolute;inset:0;padding:70px 5vw;display:flex;flex-direction:column;justify-content:center;text-align:center;filter:blur(calc((1 - var(--p))*6px)) brightness(calc(.35 + var(--p)*.45));transform:scale(calc(1.08 - var(--p)*.08))}
+.opeek{position:absolute;inset:0;background:#07060b;text-align:center;filter:blur(calc((1 - var(--p))*6px)) brightness(calc(.4 + var(--p)*.6));transform:scale(calc(1.08 - var(--p)*.08))}
 .opeek h2{font:700 clamp(20px,4vw,40px)/1.1 Oswald,Inter,sans-serif;letter-spacing:.1em;text-transform:uppercase;color:#f3d27a;margin:0 0 24px}
 .ogrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(80px,1fr));gap:10px;max-width:1000px;margin:0 auto}
 .ogrid img{width:100%;aspect-ratio:5/7;object-fit:cover;border-radius:6px;box-shadow:0 6px 18px #000a}
@@ -89,4 +89,6 @@ button.on{background:var(--ink);color:#111}
 .or{right:0;background:radial-gradient(160% 80% at 0 50%,#17251d 0,#0c1510 60%,#070b09 100%);clip-path:polygon(11% 0,100% 0,100% 100%,14% 100%,5% 92%,17% 84%,6% 76%,17% 67%,8% 59%,19% 50%,7% 42%,18% 33%,9% 25%,19% 16%,8% 8%);transform:translateX(calc(var(--p)*115%)) rotate(calc(var(--p)*6deg))}
 .octa{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%) scale(.9);opacity:0;pointer-events:none;transition:opacity .5s,transform .5s;background:#e8202a;color:#fff;text-decoration:none;font:700 clamp(18px,3vw,28px)/1 Oswald,Inter,sans-serif;letter-spacing:.1em;text-transform:uppercase;padding:20px 34px;border-radius:14px;box-shadow:0 12px 40px #000c,0 0 0 2px #fff3;white-space:nowrap}
 .outro.done .octa{opacity:1;pointer-events:auto;transform:translate(-50%,-50%) scale(1)}
-@media (prefers-reduced-motion:reduce){.ohalf{transform:none!important;opacity:calc(1 - var(--p)*1.6);transition:none}.opeek{transform:none;filter:brightness(.7)}}
+@media (prefers-reduced-motion:reduce){.ohalf{transform:none!important;opacity:calc(1 - var(--p)*1.6);transition:none}.opeek{transform:none;filter:none}}
+.opeek iframe{position:absolute;inset:0;width:100%;height:100%;border:0;pointer-events:none;background:#07060b}
+.outro.go .ohalf{opacity:0;transition:opacity .25s}.outro.go .octa{opacity:0}
