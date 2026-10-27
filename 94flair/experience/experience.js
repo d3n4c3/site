@@ -124,7 +124,7 @@ const TLE=[['May 1994','The first indexed ad: Fantastic Four #388 carries the ne
  ['July 1994','Advance Comics #67 comes with a 4-card sheet.',PF+'mg2.jpg'],
  ['July 1994','Hero Illustrated #13 carries the separate Flairprints ad.',PF+'adpage-flairprints.jpg']];
 const beats=[
- {k:'The ’94 Flair Table',t:'Marvel and Fleer, 1994: 150 cards, each a milestone in Marvel history. Scroll to deal; the cards are yours to hold.',h:'Drag a card. Double-tap to flip.',
+ {k:'Flair ’94: Hands On',t:'Marvel and Fleer, 1994: 150 cards, each a milestone in Marvel history. Scroll to deal; the cards are yours to hold.',h:'Drag a card. Double-tap to flip.',
   deal:()=>fan(icon.slice(0,mob?4:5).map(([n,l])=>card(n)),CY)},
  {k:'Base set · 150',t:'Thick stock, double UV coated and foil stamped on both sides.',h:'Flip one — every back has its own story.',
   deal:()=>fan(icon.slice(mob?2:3,8).concat([]).map(([n])=>card(n)).slice(0,mob?5:6),CY+CH*.08)},
@@ -203,3 +203,8 @@ addEventListener('resize',()=>{W=stage.clientWidth;H=stage.clientHeight});
 document.addEventListener('gesturestart',e=>e.preventDefault());document.addEventListener('dblclick',e=>e.preventDefault());
 onScroll();
 })();
+
+/* outro tear */
+(function(){const o=document.getElementById('outro');if(!o)return;let q=0;
+function u(){q=0;const r=o.getBoundingClientRect(),h=o.offsetHeight-innerHeight;const p=Math.max(0,Math.min(1,-r.top/Math.max(1,h)));o.style.setProperty('--p',p.toFixed(3));o.classList.toggle('done',p>.72)}
+addEventListener('scroll',()=>{if(!q){q=1;requestAnimationFrame(u)}},{passive:true});addEventListener('resize',u);u()})();

@@ -414,6 +414,13 @@
   .btn:hover { border-color: var(--gold-3); }
   .btn.primary { background: var(--red); border-color: var(--red); }
   .btn.primary:hover { background: #ff3a43; }
+  @media (min-width: 1200px) {
+    .toolbar { flex-wrap: nowrap; gap: 8px; padding-left: 24px; padding-right: 24px; }
+    .toolbar .search { flex: 1 1 140px; min-width: 120px; }
+    .toolbar .artist { max-width: 150px; }
+    .toolbar .seg button { padding: 7px 9px; letter-spacing: .08em; }
+    .toolbar .btn { padding: 0 10px; letter-spacing: .06em; font-size: 12px; white-space: nowrap; flex: none; }
+  }
   .nav { display: flex; gap: 6px; flex-wrap: wrap; width: 100%; }
   .nav a {
     color: var(--muted); text-decoration: none;
@@ -1987,7 +1994,7 @@
   <a class="btn primary" style="text-decoration:none;display:inline-flex;align-items:center" href="/94flair/files/94-flair-section-dividers.pdf" target="_blank" rel="noopener" download>Printable Binder Dividers</a>
   <a class="btn primary" style="text-decoration:none;display:inline-flex;align-items:center" href="/94flair/experience/">Take the Tour</a>
   <nav class="nav">
-    <a href="/94flair/experience/">Experience</a><a href="#base">Base Set</a><a href="#powerblast">Powerblast</a><a href="#large">Flairprints &amp; Binder</a><a href="#promos">Promos</a><a href="#print">Ads &amp; Magazines</a><a href="#notes">Collector Notes</a>
+    <a href="/94flair/experience/">Hands On</a><a href="#base">Base Set</a><a href="#powerblast">Powerblast</a><a href="#large">Flairprints &amp; Binder</a><a href="#promos">Promos</a><a href="#print">Ads &amp; Magazines</a><a href="#notes">Collector Notes</a>
   </nav>
 </div>
 
@@ -3820,7 +3827,7 @@ document.getElementById("copyNeed").addEventListener("click", async () => {
 <div id="tourAsk" hidden style="position:fixed;inset:0;z-index:9999;background:rgba(0,0,0,.6);align-items:center;justify-content:center;padding:20px">
 <div style="background:#111;color:#fff;max-width:360px;width:100%;border-radius:14px;padding:24px;text-align:center;font-family:inherit;box-shadow:0 20px 60px rgba(0,0,0,.5)">
 <h3 style="margin:0 0 8px;font-size:20px">New here?</h3>
-<p style="margin:0 0 18px;opacity:.85;line-height:1.4">Take a tour of the collection. Flip, tilt and handle every 1994 Flair card.</p>
+<p style="margin:0 0 18px;opacity:.85;line-height:1.4">Take a tour of the collection in Flair ’94: Hands On. Flip, tilt and handle every 1994 Flair card.</p>
 <a class="btn primary" id="tourGo" href="/94flair/experience/" style="text-decoration:none;display:inline-flex;align-items:center;margin:4px">Take the tour</a>
 <button class="btn" id="tourNo" style="margin:4px">Maybe later</button></div></div>
 <script>(function(){try{var K="flair94-tour-asked";if(localStorage.getItem(K))return;var o=JSON.parse(localStorage.getItem(STORE_KEY)||"[]");if(o.length){localStorage.setItem(K,"1");return}var d=document.getElementById("tourAsk");d.hidden=false;d.style.display="flex";function done(){localStorage.setItem(K,"1");d.style.display="none"}document.getElementById("tourNo").onclick=done;document.getElementById("tourGo").onclick=done;d.onclick=function(e){if(e.target===d)done()}}catch(e){}})();</script>
