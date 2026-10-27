@@ -139,11 +139,14 @@ const beats=[
    return[[{f:`${I}flairprint-fx/hd/${p2(1+(Math.random()*10|0))}.jpg`,ar:907/1400,h,blank:'Blank · UPC 0 41199 00258 1'},xs[0],CY,-3],
     [{f:`${I}binder-fx/hd/${p2(1+(Math.random()*5|0))}.jpg`,ar:907/1400,h,blank:'Completely blank back'},xs[1],CY+(mob?24:0),3],
     [card(randBase(1)[0]),mob?W*.5-CW*.55:w*1.25+CW*.3,CY+h/2-CH/2+(mob?CH*.2:0),6]]}},
- {k:'Promos & the 4-card sheet',t:'Deadpool and Omega Red promo Flairprints went to the trade. Double-sided 5″ × 7″ sheets came bagged with Wizard #35, Advance Comics #67, Marvel Age #138 and Tuff Stuff’s Collect!.',h:'Double-tap the sheet to see its back.',
-  deal:()=>{const h=BIG(10,.65,mob?.5:.3),h4=BIG(7,.714,mob?.5:.3);return[[{f:PR+(Math.random()<.5?'deadpool-flairprint.jpg':'omega-red-wolverine.jpg'),ar:.65,h,flat:1},mob?-W*.2:-h*.42,CY,-4],
-   [{f:PR+'sheet4-foil.jpg',b:PR+'sheet4-released-back.jpg',ar:999/1399,h:h4,flat:1},mob?W*.2:h*.4,CY+(mob?30:20),4]]}},
- {k:'The 9-card press sheet',t:'Nine uncut 7⅝″ × 10⅝″ sheets came in Fleer’s 1994 media press kit — preview material, never sold in packs.',h:'Tap a card on the sheet to pop it out.',
-  deal:()=>[[{f:PR+'sheet9-2.jpg',b:PR+'sheet9-2-back.jpg',ar:1018/1400,h:BIG(10.625,.727,.94),flat:1},mob?0:-W*.08,CY,0,{onSingle:pop}]]},
+ {k:'Promos & promo sheets',t:'Deadpool and Omega Red promo Flairprints went to the trade. Double-sided 5″ × 7″ 4-card sheets came bagged with Wizard #35, Advance Comics #67, Marvel Age #138 and Tuff Stuff’s Collect!. Nine uncut 7⅝″ × 10⅝″ 9-card sheets came in Fleer’s 1994 media press kit, never sold in packs.',h:'Double-tap a sheet to see its back. Tap a card on the 9-card sheet to pop it out.',
+  deal:()=>{const it=[{f:PR+'deadpool-flairprint.jpg',ar:.65,flat:1},{f:PR+'omega-red-wolverine.jpg',ar:.65,flat:1},
+    {f:PR+'sheet4-foil.jpg',b:PR+'sheet4-released-back.jpg',ar:999/1399,flat:1},{f:PR+'sheet4-unreleased.jpg',b:PR+'sheet4-unreleased-back.jpg',ar:999/1399,flat:1},
+    {f:PR+'sheet9-2.jpg',b:PR+'sheet9-2-back.jpg',ar:1018/1400,flat:1,pop:1}];
+   if(mob){const L=[it[Math.random()<.5?0:1],it[2],it[3],it[4]],h=Math.round(Math.min(AV*.44,(W/2-18)/.73)),dx=W*.235,dy=AV*.235;
+    return L.map((d,i)=>[{...d,h},(i%2?dx:-dx),CY+26+(i<2?-dy:dy),rnd(-3,3),d.pop?{onSingle:pop}:{}])}
+   const h=Math.round(Math.min(AV*.66,W*.88/5/.76)),sp=(W*.88-h*.76)/4;
+   return it.map((d,i)=>[{...d,h:d.pop?Math.round(h*1.08):h},(i-2)*sp,CY+(i%2?14:-10),rnd(-4,4),d.pop?{onSingle:pop}:{}])}},
 ...TLE.map((e,k)=>({k:'Release timeline · 1994',t:'Scroll to move through the year, one piece at a time.',tl:k})),
  {k:'Free play',t:'Each Deal opens one pack of 10 cards, base cards unique within the pack.',h:'Pack odds: Powerblast about 1 in 2 packs (about 12 per 24-pack box), per the checklist. Double-tap flips; two fingers twist.',
   deal:()=>openPack(),after:()=>{},acts:()=>{btn('Deal a pack',()=>{{const nc=deal(openPack());onTable.push(...nc);revealDealt(nc)}});
