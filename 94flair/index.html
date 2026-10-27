@@ -414,12 +414,14 @@
   .btn:hover { border-color: var(--gold-3); }
   .btn.primary { background: var(--red); border-color: var(--red); }
   .btn.primary:hover { background: #ff3a43; }
-  @media (min-width: 1200px) {
-    .toolbar { flex-wrap: nowrap; gap: 8px; padding-left: 24px; padding-right: 24px; }
-    .toolbar .search { flex: 1 1 140px; min-width: 120px; }
-    .toolbar .artist { max-width: 150px; }
+  @media (min-width: 1024px) {
+    .toolbar { flex-wrap: wrap; column-gap: 8px; row-gap: 10px; padding-left: 24px; padding-right: 24px; }
+    .toolbar .search { flex: 1 1 220px; min-width: 220px; }
+    .toolbar .artist { max-width: 160px; }
     .toolbar .seg button { padding: 7px 9px; letter-spacing: .08em; }
     .toolbar .btn { padding: 0 10px; letter-spacing: .06em; font-size: 12px; white-space: nowrap; flex: none; }
+    .toolbar .nav { flex: 0 0 100%; flex-wrap: nowrap; justify-content: center; gap: 4px; white-space: nowrap; }
+    .toolbar .nav a { flex: none; }
   }
   .nav { display: flex; gap: 6px; flex-wrap: wrap; width: 100%; }
   .nav a {
