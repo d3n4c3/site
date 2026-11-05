@@ -1932,6 +1932,12 @@
     }
     .print-sheet .ps-lore .lore-ads p { margin: 0; }
   }
+  /* Square card corners: original 1994 Flair cards had no rounded edges */
+  .mini > span, .mini > span::before, .mini > span::after, .mini img,
+  .tip .t-img, .tip .t-art, .tip .t-art img, .tip .t-art::before, .tip .t-art::after,
+  .tile .thumb, .tile .thumb img, .tile .thumb::before, .tile .thumb::after,
+  .viewer .v-face, .viewer .v-face img, .viewer .v-face::before, .viewer .v-face::after,
+  .viewer .v-face *:not(button), .viewer .v-source .v-source-stage, .viewer .v-source .v-source-stage img , .feature-card, .feature-card img, .feature-card::before, .feature-card::after { border-radius: 0 !important; }
 </style>
 </head>
 <body>

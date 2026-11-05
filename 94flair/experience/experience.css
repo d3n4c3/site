@@ -92,3 +92,6 @@ button.on{background:var(--ink);color:#111}
 @media (prefers-reduced-motion:reduce){.ohalf{transform:none!important;opacity:calc(1 - var(--p)*1.6);transition:none}.opeek{transform:none;filter:none}}
 .opeek iframe{position:absolute;inset:0;width:100%;height:100%;border:0;pointer-events:none;background:#07060b}
 .outro.go .ohalf{opacity:0;transition:opacity .25s}.outro.go .octa{opacity:0}
+
+/* Square card corners */
+.card .f,.card.flat .f,.card .f *,.card .f::before,.card .f::after,.tli img,.ogrid img{border-radius:0!important}
