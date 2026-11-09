@@ -1,0 +1,9 @@
+name = "d3n4c3-flair-guard"
+main = "worker.js"
+compatibility_date = "2025-12-01"
+account_id = "c23dc2d5c3471b5eb145460c1d662228"
+workers_dev = true
+
+# One trigger: heal within ~10 minutes of any wipe (free plan limit)
+[triggers]
+crons = ["*/10 * * * *"]
